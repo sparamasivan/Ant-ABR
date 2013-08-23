@@ -32,7 +32,7 @@
 
 							<p class="info">
 								<span class="report-date">Report Date: {{formatDate date "F j, Y"}}</span>
-								<a class="print yui3-hidden-phone" href="{{printUrl}}">Print original lab report</a>
+								<a class="print yui3-hidden-phone" href="{{printUrl}}" target="_blank">Print original lab report</a>
 							</p>
 						</div>
 					</div>
@@ -56,11 +56,9 @@
 
 	<!-- comment -->
 	<div class="yui3-g-r page-section page-section-comment">
-		<div class="yui3-u-1-12 yui3-hidden-phone"></div>
-
-		<div class="yui3-u-1-8 yui3-hidden-phone">
+		<div class="yui3-u-5-24 yui3-hidden-phone">
 			<div class="yui3-u-c">
-				<img src="images/overview/recap/comments.png" alt="Dr Comments" />
+				<img src="images/overview/recap/comments.png" alt="Dr Comments" class="section-bullet" />
 			</div>
 		</div>
 
@@ -68,11 +66,17 @@
 			<div class="yui3-u-c">
 				<h2>Dr. {{doctor.lastName}}'s Comments</h2>
 
-				{{#if doctorComment}}
-					<p>{{client.firstName}},<br />{{nl2br doctorComment}}</p>
-				{{else}}
-					<p>{{client.firstName}},<br />I’m very happy with {{patient.name}}’s test results. Like all pets, {{patient.name}} has a unique health profile. Each time we run these tests, you help us get a more detailed picture of this profile, so we know what results to expect for {{patient.name}}. </p>
-				{{/if}}
+				<p>
+					{{#if client.firstName}}
+						{{client.firstName}},<br />
+					{{/if}}
+					
+					{{#if doctorComment}}
+						{{nl2br doctorComment}}
+					{{else}}
+						I’m very happy with {{patient.name}}’s test results. Like all pets, {{patient.name}} has a unique health profile. Each time we run these tests, you help us get a more detailed picture of this profile, so we know what results to expect for {{patient.name}}.
+					{{/if}}
+				</p>
 			</div>
 		</div>
 	</div>
@@ -80,11 +84,9 @@
 	<!-- next steps -->
 	<div class="page-section-wrapper page-section-next-steps">
 		<div class="yui3-g-r page-section">
-			<div class="yui3-u-1-12 yui3-hidden-phone"></div>
-
-			<div class="yui3-u-1-8 yui3-hidden-phone">
+			<div class="yui3-u-5-24 yui3-hidden-phone">
 				<div class="yui3-u-c">
-					<img src="images/overview/recap/next-steps.png" alt="next steps" />
+					<img src="images/overview/recap/next-steps.png" alt="next steps" class="section-bullet" />
 				</div>
 			</div>
 
@@ -106,8 +108,13 @@
 				<div class="yui3-u-c">
 					<h2 class="yui3-hidden-phone">Contact Us</h2>
 
-					<p class="contact"><a href="mailto:{{clinic.email}}">{{clinic.email}}</a></p>
-					<p class="contact">{{phoneLink clinic.phone}}</p>
+					{{#if clinic.email}}
+						<p class="contact"><a href="mailto:{{clinic.email}}">{{clinic.email}}</a></p>
+					{{/if}}
+
+					{{#if clinic.phone}}
+						<p class="contact">{{phoneLink clinic.phone}}</p>
+					{{/if}}
 				</div>
 			</div>
 		</div>

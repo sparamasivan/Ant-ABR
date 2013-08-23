@@ -4,7 +4,8 @@ define([
 ], function(
     $
 ) {
-    var equalizeHeights = function(options) {
+    var methods = {
+        equalizeHeights: function(options) {
             var elements = (this.length > 1)
                     ? this
                     : this.children(),
@@ -27,7 +28,7 @@ define([
                 tallestHeight = (height > tallestHeight && isVisible) ? height : tallestHeight;
             });
 
-            if (options.callback && !options.callback(tallestHeight)) {
+            if (options && options.callback && !options.callback(tallestHeight)) {
                 // prevent equalizing heights
                 return;
             }
@@ -37,36 +38,52 @@ define([
             });
 
             return this;
-        };
+        },
+
+        init: function(options) {
+            var self = this,
+                opts = $.extend({}, options),
+                result = methods.equalizeHeights.call(this, opts),
+                win = $(window),
+                winW = win.width(),
+                winH = win.height();
+
+            // recalculate heights on window resize
+            win.on('debouncedresize', function() {
+                var w = win.width(),
+                    h = win.height();
+
+                if (winW == w && winH == h) {
+                    // window dimensions did not change
+                    return;
+                }
+
+                winW = w;
+                winH = h;
+
+                methods.equalizeHeights.call(self, opts);
+            });
+
+            return result;
+        },
+
+        refresh: function() {
+            methods.equalizeHeights.call(this);
+        }
+    };
 
     /**
      * Loops through all child elements, if just one element, otherwise through all given elements,
      * end sets the height of each element to the tallest one in the group.
      */
-    return $.fn.equalHeights = function(options) {
-        var self = this,
-            opts = $.extend({}, options),
-            result = equalizeHeights.call(this, opts),
-            win = $(window),
-            winW = win.width(),
-            winH = win.height();
-
-        // recalculate heights on window resize
-        win.on('debouncedresize', function() {
-            var w = win.width(),
-                h = win.height();
-
-            if (winW == w && winH == h) {
-                // window dimensions did not change
-                return;
-            }
-
-            winW = w;
-            winH = h;
-
-            equalizeHeights.call(self, opts);
-        });
-
-        return result;
+    return $.fn.equalHeights = function(methodOrOptions) {
+        if ( methods[methodOrOptions] ) {
+            return methods[ methodOrOptions ].apply( this, Array.prototype.slice.call( arguments, 1 ));
+        } else if ( typeof methodOrOptions === 'object' || ! methodOrOptions ) {
+            // Default to "init"
+            return methods.init.apply( this, arguments );
+        } else {
+            $.error( 'Method ' +  method + ' does not exist on jQuery.tooltip' );
+        }
     }
 });

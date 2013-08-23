@@ -14,7 +14,7 @@ define([
         _simpleTitle: 'Accuplex',
         _booleanResultMessages: {
             'Lyme Exposure': {
-                yes: '{{{patient.name}}} has been exposed to lyme disease.',
+                yes: '{{{patient.name}}} has been exposed to borllia.',
                 no: '{{{patient.name}}} has not been exposed to lyme disease.'
             },
             'Ehrlichia Exposure': {

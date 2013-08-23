@@ -8,6 +8,7 @@ define([
     'view/Report',
     'module',
     'model/MediaQuery',
+    'event/Dispatcher',
     'jquery-equal-heights'
 ], function(
     $,
@@ -18,7 +19,8 @@ define([
     ViewNavigation,
     ViewReport,
     Module,
-    ModelMediaQuery
+    ModelMediaQuery,
+    EventDispatcher
 ) {
     return Backbone.View.extend({
         template: Handlebars.compile(Template),
@@ -44,6 +46,9 @@ define([
             })));
 
             this.$el.find('.page-section-conclusion .arrow').bind('click', function() {
+                // close all sections
+                EventDispatcher.trigger('sections.collapse');
+
                 // navigate to section
                 Backbone.history.navigate('next-steps');
 

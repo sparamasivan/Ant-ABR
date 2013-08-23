@@ -129,9 +129,20 @@ define([
             // make a copy of each test header and stuff it in the fixed header container
             $.each(this._testViews, function(i, view) {
                 self.$elHeaders.append(
-                    view.getHeaderEl()
-                    .clone()
-                    .bind('click', $.proxy(view.clickHeader, view))
+                    view.generateHeader()
+                        .bind('click', function(event) {
+                            if (view.isHeaderStatusClickedEvent(event)) {
+                                // ignore event
+                                return;
+                            }
+
+                            // go to the top of the test
+                            $('html, body').scrollTop(view.$elHeader.offset().top);
+
+                            // hide fixed header, since at the top of the test, we have the normal header showing
+                            $(this).hide();
+                        }
+                    )
                 );
             });
 

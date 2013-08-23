@@ -43,25 +43,25 @@
                 {
                     "id": 10087,
                     "valueText": "POSITIVE",
-                    "description": "",
+                    "description": "While protein is not commonly found in urine, small amounts may appear.  Larger amounts of protein will require follow-up.",
                     "label": "Protein"
                 },
                 {
                     "id": 10088,
                     "valueText": "POSITIVE",
-                    "description": "",
+                    "description": "While glucose is not commonly found in urine, small amounts may appear due to stress.  Larger amounts of glucose will require follow-up.",
                     "label": "Glucose-Strip"
                 },
                 {
                     "id": 10089,
                     "valueText": "POSITIVE",
-                    "description": "",
+                    "description": "While ketones are not commonly found in urine, small amounts may appear.  Larger amounts of ketones will require follow-up.",
                     "label": "Ketones"
                 },
                 {
                     "id": 10090,
                     "valueText": "POSITIVE",
-                    "description": "The presence of bilirubin can indicate issues with the liver or red blood cells.",
+                    "description": "While bilirubin is not commonly found in urine, small amounts may appear.  Larger amounts of bilirubin will require follow-up.",
                     "label": "Bilirubin"
                 },
                 {

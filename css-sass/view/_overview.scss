@@ -266,6 +266,11 @@
 		font-weight: bold;
 	}
 
+	.section-bullet {
+		width: 85px;
+		float: right;
+	}
+
 	/* desktop & tablet */
 	@media (min-width:($mq-phone + 1px)) {
 		.page-section-comment {

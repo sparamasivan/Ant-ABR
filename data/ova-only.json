@@ -1,0 +1,37 @@
+{
+    "meta": {
+        "doctor": {
+            "lastName": "Solberg"
+        },
+        "clinic": {
+						"name": "Pets Unlimited",
+            "email": "clinic@clinicname.com",
+            "phone": "305-555-1312"
+        },
+        "client": {
+            "firstName": "Jane"
+        },
+        "patient": {
+            "name": "Fido",
+            "sex": "Male",
+            "species": "Canine",
+            "photo": "data/images/fido.jpg"
+        }
+    },
+    "report": {
+        "id": "combined",
+        "date": "01/01/13",
+        "followup": null,
+        "approval": {
+            "doctorComment": "",
+            "nextStepsComment": ""
+        },
+        "tests": [
+            {
+                "id": "ova",
+                "type": "ova",
+                "testEndpoint": "data/test/ova.json"
+            }
+        ]
+    }
+}

@@ -128,9 +128,29 @@
         display: none;
     }
 
-    @media (max-width:($mq-tablet - 1px)) {
+    /* tablet */
+    @media (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
+        .label {
+            font-size:130%;
+        }
+    }
+
+    /* phone */
+    @media (max-width:($mq-phone)) {
         .label {
             font-size: 100%;
+        }
+    }
+
+    /* phone */
+    @media (max-width:($mq-phone - 120px)) {
+        .value {
+            &.good {
+                .text {
+                    /* ensure the text doesn't overlap the icon on tiny screens */
+                    padding-left: 22%;
+                }
+            }
         }
     }
 }

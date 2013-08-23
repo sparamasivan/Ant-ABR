@@ -9,7 +9,7 @@
                     "id": "felv1",
                     "testType": "boolean",
                     "label": "FeLV Antigen",
-                    "description": "Contrary to what the name implies, this test searches for the presence of a virus, not a cancer.",
+                    "description": "Contrary to what the name implies, this test searches for the presence of a virus, and is not a diagnosis of cancer.",
                     "valueText": "POSITIVE"
                 }
             ]

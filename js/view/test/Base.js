@@ -20,6 +20,24 @@ define([
 ) {
     return Backbone.View.extend({
         template: Handlebars.compile(Template),
+        templateHeader: Handlebars.compile(
+            '<div class="page-section-wrapper header test-header {{type}}">' +
+                '<div class="yui3-g page-section">' +
+                    '<div class="yui3-u-1">' +
+                        '<span class="title">' +
+                            '<span class="icon"></span>' +
+                            '<span class="text">{{title}}</span>' +
+                        '</span>' +
+                        '{{#if requiresFollowUp}}' +
+                            '<div title="Please review your Next Steps for the follow up action." class="status bad">' +
+                        '{{else}}' +
+                            '<div title="{{patient.name}}\'s {{simpleTitle}} result was reviewed and everything looks good." class="status good">' +
+                        '{{/if}}' +
+                        '</div>' +
+                    '</div>' +
+                '</div>' +
+            '</div>'
+        ),
 
         constructor: function(config) {
             if (!config || !(config.model instanceof ModelTestBase)) {
@@ -35,22 +53,18 @@ define([
             // render template
             this.setElement($(this.template({
                 id: this.model.id,
-                type: this.model.getType(),
-                title: this.getTitle(),
-                name: this.model.getReport().getDataPatient().name,
-                requiresFollowUp: this.model.requiresFollowUp()
+                type: this.model.getType()
             })));
-
-
 
             // append to parent
             this.$el.appendTo(parent);
 
-            this.$elHeader = this.$el.find('.header');
-            this.$elContent = this.$el.find('.content');
+            // append header
+            this.$elHeader = this.generateHeader();
+            this.$el.find('.header-container').append(this.$elHeader);
 
-            // bind header click
-            this.$elHeader.bind('click', $.proxy(this.clickHeader, this));
+            // test content to be filled by child classes
+            this.$elContent = this.$el.find('.content');
 
             // listen for all test collapse
             EventDispatcher.on('sections.collapse', function() {
@@ -66,16 +80,36 @@ define([
             EventDispatcher.on('section.expand.' + this.model.id, function() {
                 self.expand();
             });
+        },
 
-            this._getStatusEl().tooltip();
+        generateHeader: function() {
+            // render template
+            var headerEl = $(this.templateHeader({
+                    type: this.model.getType(),
+                    title: this.getTitle(),
+                    simpleTitle: this.model.getSimpleTitle(),
+                    patient: this.model.getReport().getDataPatient(),
+                    requiresFollowUp: this.model.requiresFollowUp()
+                })),
+                statusEl;
+
+            // bind header click
+            headerEl.bind('click', $.proxy(this.clickHeader, this));
+
+            // show tooltip on follow-up click
+            statusEl = headerEl.find('.status');
+            statusEl.tooltip();
+
+            // hide tooltip on scroll
+            $(window).bind('scroll', function() {
+                statusEl.tooltip('api').hide();
+            });
+
+            return headerEl;
         },
 
         getTitle: function() {
             return this.title || this.model.getTitle();
-        },
-
-        getHeaderEl: function() {
-            return this.$el.find('.header');
         },
 
         collapse: function() {
@@ -84,18 +118,21 @@ define([
 
         expand: function() {
             this.$elContent.removeClass('collapsed');
+            this.refresh();
         },
 
         isCollapsed: function() {
             return !this.$elContent.is(':visible');
         },
 
+        refresh: function() {},
+
         /**
          * Clicking on header collapses/expands test
          */
         clickHeader: function(event) {
-            if (event.target === this._getStatusEl()[0]) {
-                // ignore this event, since the user actually clicked the status icon/button
+            if (this.isHeaderStatusClickedEvent(event)) {
+                // ignore this event
                 return;
             }
 
@@ -112,8 +149,11 @@ define([
             }
         },
 
-        _getStatusEl: function() {
-            return this.$el.find('.status');
+        /**
+         * Did the user actually click the status icon/button when clicking inside the header
+         */
+        isHeaderStatusClickedEvent: function(event) {
+            return event.target === $(event.currentTarget).find('.status')[0];
         }
     });
 });

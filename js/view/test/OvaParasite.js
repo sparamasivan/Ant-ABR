@@ -22,6 +22,8 @@
 
         templateContent: Handlebars.compile(Template),
 
+        _viewTestOverview: null,
+
         render: function(parent) {
             var self = this,
                 view;
@@ -31,13 +33,13 @@
             this.$elContent.append(this.templateContent());
 
             // render test overview
-            view = new ViewWidgetTestOverview({
+            this._viewTestOverview = new ViewWidgetTestOverview({
                 model: this.model,
                 heading: Handlebars.compile('We checked {{patient.name}}’s stool for young parasites and eggs.'),
                 text: Handlebars.compile('These parasites are found in the intestine and are the most common and preventable form of infectious disease in dogs and cats.')
             });
 
-            view.render(this.$elContent.find('.test-overview'));
+            this._viewTestOverview.render(this.$elContent.find('.test-overview'));
 
 
             //v
@@ -78,6 +80,10 @@
 
             });
 
+        },
+
+        refresh: function() {
+            this._viewTestOverview.refresh();
         }
     });
 });

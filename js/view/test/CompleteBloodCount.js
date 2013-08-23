@@ -50,7 +50,7 @@ define([
                 }
             }));
 
-            this._renderOverviewSubsection(this.$elContent.find('.subsection-overview'));
+            this._renderOverviewSubsection(this._getSubsectionOverviewEl());
 
             this._renderRedBloodCellSubsection(this.$elContent.find('.subsection-rbc'));
 
@@ -61,11 +61,7 @@ define([
 
         refresh: function() {
             this._viewSubtestTypesOfCell.refresh();
-        },
-
-        expand: function() {
-            ViewTestBase.prototype.expand.apply(this, arguments);
-            this.refresh();
+            this._getSubsectionOverviewEl().equalHeights('refresh');
         },
 
         _formatRbcAttributesForTemplate: function(attributes, selectedType) {
@@ -102,7 +98,7 @@ define([
             var view = new ViewSubtestRange({
                 model: this.model.getModelRbcRange(),
                 name: this.model.getReport().getDataPatient().name,
-                unitOfMeasure: 'MILLION/µL'
+                unitOfMeasure: 'MILLION/uL'
             });
             view.render(parent.find('.diagram-rbc-result'));
 
@@ -119,7 +115,7 @@ define([
             var view = new ViewSubtestRange({
                 model: this.model.getModelWbcRange(),
                 name: this.model.getReport().getDataPatient().name,
-                unitOfMeasure: 'THOUSAND/µL'
+                unitOfMeasure: 'THOUSAND/uL'
             });
             view.render(this.$elContent.find('.diagram-wbc-result'));
 
@@ -137,7 +133,7 @@ define([
             var view = new ViewSubtestRange({
                 model: this.model.getModelPlateletRange(),
                 name: this.model.getReport().getDataPatient().name,
-                unitOfMeasure: 'THOUSAND/µL'
+                unitOfMeasure: 'THOUSAND/uL'
             });
             view.render(this.$elContent.find('.diagram-platelet-result'));
 
@@ -148,6 +144,10 @@ define([
                     }
                 });
             });
+        },
+
+        _getSubsectionOverviewEl: function() {
+            return this.$elContent.find('.subsection-overview');
         }
     });
 });

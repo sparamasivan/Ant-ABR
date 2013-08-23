@@ -20,6 +20,8 @@ define([
 
         templateContent: Handlebars.compile(Template),
 
+        _viewTestOverview: null,
+
         render: function(parent) {
             var self = this,
                 view;
@@ -29,13 +31,13 @@ define([
             this.$elContent.append(this.templateContent());
 
             // render test overview
-            view = new ViewWidgetTestOverview({
+            this._viewTestOverview = new ViewWidgetTestOverview({
                 model: this.model,
                 heading: Handlebars.compile('Some diseases are spread by ticks. We tested {{patient.name}} for signs of exposure to these.'),
                 text: Handlebars.compile('Contrary to popular belief, ticks don’t just live in certain geographic areas – ticks are found all over the world and can be easily transported on clothing and other animals.')
             });
 
-            view.render(this.$elContent.find('.test-overview'));
+            this._viewTestOverview.render(this.$elContent.find('.test-overview'));
 
             // render all tests
             $.each(this.model.getAllTestCodes(), function(i, subtestModel) {
@@ -45,6 +47,10 @@ define([
 
                 view.render(self.$elContent.find('.boolean-container').eq(i));
             });
+        },
+
+        refresh: function() {
+            this._viewTestOverview.refresh();
         }
     });
 });

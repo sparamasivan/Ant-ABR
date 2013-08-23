@@ -9,21 +9,21 @@
                     "id": "accuplex1",
                     "testType": "boolean",
                     "label": "Lyme Exposure",
-                    "description": "Contrary to what the name implies, lyme disease is not a disease, but rather a sign of exposure to the bacteria borrelia.  This bacteria is not contagious, and cannot be spread to humans or other animals.",
+                    "description": "Lyme exposure is actually exposure to the bacteria borrelia.  This bacteria is not contagious, and cannot be spread to humans or other animals. We may need more testing to determine if Dido has an active disease.",
                     "valueText": "POSITIVE"
                 },
                 {
                     "id": "accuplex3",
                     "testType": "boolean",
                     "label": "Ehrlichia Exposure",
-                    "description": "Fido is not contagious and cannot spread this infection to any dogs or people.",
+                    "description": "We may need more testing to determine if Dido has an active disease. Dido is not contagious and cannot spread this infection to any dogs or people.",
                     "valueText": "POSITIVE"
                 },
                 {
                     "id": "accuplex4",
                     "testType": "boolean",
                     "label": "Anaplasma Exposure",
-                    "description": "Fido is not contagious and cannot spread this infection to any dogs or people.",
+                    "description": "We may need more testing to determine if Dido has an active disease. Dido is not contagious and cannot spread this infection to any dogs or people.",
                     "valueText": "POSITIVE"
                 }
             ]

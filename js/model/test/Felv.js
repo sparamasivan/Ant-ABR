@@ -14,7 +14,7 @@ define([
         _simpleTitle: 'FeLV',
         _booleanResultMessages: {
             'FeLV Antigen': {
-                yes: '{{{patient.name}}} has shown signs of the virus.',
+                yes: 'This virus has been detected in {{{patient.name}}}.',
                 no: '{{{patient.name}}} does not have this virus.'
             }
         }

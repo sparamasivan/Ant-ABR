@@ -206,6 +206,10 @@ define([
                 default:
                     throw new Error('Unable to normalize species type: ' + species);
             }
+        },
+
+        getPrintUrl: function() {
+            return _.result(this, 'urlRoot') + '/AntechWS/getResultPDF?i=1' + this.getDataReport().id + '763';
         }
     });
 });

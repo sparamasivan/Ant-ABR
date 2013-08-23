@@ -1,22 +1,7 @@
 <div class="view-test-base view-test-{{type}}" id="section-{{id}}">
 
     <!-- test header -->
-    <div class="page-section-wrapper header test-header {{type}}">
-        <div class="yui3-g page-section">
-            <div class="yui3-u-1">
-                <span class="title">
-                    <span class="icon"></span>
-                    <span class="text">{{title}}</span>
-                </span>
-                {{#if requiresFollowUp}}
-                <div title="Please review your next steps for the follow up action." class="status bad">
-                {{else}}
-                <div title="{{name}}'s {{title}} result was reviewed and everything looks good." class="status good">
-                {{/if}}
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="header-container"></div>
 
     <!-- test results -->
     <div class="content"></div>

@@ -22,6 +22,8 @@ define([
 
         _viewSubtestRangeGroup: null,
 
+        _viewTestOverview: null,
+
         render: function(parent) {
             var self = this,
                 view;
@@ -31,13 +33,13 @@ define([
             this.$elContent.append(this.templateContent());
 
             // render test overview
-            view = new ViewWidgetTestOverview({
+            this._viewTestOverview = new ViewWidgetTestOverview({
                 model: this.model,
                 heading: Handlebars.compile('{{patient.name}}’s body chemistry is unique - like a fingerprint - and remains relatively constant over time.'),
                 text: Handlebars.compile('A chemistry panel gives us this fingerprint, showing us how all {{patient.name}}’s systems work together, so we know {{patient.name}}’s expected numbers and can easily identify changes.')
             });
 
-            view.render(this.$elContent.find('.test-overview'));
+            this._viewTestOverview.render(this.$elContent.find('.test-overview'));
 
             this._viewSubtestRangeGroup = new ViewSubtestRangeGroup({
                 models: this.model.getAllTestCodes(),
@@ -47,9 +49,9 @@ define([
             this._viewSubtestRangeGroup.render(this.$elContent.find('.subtest-container'));
         },
 
-        expand: function() {
-            ViewTestBase.prototype.expand.apply(this, arguments);
+        refresh: function() {
             this._viewSubtestRangeGroup.refresh();
+            this._viewTestOverview.refresh();
         }
     });
 });

@@ -18,6 +18,8 @@ define([
     return ViewTestBase.extend({
         templateContent: Handlebars.compile(Template),
 
+        _viewTestOverview: null,
+
         render: function(parent) {
             var self = this,
                 view;
@@ -27,13 +29,13 @@ define([
             this.$elContent.append(this.templateContent());
 
             // render test overview
-            view = new ViewWidgetTestOverview({
+            this._viewTestOverview = new ViewWidgetTestOverview({
                 model: this.model,
                 heading: this.getHeadingTemplate(),
                 text: this.getTextTemplate()
             });
 
-            view.render(this.$elContent.find('.test-overview'));
+            this._viewTestOverview.render(this.$elContent.find('.test-overview'));
 
             // render all tests
             $.each(this.model.getAllTestCodes(), function(i, subtestModel) {
@@ -43,6 +45,10 @@ define([
 
                 view.render(self.$elContent.find('.boolean-container').eq(i));
             });
+        },
+
+        refresh: function() {
+            this._viewTestOverview.refresh();
         },
 
         getTextTemplate: function() {
@@ -76,7 +82,7 @@ define([
 
         getTitle: function() {
             if (this.model.hasFelvTest() && this.model.hasFivTest()) {
-                return 'FeLV AND FIV';
+                return 'FeLV & FIV';
             } else if (this.model.hasFivTest()) {
                 return 'FIV';
             } else if (this.model.hasFelvTest()) {

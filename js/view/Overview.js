@@ -47,7 +47,7 @@ define([
                 nextStepsComment: this.model.getNextStepsComment(),
                 date: this.model.getDate(),
                 avatarUrl: this._getAvatarUrl(),
-                printUrl: '#',
+                printUrl: this.model.getPrintUrl(),
                 testTitles: testCollection.map(function(test) {
                     return test.getSimpleTitle();
                 })

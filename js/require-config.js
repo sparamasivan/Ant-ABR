@@ -23,7 +23,7 @@ var require = {
         'view/Page': {
             petPortalHomeUrl: '#',
             logoutUrl: '#',
-            privacyPolicyUrl: '#'
+            privacyPolicyUrl: 'http://www.vetsecure.com/petportals/privacy_policy'
         }
     },
 

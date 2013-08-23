@@ -2883,6 +2883,10 @@ span.placeholder {
 .view-overview .phone-container {
   font-weight: bold;
 }
+.view-overview .section-bullet {
+  width: 85px;
+  float: right;
+}
 @media (min-width: 481px) {
   .view-overview .page-section-comment {
     margin-top: 20px;
@@ -3003,13 +3007,12 @@ span.placeholder {
 .test-header .status {
   float: right;
   height: 45px;
-  line-height: 45px;
-  padding: 0 10px;
-  margin: 14.5px 10px 0 0;
-  min-width: 190px;
-  height: 46px;
+  margin: 9px 10px 0 0;
+  width: 254px;
+  height: 57px;
   background-color: transparent;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 .test-header .status.good {
   background-image: url(../images/test/base/good-flag.png);
@@ -3053,42 +3056,13 @@ span.placeholder {
     font-size: 123.1%;
   }
   .test-header .status {
-    margin: 5px 57px 0 0;
-    min-width: 31px;
+    margin: 3px 58px 0 0;
+    width: 50px;
+    height: 50px;
   }
   .test-header .status .text {
     display: none;
   }
-}
-
-@media (min-width: 480px) and (max-width: 769px) {
-  .view-subtest-boolean .label {
-    font-size: 130% !important;
-  }
-}
-.bracket-padding {
-  display: none;
-}
-
-@media (min-width: 769px) {
-  .bracket {
-    max-height: 600px !important;
-  }
-  .bracket img {
-    max-height: 600px !important;
-    width: 33px !important;
-    min-height: 600px;
-  }
-
-  .bracket-padding {
-    display: block;
-    height: 2px;
-    min-height: 600px;
-    width: 100%;
-  }
-}
-.view-subtest-boolean .value.good .text {
-  padding-left: 0 !important;
 }
 
 .test-header.accuplex {
@@ -3521,6 +3495,9 @@ span.placeholder {
 
 .view-subtest-boolean {
   font-family: 'Apercu', sans-serif;
+  /* tablet */
+  /* phone */
+  /* phone */
 }
 .view-subtest-boolean .wrapper {
   height: 93px;
@@ -3624,9 +3601,20 @@ span.placeholder {
 .view-subtest-boolean .description {
   display: none;
 }
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
+  .view-subtest-boolean .label {
+    font-size: 130%;
+  }
+}
+@media (max-width: 480px) {
   .view-subtest-boolean .label {
     font-size: 100%;
+  }
+}
+@media (max-width: 360px) {
+  .view-subtest-boolean .value.good .text {
+    /* ensure the text doesn't overlap the icon on tiny screens */
+    padding-left: 22%;
   }
 }
 
@@ -4441,7 +4429,6 @@ span.placeholder {
 .view-widget-test-overview .section-heading .column {
   display: table;
   height: 100%;
-  margin-top: 40px;
 }
 .view-widget-test-overview .section-heading .column .inner {
   display: table-cell;

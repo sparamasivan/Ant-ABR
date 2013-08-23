@@ -36,7 +36,7 @@
                     <h1>
                         This is the end of {{patient.name}}’s test results.
                         <br class="yui3-hidden-tablet yui3-hidden-phone" />
-                        Return to the top for your next steps.
+                        Return to the top for your Next Steps.
                     </h1>
                 </div>
             </div>
@@ -50,8 +50,14 @@
                 <div class="yui3-u-c">
                     <h3 class="contact-us">Contact Us</h3>
                     <h4 class="clinic">{{clinic.name}}</h4>
-                    <p>{{phoneLink clinic.phone}}</a></p>
-                    <p><a href="mailto:{{clinic.email}}">{{clinic.email}}</a></p>
+
+                    {{#if clinic.phone}}
+                        <p>{{phoneLink clinic.phone}}</p>
+                    {{/if}}
+
+                    {{#if clinic.email}}
+                        <p><a href="mailto:{{clinic.email}}">{{clinic.email}}</a></p>
+                    {{/if}}
                 </div>
             </div>
 
@@ -59,7 +65,7 @@
                 <div class="yui3-u-c section-copyright column">
                     <div class="text">
                         <p class="fine-print">© 2001-2013 &nbsp;Vetstreet. All rights reserved.</p>
-                        <p class="fine-print"><a class="policy" href="{{privacyPolicyUrl}}">Privacy&nbsp;Policy</a></p>
+                        <p class="fine-print"><a class="policy" href="{{privacyPolicyUrl}}" target="_blank">Privacy&nbsp;Policy</a></p>
                     </div>
                 </div>
             </div>
@@ -68,8 +74,14 @@
                 <div class="yui3-u-c section-contact column">
                     <h3 class="contact-us">Contact Us</h3>
                     <h4 class="clinic">{{clinic.name}}</h4>
-                    <p>{{phoneLink clinic.phone "link phone"}}</a></p>
-                    <p><a class="link email" href="mailto:{{clinic.email}}">{{clinic.email}}</a></p>
+
+                    {{#if clinic.phone}}
+                        <p>{{phoneLink clinic.phone "link phone"}}</p>
+                    {{/if}}
+
+                    {{#if clinic.email}}
+                        <p><a class="link email" href="mailto:{{clinic.email}}">{{clinic.email}}</a></p>
+                    {{/if}}
                 </div>
             </div>
         </div>

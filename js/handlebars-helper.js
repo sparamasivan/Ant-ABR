@@ -69,11 +69,11 @@ define([
                 break;
 
             case 1:
-                return Handlebars.Utils.escapeExpression(list[0]);
+                str = Handlebars.Utils.escapeExpression(list[0]);
                 break;
 
             case 2:
-                return Handlebars.Utils.escapeExpression(list[0]) + ' and ' + Handlebars.Utils.escapeExpression(list[1]);
+                str = Handlebars.Utils.escapeExpression(list[0]) + ' and ' + Handlebars.Utils.escapeExpression(list[1]);
                 break;
 
             default:
@@ -84,7 +84,7 @@ define([
                 str += 'and ' + Handlebars.Utils.escapeExpression(list[i]);
                 break;
         }
-
+        
         return new Handlebars.SafeString(str);
     });
 

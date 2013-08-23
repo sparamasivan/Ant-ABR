@@ -9,7 +9,7 @@
                     "id": "accuplex1",
                     "testType": "boolean",
                     "label": "Lyme Exposure",
-                    "description": "Lyme disease is actually exposure to the bacteria borellia, which is transmitted through infected tick bites. Common symptoms include malaise, fever, and lack of appetite.",
+                    "description": "Lyme disease is caused by exposure to the bacteria borellia, which is transmitted through infected tick bites. Common symptoms include malaise, fever, and lack of appetite.",
                     "valueText": "NEGATIVE"
                 },
                 {

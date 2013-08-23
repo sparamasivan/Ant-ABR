@@ -30,12 +30,21 @@ define([
             this.$el.appendTo(parent);
 
             // make height of heading boxes the same so that we can nicely vertically align elements
-            this.$el.find('.section-heading').waitForImages(function() {
+            this._getSectionHeading().waitForImages(function() {
                 $(this).equalHeights();
                 deferred.resolve();
             });
 
             return deferred.promise();
+        },
+
+        refresh: function() {
+            // recalculate heights
+            this._getSectionHeading().equalHeights('refresh');
+        },
+
+        _getSectionHeading: function() {
+            return this.$el.find('.section-heading');
         }
     });
 });

@@ -138,6 +138,6 @@ define([
             };
         }
 
-        return $(this).qtip(options);
+        return $(this).qtip((typeof customOptions == 'string') ? customOptions : options);
     };
 });

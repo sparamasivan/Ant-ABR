@@ -20,6 +20,8 @@ define([
 
         templateContent: Handlebars.compile(Template),
 
+        _viewTestOverview: null,
+
         render: function(parent) {
             var view;
 
@@ -28,13 +30,13 @@ define([
             this.$elContent.append(this.templateContent());
 
             // render test overview
-            view = new ViewWidgetTestOverview({
+            this._viewTestOverview = new ViewWidgetTestOverview({
                 model: this.model,
                 heading: Handlebars.compile('T4 measures how much of the hormone thyroxine is in {{patient.name}}.'),
                 text: Handlebars.compile('This hormone is produced in the thyroid gland and helps regulate {{patient.name}}’s growth and metabolism. It circulates through the body and tells the organs and systems how to use energy and how fast to work.')
             });
 
-            view.render(this.$elContent.find('.test-overview'));
+            this._viewTestOverview.render(this.$elContent.find('.test-overview'));
 
             // render range
             view = new ViewSubtestRange({
@@ -45,6 +47,10 @@ define([
             });
 
             view.render(this.$elContent.find('.subtest-container'));
+        },
+
+        refresh: function() {
+            this._viewTestOverview.refresh();
         }
     });
 });

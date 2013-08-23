@@ -44,7 +44,7 @@
                     "id": "ova6",
                     "testType": "boolean",
                     "label": "Giardia",
-                    "description": "They are a widespread parasite found in dogs and cats and are easily, and commonly, transmitted to people.",
+                    "description": "They are a widespread parasite found in dogs and cats and can potentially be transmitted to people. To learn more about treatment and future prevention, please contact us.",
                     "valueText": "POSITIVE"
                 }
             ]

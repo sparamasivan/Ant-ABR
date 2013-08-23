@@ -18,7 +18,7 @@
                 {
                     "id": 10064,
                     "value": "65",
-                    "description": "Glucose is a simple carbohydrate (sugar) produced by the liver as a by product of a typical diet. It is a sensitive value that can be affected by recent eating or stress.",
+                    "description": "Glucose is a simple carbohydrate (sugar) produced by the liver as a by product of a typical diet. It is a sensitive value that can be affected by external factors, such as recent eating, stress, or exercise.",
                     "minValue": "1",
                     "maxValue": "200",
                     "testType": "range",
@@ -48,7 +48,7 @@
                 {
                     "id": 10067,
                     "value": "0.1",
-                    "description": "Magnesium is a mineral found in every cell in the body. It i sincluded in over 300 enzymes, including those most important to energy production.  It is highly sensitive to changes in the body.",
+                    "description": "Magnesium is a mineral found in every cell in the body. It is included in over 300 enzymes, including those most important to energy production.  It is highly sensitive to changes in the body.",
                     "minValue": "1",
                     "maxValue": "100",
                     "testType": "range",
@@ -88,7 +88,7 @@
                 {
                     "id": 10067,
                     "value": "6.5",
-                    "description": "This is the combination of the two types of blood protein - albumin and globulin.  This comination provides additional insight into changes in either protein.",
+                    "description": "This is the combination of the two types of blood protein - albumin and globulin.  This combination provides additional insight into changes in either protein.",
                     "minValue": "5.0",
                     "maxValue": "7.4",
                     "testType": "range",
@@ -98,7 +98,7 @@
                 {
                     "id": 10068,
                     "value": "3.8",
-                    "description": "Albumin is a protein found in blood and made by the liver. Its two major functions, keeping water and salts in the blood and transportation of medication and nutrients.  It is most sensitive to changes in the body.",
+                    "description": "Albumin is a protein found in blood and made by the liver. It has two major functions: keeping water and salts in the blood and transportation of medication and nutrients.  It is most sensitive to changes in the body.",
                     "minValue": "2.7",
                     "maxValue": "4.4",
                     "testType": "range",
@@ -188,7 +188,7 @@
                 {
                     "id": 10067,
                     "value": "23",
-                    "description": "This ratio is used to better determine if changes in either of these two values are due to kidney function to other changes in the body.",
+                    "description": "This ratio is used to better determine if changes in either of these two values are due to kidney function or to other changes in the body.",
                     "minValue": "1",
                     "maxValue": "100",
                     "testType": "range",
@@ -228,7 +228,7 @@
                 {
                     "id": 10067,
                     "value": "25",
-                    "description": "Blood Urea Nitrogen (BUN) is a product of protein metabolism and can be affected by diet to a minor degree.",
+                    "description": "Blood Urea Nitrogen (BUN) is a product of protein metabolism and is a sensitive marker of the kidneys ability to filter blood. It can be affected by diet to a minor degree.",
                     "minValue": "6",
                     "maxValue": "31",
                     "testType": "range",
