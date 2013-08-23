@@ -1,0 +1,18 @@
+{
+    "id": "fiv-low",
+    "type": "fiv",
+    "followUpStatus": 1,
+    "subTests": {
+        "fiv": {
+            "testCodes": [
+                {
+                    "id": "fiv1",
+                    "testType": "boolean",
+                    "label": "FIV Antibody",
+                    "description": "This test is looking for the presence of FIV antibodies, which could be present due to infection or past vaccination against the disease. More tests need to be run to determine when Dido was exposed.",
+                    "valueText": "POSITIVE"
+                }
+            ]
+        }
+    }
+}

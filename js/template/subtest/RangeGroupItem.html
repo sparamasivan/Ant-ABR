@@ -1,0 +1,39 @@
+<div class="view-subtest-range-group-item range-item">
+    <div class="label"><div class="outer"><div class="inner">{{title}}</div></div></div>
+
+    <div class="limit start"><div class="dash"></div></div>
+
+    <div class="range"></div>
+
+    <div class="limit end"><div class="dash"></div></div>
+
+    <div class="value"><div class="marker"></div></div>
+
+    <div class="view-subtest-range-group-item-details">
+        <h2 class="title">{{title}}</h2>
+
+
+        <div class="yui3-g info">
+            <!-- tests -->
+            <div class="yui3-u-1-2">
+                <div class="info-value">
+                    <h4 class="subTitle">{{patient.name}}</h4>
+                    <div>
+                        <span class="value">{{value}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="yui3-u-1-2">
+                <div class="info-range">
+                    <h4 class="subTitle">Average Range</h4>
+                    <div>
+                        <span class="value">{{minValue}}-{{maxValue}}</span><span class="unit">{{unitOfMeasure}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="description">{{description}}</p>
+    </div>
+</div>

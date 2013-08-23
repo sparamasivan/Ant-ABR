@@ -1,0 +1,37 @@
+<div class="view-subtest-boolean">
+    <div class="wrapper">
+        <div class="label">{{label}}</div>
+
+        <div class="result">
+            {{! Use ugly tables to display background with variable middle length and fixed side lengths especially in ie7 }}
+            <table class="bg">
+                <tr>
+                    <td class="bg-section left">&nbsp;</td>
+                    <td class="bg-section middle">&nbsp;</td>
+                    <td class="bg-section right">&nbsp;</td>
+                </tr>
+            </table>
+
+            <div class="value {{#if detected}}bad{{else}}good{{/if}}">
+                <span class="icon"></span>
+                <span class="text">
+                    {{#if detected}}
+                        Detected
+                    {{else}}
+                        Clear
+                    {{/if}}
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="description">
+        <p>
+            {{#if message}}
+                <span class="message">{{message}}</span><br />
+            {{/if}}
+
+            {{description}}
+        </p>
+    </div>
+</div>

@@ -1,0 +1,251 @@
+{
+    "id": "superchemistry-low",
+    "type": "Wellness Chemistries",
+    "followUpStatus": 1,
+    "subTests": {
+        "Superchem": {
+            "testCodes": [
+                {
+                    "id": 10063,
+                    "value": "0",
+                    "description": "Lipase is a digestive enzyme made by the pancreas, and used in the digestion of fats. Lipase, while not sensitive to external changes, is affected by changes in the body.",
+                    "minValue": "1",
+                    "maxValue": "400",
+                    "testType": "range",
+                    "label": "Lipase",
+                    "unitOfMeasure": "IU/L"
+                },
+                {
+                    "id": 10064,
+                    "value": "0",
+                    "description": "Glucose is a simple carbohydrate (sugar) produced by the liver as a by product of a typical diet. It is a sensitive value that can be affected by recent eating or stress.",
+                    "minValue": "1",
+                    "maxValue": "200",
+                    "testType": "range",
+                    "label": "Glucose",
+                    "unitOfMeasure": "mg/dL"
+                },
+                {
+                    "id": 10065,
+                    "value": "0",
+                    "description": "This is the ratio of sodium to potassium. A correct balance of these two electrolytes is important to maintain, as both are key components in neural activity.",
+                    "minValue": "1",
+                    "maxValue": "100",
+                    "testType": "range",
+                    "label": "Na/K Ratio",
+                    "unitOfMeasure": "Na/K"
+                },
+                {
+                    "id": 10066,
+                    "value": "200",
+                    "description": "Amylase is a digestive enzyme made by the pancreas, and used in the digestion of carbohydrates. Amylase, while not sensitive to external changes, is affected by changes in the body.",
+                    "minValue": "290",
+                    "maxValue": "1125",
+                    "testType": "range",
+                    "label": "Amylase",
+                    "unitOfMeasure": "IU/L"
+                },
+                {
+                    "id": 10067,
+                    "value": "0.1",
+                    "description": "Magnesium is a mineral found in every cell in the body. It i sincluded in over 300 enzymes, including those most important to energy production.  It is highly sensitive to changes in the body.",
+                    "minValue": "1",
+                    "maxValue": "100",
+                    "testType": "range",
+                    "label": "Magnesium",
+                    "unitOfMeasure": "mEq/L"
+                },
+                {
+                    "id": 10068,
+                    "value": "20",
+                    "description": "Triglycerides are an absorbed lipid (fat) from food. They act as a general marker of liver function, and are easily affected by changes in diet or recent eating.",
+                    "minValue": "29",
+                    "maxValue": "301",
+                    "testType": "range",
+                    "label": "Triglyceride",
+                    "unitOfMeasure": "/100 WBC"
+                },
+                {
+                    "id": 10069,
+                    "value": "3.0",
+                    "description": "Potassium is one of three minerals that make up the major electrolytes (salts) of the body, and act as conductors of neural activity. These minerals are primarily affected by changes in the body.",
+                    "minValue": "3.6",
+                    "maxValue": "5.5",
+                    "testType": "range",
+                    "label": "Potassium",
+                    "unitOfMeasure": "mEq/L"
+                },
+                {
+                    "id": 10066,
+                    "value": "5",
+                    "description": "Calcium is a mineral that is carefully controlled in the blood.  It is absorpted in the intestine from the diet, then stored in the bones. Although calcium comes from the diet, it is affected by changes in the body.",
+                    "minValue": "8.9",
+                    "maxValue": "11.4",
+                    "testType": "range",
+                    "label": "Calcium",
+                    "unitOfMeasure": "mg/dL"
+                },
+                {
+                    "id": 10067,
+                    "value": "0",
+                    "description": "This is the combination of the two types of blood protein - albumin and globulin.  This comination provides additional insight into changes in either protein.",
+                    "minValue": "5.0",
+                    "maxValue": "7.4",
+                    "testType": "range",
+                    "label": "Total Protein",
+                    "unitOfMeasure": "g/dL"
+                },
+                {
+                    "id": 10068,
+                    "value": "2",
+                    "description": "Albumin is a protein found in blood and made by the liver. Its two major functions, keeping water and salts in the blood and transportation of medication and nutrients.  It is most sensitive to changes in the body.",
+                    "minValue": "2.7",
+                    "maxValue": "4.4",
+                    "testType": "range",
+                    "label": "Albumin",
+                    "unitOfMeasure": "g/dL"
+                },
+                {
+                    "id": 10069,
+                    "value": "1",
+                    "description": "This is the ratio of Albumin to Globulin in the blood.  Changes in the ratio indicate physiological changes in the body.",
+                    "minValue": "1.4",
+                    "maxValue": "2",
+                    "testType": "range",
+                    "label": "A/G Ratio",
+                    "unitOfMeasure": "A/G"
+                },
+                {
+                    "id": 10068,
+                    "value": "0.01",
+                    "description": "Bilirubin is a by product of hemoglobin metabolism performed by the liver, stored in the gall bladder, and excreted into the gastrointestinal tract as bile.  It is primarily affected by changes in the body.",
+                    "minValue": "0.1",
+                    "maxValue": "0.3",
+                    "testType": "range",
+                    "label": "Total Bilirubin",
+                    "unitOfMeasure": "mg/dl"
+                },
+                {
+                    "id": 10069,
+                    "value": "3",
+                    "description": "Alkaline Phosphatase is a metabolic enzyme produced in liver and bone cells. It is used as a marker to determine if these are being stimulated to do more work. Various hormones and drugs are well know stimulators of this enzyme.",
+                    "minValue": "5",
+                    "maxValue": "133",
+                    "testType": "range",
+                    "label": "Alk Phosphatase",
+                    "unitOfMeasure": "IU/L"
+                },
+                {
+                    "id": 10066,
+                    "value": "2",
+                    "description": "Creatinine phosphokinase (CPK) is an enzyme found in all cells that require a lot of energy (such as muscles). It is primarily used as a marker to determine disruption in muscle cells from damage or heavy work. Intense exercise prior to lab work can affect CPK levels.",
+                    "minValue": "5",
+                    "maxValue": "131",
+                    "testType": "range",
+                    "label": "CPK",
+                    "unitOfMeasure": "IU/L"
+                },
+                {
+                    "id": 10067,
+                    "value": "100",
+                    "description": "Sodium is one of three minerals that make up the major electrolytes (salts) of the body, and act as conductors of neural activity. These minerals are primarily affected by changes in the body.",
+                    "minValue": "139",
+                    "maxValue": "154",
+                    "testType": "range",
+                    "label": "Sodium",
+                    "unitOfMeasure": "mEq/L"
+                },
+                {
+                    "id": 10067,
+                    "value": "10",
+                    "description": "ALT (Alanine aminotransferase) is a metabolic enzyme produced in liver cells. It is used as a very sensitive marker to determine if liver cells  have been damaged.",
+                    "minValue": "12",
+                    "maxValue": "118",
+                    "testType": "range",
+                    "label": "ALT (SGPT)",
+                    "unitOfMeasure": "IU/L"
+                },
+                {
+                    "id": 10067,
+                    "value": "0.5",
+                    "description": "Globulins are a family of proteins synthesized by the liver and cells of the immune system. A responder protein, its levels are typically affected by inflamation.",
+                    "minValue": "1",
+                    "maxValue": "100",
+                    "testType": "range",
+                    "label": "Globulin",
+                    "unitOfMeasure": "g/dl"
+                },
+                {
+                    "id": 10067,
+                    "value": "10",
+                    "description": "AST (Aspartate aminotransferase) is a metabolic enzyme produced in liver cells. It is used as a very sensitive marker to determine if liver cells  have been damaged.",
+                    "minValue": "15",
+                    "maxValue": "66",
+                    "testType": "range",
+                    "label": "AST (SGOT)",
+                    "unitOfMeasure": "IU/L"
+                },
+                {
+                    "id": 10067,
+                    "value": "0.3",
+                    "description": "This ratio is used to better determine if changes in either of these two values are due to kidney function to other changes in the body.",
+                    "minValue": "1",
+                    "maxValue": "100",
+                    "testType": "range",
+                    "label": "BUN / Creatinine Ratio",
+                    "unitOfMeasure": "Ratio"
+                },
+                {
+                    "id": 10067,
+                    "value": "50",
+                    "description": "Cholesterol is both an absorbed lipid (fat) from food as well as a by product of the liver. It is used in the construction of all cell membranes for all the different cell types in the body and is an essential nutrient. Like in humans, it is affected by changes in diet.",
+                    "minValue": "92",
+                    "maxValue": "324",
+                    "testType": "range",
+                    "label": "Cholesterol",
+                    "unitOfMeasure": "mg/dL"
+                },
+                {
+                    "id": 10067,
+                    "value": "0.999",
+                    "description": "Creatinine is a product of muscle metabolism. Its production is constant, very predictable and used as a very sensitive marker of the kidneys ability to filter blood.",
+                    "minValue": "1",
+                    "maxValue": "3",
+                    "testType": "range",
+                    "label": "Creatinine",
+                    "unitOfMeasure": "mg/dL"
+                },
+                {
+                    "id": 10067,
+                    "value": "2",
+                    "description": "Phosphorus is a mineral produced as a by product of various metabolic processes in almost all tissues in the body. It is also a major component of most diets,  and is an excellent and sensitive test of endocrine and renal system functionality.",
+                    "minValue": "2.5",
+                    "maxValue": "6.0",
+                    "testType": "range",
+                    "label": "Phosphorus",
+                    "unitOfMeasure": "mg/dl"
+                },
+                {
+                    "id": 10067,
+                    "value": "2",
+                    "description": "Blood Urea Nitrogen (BUN) is a product of protein metabolism and can be affected by diet to a minor degree.",
+                    "minValue": "6",
+                    "maxValue": "31",
+                    "testType": "range",
+                    "label": "BUN",
+                    "unitOfMeasure": "mg/dl"
+                },
+                {
+                    "id": 10067,
+                    "value": "99",
+                    "description": "Chloride is one of three minerals that make up the major electrolytes (salts) of the body, and act as conductors of neural activity. These minerals are primarily affected by changes in the body.",
+                    "minValue": "102",
+                    "maxValue": "120",
+                    "testType": "range",
+                    "label": "Chloride",
+                    "unitOfMeasure": "mEq/L"
+                }
+            ]
+        }
+    }
+}

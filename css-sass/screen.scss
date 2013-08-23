@@ -1,0 +1,67 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+$mq-desktop: 1024px;
+$mq-tablet: 769px;
+$mq-phone: 480px;
+
+@import "compass";
+@import "lib/mixins/animation";
+@import "lib/mixins/easings";
+// normalize CSS styles across browsers
+@import "normalize";
+
+// base font sizes
+@import "cssfonts";
+
+// base responsive grids
+@import "cssgrids-responsive";
+
+// fonts
+@import "font/adelle";
+@import "font/apercu";
+
+// lib
+@import "lib/qtip/jquery.qtip-2.0.1";
+
+// base styles
+@import "base";
+
+// reusable common elements
+@import "common";
+
+// tooltip
+@import "tooltip";
+
+// login
+@import "view/login";
+
+// report
+@import "view/page";
+@import "view/report";
+@import "view/navigation";
+@import "view/overview";
+
+// tests
+@import "view/test/base";
+@import "view/test/accuplex";
+@import "view/test/cbc";
+@import "view/test/chemistry";
+@import "view/test/felv-fiv";
+@import "view/test/heartworm";
+@import "view/test/ova";
+@import "view/test/thyroxine";
+@import "view/test/urine";
+
+// subtests
+@import "view/subtest/boolean";
+@import "view/subtest/range";
+@import "view/subtest/range-group";
+@import "view/subtest/cbc-summary";
+@import "view/subtest/types-of-cell";
+
+// widgets
+@import "view/widget/test-overview";
+@import "view/widget/busy";

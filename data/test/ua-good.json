@@ -1,0 +1,59 @@
+{
+    "id": "ua",
+    "type": "Urinalysis",
+    "followUpStatus": 0,
+    "subTests": {
+        "uacomponents": {
+            "testCodes": [
+                {
+                    "id": 10087,
+                    "valueText": "NEGATIVE",
+                    "description": "Good news! No protein was detected in Fred’s sample. This means his kidneys are doing their jobs, acting as filters and not allowing proteins into the urine.",
+                    "label": "Protein"
+                },
+                {
+                    "id": 10088,
+                    "valueText": "NEGATIVE",
+                    "description": "Glucose has been detected in Fred’s urine sample. In cats, a high level may simply result from short-term stress – and your veterinarian will know the difference.",
+                    "label": "Glucose-Strip"
+                },
+                {
+                    "id": 10089,
+                    "valueText": "NEGATIVE",
+                    "description": "Ketones have been detected in Fred’s urine sample. This finding is unusual, and your veterinarian may want to see Fred for more testing.",
+                    "label": "Ketones"
+                },
+                {
+                    "id": 10090,
+                    "valueText": "NEGATIVE",
+                    "description": "Good news! No bilirubin was detected in Fred’s sample. Bilirubin is a component of bile, which comes from the liver. Small increases in the blood can filter into the urine, indicating issues with the liver or red blood cells.",
+                    "label": "Bilirubin"
+                },
+                {
+                    "id": 10085,
+                    "valueText": "YELLOW",
+                    "label": "Color"
+                },
+                {
+                    "id": 10086,
+                    "valueText": "CLOUDY",
+                    "label": "Appearance"
+                },
+                {
+                    "id": 10100,
+                    "value": "1.028",
+                    "minValue": "1.015",
+                    "maxValue": "1.050",
+                    "label": "Specific gravity"
+                },
+                {
+                    "id": 10101,
+                    "value": "7.5",
+                    "minValue": "7.4",
+                    "maxValue": "7.999999",
+                    "label": "pH"
+                }
+            ]
+        }
+    }
+}

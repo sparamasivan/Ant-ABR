@@ -1,0 +1,18 @@
+{
+    "id": "felv-low",
+    "type": "felv",
+    "followUpStatus": 1,
+    "subTests": {
+        "felv": {
+            "testCodes": [
+                {
+                    "id": "felv1",
+                    "testType": "boolean",
+                    "label": "FeLV Antigen",
+                    "description": "Contrary to what the name implies, this test searches for the presence of a virus, not a cancer.",
+                    "valueText": "POSITIVE"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "id": "t4",
+    "type": "Total T4",
+    "followUpStatus": 0,
+    "subTests": {
+        "t4": {
+            "testCodes": [
+                {
+                    "id": 10011,
+                    "value": "14",
+                    "description": "Total T4 is a measure of the thyroid hormone, thyroxine. Many things, besides situations (drugs, illness, diet) not associated with the thyroid gland can affect the Total T4 value. Unexpected values can be investigated using more selective tests to determine the exact nature of the problem.",
+                    "minValue": "2",
+                    "maxValue": "33",
+                    "unitOfMeasure": "g/dL"
+                }
+            ]
+        }
+    }
+}

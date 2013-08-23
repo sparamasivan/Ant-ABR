@@ -1,0 +1,14 @@
+@include view-test-base-extend(chemistry);
+
+.view-test-chemistry {
+    .subtest-container {
+        margin-top: 50px;
+    }
+    
+    /* phone */
+    @media (max-width:$mq-phone) {
+        .subtest-container {
+            margin-top: 0px;
+        }
+    }
+}

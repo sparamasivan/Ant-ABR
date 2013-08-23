@@ -1,0 +1,59 @@
+{
+    "id": "ua",
+    "type": "Urinalysis",
+    "followUpStatus": 1,
+    "subTests": {
+        "uacomponents": {
+            "testCodes": [
+                {
+                    "id": 10087,
+                    "valueText": "NEGATIVE",
+                    "description": "This is expected as protein should not be found in urine.",
+                    "label": "Protein"
+                },
+                {
+                    "id": 10088,
+                    "valueText": "NEGATIVE",
+                    "description": "This is expected as glucose should not be found in urine.",
+                    "label": "Glucose-Strip"
+                },
+                {
+                    "id": 10089,
+                    "valueText": "NEGATIVE",
+                    "description": "This is expected as ketones should not be found in urine.",
+                    "label": "Ketones"
+                },
+                {
+                    "id": 10090,
+                    "valueText": "NEGATIVE",
+                    "description": "This is expected as bilirubin should not be found in urine.",
+                    "label": "Bilirubin"
+                },
+                {
+                    "id": 10085,
+                    "valueText": "DARK GREEN",
+                    "label": "Color"
+                },
+                {
+                    "id": 10086,
+                    "valueText": "BLOODY",
+                    "label": "Appearance"
+                },
+                {
+                    "id": 10100,
+                    "value": "1.001",
+                    "minValue": "1.015",
+                    "maxValue": "1.050",
+                    "label": "Specific gravity"
+                },
+                {
+                    "id": 10101,
+                    "value": "7.0",
+                    "minValue": "7.4",
+                    "maxValue": "7.999999",
+                    "label": "pH"
+                }
+            ]
+        }
+    }
+}

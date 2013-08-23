@@ -1,0 +1,53 @@
+{
+    "id": "ova-low",
+    "type": "ova",
+    "followUpStatus": 1,
+    "subTests": {
+        "worms": {
+            "testCodes": [
+                {
+                    "id": "ova1",
+                    "testType": "boolean",
+                    "label": "Roundworm",
+                    "description": "To learn more about treatment and future prevention, please contact us.",
+                    "valueText": "POSITIVE"
+                },
+                {
+                    "id": "ova2",
+                    "testType": "boolean",
+                    "label": "Hookworm",
+                    "description": "To learn more about treatment and future prevention, please contact us.",
+                    "valueText": "POSITIVE"
+                },
+                {
+                    "id": "ova3",
+                    "testType": "boolean",
+                    "label": "Whipworm",
+                    "description": "To learn more about treatment and future prevention, please contact us.",
+                    "valueText": "POSITIVE"
+                },
+                {
+                    "id": "ova4",
+                    "testType": "boolean",
+                    "label": "Tapeworm",
+                    "description": "To learn more about treatment and future prevention, please contact us.",
+                    "valueText": "POSITIVE"
+                },
+                {
+                    "id": "ova5",
+                    "testType": "boolean",
+                    "label": "Coccidia",
+                    "description": "To learn more about treatment and future prevention, please contact us.",
+                    "valueText": "POSITIVE"
+                },
+                {
+                    "id": "ova6",
+                    "testType": "boolean",
+                    "label": "Giardia",
+                    "description": "They are a widespread parasite found in dogs and cats and are easily, and commonly, transmitted to people.",
+                    "valueText": "POSITIVE"
+                }
+            ]
+        }
+    }
+}

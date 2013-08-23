@@ -1,0 +1,32 @@
+{
+    "id": "accuplex",
+    "type": "accuplex",
+    "followUpStatus": 0,
+    "subTests": {
+        "accuplex": {
+            "testCodes": [
+                {
+                    "id": "accuplex1",
+                    "testType": "boolean",
+                    "label": "Lyme Exposure",
+                    "description": "Lyme disease is actually exposure to the bacteria borellia, which is transmitted through infected tick bites. Common symptoms include malaise, fever, and lack of appetite.",
+                    "valueText": "NEGATIVE"
+                },
+                {
+                    "id": "accuplex3",
+                    "testType": "boolean",
+                    "label": "Ehrlichia Exposure",
+                    "description": "Ehrlichia is a bacteria, which is transmitted through infected tick bites.  Common symptoms include malaise, fever, and lack of appetite.",
+                    "valueText": "NEGATIVE"
+                },
+                {
+                    "id": "accuplex4",
+                    "testType": "boolean",
+                    "label": "Anaplasma Exposure",
+                    "description": "Anaplasma is a bacteria, which is transmitted through infected tick bites.  Common symptoms include malaise, fever, and lack of appetite.",
+                    "valueText": "NEGATIVE"
+                }
+            ]
+        }
+    }
+}

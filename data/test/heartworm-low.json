@@ -1,0 +1,17 @@
+{
+    "id": "heartworm-low",
+    "type": "Heartworm Antigen",
+    "followUpStatus": 1,
+    "subTests": {
+        "heartworm": {
+            "testCodes": [
+                {
+                    "id": "heart2131",
+                    "label": "Heartworm",
+                    "description": "This test does not indicate whether or not heartworms are present, but rather just the exposure to heartworms in the past.",
+                    "valueText": "POSITIVE"
+                }
+            ]
+        }
+    }
+}

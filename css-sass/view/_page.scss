@@ -1,0 +1,151 @@
+.page-section-top {
+    background-color: #0099be;
+
+    .logo {
+        width: 100%;
+        max-width: image-width("../images/page/logo.png") / 2;
+    }
+
+    /* tablet & desktop */
+    @media (min-width:($mq-phone + 1)) {
+        padding-top: 24px;
+    }
+
+    .links {
+        font-size:  100%;
+        text-align: right;
+
+        a, a:visited {
+            @include secondaryFont;
+            color: white;
+        }
+
+        .logout {
+            display: inline-block;
+            padding-left: 15px;
+
+            /* phone */
+            @media (max-width:($mq-phone)) {
+                padding-right: 50px;
+            }
+        }
+    }
+}
+
+.page-section-conclusion {
+    background-image: url('../images/overview/recap/pattern.png');
+    padding: 10px 0 20px;
+
+    .arrow {
+        width: 122px;
+        height: 122px;
+        cursor: pointer;
+        position: relative;
+        margin: 0 auto;
+
+        img {
+            position: absolute;
+            display: block;
+            width: 100%;
+        }
+    }
+
+    h1 {
+        text-align: center;
+        margin: 0;
+    }
+
+    /* phone */
+    @media (max-width:($mq-phone)) {
+        padding: 0;
+
+        .arrow {
+            height: 94px;
+            width: 94px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.page-footer {
+    @include secondaryFont;
+    background-color: #0099BE;
+    color: #FFF;
+    padding: 30px 0;
+
+    .contact-us {
+        color:#ffe507;
+        font-size: 167%;
+        margin-bottom: 0;
+    }
+
+    .clinic {
+        font-size: 138.5%;
+        color: white;
+        text-transform: capitalize;
+        margin-top: 5px;
+    }
+
+    a, a:visited {
+        color: white;
+    }
+
+    .link {
+        display: block;
+        height: 32px;
+        line-height: 32px;
+        padding-left: 32px + 10px;
+
+        background-repeat: no-repeat;
+    }
+
+    .email {
+        background-image: url("../images/footer/email.png");
+    }
+
+    .phone {
+        background-image: url("../images/footer/phone.png");
+    }
+
+    .fine-print {
+        font-size: 108%;
+        margin: 0;
+    }
+
+    .section-copyright {
+        position: relative;
+
+        .text {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin-bottom: 1em;
+        }
+    }
+
+    .section-contact {
+        float: right;
+    }
+
+    /* phone */
+    @media (max-width:($mq-phone)) {
+        padding: 1px 0;
+
+        .section-copyright {
+            margin-top: 25px;
+            
+            .text {
+                left: auto;
+                bottom: auto;
+                position: static;
+            }
+        }
+    }
+}
+
+.subsection-chemical-analysis {
+	margin-top:33px;
+}

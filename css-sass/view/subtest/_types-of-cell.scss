@@ -1,0 +1,215 @@
+.view-subtest-types-of-cell {
+    $option-sprite: sprite-map("subtest/types-of-cell/option/*.png");
+    $option-2x-sprite: sprite-map("subtest/types-of-cell/option-2x/*.png");
+    $cell-sprite: sprite-map("subtest/types-of-cell/cell/*.png");
+    $cell-2x-sprite: sprite-map("subtest/types-of-cell/cell-2x/*.png");
+
+    @mixin skin-option ($species, $type) {
+        &.#{$type} {
+            .icon {
+                background-position: -2px nth(sprite-position($option-sprite, #{$species}-#{$type}-off), 2) - 4px;
+
+                @media
+                only screen and (-webkit-min-device-pixel-ratio: 2),
+                only screen and (min-resolution: 192dpi) {
+                    background-position: -2px (round(nth(sprite-position($option-2x-sprite, #{$species}-#{$type}-off), 2) / 2) - 4px);
+                }
+            }
+
+            &.selected .icon {
+                background-position: -2px nth(sprite-position($option-sprite, #{$species}-#{$type}-on), 2) - 4px;
+
+                @media
+                only screen and (-webkit-min-device-pixel-ratio: 2),
+                only screen and (min-resolution: 192dpi) {
+                    background-position: -2px (round(nth(sprite-position($option-2x-sprite, #{$species}-#{$type}-on), 2) / 2) - 4px);
+                }
+            }
+        }
+    }
+
+    @mixin skin-cell ($species, $type) {
+        .#{$type} {
+            .icon {
+                background-position: sprite-position($cell-sprite, #{$species}-#{$type}-off);
+
+                @media
+                only screen and (-webkit-min-device-pixel-ratio: 2),
+                only screen and (min-resolution: 192dpi) {
+                    background-position: 0 round(nth(sprite-position($cell-2x-sprite, #{$species}-#{$type}-off), 2) / 2);
+                }
+            }
+        }
+        &.selected-#{$type} {
+            .#{$type} {
+                .icon {
+                    background-position: sprite-position($cell-sprite, #{$species}-#{$type}-on);
+
+                    @media
+                    only screen and (-webkit-min-device-pixel-ratio: 2),
+                    only screen and (min-resolution: 192dpi) {
+                        background-position: 0 round(nth(sprite-position($cell-2x-sprite, #{$species}-#{$type}-on), 2) / 2);
+                    }
+                }
+            }
+        }
+    }
+
+    @mixin skin ($species) {
+        &.species-#{$species} {
+            .option {
+                @include skin-option ($species, fighter);
+                @include skin-option ($species, defender);
+                @include skin-option ($species, watcher);
+            }
+
+            .cells {
+                @include skin-cell ($species, fighter);
+                @include skin-cell ($species, defender);
+                @include skin-cell ($species, watcher);
+            }
+        }
+    }
+
+    .option {
+        @include secondaryFont;
+        border: 2px solid #f0f0f0;
+        font-size: 123.1%;
+        color: #6b6b6b;
+        border-radius: 3px;
+        text-align: center;
+        cursor: pointer;
+        padding: 3px;
+
+        .icon {
+            display: inline-block;
+            width: 35px;
+            height: 31px;
+            vertical-align: middle;
+            margin: 0 2.6%;
+
+            background-image: sprite-url($option-sprite);
+
+            @media
+            only screen and (-webkit-min-device-pixel-ratio: 2),
+            only screen and (min-resolution: 192dpi) {
+                background-image: sprite-url($option-2x-sprite);
+                background-size: (image-width(sprite-path($option-2x-sprite)) / 2) (image-height(sprite-path($option-2x-sprite)) / 2);
+            }
+        }
+
+        .text {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            @include transition(all 350ms $ease-in-out);
+            border-color: #999999;
+        }
+
+        &.selected {
+            @include transition(all 350ms $ease-in-out);
+            color: white;
+            font-weight: bold;
+            cursor: auto;
+        }
+
+        &.fighter {
+            &:hover {
+                @include transition(all 350ms $ease-in-out);
+                background-color: #f3fbf7;
+            }
+
+            &.selected {
+                @include transition(all 350ms $ease-in-out);
+                background-color: #32b983;
+                border-color: #32b983;
+            }
+        }
+
+        &.defender {
+            &:hover {
+                @include transition(all 350ms $ease-in-out);
+                background-color: #fefbf3;
+            }
+
+            &.selected {
+                @include transition(all 350ms $ease-in-out);
+                background-color: #ebbc31;
+                border-color: #ebbc31;
+            }
+        }
+
+        &.watcher {
+            &:hover {
+                @include transition(all 350ms $ease-in-out);
+                background-color: #f0fbfe;
+            }
+
+            &.selected {
+                @include transition(all 350ms $ease-in-out);
+                background-color: #00beeb;
+                border-color: #00beeb;
+            }
+        }
+    }
+
+    .cells {
+        width: 100%;
+        text-align: center;
+        line-height: 12px;
+    }
+
+    .cell {
+        padding: 0 2px 0 1px;
+        cursor: pointer;
+        display: inline-block;
+
+        &.selected {
+            cursor: auto;
+        }
+
+        .icon {
+            width: 57px;
+            height: 51px;
+
+            background-image: sprite-url($cell-sprite);
+
+            @media
+            only screen and (-webkit-min-device-pixel-ratio: 2),
+            only screen and (min-resolution: 192dpi) {
+                background-image: sprite-url($cell-2x-sprite);
+                background-size: 100%;
+            }
+        }
+    }
+
+    .description {
+        display: none;
+
+        &.selected {
+            display: block;
+        }
+
+        .title {
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin-top: 0;
+            @include smallFontSize;
+        }
+
+        .component-info {
+            cursor: pointer;
+            display: inline-block;
+            margin-left: 5px;
+            margin-top: -4px;
+            vertical-align: middle;
+        }
+    }
+
+    @include skin(canine);
+    @include skin(feline);
+}

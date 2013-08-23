@@ -1,0 +1,206 @@
+<!-- test - cbc -->
+<div class="view-test-cbc">
+
+	<!-- summary -->
+    <div class="yui3-g-r page-section subsection subsection-overview">
+        <!-- diagram -->
+        <div class="yui3-u-1-2 yui3-hidden-phone diagram">
+            <div class="yui3-u-c diagram-visualization">
+            	<div class="container"></div>
+            </div>
+        </div>
+
+        <!-- description -->
+        <div class="yui3-u-1-2">
+            <div class="yui3-u-c diagram-description">
+                <div class="container" class="anchor-offset" name="CBC-1">
+	            	<h1>The CBC (Complete Blood Count) test examines the health and numbers of {{patient.name}}’s cells.</h1>
+	            	<p>There are three different kinds of cells in the blood: red blood cells, white blood cells and platelets. Though they have different jobs and vary in number, they all work together to achieve balance.</p>
+            	</div>
+            </div>
+        </div>
+    </div>
+
+	<!-- RBC -->
+	<div class="page-section subsection subsection-rbc">
+		<div class="yui3-g-r">
+			<!-- description -->
+			<div class="yui3-u-1-2">
+				<div class="yui3-u-c">
+					<div class="subsection-description">
+
+						<h1><span>Red Blood Cells (RBC)</span></h1>
+						<p>Red blood cells make up the majority of {{patient.name}}’s blood count. They power {{patient.name}}’s body, carrying oxygen from the lungs to all the other cells and tissues, where it’s then turned into energy.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="yui3-u-1-12"></div>
+
+			<!-- result diagram -->
+			<div class="yui3-u-5-12">
+				<div class="yui3-u-c">
+					<div class="diagram-rbc-result"></div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="yui3-g-r subsubsection-cell-attribute">
+			<!-- cell types -->
+			<div class="yui3-u-1-4 yui3-hidden-phone">
+				<div class="yui3-u-c cell-attribute-column">
+					<div class="diagram-rbc-cell">
+						<img src="{{rbc.clipartUrl}}" />
+					</div>
+				</div>
+			</div>
+
+			<!-- cell size -->
+			<div class="yui3-u-1-4">
+				<div class="yui3-u-c cell-attribute-column attribute-list-container">
+					<h4 class="title">Size</h4>
+
+					<div class="attribute-list">
+						<ul class="options">
+							{{#each rbc.sizes}}
+								<li class="{{#if isSelected}}selected{{/if}}">{{label}}</li>
+							{{/each}}
+						</ul>
+					</div>
+
+					<p>{{patient.name}}’s blood is a mix of young, middle aged and old blood cells. Size helps determine their age and how much hemoglobin and oxygen they contain.</p>
+				</div>
+			</div>
+
+			<!-- cell shape -->
+			<div class="yui3-u-1-4">
+				<div class="yui3-u-c cell-attribute-column attribute-list-container">
+					<h4 class="title">Shape</h4>
+
+					<div class="attribute-list">
+						<ul class="options">
+							{{#each rbc.shapes}}
+								<li class="{{#if isSelected}}selected{{/if}}">{{label}}</li>
+							{{/each}}
+						</ul>
+					</div>
+
+					<p>Blood cells have to squeeze through tiny capillaries. After passing through, the blood cells should spring back to a round shape.</p>
+				</div>
+			</div>
+
+			<!-- cell color -->
+			<div class="yui3-u-1-4">
+				<div class="yui3-u-c cell-attribute-column attribute-list-container">
+					<h4 class="title">Color</h4>
+
+					<div class="attribute-list">
+						<ul class="options">
+							{{#each rbc.colors}}
+								<li class="{{#if isSelected}}selected{{/if}}">{{label}}</li>
+							{{/each}}
+						</ul>
+					</div>
+
+					<p>Just like how chlorophyll makes plants green, oxygen and hemoglobin make blood red.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- WBC -->
+	<div class="page-section subsection subsection-wbc">
+		<div class="yui3-g-r">
+			<!-- description -->
+			<div class="yui3-u-1-2">
+				<div class="yui3-u-c">
+					<div class="subsection-description">
+						<h1><span>White Blood Cells (WBC)</span></h1>
+						<p>White blood cells protect and defend {{patient.name}}’s body against "invaders" like viruses, bacteria and parasites. There are different kinds of white blood cells that specialize in fighting different kinds of invaders.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="yui3-u-1-12"></div>
+
+			<!-- result diagram -->
+			<div class="yui3-u-5-12">
+				<div class="yui3-u-c">
+					<div class="diagram-wbc-result"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="yui3-g-r">
+			<!-- cell types -->
+			<div class="yui3-u-1">
+				<div class="diagram-wbc-breakdown"></div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Platelets -->
+	<div class="page-section subsection subsection-platelet">
+		<div class="yui3-g-r">
+			<!-- description -->
+			<div class="yui3-u-1-2">
+				<div class="yui3-u-c">
+					<div class="subsection-description">
+						<h1><span>Platelets</span></h1>
+						<p>Platelets are like natural bandages – they help the body heal. If {{patient.name}} is cut, platelets rush to the site and form a scab to stop the bleeding.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="yui3-u-1-12"></div>
+
+			<!-- result diagram -->
+			<div class="yui3-u-5-12">
+				<div class="yui3-u-c">
+					<div class="diagram-platelet-result"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="yui3-g-r clumping">
+			<div class="yui3-u-1 yui3-visible-phone">
+				<div class="yui3-u-c">
+					<h2>Clumping</h2>
+				</div>
+			</div>
+
+			<!-- clumping diagrams -->
+			<div class="yui3-u-7-12 column">
+				<div class="yui3-g">
+					<!-- no clumping -->
+					<div class="yui3-u-1-2 diagram clumping-no">
+						<div class="yui3-u-c">
+							<img src="images/test/cbc/clumping-no.png" alt="No Clumping" />
+							<p class="caption">No Clumping</p>
+						</div>
+					</div>
+
+					<!-- clumping -->
+					<div class="yui3-u-1-2 diagram clumping-yes">
+						<div class="yui3-u-c">
+							<img src="images/test/cbc/clumping-yes.png" alt="Clumping" />
+							<p class="caption">Clumping</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- clumping description -->
+			<div class="yui3-u-5-12 column">
+				<div class="yui3-u-c clumping-description">
+					<div class="inner">
+						<h2 class="yui3-hidden-phone">Clumping</h2>
+						<p>A low platelet count doesn’t always mean low platelets. In order to do their job – stop bleeding – platelets stick together and create a clump. Sometimes when drawing blood, platelets clump together, resulting in a false low count.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

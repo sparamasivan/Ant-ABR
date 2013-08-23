@@ -1,0 +1,81 @@
+<div class="page">
+
+    <!-- report content -->
+    <div class="page-content">
+        <!-- header -->
+        <div class="page-section-wrapper page-section-top">
+            <div class="yui3-g-r page-section">
+                <!-- logo -->
+                <div class="yui3-u-11-24 yui3-u-1-2-phone">
+                    <div class="yui3-u-c">
+                        <img class="logo" src="images/page/logo.png" alt="Healthtracks" />
+                    </div>
+                </div>
+
+                <!-- links -->
+                <!--div class="yui3-u-13-24 yui3-u-1-2-phone">
+                    <div class="yui3-u-c links">
+                        <a href="{{petPortalHomeUrl}}" class="pet-portal yui3-hidden-phone">Pet Portal Home</a>
+                        <a href="{{logoutUrl}}" class="logout">Log&nbsp;Out</a>
+                    </div>
+                </div-->
+            </div>
+        </div>
+    </div>
+
+    <div class="page-section-wrapper page-section-conclusion">
+        <div class="yui3-g-r page-section">
+            <div class="yui3-u-1-12 yui3-hidden-phone"></div>
+            <div class="yui3-u-5-6">
+                <div class="yui3-u-c">
+                    <div class="arrow">
+                        <img src="images/overview/recap/circle.png" alt="" />
+                        <img src="images/overview/recap/arrow-up.png" alt="" />
+                    </div>
+
+                    <h1>
+                        This is the end of {{patient.name}}’s test results.
+                        <br class="yui3-hidden-tablet yui3-hidden-phone" />
+                        Return to the top for your next steps.
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- report footer -->
+    <div class="page-footer">
+        <div class="yui3-g-r page-section">
+            <div class="yui3-u-1 yui3-hidden-desktop yui3-hidden-tablet">
+                <div class="yui3-u-c">
+                    <h3 class="contact-us">Contact Us</h3>
+                    <h4 class="clinic">{{clinic.name}}</h4>
+                    <p>{{phoneLink clinic.phone}}</a></p>
+                    <p><a href="mailto:{{clinic.email}}">{{clinic.email}}</a></p>
+                </div>
+            </div>
+
+            <div class="yui3-u-1-2">
+                <div class="yui3-u-c section-copyright column">
+                    <div class="text">
+                        <p class="fine-print">© 2001-2013 &nbsp;Vetstreet. All rights reserved.</p>
+                        <p class="fine-print"><a class="policy" href="{{privacyPolicyUrl}}">Privacy&nbsp;Policy</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="yui3-u-1-2 yui3-hidden-phone">
+                <div class="yui3-u-c section-contact column">
+                    <h3 class="contact-us">Contact Us</h3>
+                    <h4 class="clinic">{{clinic.name}}</h4>
+                    <p>{{phoneLink clinic.phone "link phone"}}</a></p>
+                    <p><a class="link email" href="mailto:{{clinic.email}}">{{clinic.email}}</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- report navigation -->
+    <div class="page-nav">
+    </div>
+</div>

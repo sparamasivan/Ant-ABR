@@ -1,0 +1,144 @@
+.view-subtest-boolean {
+    @include secondaryFont;
+    
+    .wrapper {
+        height: 93px;
+        max-width: 300px;
+
+        border: 1px solid #e4e4e4;
+        border-radius: 3px 3px;
+
+        background-image: url("../images/subtest/boolean/bg.png");
+        background-repeat: repeat-x;
+        
+        cursor: pointer;
+
+        margin: 0 auto;
+    }
+
+    .label {
+        font-weight: bold;
+        font-size: 153.9%;
+        text-align: center;
+        line-height: 40px;
+        color: #444;
+    }
+
+
+    $result-height: 46px;
+
+    .result {
+        width: 80%;
+        margin: 0 0 0 10%;
+
+        position: relative;
+    }
+
+    .bg {
+        width: 100%;
+        position: absolute;
+
+        .bg-section {
+            height: $result-height;
+            background-repeat: no-repeat;
+            padding: 0;
+        }
+
+        .left {
+            width: 25px;
+            background-image: url("../images/subtest/boolean/result-bg-left.png");
+        }
+
+        .middle {
+            background-image: url("../images/subtest/boolean/result-bg-middle.png");
+            background-repeat: repeat-x;
+        }
+
+        .right {
+            width: 25px;
+            background-image: url("../images/subtest/boolean/result-bg-right.png");
+        }
+    }
+
+    .value {
+        position: absolute;
+        height: $result-height;
+        width: 100%;
+        text-align: center;
+
+        background-repeat: no-repeat;
+
+        .text {
+            @include mediumFontSize;
+            font-size: 116%;
+            color: #6b6b6b;
+            line-height: $result-height;
+            display:inline-block;
+        }
+
+        .icon {
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            top: 8px;
+
+            @media 
+            only screen and (-webkit-min-device-pixel-ratio: 2), 
+            only screen and (min-resolution: 192dpi) {
+                background-size: (image-width("../images/subtest/boolean/result-good-2x.png") / 2) (image-height("../images/subtest/boolean/result-good-2x.png") / 2);
+            }
+        }
+
+        &.good {
+            .icon {
+                background-image: url("../images/subtest/boolean/result-good.png");
+                left: 8px;
+
+                @media 
+                only screen and (-webkit-min-device-pixel-ratio: 2), 
+                only screen and (min-resolution: 192dpi) {
+                    background-image: url("../images/subtest/boolean/result-good-2x.png");
+                }
+            }
+
+            .text {
+                padding-left: 10%;
+            }
+        }
+
+        &.bad {
+            .icon {
+                background-image: url("../images/subtest/boolean/result-bad.png");
+                right: 7px;
+
+                @media 
+                only screen and (-webkit-min-device-pixel-ratio: 2), 
+                only screen and (min-resolution: 192dpi) {
+                    background-image: url("../images/subtest/boolean/result-bad-2x.png");
+                }
+            }
+
+            .text {
+                padding-right: 26%;
+            }
+        }
+    }
+
+    .description {
+        display: none;
+    }
+
+    @media (max-width:($mq-tablet - 1px)) {
+        .label {
+            font-size: 100%;
+        }
+    }
+}
+
+
+.view-subtest-boolean-tooltip {
+    .message {
+        font-weight: bold;
+        font-size: 116%;
+    }
+}

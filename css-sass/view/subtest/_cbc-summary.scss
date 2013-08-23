@@ -1,0 +1,86 @@
+.view-subtest-cbc-summary {
+    position: relative;
+    width: 100%;
+
+    $labelWidth: 180%;
+
+    .background {
+        width: 100%;
+    }
+
+    .label {
+        position: absolute;
+        width: $labelWidth;
+        text-align: center;
+
+        .value {
+            font-family: Arial;
+            line-height: 85%;
+            font-size: 320%;
+            font-weight: bold;
+            color: #32b983;
+        }
+
+        .description {
+            @include secondaryFont;
+            color: #444;
+            font-size: 77%;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+
+    .type {
+
+        position: absolute;
+        width: 17%;
+
+        img {
+            width: 100%;
+        }
+
+        &.rbc {
+            top: 28%;
+            left: 35%;
+
+            .label {
+                top: -80%;
+                left: - $labelWidth / 5.5;
+
+                .description {
+                    width: 200%;
+                    margin-left: -50%;
+                }
+            }
+        }
+
+        &.wbc {
+            top: 54%;
+            left: 25%;
+
+            .label {
+                left: - $labelWidth;
+                top: 20px;
+            }
+        }
+
+        &.platelet {
+            top: 54%;
+            left: 46%;
+
+            .label {
+                right: - $labelWidth;
+                top: 20px
+            }
+        }
+    }
+
+
+    @media (max-width:($mq-tablet - 1px)) {
+        .label {
+            .value {
+                font-size: 210%;
+            }
+        }
+    }
+}

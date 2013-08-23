@@ -1,0 +1,94 @@
+{
+    "id": "ua-low",
+    "type": "Urinalysis",
+    "followUpStatus": 1,
+    "subTests": {
+        "uacomponents": {
+            "testCodes": [
+                {
+                    "id": 10091,
+                    "description": "Occult (Hidden) Blood can be low levels of Red Blood cells or hemoglobin whose low concentration does not color the urine but whose presence is still unexpected.",
+                    "label": "Occult blood"
+                },
+                {
+                    "id": 10092,
+                    "description": "WBC (White Blood Cells) aren’t expected in the urine, but a few may be seen in a normal urine sample. Their presence indicates inflammation and potential infection.",
+                    "label": "WBC"
+                },
+                {
+                    "id": 10094,
+                    "description": "RBCs (Red Blood Cells) aren’t expected in the urine, but a few may be seen in a normal urine sample. Their presence means something’s off – usually inflammation somewhere in the urinary tract.",
+                    "label": "RBC"
+                },
+                {
+                    "id": 10095,
+                    "description": "Cast always originate from the kidneys. They form in the tubules of the kidney and can be comprised of many things – from RBCs to a waxy substance. Casts are unexpected findings and usually require further testing to find out more.",
+                    "label": "Casts/LPF"
+                },
+                {
+                    "id": 10097,
+                    "description": "Struvite (Triple Phosphate) crystals are the most common crystals dogs experience. They can increase the risk for urolith (stone) formation. Their significance must be examined in light of urine pH, Specific Gravity, and diet.",
+                    "label": "Struvite (Triple PO4) crystals"
+                },
+                {
+                    "id": 10099,
+                    "description": "Bacteria is an unexpected finding in a urine sample, since urine is sterile. If collection was done through a “free catch,” some bacteria can be expected. If the sample was collected via sterile methods, bacteria usually indicates potential infection. Further testing may be needed.",
+                    "label": "Bacteria"
+                },
+                {
+                    "id": 10099,
+                    "description": "Epithelial cells come from the lining along the urinary tract, starting at the kidneys. Their significance depends on the amount, how the urine sample was collected, and which other components are present. A few of these cells can be expected.",
+                    "label": "Epithelial cells"
+                },
+                {
+                    "id": 10087,
+                    "valueText": "POSITIVE",
+                    "description": "",
+                    "label": "Protein"
+                },
+                {
+                    "id": 10088,
+                    "valueText": "POSITIVE",
+                    "description": "",
+                    "label": "Glucose-Strip"
+                },
+                {
+                    "id": 10089,
+                    "valueText": "POSITIVE",
+                    "description": "",
+                    "label": "Ketones"
+                },
+                {
+                    "id": 10090,
+                    "valueText": "POSITIVE",
+                    "description": "The presence of bilirubin can indicate issues with the liver or red blood cells.",
+                    "label": "Bilirubin"
+                },
+                {
+                    "id": 10085,
+                    "valueText": "DARK GREEN",
+                    "label": "Color"
+                },
+                {
+                    "id": 10086,
+                    "valueText": "BLOODY",
+                    "label": "Appearance"
+                },
+                {
+                    "id": 10100,
+                    "value": "1.001",
+                    "minValue": "1.015",
+                    "maxValue": "1.050",
+                    "label": "Specific gravity"
+                },
+                {
+                    "id": 10101,
+                    "value": "7.0",
+                    "minValue": "7.4",
+                    "maxValue": "7.999999",
+                    "label": "pH"
+                }
+            ]
+        }
+    }
+}

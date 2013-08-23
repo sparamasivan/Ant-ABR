@@ -1,0 +1,17 @@
+{
+    "id": "heartworm",
+    "type": "Heartworm Antigen",
+    "followUpStatus": 0,
+    "subTests": {
+        "heartworm": {
+            "testCodes": [
+                {
+                    "id": "heart2131",
+                    "label": "Heartworm",
+                    "description": "While Fido is currently clear of heartworms, she could become infected at any time. Prevention is easy, safe and very effective.",
+                    "valueText": "NEGATIVE"
+                }
+            ]
+        }
+    }
+}

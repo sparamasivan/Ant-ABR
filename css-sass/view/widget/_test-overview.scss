@@ -1,0 +1,21 @@
+.view-widget-test-overview {
+    .section-heading {
+
+        .column {
+            display: table;
+            height: 100%;
+            margin-top:40px;
+
+            .inner {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+
+        .diagram-container {
+            margin-top: 8%;
+            margin-bottom: 8%;
+            height: 84%;
+        }
+    }
+}

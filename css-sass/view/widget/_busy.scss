@@ -1,0 +1,49 @@
+.view-widget-busy {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(255,255,255,.9);
+    z-index: 9999999999;
+    display: none; /* hidden by default */
+	opacity:1 !important;
+
+	.widget {
+		height:60px;
+		width:346px;
+		margin:0 auto;
+		margin-top:250px;
+		img {
+			width:87px;
+			height:26px;
+			float:left;
+		}
+		span {
+			float:left;
+			font-size:28px;
+			color:#333;
+			font-family: 'Apercu';
+			font-weight:700;
+			height:28px;
+			line-height:28px;
+			margin-left:5px;
+		}
+	}
+}
+
+@media (max-width:($mq-tablet)) {
+	.widget {
+		margin-top:180px!important;
+	}
+}
+
+@media (max-width:($mq-phone)) {
+	.widget {
+		width:306px!important;
+		margin-top:125px!important;
+		span {
+			font-size:24px!important;
+		}
+	}
+}

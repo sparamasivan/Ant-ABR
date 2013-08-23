@@ -1,0 +1,344 @@
+@mixin primaryFont {
+    font-family: 'adelle_light', serif;
+}
+@mixin secondaryFont {
+    font-family: 'Apercu', sans-serif;
+}
+
+@mixin mediumFontSize {
+    font-size: 123.1%;
+    line-height: 146%;
+
+    /* Phone */
+    @media (max-width:($mq-phone)) {
+        font-size: 116%;
+    }
+}
+@mixin smallFontSize {
+    font-size: 108%;
+    line-height: 150%;
+
+    /* Phone */
+    @media (max-width:($mq-phone)) {
+        font-size: 116%;
+    }
+}
+
+* {
+    /**
+     * Disable highlighting elements when tapping screen.
+     * @see http://stackoverflow.com/questions/2728566/android-browser-green-border-on-click
+     */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  
+}
+
+body {
+    color: #797979;
+    @include primaryFont;
+}
+
+p {
+    @include mediumFontSize;
+}
+
+a, a:visited {
+    color: #00beeb;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #444;
+    @include secondaryFont;
+    margin: 10px 0;
+}
+
+h1 {
+    line-height: 115%;
+}
+
+h2 {
+    font-size: 161.6%;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-size: 100%;
+
+    .small {
+        text-transform: lowercase;
+    }
+}
+
+@media (max-width:($mq-phone)) {
+    h1 {
+        font-size: 153.9%
+    }
+}
+
+/* Phone & Tablet */
+@media (max-width:($mq-tablet - 1px)) {
+    p {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        font-size: 131%;
+        margin-top: 14px;
+        margin-bottom: 8px;
+    }
+
+    h4 {
+        margin-top: 5px;
+        margin-bottom: 7px;
+    }
+}
+
+/* content wrapper inside a grid unit */
+.yui3-u-c {
+    margin:0.67em;
+}
+
+/* Tablet */
+@media (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
+
+    /* Media specific unit sizes */
+    .yui3-g-r > .yui3-u-1-small-tablet {
+        width: 100%;
+    }
+
+    .yui3-g-r > .yui3-u-1-2-small-tablet {
+        width: 50%;
+    }
+
+    .yui3-g-r > .yui3-u-1-3-small-tablet {
+        width: 33.33333%;
+    }
+
+    .yui3-g-r > .yui3-u-2-3-small-tablet {
+        width: 66.66666%;
+    }
+
+    .yui3-g-r > .yui3-u-1-4-small-tablet {
+        width: 25%;
+    }
+
+    .yui3-g-r > .yui3-u-3-4-small-tablet {
+        width: 75%;
+    }
+
+    .yui3-g-r > .yui3-u-1-5-small-tablet {
+        width: 20%;
+    }
+
+    .yui3-g-r > .yui3-u-2-5-small-tablet {
+        width: 40%;
+    }
+
+    .yui3-g-r > .yui3-u-3-5-small-tablet {
+        width: 60%;
+    }
+
+    .yui3-g-r > .yui3-u-4-5-small-tablet {
+        width: 80%;
+    }
+
+    .yui3-g-r > .yui3-u-1-6-small-tablet {
+        width: 16.656%;
+    }
+
+    .yui3-g-r > .yui3-u-5-6-small-tablet {
+        width: 83.33%;
+    }
+
+    .yui3-g-r > .yui3-u-1-8-small-tablet {
+        width: 12.5%;
+    }
+
+    .yui3-g-r > .yui3-u-3-8-small-tablet {
+        width: 37.5%;
+    }
+
+    .yui3-g-r > .yui3-u-5-8-small-tablet {
+        width: 62.5%;
+    }
+
+    .yui3-g-r > .yui3-u-7-8-small-tablet {
+        width: 87.5%;
+    }
+
+    .yui3-g-r > .yui3-u-1-12-small-tablet {
+        width: 8.3333%;
+    }
+
+    .yui3-g-r > .yui3-u-5-12-small-tablet {
+        width: 41.6666%;
+    }
+
+    .yui3-g-r > .yui3-u-7-12-small-tablet {
+        width: 58.3333%;
+    }
+
+    .yui3-g-r > .yui3-u-11-12-small-tablet {
+        width: 91.6666%;
+    }
+
+    .yui3-g-r > .yui3-u-1-24-small-tablet {
+        width: 4.1666%;
+    }
+
+    .yui3-g-r > .yui3-u-5-24-small-tablet {
+        width: 20.8333%;
+    }
+
+    .yui3-g-r > .yui3-u-7-24-small-tablet {
+        width: 29.1666%;
+    }
+
+    .yui3-g-r > .yui3-u-11-24-small-tablet {
+        width: 45.8333%;
+    }
+
+    .yui3-g-r > .yui3-u-13-24-small-tablet {
+        width: 54.1666%;
+    }
+
+    .yui3-g-r > .yui3-u-17-24-small-tablet {
+        width: 70.8333%;
+    }
+
+    .yui3-g-r > .yui3-u-19-24-small-tablet {
+        width: 79.1666%;
+    }
+
+    .yui3-g-r > .yui3-u-23-24-small-tablet {
+        width: 95.8333%;
+    }
+}
+
+
+/* Phones */
+@media (max-width:$mq-phone) {
+
+    /* Media specific unit sizes */
+    .yui3-g-r > .yui3-u-1-phone {
+        width: 100%;
+    }
+
+    .yui3-g-r > .yui3-u-1-2-phone {
+        width: 50%;
+    }
+
+    .yui3-g-r > .yui3-u-1-3-phone {
+        width: 33.33333%;
+    }
+
+    .yui3-g-r > .yui3-u-2-3-phone {
+        width: 66.66666%;
+    }
+
+    .yui3-g-r > .yui3-u-1-4-phone {
+        width: 25%;
+    }
+
+    .yui3-g-r > .yui3-u-3-4-phone {
+        width: 75%;
+    }
+
+    .yui3-g-r > .yui3-u-1-5-phone {
+        width: 20%;
+    }
+
+    .yui3-g-r > .yui3-u-2-5-phone {
+        width: 40%;
+    }
+
+    .yui3-g-r > .yui3-u-3-5-phone {
+        width: 60%;
+    }
+
+    .yui3-g-r > .yui3-u-4-5-phone {
+        width: 80%;
+    }
+
+    .yui3-g-r > .yui3-u-1-6-phone {
+        width: 16.656%;
+    }
+
+    .yui3-g-r > .yui3-u-5-6-phone {
+        width: 83.33%;
+    }
+
+    .yui3-g-r > .yui3-u-1-8-phone {
+        width: 12.5%;
+    }
+
+    .yui3-g-r > .yui3-u-3-8-phone {
+        width: 37.5%;
+    }
+
+    .yui3-g-r > .yui3-u-5-8-phone {
+        width: 62.5%;
+    }
+
+    .yui3-g-r > .yui3-u-7-8-phone {
+        width: 87.5%;
+    }
+
+    .yui3-g-r > .yui3-u-1-12-phone {
+        width: 8.3333%;
+    }
+
+    .yui3-g-r > .yui3-u-5-12-phone {
+        width: 41.6666%;
+    }
+
+    .yui3-g-r > .yui3-u-7-12-phone {
+        width: 58.3333%;
+    }
+
+    .yui3-g-r > .yui3-u-11-12-phone {
+        width: 91.6666%;
+    }
+
+    .yui3-g-r > .yui3-u-1-24-phone {
+        width: 4.1666%;
+    }
+
+    .yui3-g-r > .yui3-u-5-24-phone {
+        width: 20.8333%;
+    }
+
+    .yui3-g-r > .yui3-u-7-24-phone {
+        width: 29.1666%;
+    }
+
+    .yui3-g-r > .yui3-u-11-24-phone {
+        width: 45.8333%;
+    }
+
+    .yui3-g-r > .yui3-u-13-24-phone {
+        width: 54.1666%;
+    }
+
+    .yui3-g-r > .yui3-u-17-24-phone {
+        width: 70.8333%;
+    }
+
+    .yui3-g-r > .yui3-u-19-24-phone {
+        width: 79.1666%;
+    }
+
+    .yui3-g-r > .yui3-u-23-24-phone {
+        width: 95.8333%;
+    }
+}
+
+.clearfix:before, .clearfix:after {
+	content:"\0020";
+	display:block;
+	height:0;
+	visibility:hidden;
+}
+.clearfix:after {
+	clear:both;
+}

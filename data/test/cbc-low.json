@@ -1,0 +1,119 @@
+{
+    "id": "cbc-low",
+    "type": "CBC",
+    "followUpStatus": 1,
+    "subTests": {
+        "CBC": {
+            "testCodes": [
+                {
+                    "id": -1902958152,
+                    "value": "100",
+                    "description": "Platelets are the least common cell type in blood used as the first line of defense in bleeding prevention (clotting)  from a cut or leaky blood vessel. They are counted and also classified as to their size.",
+                    "minValue": "170",
+                    "maxValue": "400",
+                    "testType": "Platelets",
+                    "label": "Platelet Count",
+                    "unitOfMeasure": "Thousand/µL"
+                },
+                {
+                    "id": -1902958144,
+                    "value": "3538",
+                    "description": "Neutrophils are the most abundant type of white blood cells in mammals. Neutrophils are one of the first-responders to migrate towards the site of inflammation.",
+                    "testType": "WBC",
+                    "label": "Absolute Neutrophils"
+                },
+                {
+                    "id": -1902958142,
+                    "value": "0",
+                    "description": "Bands are young Neutrophils. A band count is used to measure the degree of severity of an inflammation.",
+                    "testType": "WBC",
+                    "label": "Absolute Bands"
+                },
+                {
+                    "id": -1902958158,
+                    "value": "4",
+                    "description": "Red Blood Cells (RBC) are the most numerous of cells in blood. There major function is to carry oxygen to each cell in the tissues and carry away their waste product (CO2). On aveage there are 300 -400 Million RBCs in a teaspoon of blood. Each RBC is produced in the bone marrows , stored in the spleen and circulated for approximatley 30 days before being decommission in the liver. ",
+                    "minValue": "4.8",
+                    "maxValue": "9.3",
+                    "testType": "RBC",
+                    "label": "RBC",
+                    "unitOfMeasure": "Million/µL"
+                },
+                {
+                    "id": -1902958140,
+                    "value": "0",
+                    "description": "Basophils represent about 0.01% to 0.3% of circulating white blood cells. They appear in many specific kinds of inflammatory reactions, particularly those that cause allergic symptoms.",
+                    "testType": "WBC",
+                    "label": "Absolute Basophils"
+                },
+                {
+                    "id": -1902958154,
+                    "value": "18",
+                    "description": "Mean Cell Hemaglobin a calculated ratio of the size (MCV) and Hemaglobin concentration (MCHC) and one of three RBC indices used to classify various types of anemia",
+                    "minValue": "19",
+                    "maxValue": "28",
+                    "testType": "RBC",
+                    "label": "MCH"
+                },
+                {
+                    "id": -1902958142,
+                    "value": "928",
+                    "description": "Monocytes play multiple roles in immune function. Such roles include: (1) replenish resident macrophages and dendritic cells under normal states, and (2) in response to inflammation signals, monocytes can move quickly to sites of infection and divide to elicit an immune response.",
+                    "testType": "WBC",
+                    "label": "Absolute Monocytes"
+                },
+                {
+                    "id": -1902958141,
+                    "value": "58",
+                    "description": "One of the immune system components responsible for combating multicellular parasites and certain infections in vertebrates. They also control mechanisms associated with allergy and asthma.",
+                    "testType": "WBC",
+                    "label": "Absolute Eosinophils"
+                },
+                {
+                    "id": -1902958155,
+                    "value": "50",
+                    "description": "Mean Cell Volume is the average size of a Red Blood Cell and one of three RBC indices used to classify various types of anemia. Cells are normal size (normocytic), small (microcytic) or large (macrocytic).",
+                    "minValue": "58",
+                    "maxValue": "79",
+                    "testType": "RBC",
+                    "label": "MCV"
+                },
+                {
+                    "id": -1902958159,
+                    "value": "3",
+                    "description": "White blood cells are the second most common cell in blood and are often described as the buffy coat  when blood is spun down in a centrifuge and a top layer of white is seen. They are the immune cells designed to guard against unwanted invaders. They come in different types which are counted separately in a process called the differential.",
+                    "minValue": "4",
+                    "maxValue": "16",
+                    "testType": "WBC",
+                    "label": "WBC",
+                    "unitOfMeasure": "Thousand/µL"
+                },
+                {
+                    "id": -1902958143,
+                    "value": "1276",
+                    "description": "There are three major types of lymphocytes: T cells, B cells and natural killer (NK) cells. T cells and B cells recognize “non-self” antigens and produce antibodies to fight and remember them. NK cells play a major role in defending the body from both tumors and virally infected cells.",
+                    "testType": "WBC",
+                    "label": "Absolute Lymphocytes"
+                },
+                {
+                    "id": -1902958157,
+                    "value": "1",
+                    "description": "Hemaglobin is the iron containing protein inside of RBCs that bind Oxygen for delivery and CO2 for removal. The liver metabolises HGB to bilirubin  once the RBC has reached its end of life in around 30 days.",
+                    "minValue": "12.1",
+                    "maxValue": "20.3",
+                    "testType": "RBC",
+                    "label": "HGB"
+                },
+                {
+                    "id": -1902958153,
+                    "value": "3",
+                    "description": "Mean Cell Hemoglobin Concentration is the average concentration of hemoglobin in each Red Blood Cell and one of three RBC indices used to classify various types of anemia. Cells are either normal (normochromic), reduced in hemoglobin (hypochromic) or have an excess of hemoglobin (hyperchromic).",
+                    "minValue": "30",
+                    "maxValue": "38",
+                    "testType": "RBC",
+                    "label": "MCHC"
+                }
+            ]
+        }
+    }
+}

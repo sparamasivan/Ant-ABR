@@ -1,0 +1,18 @@
+{
+    "id": "fiv",
+    "type": "fiv",
+    "followUpStatus": 0,
+    "subTests": {
+        "fiv": {
+            "testCodes": [
+                {
+                    "id": "fiv1",
+                    "testType": "boolean",
+                    "label": "FIV Antibody",
+                    "description": "FIV is also referred to as 'Feline AIDs'. It is not contagious to people, but is transmissable to other cats, through blood, urine or saliva.",
+                    "valueText": "NEGATIVE"
+                }
+            ]
+        }
+    }
+}

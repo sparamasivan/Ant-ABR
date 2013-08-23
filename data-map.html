@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+        <script type="text/javascript" src="js/lib/jquery-1.8.3.js"></script>
+        <script type="text/javascript" src="js/lib/handlebars-1.0.0-rc.3.js"></script>
+
+        <script type="text/javascript">
+            var TESTS = [
+                    {title: 'Accuplex', url: 'data/test/accuplex.json'},
+                    {title: 'CBC', url: 'data/test/cbc.json'},
+                    {title: 'FeLV', url: 'data/test/felv.json'},
+                    {title: 'FIV', url: 'data/test/fiv.json'},
+                    {title: 'Heartworm', url: 'data/test/heartworm.json'},
+                    {title: 'OVA & Parasites', url: 'data/test/ova.json'},
+                    {title: 'Chemistry', url: 'data/test/superchemistry.json'},
+                    {title: 'T4', url: 'data/test/t4.json'},
+                    {title: 'Urine', url: 'data/test/ua.json'}
+                ],
+
+                TEST_CODE_KEYS = [
+                    'testType',
+                    'label',
+                    'value',
+                    'valueText',
+                    'minValue',
+                    'maxValue',
+                    'unitOfMeasure',
+                    'description'
+                ];
+
+                TEST_CONTAINER_TEMPLATE = Handlebars.compile(
+                    '<table class="tests">' +
+                        '<tr>' +
+                            '{{#each headings}}' +
+                                '<th class="heading-{{.}}">{{.}}</th>' +
+                            '{{/each}}' +
+                        '</tr>' +
+                    '</table>'
+                );
+
+                TEST_TEMPLATE = Handlebars.compile(
+                    '<tbody>' +
+                        '<tr><th colspan="{{titleColSpan}}">Test Type: {{title}}</th></tr>' +
+                        '{{#each testCodes}}' +
+                            '<tr>' +
+                                '{{#each .}}' +
+                                    '<td class="{{#if .}}hasValue{{else}}hasNoValue{{/if}}">{{.}}</td>' +
+                                '{{/each}}' +
+                            '</tr>' +
+                        '{{/each}}' +
+                    '</tbody>'
+                );
+
+            $(document).ready(function() {
+                var deferredTestDataLoaded = new $.Deferred(),
+                    testDatas = [];
+
+                // load test
+                $.each(TESTS, function(i, test) {
+                    $.ajax({
+                        url: test.url,
+                        dataType: 'json'
+                    }).done(function(data) {
+                        var testCodes = [];
+
+                        // get all test codes
+                        $.each(data.subTests, function(i, subTestCategory) {
+                            $.each(subTestCategory.testCodes, function(i, testCode) {
+                                testCodes.push(testCode);
+                            });
+                        });
+
+                        testDatas.push({
+                            title: test.title,
+                            data: data,
+                            testCodes: testCodes
+                        });
+
+                        if (testDatas.length == TESTS.length) {
+                            deferredTestDataLoaded.resolve();
+                        }
+                    });
+                });
+
+                // display test data
+                deferredTestDataLoaded.done(function() {
+                    var el = $(TEST_CONTAINER_TEMPLATE({
+                        headings: TEST_CODE_KEYS
+                    })).appendTo($('.page'));
+
+                    $.each(testDatas, function(i, testData) {
+                        var testCodeDatas = [];
+
+                        $.each(testData.testCodes, function(i, testCode) {
+                            var data = [];
+
+                            $.each(TEST_CODE_KEYS, function(i, key) {
+                                var value = testCode[key];
+
+                                // adjust values slightly for template
+                                switch(key) {
+                                    case 'description':
+                                        if (typeof value == 'string') {
+                                            value = value.substring(0, 70) + '...';
+                                        }
+                                        break;
+                                }
+
+                                data.push(value);
+                            });
+
+                            testCodeDatas.push(data);
+                        });
+
+                        el.append($(TEST_TEMPLATE({
+                            title: testData.title,
+                            titleColSpan: TEST_CODE_KEYS.length,
+                            testCodes: testCodeDatas
+                        })));
+                    });
+                })
+            });
+        </script>
+
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.10.1/build/cssnormalize/cssnormalize-min.css" />
+        <style type="text/css">
+            .page {
+                margin: 30px;
+            }
+
+            td, th {
+                padding-right: 10px;
+                text-align: left;
+            }
+        </style>
+	</head>
+	<body>
+        <div class="page">
+            <h1>Tests Code key/value pairs</h1>
+            <p>The table shows what are the test codes expected by each test type.</p>
+            <ul>
+                <li><strong>Empty value:</strong> If the value is empty for a particular test code key,
+                it means that that value is not used by the frontend.</li>
+                <li><strong>Non-empty value:</strong> If the value is present, it must be made available by the backend otherwise the frontend may not work.</li>
+            </ul>
+        </div>
+	</body>
+</html>

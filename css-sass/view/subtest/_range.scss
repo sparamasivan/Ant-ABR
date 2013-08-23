@@ -1,0 +1,151 @@
+.view-subtest-range {
+    @include secondaryFont;
+    max-width: 320px;
+
+    .wrapper {
+        width: 100%;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    $markerHeight: 90px;
+    $markerWidth: 200px;
+    $pointerWidth: 20px;
+    $rangeBgColor: #ebedf1;
+
+    .marker {
+        position: absolute;
+        width: $markerWidth;
+        height: $markerHeight;
+        margin-left: - $markerWidth / 2;
+        text-align: center;
+        color: #444;
+
+        .text {
+            position: relative;
+        }
+
+        .value {
+            font-size: 250%;
+            font-weight: bold;
+            line-height: 90%;
+        }
+
+        .unit {
+            font-size: 123.1%;
+            font-weight: bold;
+        }
+
+        .description {
+            margin-top: 3px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 77%;
+        }
+
+        .pointer {
+            width: $pointerWidth;
+            height: 29px;
+            margin: 5px auto 0;
+
+            @media
+            only screen and (-webkit-min-device-pixel-ratio: 2),
+            only screen and (min-resolution: 192dpi) {
+                background-size: (image-width("../images/subtest/range/orange-marker-2x.png") / 2) (image-height("../images/subtest/range/orange-marker-2x.png") / 2);
+            }
+        }
+    }
+
+    .actual {
+        height: 50px;
+        padding-top: $markerHeight;
+
+        /* phone */
+        @media (max-width:($mq-phone)) {
+            height: 25px;
+        }
+
+        .range {
+            height: 100%;
+            background-color: $rangeBgColor;
+        }
+
+        .value {
+            height: 100%;
+            @include transition(all 450ms $ease-in-out);
+        }
+    }
+
+    .expected {
+        padding-top: 10px;
+
+        .range {
+            padding: 2px 0;
+            height: 4px;
+            background-color: $rangeBgColor;
+        }
+
+        .value {
+            height: 100%;
+            background-color: #6b6b6b;
+        }
+
+        .label {
+            color: #444;
+            padding-top: 6px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 77%;
+            font-weight: bold;
+        }
+    }
+
+    &.value-low {
+        .marker {
+            text-align: left;
+
+            .text {
+                left: $markerWidth / 2 - $pointerWidth / 2;
+            }
+        }
+    }
+
+    &.value-high {
+        .marker {
+            text-align: right;
+
+            .text {
+                right: $markerWidth / 2 - $pointerWidth / 2;
+            }
+        }
+    }
+
+    @mixin skin($skin, $color) {
+        &.skin-#{$skin} {
+            .marker {
+                .description {
+                    color: #{$color};
+                }
+
+                .pointer {
+                    background-image: url("../images/subtest/range/#{$skin}-marker.png");
+
+                    @media
+                    only screen and (-webkit-min-device-pixel-ratio: 2),
+                    only screen and (min-resolution: 192dpi) {
+                    background-image: url("../images/subtest/range/#{$skin}-marker-2x.png");
+                    }
+                }
+            }
+
+            .actual {
+                .value {
+                    background-image: url("../images/subtest/range/#{$skin}-gradient.png");
+                }
+            }
+        }
+    }
+
+    @include skin(green, #00ad68);
+    @include skin(orange, #e98902);
+}

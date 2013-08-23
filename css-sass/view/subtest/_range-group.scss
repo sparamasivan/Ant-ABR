@@ -1,0 +1,363 @@
+.view-subtest-range-group {
+    $rangeHeight: 270px;
+    $rangeHeightPhone: 100px;
+    $rangeTop: 45px; // label, top-range-limit dash
+    $rangeTopPhone: 21px; // half of range item marker
+    $rangeBottom: 21px; // half of range item marker
+    $rangeItemWidth: 80px;
+    $rangeBarWidth: 9px;
+
+    .scroller {
+        width: 100%;
+        display: table;
+    }
+
+    .pager, .content {
+        display: table-cell;
+    }
+
+    .pager {
+        width: 65px;
+
+        .button {
+            margin: $rangeTop 0 $rangeBottom 0;
+            height: $rangeHeight;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        &.previous {
+            .button {
+                background-image: url("../images/subtest/range-group/button-left.png");
+                background-position: left center;
+            }
+        }
+
+        &.next {
+            .button {
+                background-image: url("../images/subtest/range-group/button-right.png");
+                background-position: right center;
+            }
+        }
+
+        &.disabled {
+            .button {
+                display: none;
+            }
+        }
+    }
+
+    .content {
+        height: $rangeHeight + $rangeTop + $rangeBottom;
+    }
+
+    .content-inner {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .ranges-container {
+        height: $rangeHeight;
+        margin: $rangeTop 0 $rangeBottom 0;
+        position: absolute;
+        top: 0;
+    }
+
+    .ranges {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .range-item {
+        height: 100%;
+        float: left;
+        position: relative;
+        width: $rangeItemWidth;
+
+        .label {
+            width: 100%;
+            position: absolute;
+            top: -$rangeTop;
+            height: $rangeTop;
+
+            @include secondaryFont;
+            font-size: 77%;
+            font-weight: bold;
+            color: #444;
+            text-transform: uppercase;
+            text-align: center;
+
+            .outer {
+                display: table;
+                height: 100%;
+                width: 100%;
+            }
+
+            .inner {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+
+        .range {
+            height: 100%;
+            width: $rangeBarWidth;
+            background-color: #ebedf1;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+
+        .limit {
+            $height: 2px;
+            width:100%;
+            position: absolute;
+
+            .dash {
+                width: 13px;
+                height: $height;
+                background-color: #00beeb;
+                margin: 0 auto;
+            }
+
+            &.start {
+                top: - $height - 1px;
+            }
+
+            &.end {
+                bottom: - $height - 1px;
+            }
+        }
+
+        .value {
+            $markerWidth: 41px;
+            $markerHeight: 41px;
+
+            width: 100%;
+            position: absolute;
+            margin: (-$markerHeight / 2) 0 0 0;
+
+            .marker {
+                height: $markerWidth;
+                width: $markerHeight;
+                background-image: url("../images/subtest/range-group/marker.png");
+                margin: 0 auto;
+                cursor: pointer;
+
+                @media 
+                only screen and (-webkit-min-device-pixel-ratio: 2), 
+                only screen and (min-resolution: 192dpi) {
+                    background-image: url("../images/subtest/range-group/marker-2x.png");
+                    background-size: (image-width("../images/subtest/range-group/marker-2x.png") / 2) (image-height("../images/subtest/range-group/marker-2x.png") / 2);
+                }
+            }
+        }
+    }
+
+    .average-range {
+        background-image: url("../images/subtest/range-group/range-bg.png");
+        position: absolute;
+        left: 0;
+        right: 0;
+        border: 1px solid #e4e4e4;
+    }
+
+    .legend {
+        &.top {
+            margin-bottom: 0;
+
+            .label {
+                font-size: 85%;
+            }
+        }
+
+        &.bottom {
+            padding-top: 25px;
+            text-align: center;
+
+            .label {
+                font-size: 100%;
+            }
+        }
+
+        .symbol {
+            width: 30px;
+            height: 13px;
+            border: 1px solid #e4e4e4;
+            border-radius: 2px 2px;
+            display: inline-block;
+            background-image: url("../images/subtest/range-group/range-bg.png");
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .label {
+            @include secondaryFont;
+            color: #444;
+            text-transform: uppercase;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+    }
+
+    .view-subtest-range-group-item-details {
+        display: none;
+    }
+
+    /* phone */
+    @media (max-width:$mq-phone) {
+        .scroller-container {
+            margin: 0;
+            position: relative;
+        }
+
+        .pager {
+            display: none;
+        }
+
+        .content {
+            height: $rangeHeightPhone + $rangeTopPhone + $rangeBottom;
+        }
+
+        .ranges-container {
+            height: $rangeHeightPhone;
+            margin-top: $rangeTopPhone;
+        }
+
+        .range-item {
+            background-image: url("../images/subtest/range-group/range-item-border.png");
+            background-repeat: no-repeat;
+            background-position: right top;
+
+            &.active {
+            }
+
+            .label {
+                display: none;
+            }
+
+            .range {
+                background-color: rgba(215, 219, 227, 0.5);
+            }
+        }
+
+        .swipe {
+            $width: 97px;
+            $height: 81px;
+
+            width: $width;
+            margin-left: - $width / 2;
+            height: $height;
+            background-image: url("../images/subtest/range-group/swipe-overlay.png");
+            position: absolute;
+            top: $rangeHeightPhone - $height + $rangeTopPhone + $rangeBottom;
+            left: 50%;
+        }
+
+        .range-item-selected {
+            $width: $rangeItemWidth;
+            $height: $rangeHeightPhone;
+
+            width: $width;
+            margin-left: - $width / 2;
+            height: $height;
+            background-image: url("../images/subtest/range-group/range-item-bg.png");
+            position: absolute;
+            top: $rangeTopPhone;
+            left: 50%;
+            z-index: -1;
+
+            .range {
+                height: 100%;
+                width: $rangeBarWidth;
+                background-color: #bbb;
+                margin: 0 auto;
+            }
+        }
+
+        .details-container {
+            /* force qTip2 to display nicely inline */
+            .tooltip {
+                display: block !important;
+                z-index: auto !important;
+                top: 0 !important;
+                left: 0 !important;
+                position: relative !important;
+                max-width: none !important;
+                margin: 7px 10px 0;
+
+                .qtip-tip {
+                    z-index: auto !important;
+                }
+
+                .qtip-content {
+                    margin: 5px;
+                }
+            }
+        }
+    }
+}
+
+.view-subtest-range-group-item-tooltip {
+    max-width: 400px;
+
+    .view-subtest-range-group-item-details {
+        @include secondaryFont;
+        $border-style: 1px solid #f1f1f1;
+        display: none;
+
+        .title {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .info {
+            border: $border-style;
+            border-left: 0;
+            border-right: 0;
+
+            text-align: center;
+
+            .subTitle {
+                margin: 10px 0 0;
+            }
+
+            .value {
+                font-size: 174%;
+                color: #2458bd;
+                font-weight: bold;
+            }
+
+            .unit {
+            }
+        }
+
+        .info-value {
+            overflow: hidden;
+            padding-bottom: 5px;
+        }
+
+        .info-range {
+            border-left: $border-style;
+            overflow: hidden;
+            padding-bottom: 5px;
+        }
+
+        .description {
+            margin: 6px 0 0;
+        }
+
+        /* phone */
+        @media (max-width:$mq-phone) {
+            padding: 10px;
+
+            .info {
+                .value {
+                    font-size: 200%;
+                }
+            }
+        }
+    }
+}

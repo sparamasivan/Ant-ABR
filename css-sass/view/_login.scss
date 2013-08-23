@@ -1,0 +1,79 @@
+.view-login {
+
+    .title {
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-size: 348%;
+    }
+
+    .subtitle {
+        margin-bottom: 0;
+        font-size: 200%;
+    }
+
+    input[type=""],
+    input[type="text"],
+    input[type="password"] {
+        display: block;
+        margin: 20px 0 10px;
+
+        width: 100%;
+        max-width: 275px;
+    }
+
+    .error {
+        @include secondaryFont;
+        @include smallFontSize;
+        color: #db3d35;
+    }
+
+    .forgot-password {
+        @include secondaryFont;
+        @include smallFontSize;
+    }
+
+    .address {
+        @include secondaryFont;
+
+        .line {
+            @include smallFontSize;
+            display: block;
+
+            &.name {
+                font-size: 150%;
+                font-weight: bold;
+                color: #444;
+            }
+        }
+    }
+
+    /* desktop & tablet */
+    @media (min-width:($mq-phone + 1px)) {
+        .page-section-top {
+            .yui3-u-c {
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+        }
+        .page-section-content {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            min-height: 500px;
+        }
+
+        .address-section {
+            float: right;
+        }
+    }
+
+    /* tablet */
+    @media (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
+        .title {
+            font-size: 250%;
+        }
+
+        .subtitle {
+            font-size: 182%;
+        }
+    }
+}

@@ -1,0 +1,141 @@
+@include view-test-base-extend(cbc);
+
+.view-test-cbc {
+    .subsection {
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+        border-top: 1px dotted #b2b2b2;
+    }
+
+    .subsection:first-child {
+        border-top: 0;
+    }
+
+    .subsection-description {
+        background-repeat: no-repeat;
+
+        h1, p {
+            margin-left: 95px;
+        }
+    }
+
+    .anchor-offset {
+        position:relative;
+        bottom:42px;
+    }
+
+    .subsection-overview {
+
+        .diagram-description {
+            display: table;
+            height: 100%;
+
+            .container {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    @mixin subsection ($type) {
+        .subsection-#{$type} {
+            .subsection-description {
+                background-image: url("../images/test/cbc/diagram/#{$type}.png");
+
+                @media
+                only screen and (-webkit-min-device-pixel-ratio: 2),
+                only screen and (min-resolution: 192dpi) {
+                    background-image: url("../images/test/cbc/diagram/#{$type}-2x.png");
+                    background-size: (image-width("../images/test/cbc/diagram/#{$type}-2x.png") / 2) (image-height("../images/test/cbc/diagram/#{$type}-2x.png") / 2)
+                }
+            }
+        }
+    }
+
+    @include subsection(rbc);
+    @include subsection(wbc);
+    @include subsection(platelet);
+
+    .subsection-platelet {
+        padding-bottom: 0;
+
+        .clumping-description {
+            display: table;
+            height: 100%;
+
+            .inner {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .clumping {
+        .diagram {
+            text-align: center;
+
+            img {
+                width: 100%;
+                max-width: image-width("../images/test/cbc/clumping-yes.png") / 2;
+            }
+
+            &.clumping-no {
+                .yui3-u-c {
+                    /* desktop */
+                    @media (min-width:$mq-tablet) {
+                        border-right: 1px solid #d9d9d9;
+                        margin-right: 0;
+                        padding-right: 0.67em;
+                    }
+                }
+            }
+        }
+
+        p {
+            @include smallFontSize;
+        }
+    }
+
+    /* tablet and phone */
+    @media (max-width:($mq-tablet - 1px)) {
+        .subsection-description {
+            h1 {
+                height: 75px;
+                display:table;
+                span {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+            }
+            p {
+                margin-left: 0;
+            }
+        }
+    }
+
+    /* tablet and desktop */
+    @media (min-width:($mq-phone + 1px)) {
+        .subsection-rbc {
+            .subsubsection-cell-attribute {
+                margin-top: 30px;
+            }
+
+            .cell-attribute-column {
+                border-right: 1px solid #d2d3d6;
+                margin:5px;
+                padding: 0 5px;
+
+                h4 {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    /* phone */
+    @media (max-width:($mq-phone)) {
+        .view-subtest-range {
+            margin: 0 auto;
+        }
+    }
+}

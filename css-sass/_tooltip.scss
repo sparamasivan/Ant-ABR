@@ -1,0 +1,22 @@
+.tooltip {
+    @include secondaryFont;
+
+    &.qtip {
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+    .qtip-content {
+        padding: 0;
+        margin: 15px;
+        overflow: visible;
+    }
+}
+
+#qtip-overlay {
+    /* Force overlay background to stretch the full width and height of the window
+       instead of relying on qTip to calculate correct dimensions, since the calculated
+       dimensions may be incorrect */
+    width: 100% !important;
+    height: 100% !important;
+}
