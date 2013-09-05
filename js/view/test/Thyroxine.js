@@ -43,7 +43,8 @@ define([
                 model: this.model.getModelRange(),
                 name: this.model.getReport().getDataPatient().name,
                 skin: 'orange',
-                unitOfMeasure: 'G/DL'
+                //unitOfMeasure: 'G/DL'
+                unitOfMeasure: 'ug/dL'
             });
 
             view.render(this.$elContent.find('.subtest-container'));
