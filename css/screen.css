@@ -4426,6 +4426,50 @@ span.placeholder {
   }
 }
 
+.view-subtest-pod-base {
+  font-family: 'Apercu', sans-serif;
+}
+.view-subtest-pod-base > .inner {
+  background-color: #fcfcfb;
+  border: 1px solid #a3a3a3;
+  border-radius: 3px;
+  padding: 15px 25px;
+}
+.view-subtest-pod-base .title {
+  font-size: 123.1%;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #6b6b6b;
+}
+
+.view-subtest-pod-select .options {
+  padding: 0;
+}
+.view-subtest-pod-select .option {
+  height: 40px;
+  font-size: 108%;
+  list-style: none;
+  color: #6b6b6b;
+  background-image: url(../images/subtest/pod/select/bg-middle.png);
+  background-repeat: repeat-y;
+}
+.view-subtest-pod-select .option:first-child {
+  background-image: url(../images/subtest/pod/select/bg-top.png);
+  background-position: left top;
+}
+.view-subtest-pod-select .option.last {
+  background-image: url(../images/subtest/pod/select/bg-bottom.png);
+  background-position: left bottom;
+}
+.view-subtest-pod-select .option.selected {
+  font-size: 210%;
+  font-weight: bold;
+}
+.view-subtest-pod-select .description {
+  display: none;
+}
+
 .view-widget-test-overview .section-heading .column {
   display: table;
   height: 100%;

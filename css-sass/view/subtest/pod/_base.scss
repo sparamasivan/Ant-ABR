@@ -1,0 +1,20 @@
+.view-subtest-pod-base {
+	@include secondaryFont;
+	
+	>.inner {
+		background-color: #fcfcfb;
+		border: 1px solid #a3a3a3;
+		border-radius: 3px;
+
+		padding: 15px 25px;
+	}
+
+	.title {
+		font-size: 123.1%;
+		text-transform: uppercase;
+		font-weight: bold;
+
+		padding-bottom: 5px;
+		border-bottom: 1px solid #6b6b6b;
+	}
+}

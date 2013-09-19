@@ -61,6 +61,8 @@ $mq-phone: 480px;
 @import "view/subtest/range-group";
 @import "view/subtest/cbc-summary";
 @import "view/subtest/types-of-cell";
+@import "view/subtest/pod/base";
+@import "view/subtest/pod/select";
 
 // widgets
 @import "view/widget/test-overview";

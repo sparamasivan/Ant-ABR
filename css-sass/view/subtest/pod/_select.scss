@@ -1,0 +1,35 @@
+.view-subtest-pod-select {
+
+	.options {
+		padding: 0;
+	}
+
+	.option {
+		height: 40px;
+		font-size: 108%;
+		list-style: none;
+		color: #6b6b6b;
+
+		background-image: url(../images/subtest/pod/select/bg-middle.png);
+		background-repeat: repeat-y;
+		
+		&:first-child {
+			background-image: url(../images/subtest/pod/select/bg-top.png);
+			background-position: left top;
+		}
+
+		&.last {
+			background-image: url(../images/subtest/pod/select/bg-bottom.png);
+			background-position: left bottom;
+		}
+
+		&.selected {
+            font-size: 210%;
+            font-weight: bold;
+		}
+	}
+
+	.description {
+		display: none;
+	}
+}
