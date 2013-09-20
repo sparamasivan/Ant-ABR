@@ -1,0 +1,19 @@
+<div class="view-subtest-select">
+	<ul class="options">
+		{{#each options}}
+			<li class="option">
+				<div class="token"><div class="name">{{.}}</div></div>
+			</li>
+		{{/each}}
+	</ul>
+
+    <div class="description">
+        <p>
+            {{#if message}}
+                <span class="message">{{message}}</span><br />
+            {{/if}}
+
+            {{description}}
+        </p>
+    </div>
+</div>

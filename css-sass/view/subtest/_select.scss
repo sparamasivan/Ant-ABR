@@ -1,0 +1,71 @@
+.view-subtest-select {
+
+	.options {
+		padding: 0;
+	}
+
+	.option {
+		font-size: 108%;
+		list-style: none;
+		color: #6b6b6b;
+
+		background-image: url(../images/subtest/select/bg-middle.png);
+		background-repeat: repeat-y;
+		
+		&:first-child {
+			background-image: url(../images/subtest/select/bg-top.png);
+			background-position: left top;
+
+			.token {
+				top: 3px;
+			}
+		}
+
+		&.last {
+			background-image: url(../images/subtest/select/bg-bottom.png);
+			background-position: left bottom;
+
+			.token {
+				top: -3px;
+			}
+		}
+
+		&.selected {
+            font-size: 210%;
+            font-weight: bold;
+
+            .token {
+            	background-image: url(../images/common/result-good.png);
+            	background-repeat: no-repeat;
+            	background-position: 7px center;
+				position: relative;
+            }
+
+            &.bad {
+	            .token {
+	            	background-image: url(../images/common/result-bad.png);
+	            }
+            }
+
+            .name {
+            	background-image: url(../images/common/attribute-list-bullet.png);
+            	background-repeat: no-repeat;
+            	background-position: 7px center;
+            }
+		}
+
+		.token {
+			padding-left: 45px;
+		}
+
+		.name {
+			padding-left: 20px;
+			height: 40px;
+			line-height: 40px;
+		}
+	}
+
+	.description {
+		display: none;
+	}
+}

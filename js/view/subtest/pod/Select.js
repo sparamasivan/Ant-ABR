@@ -3,28 +3,37 @@ define([
     'backbone',
     'handlebars',
     'view/subtest/pod/Base',
-    'text!template/subtest/pod/Select.html'
+    'text!template/subtest/pod/Select.html',
+    'view/subtest/Select'
 ], function(
     $,
     Backbone,
     Handlebars,
     ViewBase,
-    Template
+    Template,
+    ViewSelect
 ) {
     return ViewBase.extend({
         templateContent: Handlebars.compile(Template),
 
         render: function(parent) {
+            var content,
+                viewSelect;
+
             ViewBase.prototype.render.apply(this, arguments);
-            
-            this.$elContent.append(this.templateContent({
+
+            content = $(this.templateContent());
+            this.$elContent.append(content);
+
+            viewSelect = new ViewSelect({
                 options: this.options.options,
                 message: this.options.message,
-                description: this.options.description
-            }));
+                description: this.options.description,
+                selectedIndex: this.options.selectedIndex,
+                selectedIsBad: this.options.selectedIsBad
+            });
 
-            // IE8 doesn't support :last-child, so we'll add "last" class to last element
-            this.$elContent.find('.options .option').last().addClass('last');
+            viewSelect.render(content);
         }
     });
 });
