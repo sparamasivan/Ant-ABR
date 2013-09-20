@@ -7,6 +7,8 @@ $mq-desktop: 1024px;
 $mq-tablet: 769px;
 $mq-phone: 480px;
 
+$max-page-width: 1000px;
+
 @import "compass";
 @import "lib/mixins/animation";
 @import "lib/mixins/easings";

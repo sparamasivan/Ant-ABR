@@ -1443,7 +1443,7 @@ tt {
 }
 
 body {
-  color: #797979;
+  color: #e8eae5;
   font-family: 'adelle_light', serif;
 }
 
@@ -2002,6 +2002,11 @@ span.placeholder {
   }
 }
 
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 .page-section-top {
   background-color: #0099be;
   /* tablet & desktop */
@@ -2140,6 +2145,7 @@ span.placeholder {
   position: fixed;
   top: 0;
   width: 100%;
+  max-width: 1000px;
   height: 74px;
   z-index: 2;
   overflow: hidden;
@@ -2180,7 +2186,7 @@ span.placeholder {
   float: left;
   height: 45px;
   line-height: 45px;
-  padding: 0 39px;
+  padding: 0 35px;
   text-decoration: none;
   color: #fff;
   font-size: 17px;
