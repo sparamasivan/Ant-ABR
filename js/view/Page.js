@@ -4,6 +4,7 @@ define([
     'handlebars',
     'model/Report',
     'text!template/Page.html',
+    'view/MainMenu',
     'view/Navigation',
     'view/Report',
     'module',
@@ -16,6 +17,7 @@ define([
     Handlebars,
     ModelReport,
     Template,
+    ViewMainMenu,
     ViewNavigation,
     ViewReport,
     Module,
@@ -64,11 +66,19 @@ define([
                 }
             });
 
+            promises.push(this._renderMainMenu());
+
             promises.push(this._renderNavigation());
 
             promises.push(this._renderReport());
             
             return $.when.apply($, promises);
+        },
+
+        _renderMainMenu: function() {
+            var view = new ViewMainMenu();
+
+            return view.render(this.$el.find('.page-mainmenu'));
         },
 
         _renderNavigation: function() {

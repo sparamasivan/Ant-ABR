@@ -7,6 +7,7 @@ var require = {
         'jquery-qtip': 'lib/qtip/jquery.qtip-2.0.1',
         'jquery-waitforimages': 'lib/jquery.waitforimages',
         'jquery-debouncedresize': 'lib/jquery.debouncedresize',
+        'jquery-jswipe': 'lib/jquery.jswipe',
         'modernizr' : 'lib/modernizr.custom.media-query',
         'underscore': 'lib/underscore',
         'backbone': 'lib/backbone-1.0.0',
@@ -45,6 +46,10 @@ var require = {
         'jquery-debouncedresize': {
             deps: ['jquery'],
             exports: 'jQuery.event.special.debouncedresize'
+        },
+        'jquery-swipe': {
+            deps: ['jquery'],
+            exports: 'jQuery.fn.swipe'
         },
         'underscore': {
             exports: '_',
