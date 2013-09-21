@@ -2859,11 +2859,23 @@ span.placeholder {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+.view-overview .page-section-comment h2 {
+  margin-bottom: 5px;
+}
+.view-overview .page-section-comment p {
+  margin-top: 0;
+}
 .view-overview .page-section-next-steps {
   background: url("../images/overview/recap/pattern.png") repeat transparent;
   position: relative;
   margin-top: 2px;
   border-radius: 5px;
+}
+.view-overview .page-section-next-steps h2 {
+  margin-bottom: 5px;
+}
+.view-overview .page-section-next-steps p {
+  margin-top: 0;
 }
 .view-overview .arrow {
   position: absolute;
@@ -2910,7 +2922,7 @@ span.placeholder {
   font-weight: bold;
 }
 .view-overview .section-bullet {
-  width: 85px;
+  width: 105px;
   float: right;
 }
 @media (min-width: 481px) {

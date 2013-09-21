@@ -228,6 +228,14 @@
 		border-top: 1px dotted #C7C7C7;
 		border-bottom-left-radius: 5px;
 		border-bottom-right-radius: 5px;
+
+		h2 {
+			margin-bottom: 5px;
+		}
+		
+		p {
+			margin-top: 0;
+		}
 	}
 
 	.page-section-next-steps {
@@ -235,6 +243,14 @@
 		position: relative;
 		margin-top: 2px;
 		border-radius: 5px;
+
+		h2 {
+			margin-bottom: 5px;
+		}
+		
+		p {
+			margin-top: 0;
+		}
 	}
 
 
@@ -284,7 +300,7 @@
 	}
 
 	.section-bullet {
-		width: 85px;
+		width: 105px;
 		float: right;
 	}
 
