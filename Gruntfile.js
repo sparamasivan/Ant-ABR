@@ -53,6 +53,9 @@ module.exports = function(grunt) {
     },
 
     watch: {
+      options: {
+        atBegin: true
+      },
       css: {
         files: 'css-sass/**',
         tasks: 'compass',
