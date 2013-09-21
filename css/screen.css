@@ -1765,6 +1765,13 @@ h4 .small {
   }
 }
 
+.section-break {
+  height: 28px;
+  background-image: url("../images/common/diamonds.png");
+  background-repeat: no-repeat;
+  background-position: center 10px;
+}
+
 .attribute-list-container {
   /* phone */
 }
@@ -2839,15 +2846,24 @@ span.placeholder {
   text-decoration: none;
 }
 .view-overview .page-section-ran {
-  border-bottom: 1px dotted #C7C7C7;
+  background-color: white;
+  margin-top: 2px;
 }
 .view-overview .page-section-ran .testCounter {
   text-align: center;
   margin: 20px 0;
 }
+.view-overview .page-section-comment {
+  background-color: white;
+  border-top: 1px dotted #C7C7C7;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 .view-overview .page-section-next-steps {
   background: url("../images/overview/recap/pattern.png") repeat transparent;
   position: relative;
+  margin-top: 2px;
+  border-radius: 5px;
 }
 .view-overview .arrow {
   position: absolute;
@@ -2879,10 +2895,16 @@ span.placeholder {
 .view-overview .contact.email {
   background-image: url("../images/overview/icon-email.png");
 }
-.view-overview .explore-tests {
+.view-overview .page-section-explore-tests {
+  background-color: white;
+  border-radius: 5px;
+}
+.view-overview .page-section-explore-tests .yui3-u-c {
   text-align: center;
   padding-top: 60px;
-  margin-bottom: 25px;
+  padding-bottom: 25px;
+  margin-top: 2px;
+  margin-bottom: 0;
 }
 .view-overview .phone-container {
   font-weight: bold;
@@ -2893,10 +2915,10 @@ span.placeholder {
 }
 @media (min-width: 481px) {
   .view-overview .page-section-comment {
-    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
   }
   .view-overview .page-section-next-steps {
-    margin-top: 20px;
     padding-top: 25px;
     padding-bottom: 50px;
   }

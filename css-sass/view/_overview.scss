@@ -214,7 +214,8 @@
 	}
 
 	.page-section-ran {
-		border-bottom: 1px dotted #C7C7C7;
+		@include primaryContent;
+		margin-top: 2px;
 
 		.testCounter {
 			text-align: center;
@@ -222,9 +223,18 @@
 		}
 	}
 
+	.page-section-comment {
+		@include primaryContent;
+		border-top: 1px dotted #C7C7C7;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+
 	.page-section-next-steps {
 		background: url('../images/overview/recap/pattern.png') repeat transparent;
 		position: relative;
+		margin-top: 2px;
+		border-radius: 5px;
 	}
 
 
@@ -256,10 +266,17 @@
 		}
 	}
 
-	.explore-tests {
-		text-align: center;
-		padding-top: 60px;
-		margin-bottom: 25px;
+	.page-section-explore-tests {
+		@include primaryContent;
+		border-radius: 5px;
+
+		.yui3-u-c {
+			text-align: center;
+			padding-top: 60px;
+			padding-bottom: 25px;
+			margin-top: 2px;
+			margin-bottom: 0;
+		}
 	}
 
 	.phone-container {
@@ -274,11 +291,11 @@
 	/* desktop & tablet */
 	@media (min-width:($mq-phone + 1px)) {
 		.page-section-comment {
-			margin-top:20px;
+			padding-top:20px;
+			padding-bottom: 10px;
 		}
 		
 		.page-section-next-steps {
-			margin-top: 20px;
 			padding-top: 25px;
 			padding-bottom: 50px;
 		}

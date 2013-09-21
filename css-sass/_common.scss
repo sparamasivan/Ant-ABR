@@ -1,13 +1,20 @@
 $pageSectionPaddingLeft: 35px;
 
 .page-section {
-    max-width: 1000px;
+    max-width: $max-page-width;
     margin: 0 auto;
     padding: 0 50px 0 $pageSectionPaddingLeft;
 
     @media (max-width:($mq-phone)) {
         padding: 0;
     }
+}
+
+.section-break {
+    height: 28px;
+    background-image: url("../images/common/diamonds.png");
+    background-repeat: no-repeat;
+    background-position: center 10px;
 }
 
 
