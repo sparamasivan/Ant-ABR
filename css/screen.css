@@ -2994,10 +2994,7 @@ span.placeholder {
   opacity: 1;
 }
 
-.view-test-base > .content {
-  padding-bottom: 30px;
-}
-.view-test-base > .content.collapsed {
+.view-test-base > .body.collapsed {
   display: none;
 }
 

@@ -1,7 +1,6 @@
 .view-test-base {
-    >.content {
-        padding-bottom: 30px;
-        
+
+    >.body {
         &.collapsed {
             display: none;
         }

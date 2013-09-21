@@ -63,6 +63,9 @@ define([
             this.$elHeader = this.generateHeader();
             this.$el.find('.header-container').append(this.$elHeader);
 
+            // test body shown/hidden depending on whether test is expanded/collapsed
+            this.$elBody = this.$el.find('.body');
+
             // test content to be filled by child classes
             this.$elContent = this.$el.find('.content');
 
@@ -113,16 +116,16 @@ define([
         },
 
         collapse: function() {
-            this.$elContent.addClass('collapsed');
+            this.$elBody.addClass('collapsed');
         },
 
         expand: function() {
-            this.$elContent.removeClass('collapsed');
+            this.$elBody.removeClass('collapsed');
             this.refresh();
         },
 
         isCollapsed: function() {
-            return !this.$elContent.is(':visible');
+            return !this.$elBody.is(':visible');
         },
 
         refresh: function() {},
