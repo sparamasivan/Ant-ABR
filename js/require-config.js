@@ -47,7 +47,7 @@ var require = {
             deps: ['jquery'],
             exports: 'jQuery.event.special.debouncedresize'
         },
-        'jquery-swipe': {
+        'jquery-jswipe': {
             deps: ['jquery'],
             exports: 'jQuery.fn.swipe'
         },
