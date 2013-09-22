@@ -116,9 +116,9 @@
     }
 }
 
-@mixin view-test-base-extend ($type) {
+@mixin view-test-base-extend ($type, $bgColor) {
     .test-header.#{$type} {
-        background-image: url("../images/test/#{$type}/heading-bg.png");
+        background-color: $bgColor;
 
         .title {
             .icon {

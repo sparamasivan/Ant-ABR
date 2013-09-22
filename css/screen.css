@@ -3101,7 +3101,7 @@ span.placeholder {
 }
 
 .test-header.accuplex {
-  background-image: url("../images/test/accuplex/heading-bg.png");
+  background-color: #9f2775;
 }
 .test-header.accuplex .title .icon {
   background-image: url("../images/test/accuplex/icon.png");
@@ -3114,7 +3114,7 @@ span.placeholder {
 }
 
 .test-header.cbc {
-  background-image: url("../images/test/cbc/heading-bg.png");
+  background-color: #34a778;
 }
 .test-header.cbc .title .icon {
   background-image: url("../images/test/cbc/icon.png");
@@ -3255,7 +3255,7 @@ span.placeholder {
 }
 
 .test-header.chemistry {
-  background-image: url("../images/test/chemistry/heading-bg.png");
+  background-color: #1948a2;
 }
 .test-header.chemistry .title .icon {
   background-image: url("../images/test/chemistry/icon.png");
@@ -3280,7 +3280,7 @@ span.placeholder {
 }
 
 .test-header.felv-fiv {
-  background-image: url("../images/test/felv-fiv/heading-bg.png");
+  background-color: #0d8895;
 }
 .test-header.felv-fiv .title .icon {
   background-image: url("../images/test/felv-fiv/icon.png");
@@ -3293,7 +3293,7 @@ span.placeholder {
 }
 
 .test-header.heartworm {
-  background-image: url("../images/test/heartworm/heading-bg.png");
+  background-color: #bd362f;
 }
 .test-header.heartworm .title .icon {
   background-image: url("../images/test/heartworm/icon.png");
@@ -3306,7 +3306,7 @@ span.placeholder {
 }
 
 .test-header.ova {
-  background-image: url("../images/test/ova/heading-bg.png");
+  background-color: #2882e0;
 }
 .test-header.ova .title .icon {
   background-image: url("../images/test/ova/icon.png");
@@ -3319,7 +3319,7 @@ span.placeholder {
 }
 
 .test-header.thyroxine {
-  background-image: url("../images/test/thyroxine/heading-bg.png");
+  background-color: #f89e1e;
 }
 .test-header.thyroxine .title .icon {
   background-image: url("../images/test/thyroxine/icon.png");
@@ -3332,7 +3332,7 @@ span.placeholder {
 }
 
 .test-header.urine {
-  background-image: url("../images/test/urine/heading-bg.png");
+  background-color: #674e9f;
 }
 .test-header.urine .title .icon {
   background-image: url("../images/test/urine/icon.png");
