@@ -4172,7 +4172,7 @@ span.placeholder {
   padding: 0;
 }
 .view-subtest-select .option {
-  font-size: 108%;
+  font-size: 116%;
   list-style: none;
   color: #6b6b6b;
   background-image: url(../images/subtest/select/bg-middle.png);
@@ -4562,7 +4562,7 @@ span.placeholder {
 .view-subtest-pod-base > .inner {
   background-color: #fcfcfb;
   border: 1px solid #a3a3a3;
-  border-radius: 3px;
+  border-radius: 4px;
   padding: 15px 25px;
 }
 .view-subtest-pod-base .title {

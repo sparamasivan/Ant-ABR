@@ -4,14 +4,14 @@ define([
     'handlebars',
     'view/test/Base',
     'text!template/test/HeartwormAntigen.html',
-    'view/subtest/Boolean'
+    'view/subtest/pod/Boolean'
 ], function(
     $,
     Backbone,
     Handlebars,
     ViewTestBase,
     Template,
-    ViewSubtestBoolean
+    ViewSubtestPodBoolean
 ) {
     return ViewTestBase.extend({
         title: 'HEARTWORM',
@@ -31,7 +31,7 @@ define([
             this.$elContent.append(this.templateContent());
 
             // render all tests
-            view = new ViewSubtestBoolean({
+            view = new ViewSubtestPodBoolean({
                 model: this.model.getAllTestCodes()[0]
             });
 
