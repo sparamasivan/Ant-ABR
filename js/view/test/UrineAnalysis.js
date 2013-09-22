@@ -30,6 +30,10 @@ define([
             var mConcentration = this.model.getModelConcentration(),
                 mPh = this.model.getModelPh();
 
+            $.extend(this._overview, {
+                descriptionTemplate: 'Analyzing {{patient.name}}’s urine gives us an excellent snapshot of how the body’s organs and systems are functioning.'
+            });
+
             ViewTestBase.prototype.render.apply(this, arguments);
 
             this.$elContent.append(this.templateContent({
@@ -120,8 +124,10 @@ define([
                 elVisualAnalysis = this.$elContent.find('.visual-analysis'),
                 elBracket = this.$elContent.find('.bracket .vertical');
 
+            ViewTestBase.prototype.refresh.apply(this, arguments);
+
             // adjust the height of the bracket
-            elBracket.height(Math.max(elKidneyBladder.height(), elVisualAnalysis.height()))
+            elBracket.height(Math.max(elKidneyBladder.height(), elVisualAnalysis.height()));
         },
 
         _renderMetabolicSubcomponent: function(parent, model) {

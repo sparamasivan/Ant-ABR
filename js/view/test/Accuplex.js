@@ -4,7 +4,6 @@ define([
     'handlebars',
     'view/test/Base',
     'text!template/test/Accuplex.html',
-    'view/widget/TestOverview',
     'view/subtest/Boolean'
 ], function(
     $,
@@ -12,7 +11,6 @@ define([
     Handlebars,
     ViewTestBase,
     Template,
-    ViewWidgetTestOverview,
     ViewSubtestBoolean
 ) {
     return ViewTestBase.extend({
@@ -20,24 +18,17 @@ define([
 
         templateContent: Handlebars.compile(Template),
 
-        _viewTestOverview: null,
-
         render: function(parent) {
             var self = this,
                 view;
 
+            $.extend(this._overview, {
+                descriptionTemplate: 'Some diseases are spread by ticks. We tested {{patient.name}} for signs of exposure to these.'
+            });
+            
             ViewTestBase.prototype.render.apply(this, arguments);
             
             this.$elContent.append(this.templateContent());
-
-            // render test overview
-            this._viewTestOverview = new ViewWidgetTestOverview({
-                model: this.model,
-                heading: Handlebars.compile('Some diseases are spread by ticks. We tested {{patient.name}} for signs of exposure to these.'),
-                text: Handlebars.compile('Contrary to popular belief, ticks don’t just live in certain geographic areas – ticks are found all over the world and can be easily transported on clothing and other animals.')
-            });
-
-            this._viewTestOverview.render(this.$elContent.find('.test-overview'));
 
             // render all tests
             $.each(this.model.getAllTestCodes(), function(i, subtestModel) {
@@ -47,10 +38,6 @@ define([
 
                 view.render(self.$elContent.find('.boolean-container').eq(i));
             });
-        },
-
-        refresh: function() {
-            this._viewTestOverview.refresh();
         }
     });
 });

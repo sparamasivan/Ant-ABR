@@ -37,6 +37,10 @@ define([
                     color: this.model.getRbcColor()
                 };
 
+            $.extend(this._overview, {
+                descriptionTemplate: 'The CBC (Complete Blood Count) test examines the health and numbers of {{patient.name}}’s cells.'
+            });
+
             ViewTestBase.prototype.render.apply(this, arguments);
 
             this.$elContent.append(this.templateContent({
@@ -60,6 +64,7 @@ define([
         },
 
         refresh: function() {
+            ViewTestBase.prototype.refresh.apply(this, arguments);
             this._viewSubtestTypesOfCell.refresh();
             this._getSubsectionOverviewEl().equalHeights('refresh');
         },

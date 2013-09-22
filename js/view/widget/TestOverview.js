@@ -20,9 +20,9 @@ define([
                 deferred = new $.Deferred();
 
             this.setElement($(this.template({
-                patient: this.model.getReport().getDataPatient(),
-                heading: this.options.heading,
-                text: this.options.text,
+                description: Handlebars.compile(this.options.descriptionTemplate)({
+                    patient: this.model.getReport().getDataPatient()
+                }),
                 type: this.model.getType()
             })));
 

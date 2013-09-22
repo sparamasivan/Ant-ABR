@@ -7,6 +7,7 @@ define([
     'event/Dispatcher',
     'model/MediaQuery',
     'model/Report',
+    'view/widget/TestOverview',
     'jquery-tooltip'
 ], function(
     $,
@@ -16,7 +17,8 @@ define([
     Template,
     EventDispatcher,
     ModelMediaQuery,
-    ReportModel
+    ReportModel,
+    ViewWidgetTestOverview
 ) {
     return Backbone.View.extend({
         template: Handlebars.compile(Template),
@@ -39,10 +41,16 @@ define([
             '</div>'
         ),
 
+        _viewTestOverview: null,
+
         constructor: function(config) {
             if (!config || !(config.model instanceof ModelTestBase)) {
                 throw new Error('model not an instanceof ModelTestBase');
             }
+
+            this._overview = {
+                descriptionTemplate: null
+            };
 
             Backbone.View.apply(this, arguments);
         },
@@ -67,7 +75,9 @@ define([
             this.$elBody = this.$el.find('.body');
 
             // test content to be filled by child classes
-            this.$elContent = this.$el.find('.content');
+            this.$elContent = this.$elBody.find('.content');
+
+            this._renderOverview(this.$elBody.find('.overview'));
 
             // listen for all test collapse
             EventDispatcher.on('sections.collapse', function() {
@@ -111,6 +121,15 @@ define([
             return headerEl;
         },
 
+        _renderOverview: function(parent) {
+            // render test overview
+            this._viewTestOverview = new ViewWidgetTestOverview($.extend({
+                model: this.model
+            }, this._overview));
+
+            this._viewTestOverview.render(parent);
+        },
+
         getTitle: function() {
             return this.title || this.model.getTitle();
         },
@@ -128,7 +147,9 @@ define([
             return !this.$elBody.is(':visible');
         },
 
-        refresh: function() {},
+        refresh: function() {
+            this._viewTestOverview.refresh();
+        },
 
         /**
          * Clicking on header collapses/expands test

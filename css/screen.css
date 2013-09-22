@@ -3009,6 +3009,10 @@ span.placeholder {
 .view-test-base > .body.collapsed {
   display: none;
 }
+.view-test-base > .body > .overview {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 
 .test-header {
   height: 74px;
@@ -3113,6 +3117,10 @@ span.placeholder {
   }
 }
 
+.view-test-accuplex > .body > .overview {
+  background-color: #b63488;
+}
+
 .test-header.cbc {
   background-color: #34a778;
 }
@@ -3124,6 +3132,10 @@ span.placeholder {
     background-image: url("../images/test/cbc/icon-2x.png");
     background-size: 100%;
   }
+}
+
+.view-test-cbc > .body > .overview {
+  background-color: #30bd84;
 }
 
 .view-test-cbc {
@@ -3267,6 +3279,10 @@ span.placeholder {
   }
 }
 
+.view-test-chemistry > .body > .overview {
+  background-color: #2759b9;
+}
+
 .view-test-chemistry {
   /* phone */
 }
@@ -3292,6 +3308,10 @@ span.placeholder {
   }
 }
 
+.view-test-felv-fiv > .body > .overview {
+  background-color: #0f96a4;
+}
+
 .test-header.heartworm {
   background-color: #bd362f;
 }
@@ -3303,6 +3323,10 @@ span.placeholder {
     background-image: url("../images/test/heartworm/icon-2x.png");
     background-size: 100%;
   }
+}
+
+.view-test-heartworm > .body > .overview {
+  background-color: #d53f38;
 }
 
 .test-header.ova {
@@ -3318,6 +3342,10 @@ span.placeholder {
   }
 }
 
+.view-test-ova > .body > .overview {
+  background-color: #2e91f8;
+}
+
 .test-header.thyroxine {
   background-color: #f89e1e;
 }
@@ -3331,6 +3359,10 @@ span.placeholder {
   }
 }
 
+.view-test-thyroxine > .body > .overview {
+  background-color: #e38806;
+}
+
 .test-header.urine {
   background-color: #674e9f;
 }
@@ -3342,6 +3374,10 @@ span.placeholder {
     background-image: url("../images/test/urine/icon-2x.png");
     background-size: 100%;
   }
+}
+
+.view-test-urine > .body > .overview {
+  background-color: #7359ae;
 }
 
 .view-test-urine-analysis {

@@ -4,6 +4,11 @@
         &.collapsed {
             display: none;
         }
+
+        >.overview {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
     }
 }
 
@@ -116,9 +121,9 @@
     }
 }
 
-@mixin view-test-base-extend ($type, $bgColor) {
+@mixin view-test-base-extend ($type, $headingBgColor, $overviewBgColor) {
     .test-header.#{$type} {
-        background-color: $bgColor;
+        background-color: $headingBgColor;
 
         .title {
             .icon {
@@ -130,6 +135,14 @@
                     background-image: url("../images/test/#{$type}/icon-2x.png");
                     background-size: 100%;
                 }
+            }
+        }
+    }
+
+    .view-test-#{$type} {
+        >.body {
+            >.overview {
+                background-color: $overviewBgColor;
             }
         }
     }

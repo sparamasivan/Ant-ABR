@@ -4,7 +4,6 @@
     'handlebars',
     'view/test/Base',
     'text!template/test/OvaParasite.html',
-    'view/widget/TestOverview',
     'view/subtest/Boolean'
 ], function(
     $,
@@ -12,7 +11,6 @@
     Handlebars,
     ViewTestBase,
     Template,
-    ViewWidgetTestOverview,
     ViewSubtestBoolean
 ) {
     var giardiaExist = 0;
@@ -22,25 +20,17 @@
 
         templateContent: Handlebars.compile(Template),
 
-        _viewTestOverview: null,
-
         render: function(parent) {
             var self = this,
                 view;
 
+            $.extend(this._overview, {
+                descriptionTemplate: 'We checked {{patient.name}}’s stool for young parasites and eggs.'
+            });
+
             ViewTestBase.prototype.render.apply(this, arguments);
 
             this.$elContent.append(this.templateContent());
-
-            // render test overview
-            this._viewTestOverview = new ViewWidgetTestOverview({
-                model: this.model,
-                heading: Handlebars.compile('We checked {{patient.name}}’s stool for young parasites and eggs.'),
-                text: Handlebars.compile('These parasites are found in the intestine and are the most common and preventable form of infectious disease in dogs and cats.')
-            });
-
-            this._viewTestOverview.render(this.$elContent.find('.test-overview'));
-
 
             //v
             // render all tests
@@ -80,10 +70,6 @@
 
             });
 
-        },
-
-        refresh: function() {
-            this._viewTestOverview.refresh();
         }
     });
 });
