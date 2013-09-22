@@ -59,10 +59,10 @@ $max-page-width: 1000px;
 @import "view/test/urine";
 
 // subtests
-@import "view/subtest/boolean";
+//@import "view/subtest/boolean";
 @import "view/subtest/range";
 @import "view/subtest/range-group";
-@import "view/subtest/cbc-summary";
+//@import "view/subtest/cbc-summary";
 @import "view/subtest/select";
 @import "view/subtest/types-of-cell";
 @import "view/subtest/pod/base";

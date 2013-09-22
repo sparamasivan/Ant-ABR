@@ -24,19 +24,6 @@
         bottom:42px;
     }
 
-    .subsection-overview {
-
-        .diagram-description {
-            display: table;
-            height: 100%;
-
-            .container {
-                display: table-cell;
-                vertical-align: middle;
-            }
-        }
-    }
-
     @mixin subsection ($type) {
         .subsection-#{$type} {
             .subsection-description {

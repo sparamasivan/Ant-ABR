@@ -4,7 +4,6 @@ define([
     'handlebars',
     'view/test/Base',
     'text!template/test/CompleteBloodCount.html',
-    'view/subtest/CbcSummary',
     'view/subtest/Range',
     'model/test/CompleteBloodCount',
     'view/subtest/TypesOfCell',
@@ -17,7 +16,6 @@ define([
     Handlebars,
     ViewTestBase,
     Template,
-    ViewSubtestCbcSummary,
     ViewSubtestRange,
     ModelTestCompleteBloodCount,
     ViewSubtestTypesOfCell,
@@ -54,8 +52,6 @@ define([
                 }
             }));
 
-            this._renderOverviewSubsection(this._getSubsectionOverviewEl());
-
             this._renderRedBloodCellSubsection(this.$elContent.find('.subsection-rbc'));
 
             this._renderWhiteBloodCellSubsection();
@@ -66,7 +62,6 @@ define([
         refresh: function() {
             ViewTestBase.prototype.refresh.apply(this, arguments);
             this._viewSubtestTypesOfCell.refresh();
-            this._getSubsectionOverviewEl().equalHeights('refresh');
         },
 
         _formatRbcAttributesForTemplate: function(attributes, selectedType) {
@@ -76,27 +71,6 @@ define([
                     isSelected: (attribute.type == selectedType)
                 }
             });
-        },
-
-        _renderOverviewSubsection: function(parent) {
-            // render diagram
-            var deferred = new $.Deferred(),
-                view = new ViewSubtestCbcSummary({
-                    sectionId: this.model.id,
-                    rbc: this.model.getRbcPercentage(),
-                    wbc: this.model.getWbcPercentage(),
-                    platelet: this.model.getPlateletPercentage(),
-                    species: this.model.getReport().getPatientSpecies()
-                });
-
-            view.render(parent.find('.diagram-visualization .container'));
-
-            parent.waitForImages(function() {
-                $(this).equalHeights();
-                deferred.resolve();
-            });
-
-            return deferred.promise();
         },
 
         _renderRedBloodCellSubsection: function(parent) {
@@ -149,10 +123,6 @@ define([
                     }
                 });
             });
-        },
-
-        _getSubsectionOverviewEl: function() {
-            return this.$elContent.find('.subsection-overview');
         }
     });
 });
