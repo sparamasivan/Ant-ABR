@@ -1443,7 +1443,7 @@ tt {
 }
 
 body {
-  color: #797979;
+  color: #333;
   background-color: #e8eae5;
   font-family: 'adelle_light', serif;
 }
@@ -4195,6 +4195,7 @@ span.placeholder {
 .view-subtest-select .option.selected {
   font-size: 210%;
   font-weight: bold;
+  color: #333;
 }
 .view-subtest-select .option.selected .token {
   background-image: url(../images/common/result-good.png);
@@ -4565,11 +4566,10 @@ span.placeholder {
   padding: 15px 25px;
 }
 .view-subtest-pod-base .title {
-  font-size: 123.1%;
-  text-transform: uppercase;
+  font-size: 131%;
   font-weight: bold;
   text-align: center;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #6b6b6b;
 }
 

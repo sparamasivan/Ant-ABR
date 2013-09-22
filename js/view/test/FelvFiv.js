@@ -4,14 +4,14 @@ define([
     'handlebars',
     'view/test/Base',
     'text!template/test/FelvFiv.html',
-    'view/subtest/Boolean'
+    'view/subtest/pod/Boolean'
 ], function(
     $,
     Backbone,
     Handlebars,
     ViewTestBase,
     Template,
-    ViewSubtestBoolean
+    ViewSubtestPodBoolean
 ) {
     return ViewTestBase.extend({
         templateContent: Handlebars.compile(Template),
@@ -28,7 +28,7 @@ define([
 
             // render all tests
             $.each(this.model.getAllTestCodes(), function(i, subtestModel) {
-                view = new ViewSubtestBoolean({
+                view = new ViewSubtestPodBoolean({
                     model: subtestModel
                 });
 
