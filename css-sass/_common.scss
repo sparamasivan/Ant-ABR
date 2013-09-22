@@ -1,9 +1,10 @@
-$pageSectionPaddingLeft: 35px;
+$pageSectionPaddingRight: 10px;
+$pageSectionPaddingLeft: 10px;
 
 .page-section {
     max-width: $max-page-width;
     margin: 0 auto;
-    padding: 0 50px 0 $pageSectionPaddingLeft;
+    padding: 0 $pageSectionPaddingRight 0 $pageSectionPaddingLeft;
 
     @media (max-width:($mq-phone)) {
         padding: 0;

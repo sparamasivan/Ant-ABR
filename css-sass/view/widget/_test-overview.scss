@@ -1,5 +1,6 @@
 .view-widget-test-overview {
     .section-heading {
+        color: white;
 
         .column {
             display: table;
@@ -15,6 +16,12 @@
             margin-top: 8%;
             margin-bottom: 8%;
             height: 84%;
+        }
+
+        .description {
+            @include secondaryFont;
+            font-size: 197%;
+            font-weight: bold;
         }
     }
 }

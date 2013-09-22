@@ -1757,7 +1757,7 @@ h4 .small {
 .page-section {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 50px 0 35px;
+  padding: 0 10px 0 10px;
 }
 @media (max-width: 480px) {
   .page-section {
@@ -2767,13 +2767,13 @@ span.placeholder {
     margin-top: 0;
     background-color: white;
     height: 80px;
-    background-position: 45px center;
-    margin-left: -45px;
-    padding-left: 45px;
-    width: 110%;
+    background-position: 20px center;
+    margin-left: -20px;
+    padding-left: 20px;
+    width: 100%;
   }
   .view-overview .avatar-flag .content .text-container .icon {
-    left: 45px;
+    left: 20px;
   }
 }
 @media (max-width: 480px) {
@@ -3012,6 +3012,11 @@ span.placeholder {
 .view-test-base > .body > .overview {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+.view-test-base .test-section {
+  background-color: white;
+  margin-top: 10px;
+  border-radius: 5px;
 }
 
 .test-header {
@@ -3287,11 +3292,11 @@ span.placeholder {
   /* phone */
 }
 .view-test-chemistry .subtest-container {
-  margin-top: 50px;
+  padding: 30px 0;
 }
 @media (max-width: 480px) {
   .view-test-chemistry .subtest-container {
-    margin-top: 0px;
+    padding: 10px 0;
   }
 }
 
@@ -3924,11 +3929,11 @@ span.placeholder {
 .view-subtest-range-group .range-item .value {
   width: 100%;
   position: absolute;
-  margin: -20.5px 0 0 0;
+  margin: -20px 0 0 0;
 }
 .view-subtest-range-group .range-item .value .marker {
-  height: 41px;
-  width: 41px;
+  height: 40px;
+  width: 40px;
   background-image: url("../images/subtest/range-group/marker.png");
   margin: 0 auto;
   cursor: pointer;
@@ -3936,7 +3941,15 @@ span.placeholder {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-subtest-range-group .range-item .value .marker {
     background-image: url("../images/subtest/range-group/marker-2x.png");
-    background-size: 41px 41px;
+    background-size: 40px 40px;
+  }
+}
+.view-subtest-range-group .range-item.bad .value .marker {
+  background-image: url("../images/subtest/range-group/marker-bad.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .view-subtest-range-group .range-item.bad .value .marker {
+    background-image: url("../images/subtest/range-group/marker-bad-2x.png");
   }
 }
 .view-subtest-range-group .average-range {
@@ -3946,22 +3959,13 @@ span.placeholder {
   right: 0;
   border: 1px solid #e4e4e4;
 }
-.view-subtest-range-group .legend.top {
+.view-subtest-range-group .legend {
   margin-bottom: 0;
-}
-.view-subtest-range-group .legend.top .label {
-  font-size: 85%;
-}
-.view-subtest-range-group .legend.bottom {
-  padding-top: 25px;
   text-align: center;
 }
-.view-subtest-range-group .legend.bottom .label {
-  font-size: 100%;
-}
 .view-subtest-range-group .legend .symbol {
-  width: 30px;
-  height: 13px;
+  width: 50px;
+  height: 28px;
   border: 1px solid #e4e4e4;
   border-radius: 2px 2px;
   display: inline-block;
@@ -4573,6 +4577,9 @@ span.placeholder {
   margin-left: 10px;
 }
 
+.view-widget-test-overview .section-heading {
+  color: white;
+}
 .view-widget-test-overview .section-heading .column {
   display: table;
   height: 100%;
@@ -4585,6 +4592,11 @@ span.placeholder {
   margin-top: 8%;
   margin-bottom: 8%;
   height: 84%;
+}
+.view-widget-test-overview .section-heading .description {
+  font-family: 'Apercu', sans-serif;
+  font-size: 197%;
+  font-weight: bold;
 }
 
 .view-widget-busy {

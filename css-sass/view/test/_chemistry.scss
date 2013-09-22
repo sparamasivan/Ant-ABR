@@ -2,13 +2,13 @@
 
 .view-test-chemistry {
     .subtest-container {
-        margin-top: 50px;
+        padding: 30px 0;
     }
     
     /* phone */
     @media (max-width:$mq-phone) {
         .subtest-container {
-            margin-top: 0px;
+            padding: 10px 0;
         }
     }
 }

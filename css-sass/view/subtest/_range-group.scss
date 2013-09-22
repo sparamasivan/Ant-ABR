@@ -132,8 +132,8 @@
         }
 
         .value {
-            $markerWidth: 41px;
-            $markerHeight: 41px;
+            $markerWidth: image-width("../images/subtest/range-group/marker.png");
+            $markerHeight: image-height("../images/subtest/range-group/marker.png");
 
             width: 100%;
             position: absolute;
@@ -150,7 +150,21 @@
                 only screen and (-webkit-min-device-pixel-ratio: 2), 
                 only screen and (min-resolution: 192dpi) {
                     background-image: url("../images/subtest/range-group/marker-2x.png");
-                    background-size: (image-width("../images/subtest/range-group/marker-2x.png") / 2) (image-height("../images/subtest/range-group/marker-2x.png") / 2);
+                    background-size: $markerWidth $markerHeight;
+                }
+            }
+        }
+
+        &.bad {
+            .value {
+                .marker {
+                    background-image: url("../images/subtest/range-group/marker-bad.png");
+
+                    @media 
+                    only screen and (-webkit-min-device-pixel-ratio: 2), 
+                    only screen and (min-resolution: 192dpi) {
+                        background-image: url("../images/subtest/range-group/marker-bad-2x.png");
+                    }
                 }
             }
         }
@@ -165,26 +179,12 @@
     }
 
     .legend {
-        &.top {
-            margin-bottom: 0;
-
-            .label {
-                font-size: 85%;
-            }
-        }
-
-        &.bottom {
-            padding-top: 25px;
-            text-align: center;
-
-            .label {
-                font-size: 100%;
-            }
-        }
+        margin-bottom: 0;
+        text-align: center;
 
         .symbol {
-            width: 30px;
-            height: 13px;
+            width: 50px;
+            height: 28px;
             border: 1px solid #e4e4e4;
             border-radius: 2px 2px;
             display: inline-block;

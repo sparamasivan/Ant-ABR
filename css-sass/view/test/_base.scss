@@ -10,6 +10,12 @@
             border-bottom-right-radius: 5px;
         }
     }
+
+    .test-section {
+        @include primaryContent;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
 }
 
 .test-header {

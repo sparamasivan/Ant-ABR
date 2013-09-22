@@ -3,13 +3,15 @@ define([
     'backbone',
     'handlebars',
     'text!template/widget/TestOverview.html',
+    'model/MediaQuery',
     'jquery-equal-heights',
     'jquery-waitforimages'
 ], function(
     $,
     Backbone,
     Handlebars,
-    Template
+    Template,
+    ModelMediaQuery
 ) {
     return Backbone.View.extend({
         template: Handlebars.compile(Template),
@@ -31,7 +33,11 @@ define([
 
             // make height of heading boxes the same so that we can nicely vertically align elements
             this._getSectionHeading().waitForImages(function() {
-                $(this).equalHeights();
+                $(this).equalHeights({
+                    callback: function(tallestHeight) {
+                        return !ModelMediaQuery.isPhoneMedia();
+                    }
+                });
                 deferred.resolve();
             });
 

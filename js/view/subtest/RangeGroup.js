@@ -163,7 +163,7 @@ define([
         },
 
         _isRangePicker: function() {
-            return this.$el.find('.legend.top').is(':visible');
+            return this.$el.find('.details-container').is(':visible');
         },
 
         _getRangeItemWidth: function() {
