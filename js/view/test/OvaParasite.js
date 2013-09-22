@@ -4,7 +4,7 @@
     'handlebars',
     'view/test/Base',
     'text!template/test/OvaParasite.html',
-    'view/subtest/Boolean'
+    'view/subtest/Pod/Boolean'
 ], function(
     $,
     Backbone,

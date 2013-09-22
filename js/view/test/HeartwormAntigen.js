@@ -11,7 +11,7 @@ define([
     Handlebars,
     ViewTestBase,
     Template,
-    ViewSubtestPodBoolean
+    ViewSubtestBoolean
 ) {
     return ViewTestBase.extend({
         title: 'HEARTWORM',
@@ -31,7 +31,7 @@ define([
             this.$elContent.append(this.templateContent());
 
             // render all tests
-            view = new ViewSubtestPodBoolean({
+            view = new ViewSubtestBoolean({
                 model: this.model.getAllTestCodes()[0]
             });
 

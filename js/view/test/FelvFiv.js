@@ -11,7 +11,7 @@ define([
     Handlebars,
     ViewTestBase,
     Template,
-    ViewSubtestPodBoolean
+    ViewSubtestBoolean
 ) {
     return ViewTestBase.extend({
         templateContent: Handlebars.compile(Template),
@@ -28,7 +28,7 @@ define([
 
             // render all tests
             $.each(this.model.getAllTestCodes(), function(i, subtestModel) {
-                view = new ViewSubtestPodBoolean({
+                view = new ViewSubtestBoolean({
                     model: subtestModel
                 });
 
