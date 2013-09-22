@@ -13,7 +13,10 @@ var require = {
         'backbone': 'lib/backbone-1.0.0',
         'handlebars-base': 'lib/handlebars-1.0.0-rc.3',
         'handlebars': 'handlebars-helper',
-        'iscroll': 'lib/iscroll'
+        'iscroll': 'lib/iscroll',
+        'async': 'lib/require/async',
+        'propertyParser': 'lib/require/propertyParser',
+        'goog': 'lib/require/goog'
     },
 
     config: {
