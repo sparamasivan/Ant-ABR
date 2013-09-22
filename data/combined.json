@@ -31,6 +31,46 @@
                 "id": "superchemistry",
                 "type": "superchemistry",
                 "testEndpoint": "data/test/superchemistry.json"
+            },
+            {
+                "id": "cbc",
+                "type": "cbc_32",
+                "testEndpoint": "data/test/cbc.json"
+            },
+            {
+                "id": "accuplex",
+                "type": "accuplex",
+                "testEndpoint": "data/test/accuplex.json"
+            },
+            {
+                "id": "heartworm",
+                "type": "heartworm1",
+                "testEndpoint": "data/test/heartworm.json"
+            },
+            {
+                "id": "t4",
+                "type": "t4",
+                "testEndpoint": "data/test/t4.json"
+            },
+            {
+                "id": "urine",
+                "type": "urine1",
+                "testEndpoint": "data/test/ua.json"
+            },
+            {
+                "id": "ova",
+                "type": "ova",
+                "testEndpoint": "data/test/ova.json"
+            },
+            {
+                "id": "felv",
+                "type": "felv",
+                "testEndpoint": "data/test/felv.json"
+            },
+            {
+                "id": "fiv",
+                "type": "fiv",
+                "testEndpoint": "data/test/fiv.json"
             }
         ]
     }
