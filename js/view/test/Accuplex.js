@@ -4,7 +4,7 @@ define([
     'handlebars',
     'view/test/Base',
     'text!template/test/Accuplex.html',
-    'view/subtest/Pod/Boolean'
+    'view/subtest/pod/Boolean'
 ], function(
     $,
     Backbone,

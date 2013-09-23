@@ -5,7 +5,7 @@ define([
     'handlebars',
     'view/test/Base',
     'text!template/test/UrineAnalysis.html',
-    'view/subtest/Pod/Boolean',
+    'view/subtest/pod/Boolean',
     'config',
     'model/MediaQuery',
     'jquery-equal-heights',
