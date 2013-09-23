@@ -1772,80 +1772,6 @@ h4 .small {
   background-position: center 10px;
 }
 
-.attribute-list-container {
-  /* phone */
-}
-.attribute-list-container .title {
-  margin-top: 10px;
-  margin-bottom: 23px;
-}
-.attribute-list-container .attribute-list {
-  font-family: 'Apercu', sans-serif;
-}
-.attribute-list-container .attribute-list ul {
-  padding: 0;
-}
-.attribute-list-container .attribute-list li {
-  font-size: 108%;
-  list-style: none;
-  color: #6b6b6b;
-}
-.attribute-list-container .attribute-list li.selected {
-  position: relative;
-  left: -13px;
-  padding-left: 13px;
-  background-image: url("../images/common/attribute-list-bullet.png");
-  background-repeat: no-repeat;
-  background-position: 4px center;
-  color: #444;
-  font-size: 210%;
-  font-weight: bold;
-}
-.attribute-list-container p {
-  font-size: 108%;
-  line-height: 150%;
-  /* Phone */
-  margin-top: 23px;
-}
-@media (max-width: 480px) {
-  .attribute-list-container p {
-    font-size: 116%;
-  }
-}
-@media (max-width: 480px) {
-  .attribute-list-container .title {
-    float: left;
-    border-right: 1px solid #d3d2d7;
-    padding-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 0;
-    line-height: 25px;
-    margin-left: 13px;
-  }
-  .attribute-list-container .attribute-list {
-    float: left;
-    margin-top: 10px;
-    margin-left: 8px;
-    line-height: 23px;
-  }
-  .attribute-list-container .attribute-list ul {
-    padding-left: 13px;
-    margin: 0;
-  }
-  .attribute-list-container .attribute-list li {
-    display: none;
-  }
-  .attribute-list-container .attribute-list li.selected {
-    display: block;
-    font-size: 146.5%;
-  }
-  .attribute-list-container p {
-    clear: both;
-    padding-top: 10px;
-    margin-left: 13px;
-  }
-}
-
 .caption {
   font-family: 'Apercu', sans-serif;
   font-size: 123.1%;
@@ -2263,7 +2189,6 @@ span.placeholder {
     left: -151px;
     top: 0;
     width: 150px;
-    z-index: 999999;
     background: #0099be;
     height: 100%;
     border-right: 1px solid #afcae0;
@@ -2274,6 +2199,7 @@ span.placeholder {
     -moz-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
+    z-index: 10;
   }
 
   .mainMenu {
@@ -2306,7 +2232,6 @@ span.placeholder {
   .menuTrigger {
     display: block;
     position: relative;
-    z-index: 9999;
   }
 
   .page {
@@ -2335,36 +2260,18 @@ span.placeholder {
     top: 0;
     width: 100px;
     height: 100%;
-    z-index: 999;
   }
   .swipeMe.active {
     left: 150px;
     width: 100%;
   }
 
-  .secondaryMenu.active {
-    /*margin-right:225px;*/
-  }
-
-  .ranges-container {
-    z-index: 9999;
-  }
-
-  .test-headers {
-    z-index: 99999 !important;
-  }
-
-  .view-navigation {
-    z-index: 999999 !important;
-    top: 47px;
-  }
-
-  .view-subtest-range-group .swipe {
-    z-index: 9999;
-  }
-
   .mainNav {
     height: 50px;
+  }
+
+  .test-headers.active {
+    left: 150px;
   }
 }
 @media (max-height: 320px) {
@@ -2432,7 +2339,7 @@ span.placeholder {
 
 .view-navigation {
   position: fixed;
-  top: 0;
+  top: 47px;
   right: 0;
   z-index: 2;
   /* desktop */
@@ -3324,55 +3231,9 @@ span.placeholder {
   background-color: #7359ae;
 }
 
-.view-test-urine-analysis {
-  /* tablet and desktop */
-  /* tablet */
-  /* phone */
-}
-.view-test-urine-analysis .test-description {
+.view-test-urine-analysis .test-section-description {
   margin-top: 35px;
   margin-bottom: 35px;
-}
-.view-test-urine-analysis .kidney-bladder img {
-  margin: 0 auto;
-  display: block;
-}
-.view-test-urine-analysis .kidney-bladder h2 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.view-test-urine-analysis .kidney-bladder h1 {
-  margin-top: 0;
-}
-.view-test-urine-analysis .bladder {
-  margin-top: 30px;
-}
-.view-test-urine-analysis .visual-analysis .section {
-  border-top: 1px dotted #b2b2b2;
-}
-.view-test-urine-analysis .visual-analysis .section.first {
-  border-top: none;
-}
-.view-test-urine-analysis .visual-analysis .title {
-  margin-top: 15px;
-}
-.view-test-urine-analysis .visual-analysis p {
-  font-size: 108%;
-  line-height: 150%;
-  /* Phone */
-}
-@media (max-width: 480px) {
-  .view-test-urine-analysis .visual-analysis p {
-    font-size: 116%;
-  }
-}
-.view-test-urine-analysis .visual-analysis .color,
-.view-test-urine-analysis .visual-analysis .appearance {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  vertical-align: middle;
-  margin-right: 10px;
 }
 .view-test-urine-analysis .visual-analysis .color.brown {
   background-image: url("../images/test/urine/color/brown.png");
@@ -3451,61 +3312,6 @@ span.placeholder {
 }
 .view-test-urine-analysis .visual-analysis .appearance.none {
   background-image: url("../images/test/urine/appearance/none.png");
-}
-.view-test-urine-analysis .visual-analysis .components {
-  padding: 0;
-}
-.view-test-urine-analysis .visual-analysis .components .component {
-  list-style-type: none;
-  padding-left: 25px;
-  margin: 3px 0;
-  cursor: pointer;
-  background-image: url("../images/common/icon-info.png");
-  background-repeat: no-repeat;
-  background-position: left 2px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-test-urine-analysis .visual-analysis .components .component {
-    background-image: url("../images/common/icon-info-2x.png");
-    background-size: 16px 16px;
-  }
-}
-@media (min-width: 481px) {
-  .view-test-urine-analysis .subsection-chemical-analysis .column {
-    border-right: 1px solid #d2d3d6;
-    padding-left: 30px;
-  }
-  .view-test-urine-analysis .subsection-chemical-analysis .column.concentration {
-    border-left: 1px solid #d2d3d6;
-    margin-right: 0;
-    padding-right: 0.67em;
-  }
-  .view-test-urine-analysis .subsection-chemical-analysis .column.ph {
-    margin-left: 0;
-  }
-  .view-test-urine-analysis .subsection-chemical-analysis .column p {
-    margin-right: 30px;
-  }
-  .view-test-urine-analysis .metabolic-components {
-    margin-top: 8px;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .view-test-urine-analysis .kidney-bladder img {
-    max-width: 155px;
-  }
-}
-@media (max-width: 480px) {
-  .view-test-urine-analysis .kidney-bladder img {
-    max-width: 100px;
-  }
-  .view-test-urine-analysis .subsection-chemical-analysis h1 {
-    margin-bottom: 0;
-  }
-  .view-test-urine-analysis .subsection-chemical-analysis .column.concentration .title,
-  .view-test-urine-analysis .subsection-chemical-analysis .column.concentration .attribute-list {
-    margin-top: 0;
-  }
 }
 
 .view-subtest-range {
@@ -3950,7 +3756,7 @@ span.placeholder {
   background-image: url(../images/common/result-bad.png);
 }
 .view-subtest-select .option.selected .name {
-  background-image: url(../images/common/attribute-list-bullet.png);
+  background-image: url(../images/subtest/select/bullet.png);
   background-repeat: no-repeat;
   background-position: 7px center;
 }
@@ -3964,339 +3770,6 @@ span.placeholder {
 }
 .view-subtest-select .description {
   display: none;
-}
-
-.view-subtest-types-of-cell .option {
-  font-family: 'Apercu', sans-serif;
-  border: 2px solid #f0f0f0;
-  font-size: 123.1%;
-  color: #6b6b6b;
-  border-radius: 3px;
-  text-align: center;
-  cursor: pointer;
-  padding: 3px;
-}
-.view-subtest-types-of-cell .option .icon {
-  display: inline-block;
-  width: 35px;
-  height: 31px;
-  vertical-align: middle;
-  margin: 0 2.6%;
-  background-image: url('../images/subtest/types-of-cell/option-sb044e08f02.png');
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell .option .icon {
-    background-image: url('../images/subtest/types-of-cell/option-2x-s0aef362529.png');
-    background-size: 40px 428px;
-  }
-}
-.view-subtest-types-of-cell .option .text {
-  display: inline-block;
-  vertical-align: middle;
-}
-.view-subtest-types-of-cell .option:hover {
-  -webkit-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  -moz-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  -o-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  border-color: #999999;
-}
-.view-subtest-types-of-cell .option.selected {
-  -webkit-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  -moz-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  -o-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  color: white;
-  font-weight: bold;
-  cursor: auto;
-}
-.view-subtest-types-of-cell .option.fighter:hover {
-  -webkit-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  -moz-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  -o-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  background-color: #f3fbf7;
-}
-.view-subtest-types-of-cell .option.fighter.selected {
-  -webkit-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  -moz-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  -o-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  background-color: #32b983;
-  border-color: #32b983;
-}
-.view-subtest-types-of-cell .option.defender:hover {
-  -webkit-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  -moz-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  -o-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  background-color: #fefbf3;
-}
-.view-subtest-types-of-cell .option.defender.selected {
-  -webkit-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  -moz-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  -o-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  background-color: #ebbc31;
-  border-color: #ebbc31;
-}
-.view-subtest-types-of-cell .option.watcher:hover {
-  -webkit-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  -moz-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  -o-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  background-color: #f0fbfe;
-}
-.view-subtest-types-of-cell .option.watcher.selected {
-  -webkit-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  -moz-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  -o-transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  transition: all 350ms cubic-bezier(0.42, 0, 0.58, 1);
-  background-color: #00beeb;
-  border-color: #00beeb;
-}
-.view-subtest-types-of-cell .cells {
-  width: 100%;
-  text-align: center;
-  line-height: 12px;
-}
-.view-subtest-types-of-cell .cell {
-  padding: 0 2px 0 1px;
-  cursor: pointer;
-  display: inline-block;
-}
-.view-subtest-types-of-cell .cell.selected {
-  cursor: auto;
-}
-.view-subtest-types-of-cell .cell .icon {
-  width: 57px;
-  height: 51px;
-  background-image: url('../images/subtest/types-of-cell/cell-s83e63d8b51.png');
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell .cell .icon {
-    background-image: url('../images/subtest/types-of-cell/cell-2x-s8c7212fff5.png');
-    background-size: 100%;
-  }
-}
-.view-subtest-types-of-cell .description {
-  display: none;
-}
-.view-subtest-types-of-cell .description.selected {
-  display: block;
-}
-.view-subtest-types-of-cell .description .title {
-  margin-bottom: 5px;
-}
-.view-subtest-types-of-cell .description p {
-  margin-top: 0;
-  font-size: 108%;
-  line-height: 150%;
-  /* Phone */
-}
-@media (max-width: 480px) {
-  .view-subtest-types-of-cell .description p {
-    font-size: 116%;
-  }
-}
-.view-subtest-types-of-cell .description .component-info {
-  cursor: pointer;
-  display: inline-block;
-  margin-left: 5px;
-  margin-top: -4px;
-  vertical-align: middle;
-}
-.view-subtest-types-of-cell.species-canine .option.fighter .icon {
-  background-position: -2px -76px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-canine .option.fighter .icon {
-    background-position: -2px -147px;
-  }
-}
-.view-subtest-types-of-cell.species-canine .option.fighter.selected .icon {
-  background-position: -2px -182px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-canine .option.fighter.selected .icon {
-    background-position: -2px -218px;
-  }
-}
-.view-subtest-types-of-cell.species-canine .option.defender .icon {
-  background-position: -2px -218px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-canine .option.defender .icon {
-    background-position: -2px -182px;
-  }
-}
-.view-subtest-types-of-cell.species-canine .option.defender.selected .icon {
-  background-position: -2px -254px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-canine .option.defender.selected .icon {
-    background-position: -2px -254px;
-  }
-}
-.view-subtest-types-of-cell.species-canine .option.watcher .icon {
-  background-position: -2px -361px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-canine .option.watcher .icon {
-    background-position: -2px -361px;
-  }
-}
-.view-subtest-types-of-cell.species-canine .option.watcher.selected .icon {
-  background-position: -2px -289px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-canine .option.watcher.selected .icon {
-    background-position: -2px -289px;
-  }
-}
-.view-subtest-types-of-cell.species-canine .cells .fighter .icon {
-  background-position: 0 -255px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-canine .cells .fighter .icon {
-    background-position: 0 -357px;
-  }
-}
-.view-subtest-types-of-cell.species-canine .cells.selected-fighter .fighter .icon {
-  background-position: 0 -204px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-canine .cells.selected-fighter .fighter .icon {
-    background-position: 0 -255px;
-  }
-}
-.view-subtest-types-of-cell.species-canine .cells .defender .icon {
-  background-position: 0 -357px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-canine .cells .defender .icon {
-    background-position: 0 -306px;
-  }
-}
-.view-subtest-types-of-cell.species-canine .cells.selected-defender .defender .icon {
-  background-position: 0 -306px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-canine .cells.selected-defender .defender .icon {
-    background-position: 0 -204px;
-  }
-}
-.view-subtest-types-of-cell.species-canine .cells .watcher .icon {
-  background-position: 0 -510px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-canine .cells .watcher .icon {
-    background-position: 0 -459px;
-  }
-}
-.view-subtest-types-of-cell.species-canine .cells.selected-watcher .watcher .icon {
-  background-position: 0 -408px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-canine .cells.selected-watcher .watcher .icon {
-    background-position: 0 -408px;
-  }
-}
-.view-subtest-types-of-cell.species-feline .option.fighter .icon {
-  background-position: -2px -4px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-feline .option.fighter .icon {
-    background-position: -2px -40px;
-  }
-}
-.view-subtest-types-of-cell.species-feline .option.fighter.selected .icon {
-  background-position: -2px -111px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-feline .option.fighter.selected .icon {
-    background-position: -2px -76px;
-  }
-}
-.view-subtest-types-of-cell.species-feline .option.defender .icon {
-  background-position: -2px -40px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-feline .option.defender .icon {
-    background-position: -2px -111px;
-  }
-}
-.view-subtest-types-of-cell.species-feline .option.defender.selected .icon {
-  background-position: -2px -146px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-feline .option.defender.selected .icon {
-    background-position: -2px -4px;
-  }
-}
-.view-subtest-types-of-cell.species-feline .option.watcher .icon {
-  background-position: -2px -397px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-feline .option.watcher .icon {
-    background-position: -2px -397px;
-  }
-}
-.view-subtest-types-of-cell.species-feline .option.watcher.selected .icon {
-  background-position: -2px -325px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-feline .option.watcher.selected .icon {
-    background-position: -2px -325px;
-  }
-}
-.view-subtest-types-of-cell.species-feline .cells .fighter .icon {
-  background-position: 0 -102px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-feline .cells .fighter .icon {
-    background-position: 0 -102px;
-  }
-}
-.view-subtest-types-of-cell.species-feline .cells.selected-fighter .fighter .icon {
-  background-position: 0 0;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-feline .cells.selected-fighter .fighter .icon {
-    background-position: 0 0;
-  }
-}
-.view-subtest-types-of-cell.species-feline .cells .defender .icon {
-  background-position: 0 -153px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-feline .cells .defender .icon {
-    background-position: 0 -153px;
-  }
-}
-.view-subtest-types-of-cell.species-feline .cells.selected-defender .defender .icon {
-  background-position: 0 -51px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-feline .cells.selected-defender .defender .icon {
-    background-position: 0 -51px;
-  }
-}
-.view-subtest-types-of-cell.species-feline .cells .watcher .icon {
-  background-position: 0 -561px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-feline .cells .watcher .icon {
-    background-position: 0 -561px;
-  }
-}
-.view-subtest-types-of-cell.species-feline .cells.selected-watcher .watcher .icon {
-  background-position: 0 -459px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-types-of-cell.species-feline .cells.selected-watcher .watcher .icon {
-    background-position: 0 -510px;
-  }
 }
 
 .view-subtest-types-of-cell2 .title {
@@ -4374,7 +3847,7 @@ span.placeholder {
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.9);
-  z-index: 9999999999;
+  z-index: 100000;
   display: none;
   /* hidden by default */
   opacity: 1 !important;

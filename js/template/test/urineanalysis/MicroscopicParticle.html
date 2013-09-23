@@ -1,0 +1,16 @@
+<div class="view-test-urine-analysis-microscopic-particle">
+    {{#if components}}
+        <ul class="components">
+             {{#each components}}
+             <li class="component" title="{{description}}">
+                <span class="caption">{{label}}</span>
+            </li>
+            {{/each}}
+        </ul>
+    {{else}}
+        <div>
+            <span class="appearance none">&nbsp;</span>
+            <span class="caption">None Found</span>
+        </div>
+    {{/if}}
+</div>

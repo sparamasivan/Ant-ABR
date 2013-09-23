@@ -109,7 +109,6 @@
 		left:-151px;
 		top:0;
 		width:150px;
-		z-index:999999;
 		background:#0099be;
 		height:100%;
 		border-right:1px solid #afcae0; 
@@ -119,6 +118,7 @@
 			-moz-transition: all .2s ease-in-out;
 			-o-transition: all .2s ease-in-out;
 			transition: all .2s ease-in-out;
+			z-index: 10;
 		}
 	}
 	
@@ -152,7 +152,6 @@
 	.menuTrigger {
 		display:block;
 		position:relative;
-		z-index:9999;
 	}
 	
 	.page {
@@ -181,38 +180,20 @@
 		top:0;
 		width:100px;
 		height:100%;
-		z-index:999;
 		&.active {
 			left:150px;
 			width:100%;
 		}
 	}
 	
-	.secondaryMenu {
-		&.active {
-			/*margin-right:225px;*/
-		}
-	}
-	
-	.ranges-container {
-		z-index:9999;
-	}
-	
-	.test-headers {
-		z-index:99999!important;
-	}
-	
-	.view-navigation {
-		z-index:999999!important;
-		top:47px;
-	}
-	
-	.view-subtest-range-group .swipe {
-		z-index:9999;
-	}
-	
 	.mainNav {
 		height:50px;
+	}
+
+	.test-headers {
+		&.active {
+			left: 150px;
+		}
 	}
 } 
 

@@ -5,10 +5,12 @@ define([
     'handlebars',
     'view/test/Base',
     'text!template/test/UrineAnalysis.html',
+    'text!template/test/urineanalysis/ChemicalComponent.html',
+    'text!template/test/urineanalysis/MicroscopicParticle.html',
     'view/subtest/pod/Boolean',
     'config',
-    'model/MediaQuery',
-    'jquery-equal-heights',
+    'view/widget/TestSubsection',
+    'view/subtest/Select',
     'jquery-tooltip'
 ], function(
     $,
@@ -17,19 +19,23 @@ define([
     Handlebars,
     ViewTestBase,
     Template,
+    TemplateChemicalComponent,
+    TemplateMicroscopicParticle,
     ViewSubtestBoolean,
     Config,
-    ModelMediaQuery
+    ViewWidgetTestSubsection,
+    ViewSubtestSelect
 ) {
     return ViewTestBase.extend({
         title: 'URINALYSIS',
 
         templateContent: Handlebars.compile(Template),
 
-        render: function(parent) {
-            var mConcentration = this.model.getModelConcentration(),
-                mPh = this.model.getModelPh();
+        templateChemicalComponentContent: Handlebars.compile(TemplateChemicalComponent),
 
+        templateMicroscopicParticleContent: Handlebars.compile(TemplateMicroscopicParticle),
+
+        render: function(parent) {
             $.extend(this._overview, {
                 descriptionTemplate: 'Analyzing {{patient.name}}’s urine gives us an excellent snapshot of how the body’s organs and systems are functioning.'
             });
@@ -39,95 +45,137 @@ define([
             this.$elContent.append(this.templateContent({
                 patient: this.model.getReport().getDataPatient(),
 
-                color: Config.getUrineColorInfoById(this.model.getModelColor().getValueText()),
+                color: Config.getUrineColorInfoById(this.model.getModelColor().getValueText())
+            }));
 
-                appearance: Config.getUrineAppearanceInfoById(this.model.getModelAppearance().getValueText()),
+            this._renderVisualAnalysisSection(this.$elContent.find('.test-section.visual'));
 
-                microscopicComponents: _(this.model.getMicroscopicComponentModels())
-                    .chain()
-                    .map(function(model) {
-                        var e4 = (model.getValueText() || "").toLowerCase();
-                        
-                        if(e4 != 'neg' && e4 != 'negative' && !e4.match(/^none*/)){
-                            return {
-                                label: model.getLabel(),
-                                isGood: model.getValue(),
-                                description: model.getDescription()
+            this._renderChemicalAnalysisSection(this.$elContent.find('.test-section.visual'));
+        },
+
+        _renderVisualAnalysisSection: function(parent) {
+
+            appearance: Config.getUrineAppearanceInfoById(this.model.getModelAppearance().getValueText()),
+            this._renderMicroscopicParticleSubsection(parent.find('.test-subsection.particle'));
+        },
+
+        _renderMicroscopicParticleSubsection: function(parent) {
+            var patient = this.model.getReport().getDataPatient(),
+
+                // create subsection
+                view = new ViewWidgetTestSubsection({
+                    title: Handlebars.compile('Microscopic Particles')({patient: patient}),
+                    text: Handlebars.compile('The following components were found in {{{patient.name}}}’s urine:')({patient: patient})
+                }),
+
+                // prepare subsection content
+                contentEl = $(this.templateMicroscopicParticleContent({
+                    components: _(this.model.getMicroscopicComponentModels())
+                        .chain()
+                        .map(function(model) {
+                            var e4 = (model.getValueText() || "").toLowerCase();
+                            
+                            if(e4 != 'neg' && e4 != 'negative' && !e4.match(/^none*/)){
+                                return {
+                                    label: model.getLabel(),
+                                    isGood: model.getValue(),
+                                    description: model.getDescription()
+                                }
+                            } else {
+                                return false;
                             }
-                        } else {
-                            return false;
-                        }
-                    })
-                    .reject(function(item) {
-                        return item === false;
-                    })
-                    .value(),
+                        })
+                        .reject(function(item) {
+                            return item === false;
+                        })
+                        .value()
+                }));
 
-                concentrations: [
-                    {label: 'Diluted', isSelected: mConcentration.isLow()},
-                    {label: 'Concentrated', isSelected: !mConcentration.isLow()}
+            // render subsection
+            view.render(parent);
+
+            // append subsection content to subsection
+            view.setContent(contentEl);
+        },
+
+        _renderChemicalAnalysisSection: function(parent) {
+            var mConcentration = this.model.getModelConcentration(),
+                mPh = this.model.getModelPh(),
+                patient = this.model.getReport().getDataPatient(),
+                viewSubtest;
+
+            // concentration
+            viewSubtest = new ViewSubtestSelect({
+                description: Handlebars.compile('This level reflects the water balance in {{{patient.name}}}’s body, which should be concentrated. If {{patient.name}} drinks too much water, the kidneys will dump it, resulting in diluted urine.')({patient: patient}),
+                options: [
+                    'Diluted',
+                    'Neutral',
+                    'Concentrated'
                 ],
+                /*
+                    Overall range: 1.001 - 1.060
+                    Diluted: 1.001 - 1.009
+                    Neutral: 1.010 - 1.020
+                    Concentrated: 1.021 - 1.060
+                */
+                selectedIndex: (mConcentration.getValue() < 1.010) ? 0 : ((mConcentration.getValue() > 1.020) ? 2 : 1),
+                // always good
+                selectedIsBad: false
+            });
+            viewSubtest.render(parent.find('.select'));
 
-                phs: [
+            /*
+                phs: {
                     {label: 'Acidic', isSelected: mPh.isLow()},
                     {label: 'Neutral', isSelected: mPh.isNormal()},
                     {label: 'Alkaline', isSelected: mPh.isHigh()}
                 ]
-            }));
+            */
 
-            this.$elContent.find('.subsection-chemical-analysis .attribute-list').equalHeights();
-            this.$elContent.find('.subsection-chemical-analysis .column').equalHeights({
-                callback: function(tallestHeight) {
-                    return !ModelMediaQuery.isPhoneMedia();
-                }
-            });
+            this._renderChemicalComponentSubsection(parent.find('.test-subsection.component'));
+        },
 
-            // microscopic components tooltips
-            this.$elContent.find('.components .component').tooltip({
-                position: {
-                    my: 'right center',
-                    at: 'left center'
-                }
-            });
+        _renderChemicalComponentSubsection: function(parent) {
+            var patient = this.model.getReport().getDataPatient(),
+
+                // create subsection
+                view = new ViewWidgetTestSubsection({
+                    title: Handlebars.compile('Chemical Components')({patient: patient}),
+                    text: Handlebars.compile('The following comptonents were found in {{{patient.name}}}’s urine:')({patient: patient})
+                }),
+
+                // prepare subsection content
+                contentEl = $(this.templateChemicalComponentContent({}));
+
+            // render subsection
+            view.render(parent);
+
+            // append subsection content to subsection
+            view.setContent(contentEl);
 
             // glucose
             this._renderMetabolicSubcomponent(
-                this.$elContent.find('.metabolic-components .glucose'),
+                contentEl.find('.glucose'),
                 this.model.getModelGlucoseBoolean()
             );
 
             // protein
             this._renderMetabolicSubcomponent(
-                this.$elContent.find('.metabolic-components .protein'),
+                contentEl.find('.protein'),
                 this.model.getModelProteinBoolean()
             );
 
             // ketones
             this._renderMetabolicSubcomponent(
-                this.$elContent.find('.metabolic-components .ketones'),
+                contentEl.find('.ketones'),
                 this.model.getModelKetonesBoolean()
             );
 
             // bilirubin
             this._renderMetabolicSubcomponent(
-                this.$elContent.find('.metabolic-components .bilirubin'),
+                contentEl.find('.bilirubin'),
                 this.model.getModelBilirubinBoolean()
             );
-
-            // refresh widget whenever screen is resized
-            this.refresh();
-            ModelMediaQuery.on('change:windowWidth', $.proxy(this.refresh, this));
-        },
-
-        refresh: function() {
-            var elKidneyBladder = this.$elContent.find('.kidney-bladder'),
-                elVisualAnalysis = this.$elContent.find('.visual-analysis'),
-                elBracket = this.$elContent.find('.bracket .vertical');
-
-            ViewTestBase.prototype.refresh.apply(this, arguments);
-
-            // adjust the height of the bracket
-            elBracket.height(Math.max(elKidneyBladder.height(), elVisualAnalysis.height()));
         },
 
         _renderMetabolicSubcomponent: function(parent, model) {

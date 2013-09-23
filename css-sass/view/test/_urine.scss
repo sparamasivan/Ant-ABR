@@ -1,56 +1,12 @@
 @include view-test-base-extend(urine, #674e9f, #7359ae);
 
 .view-test-urine-analysis {
-    .test-description {
+    .test-section-description {
         margin-top: 35px;
         margin-bottom: 35px;
     }
 
-    .kidney-bladder {
-        img {
-            margin: 0 auto;
-            display: block;
-        }
-
-        h2 {
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-
-        h1 {
-            margin-top: 0;
-        }
-    }
-
-    .bladder {
-        margin-top: 30px;
-    }
-
     .visual-analysis {
-        .section {
-            border-top: 1px dotted #b2b2b2;
-
-            &.first {
-                border-top: none;
-            }
-        }
-
-        .title {
-            margin-top: 15px;
-        }
-
-        p {
-            @include smallFontSize;
-        }
-
-        .color,
-        .appearance {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
 
         .color {
             &.brown {background-image: url("../images/test/urine/color/brown.png");}
@@ -82,89 +38,6 @@
             &.slightly-hazy {background-image: url("../images/test/urine/appearance/slightly-hazy.png");}
             &.turbid {background-image: url("../images/test/urine/appearance/turbid.png");}
 			&.none {background-image: url("../images/test/urine/appearance/none.png");}
-        }
-
-        .components {
-            padding: 0;
-
-            .component {
-                list-style-type: none;
-                padding-left: 25px;
-                margin:3px 0;
-                cursor: pointer;
-
-                background-image: url("../images/common/icon-info.png");
-                background-repeat: no-repeat;
-                background-position: left 2px;
-
-                @media 
-                only screen and (-webkit-min-device-pixel-ratio: 2), 
-                only screen and (min-resolution: 192dpi) {
-                    background-image: url("../images/common/icon-info-2x.png");
-                    background-size: (image-width("../images/common/icon-info-2x.png") / 2) (image-height("../images/common/icon-info-2x.png") / 2);
-                }
-            }
-        }
-    }
-
-    /* tablet and desktop */
-    @media (min-width:($mq-phone + 1px)) {
-        .subsection-chemical-analysis {
-            .column {
-                border-right: 1px solid #d2d3d6;
-                padding-left: 30px;
-
-                &.concentration {
-                    border-left: 1px solid #d2d3d6;
-                    margin-right: 0;
-                    padding-right: 0.67em;
-                }
-
-                &.ph {
-                    margin-left: 0;
-                }
-
-                p {
-                    margin-right: 30px;
-                }
-            }
-        }
-
-        .metabolic-components {
-            margin-top: 8px;
-        }
-    }
-
-    /* tablet */
-    @media (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
-        .kidney-bladder {
-            img {
-                max-width: 155px;
-            }
-        }
-    }
-
-    /* phone */
-    @media (max-width:$mq-phone) {
-        .kidney-bladder {
-            img {
-                max-width: 100px;
-            }
-        }
-
-        .subsection-chemical-analysis {
-            h1 {
-                margin-bottom: 0;
-            }
-
-            .column {
-                &.concentration {
-                    .title,
-                    .attribute-list {
-                        margin-top: 0;
-                    }
-                }
-            }
         }
     }
 }
