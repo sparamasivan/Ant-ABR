@@ -4,11 +4,6 @@
     .subsection {
         padding-top: 2.5%;
         padding-bottom: 2.5%;
-        border-top: 1px dotted #b2b2b2;
-    }
-
-    .subsection:first-child {
-        border-top: 0;
     }
 
     .subsection-description {
@@ -45,42 +40,6 @@
 
     .subsection-platelet {
         padding-bottom: 0;
-
-        .clumping-description {
-            display: table;
-            height: 100%;
-
-            .inner {
-                display: table-cell;
-                vertical-align: middle;
-            }
-        }
-    }
-
-    .clumping {
-        .diagram {
-            text-align: center;
-
-            img {
-                width: 100%;
-                max-width: image-width("../images/test/cbc/clumping-yes.png") / 2;
-            }
-
-            &.clumping-no {
-                .yui3-u-c {
-                    /* desktop */
-                    @media (min-width:$mq-tablet) {
-                        border-right: 1px solid #d9d9d9;
-                        margin-right: 0;
-                        padding-right: 0.67em;
-                    }
-                }
-            }
-        }
-
-        p {
-            @include smallFontSize;
-        }
     }
 
     /* tablet and phone */

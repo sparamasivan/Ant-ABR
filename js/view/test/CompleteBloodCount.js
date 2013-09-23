@@ -55,7 +55,7 @@ define([
 
             this._renderRedBloodCellSubsection(this.$elContent.find('.subsection-rbc'));
 
-            this._renderWhiteBloodCellSubsection();
+            this._renderWhiteBloodCellSubsection(this.$elContent.find('.subsection-wbc'));
 
             this._renderPlateletSubsection(this.$elContent.find('.subsection-platelet'));
         },
@@ -80,7 +80,9 @@ define([
                 name: this.model.getReport().getDataPatient().name,
                 unitOfMeasure: 'MILLION/uL'
             });
-            view.render(parent.find('.diagram-rbc-result'));
+            view.render(parent.find('.range'));
+
+            this._renderPieChart(parent.find('.chart'), this.model.getRbcPercentage());
 
             parent.find('.attribute-list').equalHeights();
             parent.find('.cell-attribute-column').equalHeights({
@@ -88,15 +90,48 @@ define([
                     return !ModelMediaQuery.isPhoneMedia();
                 }
             });
-            
-            
-            var data = new google.visualization.arrayToDataTable([
-                ['Label', 'Value'],
-                ['RBC', this.model.getRbcPercentage()],
-                ['Other', 100 - this.model.getRbcPercentage()]
-            ]);
+        },
 
-            var chart = new google.visualization.PieChart(parent.find('.chart')[0]);
+        _renderWhiteBloodCellSubsection: function(parent) {
+            // range
+            var view = new ViewSubtestRange({
+                model: this.model.getModelWbcRange(),
+                name: this.model.getReport().getDataPatient().name,
+                unitOfMeasure: 'THOUSAND/uL'
+            });
+            view.render(parent.find('.range'));
+
+            this._renderPieChart(parent.find('.chart'), this.model.getWbcPercentage());
+
+            // types of cells
+            view = new ViewSubtestTypesOfCell({
+                ranges: this.model.getWbcCellRanges(),
+                species: this.model.getReport().getPatientSpecies(),
+                patient: this.model.getReport().getDataPatient()
+            });
+            view.render(parent.find('.diagram-wbc-breakdown'));
+            this._viewSubtestTypesOfCell = view;
+        },
+
+        _renderPlateletSubsection: function(parent) {
+            var view = new ViewSubtestRange({
+                model: this.model.getModelPlateletRange(),
+                name: this.model.getReport().getDataPatient().name,
+                unitOfMeasure: 'THOUSAND/uL'
+            });
+            view.render(parent.find('.range'));
+
+            this._renderPieChart(parent.find('.chart'), this.model.getPlateletPercentage());
+        },
+
+        _renderPieChart: function(parent, percentage) {
+            var data = new google.visualization.arrayToDataTable([
+                    ['Label', 'Value'],
+                    ['RBC', percentage],
+                    ['Other', 100 - percentage]
+                ]),
+                chart = new google.visualization.PieChart(parent[0]);
+
             chart.draw(data, {
                 pieHole: 0.3,
                 backgroundColor: {
@@ -116,42 +151,6 @@ define([
                     {color: '#e9eae4'}
                 ],
                 enableInteractivity: false
-            });
-        },
-
-        _renderWhiteBloodCellSubsection: function() {
-            // range
-            var view = new ViewSubtestRange({
-                model: this.model.getModelWbcRange(),
-                name: this.model.getReport().getDataPatient().name,
-                unitOfMeasure: 'THOUSAND/uL'
-            });
-            view.render(this.$elContent.find('.diagram-wbc-result'));
-
-            // types of cells
-            view = new ViewSubtestTypesOfCell({
-                ranges: this.model.getWbcCellRanges(),
-                species: this.model.getReport().getPatientSpecies(),
-                patient: this.model.getReport().getDataPatient()
-            });
-            view.render(this.$elContent.find('.diagram-wbc-breakdown'));
-            this._viewSubtestTypesOfCell = view;
-        },
-
-        _renderPlateletSubsection: function(parent) {
-            var view = new ViewSubtestRange({
-                model: this.model.getModelPlateletRange(),
-                name: this.model.getReport().getDataPatient().name,
-                unitOfMeasure: 'THOUSAND/uL'
-            });
-            view.render(this.$elContent.find('.diagram-platelet-result'));
-
-            parent.waitForImages(function() {
-                $(this).find('.clumping .column .yui3-u-c').equalHeights({
-                    callback: function(tallestHeight) {
-                        return !ModelMediaQuery.isPhoneMedia();
-                    }
-                });
             });
         }
     });

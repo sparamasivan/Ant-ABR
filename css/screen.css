@@ -3151,10 +3151,6 @@ span.placeholder {
 .view-test-cbc .subsection {
   padding-top: 2.5%;
   padding-bottom: 2.5%;
-  border-top: 1px dotted #b2b2b2;
-}
-.view-test-cbc .subsection:first-child {
-  border-top: 0;
 }
 .view-test-cbc .subsection-description {
   background-repeat: no-repeat;
@@ -3172,7 +3168,7 @@ span.placeholder {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-test-cbc .subsection-rbc .subsection-description {
     background-image: url("../images/test/cbc/diagram/rbc-2x.png");
-    background-size: 75px 75px;
+    background-size: 85px 85px;
   }
 }
 .view-test-cbc .subsection-wbc .subsection-description {
@@ -3181,7 +3177,7 @@ span.placeholder {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-test-cbc .subsection-wbc .subsection-description {
     background-image: url("../images/test/cbc/diagram/wbc-2x.png");
-    background-size: 75px 75px;
+    background-size: 85px 85px;
   }
 }
 .view-test-cbc .subsection-platelet .subsection-description {
@@ -3190,46 +3186,11 @@ span.placeholder {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-test-cbc .subsection-platelet .subsection-description {
     background-image: url("../images/test/cbc/diagram/platelet-2x.png");
-    background-size: 75px 75px;
+    background-size: 85px 85px;
   }
 }
 .view-test-cbc .subsection-platelet {
   padding-bottom: 0;
-}
-.view-test-cbc .subsection-platelet .clumping-description {
-  display: table;
-  height: 100%;
-}
-.view-test-cbc .subsection-platelet .clumping-description .inner {
-  display: table-cell;
-  vertical-align: middle;
-}
-.view-test-cbc .clumping .diagram {
-  text-align: center;
-}
-.view-test-cbc .clumping .diagram img {
-  width: 100%;
-  max-width: 191px;
-}
-.view-test-cbc .clumping .diagram.clumping-no .yui3-u-c {
-  /* desktop */
-}
-@media (min-width: 769px) {
-  .view-test-cbc .clumping .diagram.clumping-no .yui3-u-c {
-    border-right: 1px solid #d9d9d9;
-    margin-right: 0;
-    padding-right: 0.67em;
-  }
-}
-.view-test-cbc .clumping p {
-  font-size: 108%;
-  line-height: 150%;
-  /* Phone */
-}
-@media (max-width: 480px) {
-  .view-test-cbc .clumping p {
-    font-size: 116%;
-  }
 }
 @media (max-width: 768px) {
   .view-test-cbc .subsection-description h1 {
