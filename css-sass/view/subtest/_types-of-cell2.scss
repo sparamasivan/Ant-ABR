@@ -1,0 +1,27 @@
+.view-subtest-types-of-cell2 {
+	.title {
+		@include secondaryFont;
+
+		text-transform: uppercase;
+		font-size: 138.5%;
+		font-weight: bold;
+		border-bottom: 1px solid #6b6b6b;
+		padding-bottom: 5px;
+	}
+
+	.diagram {
+		margin-top: 10px;
+	}
+
+	&.species-feline {
+		.canine {
+			display: none;
+		}
+	}
+
+	&.species-canine {
+		.feline {
+			display: none;
+		}
+	}
+}

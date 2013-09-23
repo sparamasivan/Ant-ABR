@@ -3,6 +3,7 @@ define([
     'backbone',
     'handlebars',
     'text!template/subtest/TypesOfCell.html',
+    'model/test/CompleteBloodCount',
     'model/MediaQuery',
     'jquery-tooltip'
 ], function(
@@ -10,37 +11,12 @@ define([
     Backbone,
     Handlebars,
     Template,
+    ModelTestCbc,
     ModelMediaQuery
 ) {
     var MAX_CELL_ROWS_DESKTOP = 5,
         MAX_CELL_ROWS_PHONE_TABLET = 4,
-        DEFAULT_CELL_TYPE = 'fighter',
-        CELL_GROUPS = ['fighter', 'defender', 'watcher'],
-        CELL_TYPE_COMPONENTS = {
-            defender: [{
-                title: 'Lymphocytes',
-                type: 'lymphocyte'
-            }, {
-                title: 'Monocytes',
-                type: 'monocyte'
-            }],
-
-            fighter: [{
-                title: 'Neutrophils',
-                type: 'neutrophil'
-            }, {
-                title: 'Bands',
-                type: 'band'
-            }],
-
-            watcher: [{
-                title: 'Eosinophils',
-                type: 'eosinophil'
-            }, {
-                title: 'Basophils',
-                type: 'basophil'
-            }]
-        };
+        DEFAULT_CELL_TYPE = 'fighter';
 
     return Backbone.View.extend({
         template: Handlebars.compile(Template),
@@ -54,7 +30,7 @@ define([
                 };
 
             // format cell type components for template
-            $.each(CELL_TYPE_COMPONENTS, function(cellType, components) {
+            $.each(ModelTestCbc.WBC_CELL_TYPE_COMPONENTS, function(cellType, components) {
                 var formattedComponents = [];
 
                 $.each(components, function(i, component) {
@@ -184,7 +160,7 @@ define([
             maxCells = Math.floor(cellsElement.width() / cellWidth) * maxCellRows;
 
             // determine number of cell types to populate for each cell group based on percentages
-            $.each(CELL_GROUPS, function(i, groupType) {
+            $.each(ModelTestCbc.WBC_CELL_GROUPS, function(i, groupType) {
                 var percentage = self._getCellTypeGroupPercentage(groupType),
                     numCells = Math.floor(maxCells * percentage / 100);
 
@@ -239,7 +215,7 @@ define([
                 percentage = 0;
 
             // format cell type components for template
-            $.each(CELL_TYPE_COMPONENTS[groupType], function(i, component) {
+            $.each(ModelTestCbc.WBC_CELL_TYPE_COMPONENTS[groupType], function(i, component) {
                 percentage += self._getCellPercentage(component.type);
             });
 

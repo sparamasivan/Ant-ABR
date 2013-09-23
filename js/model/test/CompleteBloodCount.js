@@ -11,7 +11,7 @@ define([
     ModelTestBase,
     ModelSubtestRange
 ) {
-    return ModelTestBase.extend({
+    var Model = ModelTestBase.extend({
         _defaultOrder: 200,
         _simpleTitle: 'CBC',
 
@@ -103,26 +103,23 @@ define([
             return total;
         },
 
-        getWbcDefenderCellInfo: function() {
-            var ranges = this.getWbcDefenderCellRanges(),
-                total = this.getWbcCellTotal();
+        getWbcCellPercentageByType: function(type) {
+            var range = this.getWbcCellRanges()[type],
+                totalCells = this.getWbcCellTotal();
 
-            return {
-                percentage: (ranges.neutrophil.getValue() + ranges.band.getValue()) / total,
-                ranges: {
-                    neutrophil: {
-                        title: 'Neutrophils',
-                        percentage: ranges.neutrophil.getValue() / total,
-                        model: ranges.neutrophil,
-                    },
+            return range.getValue() / totalCells * 100;
+        },
 
-                    band: {
-                        title: 'Bands',
-                        percentage: ranges.band.getValue() / total,
-                        model: ranges.band
-                    }
-                }
-            }
+        getWbcCellPercentageByGroupType: function(groupType) {
+            var self = this,
+                percentage = 0;
+
+            // format cell type components for template
+            $.each(Model.WBC_CELL_TYPE_COMPONENTS[groupType], function(i, component) {
+                percentage += self.getWbcCellPercentageByType(component.type);
+            });
+
+            return percentage;
         },
 
         _createSubtest: function(subtestData) {
@@ -185,6 +182,36 @@ define([
         RBC_COLORS: [
             {type: 'red', label: 'Red', bad: false},
             {type: 'pale', label: 'Pale', nad: true}
-        ]
+        ],
+
+        WBC_CELL_GROUPS: ['fighter', 'defender', 'watcher'],
+
+        WBC_CELL_TYPE_COMPONENTS: {
+            defender: [{
+                title: 'Lymphocytes',
+                type: 'lymphocyte'
+            }, {
+                title: 'Monocytes',
+                type: 'monocyte'
+            }],
+
+            fighter: [{
+                title: 'Neutrophils',
+                type: 'neutrophil'
+            }, {
+                title: 'Bands',
+                type: 'band'
+            }],
+
+            watcher: [{
+                title: 'Eosinophils',
+                type: 'eosinophil'
+            }, {
+                title: 'Basophils',
+                type: 'basophil'
+            }]
+        }
     });
+
+    return Model;
 });

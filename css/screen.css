@@ -4299,6 +4299,24 @@ span.placeholder {
   }
 }
 
+.view-subtest-types-of-cell2 .title {
+  font-family: 'Apercu', sans-serif;
+  text-transform: uppercase;
+  font-size: 138.5%;
+  font-weight: bold;
+  border-bottom: 1px solid #6b6b6b;
+  padding-bottom: 5px;
+}
+.view-subtest-types-of-cell2 .diagram {
+  margin-top: 10px;
+}
+.view-subtest-types-of-cell2.species-feline .canine {
+  display: none;
+}
+.view-subtest-types-of-cell2.species-canine .feline {
+  display: none;
+}
+
 .view-subtest-pod-base {
   font-family: 'Apercu', sans-serif;
 }
@@ -4422,6 +4440,9 @@ span.placeholder {
 .view-widget-test-subsection {
   background-color: #f7f8f6;
   border-top: 1px solid #b2b2b2;
+}
+.view-widget-test-subsection > .header {
+  cursor: pointer;
 }
 .view-widget-test-subsection > .body {
   display: none;

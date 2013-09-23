@@ -6,7 +6,7 @@ define([
     'text!template/test/CompleteBloodCount.html',
     'view/subtest/Range',
     'model/test/CompleteBloodCount',
-    'view/subtest/TypesOfCell',
+    'view/subtest/TypesOfCell2',
     'model/MediaQuery',
     'view/widget/TestSubsection',
     'view/subtest/pod/Select',
@@ -22,7 +22,7 @@ define([
     Template,
     ViewSubtestRange,
     ModelTestCbc,
-    ViewSubtestTypesOfCell,
+    ViewSubtestTypesOfCell2,
     ModelMediaQuery,
     ViewWidgetTestSubsection,
     ViewSubtestSelect,
@@ -55,8 +55,6 @@ define([
             '</div>'
         ),
 
-        _viewSubtestTypesOfCell: null,
-
         render: function(parent) {
             $.extend(this._overview, {
                 descriptionTemplate: 'The CBC (Complete Blood Count) test examines the health and numbers of {{patient.name}}’s cells.'
@@ -75,11 +73,6 @@ define([
             this._renderPlateletSection(this.$elContent.find('.subsection-platelet'));
         },
 
-        refresh: function() {
-            ViewTestBase.prototype.refresh.apply(this, arguments);
-            this._viewSubtestTypesOfCell.refresh();
-        },
-
         _renderRbcSection: function(parent) {
             var view = new ViewSubtestRange({
                 model: this.model.getModelRbcRange(),
@@ -95,12 +88,18 @@ define([
 
         _renderRbcAppearanceSubsection: function(parent) {
             var patient = this.model.getReport().getDataPatient(),
+
+                // create subsection
                 view = new ViewWidgetTestSubsection({
                     title: Handlebars.compile('Appearance of {{{patient.name}}}’s Cells')({patient: patient}),
                     text: Handlebars.compile('They power {{{patient.name}}}’s body, carrying oxygen from the lungs to all the other cells and tissues, where it’s then turned into energy.')({patient: patient})
                 }),
+
+                // prepare subsection content
                 contentEl = $(this.templateAppearanceContent()),
+                
                 viewSubtest,
+
                 formatCellAttributesForSubtest = function(attributeValues, selectedType) {
                     var selectedIndex,
                         labels = $.map(attributeValues, function(attribute, index) {
@@ -116,7 +115,9 @@ define([
                         selectedIndex: selectedIndex
                     };
                 },
+
                 subtestData,
+
                 elPods;
 
             // render subsection
@@ -184,14 +185,32 @@ define([
 
             this._renderPieChart(parent.find('.chart'), this.model.getWbcPercentage());
 
+            this._renderWbcTypesOfCellSubsection(parent.find('.test-subsection.types-of-cell'));
+        },
+
+        _renderWbcTypesOfCellSubsection: function(parent) {
+            var patient = this.model.getReport().getDataPatient(),
+
+                // create subsection
+                view = new ViewWidgetTestSubsection({
+                    title: Handlebars.compile('Types of {{{patient.name}}}’s Cells')({patient: patient}),
+                    text: Handlebars.compile('There are three types of WBC. Though they have different jobs and vary in number, they all work together to achieve balance.')({patient: patient})
+                }),
+
+                // prepare subsection content
+                contentEl = $('<div />');
+
+            // render subsection
+            view.render(parent);
+
+            // append subsection content to subsection
+            view.setContent(contentEl);
+
             // types of cells
-            view = new ViewSubtestTypesOfCell({
-                ranges: this.model.getWbcCellRanges(),
-                species: this.model.getReport().getPatientSpecies(),
-                patient: this.model.getReport().getDataPatient()
+            view = new ViewSubtestTypesOfCell2({
+                model: this.model
             });
-            view.render(parent.find('.diagram-wbc-breakdown'));
-            this._viewSubtestTypesOfCell = view;
+            view.render(contentEl);
         },
 
         _renderPlateletSection: function(parent) {

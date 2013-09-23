@@ -2,6 +2,10 @@
 	background-color: #f7f8f6;
 	border-top: 1px solid #b2b2b2;
 
+    >.header {
+        cursor: pointer;
+    }
+
     >.body {
         display: none;
     }
