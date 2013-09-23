@@ -8,6 +8,7 @@ define([
     'model/test/CompleteBloodCount',
     'view/subtest/TypesOfCell',
     'model/MediaQuery',
+    'goog!visualization,1,packages:[corechart,geochart]',
     'jquery-equal-heights',
     'jquery-waitforimages'
 ], function(
@@ -86,6 +87,35 @@ define([
                 callback: function(tallestHeight) {
                     return !ModelMediaQuery.isPhoneMedia();
                 }
+            });
+            
+            
+            var data = new google.visualization.arrayToDataTable([
+                ['Label', 'Value'],
+                ['RBC', this.model.getRbcPercentage()],
+                ['Other', 100 - this.model.getRbcPercentage()]
+            ]);
+
+            var chart = new google.visualization.PieChart(parent.find('.chart')[0]);
+            chart.draw(data, {
+                pieHole: 0.3,
+                backgroundColor: {
+                    fill: 'none'
+                },
+                chartArea: {
+                    width: '200%',
+                    height: '200%'
+                },
+                legend: {
+                    position: 'none'
+                },
+                pieSliceBorderColor: 'none',
+                pieSliceText: 'none',
+                slices: [
+                    {color: '#00b8d5'},
+                    {color: '#e9eae4'}
+                ],
+                enableInteractivity: false
             });
         },
 
