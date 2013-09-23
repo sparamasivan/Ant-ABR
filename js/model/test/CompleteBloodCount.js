@@ -174,17 +174,17 @@ define([
         }
     }, {
         RBC_SIZES: [
-            {type: 'normal', label: 'Normal'},
-            {type: 'small', label: 'Small'},
-            {type: 'large', label: 'Large'}
+            {type: 'normal', label: 'Normal', bad: false},
+            {type: 'small', label: 'Small', bad: true},
+            {type: 'large', label: 'Large', bad: true}
         ],
         RBC_SHAPES: [
-            {type: 'normal', label: 'Normal'},
-            {type: 'irregular', label: 'Irregular'}
+            {type: 'normal', label: 'Normal', bad: false},
+            {type: 'irregular', label: 'Irregular', bad: true}
         ],
         RBC_COLORS: [
-            {type: 'red', label: 'Red'},
-            {type: 'pale', label: 'Pale'}
+            {type: 'red', label: 'Red', bad: false},
+            {type: 'pale', label: 'Pale', nad: true}
         ]
     });
 });

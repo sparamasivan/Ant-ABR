@@ -1,0 +1,35 @@
+.view-subtest-pod-color {
+	margin: 10px 0 0;
+
+	.scale {
+		display: block;
+		width: image-width('images/subtest/pod/color/good-2x.png') / 2;
+		margin: 0 auto;
+	}
+
+	.marker {
+		display: block;
+		width: image-width('images/common/result-good-2x.png') / 2;
+		margin: 0 auto;
+	}
+
+	.label {
+		text-align: center;
+		font-weight: bold;
+		font-size: 210%;
+	}
+
+	.low {
+		display: none;
+	}
+
+	&.bad {
+		.low {
+			display: block;
+		}
+
+		.high {
+			display: none;
+		}
+	}
+}

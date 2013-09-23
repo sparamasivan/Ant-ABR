@@ -66,8 +66,10 @@ $max-page-width: 1000px;
 @import "view/subtest/select";
 @import "view/subtest/types-of-cell";
 @import "view/subtest/pod/base";
+@import "view/subtest/pod/color";
 @import "view/subtest/pod/select";
 
 // widgets
-@import "view/widget/test-overview";
 @import "view/widget/busy";
+@import "view/widget/test-overview";
+@import "view/widget/test-subsection";

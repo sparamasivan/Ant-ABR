@@ -30,68 +30,7 @@
 			</div>
 		</div>
 
-
-		<div class="yui3-g-r subsubsection-cell-attribute">
-			<!-- cell types -->
-			<div class="yui3-u-1-4 yui3-hidden-phone">
-				<div class="yui3-u-c cell-attribute-column">
-					<div class="diagram-rbc-cell">
-						<img src="{{rbc.clipartUrl}}" />
-					</div>
-				</div>
-			</div>
-
-			<!-- cell size -->
-			<div class="yui3-u-1-4">
-				<div class="yui3-u-c cell-attribute-column attribute-list-container">
-					<h4 class="title">Size</h4>
-
-					<div class="attribute-list">
-						<ul class="options">
-							{{#each rbc.sizes}}
-								<li class="{{#if isSelected}}selected{{/if}}">{{label}}</li>
-							{{/each}}
-						</ul>
-					</div>
-
-					<p>{{patient.name}}’s blood is a mix of young, middle aged and old blood cells. Size helps determine their age and how much hemoglobin and oxygen they contain.</p>
-				</div>
-			</div>
-
-			<!-- cell shape -->
-			<div class="yui3-u-1-4">
-				<div class="yui3-u-c cell-attribute-column attribute-list-container">
-					<h4 class="title">Shape</h4>
-
-					<div class="attribute-list">
-						<ul class="options">
-							{{#each rbc.shapes}}
-								<li class="{{#if isSelected}}selected{{/if}}">{{label}}</li>
-							{{/each}}
-						</ul>
-					</div>
-
-					<p>Blood cells have to squeeze through tiny capillaries. After passing through, the blood cells should spring back to a round shape.</p>
-				</div>
-			</div>
-
-			<!-- cell color -->
-			<div class="yui3-u-1-4">
-				<div class="yui3-u-c cell-attribute-column attribute-list-container">
-					<h4 class="title">Color</h4>
-
-					<div class="attribute-list">
-						<ul class="options">
-							{{#each rbc.colors}}
-								<li class="{{#if isSelected}}selected{{/if}}">{{label}}</li>
-							{{/each}}
-						</ul>
-					</div>
-
-					<p>Just like how chlorophyll makes plants green, oxygen and hemoglobin make blood red.</p>
-				</div>
-			</div>
-		</div>
+		<div class="test-subsection appearance"></div>
 	</div>
 
 	<!-- WBC -->
