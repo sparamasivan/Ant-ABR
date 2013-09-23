@@ -58,97 +58,113 @@
                 "id": "COLORLESS",
                 "type": "colorless",
                 "label": "Colorless",
-                "description": "This color usually means the urine is very dilute."
+                "description": "This color usually means the urine is very dilute.",
+                "isBad": false
             },
             {
                 "id": "LIGHT YELLOW",
                 "type": "light-yellow",
                 "label": "Light Yellow",
-                "description": "This is the normal color of urine with varying degrees of intensity based on its concentration. See Specific Gravity."
+                "description": "This is the normal color of urine with varying degrees of intensity based on its concentration. See Specific Gravity.",
+                "isBad": false
             },
             {
                 "id": "YELLOW",
                 "type": "yellow",
                 "label": "Yellow",
-                "description": "This is the normal color of urine with varying degrees of intensity based on its concentration. See Specific Gravity."
+                "description": "This is the normal color of urine with varying degrees of intensity based on its concentration. See Specific Gravity.",
+                "isBad": false
             },
             {
                 "id": "DARK YELLOW",
                 "type": "dark-yellow",
                 "label": "Dark Yellow",
-                "description": "This is the normal color of urine with varying degrees of intensity based on its concentration. See Specific Gravity."
+                "description": "This is the normal color of urine with varying degrees of intensity based on its concentration. See Specific Gravity.",
+                "isBad": false
             },
             {
                 "id": "LIGHT ORANGE",
                 "type": "light-orange",
                 "label": "Light Orange",
-                "description": "This color usually results from certain medications or diet."
+                "description": "This color usually results from certain medications or diet.",
+                "isBad": false
             },
             {
                 "id": "ORANGE",
                 "type": "orange",
                 "label": "Orange",
-                "description": "This color usually results from certain medications or diet."
+                "description": "This color usually results from certain medications or diet.",
+                "isBad": false
             },
             {
                 "id": "DARK ORANGE",
                 "type": "dark-orange",
                 "label": "Dark Orange",
-                "description": "This color usually results from certain medications or diet."
+                "description": "This color usually results from certain medications or diet.",
+                "isBad": false
             },
             {
                 "id": "LIGHT BROWN",
                 "type": "light-brown",
                 "label": "Light Brown",
-                "description": "This color usually results from bleeding or increased levels of bilirubin from the liver. This color can also result from diet"
+                "description": "This color usually results from bleeding or increased levels of bilirubin from the liver. This color can also result from diet",
+                "isBad": false
             },
             {
                 "id": "BROWN",
                 "type": "brown",
                 "label": "Brown",
-                "description": "This color usually results from bleeding or high levels of bilirubin from the liver. This color can also result from diet."
+                "description": "This color usually results from bleeding or high levels of bilirubin from the liver. This color can also result from diet.",
+                "isBad": true
             },
             {
                 "id": "DARK BROWN",
                 "type": "dark-brown",
                 "label": "Dark Brown",
-                "description": "This color usually results from bleeding or high levels of bilirubin from the liver. This color can also result from diet."
+                "description": "This color usually results from bleeding or high levels of bilirubin from the liver. This color can also result from diet.",
+                "isBad": true
             },
             {
                 "id": "",
                 "type": "light-red",
                 "label": "Light Red",
-                "description": "This color usually results from blood in the urine – a sign of inflammation and maybe infection."
+                "description": "This color usually results from blood in the urine – a sign of inflammation and maybe infection.",
+                "isBad": true
             },
             {
                 "id": "RED",
                 "type": "red",
                 "label": "Red",
-                "description": "This color usually results from blood in the urine – a sign of inflammation and maybe infection."
+                "description": "This color usually results from blood in the urine – a sign of inflammation and maybe infection.",
+                "isBad": true
             },
             {
                 "id": "DARK RED",
                 "type": "dark-red",
                 "label": "Dark Red",
-                "description": "This color usually results from blood in the urine – a sign of inflammation and maybe infection."
+                "description": "This color usually results from blood in the urine – a sign of inflammation and maybe infection.",
+                "isBad": true
             },
             {
                 "id": "LIGHT GREEN",
                 "type": "light-green",
                 "label": "Light Green",
-                "description": "This color usually results from certain medications or diet."
+                "description": "This color usually results from certain medications or diet.",
+                "isBad": true
             },
             {
                 "id": "GREEN",
                 "type": "green",
                 "label": "Green",
-                "description": "This color usually results from certain medications or diet."
+                "description": "This color usually results from certain medications or diet.",
+                "isBad": true
             },
             {
                 "id": "DARK GREEN",
                 "type": "dark-green",
                 "label": "Dark Green",
-                "description": "This color usually results from certain medications or diet."
+                "description": "This color usually results from certain medications or diet.",
+                "isBad": true
             }
         ],
 
@@ -157,55 +173,64 @@
                 "id": "CLEAR",
                 "type": "clear",
                 "label": "Clear",
-                "description": "Urine is a solution whose color may vary, but a normal urine sample should be clear."
+                "description": "Urine is a solution whose color may vary, but a normal urine sample should be clear.",
+                "isBad": false
             },
             {
                 "id": "CLEAR WITH PARTICLES",
                 "type": "clear-with-particles",
                 "label": "Clear with Particles",
-                "description": "Urine is a solution and should be clear. If it contains insoluble material (called “sediment”), it’s no longer a solution – it’s a suspension. A “Clear with particles” sample contains some insoluble material, and an analysis of the sediment will determine what’s in it."
+                "description": "Urine is a solution and should be clear. If it contains insoluble material (called “sediment”), it’s no longer a solution – it’s a suspension. A “Clear with particles” sample contains some insoluble material, and an analysis of the sediment will determine what’s in it.",
+                "isBad": false
             },
             {
                 "id": "SLIGHTLY HAZY",
                 "type": "slightly-hazy",
                 "label": "Slightly Hazy",
-                "description": "Urine is a solution and should be clear. If it contains insoluble material (called “sediment”), it’s no longer a solution – it’s a suspension. A slightly hazy appearance means the sample is a slight suspension. An analysis of the sediment will determine what’s in it."
+                "description": "Urine is a solution and should be clear. If it contains insoluble material (called “sediment”), it’s no longer a solution – it’s a suspension. A slightly hazy appearance means the sample is a slight suspension. An analysis of the sediment will determine what’s in it.",
+                "isBad": false
             },
             {
                 "id": "HAZY",
                 "type": "hazy",
                 "label": "Hazy",
-                "description": "Urine is a solution and should be clear. If it contains insoluble material (called “sediment”), it’s no longer a solution – it’s a suspension. A hazy appearance means the sample is a slight suspension. An analysis of the sediment will determine what’s in it."
+                "description": "Urine is a solution and should be clear. If it contains insoluble material (called “sediment”), it’s no longer a solution – it’s a suspension. A hazy appearance means the sample is a slight suspension. An analysis of the sediment will determine what’s in it.",
+                "isBad": false
             },
             {
                 "id": "SLIGHTLY CLOUDY",
                 "type": "slightly-cloudy",
                 "label": "Slightly Cloudy",
-                "description": "Urine is a solution and should be clear. If it contains insoluble material (called “sediment”), it’s no longer a solution – it’s a suspension. A slightly cloudy appearance means the sample is a slight suspension. An analysis of the sediment will determine what’s in it."
+                "description": "Urine is a solution and should be clear. If it contains insoluble material (called “sediment”), it’s no longer a solution – it’s a suspension. A slightly cloudy appearance means the sample is a slight suspension. An analysis of the sediment will determine what’s in it.",
+                "isBad": false
             },
             {
                 "id": "CLOUDY",
                 "type": "cloudy",
                 "label": "Cloudy",
-                "description": "Urine is a solution and should be clear. If it contains insoluble material (called “sediment”), it’s no longer a solution – it’s a suspension. A cloudy appearance means the sample is a moderate suspension. An analysis of the sediment will determine what’s in it."
+                "description": "Urine is a solution and should be clear. If it contains insoluble material (called “sediment”), it’s no longer a solution – it’s a suspension. A cloudy appearance means the sample is a moderate suspension. An analysis of the sediment will determine what’s in it.",
+                "isBad": true
             },
             {
                 "id": "TURBID",
                 "type": "turbid",
                 "label": "Turbid",
-                "description": "Urine is a solution and should be clear. If it contains insoluble material (called “sediment”), it’s no longer a solution – it’s a suspension. A turbid appearance means the sample is a heavy suspension. An analysis of the sediment will determine what’s in it."
+                "description": "Urine is a solution and should be clear. If it contains insoluble material (called “sediment”), it’s no longer a solution – it’s a suspension. A turbid appearance means the sample is a heavy suspension. An analysis of the sediment will determine what’s in it.",
+                "isBad": true
             },
             {
                 "id": "OPAQUE",
                 "type": "opaque",
                 "label": "Opaque",
-                "description": "Urine is a solution and should be clear. If it contains insoluble material (called “sediment”), it’s no longer a solution – it’s a suspension. Opaque urine has the least clear appearance, and an analysis of the sediment will determine what’s in it."
+                "description": "Urine is a solution and should be clear. If it contains insoluble material (called “sediment”), it’s no longer a solution – it’s a suspension. Opaque urine has the least clear appearance, and an analysis of the sediment will determine what’s in it.",
+                "isBad": true
             },
             {
                 "id": "BLOODY",
                 "type": "bloody",
                 "label": "Bloody",
-                "description": "Blood in the urine results from inflammation and it’s a sure sign that something is not right."
+                "description": "Blood in the urine results from inflammation and it’s a sure sign that something is not right.",
+                "isBad": true
             }
         ];
 
