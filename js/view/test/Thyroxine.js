@@ -33,10 +33,7 @@ define([
             view = new ViewSubtestRange({
                 model: this.model.getModelRange(),
                 name: this.model.getReport().getDataPatient().name,
-                skin: 'orange',
-                //unitOfMeasure: 'G/DL'  //orig
-                //unitOfMeasure: 'ug/dL'
-                unitOfMeasure: this.model.getReport().getDataTests().unitOfMeasure
+                skin: 'orange'
             });
 
             view.render(this.$elContent.find('.subtest-container'));
