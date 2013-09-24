@@ -1,27 +1,28 @@
 .view-widget-test-overview {
-    .section-heading {
+    >.inner {
         color: white;
+        padding: 30px 30px 30px 75px;
+    }
 
-        .column {
-            display: table;
-            height: 100%;
+    .column {
+        display: table;
+        height: 100%;
 
-            .inner {
-                display: table-cell;
-                vertical-align: middle;
-            }
+        .inner {
+            display: table-cell;
+            vertical-align: middle;
         }
+    }
 
-        .diagram-container {
-            margin-top: 8%;
-            margin-bottom: 8%;
-            height: 84%;
+    .diagram-container {
+        >.inner {
+            margin: 0 auto;
         }
+    }
 
-        .description {
-            @include secondaryFont;
-            font-size: 197%;
-            font-weight: bold;
-        }
+    .description {
+        @include secondaryFont;
+        font-size: 197%;
+        font-weight: bold;
     }
 }

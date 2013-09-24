@@ -3038,6 +3038,9 @@ span.placeholder {
 .view-test-accuplex > .body > .overview {
   background-color: #b63488;
 }
+.view-test-accuplex > .body > .overview .diagram-container > .inner {
+  max-width: 277px;
+}
 
 .test-header.cbc {
   background-color: #34a778;
@@ -3054,6 +3057,9 @@ span.placeholder {
 
 .view-test-cbc > .body > .overview {
   background-color: #30bd84;
+}
+.view-test-cbc > .body > .overview .diagram-container > .inner {
+  max-width: 445px;
 }
 
 .view-test-cbc {
@@ -3139,6 +3145,9 @@ span.placeholder {
 .view-test-chemistry > .body > .overview {
   background-color: #2759b9;
 }
+.view-test-chemistry > .body > .overview .diagram-container > .inner {
+  max-width: 352px;
+}
 
 .view-test-chemistry {
   /* phone */
@@ -3168,6 +3177,9 @@ span.placeholder {
 .view-test-felv-fiv > .body > .overview {
   background-color: #0f96a4;
 }
+.view-test-felv-fiv > .body > .overview .diagram-container > .inner {
+  max-width: 316px;
+}
 
 .test-header.heartworm {
   background-color: #bd362f;
@@ -3184,6 +3196,9 @@ span.placeholder {
 
 .view-test-heartworm > .body > .overview {
   background-color: #d53f38;
+}
+.view-test-heartworm > .body > .overview .diagram-container > .inner {
+  max-width: 375px;
 }
 
 .test-header.ova {
@@ -3202,6 +3217,9 @@ span.placeholder {
 .view-test-ova > .body > .overview {
   background-color: #2e91f8;
 }
+.view-test-ova > .body > .overview .diagram-container > .inner {
+  max-width: 300px;
+}
 
 .test-header.thyroxine {
   background-color: #f89e1e;
@@ -3219,6 +3237,9 @@ span.placeholder {
 .view-test-thyroxine > .body > .overview {
   background-color: #e38806;
 }
+.view-test-thyroxine > .body > .overview .diagram-container > .inner {
+  max-width: 336px;
+}
 
 .test-header.urine {
   background-color: #674e9f;
@@ -3235,6 +3256,9 @@ span.placeholder {
 
 .view-test-urine > .body > .overview {
   background-color: #7359ae;
+}
+.view-test-urine > .body > .overview .diagram-container > .inner {
+  max-width: 444px;
 }
 
 .view-test-urine-analysis .test-section-description {
@@ -3894,23 +3918,22 @@ span.placeholder {
     font-size: 24px !important;
   }
 }
-.view-widget-test-overview .section-heading {
+.view-widget-test-overview > .inner {
   color: white;
+  padding: 30px 30px 30px 75px;
 }
-.view-widget-test-overview .section-heading .column {
+.view-widget-test-overview .column {
   display: table;
   height: 100%;
 }
-.view-widget-test-overview .section-heading .column .inner {
+.view-widget-test-overview .column .inner {
   display: table-cell;
   vertical-align: middle;
 }
-.view-widget-test-overview .section-heading .diagram-container {
-  margin-top: 8%;
-  margin-bottom: 8%;
-  height: 84%;
+.view-widget-test-overview .diagram-container > .inner {
+  margin: 0 auto;
 }
-.view-widget-test-overview .section-heading .description {
+.view-widget-test-overview .description {
   font-family: 'Apercu', sans-serif;
   font-size: 197%;
   font-weight: bold;

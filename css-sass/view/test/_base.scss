@@ -149,6 +149,10 @@
         >.body {
             >.overview {
                 background-color: $overviewBgColor;
+
+                .diagram-container >.inner {
+                    max-width: image-width("../images/test/#{$type}/diagram-2x.png") / 2;
+                }
             }
         }
     }
