@@ -119,13 +119,13 @@
 					margin-top: 0;
 					background-color: white;
 					height: 80px;
-					background-position: ($pageSectionPaddingLeft + 10px) center;
-					margin-left: - $pageSectionPaddingLeft - 10px;
-					padding-left: $pageSectionPaddingLeft + 10px;
+					background-position: ($pageSectionPaddingLeft + 50px) center;
+					margin-left: - $pageSectionPaddingLeft - 50px;
+					padding-left: $pageSectionPaddingLeft + 50px;
 					width: 100%;
 
 					.icon {
-						left: ($pageSectionPaddingLeft + 10px);
+						left: ($pageSectionPaddingLeft + 50px);
 					}
 				}
 
