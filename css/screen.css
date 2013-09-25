@@ -3923,7 +3923,11 @@ span.placeholder {
     padding: 10px 0 25px 0;
   }
   .view-widget-test-overview .diagram-container {
-    padding-top: 20px;
+    display: block;
+    padding: 20px 50px 20px;
+  }
+  .view-widget-test-overview .diagram-container > .inner {
+    display: block;
   }
 }
 

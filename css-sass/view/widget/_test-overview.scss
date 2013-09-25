@@ -32,7 +32,12 @@
         }
 
         .diagram-container {
-            padding-top: 20px;
+            display: block;
+            padding: 20px 50px 20px;
+
+            >.inner {
+                display: block;
+            }
         }
     }
 }
