@@ -3797,6 +3797,7 @@ span.placeholder {
   margin: 0;
 }
 .view-subtest-select .option {
+  font-family: 'Apercu', sans-serif;
   font-size: 116%;
   list-style: none;
   color: #6b6b6b;

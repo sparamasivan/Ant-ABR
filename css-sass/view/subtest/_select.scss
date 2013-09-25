@@ -6,6 +6,8 @@
 	}
 
 	.option {
+        @include secondaryFont;
+        
 		font-size: 116%;
 		list-style: none;
 		color: #6b6b6b;
