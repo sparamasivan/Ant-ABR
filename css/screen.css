@@ -2948,6 +2948,9 @@ span.placeholder {
   margin-top: 10px;
   border-radius: 5px;
 }
+.view-test-base .test-section-inner {
+  padding: 30px 30px 30px 75px;
+}
 
 .test-header {
   height: 74px;
@@ -3909,9 +3912,8 @@ span.placeholder {
 .view-widget-test-overview {
   /* phone */
 }
-.view-widget-test-overview > .inner {
+.view-widget-test-overview > .test-section-inner {
   color: white;
-  padding: 30px 30px 30px 75px;
 }
 .view-widget-test-overview .column {
   display: table;
