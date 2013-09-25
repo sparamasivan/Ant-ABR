@@ -5,8 +5,9 @@ define([
     $
 ) {
     var methods = {
-        equalizeHeights: function(options) {
-            var elements = (this.length > 1)
+        equalizeHeights: function() {
+            var options = this.data('equalHeightsOptions'),
+                elements = (this.length > 1)
                     ? this
                     : this.children(),
                 height,
@@ -42,11 +43,14 @@ define([
 
         init: function(options) {
             var self = this,
-                opts = $.extend({}, options),
-                result = methods.equalizeHeights.call(this, opts),
+                options = $.extend({}, options),
+                result,
                 win = $(window),
                 winW = win.width(),
                 winH = win.height();
+
+            this.data('equalHeightsOptions', options);
+            result = methods.equalizeHeights.call(this);
 
             // recalculate heights on window resize
             win.on('debouncedresize', function() {
@@ -61,7 +65,7 @@ define([
                 winW = w;
                 winH = h;
 
-                methods.equalizeHeights.call(self, opts);
+                methods.equalizeHeights.call(self);
             });
 
             return result;

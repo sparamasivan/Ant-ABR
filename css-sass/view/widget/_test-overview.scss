@@ -25,4 +25,15 @@
         font-size: 197%;
         font-weight: bold;
     }
+
+    /* phone */
+    @media (max-width:$mq-phone) {
+        >.inner {
+            padding: 10px 0 25px 0;
+        }
+
+        .diagram-container {
+            padding-top: 20px;
+        }
+    }
 }

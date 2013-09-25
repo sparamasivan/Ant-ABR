@@ -1800,7 +1800,7 @@ h4 .small {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .widget-arrow {
     background-image: url("../images/common/arrow-2x.png");
-    background-size: 100%;
+    background-size: 200%;
   }
 }
 .widget-arrow.down {
@@ -3906,6 +3906,9 @@ span.placeholder {
     font-size: 24px !important;
   }
 }
+.view-widget-test-overview {
+  /* phone */
+}
 .view-widget-test-overview > .inner {
   color: white;
   padding: 30px 30px 30px 75px;
@@ -3925,6 +3928,14 @@ span.placeholder {
   font-family: 'Apercu', sans-serif;
   font-size: 197%;
   font-weight: bold;
+}
+@media (max-width: 480px) {
+  .view-widget-test-overview > .inner {
+    padding: 10px 0 25px 0;
+  }
+  .view-widget-test-overview .diagram-container {
+    padding-top: 20px;
+  }
 }
 
 .view-widget-test-subsection {
