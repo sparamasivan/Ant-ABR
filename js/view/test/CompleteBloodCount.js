@@ -28,6 +28,11 @@ define([
     ViewSubtestSelect,
     ViewSubtestColor
 ) {
+    var mathRound = function(value, decimalPlaces) {
+        var roundedValue = Math.round(value * Math.pow(10, decimalPlaces)) / Math.pow(10, decimalPlaces);
+        return roundedValue.toFixed(decimalPlaces);
+    }
+
     return ViewTestBase.extend({
         title: 'CBC',
 
@@ -226,15 +231,15 @@ define([
 
         _renderPieChart: function(parent, percentage, startPercentage) {
                 // ensure percentage is visible
-            var percentage = (percentage < 1) ? 1 : percentage,
+            var slicePercentage = (percentage < 1) ? 1 : percentage,
 
                 data = new google.visualization.arrayToDataTable([
                     ['Label', 'Value'],
-                    ['RBC', percentage],
-                    ['Other', 100 - percentage]
+                    ['RBC', slicePercentage],
+                    ['Other', 100 - slicePercentage]
                 ]),
 
-                chart = new google.visualization.PieChart(parent[0]);
+                chart = new google.visualization.PieChart(parent.find('.diagram')[0]);
 
             chart.draw(data, {
                 pieHole: 0.3,
@@ -242,8 +247,8 @@ define([
                     fill: 'none'
                 },
                 chartArea: {
-                    width: '200%',
-                    height: '200%'
+                    width: '100%',
+                    height: '100%'
                 },
                 legend: {
                     position: 'none'
@@ -257,6 +262,8 @@ define([
                 ],
                 enableInteractivity: false
             });
+
+            parent.find('.number').text(mathRound(percentage, 1));
         }
     });
 });

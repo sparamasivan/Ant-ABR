@@ -2957,6 +2957,20 @@ span.placeholder {
     padding: 0;
   }
 }
+.view-test-base .test-section-inner-with-icon {
+  padding: 30px 30px 30px 150px;
+}
+.view-test-base .test-section-description {
+  background-repeat: no-repeat;
+  position: relative;
+}
+.view-test-base .test-section-description .icon {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -105px;
+  width: 85px;
+}
 
 .test-header {
   height: 74px;
@@ -3067,58 +3081,38 @@ span.placeholder {
   /* tablet and phone */
   /* phone */
 }
-.view-test-cbc .subsection-description {
-  background-repeat: no-repeat;
-}
-.view-test-cbc .subsection-description h1, .view-test-cbc .subsection-description p {
-  margin-left: 95px;
-}
-.view-test-cbc .anchor-offset {
+.view-test-cbc .chart {
   position: relative;
-  bottom: 42px;
+  border-right: 1px solid #6b6b6b;
+  padding-right: 10px;
 }
-.view-test-cbc .subsection-rbc .subsection-description {
-  background-image: url("../images/test/cbc/diagram/rbc.png");
+.view-test-cbc .chart .diagram {
+  width: 230px;
+  margin: 0 auto;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-test-cbc .subsection-rbc .subsection-description {
-    background-image: url("../images/test/cbc/diagram/rbc-2x.png");
-    background-size: 85px 85px;
-  }
+.view-test-cbc .chart .value {
+  font-family: 'Apercu', sans-serif;
+  font-weight: bold;
+  position: absolute;
+  right: 20px;
+  top: 80px;
+  width: 130px;
+  text-align: center;
 }
-.view-test-cbc .subsection-wbc .subsection-description {
-  background-image: url("../images/test/cbc/diagram/wbc.png");
+.view-test-cbc .chart .value .percentage {
+  letter-spacing: -1px;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-test-cbc .subsection-wbc .subsection-description {
-    background-image: url("../images/test/cbc/diagram/wbc-2x.png");
-    background-size: 85px 85px;
-  }
+.view-test-cbc .chart .value .number {
+  font-size: 300%;
+  line-height: 100%;
 }
-.view-test-cbc .subsection-platelet .subsection-description {
-  background-image: url("../images/test/cbc/diagram/platelet.png");
+.view-test-cbc .chart .value .symbol {
+  vertical-align: top;
+  font-size: 150%;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-test-cbc .subsection-platelet .subsection-description {
-    background-image: url("../images/test/cbc/diagram/platelet-2x.png");
-    background-size: 85px 85px;
-  }
-}
-.view-test-cbc .subsection-platelet {
-  padding-bottom: 0;
-}
-@media (max-width: 768px) {
-  .view-test-cbc .subsection-description h1 {
-    height: 75px;
-    display: table;
-  }
-  .view-test-cbc .subsection-description h1 span {
-    display: table-cell;
-    vertical-align: middle;
-  }
-  .view-test-cbc .subsection-description p {
-    margin-left: 0;
-  }
+.view-test-cbc .chart .value .text {
+  text-transform: uppercase;
+  font-size: 85%;
 }
 @media (max-width: 480px) {
   .view-test-cbc .view-subtest-range {

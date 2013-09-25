@@ -25,6 +25,26 @@
             padding: 0;
         }
     }
+
+    .test-section-inner-with-icon {
+        padding: 30px 30px 30px 150px;
+    }
+
+
+    .test-section-description {
+        background-repeat: no-repeat;
+        position: relative;
+
+        .icon {
+            display: block;
+
+            position: absolute;
+            top: 0;
+            left: - image-width("images/test/cbc/diagram/rbc-2x.png") / 2 - 20px;
+
+            width: image-width("images/test/cbc/diagram/rbc-2x.png") / 2;
+        }
+    }
 }
 
 .test-header {

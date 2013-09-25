@@ -32,7 +32,7 @@ define([
             this.$el.appendTo(parent);
 
             // group sections
-            this.$elSections = this.$el.find('.section');
+            this.$elSections = this.$el.find('.section .yui3-u-c');
 
             // make height of heading boxes the same so that we can nicely vertically align elements
             this.$el.waitForImages(function() {

@@ -1,57 +1,51 @@
 @include view-test-base-extend(cbc, #34a778, #30bd84);
 
 .view-test-cbc {
-    .subsection-description {
-        background-repeat: no-repeat;
+    .chart {
+        position: relative;
+        border-right: 1px solid #6b6b6b;
+        padding-right: 10px;
 
-        h1, p {
-            margin-left: 95px;
+        .diagram {
+            width: 230px;
+            margin: 0 auto;
         }
-    }
 
-    .anchor-offset {
-        position:relative;
-        bottom:42px;
-    }
+        .value {
+            @include secondaryFont;
+            font-weight: bold;
 
-    @mixin subsection ($type) {
-        .subsection-#{$type} {
-            .subsection-description {
-                background-image: url("../images/test/cbc/diagram/#{$type}.png");
+            position: absolute;
+            right: 20px;
+            top: 80px;
 
-                @media
-                only screen and (-webkit-min-device-pixel-ratio: 2),
-                only screen and (min-resolution: 192dpi) {
-                    background-image: url("../images/test/cbc/diagram/#{$type}-2x.png");
-                    background-size: (image-width("../images/test/cbc/diagram/#{$type}-2x.png") / 2) (image-height("../images/test/cbc/diagram/#{$type}-2x.png") / 2)
-                }
+            width: 130px;
+            text-align: center;
+
+            .percentage {
+                letter-spacing: -1px;
+            }
+
+            .number {
+                font-size: 300%;
+                line-height: 100%;
+            }
+
+            .symbol {
+                vertical-align: top;
+                font-size: 150%;
+            }
+
+            .text {
+                text-transform: uppercase;
+                font-size: 85%;
             }
         }
-    }
-
-    @include subsection(rbc);
-    @include subsection(wbc);
-    @include subsection(platelet);
-
-    .subsection-platelet {
-        padding-bottom: 0;
     }
 
     /* tablet and phone */
     @media (max-width:($mq-tablet - 1px)) {
-        .subsection-description {
-            h1 {
-                height: 75px;
-                display:table;
-                span {
-                    display: table-cell;
-                    vertical-align: middle;
-                }
-            }
-            p {
-                margin-left: 0;
-            }
-        }
+
     }
     
     /* phone */
