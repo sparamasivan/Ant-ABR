@@ -1790,6 +1790,23 @@ h4 .small {
   }
 }
 
+.widget-arrow {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url("../images/common/arrow.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .widget-arrow {
+    background-image: url("../images/common/arrow-2x.png");
+    background-size: 100%;
+  }
+}
+.widget-arrow.down {
+  background-position: 22px 0;
+}
+
 input {
   font-family: 'Apercu', sans-serif;
   font-size: 123.1%;
