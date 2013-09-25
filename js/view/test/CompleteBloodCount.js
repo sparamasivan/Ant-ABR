@@ -81,7 +81,7 @@ define([
             });
             view.render(parent.find('.range'));
 
-            this._renderPieChart(parent.find('.chart'), this.model.getRbcPercentage());
+            this._renderPieChart(parent.find('.chart'), this.model.getRbcPercentage(), 0);
 
             this._renderRbcAppearanceSubsection(parent.find('.test-subsection.appearance'));
         },
@@ -183,7 +183,7 @@ define([
             });
             view.render(parent.find('.range'));
 
-            this._renderPieChart(parent.find('.chart'), this.model.getWbcPercentage());
+            this._renderPieChart(parent.find('.chart'), this.model.getWbcPercentage(), this.model.getRbcPercentage());
 
             this._renderWbcTypesOfCellSubsection(parent.find('.test-subsection.types-of-cell'));
         },
@@ -221,10 +221,10 @@ define([
             });
             view.render(parent.find('.range'));
 
-            this._renderPieChart(parent.find('.chart'), this.model.getPlateletPercentage());
+            this._renderPieChart(parent.find('.chart'), this.model.getPlateletPercentage(), this.model.getWbcPercentage() + this.model.getRbcPercentage());
         },
 
-        _renderPieChart: function(parent, percentage) {
+        _renderPieChart: function(parent, percentage, startPercentage) {
                 // ensure percentage is visible
             var percentage = (percentage < 1) ? 1 : percentage,
 
@@ -250,6 +250,7 @@ define([
                 },
                 pieSliceBorderColor: 'none',
                 pieSliceText: 'none',
+                pieStartAngle: 360 * startPercentage / 100,
                 slices: [
                     {color: '#00b8d5'},
                     {color: '#e9eae4'}
