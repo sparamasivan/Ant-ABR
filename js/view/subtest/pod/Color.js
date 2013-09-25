@@ -22,7 +22,7 @@ define([
 
             this.$elContent.append(this.templateContent({
             	label: this.options.label,
-            	isBad: true,
+            	isBad: this.options.isBad,
                 message: this.options.message,
                 description: this.options.description
             }));

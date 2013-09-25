@@ -181,7 +181,7 @@ define([
         ],
         RBC_COLORS: [
             {type: 'red', label: 'Red', bad: false},
-            {type: 'pale', label: 'Pale', nad: true}
+            {type: 'pale', label: 'Pale', bad: true}
         ],
 
         WBC_CELL_GROUPS: ['fighter', 'defender', 'watcher'],
