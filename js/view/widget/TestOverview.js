@@ -31,9 +31,12 @@ define([
             // append to parent
             this.$el.appendTo(parent);
 
+            // group sections
+            this.$elSections = this.$el.find('.section');
+
             // make height of heading boxes the same so that we can nicely vertically align elements
-            this._getSections().waitForImages(function() {
-                $(this).equalHeights({
+            this.$el.waitForImages(function() {
+                self.$elSections.equalHeights({
                     callback: function(tallestHeight) {
                         return !ModelMediaQuery.isPhoneMedia();
                     }
@@ -46,11 +49,7 @@ define([
 
         refresh: function() {
             // recalculate heights
-            this._getSections().equalHeights('refresh');
-        },
-
-        _getSections: function() {
-            return this.$el.find('.section');
+            this.$elSections.equalHeights('refresh');
         }
     });
 });
