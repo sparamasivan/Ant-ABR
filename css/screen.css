@@ -3058,10 +3058,6 @@ span.placeholder {
   /* tablet and phone */
   /* phone */
 }
-.view-test-cbc .subsection {
-  padding-top: 2.5%;
-  padding-bottom: 2.5%;
-}
 .view-test-cbc .subsection-description {
   background-repeat: no-repeat;
 }
@@ -3934,8 +3930,13 @@ span.placeholder {
 .view-widget-test-subsection {
   background-color: #f7f8f6;
   border-top: 1px solid #b2b2b2;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .view-widget-test-subsection > .header {
+  font-family: 'Apercu', sans-serif;
+  font-weight: bold;
+  font-size: 167%;
   cursor: pointer;
 }
 .view-widget-test-subsection > .body {

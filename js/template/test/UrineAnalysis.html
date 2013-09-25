@@ -3,40 +3,42 @@
 
     <!-- Visual Analysis -->
     <div class="test-section visual">
-        <div class="yui3-g-r">
-            <!-- description -->
-            <div class="yui3-u-2-3">
-                <div class="yui3-u-c">
-                    <div class="test-section-description">
+        <div class="page-section">
+            <div class="yui3-g-r">
+                <!-- description -->
+                <div class="yui3-u-2-3">
+                    <div class="yui3-u-c">
+                        <div class="test-section-description">
 
-                        <h1><span>Visual Analysis</span></h1>
-                        <p>We look at the appearance of {{patient.name}}’s urine, as well as investigating.Many factors can affect the color of urine, from medication to diet. Urine is a clear fluid. It can appear cloudy if it contains unexpected cells or crystals.</p>
+                            <h1><span>Visual Analysis</span></h1>
+                            <p>We look at the appearance of {{patient.name}}’s urine, as well as investigating.Many factors can affect the color of urine, from medication to diet. Urine is a clear fluid. It can appear cloudy if it contains unexpected cells or crystals.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="yui3-g-r">
-            <div class="yui3-u-1-2">
-                <div class="yui3-u-c property color">
-                    <h2>Color</h2>
+            <div class="yui3-g-r">
+                <div class="yui3-u-1-2">
+                    <div class="yui3-u-c property color">
+                        <h2>Color</h2>
 
-                    <div class="palette {{color.type}}"></div>
+                        <div class="palette {{color.type}}"></div>
 
-                    {{color.label}}
-                    <p>Many factors can affect the color of urine, from medication to diet.</p>
+                        {{color.label}}
+                        <p>Many factors can affect the color of urine, from medication to diet.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="yui3-u-1-2">
-                <div class="yui3-u-c property">
-                    <h2>Appearance</h2>
+                <div class="yui3-u-1-2">
+                    <div class="yui3-u-c property">
+                        <h2>Appearance</h2>
 
-                    {{appearance.label}}
+                        {{appearance.label}}
 
-                    <div class="range"></div>
-                    {{appearance.type}}
-                    <p>Urine is a clear fluid. It can appear cloudy if it contains unexpected cells or crystals.</p>
+                        <div class="range"></div>
+                        {{appearance.type}}
+                        <p>Urine is a clear fluid. It can appear cloudy if it contains unexpected cells or crystals.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -47,33 +49,35 @@
 
     <!-- Chemical Analysis -->
     <div class="test-section visual">
-        <div class="yui3-g-r">
-            <!-- description -->
-            <div class="yui3-u-2-3">
-                <div class="yui3-u-c">
-                    <div class="test-section-description">
+        <div class="page-section">
+            <div class="yui3-g-r">
+                <!-- description -->
+                <div class="yui3-u-2-3">
+                    <div class="yui3-u-c">
+                        <div class="test-section-description">
 
-                        <h1><span>Chemical Analysis</span></h1>
-                        <p>By analyzing the chemistry of {{patient.name}}’s urine, we are able to understand organ function more clearly and detect any potential issues much sooner.</p>
+                            <h1><span>Chemical Analysis</span></h1>
+                            <p>By analyzing the chemistry of {{patient.name}}’s urine, we are able to understand organ function more clearly and detect any potential issues much sooner.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="yui3-g-r">
-            <div class="yui3-u-1-2">
-                <div class="yui3-u-c property">
-                    <h2>Concentration</h2>
+            <div class="yui3-g-r">
+                <div class="yui3-u-1-2">
+                    <div class="yui3-u-c property">
+                        <h2>Concentration</h2>
 
-                    <div class="select"></div>
+                        <div class="select"></div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="yui3-u-1-2">
-                <div class="yui3-u-c property">
-                    <h2>pH Levels</h2>
+                <div class="yui3-u-1-2">
+                    <div class="yui3-u-c property">
+                        <h2>pH Levels</h2>
 
-                    <p>Blood should always be at a specific pH level, which is neutral. The kidneys are responsible for maintaining {{patient.name}}’s pH level.</p>
+                        <p>Blood should always be at a specific pH level, which is neutral. The kidneys are responsible for maintaining {{patient.name}}’s pH level.</p>
+                    </div>
                 </div>
             </div>
         </div>

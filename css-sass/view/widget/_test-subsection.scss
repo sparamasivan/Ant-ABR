@@ -1,8 +1,13 @@
 .view-widget-test-subsection {
 	background-color: #f7f8f6;
 	border-top: 1px solid #b2b2b2;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 
     >.header {
+        @include secondaryFont;
+        font-weight: bold;
+        font-size: 167%;
         cursor: pointer;
     }
 

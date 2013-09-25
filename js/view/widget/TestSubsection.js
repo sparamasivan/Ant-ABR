@@ -38,11 +38,13 @@ define([
 
         expand: function() {
             this.$el.addClass('expanded');
+            this.$elHeader.find('.widget-arrow').addClass('down');
             this.trigger('expanded');
         },
 
         collapse: function() {
             this.$el.removeClass('expanded');
+            this.$elHeader.find('.widget-arrow').removeClass('down');
             this.trigger('collapsed');
         },
 

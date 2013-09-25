@@ -1,11 +1,6 @@
 @include view-test-base-extend(cbc, #34a778, #30bd84);
 
 .view-test-cbc {
-    .subsection {
-        padding-top: 2.5%;
-        padding-bottom: 2.5%;
-    }
-
     .subsection-description {
         background-repeat: no-repeat;
 
