@@ -3273,83 +3273,140 @@ span.placeholder {
 .view-test-urine-analysis .test-section-description p {
   margin-bottom: 0;
 }
-.view-test-urine-analysis .visual-analysis .color.brown {
+.view-test-urine-analysis h2 {
+  border-bottom: 1px solid #111111;
+  padding-bottom: 5px;
+}
+.view-test-urine-analysis .property.color.brown {
   background-image: url("../images/test/urine/color/brown.png");
 }
-.view-test-urine-analysis .visual-analysis .color.colorless {
+.view-test-urine-analysis .property.color.colorless {
   background-image: url("../images/test/urine/color/colorless.png");
 }
-.view-test-urine-analysis .visual-analysis .color.dark-brown {
+.view-test-urine-analysis .property.color.dark-brown {
   background-image: url("../images/test/urine/color/dark-brown.png");
 }
-.view-test-urine-analysis .visual-analysis .color.dark-green {
+.view-test-urine-analysis .property.color.dark-green {
   background-image: url("../images/test/urine/color/dark-green.png");
 }
-.view-test-urine-analysis .visual-analysis .color.dark-orange {
+.view-test-urine-analysis .property.color.dark-orange {
   background-image: url("../images/test/urine/color/dark-orange.png");
 }
-.view-test-urine-analysis .visual-analysis .color.dark-red {
+.view-test-urine-analysis .property.color.dark-red {
   background-image: url("../images/test/urine/color/dark-red.png");
 }
-.view-test-urine-analysis .visual-analysis .color.dark-yellow {
+.view-test-urine-analysis .property.color.dark-yellow {
   background-image: url("../images/test/urine/color/dark-yellow.png");
 }
-.view-test-urine-analysis .visual-analysis .color.green {
+.view-test-urine-analysis .property.color.green {
   background-image: url("../images/test/urine/color/green.png");
 }
-.view-test-urine-analysis .visual-analysis .color.light-brown {
+.view-test-urine-analysis .property.color.light-brown {
   background-image: url("../images/test/urine/color/light-brown.png");
 }
-.view-test-urine-analysis .visual-analysis .color.light-green {
+.view-test-urine-analysis .property.color.light-green {
   background-image: url("../images/test/urine/color/light-green.png");
 }
-.view-test-urine-analysis .visual-analysis .color.light-orange {
+.view-test-urine-analysis .property.color.light-orange {
   background-image: url("../images/test/urine/color/light-orange.png");
 }
-.view-test-urine-analysis .visual-analysis .color.light-red {
+.view-test-urine-analysis .property.color.light-red {
   background-image: url("../images/test/urine/color/light-red.png");
 }
-.view-test-urine-analysis .visual-analysis .color.light-yellow {
+.view-test-urine-analysis .property.color.light-yellow {
   background-image: url("../images/test/urine/color/light-yellow.png");
 }
-.view-test-urine-analysis .visual-analysis .color.orange {
+.view-test-urine-analysis .property.color.orange {
   background-image: url("../images/test/urine/color/orange.png");
 }
-.view-test-urine-analysis .visual-analysis .color.red {
+.view-test-urine-analysis .property.color.red {
   background-image: url("../images/test/urine/color/red.png");
 }
-.view-test-urine-analysis .visual-analysis .color.yellow {
+.view-test-urine-analysis .property.color.yellow {
   background-image: url("../images/test/urine/color/yellow.png");
 }
-.view-test-urine-analysis .visual-analysis .appearance.bloody {
-  background-image: url("../images/test/urine/appearance/bloody.png");
+.view-test-urine-analysis .property.appearance {
+  font-family: 'Apercu', sans-serif;
 }
-.view-test-urine-analysis .visual-analysis .appearance.clear-with-particles {
-  background-image: url("../images/test/urine/appearance/clear-with-particles.png");
+.view-test-urine-analysis .property.appearance .text {
+  margin-top: 80px;
 }
-.view-test-urine-analysis .visual-analysis .appearance.clear {
-  background-image: url("../images/test/urine/appearance/clear.png");
+.view-test-urine-analysis .property.appearance .widget-indicator {
+  vertical-align: middle;
 }
-.view-test-urine-analysis .visual-analysis .appearance.cloudy {
-  background-image: url("../images/test/urine/appearance/cloudy.png");
+.view-test-urine-analysis .property.appearance .label {
+  font-size: 250%;
+  font-weight: bold;
+  vertical-align: middle;
+  display: inline-block;
+  padding-left: 10px;
 }
-.view-test-urine-analysis .visual-analysis .appearance.hazy {
-  background-image: url("../images/test/urine/appearance/hazy.png");
+.view-test-urine-analysis .property.appearance .expected,
+.view-test-urine-analysis .property.appearance .actual {
+  max-width: 340px;
 }
-.view-test-urine-analysis .visual-analysis .appearance.opaque {
-  background-image: url("../images/test/urine/appearance/opaque.png");
+.view-test-urine-analysis .property.appearance .actual {
+  margin: 30px 0 10px;
+  position: relative;
+  width: 100%;
 }
-.view-test-urine-analysis .visual-analysis .appearance.slightly-cloudy {
-  background-image: url("../images/test/urine/appearance/slightly-cloudy.png");
+.view-test-urine-analysis .property.appearance .actual .value {
+  position: absolute;
+  top: 50%;
+  width: 23%;
+  margin-top: -16%;
 }
-.view-test-urine-analysis .visual-analysis .appearance.slightly-hazy {
-  background-image: url("../images/test/urine/appearance/slightly-hazy.png");
+.view-test-urine-analysis .property.appearance .actual .value .pattern {
+  display: block;
 }
-.view-test-urine-analysis .visual-analysis .appearance.turbid {
-  background-image: url("../images/test/urine/appearance/turbid.png");
+.view-test-urine-analysis .property.appearance .actual .value.clear {
+  left: -7%;
 }
-.view-test-urine-analysis .visual-analysis .appearance.none {
-  background-image: url("../images/test/urine/appearance/none.png");
+.view-test-urine-analysis .property.appearance .actual .value.clear-with-particles {
+  left: 5%;
+}
+.view-test-urine-analysis .property.appearance .actual .value.slightly-hazy {
+  left: 16%;
+}
+.view-test-urine-analysis .property.appearance .actual .value.hazy {
+  left: 27%;
+}
+.view-test-urine-analysis .property.appearance .actual .value.slightly-cloudy {
+  left: 38%;
+}
+.view-test-urine-analysis .property.appearance .actual .value.cloudy {
+  left: 49%;
+}
+.view-test-urine-analysis .property.appearance .actual .value.turbid {
+  left: 60%;
+}
+.view-test-urine-analysis .property.appearance .actual .value.opaque {
+  left: 71%;
+}
+.view-test-urine-analysis .property.appearance .actual .value.bloody {
+  left: 82%;
+}
+.view-test-urine-analysis .property.appearance .expected {
+  padding-top: 10px;
+}
+.view-test-urine-analysis .property.appearance .expected .range {
+  padding: 2px 2px;
+  height: 4px;
+  background-color: #e8eae5;
+  border-radius: 3px;
+}
+.view-test-urine-analysis .property.appearance .expected .value {
+  height: 100%;
+  background-color: #6b6b6b;
+  width: 43%;
+}
+.view-test-urine-analysis .property.appearance .expected .label {
+  color: #444;
+  padding-top: 6px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 77%;
+  font-weight: bold;
 }
 
 .view-subtest-range {

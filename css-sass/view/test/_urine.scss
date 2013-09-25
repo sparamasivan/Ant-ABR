@@ -7,38 +7,104 @@
         }
     }
 
-    .visual-analysis {
+    h2 {
+        border-bottom: 1px solid #111111;
+        padding-bottom: 5px;
+    }
 
-        .color {
-            &.brown {background-image: url("../images/test/urine/color/brown.png");}
-            &.colorless {background-image: url("../images/test/urine/color/colorless.png");}
-            &.dark-brown {background-image: url("../images/test/urine/color/dark-brown.png");}
-            &.dark-green {background-image: url("../images/test/urine/color/dark-green.png");}
-            &.dark-orange {background-image: url("../images/test/urine/color/dark-orange.png");}
-            &.dark-red {background-image: url("../images/test/urine/color/dark-red.png");}
-            &.dark-yellow {background-image: url("../images/test/urine/color/dark-yellow.png");}
-            &.green {background-image: url("../images/test/urine/color/green.png");}
-            &.light-brown {background-image: url("../images/test/urine/color/light-brown.png");}
-            &.light-green {background-image: url("../images/test/urine/color/light-green.png");}
-            &.light-orange {background-image: url("../images/test/urine/color/light-orange.png");}
-            &.light-red {background-image: url("../images/test/urine/color/light-red.png");}
-            &.light-yellow {background-image: url("../images/test/urine/color/light-yellow.png");}
-            &.orange {background-image: url("../images/test/urine/color/orange.png");}
-            &.red {background-image: url("../images/test/urine/color/red.png");}
-            &.yellow {background-image: url("../images/test/urine/color/yellow.png");}
+    .property.color {
+        &.brown {background-image: url("../images/test/urine/color/brown.png");}
+        &.colorless {background-image: url("../images/test/urine/color/colorless.png");}
+        &.dark-brown {background-image: url("../images/test/urine/color/dark-brown.png");}
+        &.dark-green {background-image: url("../images/test/urine/color/dark-green.png");}
+        &.dark-orange {background-image: url("../images/test/urine/color/dark-orange.png");}
+        &.dark-red {background-image: url("../images/test/urine/color/dark-red.png");}
+        &.dark-yellow {background-image: url("../images/test/urine/color/dark-yellow.png");}
+        &.green {background-image: url("../images/test/urine/color/green.png");}
+        &.light-brown {background-image: url("../images/test/urine/color/light-brown.png");}
+        &.light-green {background-image: url("../images/test/urine/color/light-green.png");}
+        &.light-orange {background-image: url("../images/test/urine/color/light-orange.png");}
+        &.light-red {background-image: url("../images/test/urine/color/light-red.png");}
+        &.light-yellow {background-image: url("../images/test/urine/color/light-yellow.png");}
+        &.orange {background-image: url("../images/test/urine/color/orange.png");}
+        &.red {background-image: url("../images/test/urine/color/red.png");}
+        &.yellow {background-image: url("../images/test/urine/color/yellow.png");}
+    }
+
+    .property.appearance {
+        @include secondaryFont;
+
+        .text {
+            margin-top: 80px;
         }
 
-        .appearance {
-            &.bloody {background-image: url("../images/test/urine/appearance/bloody.png");}
-            &.clear-with-particles {background-image: url("../images/test/urine/appearance/clear-with-particles.png");}
-            &.clear {background-image: url("../images/test/urine/appearance/clear.png");}
-            &.cloudy {background-image: url("../images/test/urine/appearance/cloudy.png");}
-            &.hazy {background-image: url("../images/test/urine/appearance/hazy.png");}
-            &.opaque {background-image: url("../images/test/urine/appearance/opaque.png");}
-            &.slightly-cloudy {background-image: url("../images/test/urine/appearance/slightly-cloudy.png");}
-            &.slightly-hazy {background-image: url("../images/test/urine/appearance/slightly-hazy.png");}
-            &.turbid {background-image: url("../images/test/urine/appearance/turbid.png");}
-			&.none {background-image: url("../images/test/urine/appearance/none.png");}
+        .widget-indicator {
+            vertical-align: middle;
+        }
+        .label {
+            font-size: 250%;
+            font-weight: bold;
+            vertical-align: middle;
+            display: inline-block;
+            padding-left: 10px;
+        }
+
+        .expected,
+        .actual {
+            max-width: 340px;
+        }
+
+        .actual {
+            margin: 30px 0 10px;
+            position: relative;
+            width: 100%;
+
+            .value {
+                position: absolute;
+                top: 50%;
+                width: 23%;
+                margin-top: -16%;
+
+                .pattern {
+                    display: block;
+                }
+
+                &.clear {left: -7%;}
+                &.clear-with-particles {left: 5%;}
+                &.slightly-hazy {left: 16%;}
+                &.hazy {left: 27%;}
+                &.slightly-cloudy {left: 38%;}
+                &.cloudy {left: 49%;}
+                &.turbid {left: 60%;}
+                &.opaque {left: 71%;}
+                &.bloody {left: 82%;}
+            }
+        }
+
+        .expected {
+            padding-top: 10px;
+
+            .range {
+                padding: 2px 2px;
+                height: 4px;
+                background-color: #e8eae5;
+                border-radius: 3px;
+            }
+
+            .value {
+                height: 100%;
+                background-color: #6b6b6b;
+                width: 43%;
+            }
+
+            .label {
+                color: #444;
+                padding-top: 6px;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 77%;
+                font-weight: bold;
+            }
         }
     }
 }

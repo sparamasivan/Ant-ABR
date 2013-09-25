@@ -31,14 +31,32 @@
                 </div>
 
                 <div class="yui3-u-1-2">
-                    <div class="yui3-u-c property">
+                    <div class="yui3-u-c property appearance">
                         <h2>Appearance</h2>
 
-                        {{appearance.label}}
+                        <div class="text">
+                            <span class="widget-indicator {{#if appearance.isBad}}bad{{/if}}"></span><span class="label">{{appearance.label}}</span>
+                        </div>
 
-                        <div class="range"></div>
-                        {{appearance.type}}
-                        <p>Urine is a clear fluid. It can appear cloudy if it contains unexpected cells or crystals.</p>
+                        <div class="actual">
+                            <div class="range">
+                                <img src="images/test/urine/appearance/bg-swatch.png" alt="" />
+                            </div>
+
+                            <div class="value {{appearance.type}}">
+                                <img class="pattern" src="images/test/urine/appearance/{{appearance.type}}.png" alt="" />
+                            </div>
+                        </div>
+
+                        <div class="expected">
+                            <div class="range">
+                                <div class="value"></div>
+                            </div>
+
+                            <div class="label">
+                                Expected Range
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

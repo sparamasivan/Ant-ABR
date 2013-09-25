@@ -45,7 +45,9 @@ define([
             this.$elContent.append(this.templateContent({
                 patient: this.model.getReport().getDataPatient(),
 
-                color: Config.getUrineColorInfoById(this.model.getModelColor().getValueText())
+                color: Config.getUrineColorInfoById(this.model.getModelColor().getValueText()),
+                
+                appearance: Config.getUrineAppearanceInfoById(this.model.getModelAppearance().getValueText())
             }));
 
             this._renderVisualAnalysisSection(this.$elContent.find('.test-section.visual'));
@@ -54,8 +56,6 @@ define([
         },
 
         _renderVisualAnalysisSection: function(parent) {
-
-            appearance: Config.getUrineAppearanceInfoById(this.model.getModelAppearance().getValueText()),
             this._renderMicroscopicParticleSubsection(parent.find('.test-subsection.particle'));
         },
 
