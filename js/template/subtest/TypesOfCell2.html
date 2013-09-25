@@ -1,4 +1,4 @@
-<div class="view-subtest-types-of-cell2 species-{{species}}">
+<div class="view-subtest-types-of-cell2">
 
     <div class="yui3-g-r">
         <div class="yui3-u-1-3">
@@ -6,11 +6,9 @@
                 <div class="title">Infection Fighters</div>
 
                 <div class="diagram">
-                    <img class="icon canine" src="images/subtest/types-of-cell2/canine-fighter-2x.png" alt="" />
-                    <img class="icon feline" src="images/subtest/types-of-cell2/feline-fighter-2x.png" alt="" />
+                    <img class="icon" src="images/subtest/types-of-cell2/{{species}}-fighter-2x.png" alt="" />
 
-                    <img class="circle canine" src="images/subtest/types-of-cell2/canine-circle-big-2x.png" alt="" />
-                    <img class="circle feline" src="images/subtest/types-of-cell2/feline-circle-big-2x.png" alt="" />
+                    <img class="circle big" src="images/subtest/types-of-cell2/{{species}}-circle-big-2x.png" alt="" />
 
                     <div class="percentage">
                         <span class="number">{{fighter.percentage}}</span>
@@ -19,9 +17,8 @@
                 </div>
 
                 <div class="range">
-                    <img class="marker good" src="images/common/result-good-2x.png" alt="" />
-                    <img class="marker bad" src="images/common/result-bad-2x.png" alt="" />
-                    Expected Range 60%-70%
+                    <span class="widget-indicator {{#if fighter.isBad}}bad{{/if}}"></span>
+                    <span class="text">Expected Range 60%-70%</span>
                 </div>
             </div>
         </div>
@@ -31,11 +28,9 @@
                 <div class="title">Immune Defenders</div>
 
                 <div class="diagram">
-                    <img class="icon canine" src="images/subtest/types-of-cell2/canine-defender-2x.png" alt="" />
-                    <img class="icon feline" src="images/subtest/types-of-cell2/feline-defender-2x.png" alt="" />
+                    <img class="icon" src="images/subtest/types-of-cell2/{{species}}-defender-2x.png" alt="" />
 
-                    <img class="circle canine" src="images/subtest/types-of-cell2/canine-circle-medium-2x.png" alt="" />
-                    <img class="circle feline" src="images/subtest/types-of-cell2/feline-circle-medium-2x.png" alt="" />
+                    <img class="circle medium" src="images/subtest/types-of-cell2/{{species}}-circle-medium-2x.png" alt="" />
 
                     <div class="percentage">
                         <span class="number">{{defender.percentage}}</span>
@@ -44,9 +39,8 @@
                 </div>
 
                 <div class="range">
-                    <img class="marker good" src="images/common/result-good-2x.png" alt="" />
-                    <img class="marker bad" src="images/common/result-bad-2x.png" alt="" />
-                    Expected Range 30%-40%
+                    <span class="widget-indicator {{#if defender.isBad}}bad{{/if}}"></span>
+                    <span class="text">Expected Range 30%-40%</span>
                 </div>
             </div>
         </div>
@@ -56,22 +50,18 @@
                 <div class="title">Allergen Watchmen</div>
 
                 <div class="diagram">
-                    <img class="icon canine" src="images/subtest/types-of-cell2/canine-watcher-2x.png" alt="" />
-                    <img class="icon feline" src="images/subtest/types-of-cell2/feline-watcher-2x.png" alt="" />
+                    <img class="icon" src="images/subtest/types-of-cell2/{{species}}-watcher-2x.png" alt="" />
 
-                    <img class="circle canine" src="images/subtest/types-of-cell2/canine-circle-small-2x.png" alt="" />
-                    <img class="circle feline" src="images/subtest/types-of-cell2/feline-circle-small-2x.png" alt="" />
+                    <img class="circle small" src="images/subtest/types-of-cell2/{{species}}-circle-small-2x.png" alt="" />
 
                     <div class="percentage">
-                        <span class="number">{{watcher.percentage}}</span>
-                        <span class="symbol">%</span>
+                        <span class="number">{{watcher.percentage}}</span><span class="symbol">%</span>
                     </div>
                 </div>
 
                 <div class="range">
-                    <img class="marker good" src="images/common/result-good-2x.png" alt="" />
-                    <img class="marker bad" src="images/common/result-bad-2x.png" alt="" />
-                    Expected Range .5%-2%
+                    <span class="widget-indicator {{#if watcher.isBad}}bad{{/if}}"></span>
+                    <span class="text">Expected Range .5%-2%</span>
                 </div>
             </div>
         </div>

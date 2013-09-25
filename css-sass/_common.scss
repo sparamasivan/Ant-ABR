@@ -52,6 +52,30 @@ $widgetArrowWidth: 22px;
     }
 }
 
+.widget-indicator {
+    width: 32px;
+    height: 32px;
+
+    display: inline-block;
+
+    background-image: url("../images/common/result-good.png");
+
+    &.bad {
+        background-image: url("../images/common/result-bad.png");
+    }
+
+    @media 
+    only screen and (-webkit-min-device-pixel-ratio: 2), 
+    only screen and (min-resolution: 192dpi) {
+        background-image: url("../images/common/result-good-2x.png");
+        background-size: 100%;
+
+        &.bad {
+            background-image: url("../images/common/result-bad-2x.png");
+        }
+    }
+}
+
 input {
     @include secondaryFont;
     @include mediumFontSize;

@@ -1807,6 +1807,25 @@ h4 .small {
   background-position: 22px 0;
 }
 
+.widget-indicator {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  background-image: url("../images/common/result-good.png");
+}
+.widget-indicator.bad {
+  background-image: url("../images/common/result-bad.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .widget-indicator {
+    background-image: url("../images/common/result-good-2x.png");
+    background-size: 100%;
+  }
+  .widget-indicator.bad {
+    background-image: url("../images/common/result-bad-2x.png");
+  }
+}
+
 input {
   font-family: 'Apercu', sans-serif;
   font-size: 123.1%;
@@ -3783,12 +3802,58 @@ span.placeholder {
 }
 .view-subtest-types-of-cell2 .diagram {
   margin-top: 10px;
+  position: relative;
+  height: 190px;
 }
-.view-subtest-types-of-cell2.species-feline .canine {
-  display: none;
+.view-subtest-types-of-cell2 .icon {
+  width: 52px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-.view-subtest-types-of-cell2.species-canine .feline {
-  display: none;
+.view-subtest-types-of-cell2 .circle {
+  display: block;
+  margin: 0 auto;
+}
+.view-subtest-types-of-cell2 .circle.big {
+  width: 157px;
+  padding-top: 18px;
+}
+.view-subtest-types-of-cell2 .circle.medium {
+  width: 127px;
+  padding-top: 33px;
+}
+.view-subtest-types-of-cell2 .circle.small {
+  width: 90px;
+  padding-top: 50px;
+}
+.view-subtest-types-of-cell2 .percentage {
+  font-family: 'Apercu', sans-serif;
+  font-weight: bold;
+  letter-spacing: -1px;
+  position: absolute;
+  width: 100%;
+  top: 76px;
+  text-align: center;
+}
+.view-subtest-types-of-cell2 .percentage .number {
+  font-size: 300%;
+  line-height: 100%;
+}
+.view-subtest-types-of-cell2 .percentage .symbol {
+  font-size: 150%;
+  vertical-align: top;
+}
+.view-subtest-types-of-cell2 .range .widget-indicator {
+  vertical-align: middle;
+}
+.view-subtest-types-of-cell2 .range .text {
+  font-family: 'Apercu', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 85%;
+  display: inline-block;
+  padding-left: 10px;
 }
 
 .view-subtest-pod-base {

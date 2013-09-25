@@ -23,17 +23,21 @@ define([
         },
 
         render: function(parent) {
+            
             // render template
             this.setElement($(this.template({
                 species: this.model.getReport().getPatientSpecies(),
                 fighter: {
                     percentage: this.model.getWbcCellPercentageByGroupType('fighter'),
+                    isBad: false
                 },
                 defender: {
                     percentage: this.model.getWbcCellPercentageByGroupType('defender'),
+                    isBad: false
                 },
                 watcher: {
                     percentage: this.model.getWbcCellPercentageByGroupType('watcher'),
+                    isBad: false
                 }
             })));
 
