@@ -3088,13 +3088,12 @@ span.placeholder {
 }
 .view-test-cbc .chart .diagram {
   width: 230px;
-  margin: 0 auto;
 }
 .view-test-cbc .chart .value {
   font-family: 'Apercu', sans-serif;
   font-weight: bold;
   position: absolute;
-  right: 20px;
+  left: 150px;
   top: 80px;
   width: 130px;
   text-align: center;
@@ -3930,15 +3929,29 @@ span.placeholder {
   border-top: 1px solid #b2b2b2;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  padding: 0 30px 0 170px;
 }
 .view-widget-test-subsection > .header {
   font-family: 'Apercu', sans-serif;
   font-weight: bold;
   font-size: 167%;
   cursor: pointer;
+  padding: 15px 0 15px 0;
+}
+.view-widget-test-subsection > .header .title {
+  position: relative;
+}
+.view-widget-test-subsection > .header .widget-arrow {
+  position: absolute;
+  top: 3px;
+  left: -42px;
 }
 .view-widget-test-subsection > .body {
   display: none;
+  padding-bottom: 15px;
+}
+.view-widget-test-subsection > .body > .text {
+  margin-top: 0;
 }
 .view-widget-test-subsection.expanded > .body {
   display: block;

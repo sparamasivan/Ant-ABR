@@ -4,15 +4,34 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 
+    padding: 0 30px 0 170px;
+
     >.header {
         @include secondaryFont;
         font-weight: bold;
         font-size: 167%;
         cursor: pointer;
+
+        padding: 15px 0 15px 0;
+
+        .title {
+            position: relative;
+        }
+
+        .widget-arrow {
+            position: absolute;
+            top: 3px;
+            left: - $widgetArrowWidth - 20px;
+        }
     }
 
     >.body {
         display: none;
+        padding-bottom: 15px;
+
+        >.text {
+            margin-top: 0;
+        }
     }
 
     &.expanded {

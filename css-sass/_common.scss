@@ -28,11 +28,11 @@ $pageSectionPaddingLeft: 15px;
     color: #444;
 }
 
+$widgetArrowWidth: 22px;
 .widget-arrow {
-    $width: 22px;
     $height: 22px;
 
-    width: $width;
+    width: $widgetArrowWidth;
     height: $height;
 
     display: inline-block;
@@ -48,7 +48,7 @@ $pageSectionPaddingLeft: 15px;
     }
 
     &.down {
-        background-position: $width 0;
+        background-position: $widgetArrowWidth 0;
     }
 }
 
