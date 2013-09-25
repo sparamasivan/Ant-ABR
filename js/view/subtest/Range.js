@@ -14,10 +14,6 @@ define([
     var EXPECTED_RANGE_PERCENTAGE = 70;
 
     return Backbone.View.extend({
-        options: {
-            skin: 'green'
-        },
-
         template: Handlebars.compile(Template),
 
         constructor: function(config) {
@@ -39,15 +35,14 @@ define([
                     minimum: this.model.getMinValue(),
                     maximum: this.model.getMaxValue()
                 },
-                name: this.options.name,
-                skin: this.options.skin
+                name: this.options.name
             })));
 
             // add a class that will allow us to style according to low/normal/high range type
             if (this.model.getValue() < this.model.getMinValue()) {
-                cssClass = 'value-low';
+                cssClass = 'value-low bad';
             } else if (this.model.getValue() > this.model.getMaxValue()) {
-                cssClass = 'value-high';
+                cssClass = 'value-high bad';
             } else {
                 cssClass = 'value-normal';
             }
@@ -65,7 +60,7 @@ define([
             var value = this.model.getPercentageValue(EXPECTED_RANGE_PERCENTAGE);
 
             // expected value
-            this.$el.find('.expected .value').css({
+            this.$el.find('.expected .value, .actual .expected-value').css({
                 width: value.insideExpectedRange + '%',
                 marginLeft: value.outsideExpectedRange + '%'
             });

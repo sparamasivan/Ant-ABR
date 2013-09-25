@@ -19,6 +19,11 @@
 
     .test-section-inner {
         padding: 30px 30px 30px 75px;
+
+        /* phone */
+        @media (max-width:$mq-phone) {
+            padding: 0;
+        }
     }
 }
 

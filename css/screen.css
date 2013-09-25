@@ -1510,7 +1510,7 @@ h4 .small {
 }
 /* content wrapper inside a grid unit */
 .yui3-u-c {
-  margin: 10px;
+  padding: 10px;
 }
 
 /* Tablet */
@@ -2950,6 +2950,12 @@ span.placeholder {
 }
 .view-test-base .test-section-inner {
   padding: 30px 30px 30px 75px;
+  /* phone */
+}
+@media (max-width: 480px) {
+  .view-test-base .test-section-inner {
+    padding: 0;
+  }
 }
 
 .test-header {
@@ -3347,16 +3353,16 @@ span.placeholder {
 .view-subtest-range .marker {
   position: absolute;
   width: 200px;
-  height: 90px;
   margin-left: -100px;
   text-align: center;
   color: #444;
+  z-index: 1;
 }
 .view-subtest-range .marker .text {
   position: relative;
 }
 .view-subtest-range .marker .value {
-  font-size: 250%;
+  font-size: 300%;
   font-weight: bold;
   line-height: 90%;
 }
@@ -3364,42 +3370,50 @@ span.placeholder {
   font-size: 123.1%;
   font-weight: bold;
 }
-.view-subtest-range .marker .description {
-  margin-top: 3px;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 77%;
-}
 .view-subtest-range .marker .pointer {
-  width: 20px;
-  height: 29px;
-  margin: 5px auto 0;
+  width: 40px;
+  height: 40px;
+  margin: 9px auto 0;
+  background-image: url("../images/subtest/range-group/marker.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-subtest-range .marker .pointer {
-    background-size: 20px 29px;
+    background-image: url("../images/subtest/range-group/marker-2x.png");
+    background-size: 40px 40px;
+  }
+}
+.view-subtest-range.bad .marker .pointer {
+  background-image: url("../images/subtest/range-group/marker-bad.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .view-subtest-range.bad .marker .pointer {
+    background-image: url("../images/subtest/range-group/marker-bad-2x.png");
   }
 }
 .view-subtest-range .actual {
-  height: 50px;
-  padding-top: 90px;
-  /* phone */
-}
-@media (max-width: 480px) {
-  .view-subtest-range .actual {
-    height: 25px;
-  }
+  height: 29px;
+  padding-top: 50px;
 }
 .view-subtest-range .actual .range {
   height: 100%;
   background-color: #ebedf1;
+  border-radius: 3px;
+  position: relative;
+}
+.view-subtest-range .actual .bar {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .view-subtest-range .actual .value {
   height: 100%;
-  -webkit-transition: all 450ms cubic-bezier(0.42, 0, 0.58, 1);
-  -moz-transition: all 450ms cubic-bezier(0.42, 0, 0.58, 1);
-  -o-transition: all 450ms cubic-bezier(0.42, 0, 0.58, 1);
-  transition: all 450ms cubic-bezier(0.42, 0, 0.58, 1);
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #8bd0eb;
+}
+.view-subtest-range .actual .expected-value {
+  height: 100%;
+  background-image: url("../images/subtest/range/actual-expected-bg.png");
 }
 .view-subtest-range .expected {
   padding-top: 10px;
@@ -3408,6 +3422,7 @@ span.placeholder {
   padding: 2px 0;
   height: 4px;
   background-color: #ebedf1;
+  border-radius: 3px;
 }
 .view-subtest-range .expected .value {
   height: 100%;
@@ -3425,41 +3440,13 @@ span.placeholder {
   text-align: left;
 }
 .view-subtest-range.value-low .marker .text {
-  left: 90px;
+  left: 80px;
 }
 .view-subtest-range.value-high .marker {
   text-align: right;
 }
 .view-subtest-range.value-high .marker .text {
-  right: 90px;
-}
-.view-subtest-range.skin-green .marker .description {
-  color: #00ad68;
-}
-.view-subtest-range.skin-green .marker .pointer {
-  background-image: url("../images/subtest/range/green-marker.png");
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-range.skin-green .marker .pointer {
-    background-image: url("../images/subtest/range/green-marker-2x.png");
-  }
-}
-.view-subtest-range.skin-green .actual .value {
-  background-image: url("../images/subtest/range/green-gradient.png");
-}
-.view-subtest-range.skin-orange .marker .description {
-  color: #e98902;
-}
-.view-subtest-range.skin-orange .marker .pointer {
-  background-image: url("../images/subtest/range/orange-marker.png");
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-subtest-range.skin-orange .marker .pointer {
-    background-image: url("../images/subtest/range/orange-marker-2x.png");
-  }
-}
-.view-subtest-range.skin-orange .actual .value {
-  background-image: url("../images/subtest/range/orange-gradient.png");
+  right: 80px;
 }
 
 .view-subtest-range-group {

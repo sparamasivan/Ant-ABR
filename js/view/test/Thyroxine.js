@@ -32,8 +32,7 @@ define([
             // render range
             view = new ViewSubtestRange({
                 model: this.model.getModelRange(),
-                name: this.model.getReport().getDataPatient().name,
-                skin: 'orange'
+                name: this.model.getReport().getDataPatient().name
             });
 
             view.render(this.$elContent.find('.subtest-container'));

@@ -8,25 +8,24 @@
         margin: 0 auto;
     }
 
-    $markerHeight: 90px;
     $markerWidth: 200px;
-    $pointerWidth: 20px;
+    $pointerWidth: 40px;
     $rangeBgColor: #ebedf1;
 
     .marker {
         position: absolute;
         width: $markerWidth;
-        height: $markerHeight;
         margin-left: - $markerWidth / 2;
         text-align: center;
         color: #444;
+        z-index: 1;
 
         .text {
             position: relative;
         }
 
         .value {
-            font-size: 250%;
+            font-size: 300%;
             font-weight: bold;
             line-height: 90%;
         }
@@ -36,43 +35,64 @@
             font-weight: bold;
         }
 
-        .description {
-            margin-top: 3px;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 77%;
-        }
-
         .pointer {
             width: $pointerWidth;
-            height: 29px;
-            margin: 5px auto 0;
+            height: 40px;
+            margin: 9px auto 0;
+
+            background-image: url("../images/subtest/range-group/marker.png");
 
             @media
             only screen and (-webkit-min-device-pixel-ratio: 2),
             only screen and (min-resolution: 192dpi) {
-                background-size: (image-width("../images/subtest/range/orange-marker-2x.png") / 2) (image-height("../images/subtest/range/orange-marker-2x.png") / 2);
+                background-image: url("../images/subtest/range-group/marker-2x.png");
+                background-size: (image-width("../images/subtest/range-group/marker-2x.png") / 2) (image-height("../images/subtest/range-group/marker-2x.png") / 2);
+            }
+        }
+    }
+
+    &.bad {
+        .marker {
+            .pointer {
+                background-image: url("../images/subtest/range-group/marker-bad.png");
+
+                @media
+                only screen and (-webkit-min-device-pixel-ratio: 2),
+                only screen and (min-resolution: 192dpi) {
+                    background-image: url("../images/subtest/range-group/marker-bad-2x.png");
+                }
             }
         }
     }
 
     .actual {
-        height: 50px;
-        padding-top: $markerHeight;
-
-        /* phone */
-        @media (max-width:($mq-phone)) {
-            height: 25px;
-        }
+        height: 29px;
+        padding-top: 50px;
 
         .range {
             height: 100%;
             background-color: $rangeBgColor;
+            border-radius: 3px;
+
+            position: relative;
+        }
+
+        .bar {
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
         .value {
             height: 100%;
-            @include transition(all 450ms $ease-in-out);
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            background-color: #8bd0eb;
+        }
+
+        .expected-value {
+            height: 100%;
+            background-image: url("../images/subtest/range/actual-expected-bg.png");
         }
     }
 
@@ -83,6 +103,7 @@
             padding: 2px 0;
             height: 4px;
             background-color: $rangeBgColor;
+            border-radius: 3px;
         }
 
         .value {
@@ -119,33 +140,4 @@
             }
         }
     }
-
-    @mixin skin($skin, $color) {
-        &.skin-#{$skin} {
-            .marker {
-                .description {
-                    color: #{$color};
-                }
-
-                .pointer {
-                    background-image: url("../images/subtest/range/#{$skin}-marker.png");
-
-                    @media
-                    only screen and (-webkit-min-device-pixel-ratio: 2),
-                    only screen and (min-resolution: 192dpi) {
-                    background-image: url("../images/subtest/range/#{$skin}-marker-2x.png");
-                    }
-                }
-            }
-
-            .actual {
-                .value {
-                    background-image: url("../images/subtest/range/#{$skin}-gradient.png");
-                }
-            }
-        }
-    }
-
-    @include skin(green, #00ad68);
-    @include skin(orange, #e98902);
 }
