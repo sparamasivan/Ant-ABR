@@ -2,8 +2,9 @@
 
 .view-test-urine-analysis {
     .test-section-description {
-        margin-top: 35px;
-        margin-bottom: 35px;
+        p {
+            margin-bottom: 0;
+        }
     }
 
     .visual-analysis {

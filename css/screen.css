@@ -3270,9 +3270,8 @@ span.placeholder {
   max-width: 444px;
 }
 
-.view-test-urine-analysis .test-section-description {
-  margin-top: 35px;
-  margin-bottom: 35px;
+.view-test-urine-analysis .test-section-description p {
+  margin-bottom: 0;
 }
 .view-test-urine-analysis .visual-analysis .color.brown {
   background-image: url("../images/test/urine/color/brown.png");
