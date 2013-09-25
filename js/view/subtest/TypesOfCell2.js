@@ -11,6 +11,21 @@ define([
     Template,
     ModelTestCbc
 ) {
+    var GROUP_TYPES = {
+        fighter: {
+            min: 60,
+            max: 70
+        },
+        defender: {
+            min: 30,
+            max: 40
+        },
+        watcher: {
+            min: 0.5,
+            max: 2
+        }
+    };
+
     return Backbone.View.extend({
         template: Handlebars.compile(Template),
 
@@ -23,23 +38,25 @@ define([
         },
 
         render: function(parent) {
+            var self = this,
+                templateConfig = {
+                    species: this.model.getReport().getPatientSpecies()
+                };
+
+            $.each(GROUP_TYPES, function(type, config) {
+                var percentage = self.model.getWbcCellPercentageByGroupType(type),
+                    isBad = (percentage < config.min || percentage > config.max) ? true : false;
+
+                templateConfig[type] = {
+                    percentage: percentage,
+                    min: config.min,
+                    max: config.max,
+                    isBad: isBad
+                }
+            })
             
             // render template
-            this.setElement($(this.template({
-                species: this.model.getReport().getPatientSpecies(),
-                fighter: {
-                    percentage: this.model.getWbcCellPercentageByGroupType('fighter'),
-                    isBad: false
-                },
-                defender: {
-                    percentage: this.model.getWbcCellPercentageByGroupType('defender'),
-                    isBad: false
-                },
-                watcher: {
-                    percentage: this.model.getWbcCellPercentageByGroupType('watcher'),
-                    isBad: false
-                }
-            })));
+            this.setElement($(this.template(templateConfig)));
 
             this.$el.appendTo(parent);
         }

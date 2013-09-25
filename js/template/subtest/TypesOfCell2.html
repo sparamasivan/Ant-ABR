@@ -18,7 +18,7 @@
 
                 <div class="range">
                     <span class="widget-indicator {{#if fighter.isBad}}bad{{/if}}"></span>
-                    <span class="text">Expected Range 60%-70%</span>
+                    <span class="text">Expected Range {{fighter.min}}%-{{fighter.max}}%</span>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
 
                 <div class="range">
                     <span class="widget-indicator {{#if defender.isBad}}bad{{/if}}"></span>
-                    <span class="text">Expected Range 30%-40%</span>
+                    <span class="text">Expected Range {{defender.min}}%-{{defender.max}}%</span>
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@
 
                 <div class="range">
                     <span class="widget-indicator {{#if watcher.isBad}}bad{{/if}}"></span>
-                    <span class="text">Expected Range .5%-2%</span>
+                    <span class="text">Expected Range {{watcher.min}}%-{{watcher.max}}%</span>
                 </div>
             </div>
         </div>
