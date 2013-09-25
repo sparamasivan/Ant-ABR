@@ -2938,6 +2938,7 @@ span.placeholder {
   color: white;
   overflow: hidden;
   cursor: pointer;
+  text-align: center;
   /* for scrolling */
   z-index: 1;
   position: relative;
@@ -2962,43 +2963,16 @@ span.placeholder {
   line-height: 40px;
 }
 .test-header .status {
-  float: right;
-  height: 45px;
-  margin: 9px 10px 0 0;
-  width: 254px;
-  height: 57px;
-  background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
+  position: absolute;
+  top: 13.5px;
+  right: 60px;
+  width: 48.5px;
+  height: 47px;
 }
-.test-header .status.good {
-  background-image: url(../images/test/base/good-flag.png);
-}
-@media (max-width: 480px) {
-  .test-header .status.good {
-    background-image: url(../images/test/base/good-flag@2x.png);
-  }
-}
-.test-header .status.bad {
-  background-image: url(../images/test/base/followup-flag.png);
-}
-@media (max-width: 480px) {
-  .test-header .status.bad {
-    background-image: url(../images/test/base/followup-flag@2x.png);
-  }
-}
-.test-header .status .icon {
-  display: inline-block;
-  width: 30px;
-  height: 25px;
-  background-image: url(../images/test/base/follow-up-icon.png);
-  vertical-align: middle;
-}
-.test-header .status .text {
-  font-family: 'Apercu', sans-serif;
-  display: inline-block;
-  padding-left: 10px;
-  text-transform: uppercase;
+.test-header .status img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 @media (max-width: 480px) {
   .test-header {
@@ -3013,9 +2987,10 @@ span.placeholder {
     font-size: 123.1%;
   }
   .test-header .status {
-    margin: 3px 58px 0 0;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    top: 7.5px;
+    right: 60px;
   }
   .test-header .status .text {
     display: none;

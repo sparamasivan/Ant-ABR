@@ -22,13 +22,14 @@
     $headerHeight: 74px;
     $iconHeight: 40px;
     $iconWidth: 40px;
-    $statusHeight: 45px;
 
     height: $headerHeight;
     background-repeat: repeat-x;
     color: white;
     overflow: hidden;
     cursor: pointer;
+
+    text-align: center;
 
     /* for scrolling */
     z-index: 1;
@@ -57,46 +58,20 @@
     }
 
     .status {
-        float: right;
+        $width: image-width('../images/test/base/follow-up-good-2x.png') / 2;
+        $height: image-height('../images/test/base/follow-up-good-2x.png') / 2;
+        position: absolute;
 
-        height: $statusHeight;
-        margin: 9px 10px 0 0;
-        width: 254px;
-        height: 57px;
-        background-color:transparent;
-        background-size:contain;
-        background-repeat: no-repeat;
+        top: ($headerHeight - $height) / 2;
+        right: 60px;
 
-        &.good {
-            background-image:url(../images/test/base/good-flag.png);
-            @media (max-width:($mq-phone)) {
-                background-image: url(../images/test/base/good-flag@2x.png);
-            }
-        }
+        width: $width;
+        height: $height;
 
-        &.bad {
-            background-image: url(../images/test/base/followup-flag.png);
-            @media (max-width:($mq-phone)) {
-                background-image: url(../images/test/base/followup-flag@2x.png);
-            }
-        }
-
-        .icon {
-            display: inline-block;
-
-            width: 30px;
-            height: 25px;
-            background-image: url(../images/test/base/follow-up-icon.png);
-            vertical-align: middle;
-        }
-
-        .text {
-            @include secondaryFont;
-
-            display: inline-block;
-            padding-left: 10px;
-
-            text-transform: uppercase;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
         }
     }
 
@@ -116,9 +91,11 @@
         }
 
         .status {
-            margin: 3px 58px 0 0;
-            width: 50px;
-            height: 50px;
+            width: $iconWidth;
+            height: $iconHeight;
+
+            top: ($headerHeight - $iconHeight) / 2;
+            right: 60px;
 
             .text {
                 display: none;

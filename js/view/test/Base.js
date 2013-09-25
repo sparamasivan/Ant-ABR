@@ -4,6 +4,7 @@ define([
     'handlebars',
     'model/test/Base',
     'text!template/test/Base.html',
+    'text!template/test/base/Header.html',
     'event/Dispatcher',
     'model/MediaQuery',
     'model/Report',
@@ -15,6 +16,7 @@ define([
     Handlebars,
     ModelTestBase,
     Template,
+    TemplateHeader,
     EventDispatcher,
     ModelMediaQuery,
     ReportModel,
@@ -22,24 +24,7 @@ define([
 ) {
     return Backbone.View.extend({
         template: Handlebars.compile(Template),
-        templateHeader: Handlebars.compile(
-            '<div class="page-section-wrapper header test-header {{type}}">' +
-                '<div class="yui3-g page-section">' +
-                    '<div class="yui3-u-1">' +
-                        '<span class="title">' +
-                            '<span class="icon"></span>' +
-                            '<span class="text">{{title}}</span>' +
-                        '</span>' +
-                        '{{#if requiresFollowUp}}' +
-                            '<div title="Please review your Next Steps for the follow up action." class="status bad">' +
-                        '{{else}}' +
-                            '<div title="{{patient.name}}\'s {{simpleTitle}} result was reviewed and everything looks good." class="status good">' +
-                        '{{/if}}' +
-                        '</div>' +
-                    '</div>' +
-                '</div>' +
-            '</div>'
-        ),
+        templateHeader: Handlebars.compile(TemplateHeader),
 
         _viewTestOverview: null,
 
