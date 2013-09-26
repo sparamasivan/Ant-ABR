@@ -3073,7 +3073,7 @@ span.placeholder {
   background-color: #b63488;
 }
 .view-test-accuplex > .body > .overview .diagram-container > .inner {
-  max-width: 277px;
+  max-width: 365px;
 }
 
 .test-header.cbc {
@@ -3093,7 +3093,7 @@ span.placeholder {
   background-color: #30bd84;
 }
 .view-test-cbc > .body > .overview .diagram-container > .inner {
-  max-width: 445px;
+  max-width: 450px;
 }
 
 .view-test-cbc {
@@ -3155,7 +3155,7 @@ span.placeholder {
   background-color: #2759b9;
 }
 .view-test-chemistry > .body > .overview .diagram-container > .inner {
-  max-width: 352px;
+  max-width: 356px;
 }
 
 .view-test-chemistry {
@@ -3187,7 +3187,7 @@ span.placeholder {
   background-color: #0f96a4;
 }
 .view-test-felv-fiv > .body > .overview .diagram-container > .inner {
-  max-width: 316px;
+  max-width: 314px;
 }
 
 .test-header.heartworm {
@@ -3207,7 +3207,7 @@ span.placeholder {
   background-color: #d53f38;
 }
 .view-test-heartworm > .body > .overview .diagram-container > .inner {
-  max-width: 375px;
+  max-width: 374px;
 }
 
 .test-header.ova {
@@ -3227,7 +3227,7 @@ span.placeholder {
   background-color: #2e91f8;
 }
 .view-test-ova > .body > .overview .diagram-container > .inner {
-  max-width: 300px;
+  max-width: 354px;
 }
 
 .test-header.thyroxine {
@@ -3247,7 +3247,7 @@ span.placeholder {
   background-color: #e38806;
 }
 .view-test-thyroxine > .body > .overview .diagram-container > .inner {
-  max-width: 336px;
+  max-width: 324px;
 }
 
 .test-header.urine {
@@ -3277,53 +3277,28 @@ span.placeholder {
   border-bottom: 1px solid #111111;
   padding-bottom: 5px;
 }
-.view-test-urine-analysis .property.color.brown {
-  background-image: url("../images/test/urine/color/brown.png");
+.view-test-urine-analysis .property.color {
+  font-family: 'Apercu', sans-serif;
 }
-.view-test-urine-analysis .property.color.colorless {
-  background-image: url("../images/test/urine/color/colorless.png");
+.view-test-urine-analysis .property.color .diagram {
+  position: relative;
 }
-.view-test-urine-analysis .property.color.dark-brown {
-  background-image: url("../images/test/urine/color/dark-brown.png");
+.view-test-urine-analysis .property.color .diagram .palette {
+  display: block;
 }
-.view-test-urine-analysis .property.color.dark-green {
-  background-image: url("../images/test/urine/color/dark-green.png");
+.view-test-urine-analysis .property.color .diagram .label {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 150px;
+  margin: 0 0 -20% -75px;
+  text-align: center;
+  font-size: 250%;
+  font-weight: bold;
+  line-height: 100%;
 }
-.view-test-urine-analysis .property.color.dark-orange {
-  background-image: url("../images/test/urine/color/dark-orange.png");
-}
-.view-test-urine-analysis .property.color.dark-red {
-  background-image: url("../images/test/urine/color/dark-red.png");
-}
-.view-test-urine-analysis .property.color.dark-yellow {
-  background-image: url("../images/test/urine/color/dark-yellow.png");
-}
-.view-test-urine-analysis .property.color.green {
-  background-image: url("../images/test/urine/color/green.png");
-}
-.view-test-urine-analysis .property.color.light-brown {
-  background-image: url("../images/test/urine/color/light-brown.png");
-}
-.view-test-urine-analysis .property.color.light-green {
-  background-image: url("../images/test/urine/color/light-green.png");
-}
-.view-test-urine-analysis .property.color.light-orange {
-  background-image: url("../images/test/urine/color/light-orange.png");
-}
-.view-test-urine-analysis .property.color.light-red {
-  background-image: url("../images/test/urine/color/light-red.png");
-}
-.view-test-urine-analysis .property.color.light-yellow {
-  background-image: url("../images/test/urine/color/light-yellow.png");
-}
-.view-test-urine-analysis .property.color.orange {
-  background-image: url("../images/test/urine/color/orange.png");
-}
-.view-test-urine-analysis .property.color.red {
-  background-image: url("../images/test/urine/color/red.png");
-}
-.view-test-urine-analysis .property.color.yellow {
-  background-image: url("../images/test/urine/color/yellow.png");
+.view-test-urine-analysis .property.color .diagram .widget-indicator {
+  margin-top: 5px;
 }
 .view-test-urine-analysis .property.appearance {
   font-family: 'Apercu', sans-serif;

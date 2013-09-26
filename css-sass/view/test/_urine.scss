@@ -13,22 +13,34 @@
     }
 
     .property.color {
-        &.brown {background-image: url("../images/test/urine/color/brown.png");}
-        &.colorless {background-image: url("../images/test/urine/color/colorless.png");}
-        &.dark-brown {background-image: url("../images/test/urine/color/dark-brown.png");}
-        &.dark-green {background-image: url("../images/test/urine/color/dark-green.png");}
-        &.dark-orange {background-image: url("../images/test/urine/color/dark-orange.png");}
-        &.dark-red {background-image: url("../images/test/urine/color/dark-red.png");}
-        &.dark-yellow {background-image: url("../images/test/urine/color/dark-yellow.png");}
-        &.green {background-image: url("../images/test/urine/color/green.png");}
-        &.light-brown {background-image: url("../images/test/urine/color/light-brown.png");}
-        &.light-green {background-image: url("../images/test/urine/color/light-green.png");}
-        &.light-orange {background-image: url("../images/test/urine/color/light-orange.png");}
-        &.light-red {background-image: url("../images/test/urine/color/light-red.png");}
-        &.light-yellow {background-image: url("../images/test/urine/color/light-yellow.png");}
-        &.orange {background-image: url("../images/test/urine/color/orange.png");}
-        &.red {background-image: url("../images/test/urine/color/red.png");}
-        &.yellow {background-image: url("../images/test/urine/color/yellow.png");}
+        @include secondaryFont;
+
+        .diagram {
+            position: relative;
+
+            .palette {
+                display: block;
+            }
+
+            .label {
+                position: absolute;
+                bottom: 50%;
+                left: 50%;
+
+                width: 150px;
+                margin: 0 0 -20% -75px;
+
+                text-align: center;
+
+                font-size: 250%;
+                font-weight: bold;
+                line-height: 100%;
+            }
+
+            .widget-indicator {
+                margin-top: 5px;
+            }
+        }
     }
 
     .property.appearance {

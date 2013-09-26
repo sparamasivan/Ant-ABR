@@ -133,7 +133,7 @@
     }
 }
 
-@mixin view-test-base-extend ($type, $headingBgColor, $overviewBgColor) {
+@mixin view-test-base-extend ($type, $headingBgColor, $overviewBgColor, $diagramFilename : "diagram-2x.png") {
     .test-header.#{$type} {
         background-color: $headingBgColor;
 
@@ -157,7 +157,7 @@
                 background-color: $overviewBgColor;
 
                 .diagram-container >.inner {
-                    max-width: image-width("../images/test/#{$type}/diagram-2x.png") / 2;
+                    max-width: image-width("../images/test/#{$type}/#{$diagramFilename}") / 2;
                 }
             }
         }

@@ -23,9 +23,10 @@
                         <h2>Color</h2>
 
                         <div class="diagram">
-                            <img src="images/test/urine/color/{{color.type}}-2x.png" />
+                            <img class="palette" src="images/test/urine/color/{{color.type}}-2x.png" />
+
                             <div class="label">
-                                {{color.label}}
+                                <div>{{color.label}}</div>
                                 <div class="widget-indicator {{#if color.isBad}}bad{{/if}}" title="Many factors can affect the color of urine, from medication to diet."></div>
                             </div>
                         </div>
