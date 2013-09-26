@@ -29,6 +29,21 @@
     .test-section-inner-with-icon {
         padding: 30px 30px 30px 150px;
 
+        &.first {
+            padding-bottom: 0;
+        }
+
+        &.last {
+            padding-top: 0;
+        }
+
+        &.desktop-only {
+            /* tablet */
+            @media (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
+                padding-left: 30px;
+            }
+        }
+
         /* Phone */
         @media (max-width:$mq-phone) {
             padding: 0;

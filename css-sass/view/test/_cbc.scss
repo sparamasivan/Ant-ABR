@@ -7,7 +7,7 @@
         padding-right: 10px;
 
         .diagram {
-            width: 230px;
+            width: 200px;
         }
 
         .value {
@@ -49,6 +49,19 @@
     
     /* phone */
     @media (max-width:($mq-phone)) {
+        .chart {
+            border-right: 0;
+            padding-right: 0;
+
+            .diagram {
+                margin: 0 auto;
+            }
+
+            .value {
+                left: 60%;
+            }
+        }
+
         .view-subtest-range {
             margin: 0 auto;
         }
