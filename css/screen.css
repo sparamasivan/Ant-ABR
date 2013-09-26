@@ -3457,6 +3457,27 @@ span.placeholder {
   top: -5px;
   left: -32px;
 }
+.view-test-urine-analysis .property.ph .legend {
+  position: absolute;
+  font-weight: bold;
+  font-size: 77%;
+  text-transform: uppercase;
+}
+.view-test-urine-analysis .property.ph .legend.neutral {
+  top: 0;
+  left: 50%;
+  width: 50px;
+  margin-left: -25px;
+  text-align: center;
+}
+.view-test-urine-analysis .property.ph .legend.acidic {
+  bottom: 3%;
+  left: 23%;
+}
+.view-test-urine-analysis .property.ph .legend.alkaline {
+  bottom: 3%;
+  right: 23%;
+}
 
 .view-subtest-range {
   font-family: 'Apercu', sans-serif;
