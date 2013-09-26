@@ -62,7 +62,8 @@ define([
 
         render: function(parent) {
             $.extend(this._overview, {
-                descriptionTemplate: 'The CBC (Complete Blood Count) test examines the health and numbers of {{patient.name}}’s cells.'
+                descriptionTemplate: 'The CBC (Complete Blood Count) test examines the health and numbers of {{patient.name}}’s cells.',
+                diagramFilename: 'diagram-' + this.model.getReport().getPatientSpecies() + '-2x.png'
             });
 
             ViewTestBase.prototype.render.apply(this, arguments);

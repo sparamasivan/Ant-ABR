@@ -25,7 +25,8 @@ define([
                 description: Handlebars.compile(this.options.descriptionTemplate)({
                     patient: this.model.getReport().getDataPatient()
                 }),
-                type: this.model.getType()
+                type: this.model.getType(),
+                diagramFilename: this._getDiagramFilename()
             })));
 
             // append to parent
@@ -50,6 +51,10 @@ define([
         refresh: function() {
             // recalculate heights
             this.$elSections.equalHeights('refresh');
+        },
+
+        _getDiagramFilename: function() {
+            return this.options.diagramFilename || 'diagram-2x.png';
         }
     });
 });
