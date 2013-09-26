@@ -12,35 +12,36 @@
         padding-bottom: 5px;
     }
 
-    .property.color {
+
+    .diagram-palette {
         @include secondaryFont;
+        position: relative;
 
-        .diagram {
-            position: relative;
-
-            .palette {
-                display: block;
-            }
-
-            .label {
-                position: absolute;
-                bottom: 50%;
-                left: 50%;
-
-                width: 150px;
-                margin: 0 0 -20% -75px;
-
-                text-align: center;
-
-                font-size: 250%;
-                font-weight: bold;
-                line-height: 100%;
-            }
-
-            .widget-indicator {
-                margin-top: 5px;
-            }
+        .palette {
+            display: block;
         }
+
+        .label {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+
+            width: 150px;
+            margin: 0 0 -20% -75px;
+
+            text-align: center;
+
+            font-size: 250%;
+            font-weight: bold;
+            line-height: 100%;
+        }
+
+        .widget-indicator {
+            margin-top: 5px;
+        }
+    }
+
+    .property.color {
     }
 
     .property.appearance {
@@ -118,5 +119,8 @@
                 font-weight: bold;
             }
         }
+    }
+
+    .property.ph {
     }
 }

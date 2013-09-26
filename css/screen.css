@@ -3277,16 +3277,14 @@ span.placeholder {
   border-bottom: 1px solid #111111;
   padding-bottom: 5px;
 }
-.view-test-urine-analysis .property.color {
+.view-test-urine-analysis .diagram-palette {
   font-family: 'Apercu', sans-serif;
-}
-.view-test-urine-analysis .property.color .diagram {
   position: relative;
 }
-.view-test-urine-analysis .property.color .diagram .palette {
+.view-test-urine-analysis .diagram-palette .palette {
   display: block;
 }
-.view-test-urine-analysis .property.color .diagram .label {
+.view-test-urine-analysis .diagram-palette .label {
   position: absolute;
   bottom: 50%;
   left: 50%;
@@ -3297,7 +3295,7 @@ span.placeholder {
   font-weight: bold;
   line-height: 100%;
 }
-.view-test-urine-analysis .property.color .diagram .widget-indicator {
+.view-test-urine-analysis .diagram-palette .widget-indicator {
   margin-top: 5px;
 }
 .view-test-urine-analysis .property.appearance {

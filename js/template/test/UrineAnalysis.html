@@ -22,7 +22,7 @@
                     <div class="yui3-u-c property color">
                         <h2>Color</h2>
 
-                        <div class="diagram">
+                        <div class="diagram-palette">
                             <img class="palette" src="images/test/urine/color/{{color.type}}-2x.png" />
 
                             <div class="label">
@@ -88,7 +88,7 @@
 
             <div class="yui3-g-r">
                 <div class="yui3-u-1-2">
-                    <div class="yui3-u-c property">
+                    <div class="yui3-u-c property concentration">
                         <h2>Concentration</h2>
 
                         <div class="select"></div>
@@ -96,13 +96,14 @@
                 </div>
 
                 <div class="yui3-u-1-2">
-                    <div class="yui3-u-c property">
+                    <div class="yui3-u-c property ph">
                         <h2>pH Levels</h2>
 
-                        <div class="diagram">
-                            <img src="images/test/urine/ph/{{ph.valueRounded}}-2x.png" />
+                        <div class="diagram-palette">
+                            <img class="image" src="images/test/urine/ph/{{ph.valueRounded}}-2x.png" />
+
                             <div class="label">
-                                {{ph.value}}
+                                <div>{{ph.value}}</div>
                                 <div class="widget-indicator {{#if ph.isBad}}bad{{/if}}" title="Blood should always be at a specific pH level, which is neutral. The kidneys are responsible for maintaining {{patient.name}}’s pH level."></div>
                             </div>
                         </div>
