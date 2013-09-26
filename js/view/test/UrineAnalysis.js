@@ -26,6 +26,11 @@ define([
     ViewWidgetTestSubsection,
     ViewSubtestSelect
 ) {
+    var mathRound = function(value, decimalPlaces) {
+        var roundedValue = Math.round(value * Math.pow(10, decimalPlaces)) / Math.pow(10, decimalPlaces);
+        return roundedValue.toFixed(decimalPlaces);
+    }
+
     return ViewTestBase.extend({
         title: 'URINALYSIS',
 
@@ -36,6 +41,9 @@ define([
         templateMicroscopicParticleContent: Handlebars.compile(TemplateMicroscopicParticle),
 
         render: function(parent) {
+            var mPh = this.model.getModelPh(),
+                phValue = mathRound(mPh.getValue(), 1);
+
             $.extend(this._overview, {
                 descriptionTemplate: 'Analyzing {{patient.name}}’s urine gives us an excellent snapshot of how the body’s organs and systems are functioning.'
             });
@@ -47,7 +55,13 @@ define([
 
                 color: Config.getUrineColorInfoById(this.model.getModelColor().getValueText()),
                 
-                appearance: Config.getUrineAppearanceInfoById(this.model.getModelAppearance().getValueText())
+                appearance: Config.getUrineAppearanceInfoById(this.model.getModelAppearance().getValueText()),
+
+                ph: {
+                    value: phValue,
+                    isBad: (phValue < 5.5 || phValue > 7) ? true : false,
+                    valueRounded: Math.floor((phValue < 0) ? 0 : ((phValue >= 10) ? 9 : phValue - 0.01 ))
+                }
             }));
 
             this._renderVisualAnalysisSection(this.$elContent.find('.test-section.visual'));
@@ -100,7 +114,6 @@ define([
 
         _renderChemicalAnalysisSection: function(parent) {
             var mConcentration = this.model.getModelConcentration(),
-                mPh = this.model.getModelPh(),
                 patient = this.model.getReport().getDataPatient(),
                 viewSubtest;
 
