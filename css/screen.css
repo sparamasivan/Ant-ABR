@@ -3874,50 +3874,54 @@ span.placeholder {
   color: #6b6b6b;
   background-image: url(../images/subtest/select/bg-middle.png);
   background-repeat: repeat-y;
+  position: relative;
+}
+.view-subtest-select .option .widget-indicator {
+  position: absolute;
+  top: 4px;
+  left: 7px;
+  display: none;
+  cursor: pointer;
 }
 .view-subtest-select .option:first-child {
   background-image: url(../images/subtest/select/bg-top.png);
   background-position: left top;
 }
-.view-subtest-select .option:first-child .token {
-  top: 3px;
+.view-subtest-select .option:first-child .widget-indicator {
+  top: 5px;
 }
 .view-subtest-select .option.last {
   background-image: url(../images/subtest/select/bg-bottom.png);
   background-position: left bottom;
 }
-.view-subtest-select .option.last .token {
-  top: -3px;
+.view-subtest-select .option.last .widget-indicator {
+  top: 2px;
 }
 .view-subtest-select .option.selected {
   font-size: 182%;
   font-weight: bold;
   color: #333;
 }
-.view-subtest-select .option.selected .token {
-  background-image: url(../images/common/result-good.png);
-  background-repeat: no-repeat;
-  background-position: 7px center;
-  position: relative;
-}
-.view-subtest-select .option.selected.bad .token {
-  background-image: url(../images/common/result-bad.png);
-}
 .view-subtest-select .option.selected .name {
   background-image: url(../images/subtest/select/bullet.png);
   background-repeat: no-repeat;
-  background-position: 7px center;
+  background-position: 52px center;
 }
-.view-subtest-select .option .token {
-  padding-left: 45px;
+.view-subtest-select .option.selected .widget-indicator {
+  display: block;
 }
 .view-subtest-select .option .name {
-  padding-left: 20px;
+  padding-left: 65px;
   height: 40px;
   line-height: 40px;
 }
 .view-subtest-select .description {
   display: none;
+}
+
+.view-subtest-select-tooltip .message {
+  font-weight: bold;
+  font-size: 116%;
 }
 
 .view-subtest-types-of-cell2 .title {

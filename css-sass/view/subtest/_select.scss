@@ -14,13 +14,23 @@
 
 		background-image: url(../images/subtest/select/bg-middle.png);
 		background-repeat: repeat-y;
+
+        position: relative;
+
+        .widget-indicator {
+            position: absolute;
+            top: 4px;
+            left: 7px;
+            display: none;
+            cursor: pointer;
+        }
 		
 		&:first-child {
 			background-image: url(../images/subtest/select/bg-top.png);
 			background-position: left top;
 
-			.token {
-				top: 3px;
+			.widget-indicator {
+                top: 5px;
 			}
 		}
 
@@ -28,8 +38,8 @@
 			background-image: url(../images/subtest/select/bg-bottom.png);
 			background-position: left bottom;
 
-			.token {
-				top: -3px;
+			.widget-indicator {
+                top: 2px;
 			}
 		}
 
@@ -38,32 +48,19 @@
             font-weight: bold;
             color: #333;
 
-            .token {
-            	background-image: url(../images/common/result-good.png);
-            	background-repeat: no-repeat;
-            	background-position: 7px center;
-				position: relative;
-            }
-
-            &.bad {
-	            .token {
-	            	background-image: url(../images/common/result-bad.png);
-	            }
-            }
-
             .name {
             	background-image: url(../images/subtest/select/bullet.png);
             	background-repeat: no-repeat;
-            	background-position: 7px center;
+            	background-position: 45px + 7px center;
+            }
+
+            .widget-indicator {
+                display: block;
             }
 		}
 
-		.token {
-			padding-left: 45px;
-		}
-
 		.name {
-			padding-left: 20px;
+			padding-left: 45px + 20px;
 			height: 40px;
 			line-height: 40px;
 		}
@@ -72,4 +69,11 @@
 	.description {
 		display: none;
 	}
+}
+
+.view-subtest-select-tooltip {
+    .message {
+        font-weight: bold;
+        font-size: 116%;
+    }
 }
