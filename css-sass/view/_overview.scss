@@ -84,6 +84,10 @@
 					top: 0;
 					margin-bottom: 10px;
 				}
+
+				@media (max-width:($mq-phone)) {
+					padding-left: 10px;
+				}
 			}
 
 			.text-container {
@@ -130,7 +134,7 @@
 				}
 
 				@media (max-width:($mq-phone)) {
-					margin-left: -0.67em;
+					margin-left: 0;
 					padding-left: 0;
 					background-position: 10px center;
 					width: 100%;
@@ -190,6 +194,10 @@
 				margin: 0;
 				color: white;
 				padding-top: 8px;
+
+				@media (max-width:($mq-phone)) {
+					padding-left: 10px;
+				}
 			}
 
 			.report-date {
@@ -230,6 +238,7 @@
 		border-bottom-right-radius: 5px;
 
 		h2 {
+			margin-top: 5px;
 			margin-bottom: 5px;
 		}
 		
@@ -245,6 +254,7 @@
 		border-radius: 5px;
 
 		h2 {
+			margin-top: 5px;
 			margin-bottom: 5px;
 		}
 		
@@ -288,8 +298,8 @@
 
 		.yui3-u-c {
 			text-align: center;
-			padding-top: 60px;
-			padding-bottom: 25px;
+			padding-top: 85px;
+			padding-bottom: 15px;
 			margin-top: 2px;
 			margin-bottom: 0;
 		}
@@ -336,7 +346,6 @@
 		
 		.page-section-next-steps {
 			padding: 10px 0;
-			margin-bottom: 50px;
 		}
 
 		.arrow {
