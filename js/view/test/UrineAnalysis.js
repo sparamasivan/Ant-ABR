@@ -92,7 +92,6 @@ define([
                             if(e4 != 'neg' && e4 != 'negative' && !e4.match(/^none*/)){
                                 return {
                                     label: model.getLabel(),
-                                    isGood: model.getValue(),
                                     description: model.getDescription()
                                 }
                             } else {
@@ -136,14 +135,6 @@ define([
                 selectedIsBad: false
             });
             viewSubtest.render(parent.find('.select'));
-
-            /*
-                phs: {
-                    {label: 'Acidic', isSelected: mPh.isLow()},
-                    {label: 'Neutral', isSelected: mPh.isNormal()},
-                    {label: 'Alkaline', isSelected: mPh.isHigh()}
-                ]
-            */
 
             this._renderChemicalComponentSubsection(parent.find('.test-subsection.component'));
         },

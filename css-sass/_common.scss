@@ -52,8 +52,9 @@ $widgetArrowWidth: 22px;
     }
 }
 
+$widgetIndicatorWidth: 32px;
 .widget-indicator {
-    width: 32px;
+    width: $widgetIndicatorWidth;
     height: 32px;
 
     display: inline-block;

@@ -1,16 +1,29 @@
 <div class="view-test-urine-analysis-microscopic-particle">
-    {{#if components}}
-        <ul class="components">
+    <div class="yui3-g-r">
+        {{#if components}}
              {{#each components}}
-             <li class="component" title="{{description}}">
-                <span class="caption">{{label}}</span>
-            </li>
+                 <div class="yui3-u-1-3 yui3-u-1-2-small-tablet">
+                    <div class="yui3-u-c">
+                        <div class="pod">
+                            <div class="inner">
+                                <span class="widget-indicator bad" title="{{description}}"></span>
+                                <span class="label">{{label}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             {{/each}}
-        </ul>
-    {{else}}
-        <div>
-            <span class="appearance none">&nbsp;</span>
-            <span class="caption">None Found</span>
-        </div>
-    {{/if}}
+        {{else}}
+             <div class="yui3-u-1-3 yui3-u-1-2-small-tablet">
+                <div class="yui3-u-c">
+                    <div class="pod">
+                        <div class="inner">
+                            <span class="widget-indicator"></span>
+                            <span class="label">None Found</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/if}}
+    </div>
 </div>
