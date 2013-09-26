@@ -1,6 +1,5 @@
 <div class="view-test-urine-analysis">
 
-
     <!-- Visual Analysis -->
     <div class="test-section visual">
         <div class="test-section-inner-with-icon">
@@ -25,8 +24,13 @@
 
                         <div class="palette {{color.type}}"></div>
 
-                        {{color.label}}
-                        <p>Many factors can affect the color of urine, from medication to diet.</p>
+                        <div class="diagram">
+                            <img src="images/test/urine/color/{{color.type}}-2x.png" />
+                            <div class="label">
+                                {{color.label}}
+                                <div class="widget-indicator {{#if color.isBad}}bad{{/if}}" title="Many factors can affect the color of urine, from medication to diet."></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -35,7 +39,7 @@
                         <h2>Appearance</h2>
 
                         <div class="text">
-                            <span class="widget-indicator {{#if appearance.isBad}}bad{{/if}}"></span><span class="label">{{appearance.label}}</span>
+                            <span class="widget-indicator {{#if appearance.isBad}}bad{{/if}}" title="Urine is a clear fluid. It can appear cloudy if it contains unexpected cells or crystals."></span><span class="label">{{appearance.label}}</span>
                         </div>
 
                         <div class="actual">
