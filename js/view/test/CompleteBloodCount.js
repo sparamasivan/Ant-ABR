@@ -40,19 +40,19 @@ define([
 
         templateAppearanceContent: Handlebars.compile(
             '<div class="yui3-g-r">' +
-                '<div class="yui3-u-1-3">' +
+                '<div class="yui3-u-1-3 yui3-u-1-2-small-tablet yui3-u-1-2-phone">' +
                     '<div class="yui3-u-c">' +
                         '<div class="size"></div>' +
                     '</div>' +
                 '</div>' +
 
-                '<div class="yui3-u-1-3">' +
+                '<div class="yui3-u-1-3 yui3-u-1-2-small-tablet yui3-u-1-2-phone">' +
                     '<div class="yui3-u-c">' +
                         '<div class="shape"></div>' +
                     '</div>' +
                 '</div>' +
 
-                '<div class="yui3-u-1-3">' +
+                '<div class="yui3-u-1-3 yui3-u-1-2-small-tablet yui3-u-1-2-phone">' +
                     '<div class="yui3-u-c">' +
                         '<div class="color"></div>' +
                     '</div>' +
