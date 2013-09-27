@@ -3995,6 +3995,7 @@ span.placeholder {
 }
 .view-subtest-types-of-cell2 .range .widget-indicator {
   vertical-align: middle;
+  cursor: pointer;
 }
 .view-subtest-types-of-cell2 .range .text {
   font-family: 'Apercu', sans-serif;
@@ -4003,6 +4004,9 @@ span.placeholder {
   font-size: 85%;
   display: inline-block;
   padding-left: 10px;
+}
+.view-subtest-types-of-cell2 .description {
+  display: none;
 }
 
 .view-subtest-pod-base {

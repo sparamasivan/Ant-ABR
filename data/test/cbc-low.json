@@ -17,14 +17,14 @@
                 },
                 {
                     "id": -1902958144,
-                    "value": "3538",
+                    "value": "25",
                     "description": "Neutrophils are the most abundant type of white blood cells in mammals. Neutrophils are one of the first-responders to migrate towards the site of inflammation.",
                     "testType": "WBC",
                     "label": "Absolute Neutrophils"
                 },
                 {
                     "id": -1902958142,
-                    "value": "0",
+                    "value": "25",
                     "description": "Bands are young Neutrophils. A band count is used to measure the degree of severity of an inflammation.",
                     "testType": "WBC",
                     "label": "Absolute Bands"
@@ -41,7 +41,7 @@
                 },
                 {
                     "id": -1902958140,
-                    "value": "0",
+                    "value": "13",
                     "description": "Basophils represent about 0.01% to 0.3% of circulating white blood cells. They appear in many specific kinds of inflammatory reactions, particularly those that cause allergic symptoms.",
                     "testType": "WBC",
                     "label": "Absolute Basophils"
@@ -57,14 +57,14 @@
                 },
                 {
                     "id": -1902958142,
-                    "value": "928",
+                    "value": "12",
                     "description": "Monocytes play multiple roles in immune function. Such roles include: (1) replenish resident macrophages and dendritic cells under normal states, and (2) in response to inflammation signals, monocytes can move quickly to sites of infection and divide to elicit an immune response.",
                     "testType": "WBC",
                     "label": "Absolute Monocytes"
                 },
                 {
                     "id": -1902958141,
-                    "value": "58",
+                    "value": "13",
                     "description": "One of the immune system components responsible for combating multicellular parasites and certain infections in vertebrates. They also control mechanisms associated with allergy and asthma.",
                     "testType": "WBC",
                     "label": "Absolute Eosinophils"
@@ -90,7 +90,7 @@
                 },
                 {
                     "id": -1902958143,
-                    "value": "1276",
+                    "value": "12",
                     "description": "There are three major types of lymphocytes: T cells, B cells and natural killer (NK) cells. T cells and B cells recognize “non-self” antigens and produce antibodies to fight and remember them. NK cells play a major role in defending the body from both tumors and virally infected cells.",
                     "testType": "WBC",
                     "label": "Absolute Lymphocytes"

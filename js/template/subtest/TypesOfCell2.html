@@ -2,7 +2,7 @@
 
     <div class="yui3-g-r">
         <div class="yui3-u-1-3 yui3-u-1-2-small-tablet">
-            <div class="yui3-u-c">
+            <div class="yui3-u-c fighter">
                 <div class="title">Infection Fighters</div>
 
                 <div class="diagram">
@@ -20,11 +20,21 @@
                     <span class="widget-indicator {{#if fighter.isBad}}bad{{/if}}"></span>
                     <span class="text">Expected Range {{fighter.min}}%-{{fighter.max}}%</span>
                 </div>
+
+                <div class="description">
+                    <p>
+                        {{#if fighter.message}}
+                            <span class="message">{{fighter.message}}</span><br />
+                        {{/if}}
+
+                        {{fighter.description}}
+                    </p>
+                </div>
             </div>
         </div>
 
         <div class="yui3-u-1-3 yui3-u-1-2-small-tablet">
-            <div class="yui3-u-c">
+            <div class="yui3-u-c defender">
                 <div class="title">Immune Defenders</div>
 
                 <div class="diagram">
@@ -42,11 +52,21 @@
                     <span class="widget-indicator {{#if defender.isBad}}bad{{/if}}"></span>
                     <span class="text">Expected Range {{defender.min}}%-{{defender.max}}%</span>
                 </div>
+
+                <div class="description">
+                    <p>
+                        {{#if defender.message}}
+                            <span class="message">{{defender.message}}</span><br />
+                        {{/if}}
+
+                        {{defender.description}}
+                    </p>
+                </div>
             </div>
         </div>
 
         <div class="yui3-u-1-3 yui3-u-1-2-small-tablet">
-            <div class="yui3-u-c">
+            <div class="yui3-u-c watcher">
                 <div class="title">Allergen Watchmen</div>
 
                 <div class="diagram">
@@ -62,6 +82,16 @@
                 <div class="range">
                     <span class="widget-indicator {{#if watcher.isBad}}bad{{/if}}"></span>
                     <span class="text">Expected Range {{watcher.min}}%-{{watcher.max}}%</span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        {{#if watcher.message}}
+                            <span class="message">{{watcher.message}}</span><br />
+                        {{/if}}
+
+                        {{watcher.description}}
+                    </p>
                 </div>
             </div>
         </div>
