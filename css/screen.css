@@ -2979,7 +2979,7 @@ span.placeholder {
   border-radius: 5px;
 }
 .view-test-base .test-section-inner {
-  padding: 30px 30px 30px 75px;
+  padding: 20px 20px 20px 75px;
   /* phone */
 }
 @media (max-width: 480px) {
@@ -2988,7 +2988,8 @@ span.placeholder {
   }
 }
 .view-test-base .test-section-inner-with-icon {
-  padding: 30px 30px 30px 150px;
+  padding: 20px 20px 20px 140px;
+  /* tablet */
   /* Phone */
 }
 .view-test-base .test-section-inner-with-icon.first {
@@ -3005,6 +3006,11 @@ span.placeholder {
     padding-left: 30px;
   }
 }
+@media (min-width: 481px) and (max-width: 768px) {
+  .view-test-base .test-section-inner-with-icon {
+    padding-left: 120px;
+  }
+}
 @media (max-width: 480px) {
   .view-test-base .test-section-inner-with-icon {
     padding: 0;
@@ -3017,10 +3023,17 @@ span.placeholder {
 .view-test-base .test-section-description .icon {
   display: block;
   position: absolute;
-  top: 0;
-  left: -105px;
+  top: -10px;
+  left: -110px;
   width: 85px;
+  /* tablet */
   /* Phone */
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .view-test-base .test-section-description .icon {
+    left: -90px;
+    width: 65px;
+  }
 }
 @media (max-width: 480px) {
   .view-test-base .test-section-description .icon {
@@ -4129,7 +4142,7 @@ span.placeholder {
   border-top: 1px solid #b2b2b2;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  padding: 0 30px 0 150px;
+  padding: 0 20px 0 140px;
   /* Phone */
 }
 @media (max-width: 480px) {

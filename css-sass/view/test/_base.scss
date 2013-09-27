@@ -18,7 +18,7 @@
     }
 
     .test-section-inner {
-        padding: 30px 30px 30px 75px;
+        padding: 20px 20px 20px 75px;
 
         /* phone */
         @media (max-width:$mq-phone) {
@@ -27,7 +27,7 @@
     }
 
     .test-section-inner-with-icon {
-        padding: 30px 30px 30px 150px;
+        padding: 20px 20px 20px 140px;
 
         &.first {
             padding-bottom: 0;
@@ -42,6 +42,11 @@
             @media (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
                 padding-left: 30px;
             }
+        }
+
+        /* tablet */
+        @media (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
+            padding-left: 120px;
         }
 
         /* Phone */
@@ -59,10 +64,17 @@
             display: block;
 
             position: absolute;
-            top: 0;
-            left: - image-width("images/test/cbc/diagram/rbc-2x.png") / 2 - 20px;
+            top: -10px;
+            left: - image-width("images/test/cbc/diagram/rbc-2x.png") / 2 - 25px;
 
             width: image-width("images/test/cbc/diagram/rbc-2x.png") / 2;
+
+            /* tablet */
+            @media (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
+                $width: 65px;
+                left: - $width - 25px;
+                width: $width;
+            }
 
             /* Phone */
             @media (max-width:$mq-phone) {
