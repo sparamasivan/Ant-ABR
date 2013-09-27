@@ -82,32 +82,48 @@ define([
         },
 
         getWbcCellRanges: function() {
-            return {
-                neutrophil: this._getSubtestByTypeAndLabel('WBC', 'Absolute Neutrophils'),
-                band: this._tryGetSubtestByTypeAndLabel('WBC', 'Absolute Bands'),
-                lymphocyte: this._getSubtestByTypeAndLabel('WBC', 'Absolute Lymphocytes'),
-                monocyte: this._getSubtestByTypeAndLabel('WBC', 'Absolute Monocytes'),
-                eosinophil: this._getSubtestByTypeAndLabel('WBC', 'Absolute Eosinophils'),
-                basophil: this._getSubtestByTypeAndLabel('WBC', 'Absolute Basophils')
-            };
+            var self = this,
+                labels = {
+                    neutrophil: 'Neutrophils',
+                    band: 'Bands',
+                    lymphocyte: 'Lymphocytes',
+                    monocyte: 'Monocytes',
+                    eosinophil: 'Eosinophils',
+                    basophil: 'Basophils'
+                },
+                ranges = {};
+
+            $.each(labels, function(type, label) {
+                // Sometimes, an ABSOLUTE <Cell> value may be missing and all we have is a <Cell> value which is a percentage
+                ranges[type] = self._tryGetSubtestByTypeAndLabel('WBC', 'Absolute ' + label)
+                    || self._getSubtestByTypeAndLabel('WBC', label);
+            });
+
+            return ranges;
         },
 
         getWbcCellTotal: function() {
             var ranges = this.getWbcCellRanges(),
-                total = 0;
+                totalAbsolute = 0,
+                totalPercentage = 0;
 
             $.each(ranges, function(i, range) {
-                total += range.getValue();
+                if (range.getUnitOfMeasure() == '%') {
+                    totalPercentage += range.getValue();
+                } else {
+                    totalAbsolute += range.getValue();
+                }
             });
 
-            return total;
+            return totalAbsolute / ((totalPercentage > 0) ? (totalPercentage / 100) : 1);
         },
 
         getWbcCellPercentageByType: function(type) {
-            var range = this.getWbcCellRanges()[type],
-                totalCells = this.getWbcCellTotal();
+            var range = this.getWbcCellRanges()[type];
 
-            return range.getValue() / totalCells * 100;
+            return (range.getUnitOfMeasure() == '%')
+                ? range.getValue() // already percentage
+                : range.getValue() / this.getWbcCellTotal() * 100;
         },
 
         getWbcCellPercentageByGroupType: function(groupType) {
@@ -149,6 +165,12 @@ define([
                         case 'Absolute Monocytes':
                         case 'Absolute Eosinophils':
                         case 'Absolute Lymphocytes':
+                        case 'Neutrophils':
+                        case 'Bands':
+                        case 'Basophils':
+                        case 'Monocytes':
+                        case 'Eosinophils':
+                        case 'Lymphocytes':
                             return new ModelSubtestRange(subtestData);
 
                         default:

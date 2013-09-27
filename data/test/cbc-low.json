@@ -27,7 +27,8 @@
                     "value": "25",
                     "description": "Bands are young Neutrophils. A band count is used to measure the degree of severity of an inflammation.",
                     "testType": "WBC",
-                    "label": "Absolute Bands"
+                    "label": "Bands",
+                    "unitOfMeasure": "%"
                 },
                 {
                     "id": -1902958158,
