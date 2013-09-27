@@ -79,7 +79,7 @@ define([
                 // create subsection
                 view = new ViewWidgetTestSubsection({
                     title: Handlebars.compile('Microscopic Particles')({patient: patient}),
-                    text: Handlebars.compile('The following components were found in {{{patient.name}}}’s urine:')({patient: patient})
+                    text: Handlebars.compile('The following particles were found in {{{patient.name}}}’s urine:')({patient: patient})
                 }),
 
                 // prepare subsection content
@@ -145,7 +145,7 @@ define([
                 // create subsection
                 view = new ViewWidgetTestSubsection({
                     title: Handlebars.compile('Chemical Components')({patient: patient}),
-                    text: Handlebars.compile('The following comptonents were found in {{{patient.name}}}’s urine:')({patient: patient})
+                    text: Handlebars.compile('There are four chemical components we test for in {{{patient.name}}}’s urine:')({patient: patient})
                 }),
 
                 // prepare subsection content
