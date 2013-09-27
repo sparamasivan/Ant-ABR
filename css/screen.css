@@ -3296,7 +3296,7 @@ span.placeholder {
 }
 
 .test-header.thyroxine {
-  background-color: #f89e1e;
+  background-color: #e38306;
 }
 .test-header.thyroxine .title .icon {
   background-image: url("../images/test/thyroxine/icon.png");
@@ -3309,7 +3309,7 @@ span.placeholder {
 }
 
 .view-test-thyroxine > .body > .overview {
-  background-color: #e38806;
+  background-color: #f99507;
 }
 .view-test-thyroxine > .body > .overview .diagram-container > .inner {
   max-width: 324px;
