@@ -22,7 +22,8 @@
 
         render: function(parent) {
             var self = this,
-                view;
+                view,
+                currentPodIndex = 0;
 
             $.extend(this._overview, {
                 descriptionTemplate: 'We checked {{patient.name}}’s stool for young parasites and eggs.'
@@ -57,7 +58,8 @@
                       model: subtestModel
                      });
 
-                     view.render(self.$elContent.find('.boolean-container').eq(i));
+                     view.render(self.$elContent.find('.boolean-container').eq(currentPodIndex));
+                     currentPodIndex++;
                 }
                 else if(subtestModel.getValueText().toLowerCase() == 'positive'){}
                 else if(giardiaExist == 0){
@@ -65,7 +67,8 @@
                       model: subtestModel
                      });
 
-                     view.render(self.$elContent.find('.boolean-container').eq(i));
+                     view.render(self.$elContent.find('.boolean-container').eq(currentPodIndex));
+                     currentPodIndex++;
                 } else{}
 
             });
