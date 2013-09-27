@@ -19,7 +19,8 @@ define([
         templateContent: Handlebars.compile(Template),
         
         render: function(parent) {
-            var view;
+            var view,
+                patient = this.model.getReport().getDataPatient();
 
             $.extend(this._overview, {
                 descriptionTemplate: 'T4 measures how much of the hormone thyroxine is in {{patient.name}}.'
@@ -32,7 +33,15 @@ define([
             // render range
             view = new ViewSubtestRange({
                 model: this.model.getModelRange(),
-                name: this.model.getReport().getDataPatient().name
+                name: this.model.getReport().getDataPatient().name,
+                message: {
+                    good: Handlebars.compile('{{{patient.name}}}’s T4 level is within expected range.')({patient: patient}),
+                    bad: Handlebars.compile('{{{patient.name}}}’s T4 level is outside the expected range.')({patient: patient})
+                },
+                description: {
+                    good: Handlebars.compile('{{{patient.name}}}’s thyroid is functioning correctly.')({patient: patient}),
+                    bad: Handlebars.compile('This could be due to a variety of causes, further testing may be required. ')({patient: patient})
+                }
             });
 
             view.render(this.$elContent.find('.subtest-container'));
