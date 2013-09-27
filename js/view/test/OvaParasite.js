@@ -20,10 +20,17 @@
 
         templateContent: Handlebars.compile(Template),
 
+        templateBooleanContainer: Handlebars.compile(
+            '<div class="yui3-u-1-3 yui3-u-1-2-small-tablet yui3-u-1-2-phone">' +
+                '<div class="yui3-u-c">' +
+                    '<div class="boolean-container"></div>' +
+                '</div>' +
+            '</div>'
+        ),
+
         render: function(parent) {
             var self = this,
-                view,
-                currentPodIndex = 0;
+                view;
 
             $.extend(this._overview, {
                 descriptionTemplate: 'We checked {{patient.name}}’s stool for young parasites and eggs.'
@@ -39,17 +46,6 @@
                 if(subtestModel.getLabel().toLowerCase().match(/giardia*/) && subtestModel.getValueText().toLowerCase().match(/pos*/)){giardiaExist=1}
             });
 
-
-/*
-            // render all tests
-            $.each(this.model.getAllTestCodes(), function(i, subtestModel) {
-                view = new ViewSubtestBoolean({
-                    model: subtestModel
-                });
-
-                view.render(self.$elContent.find('.boolean-container').eq(i));
-            });
-*/
             // render all tests
             $.each(this.model.getAllTestCodes(), function(i, subtestModel) {
                 if(subtestModel.getLabel().toLowerCase().match(/giardia*/) && subtestModel.getValueText().toLowerCase().match(/neg*/) ){}
@@ -58,8 +54,7 @@
                       model: subtestModel
                      });
 
-                     view.render(self.$elContent.find('.boolean-container').eq(currentPodIndex));
-                     currentPodIndex++;
+                     view.render(self._generateBooleanContainer());
                 }
                 else if(subtestModel.getValueText().toLowerCase() == 'positive'){}
                 else if(giardiaExist == 0){
@@ -67,12 +62,18 @@
                       model: subtestModel
                      });
 
-                     view.render(self.$elContent.find('.boolean-container').eq(currentPodIndex));
-                     currentPodIndex++;
+                     view.render(self._generateBooleanContainer());
                 } else{}
 
             });
+        },
 
+        _generateBooleanContainer: function() {
+            var el = $(this.templateBooleanContainer());
+
+            this.$elContent.find('.results-container').append(el);
+
+            return el.find('.boolean-container');
         }
     });
 });
