@@ -4139,7 +4139,7 @@ span.placeholder {
 
 .view-widget-test-subsection {
   background-color: #f7f8f6;
-  border-top: 1px solid #b2b2b2;
+  border-top: 1px dotted #b2b2b2;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   padding: 0 20px 0 140px;
