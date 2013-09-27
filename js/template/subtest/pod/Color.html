@@ -1,9 +1,17 @@
 <div class="view-subtest-pod-color {{#if isBad}}bad{{/if}}">
-	<img class="scale high" src="images/subtest/pod/color/good-2x.png" alt="" />
-	<img class="scale low" src="images/subtest/pod/color/bad-2x.png" alt="" />
-
-	<img class="marker high" src="images/common/result-good-2x.png" alt="" />
-	<img class="marker low" src="images/common/result-bad-2x.png" alt="" />
+	<img class="scale" src="images/subtest/pod/color/{{#if isBad}}bad{{else}}good{{/if}}-2x.png" alt="" />
+    
+	<img class="marker" src="images/common/result-{{#if isBad}}bad{{else}}good{{/if}}-2x.png" alt="" />
 
 	<div class="label">{{label}}</div>
+
+    <div class="description">
+        <p>
+            {{#if message}}
+                <span class="message">{{message}}</span><br />
+            {{/if}}
+
+            {{description}}
+        </p>
+    </div>
 </div>

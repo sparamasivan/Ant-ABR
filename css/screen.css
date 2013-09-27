@@ -4034,19 +4034,14 @@ span.placeholder {
   display: block;
   width: 32px;
   margin: 0 auto;
+  cursor: pointer;
 }
 .view-subtest-pod-color .label {
   text-align: center;
   font-weight: bold;
   font-size: 210%;
 }
-.view-subtest-pod-color .low {
-  display: none;
-}
-.view-subtest-pod-color.bad .low {
-  display: block;
-}
-.view-subtest-pod-color.bad .high {
+.view-subtest-pod-color .description {
   display: none;
 }
 

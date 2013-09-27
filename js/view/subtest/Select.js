@@ -16,14 +16,14 @@ define([
         render: function(parent) {
             this.setElement(this.template({
                 options: this.options.options,
-                message: this.options.message,
-                description: this.options.description
+                message: this._getMessage(),
+                description: this._getDescription()
             }));
-
+            
             // IE8 doesn't support :last-child, so we'll add "last" class to last element
             this.$el.find('.options .option').last().addClass('last');
 
-            this.select(this.options.selectedIndex || 0, !!this.options.selectedIsBad);
+            this._select(this.options.selectedIndex || 0, !!this.options.selectedIsBad);
 
             this.$el.appendTo(parent);
 
@@ -34,7 +34,7 @@ define([
                 position: {
                     my: 'top center',
                     at: 'bottom center',
-                    target: this.$el.find('.widget-indicator')
+                    target: this.$el.find('.selected .widget-indicator')
                 },
                 style: {
                     classes: 'message-tooltip'
@@ -42,7 +42,7 @@ define([
             });
         },
 
-        select: function(selectedIndex, isBad) {
+        _select: function(selectedIndex, isBad) {
             var elOptions = this.$el.find('.options .option'),
                 elIndicators = elOptions.find('.widget-indicator');
 
@@ -55,6 +55,32 @@ define([
                 .addClass(function() {
                     if (isBad) return 'bad';
                 });
+        },
+
+        _getMessage: function() {
+            switch(typeof this.options.message) {
+                case 'string':
+                    return this.options.message;
+
+                case 'object':
+                    return this.options.message[(this.options.selectedIsBad) ? 'bad' : 'good'];
+
+                default:
+                    return null;
+            }
+        },
+
+        _getDescription: function() {
+            switch(typeof this.options.description) {
+                case 'string':
+                    return this.options.description;
+
+                case 'object':
+                    return this.options.description[(this.options.selectedIsBad) ? 'bad' : 'good'];
+
+                default:
+                    return null;
+            }
         }
     });
 });

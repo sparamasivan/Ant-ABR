@@ -105,6 +105,15 @@
                     "label": "HGB"
                 },
                 {
+                    "id": -1902958157,
+                    "value": "1",
+                    "description": "Anisocytosis description",
+                    "minValue": "12.1",
+                    "maxValue": "20.3",
+                    "testType": "RBC",
+                    "label": "Anisocytosis"
+                },
+                {
                     "id": -1902958153,
                     "value": "3",
                     "description": "Mean Cell Hemoglobin Concentration is the average concentration of hemoglobin in each Red Blood Cell and one of three RBC indices used to classify various types of anemia. Cells are either normal (normochromic), reduced in hemoglobin (hypochromic) or have an excess of hemoglobin (hyperchromic).",

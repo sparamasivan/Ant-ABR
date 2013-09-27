@@ -3,7 +3,8 @@ define([
     'backbone',
     'handlebars',
     'view/subtest/pod/Base',
-    'text!template/subtest/pod/Color.html'
+    'text!template/subtest/pod/Color.html',
+    'jquery-tooltip'
 ], function(
     $,
     Backbone,
@@ -23,9 +24,49 @@ define([
             this.$elContent.append(this.templateContent({
             	label: this.options.label,
             	isBad: this.options.isBad,
-                message: this.options.message,
-                description: this.options.description
+                message: this._getMessage(),
+                description: this._getDescription()
             }));
+
+            this.$el.tooltip({
+                content: {
+                    text: this.$el.find('.description')
+                },
+                position: {
+                    my: 'top center',
+                    at: 'bottom center',
+                    target: this.$el.find('.marker')
+                },
+                style: {
+                    classes: 'message-tooltip'
+                }
+            });
+        },
+
+        _getMessage: function() {
+            switch(typeof this.options.message) {
+                case 'string':
+                    return this.options.message;
+
+                case 'object':
+                    return this.options.message[(this.options.isBad) ? 'bad' : 'good'];
+
+                default:
+                    return null;
+            }
+        },
+
+        _getDescription: function() {
+            switch(typeof this.options.description) {
+                case 'string':
+                    return this.options.description;
+
+                case 'object':
+                    return this.options.description[(this.options.isBad) ? 'bad' : 'good'];
+
+                default:
+                    return null;
+            }
         }
     });
 });
