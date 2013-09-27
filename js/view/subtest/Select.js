@@ -37,7 +37,7 @@ define([
                     target: this.$el.find('.widget-indicator')
                 },
                 style: {
-                    classes: 'view-subtest-select-tooltip'
+                    classes: 'message-tooltip'
                 }
             });
         },

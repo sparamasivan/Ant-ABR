@@ -3,7 +3,8 @@ define([
     'backbone',
     'handlebars',
     'model/subtest/Range',
-    'text!template/subtest/Range.html'
+    'text!template/subtest/Range.html',
+    'jquery-tooltip'
 ], function(
     $,
     Backbone,
@@ -25,7 +26,8 @@ define([
         },
 
         render: function(parent) {
-            var cssClass;
+            var isBad = (this.model.getValue() < this.model.getMinValue() || this.model.getValue() > this.model.getMaxValue()),
+                cssClass;
 
             // render template
             this.setElement($(this.template({
@@ -35,7 +37,9 @@ define([
                     minimum: this.model.getMinValue(),
                     maximum: this.model.getMaxValue()
                 },
-                name: this.options.name
+                name: this.options.name,
+                message: (this.options.message) ? this.options.message[(isBad) ? 'bad' : 'good'] : null,
+                description: (this.options.description) ? this.options.description[(isBad) ? 'bad' : 'good'] : null,
             })));
 
             // add a class that will allow us to style according to low/normal/high range type
@@ -51,6 +55,23 @@ define([
             this._positionRangeElements();
 
             this.$el.appendTo(parent);
+
+            // attach tooltip
+            if (this.options.message || this.options.description) {
+                this.$el.tooltip({
+                    content: {
+                        text: this.$el.find('.description')
+                    },
+                    position: {
+                        my: 'top center',
+                        at: 'bottom center',
+                        target: this.$el.find('.pointer')
+                    },
+                    style: {
+                        classes: 'message-tooltip'
+                    }
+                });
+            }
         },
 
         /**

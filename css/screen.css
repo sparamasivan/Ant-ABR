@@ -1826,6 +1826,11 @@ h4 .small {
   }
 }
 
+.message-tooltip .message {
+  font-weight: bold;
+  font-size: 116%;
+}
+
 input {
   font-family: 'Apercu', sans-serif;
   font-size: 123.1%;
@@ -3526,6 +3531,7 @@ span.placeholder {
   width: 40px;
   height: 40px;
   margin: 9px auto 0;
+  cursor: pointer;
   background-image: url("../images/subtest/range-group/marker.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
@@ -3599,6 +3605,9 @@ span.placeholder {
 }
 .view-subtest-range.value-high .marker .text {
   right: 80px;
+}
+.view-subtest-range .description {
+  display: none;
 }
 
 .view-subtest-range-group {
@@ -3930,11 +3939,6 @@ span.placeholder {
 }
 .view-subtest-select .description {
   display: none;
-}
-
-.view-subtest-select-tooltip .message {
-  font-weight: bold;
-  font-size: 116%;
 }
 
 .view-subtest-types-of-cell2 .title {

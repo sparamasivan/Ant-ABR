@@ -62,7 +62,7 @@ define([
 
         render: function(parent) {
             $.extend(this._overview, {
-                descriptionTemplate: 'The CBC (Complete Blood Count) test examines the health and numbers of {{patient.name}}’s cells.',
+                descriptionTemplate: 'The CBC (Complete Blood Cell Count) test examines the health and numbers of {{patient.name}}’s cells.',
                 diagramFilename: 'diagram-' + this.model.getReport().getPatientSpecies() + '-2x.png'
             });
 
@@ -80,11 +80,21 @@ define([
         },
 
         _renderRbcSection: function(parent) {
-            var view = new ViewSubtestRange({
-                model: this.model.getModelRbcRange(),
-                name: this.model.getReport().getDataPatient().name,
-                unitOfMeasure: 'MILLION/uL'
-            });
+            var patient = this.model.getReport().getDataPatient(),
+                view = new ViewSubtestRange({
+                    model: this.model.getModelRbcRange(),
+                    name: this.model.getReport().getDataPatient().name,
+                    unitOfMeasure: 'MILLION/uL',
+                    message: {
+                        good: Handlebars.compile('{{{patient.name}}}’s red blood cell count is within expected range.')({patient: patient}),
+                        bad: Handlebars.compile('{{{patient.name}}}’s red blood cell count is outside the expected range.')({patient: patient})
+                    },
+                    description: {
+                        good: Handlebars.compile('We look at both the total number of red blood cells and their ratio to other cells to analyze {{{patient.name}}}’s well-being.')({patient: patient}),
+                        bad: Handlebars.compile('However, an unexpected cell count does not necessarily mean the {{{patient.name}}}’s red blood cells are out of balance. We look not only at the number of red blood cells, but also their ratio to the other types of cells.')({patient: patient})
+                    }
+                });
+
             view.render(parent.find('.range'));
 
             this._renderPieChart(parent.find('.chart'), this.model.getRbcPercentage(), 0);

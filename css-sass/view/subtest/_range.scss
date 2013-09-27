@@ -40,6 +40,7 @@
             height: 40px;
             margin: 9px auto 0;
 
+            cursor: pointer;
             background-image: url("../images/subtest/range-group/marker.png");
 
             @media
@@ -139,5 +140,9 @@
                 right: $markerWidth / 2 - $pointerWidth / 2;
             }
         }
+    }
+
+    .description {
+        display: none;
     }
 }
