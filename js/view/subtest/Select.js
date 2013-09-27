@@ -27,14 +27,13 @@ define([
 
             this.$el.appendTo(parent);
 
-            this.$el.tooltip({
+            this.$el.find('.selected .widget-indicator').tooltip({
                 content: {
                     text: this.$el.find('.description')
                 },
                 position: {
                     my: 'top center',
-                    at: 'bottom center',
-                    target: this.$el.find('.selected .widget-indicator')
+                    at: 'bottom center'
                 },
                 style: {
                     classes: 'message-tooltip'

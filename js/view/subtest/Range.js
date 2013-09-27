@@ -58,14 +58,13 @@ define([
 
             // attach tooltip
             if (this.options.message || this.options.description) {
-                this.$el.tooltip({
+                this.$el.find('.pointer').tooltip({
                     content: {
                         text: this.$el.find('.description')
                     },
                     position: {
                         my: 'top center',
-                        at: 'bottom center',
-                        target: this.$el.find('.pointer')
+                        at: 'bottom center'
                     },
                     style: {
                         classes: 'message-tooltip'

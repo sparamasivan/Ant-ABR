@@ -28,14 +28,13 @@ define([
                 description: this._getDescription()
             }));
 
-            this.$el.tooltip({
+            this.$el.find('.marker').tooltip({
                 content: {
                     text: this.$el.find('.description')
                 },
                 position: {
                     my: 'top center',
-                    at: 'bottom center',
-                    target: this.$el.find('.marker')
+                    at: 'bottom center'
                 },
                 style: {
                     classes: 'message-tooltip'
