@@ -76,14 +76,14 @@
                 },
                 {
                     "id": 10100,
-                    "value": "1.001",
+                    "value": "1.021",
                     "minValue": "1.015",
                     "maxValue": "1.050",
                     "label": "Specific gravity"
                 },
                 {
                     "id": 10101,
-                    "value": "7.0",
+                    "value": "7.2",
                     "minValue": "7.4",
                     "maxValue": "7.999999",
                     "label": "pH"

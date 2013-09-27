@@ -41,7 +41,8 @@ define([
         templateMicroscopicParticleContent: Handlebars.compile(TemplateMicroscopicParticle),
 
         render: function(parent) {
-            var mPh = this.model.getModelPh(),
+            var self = this,
+                mPh = this.model.getModelPh(),
                 phValue = mathRound(mPh.getValue(), 1);
 
             $.extend(this._overview, {
@@ -67,6 +68,24 @@ define([
             this._renderVisualAnalysisSection(this.$elContent.find('.test-section.visual'));
 
             this._renderChemicalAnalysisSection(this.$elContent.find('.test-section.visual'));
+
+            // pH tooltip
+            $.each(['color', 'appearance', 'ph'], function(i, section) {
+                var elSection = self.$elContent.find('.property.' + section);
+
+                elSection.find('.widget-indicator').tooltip({
+                    content: {
+                        text: elSection.find('.description')
+                    },
+                    position: {
+                        my: 'top center',
+                        at: 'bottom center'
+                    },
+                    style: {
+                        classes: 'message-tooltip'
+                    }
+                });
+            });
         },
 
         _renderVisualAnalysisSection: function(parent) {
@@ -84,6 +103,8 @@ define([
 
                 // prepare subsection content
                 contentEl = $(this.templateMicroscopicParticleContent({
+                    patient: patient,
+                    
                     components: _(this.model.getMicroscopicComponentModels())
                         .chain()
                         .map(function(model) {
@@ -109,6 +130,24 @@ define([
 
             // append subsection content to subsection
             view.setContent(contentEl);
+
+            // add tooltips
+            contentEl.find('.pod').each(function() {
+                var podEl = $(this);
+
+                podEl.find('.widget-indicator').tooltip({
+                    content: {
+                        text: podEl.find('.description')
+                    },
+                    position: {
+                        my: 'top center',
+                        at: 'bottom center'
+                    },
+                    style: {
+                        classes: 'message-tooltip'
+                    }
+                });
+            });
         },
 
         _renderChemicalAnalysisSection: function(parent) {
@@ -118,7 +157,8 @@ define([
 
             // concentration
             viewSubtest = new ViewSubtestSelect({
-                description: Handlebars.compile('This level reflects the water balance in {{{patient.name}}}’s body, which should be concentrated. If {{patient.name}} drinks too much water, the kidneys will dump it, resulting in diluted urine.')({patient: patient}),
+                message: Handlebars.compile('The concentration of {{{patient.name}}}’s urine was expected.')({patient: patient}),
+                description: Handlebars.compile('Concentration reflects the water balance in {{{patient.name}}}’s body.')({patient: patient}),
                 options: [
                     'Diluted',
                     'Neutral',

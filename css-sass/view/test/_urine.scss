@@ -40,6 +40,11 @@
 
         .widget-indicator {
             margin-top: 5px;
+            cursor: pointer;
+        }
+
+        .description {
+            display: none;
         }
     }
 
@@ -55,6 +60,7 @@
 
         .widget-indicator {
             vertical-align: middle;
+            cursor: pointer;
         }
         .label {
             font-size: 250%;
@@ -121,6 +127,10 @@
                 font-weight: bold;
             }
         }
+
+        .description {
+            display: none;
+        }
     }
 
     .test-subsection.particle {
@@ -157,6 +167,11 @@
                 position: absolute;
                 top: -5px;
                 left: - $widgetIndicatorWidth;
+                cursor: pointer;
+            }
+
+            .description {
+                display: none;
             }
         }
     }

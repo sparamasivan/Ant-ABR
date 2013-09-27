@@ -31,6 +31,24 @@
                                 <div>{{color.label}}</div>
                                 <div class="widget-indicator {{#if color.isBad}}bad{{/if}}"></div>
                             </div>
+
+                            <div class="description">
+                                <p>
+                                    <span class="message">
+                                        {{#if ph.isBad}}
+                                            {{patient.name}}’s urine was not an expected color.
+                                        {{else}}
+                                            {{patient.name}}’s urine was an expected color.
+                                        {{/if}}
+                                    </span><br />
+
+                                    {{#if ph.isBad}}
+                                        Many factors can affect the color of urine, from medication to diet.
+                                    {{else}}
+                                        Many factors can affect the color of urine, from medication to diet.
+                                    {{/if}}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -63,6 +81,24 @@
                             <div class="label">
                                 Expected Range
                             </div>
+                        </div>
+                        
+                        <div class="description">
+                            <p>
+                                <span class="message">
+                                    {{#if ph.isBad}}
+                                        {{patient.name}}’s urine’s appearance was not expected.
+                                    {{else}}
+                                        {{patient.name}}’s urine’s appearance was expected.
+                                    {{/if}}
+                                </span><br />
+
+                                {{#if ph.isBad}}
+                                    Urine is typically a clear liquid. An unexpected appearance would be caused by microscopic particles, such as cells or crystals.
+                                {{else}}
+                                    Urine is typically a clear liquid. It can appear cloudy if it contains unexpected cells or crystals.
+                                {{/if}}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -118,6 +154,24 @@
                             <div class="legend neutral">Neutral</div>
                             <div class="legend acidic">Acidic</div>
                             <div class="legend alkaline">Alkaline</div>
+
+                            <div class="description">
+                                <p>
+                                    <span class="message">
+                                        {{#if ph.isBad}}
+                                            The pH level of {{patient.name}}’s urine is outside the expected range.
+                                        {{else}}
+                                            The pH level of {{patient.name}}’s urine was expected.
+                                        {{/if}}
+                                    </span><br />
+
+                                    {{#if ph.isBad}}
+                                        Blood should always be at a specific pH level, which is neutral (5.5-7.0). The kidneys are responsible for maintaining {{patient.name}}’s pH level.
+                                    {{else}}
+                                        Blood should always be at a specific pH level, which is neutral (5.5-7.0). The kidneys are responsible for maintaining {{patient.name}}’s pH level.
+                                    {{/if}}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

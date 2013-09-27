@@ -3363,6 +3363,10 @@ span.placeholder {
 }
 .view-test-urine-analysis .diagram-palette .widget-indicator {
   margin-top: 5px;
+  cursor: pointer;
+}
+.view-test-urine-analysis .diagram-palette .description {
+  display: none;
 }
 .view-test-urine-analysis .property.appearance {
   font-family: 'Apercu', sans-serif;
@@ -3372,6 +3376,7 @@ span.placeholder {
 }
 .view-test-urine-analysis .property.appearance .widget-indicator {
   vertical-align: middle;
+  cursor: pointer;
 }
 .view-test-urine-analysis .property.appearance .label {
   font-size: 250%;
@@ -3447,6 +3452,9 @@ span.placeholder {
   font-size: 77%;
   font-weight: bold;
 }
+.view-test-urine-analysis .property.appearance .description {
+  display: none;
+}
 .view-test-urine-analysis .test-subsection.particle .pod {
   background-color: white;
   border: 1px solid #a3a3a3;
@@ -3475,6 +3483,10 @@ span.placeholder {
   position: absolute;
   top: -5px;
   left: -32px;
+  cursor: pointer;
+}
+.view-test-urine-analysis .test-subsection.particle .pod .description {
+  display: none;
 }
 .view-test-urine-analysis .property.ph .legend {
   position: absolute;

@@ -6,8 +6,14 @@
                     <div class="yui3-u-c">
                         <div class="pod">
                             <div class="inner">
-                                <span class="widget-indicator bad" title="{{description}}"></span>
+                                <span class="widget-indicator bad"></span>
                                 <span class="label">{{label}}</span>
+                            </div>
+                        
+                            <div class="description">
+                                <p>
+                                    {{description}}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -20,6 +26,16 @@
                         <div class="inner">
                             <span class="widget-indicator"></span>
                             <span class="label">None Found</span>
+                        </div>
+
+                        <div class="description">
+                            <p>
+                                <span class="message">
+                                    No microscopic particles were found in {{patient.name}}’s urine.
+                                </span><br />
+
+                                This means {{patient.name}}’s organs are functioning as expected.
+                            </p>
                         </div>
                     </div>
                 </div>
