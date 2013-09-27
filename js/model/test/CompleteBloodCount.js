@@ -94,9 +94,12 @@ define([
                 ranges = {};
 
             $.each(labels, function(type, label) {
-                // Sometimes, an ABSOLUTE <Cell> value may be missing and all we have is a <Cell> value which is a percentage
+                // get ABSOLUTE <Cell> value if it exists
                 ranges[type] = self._tryGetSubtestByTypeAndLabel('WBC', 'Absolute ' + label)
-                    || self._getSubtestByTypeAndLabel('WBC', label);
+                    // get <Cell> value as percentage
+                    || self._tryGetSubtestByTypeAndLabel('WBC', label)
+                    // or sometimes, both, absolute and percentage values are missing
+                    || null;
             });
 
             return ranges;
@@ -108,6 +111,11 @@ define([
                 totalPercentage = 0;
 
             $.each(ranges, function(i, range) {
+                if (!range) {
+                    // value not available, so assume 0
+                    return;
+                }
+
                 if (range.getUnitOfMeasure() == '%') {
                     totalPercentage += range.getValue();
                 } else {
@@ -120,6 +128,11 @@ define([
 
         getWbcCellPercentageByType: function(type) {
             var range = this.getWbcCellRanges()[type];
+
+            if (!range) {
+                // value not available, so assume 0
+                return 0;
+            }
 
             return (range.getUnitOfMeasure() == '%')
                 ? range.getValue() // already percentage
