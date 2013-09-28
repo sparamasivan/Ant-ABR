@@ -20,7 +20,10 @@ define([
             var self = this,
                 view;
 
-            this._overview.descriptionTemplate = this._getDescriptionTemplate();
+            $.extend(this._overview, {
+                descriptionTemplate: this._getDescriptionTemplate(),
+                moreTemplate: this._getMoreTemplate()
+            });
 
             ViewTestBase.prototype.render.apply(this, arguments);
             
@@ -41,11 +44,26 @@ define([
 
             if (this.model.hasFelvTest() && this.model.hasFivTest()) {
                 // both tests present
-                text = 'We tested {{patient.name}} for the presence of FeLV and FIV viruses.';
+                text = 'We tested {{{patient.name}}} for the presence of FeLV and FIV viruses.';
             } else if (this.model.hasFelvTest()) {
-                text = 'We tested {{patient.name}} for the presence of FeLV viruse.';
+                text = 'We tested {{{patient.name}}} for the presence of FeLV viruse.';
             } else {
-                text = 'We tested {{patient.name}} for the presence of FIV viruse.';
+                text = 'We tested {{{patient.name}}} for the presence of FIV viruse.';
+            }
+
+            return text;
+        },
+
+        _getMoreTemplate: function() {
+            var text;
+
+            if (this.model.hasFelvTest() && this.model.hasFivTest()) {
+                // both tests present
+                text = 'FeLV stands for Feline Leukemia Virus. FIV stands for Feline Immunodeficiency Virus.';
+            } else if (this.model.hasFelvTest()) {
+                text = 'FeLV stands for Feline Leukemia Virus.';
+            } else {
+                text = 'FIV stands for Feline Immunodeficiency Virus.';
             }
 
             return text;

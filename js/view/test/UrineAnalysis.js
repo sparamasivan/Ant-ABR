@@ -46,7 +46,8 @@ define([
                 phValue = mathRound(mPh.getValue(), 1);
 
             $.extend(this._overview, {
-                descriptionTemplate: 'Analyzing {{patient.name}}’s urine gives us an excellent snapshot of how the body’s organs and systems are functioning.'
+                descriptionTemplate: 'Analyzing {{{patient.name}}}’s urine gives us an excellent snapshot of how the body’s organs and systems are functioning.',
+                moreTemplate: 'Urine is waste that’s produced from {{{patient.name}}}’s blood after it has passed through these systems. We can spot changes in {{{patient.name}}} earlier here than we can in other tests.'
             });
 
             ViewTestBase.prototype.render.apply(this, arguments);

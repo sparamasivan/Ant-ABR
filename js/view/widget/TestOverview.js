@@ -25,6 +25,9 @@ define([
                 description: Handlebars.compile(this.options.descriptionTemplate)({
                     patient: this.model.getReport().getDataPatient()
                 }),
+                more: Handlebars.compile(this.options.moreTemplate)({
+                    patient: this.model.getReport().getDataPatient()
+                }),
                 type: this.model.getType(),
                 diagramFilename: this._getDiagramFilename()
             })));

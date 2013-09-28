@@ -23,7 +23,8 @@ define([
                 view;
 
             $.extend(this._overview, {
-                descriptionTemplate: 'Some diseases are spread by ticks. We tested {{patient.name}} for signs of exposure to these.'
+                descriptionTemplate: 'Some diseases are spread by ticks. We tested {{{patient.name}}} for signs of exposure to these.',
+                moreTemplate: 'Contrary to popular belief, ticks don’t just live in certain geographic areas – ticks are found all over the world and can be easily transported on clothing and other animals.'
             });
             
             ViewTestBase.prototype.render.apply(this, arguments);

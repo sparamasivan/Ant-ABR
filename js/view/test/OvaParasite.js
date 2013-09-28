@@ -33,7 +33,8 @@
                 view;
 
             $.extend(this._overview, {
-                descriptionTemplate: 'We checked {{patient.name}}’s stool for young parasites and eggs.'
+                descriptionTemplate: 'We checked {{{patient.name}}}’s stool for young parasites and eggs.',
+                moreTemplate: 'These parasites are found in the intestine and are the most common and preventable form of infectious disease in dogs and cats.'
             });
 
             ViewTestBase.prototype.render.apply(this, arguments);

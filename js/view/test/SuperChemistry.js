@@ -25,9 +25,9 @@ define([
                 view;
 
             $.extend(this._overview, {
-                descriptionTemplate: '{{patient.name}}’s body chemistry is unique - like a fingerprint - and remains relatively constant over time.'
+                descriptionTemplate: '{{{patient.name}}}’s body chemistry is unique - like a fingerprint - and remains relatively constant over time.',
+                moreTemplate: 'A chemistry panel gives us this fingerprint, showing us how all {{{patient.name}}}’s systems work together, so we know {{{patient.name}}}’s expected numbers and can easily identify changes.'
             });
-
             ViewTestBase.prototype.render.apply(this, arguments);
             
             this.$elContent.append(this.templateContent());

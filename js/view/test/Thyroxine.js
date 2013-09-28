@@ -23,7 +23,8 @@ define([
                 patient = this.model.getReport().getDataPatient();
 
             $.extend(this._overview, {
-                descriptionTemplate: 'T4 measures how much of the hormone thyroxine is in {{patient.name}}.'
+                descriptionTemplate: 'T4 measures how much of the hormone thyroxine is in {{{patient.name}}}.',
+                moreTemplate: 'This hormone is produced in the thyroid gland and helps regulate {{{patient.name}}}’s growth and metabolism. It circulates through the body and tells the organs and systems how to use energy and how fast to work.'
             });
 
             ViewTestBase.prototype.render.apply(this, arguments);
