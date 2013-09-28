@@ -109,6 +109,12 @@ define([
         );
     });
 
+    Handlebars.registerHelper('mathRound', function(value, decimalPlaces) {
+        var decimalPlaces = (typeof decimalPlaces != 'number') ? 0 : decimalPlaces,
+            roundedValue = Math.round(value * Math.pow(10, decimalPlaces)) / Math.pow(10, decimalPlaces);
+        return roundedValue.toFixed(decimalPlaces);
+    });
+
     Handlebars.registerHelper('phoneLink', function(phone, classes, options) {
         var escPhone = Handlebars.Utils.escapeExpression(phone),
             escClasses = Handlebars.Utils.escapeExpression(classes || ''),

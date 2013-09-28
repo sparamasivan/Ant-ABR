@@ -14,8 +14,14 @@ define([
 ) {
     var GROUP_TYPES = {
         fighter: {
-            min: 60,
-            max: 70,
+            canine: {
+                min: 60,
+                max: 77
+            },
+            feline: {
+                min: 35,
+                max: 78
+            },
             message: {
                 good: '{{{patient.name}}}’s has an expected number of infection fighters.',
                 bad: '{{{patient.name}}}’s number of infection fighters are outside the expected range.'
@@ -26,8 +32,14 @@ define([
             }
         },
         defender: {
-            min: 30,
-            max: 40,
+            canine: {
+                min: 15,
+                max: 40
+            },
+            feline: {
+                min: 21,
+                max: 49
+            },
             message: {
                 good: '{{{patient.name}}}’s has an expected number of immune defenders.',
                 bad: '{{{patient.name}}}’s number of infection fighters are outside the expected range.'
@@ -38,14 +50,20 @@ define([
             }
         },
         watcher: {
-            min: 0.5,
-            max: 2,
+            canine: {
+                min: 0,
+                max: 11
+            },
+            feline: {
+                min: 0,
+                max: 13
+            },
             message: {
                 good: '{{{patient.name}}}’s has an expected number of allergen watchmen.',
                 bad: '{{{patient.name}}}’s number of allergen watchmen are outside the expected range.'
             },
             description: {
-                good: 'These cells keep a lookout for any allergens that might enter {{{patient.name}}}’s system. An allergen can be anything, from pollen to heartworm, that causes the body to react, becoming irritated or inflamed.',
+                good: 'These cells keep a lookout for any allergens that might enter {{{patient.name}}}’s system. An allergen can be anything, from pollen to parasites, that causes the body to react, becoming irritated or inflamed.',
                 bad: 'While we expect allergen watchmen to make up the smallest amount of {{{patient.name}}}’s white blood cells, it is important that they stay balanced appropriately with the other cells.'
             }
         }
@@ -64,19 +82,22 @@ define([
 
         render: function(parent) {
             var self = this,
+                species = this.model.getReport().getPatientSpecies(),
                 templateConfig = {
-                    species: this.model.getReport().getPatientSpecies()
+                    species: species
                 },
                 patient = this.model.getReport().getDataPatient();
 
             $.each(GROUP_TYPES, function(type, config) {
                 var percentage = self.model.getWbcCellPercentageByGroupType(type),
-                    isBad = (percentage < config.min || percentage > config.max) ? true : false;
+                    min = config[species].min,
+                    max = config[species].max,
+                    isBad = (percentage < min || percentage > max) ? true : false;
 
                 templateConfig[type] = {
                     percentage: percentage,
-                    min: config.min,
-                    max: config.max,
+                    min: min,
+                    max: max,
                     isBad: isBad,
                     message: Handlebars.compile(config.message[(isBad) ? 'bad' : 'good'])({patient: patient}),
                     description: Handlebars.compile(config.description[(isBad) ? 'bad' : 'good'])({patient: patient})
