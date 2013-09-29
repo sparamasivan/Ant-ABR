@@ -10,7 +10,7 @@ define([
         },
 
         getLabel: function() {
-            return this.get('label');
+            return this._getOption('label') || this.get('label');
         },
 
         getDescription: function() {
@@ -27,6 +27,14 @@ define([
 
         getValueText: function() {
             return this.get('valueText');
+        },
+
+        _getOption: function(name) {
+            if (typeof this.options != 'object') {
+                return null;
+            }
+
+            return this.options[name];
         }
     });
 });

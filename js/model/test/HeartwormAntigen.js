@@ -29,10 +29,19 @@ define([
             }
         },
 
+        getModelHeartwormBoolean: function() {
+            return this.getAllTestCodes()[0];
+        },
+
         _createSubtest: function(subtestData) {
-            // all subtests are boolean
+            // hardcode label
+            var label = 'Heartworm';
+
+            // there should be only one subtest, and it's a boolean
             return new ModelSubtestBoolean(subtestData, {
-                messageTypes: this._getBooleanResultMessagesByLabel(subtestData.label)
+                // override label
+                label: label,
+                messageTypes: this._getBooleanResultMessagesByLabel(label)
             });
         },
 

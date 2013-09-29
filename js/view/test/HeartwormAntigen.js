@@ -33,7 +33,7 @@ define([
 
             // render all tests
             view = new ViewSubtestBoolean({
-                model: this.model.getAllTestCodes()[0]
+                model: this.model.getModelHeartwormBoolean()
             });
 
             view.render(self.$elContent.find('.boolean-container'));
