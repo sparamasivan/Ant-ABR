@@ -27,11 +27,11 @@ define([
         },
 
         isPhoneMedia: function() {
-            return Modernizr.mq('(max-width:480px)');
+            return Modernizr.mq('(max-width:630px)');
         },
 
         isTabletMedia: function() {
-            return Modernizr.mq('(min-width:481px and max-width:767px');
+            return Modernizr.mq('(min-width:631px and max-width:767px');
         },
 
         isDesktopMedia: function() {
