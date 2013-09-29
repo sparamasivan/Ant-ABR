@@ -1776,6 +1776,12 @@ h4 .small {
   background-repeat: no-repeat;
   background-position: center 10px;
 }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .section-break {
+    background-image: url("../images/common/diamonds-2x.png");
+    background-size: 18px;
+  }
+}
 
 .caption {
   font-family: 'Apercu', sans-serif;
