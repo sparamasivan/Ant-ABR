@@ -1,10 +1,10 @@
 define([
     'jquery',
-    'modernizr',
+    'model/MediaQuery',
     'jquery-qtip'
 ], function(
     $,
-    Modernizr
+    ModelMediaQuery
 ) {
     var defaultModalOptions,
         getDefaultModalOptions = function() {
@@ -63,7 +63,7 @@ define([
                     events: {
                         show: function(event, api) {
                             if (!api.cache.show) {
-                                if (Modernizr.mq('(max-width:480px)') && api.get('show.modal.enabled')) {
+                                if (ModelMediaQuery.isPhoneMedia() && api.get('show.modal.enabled')) {
                                     if (!api.cache.nonModalOptions) {
                                         // load modal option values
                                         api.cache.nonModalOptions = {};
