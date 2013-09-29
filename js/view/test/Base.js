@@ -162,7 +162,9 @@ define([
          * Did the user actually click the status icon/button when clicking inside the header
          */
         isHeaderStatusClickedEvent: function(event) {
-            return event.target === $(event.currentTarget).find('.status')[0];
+            var elStatus = $(event.currentTarget).find('.status')[0];
+
+            return event.target === elStatus || $.contains(elStatus, event.target);
         }
     });
 });
