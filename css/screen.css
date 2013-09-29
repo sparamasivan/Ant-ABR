@@ -1834,7 +1834,8 @@ h4 .small {
 
 .message-tooltip .message {
   font-weight: bold;
-  font-size: 116%;
+  display: block;
+  margin-bottom: 8px;
 }
 
 input {
