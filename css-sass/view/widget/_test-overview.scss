@@ -3,16 +3,6 @@
         color: white;
     }
 
-    .column {
-        display: table;
-        height: 100%;
-
-        .inner {
-            display: table-cell;
-            vertical-align: middle;
-        }
-    }
-
     .diagram-container {
         >.inner {
             margin: 0 auto;
@@ -23,6 +13,23 @@
         @include secondaryFont;
         font-size: 197%;
         font-weight: bold;
+        margin-top: 15%;
+    }
+
+    .more {
+        display: none;
+        margin-top: 20px;
+    }
+
+    .widget-arrow {
+        cursor: pointer;
+    }
+
+    /* Tablet + Phone */
+    @media (max-width:($mq-tablet - 1px)) {
+        .description {
+            margin-top: 0;
+        }
     }
 
     /* phone */
@@ -33,7 +40,7 @@
 
         .diagram-container {
             display: block;
-            padding: 20px 50px 20px;
+            padding: 10px 50px 10px;
 
             >.inner {
                 display: block;
@@ -42,6 +49,10 @@
 
         .description {
             font-size: 153.9%;
+        }
+
+        .more {
+            margin-top: 10px;
         }
     }
 }

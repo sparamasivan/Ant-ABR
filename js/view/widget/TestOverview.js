@@ -4,7 +4,6 @@ define([
     'handlebars',
     'text!template/widget/TestOverview.html',
     'model/MediaQuery',
-    'jquery-equal-heights',
     'jquery-waitforimages'
 ], function(
     $,
@@ -35,25 +34,16 @@ define([
             // append to parent
             this.$el.appendTo(parent);
 
-            // group sections
-            this.$elSections = this.$el.find('.section .yui3-u-c');
-
-            // make height of heading boxes the same so that we can nicely vertically align elements
-            this.$el.waitForImages(function() {
-                self.$elSections.equalHeights({
-                    callback: function(tallestHeight) {
-                        return !ModelMediaQuery.isPhoneMedia();
-                    }
-                });
-                deferred.resolve();
+            // trigger read more section
+            this.$el.find('.widget-arrow').bind('click', function() {
+                self.$el.find('.more').toggle();
+                $(this).toggleClass('down');
             });
 
             return deferred.promise();
         },
 
         refresh: function() {
-            // recalculate heights
-            this.$elSections.equalHeights('refresh');
         },
 
         _getDiagramFilename: function() {

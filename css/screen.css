@@ -4115,18 +4115,11 @@ span.placeholder {
   }
 }
 .view-widget-test-overview {
+  /* Tablet + Phone */
   /* phone */
 }
 .view-widget-test-overview > .test-section-inner {
   color: white;
-}
-.view-widget-test-overview .column {
-  display: table;
-  height: 100%;
-}
-.view-widget-test-overview .column .inner {
-  display: table-cell;
-  vertical-align: middle;
 }
 .view-widget-test-overview .diagram-container > .inner {
   margin: 0 auto;
@@ -4135,6 +4128,19 @@ span.placeholder {
   font-family: 'Apercu', sans-serif;
   font-size: 197%;
   font-weight: bold;
+  margin-top: 15%;
+}
+.view-widget-test-overview .more {
+  display: none;
+  margin-top: 20px;
+}
+.view-widget-test-overview .widget-arrow {
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .view-widget-test-overview .description {
+    margin-top: 0;
+  }
 }
 @media (max-width: 480px) {
   .view-widget-test-overview > .inner {
@@ -4142,13 +4148,16 @@ span.placeholder {
   }
   .view-widget-test-overview .diagram-container {
     display: block;
-    padding: 20px 50px 20px;
+    padding: 10px 50px 10px;
   }
   .view-widget-test-overview .diagram-container > .inner {
     display: block;
   }
   .view-widget-test-overview .description {
     font-size: 153.9%;
+  }
+  .view-widget-test-overview .more {
+    margin-top: 10px;
   }
 }
 
