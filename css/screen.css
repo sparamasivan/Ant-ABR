@@ -2862,7 +2862,7 @@ span.placeholder {
 .view-overview .widget-circle-arrow {
   position: absolute;
   left: 50%;
-  bottom: -42px;
+  bottom: -44px;
 }
 .view-overview .widget-circle-arrow img {
   margin-left: -42.5px;
@@ -2893,10 +2893,15 @@ span.placeholder {
 }
 .view-overview .page-section-explore-tests .yui3-u-c {
   text-align: center;
-  padding-top: 85px;
+  padding-top: 50px;
   padding-bottom: 15px;
   margin-top: 2px;
   margin-bottom: 0;
+}
+@media (max-width: 630px) {
+  .view-overview .page-section-explore-tests .yui3-u-c {
+    padding-top: 85px;
+  }
 }
 .view-overview .phone-container {
   font-weight: bold;

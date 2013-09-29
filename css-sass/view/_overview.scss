@@ -267,7 +267,7 @@
 	.widget-circle-arrow {
 		position: absolute;
 		left: 50%;
-		bottom: -42px;
+		bottom: -44px;
 
 		img {
 			margin-left: -1 * $widgetCircleArrowWidth / 2;
@@ -296,10 +296,15 @@
 
 		.yui3-u-c {
 			text-align: center;
-			padding-top: 85px;
+			padding-top: 50px;
 			padding-bottom: 15px;
 			margin-top: 2px;
 			margin-bottom: 0;
+
+
+			@media (max-width:($mq-phone)) {
+				padding-top: 85px;
+			}
 		}
 	}
 
