@@ -41,18 +41,8 @@
     background-image: url('../images/overview/recap/pattern.png');
     padding: 10px 0 20px;
 
-    .arrow {
-        width: 122px;
-        height: 122px;
-        cursor: pointer;
-        position: relative;
-        margin: 0 auto;
-
-        img {
-            position: absolute;
-            display: block;
-            width: 100%;
-        }
+    .widget-circle-arrow {
+        margin: 10px auto 20px;
     }
 
     h1 {
@@ -64,9 +54,9 @@
     @media (max-width:($mq-phone)) {
         padding: 0;
 
-        .arrow {
-            height: 94px;
-            width: 94px;
+        .widget-circle-arrow {
+            margin-top: 0;
+            margin-bottom: 10px;
         }
 
         h1 {

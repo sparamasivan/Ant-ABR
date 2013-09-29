@@ -1832,6 +1832,24 @@ h4 .small {
   }
 }
 
+.widget-circle-arrow {
+  position: relative;
+  width: 85px;
+  height: 85px;
+  cursor: pointer;
+}
+.widget-circle-arrow img {
+  position: absolute;
+  display: block;
+  width: 100%;
+}
+@media (max-width: 630px) {
+  .widget-circle-arrow {
+    width: 65px;
+    height: 65px;
+  }
+}
+
 .message-tooltip .message {
   font-weight: bold;
   display: block;
@@ -2031,17 +2049,8 @@ span.placeholder {
   padding: 10px 0 20px;
   /* phone */
 }
-.page-section-conclusion .arrow {
-  width: 122px;
-  height: 122px;
-  cursor: pointer;
-  position: relative;
-  margin: 0 auto;
-}
-.page-section-conclusion .arrow img {
-  position: absolute;
-  display: block;
-  width: 100%;
+.page-section-conclusion .widget-circle-arrow {
+  margin: 10px auto 20px;
 }
 .page-section-conclusion h1 {
   text-align: center;
@@ -2051,9 +2060,9 @@ span.placeholder {
   .page-section-conclusion {
     padding: 0;
   }
-  .page-section-conclusion .arrow {
-    height: 94px;
-    width: 94px;
+  .page-section-conclusion .widget-circle-arrow {
+    margin-top: 0;
+    margin-bottom: 10px;
   }
   .page-section-conclusion h1 {
     margin-bottom: 20px;
@@ -2850,15 +2859,13 @@ span.placeholder {
 .view-overview .page-section-next-steps p {
   margin-top: 0;
 }
-.view-overview .arrow {
+.view-overview .widget-circle-arrow {
   position: absolute;
   left: 50%;
-  cursor: pointer;
+  bottom: 42px;
 }
-.view-overview .arrow img {
-  position: absolute;
-  display: block;
-  width: 100%;
+.view-overview .widget-circle-arrow img {
+  margin-left: -42.5px;
 }
 .view-overview .contact {
   font-family: 'Apercu', sans-serif;
@@ -2907,13 +2914,6 @@ span.placeholder {
     padding-top: 25px;
     padding-bottom: 50px;
   }
-  .view-overview .arrow {
-    bottom: 60px;
-    width: 122px;
-  }
-  .view-overview .arrow img {
-    margin-left: -70px;
-  }
 }
 @media (max-width: 630px) {
   .view-overview .page-section-ran .testCounter {
@@ -2922,12 +2922,11 @@ span.placeholder {
   .view-overview .page-section-next-steps {
     padding: 10px 0;
   }
-  .view-overview .arrow {
-    bottom: -8px;
-    width: 94px;
+  .view-overview .widget-circle-arrow {
+    bottom: -18px;
   }
-  .view-overview .arrow img {
-    margin-left: -47px;
+  .view-overview .widget-circle-arrow img {
+    margin-left: -32.5px;
   }
 }
 

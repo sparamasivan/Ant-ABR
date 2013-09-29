@@ -264,15 +264,13 @@
 	}
 
 
-	.arrow {
+	.widget-circle-arrow {
 		position: absolute;
 		left: 50%;
-		cursor: pointer;
+		bottom: 42px;
 
 		img {
-			position: absolute;
-			display: block;
-			width: 100%;
+			margin-left: -1 * $widgetCircleArrowWidth / 2;
 		}
 	}
 
@@ -325,15 +323,6 @@
 			padding-top: 25px;
 			padding-bottom: 50px;
 		}
-
-		.arrow {
-			bottom: 60px;
-			width: 122px;
-
-			img {
-				margin-left: -1 * 122px / 2 - 9px;
-			}
-		}
 	}
 
 	/* phone */
@@ -348,12 +337,11 @@
 			padding: 10px 0;
 		}
 
-		.arrow {
-			bottom: -8px;
-			width: 94px;
+		.widget-circle-arrow {
+			bottom: -18px;
 
 			img {
-				margin-left: -1 * 94px / 2;
+				margin-left: -1 * $widgetCircleArrowWidthPhone / 2;
 			}
 		}
 	}

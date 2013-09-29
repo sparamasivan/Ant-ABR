@@ -65,7 +65,7 @@ define([
             });
 
             // go to first section when arrow clicked
-            this.$el.find('.arrow').bind('click', function() {
+            this.$el.find('.widget-circle-arrow').bind('click', function() {
                 // navigate to section
                 Backbone.history.navigate('section/' + testCollection.first().id);
 

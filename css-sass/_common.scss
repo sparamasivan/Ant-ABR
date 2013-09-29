@@ -84,6 +84,26 @@ $widgetIndicatorWidth: 32px;
     }
 }
 
+$widgetCircleArrowWidth: image-width("../images/overview/recap/arrow-down.png") / 2;
+$widgetCircleArrowWidthPhone: 65px;
+.widget-circle-arrow {
+    position: relative;
+    width: $widgetCircleArrowWidth;
+    height: $widgetCircleArrowWidth;
+    cursor: pointer;
+
+    img {
+        position: absolute;
+        display: block;
+        width: 100%;
+    }
+
+    @media (max-width:($mq-phone)) {
+        width: $widgetCircleArrowWidthPhone;
+        height: $widgetCircleArrowWidthPhone;
+    }
+}
+
 .message-tooltip {
     .message {
         font-weight: bold;

@@ -47,7 +47,7 @@ define([
                 patient: this.model.getDataPatient()
             })));
 
-            this.$el.find('.page-section-conclusion .arrow').bind('click', function() {
+            this.$el.find('.page-section-conclusion .widget-circle-arrow').bind('click', function() {
                 // close all sections
                 EventDispatcher.trigger('sections.collapse');
 
