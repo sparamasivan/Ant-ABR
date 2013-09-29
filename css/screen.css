@@ -3966,27 +3966,45 @@ span.placeholder {
   position: relative;
   height: 190px;
 }
+.view-subtest-types-of-cell2 .diagram .circle {
+  display: block;
+  margin: 0 auto;
+}
+.view-subtest-types-of-cell2 .diagram.big .circle {
+  width: 157px;
+  padding-top: 21px;
+}
+.view-subtest-types-of-cell2 .diagram.big .number {
+  font-size: 450%;
+}
+.view-subtest-types-of-cell2 .diagram.big .symbol {
+  font-size: 225%;
+}
+.view-subtest-types-of-cell2 .diagram.medium .circle {
+  width: 127px;
+  padding-top: 34px;
+}
+.view-subtest-types-of-cell2 .diagram.medium .number {
+  font-size: 375%;
+}
+.view-subtest-types-of-cell2 .diagram.medium .symbol {
+  font-size: 200%;
+}
+.view-subtest-types-of-cell2 .diagram.small .circle {
+  width: 90px;
+  padding-top: 50px;
+}
+.view-subtest-types-of-cell2 .diagram.small .number {
+  font-size: 300%;
+}
+.view-subtest-types-of-cell2 .diagram.small .symbol {
+  font-size: 175%;
+}
 .view-subtest-types-of-cell2 .icon {
   width: 52px;
   position: absolute;
   top: 0;
   left: 0;
-}
-.view-subtest-types-of-cell2 .circle {
-  display: block;
-  margin: 0 auto;
-}
-.view-subtest-types-of-cell2 .circle.big {
-  width: 157px;
-  padding-top: 18px;
-}
-.view-subtest-types-of-cell2 .circle.medium {
-  width: 127px;
-  padding-top: 33px;
-}
-.view-subtest-types-of-cell2 .circle.small {
-  width: 90px;
-  padding-top: 50px;
 }
 .view-subtest-types-of-cell2 .percentage {
   font-family: 'Apercu', sans-serif;
@@ -3997,12 +4015,10 @@ span.placeholder {
   top: 76px;
   text-align: center;
 }
-.view-subtest-types-of-cell2 .percentage .number {
-  font-size: 300%;
+.view-subtest-types-of-cell2 .number {
   line-height: 100%;
 }
-.view-subtest-types-of-cell2 .percentage .symbol {
-  font-size: 150%;
+.view-subtest-types-of-cell2 .symbol {
   vertical-align: top;
 }
 .view-subtest-types-of-cell2 .range .widget-indicator {
