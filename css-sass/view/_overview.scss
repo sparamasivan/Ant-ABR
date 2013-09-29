@@ -267,7 +267,7 @@
 	.widget-circle-arrow {
 		position: absolute;
 		left: 50%;
-		bottom: 42px;
+		bottom: -42px;
 
 		img {
 			margin-left: -1 * $widgetCircleArrowWidth / 2;
@@ -338,7 +338,7 @@
 		}
 
 		.widget-circle-arrow {
-			bottom: -18px;
+			bottom: -82px;
 
 			img {
 				margin-left: -1 * $widgetCircleArrowWidthPhone / 2;

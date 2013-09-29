@@ -2862,7 +2862,7 @@ span.placeholder {
 .view-overview .widget-circle-arrow {
   position: absolute;
   left: 50%;
-  bottom: 42px;
+  bottom: -42px;
 }
 .view-overview .widget-circle-arrow img {
   margin-left: -42.5px;
@@ -2923,7 +2923,7 @@ span.placeholder {
     padding: 10px 0;
   }
   .view-overview .widget-circle-arrow {
-    bottom: -18px;
+    bottom: -82px;
   }
   .view-overview .widget-circle-arrow img {
     margin-left: -32.5px;
