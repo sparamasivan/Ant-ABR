@@ -3982,7 +3982,7 @@ span.placeholder {
 }
 .view-subtest-types-of-cell2 .diagram.medium .circle {
   width: 127px;
-  padding-top: 34px;
+  padding-top: 32px;
 }
 .view-subtest-types-of-cell2 .diagram.medium .number {
   font-size: 375%;
@@ -3992,7 +3992,7 @@ span.placeholder {
 }
 .view-subtest-types-of-cell2 .diagram.small .circle {
   width: 90px;
-  padding-top: 50px;
+  padding-top: 46px;
 }
 .view-subtest-types-of-cell2 .diagram.small .number {
   font-size: 300%;
@@ -4012,7 +4012,7 @@ span.placeholder {
   letter-spacing: -1px;
   position: absolute;
   width: 100%;
-  top: 76px;
+  top: 72px;
   text-align: center;
 }
 .view-subtest-types-of-cell2 .number {
