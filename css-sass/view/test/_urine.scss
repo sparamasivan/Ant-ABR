@@ -55,7 +55,12 @@
         @include secondaryFont;
 
         .text {
-            margin-top: 80px;
+            margin-top: 26%;
+    
+            /* phone */
+            @media (max-width:$mq-phone) {
+                margin-top: 30px;
+            }
         }
 
         .widget-indicator {
@@ -82,9 +87,9 @@
 
             .value {
                 position: absolute;
-                top: 50%;
+                top: -50%;
                 width: 23%;
-                margin-top: -16%;
+                image-rendering: optimizeQuality;
 
                 .pattern {
                     display: block;
@@ -103,7 +108,7 @@
         }
 
         .expected {
-            padding-top: 10px;
+            padding-top: 4px;
 
             .range {
                 padding: 2px 2px;
@@ -117,15 +122,18 @@
                 background-color: #6b6b6b;
                 width: 43%;
             }
+        }
 
-            .label {
-                color: #444;
-                padding-top: 6px;
-                text-align: center;
-                text-transform: uppercase;
-                font-size: 77%;
-                font-weight: bold;
-            }
+        .expected-label {
+            color: #444;
+            padding-top: 6px;
+            text-align: center;
+            width: 43%;
+            text-transform: uppercase;
+            font-size: 77%;
+            font-weight: bold;
+
+            margin-bottom: 20px;
         }
 
         .description {

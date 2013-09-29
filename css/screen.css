@@ -3383,7 +3383,13 @@ span.placeholder {
   font-family: 'Apercu', sans-serif;
 }
 .view-test-urine-analysis .property.appearance .text {
-  margin-top: 80px;
+  margin-top: 26%;
+  /* phone */
+}
+@media (max-width: 630px) {
+  .view-test-urine-analysis .property.appearance .text {
+    margin-top: 30px;
+  }
 }
 .view-test-urine-analysis .property.appearance .widget-indicator {
   vertical-align: middle;
@@ -3407,9 +3413,9 @@ span.placeholder {
 }
 .view-test-urine-analysis .property.appearance .actual .value {
   position: absolute;
-  top: 50%;
+  top: -50%;
   width: 23%;
-  margin-top: -16%;
+  image-rendering: optimizeQuality;
 }
 .view-test-urine-analysis .property.appearance .actual .value .pattern {
   display: block;
@@ -3442,7 +3448,7 @@ span.placeholder {
   left: 82%;
 }
 .view-test-urine-analysis .property.appearance .expected {
-  padding-top: 10px;
+  padding-top: 4px;
 }
 .view-test-urine-analysis .property.appearance .expected .range {
   padding: 2px 2px;
@@ -3455,13 +3461,15 @@ span.placeholder {
   background-color: #6b6b6b;
   width: 43%;
 }
-.view-test-urine-analysis .property.appearance .expected .label {
+.view-test-urine-analysis .property.appearance .expected-label {
   color: #444;
   padding-top: 6px;
   text-align: center;
+  width: 43%;
   text-transform: uppercase;
   font-size: 77%;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 .view-test-urine-analysis .property.appearance .description {
   display: none;
