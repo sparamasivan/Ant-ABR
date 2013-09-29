@@ -6,46 +6,17 @@
         "worms": {
             "testCodes": [
                 {
-                    "id": "ova1",
-                    "testType": "boolean",
-                    "label": "Roundworm",
-                    "description": "Roundworms are a type of parasite that can be transmitted to people as well as dogs and cats.",
-                    "valueText": "NEGATIVE"
-                },
-                {
-                    "id": "ova2",
-                    "testType": "boolean",
-                    "label": "Hookworm",
-                    "description": "Hookworms are a type of parasite that can be transmitted to people as well as dogs and cats.",
-                    "valueText": "NEGATIVE"
-                },
-                {
-                    "id": "ova3",
-                    "testType": "boolean",
-                    "label": "Whipworm",
-                    "description": "Whipworms are more difficult to prevent, but they’re also more rare.",
-                    "valueText": "NEGATIVE"
-                },
-                {
-                    "id": "ova4",
-                    "testType": "boolean",
-                    "label": "Tapeworm",
-                    "description": "Tapeworms are transmitted by fleas, so prevention comes with good flea control.",
-                    "valueText": "NEGATIVE"
-                },
-                {
-                    "id": "ova5",
-                    "testType": "boolean",
-                    "label": "Coccidia",
-                    "description": "Coccidia is only transmissable species to species, for example dogs can only infect other dogs, and cats can only infect other cats.",
-                    "valueText": "NEGATIVE"
-                },
-                {
-                    "id": "ova6",
-                    "testType": "boolean",
-                    "label": "Giardia",
-                    "description": "They are a widespread parasite found in dogs and cats and are easily, and commonly, transmitted to people.",
-                    "valueText": "NEGATIVE"
+                   "id":-1478820043,
+                   "value":null,
+                   "comment":null,
+                   "display":true,
+                   "description":"We tested for roundworm, hookworm, whipworm, tapeworm, coccidia and giardia.",
+                   "minValue":null,
+                   "maxValue":null,
+                   "testType":"boolean",
+                   "valueText":"TESTING WHICH REQUIRES A FECAL SPECIMEN HAS BEEN R",
+                   "label":"All Parasites",
+                   "abnormalFlag":false
                 }
             ]
         }

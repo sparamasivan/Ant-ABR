@@ -36,6 +36,12 @@ define([
             'Giardia': {
                 yes: 'Giardia was detected.',
                 no: 'None were found.'
+            },
+            'Parasites': {
+                no: 'None were found.'
+            },
+            'All Parasites': {
+                no: 'None were found.'
             }
         }
     });
