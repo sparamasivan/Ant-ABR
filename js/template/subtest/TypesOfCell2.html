@@ -8,7 +8,9 @@
                 <div class="diagram big">
                     <img class="icon" src="images/subtest/types-of-cell2/{{species}}-fighter-2x.png" alt="" />
 
-                    <img class="circle" src="images/subtest/types-of-cell2/{{species}}-circle-big-2x.png" alt="" />
+                    {{#if fighter.percentage}}
+                        <img class="circle" src="images/subtest/types-of-cell2/{{species}}-circle-big-2x.png" alt="" />
+                    {{/if}}
 
                     <div class="percentage">
                         <span class="number">{{mathRound fighter.percentage}}</span>
@@ -40,7 +42,9 @@
                 <div class="diagram medium">
                     <img class="icon" src="images/subtest/types-of-cell2/{{species}}-defender-2x.png" alt="" />
 
-                    <img class="circle" src="images/subtest/types-of-cell2/{{species}}-circle-medium-2x.png" alt="" />
+                    {{#if defender.percentage}}
+                        <img class="circle" src="images/subtest/types-of-cell2/{{species}}-circle-medium-2x.png" alt="" />
+                    {{/if}}
 
                     <div class="percentage">
                         <span class="number">{{mathRound defender.percentage}}</span>
@@ -72,7 +76,9 @@
                 <div class="diagram small">
                     <img class="icon" src="images/subtest/types-of-cell2/{{species}}-watcher-2x.png" alt="" />
 
-                    <img class="circle" src="images/subtest/types-of-cell2/{{species}}-circle-small-2x.png" alt="" />
+                    {{#if watcher.percentage}}
+                        <img class="circle" src="images/subtest/types-of-cell2/{{species}}-circle-small-2x.png" alt="" />
+                    {{/if}}
 
                     <div class="percentage">
                         <span class="number">{{mathRound watcher.percentage}}</span><span class="symbol">%</span>

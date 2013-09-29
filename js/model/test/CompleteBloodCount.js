@@ -123,7 +123,7 @@ define([
                 }
             });
 
-            return totalAbsolute / ((totalPercentage > 0) ? (totalPercentage / 100) : 1);
+            return totalAbsolute / ((totalPercentage > 0) ? (1 - totalPercentage / 100) : 1);
         },
 
         getWbcCellPercentageByType: function(type) {
