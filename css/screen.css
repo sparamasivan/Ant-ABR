@@ -3352,12 +3352,12 @@ span.placeholder {
 }
 .view-test-urine-analysis .diagram-palette .label {
   position: absolute;
-  bottom: 50%;
+  bottom: 53%;
   left: 50%;
   width: 150px;
   margin: 0 0 -20% -75px;
   text-align: center;
-  font-size: 250%;
+  font-size: 182%;
   font-weight: bold;
   line-height: 100%;
 }
@@ -3379,7 +3379,7 @@ span.placeholder {
   cursor: pointer;
 }
 .view-test-urine-analysis .property.appearance .label {
-  font-size: 250%;
+  font-size: 182%;
   font-weight: bold;
   vertical-align: middle;
   display: inline-block;
