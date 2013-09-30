@@ -3963,7 +3963,7 @@ span.placeholder {
     left: 0;
   }
   .view-subtest-select .option .name {
-    padding-left: 52px;
+    padding-left: 45px;
     height: 30px;
     line-height: 30px;
   }
@@ -3977,7 +3977,7 @@ span.placeholder {
     font-size: 138.5%;
   }
   .view-subtest-select .option.selected .name {
-    background-position: 39px center;
+    background-position: 37px center;
   }
 }
 

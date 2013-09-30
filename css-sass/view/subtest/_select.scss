@@ -91,7 +91,7 @@
             }
 
             .name {
-                padding-left: $widgetIndicatorWidth + 20px;
+                padding-left: $widgetIndicatorWidth + 13px;
                 height: 30px;
                 line-height: 30px;
             }
@@ -112,7 +112,7 @@
                 font-size: 138.5%;
 
                 .name {
-                    background-position: ($widgetIndicatorWidth + 7px) center;
+                    background-position: ($widgetIndicatorWidth + 5px) center;
                 }
             }
         }
