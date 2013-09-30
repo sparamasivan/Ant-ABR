@@ -90,8 +90,8 @@
 
 .test-header {
     $headerHeight: 74px;
-    $iconHeight: 40px;
-    $iconWidth: 40px;
+    $iconHeight: 47px;
+    $iconWidth: 47px;
 
     height: $headerHeight;
     background-repeat: repeat-x;
@@ -153,6 +153,8 @@
 
     @media (max-width:($mq-phone)) {
         $headerHeight: 55px;
+        $iconHeight: 42px;
+        $iconWidth: 42px;
 
         height: $headerHeight;
         text-align: left;
@@ -162,8 +164,15 @@
         .title {
             margin-top: ($headerHeight - $iconHeight) / 2;
 
+            .icon {
+                width: $iconWidth;
+                height: $iconHeight;
+            }
+
             .text {
                 font-size: 123.1%;
+                line-height: $iconHeight;
+                left: $iconWidth + 30px;
             }
         }
 
@@ -184,19 +193,6 @@
 @mixin view-test-base-extend ($type, $headingBgColor, $overviewBgColor, $diagramFilename : "diagram-2x.png") {
     .test-header.#{$type} {
         background-color: $headingBgColor;
-
-        .title {
-            .icon {
-                background-image: url("../images/test/#{$type}/icon.png");
-
-                @media
-                only screen and (-webkit-min-device-pixel-ratio: 2),
-                only screen and (min-resolution: 192dpi) {
-                    background-image: url("../images/test/#{$type}/icon-2x.png");
-                    background-size: 100%;
-                }
-            }
-        }
     }
 
     .view-test-#{$type} {
