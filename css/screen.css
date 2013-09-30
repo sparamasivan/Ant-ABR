@@ -3053,6 +3053,9 @@ span.placeholder {
   background-repeat: no-repeat;
   position: relative;
 }
+.view-test-base .test-section-description p {
+  color: #6c6c6c;
+}
 .view-test-base .test-section-description .icon {
   display: block;
   position: absolute;
@@ -3186,7 +3189,6 @@ span.placeholder {
 }
 
 .view-test-cbc {
-  /* tablet and phone */
   /* phone */
 }
 .view-test-cbc .chart {
@@ -3202,25 +3204,29 @@ span.placeholder {
   font-family: 'Apercu', sans-serif;
   font-weight: bold;
   position: absolute;
-  left: 150px;
-  top: 90px;
-  width: 130px;
+  left: 130px;
+  top: 74px;
+  width: 150px;
   text-align: center;
 }
 .view-test-cbc .chart .value .percentage {
   letter-spacing: -1px;
 }
 .view-test-cbc .chart .value .number {
-  font-size: 300%;
+  font-size: 450%;
   line-height: 100%;
+  letter-spacing: -3px;
 }
 .view-test-cbc .chart .value .symbol {
   vertical-align: top;
-  font-size: 150%;
+  font-size: 225%;
 }
 .view-test-cbc .chart .value .text {
   text-transform: uppercase;
   font-size: 85%;
+}
+.view-test-cbc .view-subtest-range {
+  margin-top: 20px;
 }
 @media (max-width: 630px) {
   .view-test-cbc .chart {
@@ -3231,10 +3237,13 @@ span.placeholder {
     margin: 0 auto;
   }
   .view-test-cbc .chart .value {
-    left: 60%;
+    left: 53%;
   }
   .view-test-cbc .view-subtest-range {
-    margin: 0 auto;
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #111;
   }
 }
 
@@ -3561,10 +3570,9 @@ span.placeholder {
 
 .view-subtest-range {
   font-family: 'Apercu', sans-serif;
-  max-width: 320px;
 }
 .view-subtest-range .wrapper {
-  width: 100%;
+  max-width: 235px;
   position: relative;
   margin: 0 auto;
 }
@@ -3580,13 +3588,15 @@ span.placeholder {
   position: relative;
 }
 .view-subtest-range .marker .value {
-  font-size: 300%;
+  font-size: 450%;
   font-weight: bold;
   line-height: 90%;
+  letter-spacing: -3px;
 }
 .view-subtest-range .marker .unit {
   font-size: 123.1%;
   font-weight: bold;
+  display: block;
 }
 .view-subtest-range .marker .pointer {
   width: 40px;
@@ -3610,8 +3620,8 @@ span.placeholder {
   }
 }
 .view-subtest-range .actual {
-  height: 29px;
-  padding-top: 50px;
+  height: 28px;
+  padding-top: 87px;
 }
 .view-subtest-range .actual .range {
   height: 100%;
@@ -4331,6 +4341,7 @@ span.placeholder {
 .view-widget-test-subsection > .body > .text {
   margin-top: 0;
   margin-bottom: 0;
+  color: #6c6c6c;
 }
 .view-widget-test-subsection.expanded > .header {
   padding-bottom: 0;

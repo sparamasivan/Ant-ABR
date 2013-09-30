@@ -1,9 +1,8 @@
 .view-subtest-range {
     @include secondaryFont;
-    max-width: 320px;
 
     .wrapper {
-        width: 100%;
+        max-width: 235px;
         position: relative;
         margin: 0 auto;
     }
@@ -25,14 +24,16 @@
         }
 
         .value {
-            font-size: 300%;
+            font-size: 450%;
             font-weight: bold;
             line-height: 90%;
+            letter-spacing: -3px;
         }
 
         .unit {
             font-size: 123.1%;
             font-weight: bold;
+            display: block;
         }
 
         .pointer {
@@ -67,8 +68,8 @@
     }
 
     .actual {
-        height: 29px;
-        padding-top: 50px;
+        height: 28px;
+        padding-top: 87px;
 
         .range {
             height: 100%;

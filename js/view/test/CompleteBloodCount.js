@@ -85,7 +85,7 @@ define([
                 view = new ViewSubtestRange({
                     model: this.model.getModelRbcRange(),
                     name: this.model.getReport().getDataPatient().name,
-                    unitOfMeasure: 'MILLION/uL',
+                    unitOfMeasure: 'MILLION/μL',
                     message: {
                         good: Handlebars.compile('{{{patient.name}}}’s red blood cell count is within expected range.')({patient: patient}),
                         bad: Handlebars.compile('{{{patient.name}}}’s red blood cell count is outside the expected range.')({patient: patient})
@@ -216,7 +216,7 @@ define([
                 view = new ViewSubtestRange({
                     model: this.model.getModelWbcRange(),
                     name: this.model.getReport().getDataPatient().name,
-                    unitOfMeasure: 'THOUSAND/uL',
+                    unitOfMeasure: 'THOUSAND/μL',
                     message: {
                         good: Handlebars.compile('{{{patient.name}}}’s white blood cell count is within expected range.')({patient: patient}),
                         bad: Handlebars.compile('{{{patient.name}}}’s white blood cell count is outside the expected range.')({patient: patient})
@@ -266,7 +266,7 @@ define([
                 view = new ViewSubtestRange({
                     model: this.model.getModelPlateletRange(),
                     name: this.model.getReport().getDataPatient().name,
-                    unitOfMeasure: 'THOUSAND/uL',
+                    unitOfMeasure: 'THOUSAND/μL',
                     message: {
                         good: Handlebars.compile('{{{patient.name}}}’s platelet count is within expected range.')({patient: patient}),
                         bad: Handlebars.compile('{{{patient.name}}}’s platelet count is outside the expected range.')({patient: patient})

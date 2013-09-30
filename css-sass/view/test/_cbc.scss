@@ -17,10 +17,10 @@
             font-weight: bold;
 
             position: absolute;
-            left: 150px;
-            top: $diagramDiameter / 2 - 20px;
+            left: 130px;
+            top: $diagramDiameter / 2 - 36px;
 
-            width: 130px;
+            width: 150px;
             text-align: center;
 
             .percentage {
@@ -28,13 +28,14 @@
             }
 
             .number {
-                font-size: 300%;
+                font-size: 450%;
                 line-height: 100%;
+                letter-spacing: -3px;
             }
 
             .symbol {
                 vertical-align: top;
-                font-size: 150%;
+                font-size: 225%;
             }
 
             .text {
@@ -44,9 +45,8 @@
         }
     }
 
-    /* tablet and phone */
-    @media (max-width:($mq-tablet - 1px)) {
-
+    .view-subtest-range {
+        margin-top: 20px;
     }
     
     /* phone */
@@ -60,12 +60,15 @@
             }
 
             .value {
-                left: 60%;
+                left: 53%;
             }
         }
 
         .view-subtest-range {
-            margin: 0 auto;
+            margin-top: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-top: 1px solid #111;
         }
     }
 }
