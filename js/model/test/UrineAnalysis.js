@@ -117,6 +117,11 @@ define([
 
             switch(label) {
                 case 'Glucose-Strip':
+                    return new ModelSubtestBoolean(subtestData, {
+                        messageTypes: this._getBooleanResultMessagesByLabel(label),
+                        label: 'Glucose'
+                    });
+
                 case 'Protein':
                 case 'Ketones':
                 case 'Bilirubin':

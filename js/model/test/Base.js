@@ -146,7 +146,7 @@ define([
             var result = null;
 
             $.each(this.getAllTestCodes(), function(i, subtest) {
-                if (subtest.getLabel() == label) {
+                if (subtest.get('label') == label) {
                     result = subtest;
                     return false;
                 }
