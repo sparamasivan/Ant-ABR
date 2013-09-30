@@ -15,9 +15,6 @@
             padding-left: $widgetIndicatorWidth + 20px;
             height: 30px;
             line-height: 30px;
-
-            overflow: hidden;
-            text-overflow: clip;
         }
     
         &:first-child {
@@ -82,6 +79,9 @@
             padding-left: 45px + 20px;
             height: 40px;
             line-height: 40px;
+
+            overflow: hidden;
+            text-overflow: clip;
         }
 		
 		&:first-child {

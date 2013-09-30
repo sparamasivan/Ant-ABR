@@ -3958,6 +3958,8 @@ span.placeholder {
   padding-left: 65px;
   height: 40px;
   line-height: 40px;
+  overflow: hidden;
+  text-overflow: clip;
 }
 .view-subtest-select .option:first-child .widget-indicator {
   top: 5px;
@@ -3996,8 +3998,6 @@ span.placeholder {
     padding-left: 52px;
     height: 30px;
     line-height: 30px;
-    overflow: hidden;
-    text-overflow: clip;
   }
   .view-subtest-select .option:first-child .widget-indicator {
     top: 0;
@@ -4027,8 +4027,6 @@ span.placeholder {
   padding-left: 52px;
   height: 30px;
   line-height: 30px;
-  overflow: hidden;
-  text-overflow: clip;
 }
 .view-subtest-pod-base.small .view-subtest-select .option:first-child .widget-indicator {
   top: 0;
