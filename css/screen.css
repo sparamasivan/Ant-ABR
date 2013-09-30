@@ -3063,7 +3063,7 @@ span.placeholder {
   overflow: hidden;
   cursor: pointer;
   text-align: center;
-  padding-right: 170px;
+  padding-right: 90px;
   /* for scrolling */
   z-index: 1;
   position: relative;
@@ -3088,7 +3088,7 @@ span.placeholder {
   line-height: 40px;
   position: absolute;
   top: 0;
-  left: 60px;
+  left: 70px;
   white-space: nowrap;
 }
 .test-header .status {

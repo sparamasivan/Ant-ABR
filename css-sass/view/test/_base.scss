@@ -96,7 +96,7 @@
     cursor: pointer;
 
     text-align: center;
-    padding-right: 170px;
+    padding-right: 90px;
 
     /* for scrolling */
     z-index: 1;
@@ -124,7 +124,7 @@
 
             position: absolute;
             top: 0;
-            left: $iconWidth + 20px;
+            left: $iconWidth + 30px;
             white-space: nowrap;
         }
     }
