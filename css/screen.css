@@ -4077,13 +4077,19 @@ span.placeholder {
   border-radius: 4px;
   padding: 15px 15px;
 }
-.view-subtest-pod-base .title {
+.view-subtest-pod-base > .inner > .header {
   font-size: 138.5%;
   font-weight: bold;
   text-align: center;
   padding-bottom: 10px;
   border-bottom: 1px solid #6b6b6b;
   text-transform: uppercase;
+  display: table;
+  width: 100%;
+}
+.view-subtest-pod-base > .inner > .header .title {
+  display: table-cell;
+  vertical-align: middle;
 }
 .view-subtest-pod-base.title-no-text-transform .title {
   text-transform: none;
@@ -4095,7 +4101,7 @@ span.placeholder {
   .view-subtest-pod-base > .inner {
     padding: 10px 5px;
   }
-  .view-subtest-pod-base .title {
+  .view-subtest-pod-base > .inner > .header {
     padding-bottom: 5px;
   }
 }

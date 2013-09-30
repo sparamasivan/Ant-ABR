@@ -9,16 +9,24 @@
 		border-radius: 4px;
 
 		padding: 15px 15px;
-	}
 
-	.title {
-		font-size: 138.5%;
-		font-weight: bold;
-		text-align: center;
+        >.header {
+            font-size: 138.5%;
+            font-weight: bold;
+            text-align: center;
 
-		padding-bottom: 10px;
-		border-bottom: 1px solid #6b6b6b;
-        text-transform: uppercase;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #6b6b6b;
+            text-transform: uppercase;
+
+            display: table;
+            width: 100%;
+
+            .title {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
 	}
 
     &.title-no-text-transform {
@@ -33,10 +41,10 @@
         
         >.inner {
             padding: 10px 5px;
-        }
 
-        .title {
-            padding-bottom: 5px;
+            >.header {
+                padding-bottom: 5px;
+            }
         }
     }
 }

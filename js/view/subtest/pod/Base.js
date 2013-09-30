@@ -26,6 +26,10 @@ define([
 
             // test content to be filled by child classes
             this.$elContent = this.$el.find('.content');
+        },
+
+        getHeaderEl: function() {
+            return this.$el.find('.header');
         }
     });
 });

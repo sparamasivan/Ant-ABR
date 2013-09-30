@@ -4,7 +4,8 @@ define([
     'handlebars',
     'view/test/Base',
     'text!template/test/Accuplex.html',
-    'view/subtest/pod/Boolean'
+    'view/subtest/pod/Boolean',
+    'jquery-equal-heights'
 ], function(
     $,
     Backbone,
@@ -20,7 +21,8 @@ define([
 
         render: function(parent) {
             var self = this,
-                view;
+                view,
+                elPodHeaders = $();
 
             $.extend(this._overview, {
                 descriptionTemplate: 'Some diseases are spread by ticks. We tested {{{patient.name}}} for signs of exposure to these.',
@@ -38,7 +40,12 @@ define([
                 });
 
                 view.render(self.$elContent.find('.boolean-container').eq(i));
+
+                elPodHeaders = elPodHeaders.add(view.getHeaderEl());
             });
+
+            // equalize pod header heights
+            elPodHeaders.equalHeights();
         }
     });
 });
