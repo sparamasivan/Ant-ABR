@@ -3,7 +3,18 @@
 	.options {
 		padding: 0;
 		margin: 0;
+        position: relative;
 	}
+
+    .indicator-background {
+        position: absolute;
+        width: 41px;
+        top:0;
+        bottom: 0;
+        border-radius: 21px;
+        box-shadow: inset 0 0 10px #e5e5e5;
+        border: 1px solid #e5e5e5;
+    }
 
 	.option {
         @include secondaryFont;
@@ -12,32 +23,23 @@
 		list-style: none;
 		color: #6b6b6b;
 
-		background-image: url(../images/subtest/select/bg-middle.png);
-		background-repeat: repeat-y;
-
         position: relative;
 
         .widget-indicator {
             position: absolute;
             top: 4px;
-            left: 7px;
+            left: 6px;
             display: none;
             cursor: pointer;
         }
 		
 		&:first-child {
-			background-image: url(../images/subtest/select/bg-top.png);
-			background-position: left top;
-
 			.widget-indicator {
                 top: 5px;
 			}
 		}
 
 		&.last {
-			background-image: url(../images/subtest/select/bg-bottom.png);
-			background-position: left bottom;
-
 			.widget-indicator {
                 top: 2px;
 			}
