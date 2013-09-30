@@ -84,7 +84,7 @@
         }
 
         .option {
-            font-size: 138.5%;
+            font-size: 108%;
 
             .widget-indicator {
                 left: 0;
@@ -109,7 +109,7 @@
             }
 
             &.selected {
-                font-size: 153.9%;
+                font-size: 138.5%;
 
                 .name {
                     background-position: ($widgetIndicatorWidth + 7px) center;

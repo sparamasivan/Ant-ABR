@@ -1473,6 +1473,11 @@ h1 {
   line-height: 115%;
   font-size: 212%;
 }
+@media (max-width: 630px) {
+  h1 {
+    font-size: 167%;
+  }
+}
 
 h2 {
   font-size: 174%;
@@ -1486,11 +1491,6 @@ h4 .small {
   text-transform: lowercase;
 }
 
-@media (max-width: 630px) {
-  h1 {
-    font-size: 153.9%;
-  }
-}
 /* Phone & Tablet */
 @media (max-width: 768px) {
   p {
@@ -3957,7 +3957,7 @@ span.placeholder {
     border-radius: 15px;
   }
   .view-subtest-select .option {
-    font-size: 138.5%;
+    font-size: 108%;
   }
   .view-subtest-select .option .widget-indicator {
     left: 0;
@@ -3974,7 +3974,7 @@ span.placeholder {
     top: 0;
   }
   .view-subtest-select .option.selected {
-    font-size: 153.9%;
+    font-size: 138.5%;
   }
   .view-subtest-select .option.selected .name {
     background-position: 39px center;
