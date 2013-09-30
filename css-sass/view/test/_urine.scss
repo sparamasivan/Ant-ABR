@@ -189,6 +189,14 @@
     }
 
     .property.ph {
+        .diagram-palette {
+            .label {
+                font-size: 360%;
+                letter-spacing: -3px;
+                bottom: 43%;
+            }
+        }
+
         .legend {
             position: absolute;
             font-weight: bold;

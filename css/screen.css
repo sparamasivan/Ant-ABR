@@ -3508,6 +3508,11 @@ span.placeholder {
 .view-test-urine-analysis .test-subsection.particle .pod .description {
   display: none;
 }
+.view-test-urine-analysis .property.ph .diagram-palette .label {
+  font-size: 360%;
+  letter-spacing: -3px;
+  bottom: 43%;
+}
 .view-test-urine-analysis .property.ph .legend {
   position: absolute;
   font-weight: bold;
