@@ -1,3 +1,44 @@
+@mixin subtestSelectSmall {
+    .indicator-background {
+        width: $widgetIndicatorWidth - 2;
+        border-radius: ($widgetIndicatorWidth - 2) / 2;
+    }
+
+    .option {
+        font-size: 138.5%;
+
+        .widget-indicator {
+            left: 0;
+        }
+
+        .name {
+            padding-left: $widgetIndicatorWidth + 20px;
+            height: 30px;
+            line-height: 30px;
+        }
+    
+        &:first-child {
+            .widget-indicator {
+                top: 0;
+            }
+        }
+
+        &.last {
+            .widget-indicator {
+                top: 0;
+            }
+        }
+
+        &.selected {
+            font-size: 153.9%;
+
+            .name {
+                background-position: ($widgetIndicatorWidth + 7px) center;
+            }
+        }
+    }
+}
+
 .view-subtest-select {
 
 	.options {
@@ -31,6 +72,13 @@
             left: 6px;
             display: none;
             cursor: pointer;
+            z-index: 1;
+        }
+
+        .name {
+            padding-left: 45px + 20px;
+            height: 40px;
+            line-height: 40px;
         }
 		
 		&:first-child {
@@ -60,15 +108,18 @@
                 display: block;
             }
 		}
-
-		.name {
-			padding-left: 45px + 20px;
-			height: 40px;
-			line-height: 40px;
-		}
 	}
 
 	.description {
 		display: none;
 	}
+
+    /* phone */
+    @media (max-width:($mq-phone)) {
+        @include subtestSelectSmall;
+    }
+}
+
+.view-subtest-pod-base.small .view-subtest-select {
+    @include subtestSelectSmall;
 }

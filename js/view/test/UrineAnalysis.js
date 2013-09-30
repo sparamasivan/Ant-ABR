@@ -21,7 +21,7 @@ define([
     Template,
     TemplateChemicalComponent,
     TemplateMicroscopicParticle,
-    ViewSubtestBoolean,
+    ViewSubtestPodBoolean,
     Config,
     ViewWidgetTestSubsection,
     ViewSubtestSelect
@@ -224,8 +224,9 @@ define([
         },
 
         _renderMetabolicSubcomponent: function(parent, model) {
-            var view = new ViewSubtestBoolean({
-                    model: model
+            var view = new ViewSubtestPodBoolean({
+                    model: model,
+                    classes: 'small'
                 });
 
             view.render(parent);

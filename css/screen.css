@@ -3916,6 +3916,9 @@ span.placeholder {
   }
 }
 
+.view-subtest-select {
+  /* phone */
+}
 .view-subtest-select .options {
   padding: 0;
   margin: 0;
@@ -3943,6 +3946,12 @@ span.placeholder {
   left: 6px;
   display: none;
   cursor: pointer;
+  z-index: 1;
+}
+.view-subtest-select .option .name {
+  padding-left: 65px;
+  height: 40px;
+  line-height: 40px;
 }
 .view-subtest-select .option:first-child .widget-indicator {
   top: 5px;
@@ -3963,13 +3972,65 @@ span.placeholder {
 .view-subtest-select .option.selected .widget-indicator {
   display: block;
 }
-.view-subtest-select .option .name {
-  padding-left: 65px;
-  height: 40px;
-  line-height: 40px;
-}
 .view-subtest-select .description {
   display: none;
+}
+@media (max-width: 630px) {
+  .view-subtest-select .indicator-background {
+    width: 30px;
+    border-radius: 15px;
+  }
+  .view-subtest-select .option {
+    font-size: 138.5%;
+  }
+  .view-subtest-select .option .widget-indicator {
+    left: 0;
+  }
+  .view-subtest-select .option .name {
+    padding-left: 52px;
+    height: 30px;
+    line-height: 30px;
+  }
+  .view-subtest-select .option:first-child .widget-indicator {
+    top: 0;
+  }
+  .view-subtest-select .option.last .widget-indicator {
+    top: 0;
+  }
+  .view-subtest-select .option.selected {
+    font-size: 153.9%;
+  }
+  .view-subtest-select .option.selected .name {
+    background-position: 39px center;
+  }
+}
+
+.view-subtest-pod-base.small .view-subtest-select .indicator-background {
+  width: 30px;
+  border-radius: 15px;
+}
+.view-subtest-pod-base.small .view-subtest-select .option {
+  font-size: 138.5%;
+}
+.view-subtest-pod-base.small .view-subtest-select .option .widget-indicator {
+  left: 0;
+}
+.view-subtest-pod-base.small .view-subtest-select .option .name {
+  padding-left: 52px;
+  height: 30px;
+  line-height: 30px;
+}
+.view-subtest-pod-base.small .view-subtest-select .option:first-child .widget-indicator {
+  top: 0;
+}
+.view-subtest-pod-base.small .view-subtest-select .option.last .widget-indicator {
+  top: 0;
+}
+.view-subtest-pod-base.small .view-subtest-select .option.selected {
+  font-size: 153.9%;
+}
+.view-subtest-pod-base.small .view-subtest-select .option.selected .name {
+  background-position: 39px center;
 }
 
 .view-subtest-types-of-cell2 .title {
@@ -4058,12 +4119,15 @@ span.placeholder {
 
 .view-subtest-pod-base {
   font-family: 'Apercu', sans-serif;
+  max-width: 235px;
+  margin: 0 auto;
+  /* phone */
 }
 .view-subtest-pod-base > .inner {
   background-color: #fcfcfb;
   border: 1px solid #a3a3a3;
   border-radius: 4px;
-  padding: 15px 25px;
+  padding: 15px 15px;
 }
 .view-subtest-pod-base .title {
   font-size: 131%;
@@ -4071,6 +4135,26 @@ span.placeholder {
   text-align: center;
   padding-bottom: 10px;
   border-bottom: 1px solid #6b6b6b;
+}
+.view-subtest-pod-base.small {
+  max-width: 200px;
+}
+.view-subtest-pod-base.small > .inner {
+  padding: 10px 5px;
+}
+.view-subtest-pod-base.small .title {
+  padding-bottom: 5px;
+}
+@media (max-width: 630px) {
+  .view-subtest-pod-base {
+    max-width: 200px;
+  }
+  .view-subtest-pod-base > .inner {
+    padding: 10px 5px;
+  }
+  .view-subtest-pod-base .title {
+    padding-bottom: 5px;
+  }
 }
 
 .view-subtest-pod-color {
@@ -4099,6 +4183,16 @@ span.placeholder {
 .view-subtest-pod-select {
   margin-top: 10px;
   margin-left: 10px;
+  /* phone */
+}
+@media (max-width: 630px) {
+  .view-subtest-pod-select {
+    margin-left: 5px;
+  }
+}
+
+.view-subtest-pod-base.small .view-subtest-pod-select {
+  margin-left: 5px;
 }
 
 .view-widget-busy {

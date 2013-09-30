@@ -17,7 +17,8 @@ define([
 
             // render template
             this.setElement($(this.template({
-                title: this.options.title
+                title: this.options.title,
+                classes: this.options.classes
             })));
 
             // append to parent
