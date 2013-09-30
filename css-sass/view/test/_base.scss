@@ -96,6 +96,7 @@
     cursor: pointer;
 
     text-align: center;
+    padding-right: 170px;
 
     /* for scrolling */
     z-index: 1;
@@ -108,7 +109,7 @@
 
         .icon {
             float: left;
-            margin-right: 12px;
+            margin-right: 100px;
             width: $iconWidth;
             height: $iconHeight;
             margin-left: 10px;
@@ -151,6 +152,7 @@
 
         height: $headerHeight;
         text-align: left;
+        padding-right: 0;
         padding-left: 10px;
 
         .title {
