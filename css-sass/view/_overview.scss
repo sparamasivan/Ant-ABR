@@ -275,7 +275,8 @@
 
 	.contact {
 		@include secondaryFont;
-		@include smallFontSize;
+		@include mediumFontSize;
+		font-weight: bold;
 		background-repeat: no-repeat;
 		background-position: left 3px;
 		margin: 0;

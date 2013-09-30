@@ -1471,10 +1471,11 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   line-height: 115%;
+  font-size: 212%;
 }
 
 h2 {
-  font-size: 161.6%;
+  font-size: 174%;
 }
 
 h4 {
@@ -2868,9 +2869,10 @@ span.placeholder {
 }
 .view-overview .contact {
   font-family: 'Apercu', sans-serif;
-  font-size: 108%;
-  line-height: 150%;
+  font-size: 123.1%;
+  line-height: 146%;
   /* Phone */
+  font-weight: bold;
   background-repeat: no-repeat;
   background-position: left 3px;
   margin: 0;
