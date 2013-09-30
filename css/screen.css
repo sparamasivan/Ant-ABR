@@ -4346,6 +4346,10 @@ span.placeholder {
 }
 .view-widget-test-subsection > .body > .text {
   margin-top: 0;
+  margin-bottom: 0;
+}
+.view-widget-test-subsection.expanded > .header {
+  padding-bottom: 0;
 }
 .view-widget-test-subsection.expanded > .body {
   display: block;
