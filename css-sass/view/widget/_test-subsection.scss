@@ -27,10 +27,14 @@
             position: absolute;
             top: 3px + 10px;
             left: - $widgetArrowWidth - 10px;
+        }
 
 
-            /* Phone */
-            @media (max-width:$mq-phone) {
+        /* Phone */
+        @media (max-width:$mq-phone) {
+            font-size: 146.5%;
+
+            .widget-arrow {
                 position: relative;
                 top: -3px;
                 left: auto;

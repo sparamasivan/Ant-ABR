@@ -36,11 +36,10 @@ $pageSectionPaddingLeft: 15px;
 }
 
 $widgetArrowWidth: 22px;
+$widgetArrowWidthPhone: 17px;
 .widget-arrow {
-    $height: 22px;
-
     width: $widgetArrowWidth;
-    height: $height;
+    height: $widgetArrowWidth;
 
     display: inline-block;
     vertical-align: middle;
@@ -56,6 +55,25 @@ $widgetArrowWidth: 22px;
 
     &.down {
         background-position: $widgetArrowWidth 0;
+    }
+
+    /* Phone */
+    @media (max-width:$mq-phone) {
+        &.shrink {
+            width: $widgetArrowWidthPhone;
+            height: $widgetArrowWidthPhone;
+            background-image: url("../images/common/arrow-small.png");
+
+            @media 
+            only screen and (-webkit-min-device-pixel-ratio: 2), 
+            only screen and (min-resolution: 192dpi) {
+                background-image: url("../images/common/arrow-small-2x.png");
+            }
+
+            &.down {
+                background-position: $widgetArrowWidthPhone 0;
+            }
+        }
     }
 }
 

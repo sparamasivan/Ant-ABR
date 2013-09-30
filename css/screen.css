@@ -1803,6 +1803,7 @@ h4 .small {
   display: inline-block;
   vertical-align: middle;
   background-image: url("../images/common/arrow.png");
+  /* Phone */
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .widget-arrow {
@@ -1812,6 +1813,21 @@ h4 .small {
 }
 .widget-arrow.down {
   background-position: 22px 0;
+}
+@media (max-width: 630px) {
+  .widget-arrow.shrink {
+    width: 17px;
+    height: 17px;
+    background-image: url("../images/common/arrow-small.png");
+  }
+  .widget-arrow.shrink.down {
+    background-position: 17px 0;
+  }
+}
+@media only screen and (max-width: 630px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 630px) and (min-resolution: 192dpi) {
+  .widget-arrow.shrink {
+    background-image: url("../images/common/arrow-small-2x.png");
+  }
 }
 
 .widget-indicator {
@@ -4288,6 +4304,7 @@ span.placeholder {
   font-size: 167%;
   cursor: pointer;
   padding: 15px 0 15px 0;
+  /* Phone */
 }
 .view-widget-test-subsection > .header .title {
   position: relative;
@@ -4296,9 +4313,11 @@ span.placeholder {
   position: absolute;
   top: 13px;
   left: -32px;
-  /* Phone */
 }
 @media (max-width: 630px) {
+  .view-widget-test-subsection > .header {
+    font-size: 146.5%;
+  }
   .view-widget-test-subsection > .header .widget-arrow {
     position: relative;
     top: -3px;
