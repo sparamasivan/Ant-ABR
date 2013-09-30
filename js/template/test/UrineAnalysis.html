@@ -59,46 +59,50 @@
                     <div class="yui3-u-c property appearance">
                         <h2>Appearance</h2>
 
-                        <div class="text">
-                            <span class="widget-indicator {{#if appearance.isBad}}bad{{/if}}"></span><span class="label">{{appearance.label}}</span>
-                        </div>
+                        <div class="container">
 
-                        <div class="actual">
-                            <div class="range">
-                                <img src="images/test/urine/appearance/bg-swatch.png" alt="" />
+                            <div class="text">
+                                <span class="widget-indicator {{#if appearance.isBad}}bad{{/if}}"></span><span class="label">{{appearance.label}}</span>
                             </div>
 
-                            <div class="value {{appearance.type}}">
-                                <img class="pattern" src="images/test/urine/appearance/{{appearance.type}}.png" alt="" />
-                            </div>
-                        </div>
+                            <div class="actual">
+                                <div class="range">
+                                    <img src="images/test/urine/appearance/bg-swatch.png" alt="" />
+                                </div>
 
-                        <div class="expected">
-                            <div class="range">
-                                <div class="value"></div>
+                                <div class="value {{appearance.type}}">
+                                    <img class="pattern" src="images/test/urine/appearance/{{appearance.type}}.png" alt="" />
+                                </div>
                             </div>
 
-                            <div class="expected-label">
-                                Expected Range
+                            <div class="expected">
+                                <div class="range">
+                                    <div class="value"></div>
+                                </div>
+
+                                <div class="expected-label">
+                                    Expected Range
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="description">
-                            <p>
-                                <span class="message">
+                            
+                            <div class="description">
+                                <p>
+                                    <span class="message">
+                                        {{#if ph.isBad}}
+                                            {{patient.name}}’s urine’s appearance was not expected.
+                                        {{else}}
+                                            {{patient.name}}’s urine’s appearance was expected.
+                                        {{/if}}
+                                    </span>
+
                                     {{#if ph.isBad}}
-                                        {{patient.name}}’s urine’s appearance was not expected.
+                                        Urine is typically a clear liquid. An unexpected appearance would be caused by microscopic particles, such as cells or crystals.
                                     {{else}}
-                                        {{patient.name}}’s urine’s appearance was expected.
+                                        Urine is typically a clear liquid. It can appear cloudy if it contains unexpected cells or crystals.
                                     {{/if}}
-                                </span>
+                                </p>
+                            </div>
 
-                                {{#if ph.isBad}}
-                                    Urine is typically a clear liquid. An unexpected appearance would be caused by microscopic particles, such as cells or crystals.
-                                {{else}}
-                                    Urine is typically a clear liquid. It can appear cloudy if it contains unexpected cells or crystals.
-                                {{/if}}
-                            </p>
                         </div>
                     </div>
                 </div>

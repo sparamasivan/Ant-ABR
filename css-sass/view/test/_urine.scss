@@ -17,7 +17,8 @@
         @include secondaryFont;
         position: relative;
 
-        margin: 10px 0;
+        margin: 10px auto;
+        max-width: 350px;
 
         .palette {
             display: block;
@@ -25,11 +26,11 @@
 
         .label {
             position: absolute;
-            bottom: 53%;
+            bottom: 52%;
             left: 50%;
 
-            width: 150px;
-            margin: 0 0 -20% -75px;
+            width: 46%;
+            margin: 0 0 -20% -23%;
 
             text-align: center;
 
@@ -54,6 +55,11 @@
     .property.appearance {
         @include secondaryFont;
 
+        .container {
+            max-width:340px;
+            margin: 0 auto;
+        }
+
         .text {
             margin-top: 26%;
     
@@ -73,11 +79,6 @@
             vertical-align: middle;
             display: inline-block;
             padding-left: 10px;
-        }
-
-        .expected,
-        .actual {
-            max-width: 340px;
         }
 
         .actual {
