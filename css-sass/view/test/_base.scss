@@ -103,8 +103,8 @@
 
     .title {
         display: inline-block;
-        overflow: hidden;
         margin-top: ($headerHeight - $iconHeight) / 2;
+        position: relative;
 
         .icon {
             float: left;
@@ -120,6 +120,11 @@
             font-size: 153.9%;
             font-weight: bold;
             line-height: $iconHeight;
+
+            position: absolute;
+            top: 0;
+            left: $iconWidth + 20px;
+            white-space: nowrap;
         }
     }
 

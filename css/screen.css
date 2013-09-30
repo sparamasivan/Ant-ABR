@@ -3070,8 +3070,8 @@ span.placeholder {
 }
 .test-header .title {
   display: inline-block;
-  overflow: hidden;
   margin-top: 17px;
+  position: relative;
 }
 .test-header .title .icon {
   float: left;
@@ -3086,6 +3086,10 @@ span.placeholder {
   font-size: 153.9%;
   font-weight: bold;
   line-height: 40px;
+  position: absolute;
+  top: 0;
+  left: 60px;
+  white-space: nowrap;
 }
 .test-header .status {
   position: absolute;
