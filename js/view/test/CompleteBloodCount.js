@@ -148,7 +148,7 @@ define([
             // cell size
             subtestData = formatCellAttributesForSubtest(ModelTestCbc.RBC_SIZES, this.model.getRbcSize());
             viewSubtest = new ViewSubtestSelect({
-                title: 'CELL SIZE',
+                title: 'Cell Size',
                 message: {
                     good: Handlebars.compile('{{{patient.name}}}’s average cell size is normal, which is expected.')({patient: patient}),
                     bad: Handlebars.compile('{{{patient.name}}}’s average cell size is {{{result}}}, which is outside the expected range.')({patient: patient, result: subtestData.labels[subtestData.selectedIndex].toLowerCase()}),
@@ -163,7 +163,7 @@ define([
             // cell shape
             subtestData = formatCellAttributesForSubtest(ModelTestCbc.RBC_SHAPES, this.model.getRbcShape());
             viewSubtest = new ViewSubtestSelect({
-                title: 'CELL SHAPE',
+                title: 'Cell Shape',
                 message: {
                     good: Handlebars.compile('{{{patient.name}}}’s average cell shape is regular, which is expected.')({patient: patient}),
                     bad: Handlebars.compile('{{{patient.name}}}’s average cell shape is irregular.')({patient: patient}),
@@ -181,7 +181,7 @@ define([
             // cell color
             subtestData = formatCellAttributesForSubtest(ModelTestCbc.RBC_COLORS, this.model.getRbcColor());
             viewSubtest = new ViewSubtestColor({
-                title: 'CELL COLOR',
+                title: 'Cell Color',
                 message: {
                     good: Handlebars.compile('{{{patient.name}}}’s cell color is red, which is expected.')({patient: patient}),
                     bad: Handlebars.compile('{{{patient.name}}}’s cells are paler than expected.')({patient: patient}),

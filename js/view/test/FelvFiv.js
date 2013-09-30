@@ -32,7 +32,8 @@ define([
             // render all tests
             $.each(this.model.getAllTestCodes(), function(i, subtestModel) {
                 view = new ViewSubtestBoolean({
-                    model: subtestModel
+                    model: subtestModel,
+                    classes: 'title-no-text-transform'
                 });
 
                 view.render(self.$elContent.find('.boolean-container').eq(i));

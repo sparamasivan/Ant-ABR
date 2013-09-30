@@ -4135,11 +4135,15 @@ span.placeholder {
   padding: 15px 15px;
 }
 .view-subtest-pod-base .title {
-  font-size: 131%;
+  font-size: 138.5%;
   font-weight: bold;
   text-align: center;
   padding-bottom: 10px;
   border-bottom: 1px solid #6b6b6b;
+  text-transform: uppercase;
+}
+.view-subtest-pod-base.title-no-text-transform .title {
+  text-transform: none;
 }
 .view-subtest-pod-base.small {
   max-width: 200px;
