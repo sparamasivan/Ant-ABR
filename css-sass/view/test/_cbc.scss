@@ -6,8 +6,10 @@
         border-right: 1px solid #6b6b6b;
         padding-right: 10px;
 
+        $diagramDiameter: 220px;
         .diagram {
-            width: 200px;
+            width: $diagramDiameter;
+            height: $diagramDiameter;
         }
 
         .value {
@@ -16,7 +18,7 @@
 
             position: absolute;
             left: 150px;
-            top: 80px;
+            top: $diagramDiameter / 2 - 20px;
 
             width: 130px;
             text-align: center;

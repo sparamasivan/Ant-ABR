@@ -3175,14 +3175,15 @@ span.placeholder {
   padding-right: 10px;
 }
 .view-test-cbc .chart .diagram {
-  width: 200px;
+  width: 220px;
+  height: 220px;
 }
 .view-test-cbc .chart .value {
   font-family: 'Apercu', sans-serif;
   font-weight: bold;
   position: absolute;
   left: 150px;
-  top: 80px;
+  top: 90px;
   width: 130px;
   text-align: center;
 }
