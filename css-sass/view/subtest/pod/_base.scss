@@ -21,30 +21,22 @@
         text-transform: uppercase;
 	}
 
-    @mixin small {
-        max-width: 200px;
-        
-		>.inner {
-			padding: 10px 5px;
-		}
-
-		.title {
-			padding-bottom: 5px;
-		}
-    }
-
     &.title-no-text-transform {
         .title {
             text-transform: none;
         }
     }
 
-    &.small {
-        @include small;
-    }
-
     /* phone */
     @media (max-width:($mq-phone)) {
-        @include small;
+        max-width: 200px;
+        
+        >.inner {
+            padding: 10px 5px;
+        }
+
+        .title {
+            padding-bottom: 5px;
+        }
     }
 }

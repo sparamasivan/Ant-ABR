@@ -225,8 +225,7 @@ define([
 
         _renderMetabolicSubcomponent: function(parent, model) {
             var view = new ViewSubtestPodBoolean({
-                    model: model,
-                    classes: 'small'
+                    model: model
                 });
 
             view.render(parent);

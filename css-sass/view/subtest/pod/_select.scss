@@ -1,17 +1,9 @@
-@mixin subtestPodSelectSmall {
-    margin-left: 5px;
-}
-
 .view-subtest-pod-select {
 	margin-top: 10px;
 	margin-left: 10px;
     
     /* phone */
     @media (max-width:($mq-phone)) {
-        @include subtestPodSelectSmall;
+        margin-left: 5px;
     }
-}
-
-.view-subtest-pod-base.small .view-subtest-pod-select {
-    @include subtestPodSelectSmall;
 }
