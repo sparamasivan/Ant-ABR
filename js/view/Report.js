@@ -167,7 +167,7 @@ define([
 
             $.each(testViews, function(i, view) {
                 // get test boundaries
-                var testBoundsMin = Math.ceil(view.$el.offset().top),
+                var testBoundsMin = Math.floor(view.$el.offset().top) + 1,
                     testBoundsMax = testBoundsMin + view.$el.height() - 1,
                     headerEl = headerEls.eq(i),
                     topOffset;
