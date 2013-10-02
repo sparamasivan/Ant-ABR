@@ -3455,10 +3455,11 @@ span.placeholder {
   display: none;
 }
 .view-test-urine-analysis .test-subsection.particle .pod {
-  background-color: white;
+  background-color: #fcfcfb;
   border: 1px solid #a3a3a3;
   border-radius: 4px;
   padding: 14px 20px 14px 52px;
+  max-width: 165px;
   /* phone */
 }
 .view-test-urine-analysis .test-subsection.particle .pod > .inner {
@@ -3490,6 +3491,7 @@ span.placeholder {
 @media (max-width: 630px) {
   .view-test-urine-analysis .test-subsection.particle .pod {
     padding: 7px 10px 7px 42px;
+    max-width: 150px;
   }
   .view-test-urine-analysis .test-subsection.particle .pod .label {
     font-size: 138.5%;

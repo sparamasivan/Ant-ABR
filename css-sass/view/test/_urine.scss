@@ -154,10 +154,11 @@
 
     .test-subsection.particle {
         .pod {
-            background-color: white;
+            background-color: #fcfcfb;
             border: 1px solid #a3a3a3;
             border-radius: 4px;
             padding: 14px 20px 14px (20px + $widgetIndicatorWidth);
+            max-width: 165px;
 
             >.inner {
                 position: relative;
@@ -195,6 +196,7 @@
             /* phone */
             @media (max-width:$mq-phone) {
                 padding: 7px 10px 7px (10px + $widgetIndicatorWidth);
+                max-width: 150px;
 
                 .label {
                     font-size: 138.5%;
