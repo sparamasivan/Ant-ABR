@@ -1,7 +1,7 @@
 .view-subtest-select {
 
 	.options {
-		padding: 0;
+		padding: 6px 0;
 		margin: 0;
         position: relative;
 	}
@@ -12,7 +12,7 @@
         top:0;
         bottom: 0;
         border-radius: 21px;
-        box-shadow: inset 0 0 10px #e5e5e5;
+        box-shadow: inset 0 0 7px #e5e5e5;
         border: 1px solid #e5e5e5;
     }
 
@@ -27,7 +27,7 @@
 
         .widget-indicator {
             position: absolute;
-            top: 4px;
+            top: -1px;
             left: 6px;
             display: none;
             cursor: pointer;
@@ -36,24 +36,12 @@
 
         .name {
             padding-left: 45px + 20px;
-            height: 40px;
-            line-height: 40px;
+            height: 30px;
+            line-height: 30px;
 
             overflow: hidden;
             text-overflow: clip;
         }
-		
-		&:first-child {
-			.widget-indicator {
-                top: 5px;
-			}
-		}
-
-		&.last {
-			.widget-indicator {
-                top: 2px;
-			}
-		}
 
 		&.selected {
             font-size: 182%;
@@ -78,6 +66,11 @@
 
     /* phone */
     @media (max-width:($mq-phone)) {
+        .options {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
         .indicator-background {
             width: $widgetIndicatorWidth - 2;
             border-radius: ($widgetIndicatorWidth - 2) / 2;
@@ -92,8 +85,6 @@
 
             .name {
                 padding-left: $widgetIndicatorWidth + 13px;
-                height: 30px;
-                line-height: 30px;
             }
         
             &:first-child {
