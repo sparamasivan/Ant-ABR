@@ -3497,6 +3497,15 @@ span.placeholder {
     font-size: 138.5%;
   }
 }
+.view-test-urine-analysis .property.concentration > .select {
+  margin: 15px 0 0 20px;
+  /* phone */
+}
+@media (max-width: 630px) {
+  .view-test-urine-analysis .property.concentration > .select {
+    margin-left: 10px;
+  }
+}
 .view-test-urine-analysis .property.ph .diagram-palette .label {
   font-size: 360%;
   letter-spacing: -3px;
