@@ -134,8 +134,8 @@
     }
 
     .status {
-        $width: image-width('../images/test/base/follow-up-good-2x.png') / 2;
-        $height: image-height('../images/test/base/follow-up-good-2x.png') / 2;
+        $width: round(image-width('../images/test/base/follow-up-good-2x.png') / 2);
+        $height: round(image-height('../images/test/base/follow-up-good-2x.png') / 2);
         position: absolute;
 
         top: ($headerHeight - $height) / 2;
