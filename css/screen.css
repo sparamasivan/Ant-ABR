@@ -3339,6 +3339,12 @@ span.placeholder {
   font-size: 182%;
   font-weight: bold;
   line-height: 100%;
+  /* phone */
+}
+@media (max-width: 630px) {
+  .view-test-urine-analysis .diagram-palette .label {
+    font-size: 138.5%;
+  }
 }
 .view-test-urine-analysis .diagram-palette .widget-indicator {
   margin-top: 5px;
@@ -3373,6 +3379,12 @@ span.placeholder {
   vertical-align: middle;
   display: inline-block;
   padding-left: 10px;
+  /* phone */
+}
+@media (max-width: 630px) {
+  .view-test-urine-analysis .property.appearance .label {
+    font-size: 138.5%;
+  }
 }
 .view-test-urine-analysis .property.appearance .actual {
   margin: 30px 0 10px;
@@ -3446,19 +3458,20 @@ span.placeholder {
   background-color: white;
   border: 1px solid #a3a3a3;
   border-radius: 4px;
-  padding: 15px 20px 15px 52px;
+  padding: 14px 20px 14px 52px;
+  /* phone */
 }
 .view-test-urine-analysis .test-subsection.particle .pod > .inner {
   position: relative;
   background-image: url("../images/subtest/select/bullet.png");
   background-repeat: no-repeat;
-  background-position: 7px 6px;
+  background-position: 10px 10px;
   padding-left: 20px;
 }
 .view-test-urine-analysis .test-subsection.particle .pod .label {
   font-family: 'Apercu', sans-serif;
   font-size: 182%;
-  line-height: 100%;
+  line-height: 32px;
   font-weight: bold;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -3468,12 +3481,19 @@ span.placeholder {
 }
 .view-test-urine-analysis .test-subsection.particle .pod .widget-indicator {
   position: absolute;
-  top: -5px;
   left: -32px;
   cursor: pointer;
 }
 .view-test-urine-analysis .test-subsection.particle .pod .description {
   display: none;
+}
+@media (max-width: 630px) {
+  .view-test-urine-analysis .test-subsection.particle .pod {
+    padding: 7px 10px 7px 42px;
+  }
+  .view-test-urine-analysis .test-subsection.particle .pod .label {
+    font-size: 138.5%;
+  }
 }
 .view-test-urine-analysis .property.ph .diagram-palette .label {
   font-size: 360%;

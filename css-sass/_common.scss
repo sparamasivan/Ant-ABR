@@ -78,9 +78,10 @@ $widgetArrowWidthPhone: 17px;
 }
 
 $widgetIndicatorWidth: 32px;
+$widgetIndicatorHeight: $widgetIndicatorWidth;
 .widget-indicator {
     width: $widgetIndicatorWidth;
-    height: 32px;
+    height: $widgetIndicatorHeight;
 
     display: inline-block;
 
