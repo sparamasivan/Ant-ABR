@@ -3319,6 +3319,13 @@ span.placeholder {
 .view-test-urine-analysis h2 {
   border-bottom: 1px solid #111111;
   padding-bottom: 5px;
+  font-size: 167%;
+  /* phone */
+}
+@media (max-width: 630px) {
+  .view-test-urine-analysis h2 {
+    font-size: 146.5%;
+  }
 }
 .view-test-urine-analysis .diagram-palette {
   font-family: 'Apercu', sans-serif;
@@ -3510,6 +3517,12 @@ span.placeholder {
   font-size: 360%;
   letter-spacing: -3px;
   bottom: 43%;
+  /* phone */
+}
+@media (max-width: 630px) {
+  .view-test-urine-analysis .property.ph .diagram-palette .label {
+    font-size: 230%;
+  }
 }
 .view-test-urine-analysis .property.ph .legend {
   position: absolute;

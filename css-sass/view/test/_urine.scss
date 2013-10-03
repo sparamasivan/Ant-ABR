@@ -10,6 +10,12 @@
     h2 {
         border-bottom: 1px solid #111111;
         padding-bottom: 5px;
+        font-size: 167%;
+
+        /* phone */
+        @media (max-width:$mq-phone) {
+            font-size: 146.5%;
+        }
     }
 
 
@@ -222,6 +228,11 @@
                 font-size: 360%;
                 letter-spacing: -3px;
                 bottom: 43%;
+
+                /* phone */
+                @media (max-width:$mq-phone) {
+                    font-size: 230%;
+                }
             }
         }
 
