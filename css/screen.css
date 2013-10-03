@@ -3155,22 +3155,22 @@ span.placeholder {
 }
 
 .test-header.accuplex {
-  background-color: #9f2775;
+  background-color: #bf1b73;
 }
 
 .view-test-accuplex > .body > .overview {
-  background-color: #b63488;
+  background-color: #d51f84;
 }
 .view-test-accuplex > .body > .overview .diagram-container > .inner {
   max-width: 365px;
 }
 
 .test-header.cbc {
-  background-color: #34a778;
+  background-color: #00a977;
 }
 
 .view-test-cbc > .body > .overview {
-  background-color: #30bd84;
+  background-color: #38b781;
 }
 .view-test-cbc > .body > .overview .diagram-container > .inner {
   max-width: 450px;
@@ -3236,11 +3236,11 @@ span.placeholder {
 }
 
 .test-header.chemistry {
-  background-color: #1948a2;
+  background-color: #074d9f;
 }
 
 .view-test-chemistry > .body > .overview {
-  background-color: #2759b9;
+  background-color: #3068b4;
 }
 .view-test-chemistry > .body > .overview .diagram-container > .inner {
   max-width: 356px;
@@ -3259,55 +3259,55 @@ span.placeholder {
 }
 
 .test-header.felv-fiv {
-  background-color: #0d8895;
+  background-color: #028894;
 }
 
 .view-test-felv-fiv > .body > .overview {
-  background-color: #0f96a4;
+  background-color: #0e95a3;
 }
 .view-test-felv-fiv > .body > .overview .diagram-container > .inner {
   max-width: 315px;
 }
 
 .test-header.heartworm {
-  background-color: #bd362f;
+  background-color: #d61e2a;
 }
 
 .view-test-heartworm > .body > .overview {
-  background-color: #d53f38;
+  background-color: #ec3033;
 }
 .view-test-heartworm > .body > .overview .diagram-container > .inner {
   max-width: 374px;
 }
 
 .test-header.ova {
-  background-color: #2882e0;
+  background-color: #246dd7;
 }
 
 .view-test-ova > .body > .overview {
-  background-color: #2e91f8;
+  background-color: #2d90f7;
 }
 .view-test-ova > .body > .overview .diagram-container > .inner {
   max-width: 354px;
 }
 
 .test-header.thyroxine {
-  background-color: #e38306;
+  background-color: #f3791f;
 }
 
 .view-test-thyroxine > .body > .overview {
-  background-color: #f99507;
+  background-color: #f7951c;
 }
 .view-test-thyroxine > .body > .overview .diagram-container > .inner {
   max-width: 324px;
 }
 
 .test-header.urine {
-  background-color: #674e9f;
+  background-color: #673f98;
 }
 
 .view-test-urine > .body > .overview {
-  background-color: #7359ae;
+  background-color: #7259a5;
 }
 .view-test-urine > .body > .overview .diagram-container > .inner {
   max-width: 466px;
