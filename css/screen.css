@@ -3317,6 +3317,12 @@ span.placeholder {
 
 .view-test-thyroxine .subtest-container {
   max-width: 300px;
+  /* phone */
+}
+@media (max-width: 630px) {
+  .view-test-thyroxine .subtest-container {
+    margin: 0 auto;
+  }
 }
 
 .test-header.urine {

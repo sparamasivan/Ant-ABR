@@ -3,5 +3,10 @@
 .view-test-thyroxine {
     .subtest-container {
         max-width: 300px;
+
+        /* phone */
+        @media (max-width:$mq-phone) {
+            margin: 0 auto;
+        }
     }
 }
