@@ -3614,7 +3614,7 @@ span.placeholder {
 }
 .view-subtest-range .actual .range {
   height: 100%;
-  background-color: #ebedf1;
+  background-color: #e8eae5;
   border-radius: 3px;
   position: relative;
 }
@@ -3639,7 +3639,7 @@ span.placeholder {
 .view-subtest-range .expected .range {
   padding: 2px 0;
   height: 4px;
-  background-color: #ebedf1;
+  background-color: #e8eae5;
   border-radius: 3px;
 }
 .view-subtest-range .expected .value {

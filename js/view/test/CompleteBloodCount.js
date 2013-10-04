@@ -311,7 +311,7 @@ define([
                 pieStartAngle: 360 * startPercentage / 100,
                 slices: [
                     {color: '#00b8d6'},
-                    {color: '#e9eae4'}
+                    {color: '#e8eae5'}
                 ],
                 enableInteractivity: false
             });
