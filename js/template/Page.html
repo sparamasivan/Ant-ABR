@@ -1,9 +1,9 @@
 <div class="page">
     <!-- main menu -->
-    <div class="page-mainmenu"></div>
+    <div class="page-mainmenu page-section-narrow"></div>
 
     <!-- report content -->
-    <div class="page-content">
+    <div class="page-content page-section-narrow">
         <!-- header -->
         <div class="page-section-wrapper page-section-top">
             <div class="yui3-g-r page-section">
@@ -27,8 +27,7 @@
 
     <div class="page-section-wrapper page-section-conclusion">
         <div class="yui3-g-r">
-            <div class="yui3-u-1-12 yui3-hidden-phone"></div>
-            <div class="yui3-u-5-6">
+            <div class="yui3-u-1">
                 <div class="yui3-u-c">
                     <div class="widget-circle-arrow">
                         <img src="images/overview/recap/circle.png" alt="" />
@@ -47,43 +46,45 @@
 
     <!-- report footer -->
     <div class="page-footer">
-        <div class="yui3-g-r page-section">
-            <div class="yui3-u-1 yui3-hidden-desktop yui3-hidden-tablet">
-                <div class="yui3-u-c">
-                    <h3 class="contact-us">Contact Us</h3>
-                    <h4 class="clinic">{{clinic.name}}</h4>
+        <div class="page-section-narrow">
+            <div class="yui3-g-r page-section">
+                <div class="yui3-u-1 yui3-hidden-desktop yui3-hidden-tablet">
+                    <div class="yui3-u-c">
+                        <h3 class="contact-us">Contact Us</h3>
+                        <h4 class="clinic">{{clinic.name}}</h4>
 
-                    {{#if clinic.phone}}
-                        <p>{{phoneLink clinic.phone}}</p>
-                    {{/if}}
+                        {{#if clinic.phone}}
+                            <p>{{phoneLink clinic.phone}}</p>
+                        {{/if}}
 
-                    {{#if clinic.email}}
-                        <p><a href="mailto:{{clinic.email}}">{{clinic.email}}</a></p>
-                    {{/if}}
-                </div>
-            </div>
-
-            <div class="yui3-u-1-2">
-                <div class="yui3-u-c section-copyright column">
-                    <div class="text">
-                        <p class="fine-print">© 2001-2013 &nbsp;Vetstreet. All rights reserved.</p>
-                        <p class="fine-print"><a class="policy" href="{{privacyPolicyUrl}}" target="_blank">Privacy&nbsp;Policy</a></p>
+                        {{#if clinic.email}}
+                            <p><a href="mailto:{{clinic.email}}">{{clinic.email}}</a></p>
+                        {{/if}}
                     </div>
                 </div>
-            </div>
 
-            <div class="yui3-u-1-2 yui3-hidden-phone">
-                <div class="yui3-u-c section-contact column">
-                    <h3 class="contact-us">Contact Us</h3>
-                    <h4 class="clinic">{{clinic.name}}</h4>
+                <div class="yui3-u-1-2">
+                    <div class="yui3-u-c section-copyright column">
+                        <div class="text">
+                            <p class="fine-print">© 2001-2013 &nbsp;Vetstreet. All rights reserved.</p>
+                            <p class="fine-print"><a class="policy" href="{{privacyPolicyUrl}}" target="_blank">Privacy&nbsp;Policy</a></p>
+                        </div>
+                    </div>
+                </div>
 
-                    {{#if clinic.phone}}
-                        <p>{{phoneLink clinic.phone "link phone"}}</p>
-                    {{/if}}
+                <div class="yui3-u-1-2 yui3-hidden-phone">
+                    <div class="yui3-u-c section-contact column">
+                        <h3 class="contact-us">Contact Us</h3>
+                        <h4 class="clinic">{{clinic.name}}</h4>
 
-                    {{#if clinic.email}}
-                        <p><a class="link email" href="mailto:{{clinic.email}}">{{clinic.email}}</a></p>
-                    {{/if}}
+                        {{#if clinic.phone}}
+                            <p>{{phoneLink clinic.phone "link phone"}}</p>
+                        {{/if}}
+
+                        {{#if clinic.email}}
+                            <p><a class="link email" href="mailto:{{clinic.email}}">{{clinic.email}}</a></p>
+                        {{/if}}
+                    </div>
                 </div>
             </div>
         </div>

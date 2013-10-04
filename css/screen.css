@@ -2024,7 +2024,7 @@ span.placeholder {
   }
 }
 
-.page {
+.page-section-narrow {
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -2129,12 +2129,13 @@ span.placeholder {
 }
 .page-footer .section-copyright .text {
   position: absolute;
-  left: 0;
-  bottom: 0;
-  margin-bottom: 1em;
+  bottom: 10px;
 }
 .page-footer .section-contact {
   float: right;
+}
+.page-footer .section-contact p {
+  margin-bottom: 0;
 }
 @media (max-width: 630px) {
   .page-footer {
@@ -2144,7 +2145,6 @@ span.placeholder {
     margin-top: 25px;
   }
   .page-footer .section-copyright .text {
-    left: auto;
     bottom: auto;
     position: static;
   }

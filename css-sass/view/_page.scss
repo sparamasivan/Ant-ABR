@@ -1,4 +1,4 @@
-.page {
+.page-section-narrow {
     max-width: $max-page-width;
     margin: 0 auto;
 }
@@ -115,14 +115,16 @@
 
         .text {
             position: absolute;
-            left: 0;
-            bottom: 0;
-            margin-bottom: 1em;
+            bottom: 10px;
         }
     }
 
     .section-contact {
         float: right;
+
+        p {
+            margin-bottom: 0;
+        }
     }
 
     /* phone */
@@ -133,7 +135,6 @@
             margin-top: 25px;
             
             .text {
-                left: auto;
                 bottom: auto;
                 position: static;
             }

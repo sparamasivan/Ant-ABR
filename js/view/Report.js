@@ -72,18 +72,27 @@ define([
 
             return this.model.fetchAggregatedTestCollection()
                 .then(function(collection) {
-                    var promises = [];
+                    var promises = [],
+                        container,
+                        containers = $();
                     
                     $.each(collection.models, function(i, model) {
+                        container = $('<div />');
+
                         promises.push(
                             self._renderTest(
-                                $('<div />').appendTo(parent),
+                                container.appendTo(parent),
                                 model
                             ).done(function(view) {
                                 self._testViews[i] = view;
                             })
                         );
+
+                        containers.add(container);
                     });
+
+                    // mark the last test container in the group
+                    container.last().addClass('last');
 
                     return $.when.apply($, promises);
                 });
