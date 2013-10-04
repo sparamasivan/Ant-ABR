@@ -33,6 +33,7 @@ define([
             this.setElement($(this.template({
                 value: this.model.getValue(),
                 unit: this.options.unitOfMeasure || this.model.getUnitOfMeasure(),
+                classes: this.options.classes,
                 range: {
                     minimum: this.model.getMinValue(),
                     maximum: this.model.getMaxValue()

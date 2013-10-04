@@ -35,6 +35,7 @@ define([
             view = new ViewSubtestRange({
                 model: this.model.getModelRange(),
                 name: this.model.getReport().getDataPatient().name,
+                classes: 'single-line-label',
                 message: {
                     good: Handlebars.compile('{{{patient.name}}}’s T4 level is within expected range.')({patient: patient}),
                     bad: Handlebars.compile('{{{patient.name}}}’s T4 level is outside the expected range.')({patient: patient})

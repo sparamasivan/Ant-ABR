@@ -1,1 +1,7 @@
 @include view-test-base-extend(thyroxine, #F3791F, #F7951C);
+
+.view-test-thyroxine {
+    .subtest-container {
+        max-width: 300px;
+    }
+}

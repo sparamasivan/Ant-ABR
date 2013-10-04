@@ -3315,6 +3315,10 @@ span.placeholder {
   max-width: 324px;
 }
 
+.view-test-thyroxine .subtest-container {
+  max-width: 300px;
+}
+
 .test-header.urine {
   background-color: #5a3492;
 }
@@ -3670,6 +3674,12 @@ span.placeholder {
 }
 .view-subtest-range .description {
   display: none;
+}
+.view-subtest-range.single-line-label .marker .unit {
+  display: inline;
+}
+.view-subtest-range.single-line-label .actual {
+  padding-top: 68px;
 }
 
 .view-subtest-range-group {

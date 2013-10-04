@@ -147,4 +147,16 @@
     .description {
         display: none;
     }
+
+    &.single-line-label {
+        .marker {
+            .unit {
+                display: inline;
+            }
+        }
+
+        .actual {
+            padding-top: 68px;
+        }
+    }
 }
