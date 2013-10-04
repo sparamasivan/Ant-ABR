@@ -3432,6 +3432,12 @@ span.placeholder {
 }
 .view-test-urine-analysis .property.appearance .actual .value.clear {
   left: -7%;
+  /* phone */
+}
+@media (max-width: 630px) {
+  .view-test-urine-analysis .property.appearance .actual .value.clear {
+    left: -3%;
+  }
 }
 .view-test-urine-analysis .property.appearance .actual .value.clear-with-particles {
   left: 5%;

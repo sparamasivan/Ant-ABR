@@ -112,7 +112,14 @@
                     display: block;
                 }
 
-                &.clear {left: -7%;}
+                &.clear {
+                    left: -7%;
+
+                    /* phone */
+                    @media (max-width:$mq-phone) {
+                        left: -3%;
+                    }
+                }
                 &.clear-with-particles {left: 5%;}
                 &.slightly-hazy {left: 16%;}
                 &.hazy {left: 27%;}
