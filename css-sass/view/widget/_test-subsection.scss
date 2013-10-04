@@ -4,7 +4,12 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 
-    padding: 0 20px 0 140px;
+    padding: 0 20px 0 160px;
+
+    /* tablet */
+    @media (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
+        padding-left: 140px;
+    }
 
     /* Phone */
     @media (max-width:$mq-phone) {
