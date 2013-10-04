@@ -3,9 +3,8 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-$mq-desktop: 1024px;
-$mq-tablet: 769px;
-$mq-phone: 630px;
+$mq-tablet: 769px; // max tablet size
+$mq-phone: 630px; // max mobile size
 
 $max-page-width: 1000px;
 

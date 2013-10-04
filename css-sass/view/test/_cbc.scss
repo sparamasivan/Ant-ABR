@@ -6,6 +6,11 @@
         border-right: 1px solid #6b6b6b;
         padding-right: 10px;
 
+        /* desktop */
+        @media (min-width:($mq-tablet)) {
+            padding-left: 5%;
+        }
+
         $diagramDiameter: 220px;
         .diagram {
             width: $diagramDiameter;
@@ -17,7 +22,7 @@
             font-weight: bold;
 
             position: absolute;
-            left: 130px;
+            left: 155px;
             top: $diagramDiameter / 2 - 36px;
 
             width: 150px;
@@ -45,8 +50,12 @@
         }
     }
 
-    .view-subtest-range {
-        margin-top: 20px;
+    .range-container {
+        margin: 20px 0 0 10%;
+
+        .view-subtest-range {
+            max-width: 235px;
+        }
     }
     
     /* phone */
@@ -64,11 +73,16 @@
             }
         }
 
-        .view-subtest-range {
+        .range-container {
             margin-top: 10px;
+            margin-left: 0;
             padding-top: 20px;
             padding-bottom: 20px;
             border-top: 1px solid #111;
+
+            .view-subtest-range {
+                margin: 0 auto;
+            }
         }
     }
 }

@@ -760,7 +760,7 @@ tt {
 }
 
 /* desktop */
-@media (min-width: 1024px), (min-width: 769px) and (max-width: 1023px) {
+@media (min-width: 769px) {
   .yui3-visible-phone {
     display: none !important;
   }
@@ -3183,6 +3183,12 @@ span.placeholder {
   position: relative;
   border-right: 1px solid #6b6b6b;
   padding-right: 10px;
+  /* desktop */
+}
+@media (min-width: 769px) {
+  .view-test-cbc .chart {
+    padding-left: 5%;
+  }
 }
 .view-test-cbc .chart .diagram {
   width: 220px;
@@ -3192,7 +3198,7 @@ span.placeholder {
   font-family: 'Apercu', sans-serif;
   font-weight: bold;
   position: absolute;
-  left: 130px;
+  left: 155px;
   top: 74px;
   width: 150px;
   text-align: center;
@@ -3213,8 +3219,11 @@ span.placeholder {
   text-transform: uppercase;
   font-size: 85%;
 }
-.view-test-cbc .view-subtest-range {
-  margin-top: 20px;
+.view-test-cbc .range-container {
+  margin: 20px 0 0 10%;
+}
+.view-test-cbc .range-container .view-subtest-range {
+  max-width: 235px;
 }
 @media (max-width: 630px) {
   .view-test-cbc .chart {
@@ -3227,11 +3236,15 @@ span.placeholder {
   .view-test-cbc .chart .value {
     left: 53%;
   }
-  .view-test-cbc .view-subtest-range {
+  .view-test-cbc .range-container {
     margin-top: 10px;
+    margin-left: 0;
     padding-top: 20px;
     padding-bottom: 20px;
     border-top: 1px solid #111;
+  }
+  .view-test-cbc .range-container .view-subtest-range {
+    margin: 0 auto;
   }
 }
 
@@ -3550,9 +3563,7 @@ span.placeholder {
   font-family: 'Apercu', sans-serif;
 }
 .view-subtest-range .wrapper {
-  max-width: 235px;
   position: relative;
-  margin: 0 auto;
 }
 .view-subtest-range .marker {
   position: absolute;
@@ -3639,9 +3650,11 @@ span.placeholder {
   color: #444;
   padding-top: 6px;
   text-align: center;
-  text-transform: uppercase;
   font-size: 77%;
   font-weight: bold;
+}
+.view-subtest-range .expected .label .limits {
+  text-transform: uppercase;
 }
 .view-subtest-range.value-low .marker {
   text-align: left;

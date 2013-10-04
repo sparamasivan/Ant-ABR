@@ -96,7 +96,7 @@ define([
                     }
                 });
 
-            view.render(parent.find('.range'));
+            view.render(parent.find('.range-container'));
 
             this._renderPieChart(parent.find('.chart'), this.model.getRbcPercentage(), 0);
 
@@ -227,7 +227,7 @@ define([
                     }
                 });
 
-            view.render(parent.find('.range'));
+            view.render(parent.find('.range-container'));
 
             this._renderPieChart(parent.find('.chart'), this.model.getWbcPercentage(), this.model.getRbcPercentage());
 
@@ -277,7 +277,7 @@ define([
                     }
                 });
 
-            view.render(parent.find('.range'));
+            view.render(parent.find('.range-container'));
 
             this._renderPieChart(parent.find('.chart'), this.model.getPlateletPercentage(), this.model.getWbcPercentage() + this.model.getRbcPercentage());
         },

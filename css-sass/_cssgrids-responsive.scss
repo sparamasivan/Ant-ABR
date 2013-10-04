@@ -190,8 +190,7 @@
 }
 
 /* desktop */
-@media (min-width:$mq-desktop),
-       (min-width:$mq-tablet) and (max-width:($mq-desktop - 1px)) {
+@media (min-width:($mq-tablet)) {
     .yui3-visible-phone {
         display: none !important;
     }
