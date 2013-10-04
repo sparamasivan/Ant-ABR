@@ -3155,11 +3155,11 @@ span.placeholder {
 }
 
 .test-header.accuplex {
-  background-color: #bf1b73;
+  background-color: #bb1274;
 }
 
 .view-test-accuplex > .body > .overview {
-  background-color: #d51f84;
+  background-color: #d62187;
 }
 .view-test-accuplex > .body > .overview .diagram-container > .inner {
   max-width: 365px;
@@ -3240,7 +3240,7 @@ span.placeholder {
 }
 
 .view-test-chemistry > .body > .overview {
-  background-color: #3068b4;
+  background-color: #2759b9;
 }
 .view-test-chemistry > .body > .overview .diagram-container > .inner {
   max-width: 356px;
@@ -3303,11 +3303,11 @@ span.placeholder {
 }
 
 .test-header.urine {
-  background-color: #673f98;
+  background-color: #5a3492;
 }
 
 .view-test-urine > .body > .overview {
-  background-color: #7259a5;
+  background-color: #6b499e;
 }
 .view-test-urine > .body > .overview .diagram-container > .inner {
   max-width: 466px;
