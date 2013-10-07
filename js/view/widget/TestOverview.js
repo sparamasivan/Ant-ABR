@@ -18,7 +18,7 @@ define([
         render: function(parent) {
             var self = this,
                 subtestContainer,
-                deferred = new $.Deferred();
+                viewAnimation = this.options.viewAnimation;
 
             this.setElement($(this.template({
                 description: Handlebars.compile(this.options.descriptionTemplate)({
@@ -40,7 +40,9 @@ define([
                 $(this).toggleClass('down');
             });
 
-            return deferred.promise();
+            if (viewAnimation) {
+                viewAnimation.render(this.$el.find('.animation'));
+            }
         },
 
         refresh: function() {

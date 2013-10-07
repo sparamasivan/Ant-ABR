@@ -1,0 +1,147 @@
+@import "compass/css3/transform";
+/*
+html, body {
+    margin: 30px 0;
+    @include transition(all 400ms ease);
+}
+*/
+@mixin opacity ( $value: 0.5 ) {
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" $value * 100 ")";
+  filter: alpha(opacity= $value * 100 );
+  zoom: 1;
+}
+/*
+button {
+    height:48px;
+    width:300px;
+}
+*/
+@mixin cbc_cat () {
+	width:441px;
+	height:309px;
+}
+
+@mixin urine () {
+	width:466px;
+	height:318px;
+}
+@mixin chemistry () {
+	width: 356px;
+	height:320px;
+}
+@mixin accuplex () {
+	width: 365px;
+	height:329px;
+}
+@mixin o_and_p () {
+	width: 356px;
+	height: 297px;
+}
+@mixin heartworm () {
+	width: 374px;
+	height:308px;
+}
+@mixin felv () {
+	width: 314px;
+	height: 326px;
+}
+@mixin t4l () {
+	width: 324px;
+	height:285px;
+}
+
+@mixin keyframes ($animation_name) {
+    @-webkit-keyframes $animation_name {
+        @content;
+    }
+
+    @-moz-keyframes $animation_name {
+        @content;
+    }
+
+    @-o-keyframes $animation_name {
+        @content;
+    }
+
+    @keyframes $animation_name {
+        @content;
+    }
+}
+
+@mixin animation-direction ($mode) {
+    -webkit-animation-direction: $mode;
+    -moz-animation-direction: $mode;
+    -o-animation-direction: $mode;
+    -ms-animation-direction: $mode;
+    animation-direction: $mode;
+}
+@mixin animation-fill ($fill) {
+	-webkit-animation-fill-mode: $fill;
+    -moz-animation-fill-mode: $fill;
+    -o-animation-fill-mode: $fill;
+    -ms-animation-fill-mode: $fill;
+    animation-fill-mode: $fill;
+}
+@mixin animation ($name, $duration, $delay, $iteration, $easing) {
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: $name;
+    -webkit-animation-iteration-count: $iteration;
+    -webkit-animation-timing-function: $easing;
+
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-name: $name;
+    -moz-animation-iteration-count: $iteration;
+    -moz-animation-timing-function: $easing;
+
+    -ms-animation-delay: $delay;
+    -ms-animation-duration: $duration;
+    -ms-animation-name: $name;
+    -ms-animation-iteration-count: $iteration;
+    -ms-animation-timing-function: $easing;
+
+    -o-animation-delay: $delay;
+    -o-animation-duration: $duration;
+    -o-animation-name: $name;
+    -o-animation-iteration-count: $iteration;
+    -o-animation-timing-function: $easing;
+
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $name;
+    animation-iteration-count: $iteration;
+    animation-timing-function: $easing;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+//@import "urine";
+//@import "chemistry";
+//@import "cbc_dog";
+//@import "cbc_cat";
+//@import "ova";
+//@import "accuplex";
+//@import "felv";
+//@import "felvalternate";
+//@import "t4";
+@import "heartworm";
+
+
+.animation {
+    width:100%;
+}
