@@ -1,64 +1,60 @@
-.animation {
-	position: relative;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	height: 1024px;
-	width: 100%;
-	background: transparent;
-	.background.heartworm {
-		background-color:#D53F36;
-		width:100%;
-		height: 100%;
+.background.heartworm {
+	max-width: round(image-width("../images/animation/heartworm/2x/background-2x.png") / 2);
 
-		.sticker {
-			width: 430px;
+	.sticker {
+		position: relative;
+		z-index: 0;
+
+		.bg {
+			display: block;
+		}
+
+		.part {
+			position: absolute;
 			margin: 0 auto;
-			min-height: 500px;
-			position: relative;
-			z-index: 0;
-			img {
-				position: absolute;
-				margin: 0 auto;
-				text-align: center;
-				z-index: 3;
-				left: 22.3%;
-				top: 16.3%;
+			text-align: center;
+			z-index: 3;
 
-				&.heart {
-					left: 33.3%;
-					top: 28%;
-				}
-				&.leftwing {
-					left: 51%;
-top: 55%;
-				}
-				&.rightwing {
-					left: 83%;
-top: 55%;
-				}
+			&.heart {
+				left: 14.7%;
+				top: 18.7%;
+				width: 29.6%;
 			}
-			&.active {
-				.heart {
-					@include animation(heartbeat2, 1000ms, 0ms, 3, cubic-bezier(0,1.49,.13,.95));
-					@include animation-fill(forwards);
-					@include perspective(1000px);
-					@include transform(scale(1));
-				}
-				.leftwing {
-					@include animation(mosqito-left, 200ms, 0ms, 15, ease);
-					@include apply-origin(100% 30%, false);
-					@include perspective(1000px);
-				}
-				.rightwing {
-					@include apply-origin(0% 30%, false);
-					@include perspective(1000px);
-					@include animation(mosqito-right, 200ms, 0ms, 15, ease);
-				}
+
+			$wingWidth: 30.5%;
+
+			&.leftwing {
+				left: 37.7%;
+				top: 63.9%;
+				width: $wingWidth;
+			}
+			&.rightwing {
+				left: 74.8%;
+				top: 63.9%;
+				width: $wingWidth;
+			}
+		}
+		&.active {
+			.heart {
+				@include animation(heartbeat2, 1000ms, 0ms, 3, cubic-bezier(0,1.49,.13,.95));
+				@include animation-fill(forwards);
+				@include perspective(1000px);
+				@include transform(scale(1));
+			}
+			.leftwing {
+				@include animation(mosqito-left, 200ms, 0ms, 15, ease);
+				@include apply-origin(100% 30%, false);
+				@include perspective(1000px);
+			}
+			.rightwing {
+				@include apply-origin(0% 30%, false);
+				@include perspective(1000px);
+				@include animation(mosqito-right, 200ms, 0ms, 15, ease);
 			}
 		}
 	}
 }
+
 @include keyframes(heartbeat) {
 	0%, 100% {
 		@include transform(scale(1));

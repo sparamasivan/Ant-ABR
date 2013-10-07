@@ -4384,48 +4384,38 @@ button {
     width:300px;
 }
 */
-.animation {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  height: 1024px;
-  width: 100%;
-  background: transparent;
+.background.heartworm {
+  max-width: 352px;
 }
-.animation .background.heartworm {
-  background-color: #D53F36;
-  width: 100%;
-  height: 100%;
-}
-.animation .background.heartworm .sticker {
-  width: 430px;
-  margin: 0 auto;
-  min-height: 500px;
+.background.heartworm .sticker {
   position: relative;
   z-index: 0;
 }
-.animation .background.heartworm .sticker img {
+.background.heartworm .sticker .bg {
+  display: block;
+}
+.background.heartworm .sticker .part {
   position: absolute;
   margin: 0 auto;
   text-align: center;
   z-index: 3;
-  left: 22.3%;
-  top: 16.3%;
 }
-.animation .background.heartworm .sticker img.heart {
-  left: 33.3%;
-  top: 28%;
+.background.heartworm .sticker .part.heart {
+  left: 14.7%;
+  top: 18.7%;
+  width: 29.6%;
 }
-.animation .background.heartworm .sticker img.leftwing {
-  left: 51%;
-  top: 55%;
+.background.heartworm .sticker .part.leftwing {
+  left: 37.7%;
+  top: 63.9%;
+  width: 30.5%;
 }
-.animation .background.heartworm .sticker img.rightwing {
-  left: 83%;
-  top: 55%;
+.background.heartworm .sticker .part.rightwing {
+  left: 74.8%;
+  top: 63.9%;
+  width: 30.5%;
 }
-.animation .background.heartworm .sticker.active .heart {
+.background.heartworm .sticker.active .heart {
   -webkit-animation-delay: 0ms;
   -webkit-animation-duration: 1000ms;
   -webkit-animation-name: heartbeat2;
@@ -4467,7 +4457,7 @@ button {
   -o-transform: scale(1);
   transform: scale(1);
 }
-.animation .background.heartworm .sticker.active .leftwing {
+.background.heartworm .sticker.active .leftwing {
   -webkit-animation-delay: 0ms;
   -webkit-animation-duration: 200ms;
   -webkit-animation-name: mosqito-left;
@@ -4504,7 +4494,7 @@ button {
   -o-perspective: 1000px;
   perspective: 1000px;
 }
-.animation .background.heartworm .sticker.active .rightwing {
+.background.heartworm .sticker.active .rightwing {
   -webkit-transform-origin: 0% 30%;
   -moz-transform-origin: 0% 30%;
   -ms-transform-origin: 0% 30%;
@@ -4956,8 +4946,4 @@ button {
     -o-transform: rotate(-10deg);
     transform: rotate(-10deg);
   }
-}
-
-.animation {
-  width: 100%;
 }

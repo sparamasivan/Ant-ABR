@@ -17,6 +17,10 @@ define([
             this.$elContent = this.$el.find('.animation');
 
             this.$el.appendTo(parent);
+        },
+
+        animate: function() {
+            this.$elContent.find('.sticker').removeClass('active').addClass('active');
         }
     });
 });

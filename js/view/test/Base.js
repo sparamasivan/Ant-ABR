@@ -126,6 +126,11 @@ define([
         expand: function() {
             this.$elBody.removeClass('collapsed');
             this.refresh();
+
+            if (this._overview.viewAnimation) {
+                // activate overview animation when test expanded
+                this._overview.viewAnimation.animate();
+            }
         },
 
         isCollapsed: function() {

@@ -8,7 +8,7 @@ var require = {
         'jquery-waitforimages': 'lib/jquery.waitforimages',
         'jquery-debouncedresize': 'lib/jquery.debouncedresize',
         'jquery-jswipe': 'lib/jquery.jswipe',
-        'modernizr' : 'lib/modernizr.custom.media-query',
+        'modernizr' : 'lib/modernizr.custom',
         'underscore': 'lib/underscore',
         'backbone': 'lib/backbone-1.0.0',
         'handlebars-base': 'lib/handlebars-1.0.0-rc.3',
