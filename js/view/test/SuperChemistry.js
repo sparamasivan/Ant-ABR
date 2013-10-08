@@ -4,14 +4,16 @@ define([
     'handlebars',
     'view/test/Base',
     'text!template/test/SuperChemistry.html',
-    'view/subtest/RangeGroup'
+    'view/subtest/RangeGroup',
+    'view/animation/Chemistry'
 ], function(
     $,
     Backbone,
     Handlebars,
     ViewTestBase,
     Template,
-    ViewSubtestRangeGroup
+    ViewSubtestRangeGroup,
+    ViewAnimation
 ) {
     return ViewTestBase.extend({
         title: 'CHEMISTRY',
@@ -26,7 +28,8 @@ define([
 
             $.extend(this._overview, {
                 descriptionTemplate: '{{{patient.name}}}’s body chemistry is unique - like a fingerprint - and remains relatively constant over time.',
-                moreTemplate: 'A chemistry panel gives us this fingerprint, showing us how all {{{patient.name}}}’s systems work together, so we know {{{patient.name}}}’s expected numbers and can easily identify changes.'
+                moreTemplate: 'A chemistry panel gives us this fingerprint, showing us how all {{{patient.name}}}’s systems work together, so we know {{{patient.name}}}’s expected numbers and can easily identify changes.',
+                viewAnimation: new ViewAnimation()
             });
             ViewTestBase.prototype.render.apply(this, arguments);
             
