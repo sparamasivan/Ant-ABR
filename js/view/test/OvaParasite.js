@@ -4,17 +4,17 @@
     'handlebars',
     'view/test/Base',
     'text!template/test/OvaParasite.html',
-    'view/subtest/pod/Boolean'
+    'view/subtest/pod/Boolean',
+    'view/animation/OvaParasite'
 ], function(
     $,
     Backbone,
     Handlebars,
     ViewTestBase,
     Template,
-    ViewSubtestBoolean
+    ViewSubtestBoolean,
+    ViewAnimation
 ) {
-    var giardiaExist = 0;
-
     return ViewTestBase.extend({
         title: 'OVA & PARASITES',
 
@@ -30,11 +30,13 @@
 
         render: function(parent) {
             var self = this,
-                view;
+                view,
+                giardiaExist = 0;
 
             $.extend(this._overview, {
                 descriptionTemplate: 'We checked {{{patient.name}}}’s stool for young parasites and eggs.',
-                moreTemplate: 'These parasites are found in the intestine and are the most common and preventable form of infectious disease in dogs and cats.'
+                moreTemplate: 'These parasites are found in the intestine and are the most common and preventable form of infectious disease in dogs and cats.',
+                viewAnimation: new ViewAnimation()
             });
 
             ViewTestBase.prototype.render.apply(this, arguments);

@@ -1,0 +1,126 @@
+.animation {
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	height: 1024px;
+	width: 100%;
+	background: transparent;
+	.background.ova {
+		background-color:#2E90F8;
+		width:100%;
+		height: 100%;
+
+		.sticker {
+			width: 430px;
+			margin: 0 auto;
+			min-height: 500px;
+			position: relative;
+			z-index: 0;
+			img {
+				position: absolute;
+				margin: 0 auto;
+				text-align: center;
+				z-index: 3;
+				left: 22.3%;
+				top: 16.3%;
+			}
+
+			.lense {
+				width: 267px;
+				height: 266px;
+				left: 277px;
+				overflow: hidden;
+				position: relative;
+				top: 23px;
+				z-index: 4;
+				border-radius: 200px;
+				img {
+					position: relative;
+					left: 0;
+					top: 0;
+					z-index: 0;
+				}
+				.critters {
+					position: relative;
+					border-radius: 271px;
+					height: 235px;
+					width: 236px;
+					overflow:hidden;
+					top: -254px;
+					background-size: 410px 410px;
+					background-attachment: fixed;
+					background:#fff;
+					z-index: -1;
+					background-position: 100% 0%;
+					left: 17px;
+					.a {
+						@include transform(translateZ(0));
+						top: 100px;
+						left: 99px;
+					}
+					.b {
+						@include transform(translateZ(0));
+						top: 16px;
+						left: 84px;
+					}
+					.c {
+						@include transform(translateZ(0));
+						top: 32px;
+						left: -64px;
+					}
+				}
+			}
+			&.active {
+				.lense {
+					.critters {
+						.a {
+							@include animation(bot-critter, 10s, 0, 1, linear);
+							@include animation-fill(forwards);
+						}
+						.b {
+							@include animation-fill(forwards);
+							@include animation(ri-critter, 10s, 0, 1, linear);
+						}
+						.c {
+							@include animation(big-critter, 10s, 0, 1, linear);
+							@include animation-fill(forwards);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include keyframes(big-critter) {
+	0%  {
+		@include transform(rotate(0deg));
+	}
+	100% {
+		top: 22px;
+		left: -82px;
+		@include transform(rotate(-48deg));
+	}
+}
+@include keyframes(ri-critter) {
+	0% {
+		@include transform(rotate(0deg));
+	}
+	100% {
+		@include transform(rotate(92deg));
+		top: 16px;
+		left: 130px;
+	}
+}
+@include keyframes(bot-critter) {
+	0% {
+		top: 100px;
+		left: 99px;
+	}
+	100% {
+		top: 95px;
+		left: 64px;
+		@include transform(rotate(-45deg));
+	}
+}
