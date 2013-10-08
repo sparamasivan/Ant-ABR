@@ -4372,18 +4372,162 @@ span.placeholder {
   display: block;
 }
 
-/*
-html, body {
-    margin: 30px 0;
-    @include transition(all 400ms ease);
+.background.accuplex {
+  max-width: 267px;
+  margin: 12%;
 }
-*/
-/*
-button {
-    height:48px;
-    width:300px;
+.background.accuplex .sticker {
+  position: relative;
+  z-index: 0;
 }
-*/
+.background.accuplex .sticker .bg {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.background.accuplex .sticker .bug.small {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+}
+.background.accuplex .sticker .bug.small:nth-child(6) {
+  top: 45%;
+  left: -20%;
+  background: url("../images/animation/accuplex/1x/sm-pink-bug-1.png") no-repeat trasparent;
+}
+.background.accuplex .sticker .bug.small:nth-child(7) {
+  top: -11%;
+  left: 77%;
+  background: url("../images/animation/accuplex/1x/sm-pink-bug-2.png") no-repeat transparent;
+}
+.background.accuplex .sticker .bug.small:nth-child(8) {
+  top: 45%;
+  left: 109%;
+  background: url("../images/animation/accuplex/1x/sm-pink-bug-3.png") no-repeat transparent;
+}
+.background.accuplex .sticker .bug.small:nth-child(9) {
+  top: 83%;
+  left: -4%;
+  background: url("../images/animation/accuplex/1x/sm-pink-bug-4.png") no-repeat transparent;
+}
+.background.accuplex .sticker .bug.medium {
+  height: 47px;
+  width: 48px;
+  position: absolute;
+}
+.background.accuplex .sticker .bug.medium:nth-child(2) {
+  top: -12%;
+  left: -12%;
+  -webkit-transition: all 50ms 350ms;
+  -webkit-transition-delay: ease;
+  -moz-transition: all 50ms 350ms ease;
+  -o-transition: all 50ms 350ms ease;
+  transition: all 50ms 350ms ease;
+  background: url("../images/animation/accuplex/1x/med-grey-bug-1.png") no-repeat transparent;
+}
+.background.accuplex .sticker .bug.medium:nth-child(3) {
+  top: 45%;
+  left: 125%;
+  -webkit-transition: all 65ms 350ms;
+  -webkit-transition-delay: ease;
+  -moz-transition: all 65ms 350ms ease;
+  -o-transition: all 65ms 350ms ease;
+  transition: all 65ms 350ms ease;
+  background: url("../images/animation/accuplex/1x/med-grey-bug-2.png") no-repeat transparent;
+}
+.background.accuplex .sticker .bug.medium:nth-child(4) {
+  top: 101%;
+  left: 61%;
+  -webkit-transition: all 80ms 350ms;
+  -webkit-transition-delay: ease;
+  -moz-transition: all 80ms 350ms ease;
+  -o-transition: all 80ms 350ms ease;
+  transition: all 80ms 350ms ease;
+  background: url("../images/animation/accuplex/1x/med-grey-bug-3.png") no-repeat transparent;
+}
+.background.accuplex .sticker .bug.medium:nth-child(5) {
+  top: 110%;
+  left: 12%;
+  -webkit-transition: all 95ms 350ms;
+  -webkit-transition-delay: ease;
+  -moz-transition: all 95ms 350ms ease;
+  -o-transition: all 95ms 350ms ease;
+  transition: all 95ms 350ms ease;
+  background: url("../images/animation/accuplex/1x/med-grey-bug-4.png") no-repeat transparent;
+}
+.background.accuplex .sticker.active .bug:nth-child(2) {
+  -webkit-transition: all 3s 170ms;
+  -webkit-transition-delay: ease;
+  -moz-transition: all 3s 170ms ease;
+  -o-transition: all 3s 170ms ease;
+  transition: all 3s 170ms ease;
+  left: 50%;
+  top: 50%;
+}
+.background.accuplex .sticker.active .bug:nth-child(3) {
+  -webkit-transition: all 3s 295ms;
+  -webkit-transition-delay: ease;
+  -moz-transition: all 3s 295ms ease;
+  -o-transition: all 3s 295ms ease;
+  transition: all 3s 295ms ease;
+  left: 50%;
+  top: 50%;
+}
+.background.accuplex .sticker.active .bug:nth-child(4) {
+  -webkit-transition: all 3s 330ms;
+  -webkit-transition-delay: ease;
+  -moz-transition: all 3s 330ms ease;
+  -o-transition: all 3s 330ms ease;
+  transition: all 3s 330ms ease;
+  left: 50%;
+  top: 50%;
+}
+.background.accuplex .sticker.active .bug:nth-child(5) {
+  -webkit-transition: all 3s 455ms;
+  -webkit-transition-delay: ease;
+  -moz-transition: all 3s 455ms ease;
+  -o-transition: all 3s 455ms ease;
+  transition: all 3s 455ms ease;
+  left: 50%;
+  top: 50%;
+}
+.background.accuplex .sticker.active .bug:nth-child(6) {
+  -webkit-transition: all 3s 555ms;
+  -webkit-transition-delay: ease;
+  -moz-transition: all 3s 555ms ease;
+  -o-transition: all 3s 555ms ease;
+  transition: all 3s 555ms ease;
+  left: 50%;
+  top: 50%;
+}
+.background.accuplex .sticker.active .bug:nth-child(7) {
+  -webkit-transition: all 3s 655ms;
+  -webkit-transition-delay: ease;
+  -moz-transition: all 3s 655ms ease;
+  -o-transition: all 3s 655ms ease;
+  transition: all 3s 655ms ease;
+  left: 50%;
+  top: 50%;
+}
+.background.accuplex .sticker.active .bug:nth-child(8) {
+  -webkit-transition: all 3s 755ms;
+  -webkit-transition-delay: ease;
+  -moz-transition: all 3s 755ms ease;
+  -o-transition: all 3s 755ms ease;
+  transition: all 3s 755ms ease;
+  left: 50%;
+  top: 50%;
+}
+.background.accuplex .sticker.active .bug:nth-child(9) {
+  -webkit-transition: all 3s 855ms;
+  -webkit-transition-delay: ease;
+  -moz-transition: all 3s 855ms ease;
+  -o-transition: all 3s 855ms ease;
+  transition: all 3s 855ms ease;
+  left: 50%;
+  top: 50%;
+}
+
 .background.heartworm {
   max-width: 352px;
 }
@@ -4396,8 +4540,6 @@ button {
 }
 .background.heartworm .sticker .part {
   position: absolute;
-  margin: 0 auto;
-  text-align: center;
   z-index: 3;
 }
 .background.heartworm .sticker .part.heart {

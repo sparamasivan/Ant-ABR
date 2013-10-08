@@ -1,0 +1,116 @@
+.background.accuplex {
+	max-width: round(image-width("../images/animation/accuplex/2x/large-bug-2x.png") / 2);
+	margin: 12%;
+
+	.sticker {
+		position: relative;
+		z-index: 0;
+
+		.bg {
+			display: block;
+			position: relative;
+			z-index: 1;
+		}
+
+		.bug {
+			&.small {
+				height: 40px;
+				width: 40px;
+				position:absolute;
+				&:nth-child(6) {
+					top: 45%;
+					left: -20%;
+					background: url("../images/animation/accuplex/1x/sm-pink-bug-1.png") no-repeat trasparent;
+				}
+				&:nth-child(7) {
+					top: -11%;
+					left: 77%;
+					background: url("../images/animation/accuplex/1x/sm-pink-bug-2.png") no-repeat transparent;
+				}
+				&:nth-child(8) {
+					top: 45%;
+					left: 109%;
+					background: url("../images/animation/accuplex/1x/sm-pink-bug-3.png") no-repeat transparent;
+				}
+				&:nth-child(9) {
+					top: 83%;
+					left: -4%;
+					background: url("../images/animation/accuplex/1x/sm-pink-bug-4.png") no-repeat transparent;
+				}
+			}
+			&.medium {
+				height: 47px;
+				width: 48px;
+				position:absolute;
+				&:nth-child(2) {
+					top: -12%;
+					left: -12%;
+					@include transition(all 50ms 350ms ease);
+					background: url("../images/animation/accuplex/1x/med-grey-bug-1.png") no-repeat transparent;
+				}
+				&:nth-child(3) {
+					top: 45%;
+					left: 125%;
+					@include transition(all 65ms 350ms ease);
+					background: url("../images/animation/accuplex/1x/med-grey-bug-2.png") no-repeat transparent;
+				}
+				&:nth-child(4) {
+					top: 101%;
+					left: 61%;
+					@include transition(all 80ms 350ms ease);
+					background: url("../images/animation/accuplex/1x/med-grey-bug-3.png") no-repeat transparent;
+				}
+				&:nth-child(5) {
+					top: 110%;
+					left: 12%;
+					@include transition(all 95ms 350ms ease);
+					background: url("../images/animation/accuplex/1x/med-grey-bug-4.png") no-repeat transparent;
+				}
+			}
+		}
+		&.active {
+			.bug {
+				&:nth-child(2) {
+					@include transition(all 3s 170ms ease);
+					left:50%;
+					top:50%;
+				}
+				&:nth-child(3) {
+					@include transition(all 3s 295ms ease);
+					left:50%;
+					top:50%;
+				}
+				&:nth-child(4) {
+					@include transition(all 3s 330ms ease);
+					left:50%;
+					top:50%;
+				}
+				&:nth-child(5) {
+					@include transition(all 3s 455ms ease);
+					left:50%;
+					top:50%;
+				}
+				&:nth-child(6) {
+					@include transition(all 3s 555ms ease);
+					left:50%;
+					top:50%;
+				}
+				&:nth-child(7) {
+					@include transition(all 3s 655ms ease);
+					left:50%;
+					top:50%;
+				}
+				&:nth-child(8) {
+					@include transition(all 3s 755ms ease);
+					left:50%;
+					top:50%;
+				}
+				&:nth-child(9) {
+					@include transition(all 3s 855ms ease);
+					left:50%;
+					top:50%;
+				}
+			}
+		}
+	}
+}

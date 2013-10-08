@@ -3,7 +3,7 @@ define([
     'backbone',
     'handlebars',
     'view/animation/Base',
-    'text!template/animation/Heartworm.html',
+    'text!template/animation/Accuplex.html',
 ], function(
     $,
     Backbone,
