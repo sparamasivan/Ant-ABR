@@ -11,6 +11,7 @@ define([
     'config',
     'view/widget/TestSubsection',
     'view/subtest/Select',
+    'view/animation/Urine',
     'jquery-tooltip'
 ], function(
     $,
@@ -24,7 +25,8 @@ define([
     ViewSubtestPodBoolean,
     Config,
     ViewWidgetTestSubsection,
-    ViewSubtestSelect
+    ViewSubtestSelect,
+    ViewAnimation
 ) {
     var mathRound = function(value, decimalPlaces) {
         var roundedValue = Math.round(value * Math.pow(10, decimalPlaces)) / Math.pow(10, decimalPlaces);
@@ -47,7 +49,8 @@ define([
 
             $.extend(this._overview, {
                 descriptionTemplate: 'Analyzing {{{patient.name}}}’s urine gives us an excellent snapshot of how the body’s organs and systems are functioning.',
-                moreTemplate: 'Urine is waste that’s produced from {{{patient.name}}}’s blood after it has passed through these systems. We can spot changes in {{{patient.name}}} earlier here than we can in other tests.'
+                moreTemplate: 'Urine is waste that’s produced from {{{patient.name}}}’s blood after it has passed through these systems. We can spot changes in {{{patient.name}}} earlier here than we can in other tests.',
+                viewAnimation: new ViewAnimation()
             });
 
             ViewTestBase.prototype.render.apply(this, arguments);

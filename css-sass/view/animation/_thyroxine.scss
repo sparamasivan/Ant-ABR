@@ -1,0 +1,150 @@
+.animation {
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	height: 1024px;
+	width: 100%;
+	background: transparent;
+	.background.t4 {
+		background-color:#E2850E;
+		width:100%;
+		height: 100%;
+
+		.sticker {
+			width: 430px;
+			margin: 0 auto;
+			min-height: 500px;
+			position: relative;
+			z-index: 0;
+			img {
+				position: absolute;
+				margin: 0 auto;
+				text-align: center;
+				z-index: 3;
+				left: 22.3%;
+				top: 16.3%;
+			}
+			.lever {
+				position: relative;
+				top: 95px;
+				left: -45px;
+				@include transform(rotate(0deg));
+				z-index:3;
+				@include animation-fill(forwards);
+					@include perspective(1000px);
+					@include transform-origin(32px, 29px);
+			}
+			.gear-big {
+				position: relative;
+				top: 195px;
+				display: block;
+				left: 8px;
+				img {
+					&:nth-child(2) {
+						margin-left: 25px;
+						top: 26px;
+					}
+				}
+			}
+			.gear-med {
+				position: relative;
+				top: 104px;
+				left: 131px;
+				img {
+					&:nth-child(2) {
+						margin-top: 23px;
+						margin-left: 25px;
+					}
+				}
+			}
+			.gear-small {
+				position: relative;
+				top: 211px;
+				left: 207px;
+				img {
+					&:nth-child(2) {
+						margin-top: 21px;
+						margin-left: 20px;
+					}
+				}
+			}
+			&.active {
+				.lever {
+					z-index:3;
+					@include animation(lever, 5s, 0ms, 1, ease-in-out);
+				}
+				.gear-big {
+					img {
+						&:nth-child(1) {
+							z-index:3;
+							@include animation(gear-big, 2500ms, 0ms, 2, linear);
+							@include animation-fill(forwards);
+						}
+					}
+				}
+				.gear-med {
+					img {
+						&:nth-child(1) {
+							z-index:3;
+							@include animation(gear-med, 2500ms, 0ms, 2, linear);
+							@include animation-fill(forwards);
+						}
+					}
+
+				}
+				.gear-small {
+					img {
+						&:nth-child(1) {
+							z-index:3;
+							@include animation(gear-big, 2500ms, 0ms, 2, linear);
+							@include animation-fill(forwards);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include keyframes(lever) {
+	0%, 100% {
+		top: 95px;
+		left: -45px;
+		@include transform(rotate(0deg));
+	}
+	25% {
+		top: 95px;
+		left: -45px;
+		@include transform(rotate(3deg));
+	}
+	50% {
+		@include transform(rotate(-4deg));
+	}
+	75% {
+		@include transform(rotate(3deg));
+	}
+}
+
+@include keyframes(gear-big) {
+	0% {
+		@include transform(rotate(0deg))
+	}
+	50% {
+		@include transform(rotate(180deg));
+	}
+	100% {
+		@include transform(rotate(360deg))
+	}
+}
+@include keyframes(gear-med) {
+	0% {
+		@include transform(rotate(0deg))
+	}
+	50% {
+		@include transform(rotate(-180deg));
+	}
+	100% {
+		@include transform(rotate(-360deg))
+	}
+}

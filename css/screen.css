@@ -4381,6 +4381,267 @@ span.placeholder {
   width: 100%;
   background: transparent;
 }
+.animation .background.urine {
+  background-color: #7b58af;
+  min-height: 600px;
+}
+.animation .background.urine .sticker .background-sticker {
+  position: relative;
+  z-index: 1;
+  left: 450px;
+  top: 75px;
+}
+.animation .background.urine .sticker .tank {
+  width: 193px;
+  background: #FFF;
+  height: 150px;
+  position: absolute;
+  left: 643px;
+  top: 299px;
+}
+.animation .background.urine .sticker .tank .water {
+  background: url("../images/animation/urine/pee.png") no-repeat rgba(0, 0, 0, 0);
+  position: absolute;
+  width: 244px;
+  left: 0;
+  top: 90px;
+  height: 219px;
+  z-index: 0;
+  background-size: 85%;
+}
+.animation .background.urine .sticker .portholes {
+  width: 367px;
+  height: 284px;
+  position: absolute;
+  top: 27px;
+  left: 478px;
+}
+.animation .background.urine .sticker .portholes img {
+  position: relative;
+  z-index: 2;
+}
+.animation .background.urine .sticker .portholes img.grate {
+  position: relative;
+  top: 159px;
+  left: 7px;
+  z-index: 2;
+}
+.animation .background.urine .sticker .bubbles {
+  position: absolute;
+  top: 184px;
+  left: 289px;
+  z-index: 1;
+  float: left;
+  width: 200px;
+}
+.animation .background.urine .sticker .bubbles .bubble {
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 3;
+  left: 32.3%;
+  top: 25%;
+}
+.animation .background.urine .sticker .bubbles .bubble:nth-child(1) {
+  left: 0;
+  margin-top: 43px;
+}
+.animation .background.urine .sticker .bubbles .bubble:nth-child(2) {
+  left: -26px;
+  margin-top: 23px;
+}
+.animation .background.urine .sticker .bubbles .bubble:nth-child(3) {
+  left: 58px;
+  margin-top: 47px;
+}
+.animation .background.urine .sticker .bubbles .bubble:nth-child(4) {
+  left: 202px;
+  margin-top: 49px;
+}
+.animation .background.urine .sticker .bubbles .bubble:nth-child(5) {
+  left: 181px;
+  margin-top: 84px;
+}
+.animation .background.urine .sticker .bubbles .bubble:nth-child(6) {
+  left: -25px;
+  margin-top: 91px;
+}
+.animation .background.urine .sticker .bubbles .bubble:nth-child(7) {
+  left: 141px;
+  margin-top: 46px;
+}
+.animation .background.urine .sticker .bubbles .bubble:nth-child(8) {
+  left: -63px;
+  margin-top: 61px;
+}
+.animation .background.urine .sticker .bubbles .bubble:nth-child(9) {
+  left: 45px;
+  margin-top: 80px;
+}
+.animation .background.urine .sticker .bubbles .bubble:nth-child(10) {
+  left: 95px;
+  margin-top: 63px;
+}
+.animation .background.urine .sticker .bubbles .bubble:nth-child(11) {
+  left: 47px;
+  margin-top: 12px;
+}
+.animation .background.urine .sticker .bubbles .bubble:nth-child(12) {
+  left: 107px;
+  margin-top: 23px;
+}
+.animation .background.urine .sticker .drop {
+  position: absolute;
+  left: 903px;
+  top: 397px;
+  z-index: 0;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(1) {
+  -webkit-transition: all 2100ms 4ms ease-in-out;
+  -moz-transition: all 2100ms 4ms ease-in-out;
+  -o-transition: all 2100ms 4ms ease-in-out;
+  transition: all 2100ms 4ms ease-in-out;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(2) {
+  -webkit-transition: all 2100ms 8ms ease-in-out;
+  -moz-transition: all 2100ms 8ms ease-in-out;
+  -o-transition: all 2100ms 8ms ease-in-out;
+  transition: all 2100ms 8ms ease-in-out;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(3) {
+  -webkit-transition: all 2100ms 12ms ease-in-out;
+  -moz-transition: all 2100ms 12ms ease-in-out;
+  -o-transition: all 2100ms 12ms ease-in-out;
+  transition: all 2100ms 12ms ease-in-out;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(4) {
+  -webkit-transition: all 2100ms 16ms ease-in-out;
+  -moz-transition: all 2100ms 16ms ease-in-out;
+  -o-transition: all 2100ms 16ms ease-in-out;
+  transition: all 2100ms 16ms ease-in-out;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(5) {
+  -webkit-transition: all 2100ms 20ms ease-in-out;
+  -moz-transition: all 2100ms 20ms ease-in-out;
+  -o-transition: all 2100ms 20ms ease-in-out;
+  transition: all 2100ms 20ms ease-in-out;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(6) {
+  -webkit-transition: all 2100ms 24ms ease-in-out;
+  -moz-transition: all 2100ms 24ms ease-in-out;
+  -o-transition: all 2100ms 24ms ease-in-out;
+  transition: all 2100ms 24ms ease-in-out;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(7) {
+  -webkit-transition: all 2100ms 28ms ease-in-out;
+  -moz-transition: all 2100ms 28ms ease-in-out;
+  -o-transition: all 2100ms 28ms ease-in-out;
+  transition: all 2100ms 28ms ease-in-out;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(8) {
+  -webkit-transition: all 2100ms 32ms ease-in-out;
+  -moz-transition: all 2100ms 32ms ease-in-out;
+  -o-transition: all 2100ms 32ms ease-in-out;
+  transition: all 2100ms 32ms ease-in-out;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(9) {
+  -webkit-transition: all 2100ms 36ms ease-in-out;
+  -moz-transition: all 2100ms 36ms ease-in-out;
+  -o-transition: all 2100ms 36ms ease-in-out;
+  transition: all 2100ms 36ms ease-in-out;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(10) {
+  -webkit-transition: all 2100ms 40ms ease-in-out;
+  -moz-transition: all 2100ms 40ms ease-in-out;
+  -o-transition: all 2100ms 40ms ease-in-out;
+  transition: all 2100ms 40ms ease-in-out;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(11) {
+  -webkit-transition: all 2100ms 44ms ease-in-out;
+  -moz-transition: all 2100ms 44ms ease-in-out;
+  -o-transition: all 2100ms 44ms ease-in-out;
+  transition: all 2100ms 44ms ease-in-out;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(12) {
+  -webkit-transition: all 2100ms 48ms ease-in-out;
+  -moz-transition: all 2100ms 48ms ease-in-out;
+  -o-transition: all 2100ms 48ms ease-in-out;
+  transition: all 2100ms 48ms ease-in-out;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(1) {
+  left: 241px;
+  margin-top: 43px;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(2) {
+  left: 264px;
+  margin-top: 23px;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(3) {
+  left: 215px;
+  margin-top: 47px;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(4) {
+  left: 326px;
+  margin-top: 49px;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(5) {
+  left: 326px;
+  margin-top: 84px;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(6) {
+  left: 245px;
+  margin-top: 91px;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(7) {
+  left: 282px;
+  margin-top: 46px;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(8) {
+  left: 190px;
+  margin-top: 61px;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(9) {
+  left: 270px;
+  margin-top: 80px;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(10) {
+  left: 226px;
+  margin-top: 63px;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(11) {
+  left: 228px;
+  margin-top: 12px;
+}
+.animation .background.urine .sticker.active .bubbles .bubble:nth-child(12) {
+  left: 291px;
+  margin-top: 23px;
+}
+.animation .background.urine .sticker.active .tank .water {
+  top: 70px;
+  -webkit-transition: all 1500ms 600ms;
+  -webkit-transition-delay: ease-out;
+  -moz-transition: all 1500ms 600ms ease-out;
+  -o-transition: all 1500ms 600ms ease-out;
+  transition: all 1500ms 600ms ease-out;
+}
+.animation .background.urine .sticker.active .drop {
+  -webkit-transition: all 500ms 2000ms;
+  -webkit-transition-delay: cubic-bezier(1, 0.01, 0.1, 0.1);
+  -moz-transition: all 500ms 2000ms cubic-bezier(1, 0.01, 0.1, 0.1);
+  -o-transition: all 500ms 2000ms cubic-bezier(1, 0.01, 0.1, 0.1);
+  transition: all 500ms 2000ms cubic-bezier(1, 0.01, 0.1, 0.1);
+  top: 475px;
+}
+
+.animation {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 1024px;
+  width: 100%;
+  background: transparent;
+}
 .animation .background.chemistry {
   background-color: #2759B9;
   width: 100%;
@@ -5270,6 +5531,1044 @@ span.placeholder {
   transition: all 3s 855ms ease;
   left: 50%;
   top: 50%;
+}
+
+.animation {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 1024px;
+  width: 100%;
+  background: transparent;
+}
+.animation .background.felv-fiv {
+  background-color: #0E95A3;
+  width: 100%;
+  height: 100%;
+}
+.animation .background.felv-fiv .sticker {
+  width: 430px;
+  margin: 0 auto;
+  min-height: 500px;
+  position: relative;
+  z-index: 0;
+}
+.animation .background.felv-fiv .sticker img.background {
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+  left: 22.3%;
+  top: 16.3%;
+  margin-top: 4px;
+  margin-left: 0px;
+}
+.animation .background.felv-fiv .sticker .darkstrand {
+  position: relative;
+  top: 54px;
+  left: 33px;
+}
+.animation .background.felv-fiv .sticker .darkstrand img {
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 2;
+}
+.animation .background.felv-fiv .sticker .lightstrand {
+  position: relative;
+  top: 21px;
+  left: 63px;
+}
+.animation .background.felv-fiv .sticker .lightstrand img {
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 3;
+}
+.animation .background.felv-fiv .sticker .bars-bottom {
+  position: relative;
+  left: 95px;
+  top: 277px;
+  width: 300px;
+  z-index: 2;
+}
+.animation .background.felv-fiv .sticker .bars-bottom img {
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 2;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 0 ")";
+  filter: alpha(opacity=0);
+  zoom: 1;
+}
+.animation .background.felv-fiv .sticker .bars-bottom img:nth-child(1) {
+  width: 0;
+  left: -12px;
+  top: -5px;
+}
+.animation .background.felv-fiv .sticker .bars-bottom img:nth-child(2) {
+  width: 0;
+  top: -19px;
+  left: 3px;
+}
+.animation .background.felv-fiv .sticker .bars-bottom img:nth-child(3) {
+  width: 0;
+  top: -33px;
+  left: 25px;
+}
+.animation .background.felv-fiv .sticker .bars-bottom img:nth-child(4) {
+  width: 0;
+  top: -46px;
+  left: 45px;
+}
+.animation .background.felv-fiv .sticker .bars-top {
+  position: relative;
+  left: 215px;
+  top: 110px;
+  width: 300px;
+  z-index: 2;
+}
+.animation .background.felv-fiv .sticker .bars-top img {
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 3;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 0 ")";
+  filter: alpha(opacity=0);
+  zoom: 1;
+}
+.animation .background.felv-fiv .sticker .bars-top img:nth-child(1) {
+  width: 0;
+  top: 30px;
+  left: -10px;
+}
+.animation .background.felv-fiv .sticker .bars-top img:nth-child(2) {
+  width: 0;
+  top: 5px;
+  left: 5px;
+}
+.animation .background.felv-fiv .sticker .bars-top img:nth-child(3) {
+  width: 0;
+  top: -11px;
+  left: 24px;
+}
+.animation .background.felv-fiv .sticker .bars-top img:nth-child(4) {
+  width: 0;
+  top: -30px;
+  left: 44px;
+}
+.animation .background.felv-fiv .sticker .bars-top img:nth-child(5) {
+  width: 0;
+  top: -45px;
+  left: 62px;
+}
+.animation .background.felv-fiv .sticker .bars-top img:nth-child(6) {
+  width: 0;
+  top: -59px;
+  left: 78px;
+}
+.animation .background.felv-fiv .sticker .dots {
+  position: relative;
+  top: 27px;
+  left: 122px;
+}
+.animation .background.felv-fiv .sticker .dots img {
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 3;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 0 ")";
+  filter: alpha(opacity=0);
+  zoom: 1;
+}
+.animation .background.felv-fiv .sticker .dots img:nth-child(1) {
+  top: 325px;
+  left: 27px;
+}
+.animation .background.felv-fiv .sticker .dots img:nth-child(2) {
+  top: 305px;
+  left: 44px;
+}
+.animation .background.felv-fiv .sticker .dots img:nth-child(3) {
+  top: 286px;
+  left: 57px;
+}
+.animation .background.felv-fiv .sticker .dots img:nth-child(4) {
+  top: 263px;
+  left: 65px;
+}
+.animation .background.felv-fiv .sticker .dots img:nth-child(5) {
+  top: 239px;
+  left: 73px;
+}
+.animation .background.felv-fiv .sticker .dots img:nth-child(6) {
+  top: 214px;
+  left: 80px;
+}
+.animation .background.felv-fiv .sticker .dots img:nth-child(7) {
+  top: 123px;
+  left: 51px;
+}
+.animation .background.felv-fiv .sticker .dots img:nth-child(8) {
+  top: 95px;
+  left: 59px;
+}
+.animation .background.felv-fiv .sticker .dots img:nth-child(9) {
+  top: 70px;
+  left: 72px;
+}
+.animation .background.felv-fiv .sticker .dots img:nth-child(10) {
+  top: 47px;
+  left: 90px;
+}
+.animation .background.felv-fiv .sticker .dots img:nth-child(11) {
+  top: 28px;
+  left: 108px;
+}
+.animation .background.felv-fiv .sticker .dots img:nth-child(12) {
+  top: 14px;
+  left: 130px;
+}
+.animation .background.felv-fiv .sticker .dots img:nth-child(13) {
+  top: 3px;
+  left: 152px;
+}
+.animation .background.felv-fiv .sticker.active .bars-bottom img {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
+  filter: alpha(opacity=100);
+  zoom: 1;
+}
+.animation .background.felv-fiv .sticker.active .bars-bottom img:nth-child(1) {
+  -webkit-transition: all 500ms 50ms;
+  -webkit-transition-delay: ease-in-out;
+  -moz-transition: all 500ms 50ms ease-in-out;
+  -o-transition: all 500ms 50ms ease-in-out;
+  transition: all 500ms 50ms ease-in-out;
+}
+.animation .background.felv-fiv .sticker.active .bars-bottom img:nth-child(2) {
+  -webkit-transition: all 500ms 100ms;
+  -webkit-transition-delay: ease-in-out;
+  -moz-transition: all 500ms 100ms ease-in-out;
+  -o-transition: all 500ms 100ms ease-in-out;
+  transition: all 500ms 100ms ease-in-out;
+}
+.animation .background.felv-fiv .sticker.active .bars-bottom img:nth-child(3) {
+  -webkit-transition: all 500ms 150ms;
+  -webkit-transition-delay: ease-in-out;
+  -moz-transition: all 500ms 150ms ease-in-out;
+  -o-transition: all 500ms 150ms ease-in-out;
+  transition: all 500ms 150ms ease-in-out;
+}
+.animation .background.felv-fiv .sticker.active .bars-bottom img:nth-child(4) {
+  -webkit-transition: all 500ms 200ms;
+  -webkit-transition-delay: ease-in-out;
+  -moz-transition: all 500ms 200ms ease-in-out;
+  -o-transition: all 500ms 200ms ease-in-out;
+  transition: all 500ms 200ms ease-in-out;
+}
+.animation .background.felv-fiv .sticker.active .bars-bottom img:nth-child(1) {
+  width: 66px;
+}
+.animation .background.felv-fiv .sticker.active .bars-bottom img:nth-child(2) {
+  width: 64px;
+}
+.animation .background.felv-fiv .sticker.active .bars-bottom img:nth-child(3) {
+  width: 57px;
+}
+.animation .background.felv-fiv .sticker.active .bars-bottom img:nth-child(4) {
+  width: 45px;
+}
+.animation .background.felv-fiv .sticker.active .bars-top img {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
+  filter: alpha(opacity=100);
+  zoom: 1;
+}
+.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(1) {
+  -webkit-transition: all 700ms 100ms;
+  -webkit-transition-delay: ease-in-out;
+  -moz-transition: all 700ms 100ms ease-in-out;
+  -o-transition: all 700ms 100ms ease-in-out;
+  transition: all 700ms 100ms ease-in-out;
+}
+.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(2) {
+  -webkit-transition: all 700ms 200ms;
+  -webkit-transition-delay: ease-in-out;
+  -moz-transition: all 700ms 200ms ease-in-out;
+  -o-transition: all 700ms 200ms ease-in-out;
+  transition: all 700ms 200ms ease-in-out;
+}
+.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(3) {
+  -webkit-transition: all 700ms 300ms;
+  -webkit-transition-delay: ease-in-out;
+  -moz-transition: all 700ms 300ms ease-in-out;
+  -o-transition: all 700ms 300ms ease-in-out;
+  transition: all 700ms 300ms ease-in-out;
+}
+.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(4) {
+  -webkit-transition: all 700ms 400ms;
+  -webkit-transition-delay: ease-in-out;
+  -moz-transition: all 700ms 400ms ease-in-out;
+  -o-transition: all 700ms 400ms ease-in-out;
+  transition: all 700ms 400ms ease-in-out;
+}
+.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(5) {
+  -webkit-transition: all 700ms 500ms;
+  -webkit-transition-delay: ease-in-out;
+  -moz-transition: all 700ms 500ms ease-in-out;
+  -o-transition: all 700ms 500ms ease-in-out;
+  transition: all 700ms 500ms ease-in-out;
+}
+.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(6) {
+  -webkit-transition: all 700ms 600ms;
+  -webkit-transition-delay: ease-in-out;
+  -moz-transition: all 700ms 600ms ease-in-out;
+  -o-transition: all 700ms 600ms ease-in-out;
+  transition: all 700ms 600ms ease-in-out;
+}
+.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(7) {
+  -webkit-transition: all 700ms 700ms;
+  -webkit-transition-delay: ease-in-out;
+  -moz-transition: all 700ms 700ms ease-in-out;
+  -o-transition: all 700ms 700ms ease-in-out;
+  transition: all 700ms 700ms ease-in-out;
+}
+.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(1) {
+  width: 70px;
+}
+.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(2) {
+  width: 81px;
+}
+.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(3) {
+  width: 84px;
+}
+.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(4) {
+  width: 85px;
+}
+.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(5) {
+  width: 82px;
+}
+.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(6) {
+  width: 76px;
+}
+.animation .background.felv-fiv .sticker.active .dots img:nth-child(1) {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
+  filter: alpha(opacity=100);
+  zoom: 1;
+  -webkit-transition: all 250ms 150ms;
+  -webkit-transition-delay: ease-out;
+  -moz-transition: all 250ms 150ms ease-out;
+  -o-transition: all 250ms 150ms ease-out;
+  transition: all 250ms 150ms ease-out;
+}
+.animation .background.felv-fiv .sticker.active .dots img:nth-child(2) {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
+  filter: alpha(opacity=100);
+  zoom: 1;
+  -webkit-transition: all 250ms 200ms;
+  -webkit-transition-delay: ease-out;
+  -moz-transition: all 250ms 200ms ease-out;
+  -o-transition: all 250ms 200ms ease-out;
+  transition: all 250ms 200ms ease-out;
+}
+.animation .background.felv-fiv .sticker.active .dots img:nth-child(3) {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
+  filter: alpha(opacity=100);
+  zoom: 1;
+  -webkit-transition: all 250ms 250ms;
+  -webkit-transition-delay: ease-out;
+  -moz-transition: all 250ms 250ms ease-out;
+  -o-transition: all 250ms 250ms ease-out;
+  transition: all 250ms 250ms ease-out;
+}
+.animation .background.felv-fiv .sticker.active .dots img:nth-child(4) {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
+  filter: alpha(opacity=100);
+  zoom: 1;
+  -webkit-transition: all 250ms 300ms;
+  -webkit-transition-delay: ease-out;
+  -moz-transition: all 250ms 300ms ease-out;
+  -o-transition: all 250ms 300ms ease-out;
+  transition: all 250ms 300ms ease-out;
+}
+.animation .background.felv-fiv .sticker.active .dots img:nth-child(5) {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
+  filter: alpha(opacity=100);
+  zoom: 1;
+  -webkit-transition: all 250ms 350ms;
+  -webkit-transition-delay: ease-out;
+  -moz-transition: all 250ms 350ms ease-out;
+  -o-transition: all 250ms 350ms ease-out;
+  transition: all 250ms 350ms ease-out;
+}
+.animation .background.felv-fiv .sticker.active .dots img:nth-child(6) {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
+  filter: alpha(opacity=100);
+  zoom: 1;
+  -webkit-transition: all 250ms 400ms;
+  -webkit-transition-delay: ease-out;
+  -moz-transition: all 250ms 400ms ease-out;
+  -o-transition: all 250ms 400ms ease-out;
+  transition: all 250ms 400ms ease-out;
+}
+.animation .background.felv-fiv .sticker.active .dots img:nth-child(7) {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
+  filter: alpha(opacity=100);
+  zoom: 1;
+  -webkit-transition: all 250ms 450ms;
+  -webkit-transition-delay: ease-out;
+  -moz-transition: all 250ms 450ms ease-out;
+  -o-transition: all 250ms 450ms ease-out;
+  transition: all 250ms 450ms ease-out;
+}
+.animation .background.felv-fiv .sticker.active .dots img:nth-child(8) {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
+  filter: alpha(opacity=100);
+  zoom: 1;
+  -webkit-transition: all 250ms 500ms;
+  -webkit-transition-delay: ease-out;
+  -moz-transition: all 250ms 500ms ease-out;
+  -o-transition: all 250ms 500ms ease-out;
+  transition: all 250ms 500ms ease-out;
+}
+.animation .background.felv-fiv .sticker.active .dots img:nth-child(9) {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
+  filter: alpha(opacity=100);
+  zoom: 1;
+  -webkit-transition: all 250ms 550ms;
+  -webkit-transition-delay: ease-out;
+  -moz-transition: all 250ms 550ms ease-out;
+  -o-transition: all 250ms 550ms ease-out;
+  transition: all 250ms 550ms ease-out;
+}
+.animation .background.felv-fiv .sticker.active .dots img:nth-child(10) {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
+  filter: alpha(opacity=100);
+  zoom: 1;
+  -webkit-transition: all 250ms 600ms;
+  -webkit-transition-delay: ease-out;
+  -moz-transition: all 250ms 600ms ease-out;
+  -o-transition: all 250ms 600ms ease-out;
+  transition: all 250ms 600ms ease-out;
+}
+.animation .background.felv-fiv .sticker.active .dots img:nth-child(11) {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
+  filter: alpha(opacity=100);
+  zoom: 1;
+  -webkit-transition: all 250ms 650ms;
+  -webkit-transition-delay: ease-out;
+  -moz-transition: all 250ms 650ms ease-out;
+  -o-transition: all 250ms 650ms ease-out;
+  transition: all 250ms 650ms ease-out;
+}
+.animation .background.felv-fiv .sticker.active .dots img:nth-child(12) {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
+  filter: alpha(opacity=100);
+  zoom: 1;
+  -webkit-transition: all 250ms 700ms;
+  -webkit-transition-delay: ease-out;
+  -moz-transition: all 250ms 700ms ease-out;
+  -o-transition: all 250ms 700ms ease-out;
+  transition: all 250ms 700ms ease-out;
+}
+.animation .background.felv-fiv .sticker.active .dots img:nth-child(13) {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
+  filter: alpha(opacity=100);
+  zoom: 1;
+  -webkit-transition: all 250ms 750ms;
+  -webkit-transition-delay: ease-out;
+  -moz-transition: all 250ms 750ms ease-out;
+  -o-transition: all 250ms 750ms ease-out;
+  transition: all 250ms 750ms ease-out;
+}
+
+.animation {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 1024px;
+  width: 100%;
+  background: transparent;
+}
+.animation .background.t4 {
+  background-color: #E2850E;
+  width: 100%;
+  height: 100%;
+}
+.animation .background.t4 .sticker {
+  width: 430px;
+  margin: 0 auto;
+  min-height: 500px;
+  position: relative;
+  z-index: 0;
+}
+.animation .background.t4 .sticker img {
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 3;
+  left: 22.3%;
+  top: 16.3%;
+}
+.animation .background.t4 .sticker .lever {
+  position: relative;
+  top: 95px;
+  left: -45px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  z-index: 3;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-origin: 32px 29px;
+  -moz-transform-origin: 32px 29px;
+  -ms-transform-origin: 32px 29px;
+  -o-transform-origin: 32px 29px;
+  transform-origin: 32px 29px;
+}
+.animation .background.t4 .sticker .gear-big {
+  position: relative;
+  top: 195px;
+  display: block;
+  left: 8px;
+}
+.animation .background.t4 .sticker .gear-big img:nth-child(2) {
+  margin-left: 25px;
+  top: 26px;
+}
+.animation .background.t4 .sticker .gear-med {
+  position: relative;
+  top: 104px;
+  left: 131px;
+}
+.animation .background.t4 .sticker .gear-med img:nth-child(2) {
+  margin-top: 23px;
+  margin-left: 25px;
+}
+.animation .background.t4 .sticker .gear-small {
+  position: relative;
+  top: 211px;
+  left: 207px;
+}
+.animation .background.t4 .sticker .gear-small img:nth-child(2) {
+  margin-top: 21px;
+  margin-left: 20px;
+}
+.animation .background.t4 .sticker.active .lever {
+  z-index: 3;
+  -webkit-animation-delay: 0ms;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-name: lever;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-delay: 0ms;
+  -moz-animation-duration: 5s;
+  -moz-animation-name: lever;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-delay: 0ms;
+  -ms-animation-duration: 5s;
+  -ms-animation-name: lever;
+  -ms-animation-iteration-count: 1;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-delay: 0ms;
+  -o-animation-duration: 5s;
+  -o-animation-name: lever;
+  -o-animation-iteration-count: 1;
+  -o-animation-timing-function: ease-in-out;
+  animation-delay: 0ms;
+  animation-duration: 5s;
+  animation-name: lever;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+.animation .background.t4 .sticker.active .gear-big img:nth-child(1) {
+  z-index: 3;
+  -webkit-animation-delay: 0ms;
+  -webkit-animation-duration: 2500ms;
+  -webkit-animation-name: gear-big;
+  -webkit-animation-iteration-count: 2;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-delay: 0ms;
+  -moz-animation-duration: 2500ms;
+  -moz-animation-name: gear-big;
+  -moz-animation-iteration-count: 2;
+  -moz-animation-timing-function: linear;
+  -ms-animation-delay: 0ms;
+  -ms-animation-duration: 2500ms;
+  -ms-animation-name: gear-big;
+  -ms-animation-iteration-count: 2;
+  -ms-animation-timing-function: linear;
+  -o-animation-delay: 0ms;
+  -o-animation-duration: 2500ms;
+  -o-animation-name: gear-big;
+  -o-animation-iteration-count: 2;
+  -o-animation-timing-function: linear;
+  animation-delay: 0ms;
+  animation-duration: 2500ms;
+  animation-name: gear-big;
+  animation-iteration-count: 2;
+  animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.animation .background.t4 .sticker.active .gear-med img:nth-child(1) {
+  z-index: 3;
+  -webkit-animation-delay: 0ms;
+  -webkit-animation-duration: 2500ms;
+  -webkit-animation-name: gear-med;
+  -webkit-animation-iteration-count: 2;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-delay: 0ms;
+  -moz-animation-duration: 2500ms;
+  -moz-animation-name: gear-med;
+  -moz-animation-iteration-count: 2;
+  -moz-animation-timing-function: linear;
+  -ms-animation-delay: 0ms;
+  -ms-animation-duration: 2500ms;
+  -ms-animation-name: gear-med;
+  -ms-animation-iteration-count: 2;
+  -ms-animation-timing-function: linear;
+  -o-animation-delay: 0ms;
+  -o-animation-duration: 2500ms;
+  -o-animation-name: gear-med;
+  -o-animation-iteration-count: 2;
+  -o-animation-timing-function: linear;
+  animation-delay: 0ms;
+  animation-duration: 2500ms;
+  animation-name: gear-med;
+  animation-iteration-count: 2;
+  animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.animation .background.t4 .sticker.active .gear-small img:nth-child(1) {
+  z-index: 3;
+  -webkit-animation-delay: 0ms;
+  -webkit-animation-duration: 2500ms;
+  -webkit-animation-name: gear-big;
+  -webkit-animation-iteration-count: 2;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-delay: 0ms;
+  -moz-animation-duration: 2500ms;
+  -moz-animation-name: gear-big;
+  -moz-animation-iteration-count: 2;
+  -moz-animation-timing-function: linear;
+  -ms-animation-delay: 0ms;
+  -ms-animation-duration: 2500ms;
+  -ms-animation-name: gear-big;
+  -ms-animation-iteration-count: 2;
+  -ms-animation-timing-function: linear;
+  -o-animation-delay: 0ms;
+  -o-animation-duration: 2500ms;
+  -o-animation-name: gear-big;
+  -o-animation-iteration-count: 2;
+  -o-animation-timing-function: linear;
+  animation-delay: 0ms;
+  animation-duration: 2500ms;
+  animation-name: gear-big;
+  animation-iteration-count: 2;
+  animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes lever {
+  0%, 100% {
+    top: 95px;
+    left: -45px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  25% {
+    top: 95px;
+    left: -45px;
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(-4deg);
+    -moz-transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+    -o-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+}
+
+@-moz-keyframes lever {
+  0%, 100% {
+    top: 95px;
+    left: -45px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  25% {
+    top: 95px;
+    left: -45px;
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(-4deg);
+    -moz-transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+    -o-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+}
+
+@-ms-keyframes lever {
+  0%, 100% {
+    top: 95px;
+    left: -45px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  25% {
+    top: 95px;
+    left: -45px;
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(-4deg);
+    -moz-transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+    -o-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes lever {
+  0%, 100% {
+    top: 95px;
+    left: -45px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  25% {
+    top: 95px;
+    left: -45px;
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(-4deg);
+    -moz-transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+    -o-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+}
+
+@-webkit-keyframes gear-big {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes gear-big {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-ms-keyframes gear-big {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gear-big {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes gear-med {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+@-moz-keyframes gear-med {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+@-ms-keyframes gear-med {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes gear-med {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
 }
 
 .background.heartworm {

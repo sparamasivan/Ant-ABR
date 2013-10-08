@@ -1,0 +1,257 @@
+.animation {
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	height: 1024px;
+	width: 100%;
+	background: transparent;
+	.background.felv-fiv {
+		background-color:#0E95A3;
+		width:100%;
+		height: 100%;
+		.sticker {
+			width: 430px;
+			margin: 0 auto;
+			min-height: 500px;
+			position: relative;
+			z-index: 0;
+			img.background {
+				position: absolute;
+				margin: 0 auto;
+				text-align: center;
+				z-index: 1;
+				left: 22.3%;
+				top: 16.3%;
+				margin-top: 4px;
+				margin-left: 0px;
+			}
+			.darkstrand {
+				position: relative;
+				top: 54px;
+				left: 33px;
+				img {
+					position: absolute;
+					margin: 0 auto;
+					text-align: center;
+					z-index: 2;
+				}
+			}
+			.lightstrand {
+				position: relative;
+				top: 21px;
+				left: 63px;
+				img {
+					position: absolute;
+					margin: 0 auto;
+					text-align: center;
+					z-index: 3;
+				}
+			}
+			.bars-bottom {
+				position: relative;
+				left: 95px;
+				top: 277px;
+				width: 300px;
+				z-index: 2;
+				img {
+					position: absolute;
+					margin: 0 auto;
+					text-align: center;
+					z-index: 2;
+					@include opacity(0);
+					&:nth-child(1) {
+						width:0;
+						left: -12px;
+						top: -5px;
+					}
+					&:nth-child(2) {
+						width:0;
+						top: -19px;
+						left: 3px;
+					}
+					&:nth-child(3) {
+						width:0;
+						top: -33px;
+						left: 25px;
+					}
+					&:nth-child(4) {
+						width:0;
+						top: -46px;
+						left: 45px;
+					}
+				}
+			}
+			.bars-top {
+				position:relative;
+				left: 215px;
+				top: 110px;
+				width: 300px;
+				z-index: 2;
+				img {
+					position: absolute;
+					margin: 0 auto;
+					text-align: center;
+					z-index: 3;
+					@include opacity(0);
+					&:nth-child(1) {
+						width:0;
+						top: 30px;
+						left: -10px;
+					}
+					&:nth-child(2) {
+						width:0;
+						top: 5px;
+						left: 5px;
+					}
+					&:nth-child(3) {
+						width:0;
+						top: -11px;
+						left: 24px;
+					}
+					&:nth-child(4) {
+						width:0;
+						top: -30px;
+						left: 44px;
+					}
+					&:nth-child(5) {
+						width:0;
+						top: -45px;
+						left: 62px;
+					}
+					&:nth-child(6) {
+						width:0;
+						top: -59px;
+						left: 78px;
+					}
+				}
+			}
+			.dots {
+				position:relative;
+				top: 27px;
+				left: 122px;
+				img {
+					position: absolute;
+					margin: 0 auto;
+					text-align: center;
+					z-index: 3;
+					@include opacity(0);
+					&:nth-child(1) {
+							top: 325px;
+							left: 27px;
+					}
+					&:nth-child(2) {
+							top: 305px;
+							left: 44px;
+					}
+					&:nth-child(3) {
+							top: 286px;
+							left: 57px;
+					}
+					&:nth-child(4) {
+							top: 263px;
+							left: 65px;
+					}
+					&:nth-child(5) {
+							top: 239px;
+							left: 73px;
+					}
+					&:nth-child(6) {
+						top: 214px;
+						left: 80px;
+					}
+					&:nth-child(7) {
+						top: 123px;
+						left: 51px;
+					}
+					&:nth-child(8) {
+						top: 95px;
+						left: 59px;
+					}
+					&:nth-child(9) {
+						top: 70px;
+						left: 72px;
+					}
+					&:nth-child(10) {
+						top: 47px;
+						left: 90px;
+					}
+					&:nth-child(11) {
+						top: 28px;
+						left: 108px;
+					}
+					&:nth-child(12) {
+						top: 14px;
+						left: 130px;
+					}
+					&:nth-child(13) {
+						top: 3px;
+						left: 152px;
+					}
+				}
+			}
+			&.active {
+					.bars-bottom {
+						img {
+							@include opacity(1);
+							@each $bcount in 1, 2, 3, 4 {
+								&:nth-child(#{$bcount}) {
+									@include transition(all 500ms $bcount * 50ms ease-in-out);
+								}
+							}
+							&:nth-child(1) {
+								width:66px;
+							}
+							&:nth-child(2) {
+								width: 64px;
+							}
+							&:nth-child(3) {
+								width: 57px;
+							}
+							&:nth-child(4) {
+								width: 45px;
+							}
+						}
+					}
+					.bars-top {
+						img {
+							@include opacity(1);
+							@each $bcount in 1, 2, 3, 4, 5, 6, 7 {
+								&:nth-child(#{$bcount}) {
+									@include transition(all 700ms $bcount * 100ms ease-in-out);
+								}
+							}
+							&:nth-child(1) {
+								width: 70px;
+							}
+							&:nth-child(2) {
+								width: 81px;
+							}
+							&:nth-child(3) {
+								width: 84px;
+							}
+							&:nth-child(4) {
+								width: 85px;
+							}
+							&:nth-child(5) {
+								width: 82px;
+							}
+							&:nth-child(6) {
+								width: 76px;
+							}
+						}
+					}
+					.dots {
+						img {
+							@each $count in 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 {
+							&:nth-child(#{$count}) {
+								@include opacity(1);
+								@include transition(all 250ms ($count * 50) + 100ms ease-out);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

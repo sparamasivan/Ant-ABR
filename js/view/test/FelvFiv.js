@@ -4,14 +4,16 @@ define([
     'handlebars',
     'view/test/Base',
     'text!template/test/FelvFiv.html',
-    'view/subtest/pod/Boolean'
+    'view/subtest/pod/Boolean',
+    'view/animation/FelvFiv'
 ], function(
     $,
     Backbone,
     Handlebars,
     ViewTestBase,
     Template,
-    ViewSubtestBoolean
+    ViewSubtestBoolean,
+    ViewAnimation
 ) {
     return ViewTestBase.extend({
         templateContent: Handlebars.compile(Template),
@@ -22,7 +24,8 @@ define([
 
             $.extend(this._overview, {
                 descriptionTemplate: this._getDescriptionTemplate(),
-                moreTemplate: this._getMoreTemplate()
+                moreTemplate: this._getMoreTemplate(),
+                viewAnimation: new ViewAnimation()
             });
 
             ViewTestBase.prototype.render.apply(this, arguments);
