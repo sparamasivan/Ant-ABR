@@ -11,6 +11,7 @@ define([
     'view/widget/TestSubsection',
     'view/subtest/pod/Select',
     'view/subtest/pod/Color',
+    'view/animation/Cbc',
     'goog!visualization,1,packages:[corechart,geochart]',
     'jquery-equal-heights',
     'jquery-waitforimages'
@@ -26,7 +27,8 @@ define([
     ModelMediaQuery,
     ViewWidgetTestSubsection,
     ViewSubtestSelect,
-    ViewSubtestColor
+    ViewSubtestColor,
+    ViewAnimation
 ) {
     var mathRound = function(value, decimalPlaces) {
         var roundedValue = Math.round(value * Math.pow(10, decimalPlaces)) / Math.pow(10, decimalPlaces);
@@ -61,10 +63,15 @@ define([
         ),
 
         render: function(parent) {
+            var species = this.model.getReport().getPatientSpecies();
+
             $.extend(this._overview, {
                 descriptionTemplate: 'The CBC (Complete Blood Cell Count) test examines the health and numbers of {{{patient.name}}}’s cells.',
-                diagramFilename: 'diagram-' + this.model.getReport().getPatientSpecies() + '-2x.png',
-                moreTemplate: 'There are three different kinds of cells in the blood: red blood cells, white blood cells and platelets. Though they have different jobs and vary in number, they all work together to achieve balance.'
+                diagramFilename: 'diagram-' + species + '-2x.png',
+                moreTemplate: 'There are three different kinds of cells in the blood: red blood cells, white blood cells and platelets. Though they have different jobs and vary in number, they all work together to achieve balance.',
+                viewAnimation: new ViewAnimation({
+                    species: species
+                })
             });
 
             ViewTestBase.prototype.render.apply(this, arguments);

@@ -17,7 +17,7 @@ define([
             // render template
             this.setElement($(this.template()));
 
-            this.$elContent = this.$el.find('.animation');
+            this.$elContent = this.$el.find('.animation-container');
 
             this.$elContent.append(this._getContent());
 
@@ -29,6 +29,7 @@ define([
 
             stickerEl.removeClass('active');
 
+            // add a bit of delay before activating
             setTimeout(function() {
                 stickerEl.addClass('active');
             }, 200);
