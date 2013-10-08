@@ -4372,26 +4372,17 @@ span.placeholder {
   display: block;
 }
 
-.animation {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  height: 1024px;
-  width: 100%;
-  background: transparent;
-}
-.animation .background.urine {
+.background.urine {
   background-color: #7b58af;
   min-height: 600px;
 }
-.animation .background.urine .sticker .background-sticker {
+.background.urine .sticker .background-sticker {
   position: relative;
   z-index: 1;
   left: 450px;
   top: 75px;
 }
-.animation .background.urine .sticker .tank {
+.background.urine .sticker .tank {
   width: 193px;
   background: #FFF;
   height: 150px;
@@ -4399,7 +4390,7 @@ span.placeholder {
   left: 643px;
   top: 299px;
 }
-.animation .background.urine .sticker .tank .water {
+.background.urine .sticker .tank .water {
   background: url("../images/animation/urine/pee.png") no-repeat rgba(0, 0, 0, 0);
   position: absolute;
   width: 244px;
@@ -4409,24 +4400,24 @@ span.placeholder {
   z-index: 0;
   background-size: 85%;
 }
-.animation .background.urine .sticker .portholes {
+.background.urine .sticker .portholes {
   width: 367px;
   height: 284px;
   position: absolute;
   top: 27px;
   left: 478px;
 }
-.animation .background.urine .sticker .portholes img {
+.background.urine .sticker .portholes img {
   position: relative;
   z-index: 2;
 }
-.animation .background.urine .sticker .portholes img.grate {
+.background.urine .sticker .portholes img.grate {
   position: relative;
   top: 159px;
   left: 7px;
   z-index: 2;
 }
-.animation .background.urine .sticker .bubbles {
+.background.urine .sticker .bubbles {
   position: absolute;
   top: 184px;
   left: 289px;
@@ -4434,7 +4425,7 @@ span.placeholder {
   float: left;
   width: 200px;
 }
-.animation .background.urine .sticker .bubbles .bubble {
+.background.urine .sticker .bubbles .bubble {
   position: absolute;
   margin: 0 auto;
   text-align: center;
@@ -4442,181 +4433,181 @@ span.placeholder {
   left: 32.3%;
   top: 25%;
 }
-.animation .background.urine .sticker .bubbles .bubble:nth-child(1) {
+.background.urine .sticker .bubbles .bubble:nth-child(1) {
   left: 0;
   margin-top: 43px;
 }
-.animation .background.urine .sticker .bubbles .bubble:nth-child(2) {
+.background.urine .sticker .bubbles .bubble:nth-child(2) {
   left: -26px;
   margin-top: 23px;
 }
-.animation .background.urine .sticker .bubbles .bubble:nth-child(3) {
+.background.urine .sticker .bubbles .bubble:nth-child(3) {
   left: 58px;
   margin-top: 47px;
 }
-.animation .background.urine .sticker .bubbles .bubble:nth-child(4) {
+.background.urine .sticker .bubbles .bubble:nth-child(4) {
   left: 202px;
   margin-top: 49px;
 }
-.animation .background.urine .sticker .bubbles .bubble:nth-child(5) {
+.background.urine .sticker .bubbles .bubble:nth-child(5) {
   left: 181px;
   margin-top: 84px;
 }
-.animation .background.urine .sticker .bubbles .bubble:nth-child(6) {
+.background.urine .sticker .bubbles .bubble:nth-child(6) {
   left: -25px;
   margin-top: 91px;
 }
-.animation .background.urine .sticker .bubbles .bubble:nth-child(7) {
+.background.urine .sticker .bubbles .bubble:nth-child(7) {
   left: 141px;
   margin-top: 46px;
 }
-.animation .background.urine .sticker .bubbles .bubble:nth-child(8) {
+.background.urine .sticker .bubbles .bubble:nth-child(8) {
   left: -63px;
   margin-top: 61px;
 }
-.animation .background.urine .sticker .bubbles .bubble:nth-child(9) {
+.background.urine .sticker .bubbles .bubble:nth-child(9) {
   left: 45px;
   margin-top: 80px;
 }
-.animation .background.urine .sticker .bubbles .bubble:nth-child(10) {
+.background.urine .sticker .bubbles .bubble:nth-child(10) {
   left: 95px;
   margin-top: 63px;
 }
-.animation .background.urine .sticker .bubbles .bubble:nth-child(11) {
+.background.urine .sticker .bubbles .bubble:nth-child(11) {
   left: 47px;
   margin-top: 12px;
 }
-.animation .background.urine .sticker .bubbles .bubble:nth-child(12) {
+.background.urine .sticker .bubbles .bubble:nth-child(12) {
   left: 107px;
   margin-top: 23px;
 }
-.animation .background.urine .sticker .drop {
+.background.urine .sticker .drop {
   position: absolute;
   left: 903px;
   top: 397px;
   z-index: 0;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(1) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(1) {
   -webkit-transition: all 2100ms 4ms ease-in-out;
   -moz-transition: all 2100ms 4ms ease-in-out;
   -o-transition: all 2100ms 4ms ease-in-out;
   transition: all 2100ms 4ms ease-in-out;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(2) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(2) {
   -webkit-transition: all 2100ms 8ms ease-in-out;
   -moz-transition: all 2100ms 8ms ease-in-out;
   -o-transition: all 2100ms 8ms ease-in-out;
   transition: all 2100ms 8ms ease-in-out;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(3) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(3) {
   -webkit-transition: all 2100ms 12ms ease-in-out;
   -moz-transition: all 2100ms 12ms ease-in-out;
   -o-transition: all 2100ms 12ms ease-in-out;
   transition: all 2100ms 12ms ease-in-out;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(4) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(4) {
   -webkit-transition: all 2100ms 16ms ease-in-out;
   -moz-transition: all 2100ms 16ms ease-in-out;
   -o-transition: all 2100ms 16ms ease-in-out;
   transition: all 2100ms 16ms ease-in-out;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(5) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(5) {
   -webkit-transition: all 2100ms 20ms ease-in-out;
   -moz-transition: all 2100ms 20ms ease-in-out;
   -o-transition: all 2100ms 20ms ease-in-out;
   transition: all 2100ms 20ms ease-in-out;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(6) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(6) {
   -webkit-transition: all 2100ms 24ms ease-in-out;
   -moz-transition: all 2100ms 24ms ease-in-out;
   -o-transition: all 2100ms 24ms ease-in-out;
   transition: all 2100ms 24ms ease-in-out;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(7) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(7) {
   -webkit-transition: all 2100ms 28ms ease-in-out;
   -moz-transition: all 2100ms 28ms ease-in-out;
   -o-transition: all 2100ms 28ms ease-in-out;
   transition: all 2100ms 28ms ease-in-out;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(8) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(8) {
   -webkit-transition: all 2100ms 32ms ease-in-out;
   -moz-transition: all 2100ms 32ms ease-in-out;
   -o-transition: all 2100ms 32ms ease-in-out;
   transition: all 2100ms 32ms ease-in-out;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(9) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(9) {
   -webkit-transition: all 2100ms 36ms ease-in-out;
   -moz-transition: all 2100ms 36ms ease-in-out;
   -o-transition: all 2100ms 36ms ease-in-out;
   transition: all 2100ms 36ms ease-in-out;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(10) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(10) {
   -webkit-transition: all 2100ms 40ms ease-in-out;
   -moz-transition: all 2100ms 40ms ease-in-out;
   -o-transition: all 2100ms 40ms ease-in-out;
   transition: all 2100ms 40ms ease-in-out;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(11) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(11) {
   -webkit-transition: all 2100ms 44ms ease-in-out;
   -moz-transition: all 2100ms 44ms ease-in-out;
   -o-transition: all 2100ms 44ms ease-in-out;
   transition: all 2100ms 44ms ease-in-out;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(12) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(12) {
   -webkit-transition: all 2100ms 48ms ease-in-out;
   -moz-transition: all 2100ms 48ms ease-in-out;
   -o-transition: all 2100ms 48ms ease-in-out;
   transition: all 2100ms 48ms ease-in-out;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(1) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(1) {
   left: 241px;
   margin-top: 43px;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(2) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(2) {
   left: 264px;
   margin-top: 23px;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(3) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(3) {
   left: 215px;
   margin-top: 47px;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(4) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(4) {
   left: 326px;
   margin-top: 49px;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(5) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(5) {
   left: 326px;
   margin-top: 84px;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(6) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(6) {
   left: 245px;
   margin-top: 91px;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(7) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(7) {
   left: 282px;
   margin-top: 46px;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(8) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(8) {
   left: 190px;
   margin-top: 61px;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(9) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(9) {
   left: 270px;
   margin-top: 80px;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(10) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(10) {
   left: 226px;
   margin-top: 63px;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(11) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(11) {
   left: 228px;
   margin-top: 12px;
 }
-.animation .background.urine .sticker.active .bubbles .bubble:nth-child(12) {
+.background.urine .sticker.active .bubbles .bubble:nth-child(12) {
   left: 291px;
   margin-top: 23px;
 }
-.animation .background.urine .sticker.active .tank .water {
+.background.urine .sticker.active .tank .water {
   top: 70px;
   -webkit-transition: all 1500ms 600ms;
   -webkit-transition-delay: ease-out;
@@ -4624,7 +4615,7 @@ span.placeholder {
   -o-transition: all 1500ms 600ms ease-out;
   transition: all 1500ms 600ms ease-out;
 }
-.animation .background.urine .sticker.active .drop {
+.background.urine .sticker.active .drop {
   -webkit-transition: all 500ms 2000ms;
   -webkit-transition-delay: cubic-bezier(1, 0.01, 0.1, 0.1);
   -moz-transition: all 500ms 2000ms cubic-bezier(1, 0.01, 0.1, 0.1);
@@ -4633,27 +4624,18 @@ span.placeholder {
   top: 475px;
 }
 
-.animation {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  height: 1024px;
-  width: 100%;
-  background: transparent;
-}
-.animation .background.chemistry {
+.background.chemistry {
   background-color: #2759B9;
   width: 100%;
   height: 100%;
 }
-.animation .background.chemistry .sticker {
+.background.chemistry .sticker {
   padding: 20%;
   margin: 0 auto;
   position: relative;
   z-index: 0;
 }
-.animation .background.chemistry .sticker img {
+.background.chemistry .sticker img {
   position: absolute;
   margin: 0 auto;
   text-align: center;
@@ -4661,7 +4643,7 @@ span.placeholder {
   left: 22.3%;
   top: 16.3%;
 }
-.animation .background.chemistry .sticker .glass {
+.background.chemistry .sticker .glass {
   height: 256px;
   border-radius: 128px;
   width: 245px;
@@ -4681,11 +4663,11 @@ span.placeholder {
   -o-perspective: 1000px;
   perspective: 1000px;
 }
-.animation .background.chemistry .sticker .glass img {
+.background.chemistry .sticker .glass img {
   left: 0;
   top: 0;
 }
-.animation .background.chemistry .sticker .glass .paw {
+.background.chemistry .sticker .glass .paw {
   background: #FFF;
   width: 233px;
   height: 233px;
@@ -4698,7 +4680,7 @@ span.placeholder {
   position: relative;
   left: 8px;
 }
-.animation .background.chemistry .sticker .glass .paw .map {
+.background.chemistry .sticker .glass .paw .map {
   background: url("../images/animation/chemistry/paw.png") no-repeat transparent;
   width: 228px;
   height: 228px;
@@ -4717,7 +4699,7 @@ span.placeholder {
   -o-perspective: 1000px;
   perspective: 1000px;
 }
-.animation .background.chemistry .sticker.active .glass {
+.background.chemistry .sticker.active .glass {
   -webkit-animation-delay: 0ms;
   -webkit-animation-duration: 4s;
   -webkit-animation-name: glass;
@@ -4744,7 +4726,7 @@ span.placeholder {
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
 }
-.animation .background.chemistry .sticker.active .glass .paw .map {
+.background.chemistry .sticker.active .glass .paw .map {
   -webkit-animation-delay: 100ms;
   -webkit-animation-duration: 4s;
   -webkit-animation-name: loop;
@@ -4966,28 +4948,19 @@ span.placeholder {
   left: 83%;
 }
 
-.animation {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  height: 1024px;
-  width: 100%;
-  background: transparent;
-}
-.animation .background.ova {
+.background.ova {
   background-color: #2E90F8;
   width: 100%;
   height: 100%;
 }
-.animation .background.ova .sticker {
+.background.ova .sticker {
   width: 430px;
   margin: 0 auto;
   min-height: 500px;
   position: relative;
   z-index: 0;
 }
-.animation .background.ova .sticker img {
+.background.ova .sticker img {
   position: absolute;
   margin: 0 auto;
   text-align: center;
@@ -4995,7 +4968,7 @@ span.placeholder {
   left: 22.3%;
   top: 16.3%;
 }
-.animation .background.ova .sticker .lense {
+.background.ova .sticker .lense {
   width: 267px;
   height: 266px;
   left: 277px;
@@ -5005,13 +4978,13 @@ span.placeholder {
   z-index: 4;
   border-radius: 200px;
 }
-.animation .background.ova .sticker .lense img {
+.background.ova .sticker .lense img {
   position: relative;
   left: 0;
   top: 0;
   z-index: 0;
 }
-.animation .background.ova .sticker .lense .critters {
+.background.ova .sticker .lense .critters {
   position: relative;
   border-radius: 271px;
   height: 235px;
@@ -5025,7 +4998,7 @@ span.placeholder {
   background-position: 100% 0%;
   left: 17px;
 }
-.animation .background.ova .sticker .lense .critters .a {
+.background.ova .sticker .lense .critters .a {
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -5034,7 +5007,7 @@ span.placeholder {
   top: 100px;
   left: 99px;
 }
-.animation .background.ova .sticker .lense .critters .b {
+.background.ova .sticker .lense .critters .b {
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -5043,7 +5016,7 @@ span.placeholder {
   top: 16px;
   left: 84px;
 }
-.animation .background.ova .sticker .lense .critters .c {
+.background.ova .sticker .lense .critters .c {
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -5052,7 +5025,7 @@ span.placeholder {
   top: 32px;
   left: -64px;
 }
-.animation .background.ova .sticker.active .lense .critters .a {
+.background.ova .sticker.active .lense .critters .a {
   -webkit-animation-delay: 0;
   -webkit-animation-duration: 10s;
   -webkit-animation-name: bot-critter;
@@ -5084,7 +5057,7 @@ span.placeholder {
   -ms-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-.animation .background.ova .sticker.active .lense .critters .b {
+.background.ova .sticker.active .lense .critters .b {
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
@@ -5116,7 +5089,7 @@ span.placeholder {
   animation-iteration-count: 1;
   animation-timing-function: linear;
 }
-.animation .background.ova .sticker.active .lense .critters .c {
+.background.ova .sticker.active .lense .critters .c {
   -webkit-animation-delay: 0;
   -webkit-animation-duration: 10s;
   -webkit-animation-name: big-critter;
@@ -5533,28 +5506,19 @@ span.placeholder {
   top: 50%;
 }
 
-.animation {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  height: 1024px;
-  width: 100%;
-  background: transparent;
-}
-.animation .background.felv-fiv {
+.background.felv-fiv {
   background-color: #0E95A3;
   width: 100%;
   height: 100%;
 }
-.animation .background.felv-fiv .sticker {
+.background.felv-fiv .sticker {
   width: 430px;
   margin: 0 auto;
   min-height: 500px;
   position: relative;
   z-index: 0;
 }
-.animation .background.felv-fiv .sticker img.background {
+.background.felv-fiv .sticker img.background {
   position: absolute;
   margin: 0 auto;
   text-align: center;
@@ -5564,36 +5528,36 @@ span.placeholder {
   margin-top: 4px;
   margin-left: 0px;
 }
-.animation .background.felv-fiv .sticker .darkstrand {
+.background.felv-fiv .sticker .darkstrand {
   position: relative;
   top: 54px;
   left: 33px;
 }
-.animation .background.felv-fiv .sticker .darkstrand img {
+.background.felv-fiv .sticker .darkstrand img {
   position: absolute;
   margin: 0 auto;
   text-align: center;
   z-index: 2;
 }
-.animation .background.felv-fiv .sticker .lightstrand {
+.background.felv-fiv .sticker .lightstrand {
   position: relative;
   top: 21px;
   left: 63px;
 }
-.animation .background.felv-fiv .sticker .lightstrand img {
+.background.felv-fiv .sticker .lightstrand img {
   position: absolute;
   margin: 0 auto;
   text-align: center;
   z-index: 3;
 }
-.animation .background.felv-fiv .sticker .bars-bottom {
+.background.felv-fiv .sticker .bars-bottom {
   position: relative;
   left: 95px;
   top: 277px;
   width: 300px;
   z-index: 2;
 }
-.animation .background.felv-fiv .sticker .bars-bottom img {
+.background.felv-fiv .sticker .bars-bottom img {
   position: absolute;
   margin: 0 auto;
   text-align: center;
@@ -5603,34 +5567,34 @@ span.placeholder {
   filter: alpha(opacity=0);
   zoom: 1;
 }
-.animation .background.felv-fiv .sticker .bars-bottom img:nth-child(1) {
+.background.felv-fiv .sticker .bars-bottom img:nth-child(1) {
   width: 0;
   left: -12px;
   top: -5px;
 }
-.animation .background.felv-fiv .sticker .bars-bottom img:nth-child(2) {
+.background.felv-fiv .sticker .bars-bottom img:nth-child(2) {
   width: 0;
   top: -19px;
   left: 3px;
 }
-.animation .background.felv-fiv .sticker .bars-bottom img:nth-child(3) {
+.background.felv-fiv .sticker .bars-bottom img:nth-child(3) {
   width: 0;
   top: -33px;
   left: 25px;
 }
-.animation .background.felv-fiv .sticker .bars-bottom img:nth-child(4) {
+.background.felv-fiv .sticker .bars-bottom img:nth-child(4) {
   width: 0;
   top: -46px;
   left: 45px;
 }
-.animation .background.felv-fiv .sticker .bars-top {
+.background.felv-fiv .sticker .bars-top {
   position: relative;
   left: 215px;
   top: 110px;
   width: 300px;
   z-index: 2;
 }
-.animation .background.felv-fiv .sticker .bars-top img {
+.background.felv-fiv .sticker .bars-top img {
   position: absolute;
   margin: 0 auto;
   text-align: center;
@@ -5640,42 +5604,42 @@ span.placeholder {
   filter: alpha(opacity=0);
   zoom: 1;
 }
-.animation .background.felv-fiv .sticker .bars-top img:nth-child(1) {
+.background.felv-fiv .sticker .bars-top img:nth-child(1) {
   width: 0;
   top: 30px;
   left: -10px;
 }
-.animation .background.felv-fiv .sticker .bars-top img:nth-child(2) {
+.background.felv-fiv .sticker .bars-top img:nth-child(2) {
   width: 0;
   top: 5px;
   left: 5px;
 }
-.animation .background.felv-fiv .sticker .bars-top img:nth-child(3) {
+.background.felv-fiv .sticker .bars-top img:nth-child(3) {
   width: 0;
   top: -11px;
   left: 24px;
 }
-.animation .background.felv-fiv .sticker .bars-top img:nth-child(4) {
+.background.felv-fiv .sticker .bars-top img:nth-child(4) {
   width: 0;
   top: -30px;
   left: 44px;
 }
-.animation .background.felv-fiv .sticker .bars-top img:nth-child(5) {
+.background.felv-fiv .sticker .bars-top img:nth-child(5) {
   width: 0;
   top: -45px;
   left: 62px;
 }
-.animation .background.felv-fiv .sticker .bars-top img:nth-child(6) {
+.background.felv-fiv .sticker .bars-top img:nth-child(6) {
   width: 0;
   top: -59px;
   left: 78px;
 }
-.animation .background.felv-fiv .sticker .dots {
+.background.felv-fiv .sticker .dots {
   position: relative;
   top: 27px;
   left: 122px;
 }
-.animation .background.felv-fiv .sticker .dots img {
+.background.felv-fiv .sticker .dots img {
   position: absolute;
   margin: 0 auto;
   text-align: center;
@@ -5685,178 +5649,178 @@ span.placeholder {
   filter: alpha(opacity=0);
   zoom: 1;
 }
-.animation .background.felv-fiv .sticker .dots img:nth-child(1) {
+.background.felv-fiv .sticker .dots img:nth-child(1) {
   top: 325px;
   left: 27px;
 }
-.animation .background.felv-fiv .sticker .dots img:nth-child(2) {
+.background.felv-fiv .sticker .dots img:nth-child(2) {
   top: 305px;
   left: 44px;
 }
-.animation .background.felv-fiv .sticker .dots img:nth-child(3) {
+.background.felv-fiv .sticker .dots img:nth-child(3) {
   top: 286px;
   left: 57px;
 }
-.animation .background.felv-fiv .sticker .dots img:nth-child(4) {
+.background.felv-fiv .sticker .dots img:nth-child(4) {
   top: 263px;
   left: 65px;
 }
-.animation .background.felv-fiv .sticker .dots img:nth-child(5) {
+.background.felv-fiv .sticker .dots img:nth-child(5) {
   top: 239px;
   left: 73px;
 }
-.animation .background.felv-fiv .sticker .dots img:nth-child(6) {
+.background.felv-fiv .sticker .dots img:nth-child(6) {
   top: 214px;
   left: 80px;
 }
-.animation .background.felv-fiv .sticker .dots img:nth-child(7) {
+.background.felv-fiv .sticker .dots img:nth-child(7) {
   top: 123px;
   left: 51px;
 }
-.animation .background.felv-fiv .sticker .dots img:nth-child(8) {
+.background.felv-fiv .sticker .dots img:nth-child(8) {
   top: 95px;
   left: 59px;
 }
-.animation .background.felv-fiv .sticker .dots img:nth-child(9) {
+.background.felv-fiv .sticker .dots img:nth-child(9) {
   top: 70px;
   left: 72px;
 }
-.animation .background.felv-fiv .sticker .dots img:nth-child(10) {
+.background.felv-fiv .sticker .dots img:nth-child(10) {
   top: 47px;
   left: 90px;
 }
-.animation .background.felv-fiv .sticker .dots img:nth-child(11) {
+.background.felv-fiv .sticker .dots img:nth-child(11) {
   top: 28px;
   left: 108px;
 }
-.animation .background.felv-fiv .sticker .dots img:nth-child(12) {
+.background.felv-fiv .sticker .dots img:nth-child(12) {
   top: 14px;
   left: 130px;
 }
-.animation .background.felv-fiv .sticker .dots img:nth-child(13) {
+.background.felv-fiv .sticker .dots img:nth-child(13) {
   top: 3px;
   left: 152px;
 }
-.animation .background.felv-fiv .sticker.active .bars-bottom img {
+.background.felv-fiv .sticker.active .bars-bottom img {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
   filter: alpha(opacity=100);
   zoom: 1;
 }
-.animation .background.felv-fiv .sticker.active .bars-bottom img:nth-child(1) {
+.background.felv-fiv .sticker.active .bars-bottom img:nth-child(1) {
   -webkit-transition: all 500ms 50ms;
   -webkit-transition-delay: ease-in-out;
   -moz-transition: all 500ms 50ms ease-in-out;
   -o-transition: all 500ms 50ms ease-in-out;
   transition: all 500ms 50ms ease-in-out;
 }
-.animation .background.felv-fiv .sticker.active .bars-bottom img:nth-child(2) {
+.background.felv-fiv .sticker.active .bars-bottom img:nth-child(2) {
   -webkit-transition: all 500ms 100ms;
   -webkit-transition-delay: ease-in-out;
   -moz-transition: all 500ms 100ms ease-in-out;
   -o-transition: all 500ms 100ms ease-in-out;
   transition: all 500ms 100ms ease-in-out;
 }
-.animation .background.felv-fiv .sticker.active .bars-bottom img:nth-child(3) {
+.background.felv-fiv .sticker.active .bars-bottom img:nth-child(3) {
   -webkit-transition: all 500ms 150ms;
   -webkit-transition-delay: ease-in-out;
   -moz-transition: all 500ms 150ms ease-in-out;
   -o-transition: all 500ms 150ms ease-in-out;
   transition: all 500ms 150ms ease-in-out;
 }
-.animation .background.felv-fiv .sticker.active .bars-bottom img:nth-child(4) {
+.background.felv-fiv .sticker.active .bars-bottom img:nth-child(4) {
   -webkit-transition: all 500ms 200ms;
   -webkit-transition-delay: ease-in-out;
   -moz-transition: all 500ms 200ms ease-in-out;
   -o-transition: all 500ms 200ms ease-in-out;
   transition: all 500ms 200ms ease-in-out;
 }
-.animation .background.felv-fiv .sticker.active .bars-bottom img:nth-child(1) {
+.background.felv-fiv .sticker.active .bars-bottom img:nth-child(1) {
   width: 66px;
 }
-.animation .background.felv-fiv .sticker.active .bars-bottom img:nth-child(2) {
+.background.felv-fiv .sticker.active .bars-bottom img:nth-child(2) {
   width: 64px;
 }
-.animation .background.felv-fiv .sticker.active .bars-bottom img:nth-child(3) {
+.background.felv-fiv .sticker.active .bars-bottom img:nth-child(3) {
   width: 57px;
 }
-.animation .background.felv-fiv .sticker.active .bars-bottom img:nth-child(4) {
+.background.felv-fiv .sticker.active .bars-bottom img:nth-child(4) {
   width: 45px;
 }
-.animation .background.felv-fiv .sticker.active .bars-top img {
+.background.felv-fiv .sticker.active .bars-top img {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
   filter: alpha(opacity=100);
   zoom: 1;
 }
-.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(1) {
+.background.felv-fiv .sticker.active .bars-top img:nth-child(1) {
   -webkit-transition: all 700ms 100ms;
   -webkit-transition-delay: ease-in-out;
   -moz-transition: all 700ms 100ms ease-in-out;
   -o-transition: all 700ms 100ms ease-in-out;
   transition: all 700ms 100ms ease-in-out;
 }
-.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(2) {
+.background.felv-fiv .sticker.active .bars-top img:nth-child(2) {
   -webkit-transition: all 700ms 200ms;
   -webkit-transition-delay: ease-in-out;
   -moz-transition: all 700ms 200ms ease-in-out;
   -o-transition: all 700ms 200ms ease-in-out;
   transition: all 700ms 200ms ease-in-out;
 }
-.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(3) {
+.background.felv-fiv .sticker.active .bars-top img:nth-child(3) {
   -webkit-transition: all 700ms 300ms;
   -webkit-transition-delay: ease-in-out;
   -moz-transition: all 700ms 300ms ease-in-out;
   -o-transition: all 700ms 300ms ease-in-out;
   transition: all 700ms 300ms ease-in-out;
 }
-.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(4) {
+.background.felv-fiv .sticker.active .bars-top img:nth-child(4) {
   -webkit-transition: all 700ms 400ms;
   -webkit-transition-delay: ease-in-out;
   -moz-transition: all 700ms 400ms ease-in-out;
   -o-transition: all 700ms 400ms ease-in-out;
   transition: all 700ms 400ms ease-in-out;
 }
-.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(5) {
+.background.felv-fiv .sticker.active .bars-top img:nth-child(5) {
   -webkit-transition: all 700ms 500ms;
   -webkit-transition-delay: ease-in-out;
   -moz-transition: all 700ms 500ms ease-in-out;
   -o-transition: all 700ms 500ms ease-in-out;
   transition: all 700ms 500ms ease-in-out;
 }
-.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(6) {
+.background.felv-fiv .sticker.active .bars-top img:nth-child(6) {
   -webkit-transition: all 700ms 600ms;
   -webkit-transition-delay: ease-in-out;
   -moz-transition: all 700ms 600ms ease-in-out;
   -o-transition: all 700ms 600ms ease-in-out;
   transition: all 700ms 600ms ease-in-out;
 }
-.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(7) {
+.background.felv-fiv .sticker.active .bars-top img:nth-child(7) {
   -webkit-transition: all 700ms 700ms;
   -webkit-transition-delay: ease-in-out;
   -moz-transition: all 700ms 700ms ease-in-out;
   -o-transition: all 700ms 700ms ease-in-out;
   transition: all 700ms 700ms ease-in-out;
 }
-.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(1) {
+.background.felv-fiv .sticker.active .bars-top img:nth-child(1) {
   width: 70px;
 }
-.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(2) {
+.background.felv-fiv .sticker.active .bars-top img:nth-child(2) {
   width: 81px;
 }
-.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(3) {
+.background.felv-fiv .sticker.active .bars-top img:nth-child(3) {
   width: 84px;
 }
-.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(4) {
+.background.felv-fiv .sticker.active .bars-top img:nth-child(4) {
   width: 85px;
 }
-.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(5) {
+.background.felv-fiv .sticker.active .bars-top img:nth-child(5) {
   width: 82px;
 }
-.animation .background.felv-fiv .sticker.active .bars-top img:nth-child(6) {
+.background.felv-fiv .sticker.active .bars-top img:nth-child(6) {
   width: 76px;
 }
-.animation .background.felv-fiv .sticker.active .dots img:nth-child(1) {
+.background.felv-fiv .sticker.active .dots img:nth-child(1) {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
   filter: alpha(opacity=100);
@@ -5867,7 +5831,7 @@ span.placeholder {
   -o-transition: all 250ms 150ms ease-out;
   transition: all 250ms 150ms ease-out;
 }
-.animation .background.felv-fiv .sticker.active .dots img:nth-child(2) {
+.background.felv-fiv .sticker.active .dots img:nth-child(2) {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
   filter: alpha(opacity=100);
@@ -5878,7 +5842,7 @@ span.placeholder {
   -o-transition: all 250ms 200ms ease-out;
   transition: all 250ms 200ms ease-out;
 }
-.animation .background.felv-fiv .sticker.active .dots img:nth-child(3) {
+.background.felv-fiv .sticker.active .dots img:nth-child(3) {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
   filter: alpha(opacity=100);
@@ -5889,7 +5853,7 @@ span.placeholder {
   -o-transition: all 250ms 250ms ease-out;
   transition: all 250ms 250ms ease-out;
 }
-.animation .background.felv-fiv .sticker.active .dots img:nth-child(4) {
+.background.felv-fiv .sticker.active .dots img:nth-child(4) {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
   filter: alpha(opacity=100);
@@ -5900,7 +5864,7 @@ span.placeholder {
   -o-transition: all 250ms 300ms ease-out;
   transition: all 250ms 300ms ease-out;
 }
-.animation .background.felv-fiv .sticker.active .dots img:nth-child(5) {
+.background.felv-fiv .sticker.active .dots img:nth-child(5) {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
   filter: alpha(opacity=100);
@@ -5911,7 +5875,7 @@ span.placeholder {
   -o-transition: all 250ms 350ms ease-out;
   transition: all 250ms 350ms ease-out;
 }
-.animation .background.felv-fiv .sticker.active .dots img:nth-child(6) {
+.background.felv-fiv .sticker.active .dots img:nth-child(6) {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
   filter: alpha(opacity=100);
@@ -5922,7 +5886,7 @@ span.placeholder {
   -o-transition: all 250ms 400ms ease-out;
   transition: all 250ms 400ms ease-out;
 }
-.animation .background.felv-fiv .sticker.active .dots img:nth-child(7) {
+.background.felv-fiv .sticker.active .dots img:nth-child(7) {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
   filter: alpha(opacity=100);
@@ -5933,7 +5897,7 @@ span.placeholder {
   -o-transition: all 250ms 450ms ease-out;
   transition: all 250ms 450ms ease-out;
 }
-.animation .background.felv-fiv .sticker.active .dots img:nth-child(8) {
+.background.felv-fiv .sticker.active .dots img:nth-child(8) {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
   filter: alpha(opacity=100);
@@ -5944,7 +5908,7 @@ span.placeholder {
   -o-transition: all 250ms 500ms ease-out;
   transition: all 250ms 500ms ease-out;
 }
-.animation .background.felv-fiv .sticker.active .dots img:nth-child(9) {
+.background.felv-fiv .sticker.active .dots img:nth-child(9) {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
   filter: alpha(opacity=100);
@@ -5955,7 +5919,7 @@ span.placeholder {
   -o-transition: all 250ms 550ms ease-out;
   transition: all 250ms 550ms ease-out;
 }
-.animation .background.felv-fiv .sticker.active .dots img:nth-child(10) {
+.background.felv-fiv .sticker.active .dots img:nth-child(10) {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
   filter: alpha(opacity=100);
@@ -5966,7 +5930,7 @@ span.placeholder {
   -o-transition: all 250ms 600ms ease-out;
   transition: all 250ms 600ms ease-out;
 }
-.animation .background.felv-fiv .sticker.active .dots img:nth-child(11) {
+.background.felv-fiv .sticker.active .dots img:nth-child(11) {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
   filter: alpha(opacity=100);
@@ -5977,7 +5941,7 @@ span.placeholder {
   -o-transition: all 250ms 650ms ease-out;
   transition: all 250ms 650ms ease-out;
 }
-.animation .background.felv-fiv .sticker.active .dots img:nth-child(12) {
+.background.felv-fiv .sticker.active .dots img:nth-child(12) {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
   filter: alpha(opacity=100);
@@ -5988,7 +5952,7 @@ span.placeholder {
   -o-transition: all 250ms 700ms ease-out;
   transition: all 250ms 700ms ease-out;
 }
-.animation .background.felv-fiv .sticker.active .dots img:nth-child(13) {
+.background.felv-fiv .sticker.active .dots img:nth-child(13) {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 100 ")";
   filter: alpha(opacity=100);
@@ -6000,28 +5964,19 @@ span.placeholder {
   transition: all 250ms 750ms ease-out;
 }
 
-.animation {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  height: 1024px;
-  width: 100%;
-  background: transparent;
-}
-.animation .background.t4 {
+.background.t4 {
   background-color: #E2850E;
   width: 100%;
   height: 100%;
 }
-.animation .background.t4 .sticker {
+.background.t4 .sticker {
   width: 430px;
   margin: 0 auto;
   min-height: 500px;
   position: relative;
   z-index: 0;
 }
-.animation .background.t4 .sticker img {
+.background.t4 .sticker img {
   position: absolute;
   margin: 0 auto;
   text-align: center;
@@ -6029,7 +5984,7 @@ span.placeholder {
   left: 22.3%;
   top: 16.3%;
 }
-.animation .background.t4 .sticker .lever {
+.background.t4 .sticker .lever {
   position: relative;
   top: 95px;
   left: -45px;
@@ -6055,35 +6010,35 @@ span.placeholder {
   -o-transform-origin: 32px 29px;
   transform-origin: 32px 29px;
 }
-.animation .background.t4 .sticker .gear-big {
+.background.t4 .sticker .gear-big {
   position: relative;
   top: 195px;
   display: block;
   left: 8px;
 }
-.animation .background.t4 .sticker .gear-big img:nth-child(2) {
+.background.t4 .sticker .gear-big img:nth-child(2) {
   margin-left: 25px;
   top: 26px;
 }
-.animation .background.t4 .sticker .gear-med {
+.background.t4 .sticker .gear-med {
   position: relative;
   top: 104px;
   left: 131px;
 }
-.animation .background.t4 .sticker .gear-med img:nth-child(2) {
+.background.t4 .sticker .gear-med img:nth-child(2) {
   margin-top: 23px;
   margin-left: 25px;
 }
-.animation .background.t4 .sticker .gear-small {
+.background.t4 .sticker .gear-small {
   position: relative;
   top: 211px;
   left: 207px;
 }
-.animation .background.t4 .sticker .gear-small img:nth-child(2) {
+.background.t4 .sticker .gear-small img:nth-child(2) {
   margin-top: 21px;
   margin-left: 20px;
 }
-.animation .background.t4 .sticker.active .lever {
+.background.t4 .sticker.active .lever {
   z-index: 3;
   -webkit-animation-delay: 0ms;
   -webkit-animation-duration: 5s;
@@ -6111,7 +6066,7 @@ span.placeholder {
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
 }
-.animation .background.t4 .sticker.active .gear-big img:nth-child(1) {
+.background.t4 .sticker.active .gear-big img:nth-child(1) {
   z-index: 3;
   -webkit-animation-delay: 0ms;
   -webkit-animation-duration: 2500ms;
@@ -6144,7 +6099,7 @@ span.placeholder {
   -ms-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-.animation .background.t4 .sticker.active .gear-med img:nth-child(1) {
+.background.t4 .sticker.active .gear-med img:nth-child(1) {
   z-index: 3;
   -webkit-animation-delay: 0ms;
   -webkit-animation-duration: 2500ms;
@@ -6177,7 +6132,7 @@ span.placeholder {
   -ms-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-.animation .background.t4 .sticker.active .gear-small img:nth-child(1) {
+.background.t4 .sticker.active .gear-small img:nth-child(1) {
   z-index: 3;
   -webkit-animation-delay: 0ms;
   -webkit-animation-duration: 2500ms;
