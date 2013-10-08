@@ -14,6 +14,8 @@ define([
         templateContent: null,
 
         render: function(parent) {
+            var self = this;
+
             // render template
             this.setElement($(this.template()));
 

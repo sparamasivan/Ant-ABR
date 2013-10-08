@@ -1,55 +1,53 @@
 .background.chemistry {
-	background-color:#2759B9;
-	width:100%;
-	height: 100%;
+	max-width: round(image-width("../images/animation/chemistry/background@2x.png") / 2);
+	margin: 0 25% 0 0;
 
 	.sticker {
-		padding:20%;
-		margin: 0 auto;
 		position: relative;
 		z-index: 0;
-		img {
-			position: absolute;
-			margin: 0 auto;
-			text-align: center;
-			z-index: 3;
-			left: 22.3%;
-			top: 16.3%;
+
+		.stamp {
+			display: block;
+			margin-top: 20%;
 		}
+
 		.glass {
-			img {
-				left:0; top:0;
-			}
-			height: 256px;
+			height: 80%;
 			border-radius: 128px;
-			width: 245px;
+			width: 76.6%;
 			z-index: 3;
-			position: relative;
-			overflow: hidden;
-			top: -145px;
-			left: 185px;
+			position: absolute;
+			top: -19%;
+			left: 51%;
 			@include animation-fill(forwards);
 			@include perspective(1000px);
+
+			.loupe {
+				position: absolute;
+				z-index: 3;
+				left:0;
+				top:0;
+			}
+
 			.paw {
 				background: #FFF;
-				width: 233px;
-				height: 233px;
-				background-size: cover;
+				width: 92%;
+				height: 92%;
 				overflow: hidden;
-				border-radius: 128px;
+				border-radius: 50%;
 				z-index: 2;
-				margin: 0;
-				padding: 0;
 				position: relative;
-				left: 8px;
+				left: 5%;
+				top: 1%;
 				.map {
-					background: url("../images/animation/chemistry/paw.png") no-repeat transparent;
-					width: 228px;
-					height: 228px;
-					border-radius: 100%;
+					background: url("../images/animation/chemistry/paw@2x.png") no-repeat transparent;
+					width: 100%;
+					height: 100%;
+					border-radius: 50%;
 					z-index:1;
 					position:relative;
-					background-position: -250px -50px;
+					background-position: 138% 29%;
+					background-size: 180%;
 					@include animation-fill(forwards);
 					@include perspective(1000px);
 				}
@@ -70,26 +68,26 @@
 
 @include keyframes(glass) {
 	0%, 100% {
-		top: -145px;
-		left: 185px;
+		top: -19%;
+		left: 51%;
 	}
 	35% {
-		top: -103px;
-		left: 50px;
+		top: -12%;
+		left: 4%;
 	}
 	66% {
-		top: -13px;
-		left: 80px;
+		top: 30%;
+		left: 10%;
 	}
 }
 @include keyframes(loop) {
 	0%, 100% {
-		background-position:-250px -50px;
+		background-position: 138% 29%;
 	}
 	35% {
-		background-position:30px -50px;
+		background-position: -40% 29%;
 	}
 	66% {
-		background-position:-100px -250px;
+		background-position: 75% 138%;
 	}
 }
