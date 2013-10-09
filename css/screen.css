@@ -5489,60 +5489,42 @@ span.placeholder {
 }
 
 .background.felv-fiv {
-  background-color: #0E95A3;
-  width: 100%;
-  height: 100%;
+  max-width: 242px;
+  margin: 15% 14% 12% 10%;
 }
 .background.felv-fiv .sticker {
-  width: 430px;
-  margin: 0 auto;
-  min-height: 500px;
   position: relative;
   z-index: 0;
 }
-.background.felv-fiv .sticker img.background {
-  position: absolute;
-  margin: 0 auto;
-  text-align: center;
+.background.felv-fiv .sticker .bg {
   z-index: 1;
-  left: 22.3%;
-  top: 16.3%;
-  margin-top: 4px;
-  margin-left: 0px;
+  display: block;
+  position: relative;
 }
 .background.felv-fiv .sticker .darkstrand {
-  position: relative;
-  top: 54px;
-  left: 33px;
-}
-.background.felv-fiv .sticker .darkstrand img {
   position: absolute;
-  margin: 0 auto;
-  text-align: center;
+  top: 10%;
+  left: -12%;
   z-index: 2;
+  width: 131%;
 }
 .background.felv-fiv .sticker .lightstrand {
-  position: relative;
-  top: 21px;
-  left: 63px;
-}
-.background.felv-fiv .sticker .lightstrand img {
   position: absolute;
-  margin: 0 auto;
-  text-align: center;
+  top: -18%;
+  left: 13.5%;
   z-index: 3;
+  width: 77.6%;
 }
 .background.felv-fiv .sticker .bars-bottom {
-  position: relative;
-  left: 95px;
-  top: 277px;
-  width: 300px;
+  position: absolute;
+  left: 0%;
+  top: 80%;
+  width: 28%;
+  height: 28%;
   z-index: 2;
 }
 .background.felv-fiv .sticker .bars-bottom img {
   position: absolute;
-  margin: 0 auto;
-  text-align: center;
   z-index: 2;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 0 ")";
@@ -5551,35 +5533,34 @@ span.placeholder {
 }
 .background.felv-fiv .sticker .bars-bottom img:nth-child(1) {
   width: 0;
-  left: -12px;
-  top: -5px;
+  left: -17%;
+  top: -8%;
 }
 .background.felv-fiv .sticker .bars-bottom img:nth-child(2) {
   width: 0;
-  top: -19px;
-  left: 3px;
+  top: -27%;
+  left: 5%;
 }
 .background.felv-fiv .sticker .bars-bottom img:nth-child(3) {
   width: 0;
-  top: -33px;
-  left: 25px;
+  top: -47%;
+  left: 40%;
 }
 .background.felv-fiv .sticker .bars-bottom img:nth-child(4) {
   width: 0;
-  top: -46px;
-  left: 45px;
+  top: -65%;
+  left: 72%;
 }
 .background.felv-fiv .sticker .bars-top {
-  position: relative;
-  left: 215px;
-  top: 110px;
-  width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  width: 37%;
+  height: 37%;
   z-index: 2;
 }
 .background.felv-fiv .sticker .bars-top img {
   position: absolute;
-  margin: 0 auto;
-  text-align: center;
   z-index: 3;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 0 ")";
@@ -5588,100 +5569,101 @@ span.placeholder {
 }
 .background.felv-fiv .sticker .bars-top img:nth-child(1) {
   width: 0;
-  top: 30px;
-  left: -10px;
+  top: 33.5%;
+  left: -11.3%;
 }
 .background.felv-fiv .sticker .bars-top img:nth-child(2) {
   width: 0;
-  top: 5px;
-  left: 5px;
+  top: 5.5%;
+  left: 5.5%;
 }
 .background.felv-fiv .sticker .bars-top img:nth-child(3) {
   width: 0;
-  top: -11px;
-  left: 24px;
+  top: -12%;
+  left: 27%;
 }
 .background.felv-fiv .sticker .bars-top img:nth-child(4) {
   width: 0;
-  top: -30px;
-  left: 44px;
+  top: -33.5%;
+  left: 49.5%;
 }
 .background.felv-fiv .sticker .bars-top img:nth-child(5) {
   width: 0;
-  top: -45px;
-  left: 62px;
+  top: -50%;
+  left: 70%;
 }
 .background.felv-fiv .sticker .bars-top img:nth-child(6) {
   width: 0;
-  top: -59px;
-  left: 78px;
+  top: -66%;
+  left: 88%;
 }
 .background.felv-fiv .sticker .dots {
-  position: relative;
-  top: 27px;
-  left: 122px;
+  position: absolute;
+  top: -25%;
+  left: 12.5%;
+  height: 100%;
+  width: 100%;
 }
 .background.felv-fiv .sticker .dots img {
   position: absolute;
-  margin: 0 auto;
-  text-align: center;
   z-index: 3;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" 0 ")";
   filter: alpha(opacity=0);
   zoom: 1;
+  width: 7.9%;
 }
 .background.felv-fiv .sticker .dots img:nth-child(1) {
-  top: 325px;
-  left: 27px;
+  top: 135%;
+  left: 11%;
 }
 .background.felv-fiv .sticker .dots img:nth-child(2) {
-  top: 305px;
-  left: 44px;
+  top: 126.5%;
+  left: 18.3%;
 }
 .background.felv-fiv .sticker .dots img:nth-child(3) {
-  top: 286px;
-  left: 57px;
+  top: 118.5%;
+  left: 23.7%;
 }
 .background.felv-fiv .sticker .dots img:nth-child(4) {
-  top: 263px;
-  left: 65px;
+  top: 109%;
+  left: 27%;
 }
 .background.felv-fiv .sticker .dots img:nth-child(5) {
-  top: 239px;
-  left: 73px;
+  top: 99%;
+  left: 30%;
 }
 .background.felv-fiv .sticker .dots img:nth-child(6) {
-  top: 214px;
-  left: 80px;
+  top: 88.5%;
+  left: 33.3%;
 }
 .background.felv-fiv .sticker .dots img:nth-child(7) {
-  top: 123px;
-  left: 51px;
+  top: 51%;
+  left: 21.2%;
 }
 .background.felv-fiv .sticker .dots img:nth-child(8) {
-  top: 95px;
-  left: 59px;
+  top: 39.5%;
+  left: 24.5%;
 }
 .background.felv-fiv .sticker .dots img:nth-child(9) {
-  top: 70px;
-  left: 72px;
+  top: 29%;
+  left: 30%;
 }
 .background.felv-fiv .sticker .dots img:nth-child(10) {
-  top: 47px;
-  left: 90px;
+  top: 19.5%;
+  left: 37.5%;
 }
 .background.felv-fiv .sticker .dots img:nth-child(11) {
-  top: 28px;
-  left: 108px;
+  top: 11.5%;
+  left: 45%;
 }
 .background.felv-fiv .sticker .dots img:nth-child(12) {
-  top: 14px;
-  left: 130px;
+  top: 6%;
+  left: 54%;
 }
 .background.felv-fiv .sticker .dots img:nth-child(13) {
-  top: 3px;
-  left: 152px;
+  top: 1.2%;
+  left: 63%;
 }
 .background.felv-fiv .sticker.active .bars-bottom img {
   opacity: 1;
@@ -5718,16 +5700,16 @@ span.placeholder {
   transition: all 500ms 200ms ease-in-out;
 }
 .background.felv-fiv .sticker.active .bars-bottom img:nth-child(1) {
-  width: 66px;
+  width: 98%;
 }
 .background.felv-fiv .sticker.active .bars-bottom img:nth-child(2) {
-  width: 64px;
+  width: 95%;
 }
 .background.felv-fiv .sticker.active .bars-bottom img:nth-child(3) {
-  width: 57px;
+  width: 84.6%;
 }
 .background.felv-fiv .sticker.active .bars-bottom img:nth-child(4) {
-  width: 45px;
+  width: 66.8%;
 }
 .background.felv-fiv .sticker.active .bars-top img {
   opacity: 1;
@@ -5785,22 +5767,22 @@ span.placeholder {
   transition: all 700ms 700ms ease-in-out;
 }
 .background.felv-fiv .sticker.active .bars-top img:nth-child(1) {
-  width: 70px;
+  width: 78%;
 }
 .background.felv-fiv .sticker.active .bars-top img:nth-child(2) {
-  width: 81px;
+  width: 90.3%;
 }
 .background.felv-fiv .sticker.active .bars-top img:nth-child(3) {
-  width: 84px;
+  width: 93.6%;
 }
 .background.felv-fiv .sticker.active .bars-top img:nth-child(4) {
-  width: 85px;
+  width: 94.7%;
 }
 .background.felv-fiv .sticker.active .bars-top img:nth-child(5) {
-  width: 82px;
+  width: 91.4%;
 }
 .background.felv-fiv .sticker.active .bars-top img:nth-child(6) {
-  width: 76px;
+  width: 84.7%;
 }
 .background.felv-fiv .sticker.active .dots img:nth-child(1) {
   opacity: 1;
