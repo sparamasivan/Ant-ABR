@@ -24,22 +24,34 @@ define([
             this.$elContent.append(this._getContent());
 
             this.$el.appendTo(parent);
+
+            this.$el.bind('click', function() {
+                self.run();
+            });
         },
 
-        animate: function() {
-            var stickerEl = this.$elContent.find('.sticker');
+        reset: function() {
+            this._getStickerEl().removeClass('active');
+        },
 
-            stickerEl.removeClass('active');
+        run: function() {
+            var self = this;
 
-            // add a bit of delay before activating
+            this.reset();
+
+            // activate animation in next cycle
             setTimeout(function() {
-                stickerEl.addClass('active');
-            }, 200);
+                self._getStickerEl().addClass('active');
+            }, 0);
             
         },
 
         _getContent: function() {
             return this.templateContent();
+        },
+
+        _getStickerEl: function() {
+            return this.$elContent.find('.sticker');
         }
     });
 });

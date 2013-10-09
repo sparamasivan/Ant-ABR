@@ -1,5 +1,9 @@
 @import "compass/css3/transform";
 
+.view-animation-base {
+    cursor: pointer;
+}
+
 @mixin opacity ( $value: 0.5 ) {
   opacity: $value;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" $value * 100 ")";

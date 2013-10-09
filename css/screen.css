@@ -4372,6 +4372,10 @@ span.placeholder {
   display: block;
 }
 
+.view-animation-base {
+  cursor: pointer;
+}
+
 .background.urine {
   max-width: 466px;
   margin: 0 0 0 27%;

@@ -61,10 +61,10 @@ define([
         },
 
         /**
-         * Switch between displaying static diagram image or animation depending on screen size and browser support
+         * Switch between displaying static diagram image or animation.
          */
         _updateAnimationDisplay: function() {
-            if (!this._getViewAnimation() || ModelMediaQuery.isPhoneMedia() || !Modernizr.csstransforms) {
+            if (!this._getViewAnimation() || !Modernizr.csstransforms) {
                 this._showDiagram();
             } else {
                 this._showAnimation();

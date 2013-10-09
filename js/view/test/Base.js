@@ -124,11 +124,16 @@ define([
         },
 
         expand: function() {
+            var viewAnimation = this._overview.viewAnimation;
             this.$elBody.removeClass('collapsed');
             this.refresh();
 
-            // activate overview animation when test expanded
-            this._overview.viewAnimation.animate();
+            viewAnimation.reset();
+
+            // wait a little to ensure test is finished expanding before running animation
+            setTimeout(function() {
+                viewAnimation.run();
+            }, 1000);
         },
 
         isCollapsed: function() {
