@@ -67,6 +67,7 @@
 			left: -35%;
 			z-index: 1;
 			width:43%;
+			height: 49%;
 
 			.bubble {
 				position: absolute;
@@ -74,62 +75,62 @@
 
 				&:nth-child(1) {
 					left: 0;
-					margin-top: 21.5%;
+					top: 21.5%;
 					width: 28%;
 				}
 				&:nth-child(2) {
 					left: -13%;
-					margin-top: 11.5%;
+					top: 11.5%;
 					width: 15.5%;
 				}
 				&:nth-child(3) {
 					left: 29%;
-					margin-top: 23.5%;
+					top: 23.5%;
 					width: 14.5%;
 				}
 				&:nth-child(4) {
 					left: 101%;
-					margin-top: 24.5%;
+					top: 24.5%;
 					width: 11.5%;
 				}
 				&:nth-child(5) {
 					left: 90.5%;
-					margin-top: 42%;
+					top: 42%;
 					width: 11.2%;
 				}
 				&:nth-child(6) {
 					left: -12.5%;
-					margin-top: 45.5%;
+					top: 45.5%;
 					width: 17.3%;
 				}
 				&:nth-child(7) {
 					left: 70.5%;
-					margin-top: 23%;
+					top: 23%;
 					width: 25.4%;
 				}
 				&:nth-child(8) {
 					left: -31.5%;
-					margin-top: 30.5%;
+					top: 30.5%;
 					width: 22%;
 				}
 				&:nth-child(9) {
 					left: 22.5%;
-					margin-top: 40%;
+					top: 40%;
 					width: 28%;
 				}
 				&:nth-child(10) {
 					left: 47.5%;
-					margin-top: 31.5%;
+					top: 31.5%;
 					width: 15%;
 				}
 				&:nth-child(11) {
 					left: 23.5%;
-					margin-top: 6%;
+					top: 6%;
 					width: 17.3%;
 				}
 				&:nth-child(12) {
 					left: 53.5%;
-					margin-top: 11.5%;
+					top: 11.5%;
 					width: 17.2%;
 				}
 			}
@@ -158,51 +159,39 @@
 					}
 					&:nth-child(1) {
 						left: 120.5%;
-						margin-top: 21.5%;
 					}
 					&:nth-child(2) {
 						left: 132%;
-						margin-top: 11.5%;
 					}
 					&:nth-child(3) {
 						left: 107.5%;
-						margin-top: 23.5%;
 					}
 					&:nth-child(4) {
 						left: 163%;
-						margin-top: 24.5%;
 					}
 					&:nth-child(5) {
 						left: 163%;
-						margin-top: 42%;
 					}
 					&:nth-child(6) {
 						left: 122.5%;
-						margin-top: 45.5%;
 					}
 					&:nth-child(7) {
 						left: 141%;
-						margin-top: 23%;
 					}
 					&:nth-child(8) {
 						left: 95%;
-						margin-top: 30.5%;
 					}
 					&:nth-child(9) {
 						left: 135%;
-						margin-top: 40%;
 					}
 					&:nth-child(10) {
 						left: 113%;
-						margin-top: 31.5%;
 					}
 					&:nth-child(11) {
 						left: 114%;
-						margin-top: 6%;
 					}
 					&:nth-child(12) {
 						left: 145.5%;
-						margin-top: 11.5%;
 					}
 				}
 			}
