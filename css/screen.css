@@ -4647,7 +4647,7 @@ span.placeholder {
   margin-top: 20%;
 }
 .background.chemistry .sticker .glass {
-  height: 80%;
+  height: 77%;
   border-radius: 128px;
   width: 76.6%;
   z-index: 3;
@@ -4672,35 +4672,23 @@ span.placeholder {
   top: 0;
 }
 .background.chemistry .sticker .glass .paw {
-  background: #FFF;
+  z-index: 1;
+  position: absolute;
+  left: 5%;
+  top: 2%;
   width: 92%;
   height: 92%;
-  overflow: hidden;
-  border-radius: 50%;
-  z-index: 2;
-  position: relative;
-  left: 5%;
-  top: 1%;
-}
-.background.chemistry .sticker .glass .paw .map {
-  background: url("../images/animation/chemistry/paw@2x.png") no-repeat transparent;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  z-index: 1;
-  position: relative;
+  background-color: #FFF;
+  background-image: url("../images/animation/chemistry/paw@2x.png");
+  background-repeat: no-repeat;
   background-position: 138% 29%;
   background-size: 180%;
+  border-radius: 50%;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -webkit-perspective: 1000px;
-  -moz-perspective: 1000px;
-  -ms-perspective: 1000px;
-  -o-perspective: 1000px;
-  perspective: 1000px;
 }
 .background.chemistry .sticker.active .glass {
   -webkit-animation-delay: 0ms;
@@ -4729,7 +4717,7 @@ span.placeholder {
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
 }
-.background.chemistry .sticker.active .glass .paw .map {
+.background.chemistry .sticker.active .glass .paw {
   -webkit-animation-delay: 100ms;
   -webkit-animation-duration: 4s;
   -webkit-animation-name: loop;
