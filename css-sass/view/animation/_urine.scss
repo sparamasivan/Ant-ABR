@@ -1,47 +1,55 @@
 .background.urine {
-	background-color:#7b58af;
-	min-height:600px;
+	max-width: round(image-width("../images/animation/urine/background@2x.png") / 2);
+
 	.sticker {
+		position: relative;
+		z-index: 0;
+
 		.background-sticker {
+			display: block;
 			position: relative;
-			z-index:1;
-			left: 450px;
-			top: 75px;
+			z-index: 1;
 		}
+
 		.tank  {
-			width: 193px;
-			background: #FFF;
-			height: 150px;
 			position: absolute;
-			left: 643px;
-			top: 299px;
+			width: 33%;
+			height: 38.5%;
+			left: 50%;
+			top: 42%;
+
+			background: #FFF;
+			overflow: hidden;
+
 			.water {
-				background: url("../images/animation/urine/pee.png") no-repeat rgba(0, 0, 0, 0);
 				position: absolute;
-				width: 244px;
-				left: 0;
-				top: 90px;
-				height: 219px;
 				z-index: 0;
-				background-size: 85%;
+
+				left: 0;
+				top: 57%;
+
+				width: 100%;
+				height: 100%;
+
+				background: url("../images/animation/urine/pee.png") no-repeat rgba(0, 0, 0, 0);
+				background-size: 100%;
 			}
 		}
 
 		.portholes {
-			width: 367px;
-			height: 284px;
+			width: 81%;
+			height: 69.6%;
 			position: absolute;
-			top: 27px;
-			left: 478px;
+			top: 12.5%;
+			left: 6%;
 			img {
-				position: relative;
+				position: absolute;
 				z-index: 2;
-			}
-			img.grate {
-				position: relative;
-				top: 159px;
-				left: 7px;
-				z-index: 2;
+
+				&.grate {
+					top: 2%;
+					left: 3%;
+				}
 			}
 		}
 
@@ -49,65 +57,62 @@
 
 		.bubbles {
 			position: absolute;
-			top: 184px;
-			left: 289px;
+			top: 15%;
+			left: -35%;
 			z-index: 1;
-			float:left;
-			width:200px;
+			width:43%;
+
 			.bubble {
 				position: absolute;
-				margin: 0 auto;
-				text-align: center;
 				z-index: 3;
-				left: 32.3%;
-				top: 25%;
+
 				&:nth-child(1) {
 					left: 0;
-					margin-top: 43px;
+					margin-top: 21.5%;
 				}
 				&:nth-child(2) {
-					left: -26px;
-					margin-top: 23px;
+					left: -13%;
+					margin-top: 11.5%;
 				}
 				&:nth-child(3) {
-					left: 58px;
-					margin-top: 47px;
+					left: 29%;
+					margin-top: 23.5%;
 				}
 				&:nth-child(4) {
-					left: 202px;
-					margin-top: 49px;
+					left: 101%;
+					margin-top: 24.5%;
 				}
 				&:nth-child(5) {
-					left: 181px;
-					margin-top: 84px;
+					left: 90.5%;
+					margin-top: 42%;
 				}
 				&:nth-child(6) {
-					left: -25px;
-					margin-top: 91px;
+					left: -12.5%;
+					margin-top: 45.5%;
 				}
 				&:nth-child(7) {
-					left: 141px;
-					margin-top: 46px;
+					left: 70.5%;
+					margin-top: 23%;
 				}
 				&:nth-child(8) {
-					left: -63px;
-					margin-top: 61px;
+					left: -31.5%;
+					margin-top: 30.5%;
 				}
 				&:nth-child(9) {
-					left: 45px;
-					margin-top: 80px;
+					left: 22.5%;
+					margin-top: 40%;
 				}
 				&:nth-child(10) {
-					left: 95px;
-					margin-top: 63px;
+					left: 47.5%;
+					margin-top: 31.5%;
 				}
 				&:nth-child(11) {
-					left: 47px;
-					margin-top: 12px;
+					left: 23.5%;
+					margin-top: 6%;
 				}
 				&:nth-child(12) {
-					left: 107px;
-					margin-top: 23px;
+					left: 53.5%;
+					margin-top: 11.5%;
 				}
 			}
 
@@ -115,11 +120,10 @@
 
 		.drop {
 			position: absolute;
-			left: 903px;
-			top: 397px;
+			left: 97%;
+			top: 67%;
 			z-index: 0;
 		}
-
 
 		&.active {
 			.bubbles {
@@ -130,64 +134,64 @@
 						}
 					}
 					&:nth-child(1) {
-						left: 241px;
-						margin-top: 43px;
+						left: 120.5%;
+						margin-top: 21.5%;
 					}
 					&:nth-child(2) {
-						left: 264px;
-						margin-top: 23px;
+						left: 132%;
+						margin-top: 11.5%;
 					}
 					&:nth-child(3) {
-						left: 215px;
-						margin-top: 47px;
+						left: 107.5%;
+						margin-top: 23.5%;
 					}
 					&:nth-child(4) {
-						left: 326px;
-						margin-top: 49px;
+						left: 163%;
+						margin-top: 24.5%;
 					}
 					&:nth-child(5) {
-						left: 326px;
-						margin-top: 84px;
+						left: 163%;
+						margin-top: 42%;
 					}
 					&:nth-child(6) {
-						left: 245px;
-						margin-top: 91px;
+						left: 122.5%;
+						margin-top: 45.5%;
 					}
 					&:nth-child(7) {
-						left: 282px;
-						margin-top: 46px;
+						left: 141%;
+						margin-top: 23%;
 					}
 					&:nth-child(8) {
-						left: 190px;
-						margin-top: 61px;
+						left: 95%;
+						margin-top: 30.5%;
 					}
 					&:nth-child(9) {
-						left: 270px;
-						margin-top: 80px;
+						left: 135%;
+						margin-top: 40%;
 					}
 					&:nth-child(10) {
-						left: 226px;
-						margin-top: 63px;
+						left: 113%;
+						margin-top: 31.5%;
 					}
 					&:nth-child(11) {
-						left: 228px;
-						margin-top: 12px;
+						left: 114%;
+						margin-top: 6%;
 					}
 					&:nth-child(12) {
-						left: 291px;
-						margin-top: 23px;
+						left: 145.5%;
+						margin-top: 11.5%;
 					}
 				}
 			}
 			.tank {
 				.water {
-					top: 70px;
+					top: 44.5%;
 					@include transition(all 1500ms 600ms ease-out);
 				}
 			}
 			.drop {
 				@include transition(all 500ms 2000ms cubic-bezier(1,.01,.1,.1));
-				top:475px;
+				top: 87%;
 			}
 		}
 	}
