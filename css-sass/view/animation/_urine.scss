@@ -1,5 +1,6 @@
 .background.urine {
 	max-width: round(image-width("../images/animation/urine/background@2x.png") / 2);
+	margin: 0 0 0 27%;
 
 	.sticker {
 		position: relative;
@@ -11,7 +12,7 @@
 			z-index: 1;
 		}
 
-		.tank  {
+		.tank {
 			position: absolute;
 			width: 33%;
 			height: 38.5%;
@@ -31,13 +32,13 @@
 				width: 100%;
 				height: 100%;
 
-				background: url("../images/animation/urine/pee.png") no-repeat rgba(0, 0, 0, 0);
+				background: url("../images/animation/urine/pee@2x.png") no-repeat rgba(0, 0, 0, 0);
 				background-size: 100%;
 			}
 		}
 
 		.portholes {
-			width: 81%;
+			width: 79%;
 			height: 69.6%;
 			position: absolute;
 			top: 12.5%;
@@ -46,7 +47,12 @@
 				position: absolute;
 				z-index: 2;
 
+				&.holes {
+					width: 100%;
+				}
+
 				&.grate {
+					width: 40%;
 					top: 2%;
 					left: 3%;
 				}
@@ -69,50 +75,62 @@
 				&:nth-child(1) {
 					left: 0;
 					margin-top: 21.5%;
+					width: 28%;
 				}
 				&:nth-child(2) {
 					left: -13%;
 					margin-top: 11.5%;
+					width: 15.5%;
 				}
 				&:nth-child(3) {
 					left: 29%;
 					margin-top: 23.5%;
+					width: 14.5%;
 				}
 				&:nth-child(4) {
 					left: 101%;
 					margin-top: 24.5%;
+					width: 11.5%;
 				}
 				&:nth-child(5) {
 					left: 90.5%;
 					margin-top: 42%;
+					width: 11.2%;
 				}
 				&:nth-child(6) {
 					left: -12.5%;
 					margin-top: 45.5%;
+					width: 17.3%;
 				}
 				&:nth-child(7) {
 					left: 70.5%;
 					margin-top: 23%;
+					width: 25.4%;
 				}
 				&:nth-child(8) {
 					left: -31.5%;
 					margin-top: 30.5%;
+					width: 22%;
 				}
 				&:nth-child(9) {
 					left: 22.5%;
 					margin-top: 40%;
+					width: 28%;
 				}
 				&:nth-child(10) {
 					left: 47.5%;
 					margin-top: 31.5%;
+					width: 15%;
 				}
 				&:nth-child(11) {
 					left: 23.5%;
 					margin-top: 6%;
+					width: 17.3%;
 				}
 				&:nth-child(12) {
 					left: 53.5%;
 					margin-top: 11.5%;
+					width: 17.2%;
 				}
 			}
 
@@ -123,6 +141,11 @@
 			left: 97%;
 			top: 67%;
 			z-index: 0;
+			width: 3%;
+
+			img {
+				display: block;
+			}
 		}
 
 		&.active {
