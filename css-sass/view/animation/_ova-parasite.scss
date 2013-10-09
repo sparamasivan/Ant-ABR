@@ -1,65 +1,64 @@
 .background.ova {
-	background-color:#2E90F8;
-	width:100%;
-	height: 100%;
+	max-width: round(image-width("../images/animation/ova-parasite/HT_Ova_PetriDish@2x.png") / 2);
+	margin: 15% 21% 0% 3%;
 
 	.sticker {
-		width: 430px;
-		margin: 0 auto;
-		min-height: 500px;
 		position: relative;
 		z-index: 0;
-		img {
+
+		.bg {
+			display: block;
+			position: relative;
+			z-index: 1;
+		}
+
+		.part {
 			position: absolute;
-			margin: 0 auto;
-			text-align: center;
 			z-index: 3;
-			left: 22.3%;
-			top: 16.3%;
 		}
 
 		.lense {
-			width: 267px;
-			height: 266px;
-			left: 277px;
-			overflow: hidden;
-			position: relative;
-			top: 23px;
+			position: absolute;
 			z-index: 4;
-			border-radius: 200px;
-			img {
-				position: relative;
-				left: 0;
-				top: 0;
-				z-index: 0;
+
+			top: -17%;
+			left: 51%;
+
+			width: 76%;
+			height: 75%;
+
+			.loupe {
+				position: absolute;
 			}
+
 			.critters {
-				position: relative;
-				border-radius: 271px;
-				height: 235px;
-				width: 236px;
+				position: absolute;
+				border-radius: 50%;
+				height: 94%;
+				width: 94%;
 				overflow:hidden;
-				top: -254px;
-				background-size: 410px 410px;
-				background-attachment: fixed;
-				background:#fff;
+				top: 3%;
+				left: 4%;
+				background-color:#fff;
 				z-index: -1;
-				background-position: 100% 0%;
-				left: 17px;
+
 				.a {
 					@include transform(translateZ(0));
-					top: 100px;
-					left: 99px;
+					top: 51%;
+					left: 41%;
+					width: 19%;
 				}
 				.b {
 					@include transform(translateZ(0));
-					top: 16px;
-					left: 84px;
+					top: 22%;
+					left: 56%;
+					width: 17.5%;
 				}
 				.c {
 					@include transform(translateZ(0));
-					top: 32px;
-					left: -64px;
+					top: 13.5%;
+					left: 16.5%;
+					width: 38.5%;
 				}
 			}
 		}
@@ -67,15 +66,15 @@
 			.lense {
 				.critters {
 					.a {
-						@include animation(bot-critter, 10s, 0, 1, linear);
+						@include animation(a-critter, 10s, 0, 1, linear);
 						@include animation-fill(forwards);
 					}
 					.b {
 						@include animation-fill(forwards);
-						@include animation(ri-critter, 10s, 0, 1, linear);
+						@include animation(b-critter, 10s, 0, 1, linear);
 					}
 					.c {
-						@include animation(big-critter, 10s, 0, 1, linear);
+						@include animation(c-critter, 10s, 0, 1, linear);
 						@include animation-fill(forwards);
 					}
 				}
@@ -84,34 +83,29 @@
 	}
 }
 
-@include keyframes(big-critter) {
-	0%  {
-		@include transform(rotate(0deg));
-	}
+@include keyframes(a-critter) {
 	100% {
-		top: 22px;
-		left: -82px;
-		@include transform(rotate(-48deg));
+		top: 49%;
+		left: 27%;
+		@include transform(rotate(-45deg));
 	}
 }
-@include keyframes(ri-critter) {
+@include keyframes(b-critter) {
 	0% {
 		@include transform(rotate(0deg));
 	}
 	100% {
 		@include transform(rotate(92deg));
-		top: 16px;
-		left: 130px;
+		left: 74%;
 	}
 }
-@include keyframes(bot-critter) {
-	0% {
-		top: 100px;
-		left: 99px;
+@include keyframes(c-critter) {
+	0%  {
+		@include transform(rotate(0deg));
 	}
 	100% {
-		top: 95px;
-		left: 64px;
-		@include transform(rotate(-45deg));
+		top: 10%;
+		left: 10%;
+		@include transform(rotate(-48deg));
 	}
 }
