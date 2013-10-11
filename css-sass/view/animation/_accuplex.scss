@@ -14,53 +14,43 @@
 
 		.bug {
 			&.small {
-				height: 40px;
-				width: 40px;
+				width: 15%;
 				position:absolute;
 				&:nth-child(6) {
 					top: 45%;
 					left: -20%;
-					background: url("../images/animation/accuplex/1x/sm-pink-bug-1.png") no-repeat trasparent;
 				}
 				&:nth-child(7) {
 					top: -11%;
 					left: 77%;
-					background: url("../images/animation/accuplex/1x/sm-pink-bug-2.png") no-repeat transparent;
 				}
 				&:nth-child(8) {
 					top: 45%;
 					left: 109%;
-					background: url("../images/animation/accuplex/1x/sm-pink-bug-3.png") no-repeat transparent;
 				}
 				&:nth-child(9) {
 					top: 83%;
 					left: -4%;
-					background: url("../images/animation/accuplex/1x/sm-pink-bug-4.png") no-repeat transparent;
 				}
 			}
 			&.medium {
-				height: 47px;
-				width: 48px;
+				width: 18.7%;
 				position:absolute;
 				&:nth-child(2) {
 					top: -12%;
 					left: -12%;
-					background: url("../images/animation/accuplex/1x/med-grey-bug-1.png") no-repeat transparent;
 				}
 				&:nth-child(3) {
 					top: 45%;
 					left: 125%;
-					background: url("../images/animation/accuplex/1x/med-grey-bug-2.png") no-repeat transparent;
 				}
 				&:nth-child(4) {
 					top: 101%;
 					left: 61%;
-					background: url("../images/animation/accuplex/1x/med-grey-bug-3.png") no-repeat transparent;
 				}
 				&:nth-child(5) {
-					top: 110%;
+					top: 105%;
 					left: 12%;
-					background: url("../images/animation/accuplex/1x/med-grey-bug-4.png") no-repeat transparent;
 				}
 			}
 		}

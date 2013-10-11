@@ -2,6 +2,12 @@
 	max-width: round(image-width("../images/animation/cbc/2x/large-circle-2x.png") / 2);
 	margin: 0 9% 0 24%;
 
+	/* phone */
+	@media (max-width:($mq-phone)) {
+		margin-right: 0%;
+		margin-left: 14%;
+	}
+
 	.sticker {
 		position: relative;
 		z-index: 0;

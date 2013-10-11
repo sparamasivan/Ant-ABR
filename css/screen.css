@@ -4379,6 +4379,12 @@ span.placeholder {
 .background.urine {
   max-width: 466px;
   margin: 0 0 0 27%;
+  /* phone */
+}
+@media (max-width: 630px) {
+  .background.urine {
+    margin-left: 18%;
+  }
 }
 .background.urine .sticker {
   position: relative;
@@ -4637,6 +4643,12 @@ span.placeholder {
 .background.chemistry {
   max-width: 321px;
   margin: 0 25% 0 0;
+  /* phone */
+}
+@media (max-width: 630px) {
+  .background.chemistry {
+    margin-right: 20%;
+  }
 }
 .background.chemistry .sticker {
   position: relative;
@@ -4872,6 +4884,13 @@ span.placeholder {
 .background.cbc {
   max-width: 338px;
   margin: 0 9% 0 24%;
+  /* phone */
+}
+@media (max-width: 630px) {
+  .background.cbc {
+    margin-right: 0%;
+    margin-left: 14%;
+  }
 }
 .background.cbc .sticker {
   position: relative;
@@ -4942,6 +4961,13 @@ span.placeholder {
 .background.ova {
   max-width: 354px;
   margin: 15% 21% 0% 3%;
+  /* phone */
+}
+@media (max-width: 630px) {
+  .background.ova {
+    margin-right: 19%;
+    margin-left: 0%;
+  }
 }
 .background.ova .sticker {
   position: relative;
@@ -5323,54 +5349,44 @@ span.placeholder {
   z-index: 1;
 }
 .background.accuplex .sticker .bug.small {
-  height: 40px;
-  width: 40px;
+  width: 15%;
   position: absolute;
 }
 .background.accuplex .sticker .bug.small:nth-child(6) {
   top: 45%;
   left: -20%;
-  background: url("../images/animation/accuplex/1x/sm-pink-bug-1.png") no-repeat trasparent;
 }
 .background.accuplex .sticker .bug.small:nth-child(7) {
   top: -11%;
   left: 77%;
-  background: url("../images/animation/accuplex/1x/sm-pink-bug-2.png") no-repeat transparent;
 }
 .background.accuplex .sticker .bug.small:nth-child(8) {
   top: 45%;
   left: 109%;
-  background: url("../images/animation/accuplex/1x/sm-pink-bug-3.png") no-repeat transparent;
 }
 .background.accuplex .sticker .bug.small:nth-child(9) {
   top: 83%;
   left: -4%;
-  background: url("../images/animation/accuplex/1x/sm-pink-bug-4.png") no-repeat transparent;
 }
 .background.accuplex .sticker .bug.medium {
-  height: 47px;
-  width: 48px;
+  width: 18.7%;
   position: absolute;
 }
 .background.accuplex .sticker .bug.medium:nth-child(2) {
   top: -12%;
   left: -12%;
-  background: url("../images/animation/accuplex/1x/med-grey-bug-1.png") no-repeat transparent;
 }
 .background.accuplex .sticker .bug.medium:nth-child(3) {
   top: 45%;
   left: 125%;
-  background: url("../images/animation/accuplex/1x/med-grey-bug-2.png") no-repeat transparent;
 }
 .background.accuplex .sticker .bug.medium:nth-child(4) {
   top: 101%;
   left: 61%;
-  background: url("../images/animation/accuplex/1x/med-grey-bug-3.png") no-repeat transparent;
 }
 .background.accuplex .sticker .bug.medium:nth-child(5) {
-  top: 110%;
+  top: 105%;
   left: 12%;
-  background: url("../images/animation/accuplex/1x/med-grey-bug-4.png") no-repeat transparent;
 }
 .background.accuplex .sticker.active .bug:nth-child(2) {
   -webkit-transition: all 3s 170ms;

@@ -2,6 +2,12 @@
 	max-width: round(image-width("../images/animation/ova-parasite/HT_Ova_PetriDish@2x.png") / 2);
 	margin: 15% 21% 0% 3%;
 
+	/* phone */
+	@media (max-width:($mq-phone)) {
+		margin-right: 19%;
+		margin-left: 0%;
+	}
+
 	.sticker {
 		position: relative;
 		z-index: 0;
