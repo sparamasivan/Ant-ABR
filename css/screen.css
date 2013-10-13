@@ -3078,7 +3078,7 @@ span.placeholder {
 }
 
 .test-header {
-  height: 74px;
+  height: 85px;
   background-repeat: repeat-x;
   color: white;
   overflow: hidden;
@@ -3091,7 +3091,7 @@ span.placeholder {
 }
 .test-header .title {
   display: inline-block;
-  margin-top: 13.5px;
+  margin-top: 19px;
   position: relative;
 }
 .test-header .title .icon {
@@ -3114,7 +3114,7 @@ span.placeholder {
 }
 .test-header .status {
   position: absolute;
-  top: 13.5px;
+  top: 19px;
   right: 90px;
   width: 49px;
   height: 47px;
