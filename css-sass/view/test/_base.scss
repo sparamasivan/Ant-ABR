@@ -89,7 +89,7 @@
 }
 
 .test-header {
-    $headerHeight: 85px;
+    $headerHeight: $testHeaderHeight;
     $iconHeight: 47px;
     $iconWidth: 47px;
 
