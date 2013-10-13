@@ -1,11 +1,10 @@
 .background.ova {
 	max-width: round(image-width("../images/animation/ova-parasite/HT_Ova_PetriDish@2x.png") / 2);
-	margin: 15% 21% 0% 3%;
+	margin: 0 21% -7% 3%;
 
 	/* phone */
 	@media (max-width:($mq-phone)) {
-		margin-right: 19%;
-		margin-left: 0%;
+		margin: 13% 19% 0 0;
 	}
 
 	.sticker {

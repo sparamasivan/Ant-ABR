@@ -1,6 +1,12 @@
 .background.felv-fiv {
 	max-width: round(image-width("../images/animation/felv-fiv/circle-background@2x.png") / 2);
-	margin: 15% 14% 12% 10%;
+	margin: 2% 14% 0 10%;
+
+	/* phone */
+	@media (max-width:($mq-phone)) {
+		margin-top: 15%;
+		margin-bottom: 12%;
+	}
 
 	.sticker {
 		position: relative;

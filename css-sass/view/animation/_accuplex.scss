@@ -1,6 +1,12 @@
 .background.accuplex {
 	max-width: round(image-width("../images/animation/accuplex/2x/large-bug-2x.png") / 2);
-	margin: 12%;
+	margin: 0 16%;
+
+	/* phone */
+	@media (max-width:($mq-phone)) {
+		margin-top: 5%;
+		margin-bottom: 7%;
+	}
 
 	.sticker {
 		position: relative;

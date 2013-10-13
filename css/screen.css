@@ -3012,7 +3012,7 @@ span.placeholder {
   border-radius: 5px;
 }
 .view-test-base .test-section-inner {
-  padding: 20px 20px 20px 75px;
+  padding: 60px 20px 60px 75px;
   /* phone */
 }
 @media (max-width: 630px) {
@@ -4642,7 +4642,7 @@ span.placeholder {
 
 .background.chemistry {
   max-width: 321px;
-  margin: 0 25% 0 0;
+  margin: 0 30% 0 0;
   /* phone */
 }
 @media (max-width: 630px) {
@@ -4883,13 +4883,13 @@ span.placeholder {
 
 .background.cbc {
   max-width: 338px;
-  margin: 0 9% 0 24%;
+  margin: 0 9% 0 22%;
   /* phone */
 }
 @media (max-width: 630px) {
   .background.cbc {
     margin-right: 0%;
-    margin-left: 14%;
+    margin-left: 19%;
   }
 }
 .background.cbc .sticker {
@@ -4960,13 +4960,12 @@ span.placeholder {
 
 .background.ova {
   max-width: 354px;
-  margin: 15% 21% 0% 3%;
+  margin: 0 21% -7% 3%;
   /* phone */
 }
 @media (max-width: 630px) {
   .background.ova {
-    margin-right: 19%;
-    margin-left: 0%;
+    margin: 13% 19% 0 0;
   }
 }
 .background.ova .sticker {
@@ -5337,7 +5336,14 @@ span.placeholder {
 
 .background.accuplex {
   max-width: 267px;
-  margin: 12%;
+  margin: 0 16%;
+  /* phone */
+}
+@media (max-width: 630px) {
+  .background.accuplex {
+    margin-top: 5%;
+    margin-bottom: 7%;
+  }
 }
 .background.accuplex .sticker {
   position: relative;
@@ -5463,7 +5469,14 @@ span.placeholder {
 
 .background.felv-fiv {
   max-width: 242px;
-  margin: 15% 14% 12% 10%;
+  margin: 2% 14% 0 10%;
+  /* phone */
+}
+@media (max-width: 630px) {
+  .background.felv-fiv {
+    margin-top: 15%;
+    margin-bottom: 12%;
+  }
 }
 .background.felv-fiv .sticker {
   position: relative;
@@ -5903,7 +5916,14 @@ span.placeholder {
 
 .background.t4 {
   max-width: 261px;
-  margin: 0 10% 10% 11%;
+  margin: -3% 10% 0% 11%;
+  /* phone */
+}
+@media (max-width: 630px) {
+  .background.t4 {
+    margin-top: 0;
+    margin-bottom: 10%;
+  }
 }
 .background.t4 .sticker {
   position: relative;
@@ -6465,6 +6485,14 @@ span.placeholder {
 
 .background.heartworm {
   max-width: 352px;
+  margin: -8.5% 0;
+  /* phone */
+}
+@media (max-width: 630px) {
+  .background.heartworm {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 .background.heartworm .sticker {
   position: relative;
