@@ -19,8 +19,7 @@ define([
 
         render: function(parent) {
             var self = this,
-                subtestContainer,
-                viewAnimation = this._getViewAnimation();
+                subtestContainer;
 
             this.setElement($(this.template({
                 description: Handlebars.compile(this.options.descriptionTemplate)({
@@ -45,12 +44,13 @@ define([
                 $(this).toggleClass('down');
             });
 
-            if (viewAnimation) {
-                viewAnimation.render(this.$elAnimation);
+            // show animation or static diagram depending on browser support
+            if (this._supportsAnimation()) {
+                this._getViewAnimation().render(this.$elAnimation);
+                this._showAnimation();
+            } else {
+                this._showDiagram();
             }
-
-            this._updateAnimationDisplay();
-            ModelMediaQuery.on('change:windowWidth', $.proxy(this._updateAnimationDisplay, this));
         },
 
         refresh: function() {
@@ -58,17 +58,6 @@ define([
 
         _getDiagramFilename: function() {
             return this.options.diagramFilename || 'diagram-2x.png';
-        },
-
-        /**
-         * Switch between displaying static diagram image or animation.
-         */
-        _updateAnimationDisplay: function() {
-            if (!this._getViewAnimation() || !Modernizr.csstransforms) {
-                this._showDiagram();
-            } else {
-                this._showAnimation();
-            }
         },
 
         _showDiagram: function() {
@@ -83,6 +72,10 @@ define([
 
         _getViewAnimation: function() {
             return this.options.viewAnimation;
+        },
+
+        _supportsAnimation: function() {
+            return (this._getViewAnimation() && Modernizr.csstransforms);
         }
     });
 });

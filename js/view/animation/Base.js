@@ -13,6 +13,8 @@ define([
         // set by the child class
         templateContent: null,
 
+        _rendered: false,
+
         render: function(parent) {
             var self = this;
 
@@ -28,14 +30,20 @@ define([
             this.$el.bind('click', function() {
                 self.run();
             });
+
+            this._rendered = true;
         },
 
         reset: function() {
+            if (!this._rendered) return false;
+
             this._getStickerEl().removeClass('active');
         },
 
         run: function() {
             var self = this;
+
+            if (!this._rendered) return false;
 
             this.reset();
 
