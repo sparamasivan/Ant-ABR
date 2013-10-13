@@ -1,10 +1,19 @@
 <div class="view-navigation yui3-hidden-tablet yui3-hidden-desktop">
     <div class="nav-items">
-        <div class="nav-item nav-toggle"><span>Show/Hide Menu</span></div>
+        <div class="nav-item nav-toggle">
+            <span class="title">Show/Hide Menu</span>
+            <div class="shadow"></div>
+        </div>
         <div class="nav-options">
-            <div class="nav-item section overview" data-section=""><span>Overview</span></div>
+            <div class="nav-item section overview" data-section="">
+                <span class="title">Overview</span>
+                <div class="shadow"></div>
+            </div>
             {{#each tests}}
-            <div class="nav-item section test-{{type}} test-id-{{id}}" data-section="section/{{id}}"><span>{{title}}</span></div>
+            <div class="nav-item section test-{{type}} test-id-{{id}}" data-section="section/{{id}}">
+                <span class="title">{{title}}</span>
+                <div class="shadow"></div>
+            </div>
             {{/each}}
         </div>
     </div>

@@ -2419,184 +2419,130 @@ span.placeholder {
 
 .view-navigation {
   position: fixed;
-  top: 47px;
+  top: 65px;
   right: 0;
   z-index: 2;
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
   /* desktop */
   /* phone & tablet */
+}
+.view-navigation.active {
+  top: 0;
 }
 .view-navigation .nav-items {
   margin: 10px 10px 0 0;
   padding: 0;
   list-style-type: none;
-  box-shadow: 0 0 3px #6e6e6e;
-  border-radius: 5px;
 }
 .view-navigation .nav-item {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
-  border-bottom: 1px solid #ccc;
   background-repeat: no-repeat;
-  background-image: url('../images/navigation/icons-s068996a4e4.png');
+  background-image: url('../images/navigation/icons-sd21e9a2557.png');
+  position: relative;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item {
-    background-image: url('../images/navigation/icons-2x-sd8a0df145e.png');
+    background-image: url('../images/navigation/icons-2x-s9e8e29e203.png');
     background-size: 100%;
   }
 }
-.view-navigation .nav-item span {
+.view-navigation .nav-item .title {
   display: none;
 }
-.view-navigation .nav-item.first {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+.view-navigation .nav-item .shadow {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-image: url("../images/navigation/shadow.png");
 }
-.view-navigation .nav-item.last {
-  border-bottom: none;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .view-navigation .nav-item .shadow {
+    background-image: url("../images/navigation/shadow.png");
+    background-size: 100%;
+  }
 }
 .view-navigation .nav-item.nav-toggle {
-  background-position: 0 -760px;
-}
-.view-navigation .nav-item.nav-toggle:hover, .view-navigation .nav-item.nav-toggle.active {
-  background-position: 0 -720px;
+  background-position: 0 -400px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.nav-toggle {
-    background-position: 0 -760px;
-  }
-  .view-navigation .nav-item.nav-toggle:hover, .view-navigation .nav-item.nav-toggle.active {
-    background-position: 0 -720px;
-  }
-}
-.view-navigation .nav-item.overview {
-  background-position: 0 -480px;
-}
-.view-navigation .nav-item.overview:hover, .view-navigation .nav-item.overview.active {
-  background-position: 0 -560px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item.overview {
-    background-position: 0 -560px;
-  }
-  .view-navigation .nav-item.overview:hover, .view-navigation .nav-item.overview.active {
-    background-position: 0 -520px;
+    background-position: 0 -400px;
   }
 }
 .view-navigation .nav-item.test-chemistry {
-  background-position: 0 -640px;
-}
-.view-navigation .nav-item.test-chemistry:hover, .view-navigation .nav-item.test-chemistry.active {
-  background-position: 0 -520px;
+  background-position: 0 -300px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-chemistry {
-    background-position: 0 -640px;
-  }
-  .view-navigation .nav-item.test-chemistry:hover, .view-navigation .nav-item.test-chemistry.active {
-    background-position: 0 -480px;
+    background-position: 0 -350px;
   }
 }
 .view-navigation .nav-item.test-cbc {
-  background-position: 0 -320px;
-}
-.view-navigation .nav-item.test-cbc:hover, .view-navigation .nav-item.test-cbc.active {
-  background-position: 0 -360px;
+  background-position: 0 -250px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-cbc {
-    background-position: 0 -360px;
-  }
-  .view-navigation .nav-item.test-cbc:hover, .view-navigation .nav-item.test-cbc.active {
-    background-position: 0 -280px;
+    background-position: 0 -250px;
   }
 }
 .view-navigation .nav-item.test-heartworm {
   background-position: 0 -200px;
 }
-.view-navigation .nav-item.test-heartworm:hover, .view-navigation .nav-item.test-heartworm.active {
-  background-position: 0 -160px;
-}
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-heartworm {
     background-position: 0 -200px;
   }
-  .view-navigation .nav-item.test-heartworm:hover, .view-navigation .nav-item.test-heartworm.active {
-    background-position: 0 -160px;
-  }
 }
 .view-navigation .nav-item.test-thyroxine {
-  background-position: 0 -400px;
-}
-.view-navigation .nav-item.test-thyroxine:hover, .view-navigation .nav-item.test-thyroxine.active {
-  background-position: 0 -440px;
+  background-position: 0 -150px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-thyroxine {
-    background-position: 0 -440px;
-  }
-  .view-navigation .nav-item.test-thyroxine:hover, .view-navigation .nav-item.test-thyroxine.active {
-    background-position: 0 -240px;
+    background-position: 0 -100px;
   }
 }
 .view-navigation .nav-item.test-urine {
-  background-position: 0 -680px;
-}
-.view-navigation .nav-item.test-urine:hover, .view-navigation .nav-item.test-urine.active {
-  background-position: 0 -600px;
+  background-position: 0 -350px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-urine {
-    background-position: 0 -680px;
-  }
-  .view-navigation .nav-item.test-urine:hover, .view-navigation .nav-item.test-urine.active {
-    background-position: 0 -600px;
+    background-position: 0 -300px;
   }
 }
 .view-navigation .nav-item.test-felv-fiv {
-  background-position: 0 -240px;
-}
-.view-navigation .nav-item.test-felv-fiv:hover, .view-navigation .nav-item.test-felv-fiv.active {
-  background-position: 0 -280px;
+  background-position: 0 -100px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-felv-fiv {
-    background-position: 0 -400px;
-  }
-  .view-navigation .nav-item.test-felv-fiv:hover, .view-navigation .nav-item.test-felv-fiv.active {
-    background-position: 0 -320px;
+    background-position: 0 -150px;
   }
 }
 .view-navigation .nav-item.test-ova {
-  background-position: 0 -80px;
-}
-.view-navigation .nav-item.test-ova:hover, .view-navigation .nav-item.test-ova.active {
-  background-position: 0 -120px;
+  background-position: 0 -50px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-ova {
-    background-position: 0 -120px;
-  }
-  .view-navigation .nav-item.test-ova:hover, .view-navigation .nav-item.test-ova.active {
-    background-position: 0 -80px;
+    background-position: 0 -50px;
   }
 }
 .view-navigation .nav-item.test-accuplex {
-  background-position: 0 -40px;
-}
-.view-navigation .nav-item.test-accuplex:hover, .view-navigation .nav-item.test-accuplex.active {
   background-position: 0 0;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-accuplex {
-    background-position: 0 -40px;
-  }
-  .view-navigation .nav-item.test-accuplex:hover, .view-navigation .nav-item.test-accuplex.active {
     background-position: 0 0;
   }
+}
+.view-navigation .nav-item.overview {
+  display: none;
 }
 @media (min-width: 769px) {
   .view-navigation {
@@ -2614,17 +2560,6 @@ span.placeholder {
   .view-navigation .nav-options {
     display: none;
   }
-}
-
-.view-navigation {
-  top: 65px;
-  -webkit-transition: all .1s ease-in-out;
-  -moz-transition: all .1s ease-in-out;
-  -o-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
-}
-.view-navigation.active {
-  top: 0;
 }
 
 .view-overview {

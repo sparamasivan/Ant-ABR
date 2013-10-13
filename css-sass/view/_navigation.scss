@@ -3,25 +3,33 @@
     $navigation-2x-sprite: sprite-map("navigation/icons-2x/*.png");
 
     position: fixed;
-    top:47px;
+    top:65px;
     right: 0;
     z-index: 2;
+
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+
+    &.active {
+        top:0;
+    }
 
     .nav-items {
         margin: 10px 10px 0 0;
         padding: 0;
         list-style-type: none;
-        box-shadow: 0 0 3px #6e6e6e;
-        border-radius: 5px;
     }
 
     .nav-item {
-        width: 40px;
-        height: 40px;
+        width: image-width("../images/navigation/icons/menu.png");
+        height: image-height("../images/navigation/icons/menu.png");
         cursor: pointer;
-        border-bottom:1px solid #ccc;
         background-repeat: no-repeat;
         background-image: sprite-url($navigation-sprite);
+
+        position: relative;
 
         @media 
         only screen and (-webkit-min-device-pixel-ratio: 2), 
@@ -30,46 +38,46 @@
             background-size: 100%;
         }
 
-        span {
+        .title {
             display: none;
         }
 
-        &.first {
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-        }
+        .shadow {
+            $image: "../images/navigation/shadow.png";
+            $image2x: "../images/navigation/shadow.png";
 
-        &.last {
-            border-bottom: none;
-            border-bottom-left-radius: 5px;
-            border-bottom-right-radius: 5px;
+            width: image-width($image);
+            height: image-height($image);
+
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+
+            background-image: url($image);
+
+            @media 
+            only screen and (-webkit-min-device-pixel-ratio: 2), 
+            only screen and (min-resolution: 192dpi) {
+                background-image: url($image2x);
+                background-size: 100%;
+            }
         }
 
         @mixin nav-item ($type, $icon) {
             &.#{$type} {
-                background-position: sprite-position($navigation-sprite, off-#{$icon});
-
-                &:hover,
-                &.active {
-                    background-position: sprite-position($navigation-sprite, on-#{$icon});
-                }
+                background-position: sprite-position($navigation-sprite, #{$icon});
 
                 // @see http://www.brettjankord.com/2012/11/28/cross-browser-retinahigh-resolution-media-queries/
                 @media 
                 only screen and (-webkit-min-device-pixel-ratio: 2), 
                 only screen and (min-resolution: 192dpi) {
-                    background-position: 0 round(nth(sprite-position($navigation-2x-sprite, off-#{$icon}), 2) / 2);
-
-                    &:hover,
-                    &.active {
-                        background-position: 0 round(nth(sprite-position($navigation-2x-sprite, on-#{$icon}), 2) / 2);
-                    }
+                    background-position: 0 round(nth(sprite-position($navigation-2x-sprite, #{$icon}), 2) / 2);
                 }
             }
         }
 
         @include nav-item(nav-toggle, menu);
-        @include nav-item(overview, top);
         @include nav-item(test-chemistry, chemistry);
         @include nav-item(test-cbc, cbc);
         @include nav-item(test-heartworm, heartworm);
@@ -78,6 +86,12 @@
         @include nav-item(test-felv-fiv, felv-fiv);
         @include nav-item(test-ova, ova);
         @include nav-item(test-accuplex, accuplex);
+
+        // hide overview icon for now, since we don't have one
+        //@include nav-item(overview, top);
+        &.overview {
+            display: none;
+        }
     }
 
     /* desktop */
@@ -99,15 +113,4 @@
             display: none;
         }
     }
-}
-
-.view-navigation {
-	top:65px;
-	-webkit-transition: all .1s ease-in-out;
-	-moz-transition: all .1s ease-in-out;
-	-o-transition: all .1s ease-in-out;
-	transition: all .1s ease-in-out;
-	&.active {
-		top:0;
-	}
 }
