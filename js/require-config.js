@@ -8,6 +8,7 @@ var require = {
         'jquery-waitforimages': 'lib/jquery.waitforimages',
         'jquery-debouncedresize': 'lib/jquery.debouncedresize',
         'jquery-jswipe': 'lib/jquery.jswipe',
+        'jquery-transit': 'lib/jquery.transit',
         'modernizr' : 'lib/modernizr.custom',
         'underscore': 'lib/underscore',
         'backbone': 'lib/backbone-1.0.0',
@@ -53,6 +54,10 @@ var require = {
         'jquery-jswipe': {
             deps: ['jquery'],
             exports: 'jQuery.fn.swipe'
+        },
+        'jquery-transit': {
+            deps: ['jquery'],
+            exports: 'jQuery.fn.transit'
         },
         'underscore': {
             exports: '_',

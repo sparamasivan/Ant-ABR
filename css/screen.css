@@ -2422,31 +2422,42 @@ span.placeholder {
   top: 65px;
   right: 0;
   z-index: 2;
-  -webkit-transition: all .1s ease-in-out;
-  -moz-transition: all .1s ease-in-out;
-  -o-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
-  /* desktop */
-  /* phone & tablet */
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 .view-navigation.active {
   top: 0;
 }
 .view-navigation .nav-items {
-  margin: 10px 10px 0 0;
+  margin: 5px 5px 0 0;
   padding: 0;
   list-style-type: none;
+  position: relative;
+  width: 50px;
+}
+.view-navigation .nav-options .nav-item {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  margin-bottom: 10px;
 }
 .view-navigation .nav-item {
   width: 50px;
   height: 50px;
   cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.view-navigation .nav-item .icon {
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-image: url('../images/navigation/icons-sd21e9a2557.png');
-  position: relative;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item {
+  .view-navigation .nav-item .icon {
     background-image: url('../images/navigation/icons-2x-s9e8e29e203.png');
     background-size: 100%;
   }
@@ -2469,96 +2480,76 @@ span.placeholder {
     background-size: 100%;
   }
 }
-.view-navigation .nav-item.nav-toggle {
+.view-navigation .nav-item.nav-toggle .icon {
   background-position: 0 -400px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item.nav-toggle {
+  .view-navigation .nav-item.nav-toggle .icon {
     background-position: 0 -400px;
   }
 }
-.view-navigation .nav-item.test-chemistry {
+.view-navigation .nav-item.test-chemistry .icon {
   background-position: 0 -300px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item.test-chemistry {
+  .view-navigation .nav-item.test-chemistry .icon {
     background-position: 0 -350px;
   }
 }
-.view-navigation .nav-item.test-cbc {
+.view-navigation .nav-item.test-cbc .icon {
   background-position: 0 -250px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item.test-cbc {
+  .view-navigation .nav-item.test-cbc .icon {
     background-position: 0 -250px;
   }
 }
-.view-navigation .nav-item.test-heartworm {
+.view-navigation .nav-item.test-heartworm .icon {
   background-position: 0 -200px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item.test-heartworm {
+  .view-navigation .nav-item.test-heartworm .icon {
     background-position: 0 -200px;
   }
 }
-.view-navigation .nav-item.test-thyroxine {
+.view-navigation .nav-item.test-thyroxine .icon {
   background-position: 0 -150px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item.test-thyroxine {
+  .view-navigation .nav-item.test-thyroxine .icon {
     background-position: 0 -100px;
   }
 }
-.view-navigation .nav-item.test-urine {
+.view-navigation .nav-item.test-urine .icon {
   background-position: 0 -350px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item.test-urine {
+  .view-navigation .nav-item.test-urine .icon {
     background-position: 0 -300px;
   }
 }
-.view-navigation .nav-item.test-felv-fiv {
+.view-navigation .nav-item.test-felv-fiv .icon {
   background-position: 0 -100px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item.test-felv-fiv {
+  .view-navigation .nav-item.test-felv-fiv .icon {
     background-position: 0 -150px;
   }
 }
-.view-navigation .nav-item.test-ova {
+.view-navigation .nav-item.test-ova .icon {
   background-position: 0 -50px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item.test-ova {
+  .view-navigation .nav-item.test-ova .icon {
     background-position: 0 -50px;
   }
 }
-.view-navigation .nav-item.test-accuplex {
+.view-navigation .nav-item.test-accuplex .icon {
   background-position: 0 0;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item.test-accuplex {
+  .view-navigation .nav-item.test-accuplex .icon {
     background-position: 0 0;
-  }
-}
-.view-navigation .nav-item.overview {
-  display: none;
-}
-@media (min-width: 769px) {
-  .view-navigation {
-    /* disable menu toggle */
-    /* always show nav options */
-  }
-  .view-navigation .nav-toggle {
-    display: none;
-  }
-  .view-navigation .nav-options {
-    display: block !important;
-  }
-}
-@media (max-width: 768px) {
-  .view-navigation .nav-options {
-    display: none;
   }
 }
 

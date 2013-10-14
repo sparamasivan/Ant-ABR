@@ -5,7 +5,8 @@ define([
     'model/Report',
     'text!template/Navigation.html',
     'model/MediaQuery',
-    'event/Dispatcher'
+    'event/Dispatcher',
+    'jquery-transit'
 ], function(
     $,
     Backbone,
@@ -47,12 +48,6 @@ define([
 
                     this.$el.appendTo(parent);
 
-                    // update styles dynamically
-                    this._updateStyles();
-
-                    // update styles whenever screen is resized
-                    ModelMediaQuery.on('change:windowWidth', $.proxy(this._updateStyles, this));
-
                     // update styles whenever active section changes
                     EventDispatcher.on('section.active', $.proxy(this._handleSectionActive, this));
 
@@ -61,24 +56,6 @@ define([
                     EventDispatcher.on('sections.collapse', $.proxy(this._handleSectionCollapse, this));
                     EventDispatcher.on('section.expand', $.proxy(this._handleSectionExpand, this));
                 }, this));
-        },
-
-        /**
-         * Dynamically update menu styles/classes depending on state (e.g. collapsed vs. expanded)
-         * @private
-         */
-        _updateStyles: function() {
-            var menuItems = this._getMenuItemEls(),
-                visibleMenuItems = menuItems.filter(':visible');
-
-            // remove first/last classes
-            menuItems.removeClass('first last');
-
-            // add "first" class to first visible menu item
-            visibleMenuItems.first().addClass('first');
-
-            // add "last" class to last visible menu item
-            visibleMenuItems.last().addClass('last');
         },
 
         _handleSectionActive: function(testId) {
@@ -122,11 +99,92 @@ define([
          * @private
          */
         _toggleMenu: function(e) {
-            // slide nav into view, then update styles again
-            this.$el.find('.nav-options').slideToggle(300, $.proxy(this._updateStyles, this));
+            var elNavItems = this.$el.find('.nav-items');
 
-            // update styles as soon as nav begins animating
-            this._updateStyles();
+            if (elNavItems.hasClass('expanded')) {
+                this.collapse();
+            } else {
+                this.expand();
+            }
+        },
+
+        expand: function() {
+            var elNavItems = this.$el.find('.nav-items'),
+                elToggle = this.$el.find('.nav-toggle'),
+                elTests = this.$el.find('.nav-options .nav-item');
+
+            // rotate toggle
+            elToggle.find('.icon').transit({
+                    rotate: '45deg',
+                    duration: 300
+                }, function() {
+                    elTests.each(function(i) {
+                            // calculate final position of nav item
+                        var topOffset = ((i + 1) * $(this).outerHeight(true)),
+                            // calculate how much to "overshoot" the final position
+                            topOffsetWithBounce = topOffset + (i*i) * 1,
+                            // duration of animation is relative to position
+                            duration = topOffset * 1.2;
+
+                        // animate item
+                        $(this)
+                            .css({
+                                opacity: 0.5
+                            })
+                            // overshoot
+                            .transit({
+                                top: topOffsetWithBounce + 'px',
+                                opacity: 1,
+                                duration: duration,
+                                // @see http://roblaplaca.com/examples/bezierBuilder/
+                                easing: 'cubic-bezier(.25, .10, .54, .95)'
+                            })
+                            // go to final position
+                            .transit({
+                                top: topOffset + 'px',
+                                duration: 200
+                            });
+
+                        // animate shadow separately, because we don't want the shadows to stack over one another
+                        // and get a big black bubble (because shadows are semi transparent)
+                        $(this).find('.shadow')
+                            .css({
+                                opacity: 0
+                            })
+                            .transit({
+                                opacity: 1,
+                                duration: duration
+                            });
+                    });
+                });
+
+            elNavItems.addClass('expanded');
+        },
+
+        collapse: function() {
+            var elNavItems = this.$el.find('.nav-items'),
+                elToggle = this.$el.find('.nav-toggle'),
+                elTests = this.$el.find('.nav-options .nav-item');
+
+            elToggle.find('.icon').transit({
+                    rotate: '0deg',
+                    duration: 500
+                });
+
+            elTests.each(function(i) {
+                // hide tests
+                var topOffset = 0,
+                    duration = $(this).position().top * 2;
+
+                $(this)
+                    .transit({
+                        top: topOffset,
+                        opacity: 0,
+                        duration: duration
+                    });
+            });
+
+            elNavItems.removeClass('expanded');
         },
 
         /**
