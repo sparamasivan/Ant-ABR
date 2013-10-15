@@ -34,34 +34,8 @@
             display: block;
         }
 
-        .pointer {
-            width: $pointerWidth;
-            height: 40px;
+        .widget-indicator {
             margin: 9px auto 0;
-
-            cursor: pointer;
-            background-image: url("../images/subtest/range-group/marker.png");
-
-            @media
-            only screen and (-webkit-min-device-pixel-ratio: 2),
-            only screen and (min-resolution: 192dpi) {
-                background-image: url("../images/subtest/range-group/marker-2x.png");
-                background-size: (image-width("../images/subtest/range-group/marker-2x.png") / 2) (image-height("../images/subtest/range-group/marker-2x.png") / 2);
-            }
-        }
-    }
-
-    &.bad {
-        .marker {
-            .pointer {
-                background-image: url("../images/subtest/range-group/marker-bad.png");
-
-                @media
-                only screen and (-webkit-min-device-pixel-ratio: 2),
-                only screen and (min-resolution: 192dpi) {
-                    background-image: url("../images/subtest/range-group/marker-bad-2x.png");
-                }
-            }
         }
     }
 

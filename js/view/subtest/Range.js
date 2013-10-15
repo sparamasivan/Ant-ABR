@@ -41,13 +41,14 @@ define([
                 name: this.options.name,
                 message: (this.options.message) ? this.options.message[(isBad) ? 'bad' : 'good'] : null,
                 description: (this.options.description) ? this.options.description[(isBad) ? 'bad' : 'good'] : null,
+                isBad: isBad
             })));
 
             // add a class that will allow us to style according to low/normal/high range type
             if (this.model.getValue() < this.model.getMinValue()) {
-                cssClass = 'value-low bad';
+                cssClass = 'value-low';
             } else if (this.model.getValue() > this.model.getMaxValue()) {
-                cssClass = 'value-high bad';
+                cssClass = 'value-high';
             } else {
                 cssClass = 'value-normal';
             }
@@ -59,7 +60,7 @@ define([
 
             // attach tooltip
             if (this.options.message || this.options.description) {
-                this.$el.find('.pointer').tooltip({
+                this.$el.find('.widget-indicator').tooltip({
                     content: {
                         text: this.$el.find('.description')
                     },

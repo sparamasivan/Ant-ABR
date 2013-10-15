@@ -85,19 +85,19 @@
             @media 
             only screen and (-webkit-min-device-pixel-ratio: 2), 
             only screen and (min-resolution: 192dpi) {
-                background-size: (image-width("../images/common/result-good-2x.png") / 2) (image-height("../images/common/result-good-2x.png") / 2);
+                background-size: (image-width("../images/common/result/good-2x.png") / 2) (image-height("../images/common/result/good-2x.png") / 2);
             }
         }
 
         &.good {
             .icon {
-                background-image: url("../images/common/result-good.png");
+                background-image: url("../images/common/result/good.png");
                 left: 8px;
 
                 @media 
                 only screen and (-webkit-min-device-pixel-ratio: 2), 
                 only screen and (min-resolution: 192dpi) {
-                    background-image: url("../images/common/result-good-2x.png");
+                    background-image: url("../images/common/result/good-2x.png");
                 }
             }
 
@@ -108,13 +108,13 @@
 
         &.bad {
             .icon {
-                background-image: url("../images/common/result-bad.png");
+                background-image: url("../images/common/result/bad.png");
                 right: 7px;
 
                 @media 
                 only screen and (-webkit-min-device-pixel-ratio: 2), 
                 only screen and (min-resolution: 192dpi) {
-                    background-image: url("../images/common/result-bad-2x.png");
+                    background-image: url("../images/common/result/bad-2x.png");
                 }
             }
 

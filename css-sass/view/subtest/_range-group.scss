@@ -172,40 +172,13 @@
         }
 
         .value {
-            $markerWidth: image-width("../images/subtest/range-group/marker.png");
-            $markerHeight: image-height("../images/subtest/range-group/marker.png");
-
             width: 100%;
             position: absolute;
-            margin: (-$markerHeight / 2) 0 0 0;
+            margin: (-$widgetIndicatorBigHeight / 2) 0 0 0;
 
-            .marker {
-                height: $markerWidth;
-                width: $markerHeight;
-                background-image: url("../images/subtest/range-group/marker.png");
+            .widget-indicator {
+                display: block;
                 margin: 0 auto;
-                cursor: pointer;
-
-                @media 
-                only screen and (-webkit-min-device-pixel-ratio: 2), 
-                only screen and (min-resolution: 192dpi) {
-                    background-image: url("../images/subtest/range-group/marker-2x.png");
-                    background-size: $markerWidth $markerHeight;
-                }
-            }
-        }
-
-        &.bad {
-            .value {
-                .marker {
-                    background-image: url("../images/subtest/range-group/marker-bad.png");
-
-                    @media 
-                    only screen and (-webkit-min-device-pixel-ratio: 2), 
-                    only screen and (min-resolution: 192dpi) {
-                        background-image: url("../images/subtest/range-group/marker-bad-2x.png");
-                    }
-                }
             }
         }
     }

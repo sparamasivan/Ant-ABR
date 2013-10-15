@@ -279,14 +279,10 @@ define([
                         minValue: mRange.getMinValue(),
                         maxValue: mRange.getMaxValue(),
                         unitOfMeasure: mRange.getUnitOfMeasure(),
-                        description: mRange.getDescription()
+                        description: mRange.getDescription(),
+                        isBad: !mRange.isNormal()
                     })).appendTo(parent),
                     elDetails = el.find('.view-subtest-range-group-item-details');
-
-                // append "bad" class if value out of expected range
-                if (!mRange.isNormal()) {
-                    el.addClass('bad');
-                }
 
                 // position value marker
                 el.find('.value').css({
@@ -301,10 +297,10 @@ define([
                     position: {
                         my: 'top center',
                         at: 'bottom center',
-                        target: el.find('.marker')
+                        target: el.find('.widget-indicator')
                     },
                     show: {
-                        target: el.find('.range, .marker')
+                        target: el.find('.range, .widget-indicator')
                     },
                     style: {
                         classes: 'view-subtest-range-group-item-tooltip'
