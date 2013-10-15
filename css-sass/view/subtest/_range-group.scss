@@ -39,7 +39,7 @@
             only screen and (-webkit-min-device-pixel-ratio: 2), 
             only screen and (min-resolution: 192dpi) {
                 background-image: url($bgImage2x);
-                background-size: 100%;
+                background-size: (100% * 5);
             }
 
             .inner {
@@ -55,7 +55,7 @@
                 only screen and (-webkit-min-device-pixel-ratio: 2), 
                 only screen and (min-resolution: 192dpi) {
                     background-image: url($bgImage2x);
-                    background-size: 100%;
+                    background-size: (100% * 5);
                 }
             }
 

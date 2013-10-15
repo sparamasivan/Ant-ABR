@@ -39,40 +39,107 @@ $testHeaderHeight: 85px;
 $widgetArrowWidth: 22px;
 $widgetArrowWidthPhone: 17px;
 .widget-arrow {
-    width: $widgetArrowWidth;
-    height: $widgetArrowWidth;
+    $bgImage: "../images/common/arrow.png";
+    $bgImage2x: "../images/common/arrow-2x.png";
+    $bgImagePhone: "../images/common/arrow-small.png";
+    $bgImagePhone2x: "../images/common/arrow-small-2x.png";
+    $width: $widgetArrowWidth;
+    $widthPhone: $widgetArrowWidthPhone;
+    $height: $width;
+    $heightPhone: $widthPhone;
+
+    width: $width;
+    height: $height;
 
     display: inline-block;
     vertical-align: middle;
 
-    background-image: url("../images/common/arrow.png");
+    background-image: url($bgImage);
 
     @media 
     only screen and (-webkit-min-device-pixel-ratio: 2), 
     only screen and (min-resolution: 192dpi) {
-        background-image: url("../images/common/arrow-2x.png");
-        background-size: 200%;
+        background-image: url($bgImage2x);
+        background-size: (100% * 3);
+    }
+
+    .inner {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url($bgImage);
+        background-position: ($width * 1) 0;
+        border-radius: ($width / 2);
+
+        @include transition(background-position 0.5s);
+
+        @media 
+        only screen and (-webkit-min-device-pixel-ratio: 2), 
+        only screen and (min-resolution: 192dpi) {
+            background-image: url($bgImage2x);
+            background-size: (100% * 3);
+        }
+    }
+
+    &:hover {
+        .inner {
+            background-position: ($width * 2) 0;
+        }
     }
 
     &.down {
-        background-position: $widgetArrowWidth 0;
+        .inner {
+            background-position: 0 ($height * 1);
+        }
+
+        &:hover {
+            .inner {
+                background-position: 0 ($height * 2);
+            }
+        }
     }
 
     /* Phone */
     @media (max-width:$mq-phone) {
         &.shrink {
-            width: $widgetArrowWidthPhone;
-            height: $widgetArrowWidthPhone;
-            background-image: url("../images/common/arrow-small.png");
+            width: $widthPhone;
+            height: $heightPhone;
+            background-image: url($bgImagePhone);
 
             @media 
             only screen and (-webkit-min-device-pixel-ratio: 2), 
             only screen and (min-resolution: 192dpi) {
-                background-image: url("../images/common/arrow-small-2x.png");
+                background-image: url($bgImagePhone2x);
+            }
+
+            .inner {
+                background-image: url($bgImagePhone);
+                background-position: ($widthPhone * 1) 0;
+                border-radius: ($widthPhone / 2);
+
+                @media 
+                only screen and (-webkit-min-device-pixel-ratio: 2), 
+                only screen and (min-resolution: 192dpi) {
+                    background-image: url($bgImagePhone2x);
+                }
+            }
+
+            &:hover {
+                .inner {
+                    background-position: ($widthPhone * 2) 0;
+                }
             }
 
             &.down {
-                background-position: $widgetArrowWidthPhone 0;
+                .inner {
+                    background-position: 0 ($heightPhone * 1);
+                }
+
+                &:hover {
+                    .inner {
+                        background-position: 0 ($heightPhone * 2);
+                    }
+                }
             }
         }
     }

@@ -1808,11 +1808,35 @@ h4 .small {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .widget-arrow {
     background-image: url("../images/common/arrow-2x.png");
-    background-size: 200%;
+    background-size: 300%;
   }
 }
-.widget-arrow.down {
+.widget-arrow .inner {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/common/arrow.png");
   background-position: 22px 0;
+  border-radius: 11px;
+  -webkit-transition: background-position 0.5s;
+  -moz-transition: background-position 0.5s;
+  -o-transition: background-position 0.5s;
+  transition: background-position 0.5s;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .widget-arrow .inner {
+    background-image: url("../images/common/arrow-2x.png");
+    background-size: 300%;
+  }
+}
+.widget-arrow:hover .inner {
+  background-position: 44px 0;
+}
+.widget-arrow.down .inner {
+  background-position: 0 22px;
+}
+.widget-arrow.down:hover .inner {
+  background-position: 0 44px;
 }
 @media (max-width: 630px) {
   .widget-arrow.shrink {
@@ -1820,12 +1844,28 @@ h4 .small {
     height: 17px;
     background-image: url("../images/common/arrow-small.png");
   }
-  .widget-arrow.shrink.down {
+  .widget-arrow.shrink .inner {
+    background-image: url("../images/common/arrow-small.png");
     background-position: 17px 0;
+    border-radius: 8.5px;
+  }
+  .widget-arrow.shrink:hover .inner {
+    background-position: 34px 0;
+  }
+  .widget-arrow.shrink.down .inner {
+    background-position: 0 17px;
+  }
+  .widget-arrow.shrink.down:hover .inner {
+    background-position: 0 34px;
   }
 }
 @media only screen and (max-width: 630px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 630px) and (min-resolution: 192dpi) {
   .widget-arrow.shrink {
+    background-image: url("../images/common/arrow-small-2x.png");
+  }
+}
+@media only screen and (max-width: 630px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 630px) and (min-resolution: 192dpi) {
+  .widget-arrow.shrink .inner {
     background-image: url("../images/common/arrow-small-2x.png");
   }
 }
@@ -3700,7 +3740,7 @@ span.placeholder {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-subtest-range-group .pager .button {
     background-image: url("../images/subtest/range-group/button-left-right-2x.png");
-    background-size: 100%;
+    background-size: 500%;
   }
 }
 .view-subtest-range-group .pager .button .inner {
@@ -3717,7 +3757,7 @@ span.placeholder {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-subtest-range-group .pager .button .inner {
     background-image: url("../images/subtest/range-group/button-left-right-2x.png");
-    background-size: 100%;
+    background-size: 500%;
   }
 }
 .view-subtest-range-group .pager .button:hover .inner {
