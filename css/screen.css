@@ -1850,20 +1850,72 @@ h4 .small {
 }
 
 .widget-circle-arrow {
-  position: relative;
   width: 85px;
   height: 85px;
   cursor: pointer;
+  background-image: url("../images/common/circle-arrow.png");
 }
-.widget-circle-arrow img {
-  position: absolute;
-  display: block;
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .widget-circle-arrow {
+    background-image: url("../images/common/circle-arrow-2x.png");
+    background-size: 100%;
+  }
+}
+.widget-circle-arrow .inner {
+  height: 100%;
   width: 100%;
+  border-radius: 42.5px;
+  background-image: url("../images/common/circle-arrow.png");
+  background-position: 0 85px;
+  -webkit-transition: background-position 0.5s;
+  -moz-transition: background-position 0.5s;
+  -o-transition: background-position 0.5s;
+  transition: background-position 0.5s;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .widget-circle-arrow .inner {
+    background-image: url("../images/common/circle-arrow-2x.png");
+    background-size: 100%;
+  }
+}
+.widget-circle-arrow:hover .inner {
+  background-position: 0 170px;
+}
+.widget-circle-arrow.up .inner {
+  background-position: 0 340px;
+}
+.widget-circle-arrow.up:hover .inner {
+  background-position: 0 255px;
 }
 @media (max-width: 630px) {
   .widget-circle-arrow {
     width: 65px;
     height: 65px;
+    background-image: url("../images/common/circle-arrow-small.png");
+  }
+  .widget-circle-arrow .inner {
+    border-radius: 32.5px;
+    background-image: url("../images/common/circle-arrow-small.png");
+    background-position: 0 65px;
+  }
+  .widget-circle-arrow:hover .inner {
+    background-position: 0 130px;
+  }
+  .widget-circle-arrow.up .inner {
+    background-position: 0 260px;
+  }
+  .widget-circle-arrow.up:hover .inner {
+    background-position: 0 195px;
+  }
+}
+@media only screen and (max-width: 630px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 630px) and (min-resolution: 192dpi) {
+  .widget-circle-arrow {
+    background-image: url("../images/common/circle-arrow-small-2x.png");
+  }
+}
+@media only screen and (max-width: 630px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 630px) and (min-resolution: 192dpi) {
+  .widget-circle-arrow .inner {
+    background-image: url("../images/common/circle-arrow-small-2x.png");
   }
 }
 
@@ -2805,9 +2857,12 @@ span.placeholder {
   position: absolute;
   left: 50%;
   bottom: -44px;
-}
-.view-overview .widget-circle-arrow img {
   margin-left: -42.5px;
+}
+@media (max-width: 630px) {
+  .view-overview .widget-circle-arrow {
+    margin-left: -32.5px;
+  }
 }
 .view-overview .contact {
   font-family: 'Apercu', sans-serif;

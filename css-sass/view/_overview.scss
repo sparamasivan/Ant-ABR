@@ -267,9 +267,10 @@
 		position: absolute;
 		left: 50%;
 		bottom: -44px;
+		margin-left: -1 * $widgetCircleArrowWidth / 2;
 
-		img {
-			margin-left: -1 * $widgetCircleArrowWidth / 2;
+		@media (max-width:($mq-phone)) {
+			margin-left: -1 * $widgetCircleArrowWidthPhone / 2;
 		}
 	}
 
