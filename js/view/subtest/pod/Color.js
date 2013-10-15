@@ -4,31 +4,38 @@ define([
     'handlebars',
     'view/subtest/pod/Base',
     'text!template/subtest/pod/Color.html',
+    'view/widget/Indicator',
     'jquery-tooltip'
 ], function(
     $,
     Backbone,
     Handlebars,
     ViewBase,
-    Template
+    Template,
+    WidgetIndicator
 ) {
     return ViewBase.extend({
         templateContent: Handlebars.compile(Template),
 
         render: function(parent) {
             var content,
-                viewSelect;
+                viewSelect,
+                wIndicator;
 
             ViewBase.prototype.render.apply(this, arguments);
 
             this.$elContent.append(this.templateContent({
             	label: this.options.label,
-            	isBad: this.options.isBad,
                 message: this._getMessage(),
                 description: this._getDescription()
             }));
 
-            this.$el.find('.marker').tooltip({
+            wIndicator = new WidgetIndicator({
+                isBad: this.options.isBad
+            });
+            wIndicator.render(this.$elContent.find('.indicator'));
+
+            this.$elContent.find('.indicator').tooltip({
                 content: {
                     text: this.$el.find('.description')
                 },

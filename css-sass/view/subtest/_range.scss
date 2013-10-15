@@ -6,7 +6,6 @@
     }
 
     $markerWidth: 200px;
-    $pointerWidth: 40px;
     $rangeBgColor: #e8eae5;
 
     .marker {
@@ -35,6 +34,7 @@
         }
 
         .widget-indicator {
+            display: block;
             margin: 9px auto 0;
         }
     }
@@ -103,7 +103,7 @@
             text-align: left;
 
             .text {
-                left: $markerWidth / 2 - $pointerWidth / 2;
+                left: $markerWidth / 2 - $widgetIndicatorBigWidth / 2;
             }
         }
     }
@@ -113,7 +113,7 @@
             text-align: right;
 
             .text {
-                right: $markerWidth / 2 - $pointerWidth / 2;
+                right: $markerWidth / 2 - $widgetIndicatorBigWidth / 2;
             }
         }
     }

@@ -12,6 +12,7 @@ define([
     'view/widget/TestSubsection',
     'view/subtest/Select',
     'view/animation/Urine',
+    'view/widget/Indicator',
     'jquery-tooltip'
 ], function(
     $,
@@ -26,7 +27,8 @@ define([
     Config,
     ViewWidgetTestSubsection,
     ViewSubtestSelect,
-    ViewAnimation
+    ViewAnimation,
+    WidgetIndicator
 ) {
     var mathRound = function(value, decimalPlaces) {
         var roundedValue = Math.round(value * Math.pow(10, decimalPlaces)) / Math.pow(10, decimalPlaces);
@@ -75,9 +77,15 @@ define([
 
             // pH tooltip
             $.each(['color', 'appearance', 'ph'], function(i, section) {
-                var elSection = self.$elContent.find('.property.' + section);
+                var elSection = self.$elContent.find('.property.' + section),
+                    elIndicator = elSection.find('.indicator'),
+                    wIndicator = new WidgetIndicator({
+                        isBad: elIndicator.hasClass('bad')
+                    });
 
-                elSection.find('.widget-indicator').tooltip({
+                wIndicator.render(elIndicator);
+
+                wIndicator.$el.tooltip({
                     content: {
                         text: elSection.find('.description')
                     },
@@ -137,9 +145,15 @@ define([
 
             // add tooltips
             contentEl.find('.pod').each(function() {
-                var podEl = $(this);
+                var podEl = $(this),
+                    indicatorEl = podEl.find('.indicator');
+                    wIndicator = new WidgetIndicator({
+                        isBad: indicatorEl.hasClass('bad')
+                    });
 
-                podEl.find('.widget-indicator').tooltip({
+                wIndicator.render(indicatorEl);
+
+                wIndicator.$el.tooltip({
                     content: {
                         text: podEl.find('.description')
                     },

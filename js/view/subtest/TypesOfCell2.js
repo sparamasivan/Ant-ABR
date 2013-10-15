@@ -4,13 +4,15 @@ define([
     'handlebars',
     'text!template/subtest/TypesOfCell2.html',
     'model/test/CompleteBloodCount',
+    'view/widget/Indicator',
     'jquery-tooltip'
 ], function(
     $,
     Backbone,
     Handlebars,
     Template,
-    ModelTestCbc
+    ModelTestCbc,
+    WidgetIndicator
 ) {
     var GROUP_TYPES = {
         fighter: {
@@ -108,6 +110,15 @@ define([
             this.setElement($(this.template(templateConfig)));
 
             this.$el.appendTo(parent);
+
+            // render indicators
+            this.$el.find('.indicator').each(function() {
+                var vIndicator = new WidgetIndicator({
+                    isBad: $(this).hasClass('bad')
+                });
+
+                vIndicator.render($(this));
+            });
 
             $.each(GROUP_TYPES, function(type, config) {
                 var el = self.$el.find('.' + type);

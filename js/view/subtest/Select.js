@@ -3,25 +3,43 @@ define([
     'backbone',
     'handlebars',
     'text!template/subtest/Select.html',
+    'view/widget/Indicator',
     'jquery-tooltip'
 ], function(
     $,
     Backbone,
     Handlebars,
-    Template
+    Template,
+    WidgetIndicator
 ) {
     return Backbone.View.extend({
         template: Handlebars.compile(Template),
 
+        _wIndicators: null,
+
         render: function(parent) {
+            var self = this,
+                elOptions;
+
             this.setElement(this.template({
                 options: this.options.options,
                 message: this._getMessage(),
                 description: this._getDescription()
             }));
+
+            elOptions = this.$el.find('.options .option');
+
+            // render indicators
+            this._wIndicators = [];
+
+            elOptions.each(function(i) {
+                var wIndicator = new WidgetIndicator();
+                wIndicator.render($(this).find('.indicator'));
+                self._wIndicators[i] = wIndicator;
+            })
             
             // IE8 doesn't support :last-child, so we'll add "last" class to last element
-            this.$el.find('.options .option').last().addClass('last');
+            elOptions.last().addClass('last');
 
             this._select(this.options.selectedIndex || 0, !!this.options.selectedIsBad);
 
@@ -43,17 +61,13 @@ define([
 
         _select: function(selectedIndex, isBad) {
             var elOptions = this.$el.find('.options .option'),
-                elIndicators = elOptions.find('.widget-indicator');
+                elIndicators = elOptions.find('.indicator');
 
-            elOptions.removeClass('selected');
-            elIndicators.removeClass('bad');
+            elOptions
+                .removeClass('selected')
+                .eq(selectedIndex).addClass('selected');
 
-            elOptions.eq(selectedIndex)
-                .addClass('selected')
-                .find('.widget-indicator')
-                .addClass(function() {
-                    if (isBad) return 'bad';
-                });
+            this._wIndicators[selectedIndex].setIsBad(isBad);
         },
 
         _getMessage: function() {

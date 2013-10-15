@@ -3714,7 +3714,6 @@ span.placeholder {
 .view-test-urine-analysis .test-subsection.particle .pod .widget-indicator {
   position: absolute;
   left: -32px;
-  cursor: pointer;
 }
 .view-test-urine-analysis .test-subsection.particle .pod .description {
   display: none;
@@ -3799,6 +3798,7 @@ span.placeholder {
   display: block;
 }
 .view-subtest-range .marker .widget-indicator {
+  display: block;
   margin: 9px auto 0;
 }
 .view-subtest-range .actual {
@@ -4316,7 +4316,6 @@ span.placeholder {
 }
 .view-subtest-types-of-cell2 .range .widget-indicator {
   vertical-align: middle;
-  cursor: pointer;
 }
 .view-subtest-types-of-cell2 .range .text {
   font-family: 'Apercu', sans-serif;

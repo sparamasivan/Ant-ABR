@@ -4,13 +4,15 @@ define([
     'handlebars',
     'model/subtest/Range',
     'text!template/subtest/Range.html',
+    'view/widget/Indicator',
     'jquery-tooltip'
 ], function(
     $,
     Backbone,
     Handlebars,
     ModelSubtestRange,
-    Template
+    Template,
+    WidgetIndicator
 ) {
     var EXPECTED_RANGE_PERCENTAGE = 70;
 
@@ -27,7 +29,8 @@ define([
 
         render: function(parent) {
             var isBad = (this.model.getValue() < this.model.getMinValue() || this.model.getValue() > this.model.getMaxValue()),
-                cssClass;
+                cssClass,
+                wIndicator;
 
             // render template
             this.setElement($(this.template({
@@ -40,9 +43,15 @@ define([
                 },
                 name: this.options.name,
                 message: (this.options.message) ? this.options.message[(isBad) ? 'bad' : 'good'] : null,
-                description: (this.options.description) ? this.options.description[(isBad) ? 'bad' : 'good'] : null,
-                isBad: isBad
+                description: (this.options.description) ? this.options.description[(isBad) ? 'bad' : 'good'] : null
             })));
+
+            // render indicator
+            wIndicator = new WidgetIndicator({
+                isBad: isBad,
+                isBig: true
+            });
+            wIndicator.render(this.$el.find('.indicator'));
 
             // add a class that will allow us to style according to low/normal/high range type
             if (this.model.getValue() < this.model.getMinValue()) {

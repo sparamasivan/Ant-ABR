@@ -5,8 +5,7 @@ define([
 ], function(
     $,
     Backbone,
-    Handlebars,
-    Template
+    Handlebars
 ) {
     return Backbone.View.extend({
         template: Handlebars.compile('<div class="view-widget-busy"><div class="widget"><img src="images/widget/busy/loader.gif" alt=""><span>Loading test results</span></div></div>'),

@@ -2,6 +2,7 @@ $widgetIndicatorWidth: image-width("../images/widget/indicator/good.png");
 $widgetIndicatorHeight: $widgetIndicatorWidth;
 $widgetIndicatorBigWidth: image-width("../images/widget/indicator/good-big.png");
 $widgetIndicatorBigHeight: $widgetIndicatorBigWidth;
+
 .widget-indicator {
     $width: $widgetIndicatorWidth;
     $height: $widgetIndicatorHeight;

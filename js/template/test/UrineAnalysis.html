@@ -29,7 +29,7 @@
 
                             <div class="label">
                                 <div>{{color.label}}</div>
-                                <div class="widget-indicator {{#if color.isBad}}bad{{/if}}"></div>
+                                <div class="indicator {{#if color.isBad}}bad{{/if}}"></div>
                             </div>
 
                             <div class="description">
@@ -62,7 +62,7 @@
                         <div class="container">
 
                             <div class="text">
-                                <span class="widget-indicator {{#if appearance.isBad}}bad{{/if}}"></span><span class="label">{{appearance.label}}</span>
+                                <span class="indicator {{#if appearance.isBad}}bad{{/if}}"></span><span class="label">{{appearance.label}}</span>
                             </div>
 
                             <div class="actual">
@@ -152,7 +152,7 @@
 
                             <div class="label">
                                 <div>{{ph.value}}</div>
-                                <div class="widget-indicator {{#if ph.isBad}}bad{{/if}}" title="Blood should always be at a specific pH level, which is neutral. The kidneys are responsible for maintaining {{patient.name}}’s pH level."></div>
+                                <div class="indicator {{#if ph.isBad}}bad{{/if}}"></div>
                             </div>
 
                             <div class="legend neutral">Neutral</div>

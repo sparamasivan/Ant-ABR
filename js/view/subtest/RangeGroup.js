@@ -6,6 +6,7 @@ define([
     'text!template/subtest/RangeGroupItem.html',
     'model/MediaQuery',
     'iscroll',
+    'view/widget/Indicator',
     'jquery-tooltip'
 ], function(
     $,
@@ -14,7 +15,8 @@ define([
     Template,
     TemplateRange,
     ModelMediaQuery,
-    iScroll
+    iScroll,
+    WidgetIndicator
 ) {
     var EXPECTED_RANGE_PERCENTAGE = 70;
 
@@ -279,16 +281,23 @@ define([
                         minValue: mRange.getMinValue(),
                         maxValue: mRange.getMaxValue(),
                         unitOfMeasure: mRange.getUnitOfMeasure(),
-                        description: mRange.getDescription(),
-                        isBad: !mRange.isNormal()
+                        description: mRange.getDescription()
                     })).appendTo(parent),
-                    elDetails = el.find('.view-subtest-range-group-item-details');
+                    elDetails = el.find('.view-subtest-range-group-item-details'),
+                    wIndicator;
+
+                // render indicator
+                wIndicator = new WidgetIndicator({
+                    isBad: !mRange.isNormal(),
+                    isBig: true
+                });
+                wIndicator.render(el.find('.indicator'));
 
                 // position value marker
                 el.find('.value').css({
                     top: (100 - value.percentageValue) + '%'
                 });
-
+                
                 // attach tooltip
                 el.tooltip({
                     content: {
