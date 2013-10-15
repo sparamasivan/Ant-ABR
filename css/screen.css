@@ -3687,20 +3687,50 @@ span.placeholder {
 }
 .view-subtest-range-group .pager {
   width: 65px;
+  vertical-align: middle;
 }
 .view-subtest-range-group .pager .button {
   margin: 45px 0 21px 0;
-  height: 270px;
-  background-repeat: no-repeat;
+  width: 45px;
+  height: 45px;
   cursor: pointer;
+  background-image: url("../images/subtest/range-group/button-left-right.png");
+  background-repeat: no-repeat;
 }
-.view-subtest-range-group .pager.previous .button {
-  background-image: url("../images/subtest/range-group/button-left.png");
-  background-position: left center;
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .view-subtest-range-group .pager .button {
+    background-image: url("../images/subtest/range-group/button-left-right-2x.png");
+    background-size: 100%;
+  }
 }
-.view-subtest-range-group .pager.next .button {
-  background-image: url("../images/subtest/range-group/button-right.png");
-  background-position: right center;
+.view-subtest-range-group .pager .button .inner {
+  width: 100%;
+  height: 100%;
+  background-position: 180px 0;
+  background-image: url("../images/subtest/range-group/button-left-right.png");
+  border-radius: 22.5px;
+  -webkit-transition: background-position 0.5s;
+  -moz-transition: background-position 0.5s;
+  -o-transition: background-position 0.5s;
+  transition: background-position 0.5s;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .view-subtest-range-group .pager .button .inner {
+    background-image: url("../images/subtest/range-group/button-left-right-2x.png");
+    background-size: 100%;
+  }
+}
+.view-subtest-range-group .pager .button:hover .inner {
+  background-position: 135px 0;
+}
+.view-subtest-range-group .pager .button.right {
+  float: right;
+}
+.view-subtest-range-group .pager .button.right .inner {
+  background-position: 45px 0;
+}
+.view-subtest-range-group .pager .button.right:hover .inner {
+  background-position: 90px 0;
 }
 .view-subtest-range-group .pager.disabled .button {
   display: none;

@@ -18,25 +18,65 @@
 
     .pager {
         width: 65px;
+        vertical-align: middle;
 
         .button {
+            $width: 45px;
+            $height: 45px;
+            $bgImage: "../images/subtest/range-group/button-left-right.png";
+            $bgImage2x: "../images/subtest/range-group/button-left-right-2x.png";
+
             margin: $rangeTop 0 $rangeBottom 0;
-            height: $rangeHeight;
-            background-repeat: no-repeat;
+            width: $width;
+            height: $height;
+
             cursor: pointer;
-        }
 
-        &.previous {
-            .button {
-                background-image: url("../images/subtest/range-group/button-left.png");
-                background-position: left center;
+            background-image: url($bgImage);
+            background-repeat: no-repeat;
+
+            @media 
+            only screen and (-webkit-min-device-pixel-ratio: 2), 
+            only screen and (min-resolution: 192dpi) {
+                background-image: url($bgImage2x);
+                background-size: 100%;
             }
-        }
 
-        &.next {
-            .button {
-                background-image: url("../images/subtest/range-group/button-right.png");
-                background-position: right center;
+            .inner {
+                width: 100%;
+                height: 100%;
+                background-position: ($width * 4) 0;
+                background-image: url($bgImage);
+                border-radius: ($width / 2);
+
+                @include transition(background-position 0.5s);
+
+                @media 
+                only screen and (-webkit-min-device-pixel-ratio: 2), 
+                only screen and (min-resolution: 192dpi) {
+                    background-image: url($bgImage2x);
+                    background-size: 100%;
+                }
+            }
+
+            &:hover {
+                .inner {
+                    background-position: ($width * 3) 0;
+                }
+            }
+
+            &.right {
+                float: right;
+                
+                .inner {
+                    background-position: ($width * 1) 0;
+                }
+
+                &:hover {
+                    .inner {
+                        background-position: ($width * 2) 0;
+                    }
+                }
             }
         }
 
