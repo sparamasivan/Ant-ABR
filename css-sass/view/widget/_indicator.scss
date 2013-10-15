@@ -9,16 +9,54 @@ $widgetIndicatorBigHeight: $widgetIndicatorBigWidth;
     $widthBig: $widgetIndicatorBigWidth;
     $heightBig: $widgetIndicatorBigHeight;
 
+    $dotDiameter: 8px;
+    $dotExpandedDiameter: 12px;
+    $dotBigDiameter: 10px;
+    $dotBigExpandedDiameter: 16px;
+
     width: $width;
     height: $height;
 
     display: inline-block;
     cursor: pointer;
+    position: relative;
 
     background-image: url("../images/widget/indicator/good.png");
 
+    .dot {
+        position: absolute;
+        display: block;
+        width: $dotDiameter;
+        height: $dotDiameter;
+
+        top: 50%;
+        left: 50%;
+        margin: (-$dotDiameter / 2) 0 0 (-$dotDiameter / 2);
+
+        background-color: #00f7ff;
+        border-radius: ($dotDiameter / 2);
+
+        @include transition(all 0.1s ease-out);
+
+        // IE8 and below doesn't support rounded border, so don't even try to show the dot
+        display: none\9;
+    }
+
+    &:hover {
+        .dot {
+            width: $dotExpandedDiameter;
+            height: $dotExpandedDiameter;
+            margin: (-$dotExpandedDiameter / 2) 0 0 (-$dotExpandedDiameter / 2);
+            border-radius: ($dotExpandedDiameter / 2);
+        }
+    }
+
     &.bad {
         background-image: url("../images/widget/indicator/bad.png");
+
+        .dot {
+            background-color: #fff868;
+        }
     }
 
     @media 
@@ -49,6 +87,22 @@ $widgetIndicatorBigHeight: $widgetIndicatorBigWidth;
 
             &.bad {
                 background-image: url("../images/widget/indicator/bad-big-2x.png");
+            }
+        }
+
+        .dot {
+            width: $dotBigDiameter;
+            height: $dotBigDiameter;
+            margin: (-$dotBigDiameter / 2) 0 0 (-$dotBigDiameter / 2);
+            border-radius: ($dotBigDiameter / 2);
+        }
+
+        &:hover {
+            .dot {
+                width: $dotBigExpandedDiameter;
+                height: $dotBigExpandedDiameter;
+                margin: (-$dotBigExpandedDiameter / 2) 0 0 (-$dotBigExpandedDiameter / 2);
+                border-radius: ($dotBigExpandedDiameter / 2);
             }
         }
     }
