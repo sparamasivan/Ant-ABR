@@ -1959,12 +1959,12 @@ span.placeholder {
   height: 22px;
   display: inline-block;
   vertical-align: middle;
-  background-image: url("../images/common/arrow.png");
+  background-image: url("../images/widget/arrow/arrow.png");
   /* Phone */
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .widget-arrow {
-    background-image: url("../images/common/arrow-2x.png");
+    background-image: url("../images/widget/arrow/arrow-2x.png");
     background-size: 300%;
   }
 }
@@ -1972,7 +1972,7 @@ span.placeholder {
   display: block;
   width: 100%;
   height: 100%;
-  background-image: url("../images/common/arrow.png");
+  background-image: url("../images/widget/arrow/arrow.png");
   background-position: 22px 0;
   border-radius: 11px;
   -webkit-transition: background-position 0.5s;
@@ -1982,7 +1982,7 @@ span.placeholder {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .widget-arrow .inner {
-    background-image: url("../images/common/arrow-2x.png");
+    background-image: url("../images/widget/arrow/arrow-2x.png");
     background-size: 300%;
   }
 }
@@ -1999,10 +1999,10 @@ span.placeholder {
   .widget-arrow.shrink {
     width: 17px;
     height: 17px;
-    background-image: url("../images/common/arrow-small.png");
+    background-image: url("../images/widget/arrow/arrow-small.png");
   }
   .widget-arrow.shrink .inner {
-    background-image: url("../images/common/arrow-small.png");
+    background-image: url("../images/widget/arrow/arrow-small.png");
     background-position: 17px 0;
     border-radius: 8.5px;
   }
@@ -2018,12 +2018,12 @@ span.placeholder {
 }
 @media only screen and (max-width: 630px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 630px) and (min-resolution: 192dpi) {
   .widget-arrow.shrink {
-    background-image: url("../images/common/arrow-small-2x.png");
+    background-image: url("../images/widget/arrow/arrow-small-2x.png");
   }
 }
 @media only screen and (max-width: 630px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 630px) and (min-resolution: 192dpi) {
   .widget-arrow.shrink .inner {
-    background-image: url("../images/common/arrow-small-2x.png");
+    background-image: url("../images/widget/arrow/arrow-small-2x.png");
   }
 }
 
@@ -2031,11 +2031,11 @@ span.placeholder {
   width: 85px;
   height: 85px;
   cursor: pointer;
-  background-image: url("../images/common/circle-arrow.png");
+  background-image: url("../images/widget/circle-arrow/circle-arrow.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .widget-circle-arrow {
-    background-image: url("../images/common/circle-arrow-2x.png");
+    background-image: url("../images/widget/circle-arrow/circle-arrow-2x.png");
     background-size: 100%;
   }
 }
@@ -2043,7 +2043,7 @@ span.placeholder {
   height: 100%;
   width: 100%;
   border-radius: 42.5px;
-  background-image: url("../images/common/circle-arrow.png");
+  background-image: url("../images/widget/circle-arrow/circle-arrow.png");
   background-position: 0 85px;
   -webkit-transition: background-position 0.5s;
   -moz-transition: background-position 0.5s;
@@ -2052,7 +2052,7 @@ span.placeholder {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .widget-circle-arrow .inner {
-    background-image: url("../images/common/circle-arrow-2x.png");
+    background-image: url("../images/widget/circle-arrow/circle-arrow-2x.png");
     background-size: 100%;
   }
 }
@@ -2069,11 +2069,11 @@ span.placeholder {
   .widget-circle-arrow {
     width: 65px;
     height: 65px;
-    background-image: url("../images/common/circle-arrow-small.png");
+    background-image: url("../images/widget/circle-arrow/circle-arrow-small.png");
   }
   .widget-circle-arrow .inner {
     border-radius: 32.5px;
-    background-image: url("../images/common/circle-arrow-small.png");
+    background-image: url("../images/widget/circle-arrow/circle-arrow-small.png");
     background-position: 0 65px;
   }
   .widget-circle-arrow:hover .inner {
@@ -2088,12 +2088,12 @@ span.placeholder {
 }
 @media only screen and (max-width: 630px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 630px) and (min-resolution: 192dpi) {
   .widget-circle-arrow {
-    background-image: url("../images/common/circle-arrow-small-2x.png");
+    background-image: url("../images/widget/circle-arrow/circle-arrow-small-2x.png");
   }
 }
 @media only screen and (max-width: 630px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 630px) and (min-resolution: 192dpi) {
   .widget-circle-arrow .inner {
-    background-image: url("../images/common/circle-arrow-small-2x.png");
+    background-image: url("../images/widget/circle-arrow/circle-arrow-small-2x.png");
   }
 }
 
@@ -2102,34 +2102,34 @@ span.placeholder {
   height: 32px;
   display: inline-block;
   cursor: pointer;
-  background-image: url("../images/common/result/good.png");
+  background-image: url("../images/widget/indicator/good.png");
 }
 .widget-indicator.bad {
-  background-image: url("../images/common/result/bad.png");
+  background-image: url("../images/widget/indicator/bad.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .widget-indicator {
-    background-image: url("../images/common/result/good-2x.png");
+    background-image: url("../images/widget/indicator/good-2x.png");
     background-size: 100%;
   }
   .widget-indicator.bad {
-    background-image: url("../images/common/result/bad-2x.png");
+    background-image: url("../images/widget/indicator/bad-2x.png");
   }
 }
 .widget-indicator.big {
   width: 40px;
   height: 40px;
-  background-image: url("../images/common/result/good-big.png");
+  background-image: url("../images/widget/indicator/good-big.png");
 }
 .widget-indicator.big.bad {
-  background-image: url("../images/common/result/bad-big.png");
+  background-image: url("../images/widget/indicator/bad-big.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .widget-indicator.big {
-    background-image: url("../images/common/result/good-big-2x.png");
+    background-image: url("../images/widget/indicator/good-big-2x.png");
   }
   .widget-indicator.big.bad {
-    background-image: url("../images/common/result/bad-big-2x.png");
+    background-image: url("../images/widget/indicator/bad-big-2x.png");
   }
 }
 

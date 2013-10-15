@@ -1,6 +1,6 @@
-$widgetIndicatorWidth: image-width("../images/common/result/good.png");
+$widgetIndicatorWidth: image-width("../images/widget/indicator/good.png");
 $widgetIndicatorHeight: $widgetIndicatorWidth;
-$widgetIndicatorBigWidth: image-width("../images/common/result/good-big.png");
+$widgetIndicatorBigWidth: image-width("../images/widget/indicator/good-big.png");
 $widgetIndicatorBigHeight: $widgetIndicatorBigWidth;
 .widget-indicator {
     $width: $widgetIndicatorWidth;
@@ -14,20 +14,20 @@ $widgetIndicatorBigHeight: $widgetIndicatorBigWidth;
     display: inline-block;
     cursor: pointer;
 
-    background-image: url("../images/common/result/good.png");
+    background-image: url("../images/widget/indicator/good.png");
 
     &.bad {
-        background-image: url("../images/common/result/bad.png");
+        background-image: url("../images/widget/indicator/bad.png");
     }
 
     @media 
     only screen and (-webkit-min-device-pixel-ratio: 2), 
     only screen and (min-resolution: 192dpi) {
-        background-image: url("../images/common/result/good-2x.png");
+        background-image: url("../images/widget/indicator/good-2x.png");
         background-size: 100%;
 
         &.bad {
-            background-image: url("../images/common/result/bad-2x.png");
+            background-image: url("../images/widget/indicator/bad-2x.png");
         }
     }
 
@@ -35,19 +35,19 @@ $widgetIndicatorBigHeight: $widgetIndicatorBigWidth;
     &.big {
         width: $widthBig;
         height: $heightBig;
-        background-image: url("../images/common/result/good-big.png");
+        background-image: url("../images/widget/indicator/good-big.png");
 
         &.bad {
-            background-image: url("../images/common/result/bad-big.png");
+            background-image: url("../images/widget/indicator/bad-big.png");
         }
 
         @media 
         only screen and (-webkit-min-device-pixel-ratio: 2), 
         only screen and (min-resolution: 192dpi) {
-            background-image: url("../images/common/result/good-big-2x.png");
+            background-image: url("../images/widget/indicator/good-big-2x.png");
 
             &.bad {
-                background-image: url("../images/common/result/bad-big-2x.png");
+                background-image: url("../images/widget/indicator/bad-big-2x.png");
             }
         }
     }
