@@ -2165,10 +2165,10 @@ span.placeholder {
   border-radius: 5px;
 }
 .widget-indicator.big:hover .dot {
-  width: 16px;
-  height: 16px;
-  margin: -8px 0 0 -8px;
-  border-radius: 8px;
+  width: 18px;
+  height: 18px;
+  margin: -9px 0 0 -9px;
+  border-radius: 9px;
 }
 
 .view-widget-busy {
