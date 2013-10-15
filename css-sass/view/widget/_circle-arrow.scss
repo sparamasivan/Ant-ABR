@@ -1,0 +1,106 @@
+$widgetCircleArrowBgImage: "../images/common/circle-arrow.png";
+$widgetCircleArrowBgImage2x: "../images/common/circle-arrow-2x.png";
+$widgetCircleArrowWidth: image-width($widgetCircleArrowBgImage);
+$widgetCircleArrowBgImagePhone: "../images/common/circle-arrow-small.png";
+$widgetCircleArrowBgImagePhone2x: "../images/common/circle-arrow-small-2x.png";
+$widgetCircleArrowWidthPhone: image-width($widgetCircleArrowBgImagePhone);
+.widget-circle-arrow {
+    $width: $widgetCircleArrowWidth;
+    $height: $width;
+
+    $widthPhone: $widgetCircleArrowWidthPhone;
+    $heightPhone: $widthPhone;
+
+    width: $width;
+    height: $height;
+    cursor: pointer;
+
+    background-image: url($widgetCircleArrowBgImage);
+
+    @media 
+    only screen and (-webkit-min-device-pixel-ratio: 2), 
+    only screen and (min-resolution: 192dpi) {
+        background-image: url($widgetCircleArrowBgImage2x);
+        background-size: 100%;
+    }
+
+    .inner {
+        height: 100%;
+        width: 100%;
+        border-radius: $width / 2;
+
+        background-image: url($widgetCircleArrowBgImage);
+        background-position: 0 $height;
+
+        @include transition(background-position 0.5s);
+
+        @media 
+        only screen and (-webkit-min-device-pixel-ratio: 2), 
+        only screen and (min-resolution: 192dpi) {
+            background-image: url($widgetCircleArrowBgImage2x);
+            background-size: 100%;
+        }
+    }
+
+    &:hover {
+        .inner {
+            background-position: 0 ($height * 2);
+        }
+    }
+
+    &.up {
+        .inner {
+            background-position: 0 ($height * 4);
+        }
+
+        &:hover {
+            .inner {
+                background-position: 0 ($height * 3);
+            }
+        }
+    }
+
+    @media (max-width:($mq-phone)) {
+        width: $widthPhone;
+        height: $heightPhone;
+
+        background-image: url($widgetCircleArrowBgImagePhone);
+
+        @media 
+        only screen and (-webkit-min-device-pixel-ratio: 2), 
+        only screen and (min-resolution: 192dpi) {
+            background-image: url($widgetCircleArrowBgImagePhone2x);
+        }
+
+        .inner {
+            border-radius: $widthPhone / 2;
+
+            background-image: url($widgetCircleArrowBgImagePhone);
+            background-position: 0 $heightPhone;
+
+            @media 
+            only screen and (-webkit-min-device-pixel-ratio: 2), 
+            only screen and (min-resolution: 192dpi) {
+                background-image: url($widgetCircleArrowBgImagePhone2x);
+            }
+        }
+
+        &:hover {
+            .inner {
+                background-position: 0 ($heightPhone * 2);
+            }
+        }
+
+        &.up {
+            .inner {
+                background-position: 0 ($heightPhone * 4);
+            }
+
+            &:hover {
+                .inner {
+                    background-position: 0 ($heightPhone * 3);
+                }
+            }
+        }
+    }
+}

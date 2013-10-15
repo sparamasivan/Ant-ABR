@@ -39,6 +39,9 @@ $max-page-width: 1000px;
 // login
 @import "view/login";
 
+// widgets
+@import "view/widget/base";
+
 // report
 @import "view/page";
 @import "view/report";
@@ -68,11 +71,6 @@ $max-page-width: 1000px;
 @import "view/subtest/pod/base";
 @import "view/subtest/pod/color";
 @import "view/subtest/pod/select";
-
-// widgets
-@import "view/widget/busy";
-@import "view/widget/test-overview";
-@import "view/widget/test-subsection";
 
 // animations
 @import "view/animation/base";
