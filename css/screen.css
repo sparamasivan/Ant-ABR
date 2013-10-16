@@ -2816,32 +2816,52 @@ span.placeholder {
   width: 100%;
 }
 
-.view-navigation {
+.view-navigation .bg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 4;
+  top: 0;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+}
+.view-navigation.expanded .bg {
+  visibility: visible;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+.view-navigation .navigation {
   position: fixed;
   top: 65px;
   right: 0;
-  z-index: 2;
+  z-index: 5;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
-.view-navigation.active {
+.view-navigation .navigation.is-away-from-top {
   top: 0;
 }
-.view-navigation .nav-items {
-  margin: 9px 9px 0 0;
+.view-navigation .navigation .nav-items {
+  margin: 6px 9px 0 0;
   padding: 0;
   list-style-type: none;
   position: relative;
   width: 42px;
 }
-.view-navigation .nav-options .nav-item {
+.view-navigation .navigation .nav-options .nav-item {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   margin-bottom: 8px;
 }
-.view-navigation .nav-item {
+.view-navigation .navigation .nav-item {
   width: 42px;
   height: 42px;
   cursor: pointer;
@@ -2849,22 +2869,22 @@ span.placeholder {
   top: 0;
   left: 0;
 }
-.view-navigation .nav-item .icon {
+.view-navigation .navigation .nav-item .icon {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
   background-image: url('../images/navigation/icons-s7a2936dfd0.png');
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item .icon {
+  .view-navigation .navigation .nav-item .icon {
     background-image: url('../images/navigation/icons-2x-scec38a3aa9.png');
     background-size: 100%;
   }
 }
-.view-navigation .nav-item .title {
+.view-navigation .navigation .nav-item .title {
   display: none;
 }
-.view-navigation .nav-item .shadow {
+.view-navigation .navigation .nav-item .shadow {
   width: 52px;
   height: 52px;
   position: absolute;
@@ -2874,80 +2894,80 @@ span.placeholder {
   background-image: url("../images/navigation/shadow.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item .shadow {
+  .view-navigation .navigation .nav-item .shadow {
     background-image: url("../images/navigation/shadow.png");
     background-size: 100%;
   }
 }
-.view-navigation .nav-item.nav-toggle .icon {
+.view-navigation .navigation .nav-item.nav-toggle .icon {
   background-position: 0 -336px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item.nav-toggle .icon {
+  .view-navigation .navigation .nav-item.nav-toggle .icon {
     background-position: 0 -336px;
   }
 }
-.view-navigation .nav-item.test-chemistry .icon {
+.view-navigation .navigation .nav-item.test-chemistry .icon {
   background-position: 0 -252px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item.test-chemistry .icon {
+  .view-navigation .navigation .nav-item.test-chemistry .icon {
     background-position: 0 -252px;
   }
 }
-.view-navigation .nav-item.test-cbc .icon {
+.view-navigation .navigation .nav-item.test-cbc .icon {
   background-position: 0 -210px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item.test-cbc .icon {
+  .view-navigation .navigation .nav-item.test-cbc .icon {
     background-position: 0 -210px;
   }
 }
-.view-navigation .nav-item.test-heartworm .icon {
+.view-navigation .navigation .nav-item.test-heartworm .icon {
   background-position: 0 -168px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item.test-heartworm .icon {
+  .view-navigation .navigation .nav-item.test-heartworm .icon {
     background-position: 0 -168px;
   }
 }
-.view-navigation .nav-item.test-thyroxine .icon {
+.view-navigation .navigation .nav-item.test-thyroxine .icon {
   background-position: 0 -126px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item.test-thyroxine .icon {
+  .view-navigation .navigation .nav-item.test-thyroxine .icon {
     background-position: 0 -84px;
   }
 }
-.view-navigation .nav-item.test-urine .icon {
+.view-navigation .navigation .nav-item.test-urine .icon {
   background-position: 0 -294px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item.test-urine .icon {
+  .view-navigation .navigation .nav-item.test-urine .icon {
     background-position: 0 -294px;
   }
 }
-.view-navigation .nav-item.test-felv-fiv .icon {
+.view-navigation .navigation .nav-item.test-felv-fiv .icon {
   background-position: 0 -84px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item.test-felv-fiv .icon {
+  .view-navigation .navigation .nav-item.test-felv-fiv .icon {
     background-position: 0 -126px;
   }
 }
-.view-navigation .nav-item.test-ova .icon {
+.view-navigation .navigation .nav-item.test-ova .icon {
   background-position: 0 -42px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item.test-ova .icon {
+  .view-navigation .navigation .nav-item.test-ova .icon {
     background-position: 0 -42px;
   }
 }
-.view-navigation .nav-item.test-accuplex .icon {
+.view-navigation .navigation .nav-item.test-accuplex .icon {
   background-position: 0 0;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .view-navigation .nav-item.test-accuplex .icon {
+  .view-navigation .navigation .nav-item.test-accuplex .icon {
     background-position: 0 0;
   }
 }

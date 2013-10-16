@@ -42,11 +42,11 @@ define([
 			{
 				if(($(window).scrollTop())>50)
 				{
-					$(".view-navigation").addClass('active');
+					$(".view-navigation .navigation").addClass('is-away-from-top');
 				}
 				else
 				{
-					$(".view-navigation").removeClass('active');
+					$(".view-navigation .navigation").removeClass('is-away-from-top');
 				}
 			});
         }

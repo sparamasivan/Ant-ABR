@@ -29,7 +29,8 @@ define([
 
         events: {
             'click .nav-toggle': '_toggleMenu',
-            'click .section': '_goToSection'
+            'click .section': '_goToSection',
+            'click .bg': 'collapse'
         },
 
         render: function(parent) {
@@ -101,7 +102,7 @@ define([
         _toggleMenu: function(e) {
             var elNavItems = this.$el.find('.nav-items');
 
-            if (elNavItems.hasClass('expanded')) {
+            if (this.$el.hasClass('expanded')) {
                 this.collapse();
             } else {
                 this.expand();
@@ -158,7 +159,7 @@ define([
                     });
                 });
 
-            elNavItems.addClass('expanded');
+            this.$el.addClass('expanded');
         },
 
         collapse: function() {
@@ -189,7 +190,7 @@ define([
                     });
             });
 
-            elNavItems.removeClass('expanded');
+            this.$el.removeClass('expanded');
         },
 
         /**
