@@ -35,9 +35,17 @@ define([
         },
 
         reset: function() {
+            var stickerEl = this._getStickerEl();
+
             if (!this._rendered) return false;
 
-            this._getStickerEl().removeClass('active');
+            stickerEl.removeClass('active');
+
+            // -> triggering reflow /* The actual magic */
+            // otherwise if 'active' class is re-added immediately after removing it
+            // it will no restart the animation
+            // @see http://css-tricks.com/restart-css-animation/
+            stickerEl[0].offsetWidth = stickerEl[0].offsetWidth;
         },
 
         run: function() {
@@ -47,10 +55,7 @@ define([
 
             this.reset();
 
-            // activate animation in next cycle
-            setTimeout(function() {
-                self._getStickerEl().addClass('active');
-            }, 0);
+            self._getStickerEl().addClass('active');
             
         },
 
