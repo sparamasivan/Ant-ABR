@@ -2122,10 +2122,10 @@ span.placeholder {
   display: none\9;
 }
 .widget-indicator:hover .dot {
-  width: 12px;
-  height: 12px;
-  margin: -6px 0 0 -6px;
-  border-radius: 6px;
+  width: 14px;
+  height: 14px;
+  margin: -7px 0 0 -7px;
+  border-radius: 7px;
 }
 .widget-indicator.bad {
   background-image: url("../images/widget/indicator/bad.png");
