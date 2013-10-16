@@ -33,7 +33,7 @@ $widgetArrowWidthPhone: 17px;
         background-position: ($width * 1) 0;
         border-radius: ($width / 2);
 
-        @include transition(background-position 0.5s);
+        @include transition(background-position 0.25s linear);
 
         @media 
         only screen and (-webkit-min-device-pixel-ratio: 2), 

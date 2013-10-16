@@ -1975,10 +1975,10 @@ span.placeholder {
   background-image: url("../images/widget/arrow/arrow.png");
   background-position: 22px 0;
   border-radius: 11px;
-  -webkit-transition: background-position 0.5s;
-  -moz-transition: background-position 0.5s;
-  -o-transition: background-position 0.5s;
-  transition: background-position 0.5s;
+  -webkit-transition: background-position 0.25s linear;
+  -moz-transition: background-position 0.25s linear;
+  -o-transition: background-position 0.25s linear;
+  transition: background-position 0.25s linear;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .widget-arrow .inner {
