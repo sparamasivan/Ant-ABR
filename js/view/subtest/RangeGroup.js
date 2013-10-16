@@ -309,7 +309,7 @@ define([
                         target: el.find('.widget-indicator')
                     },
                     show: {
-                        target: el.find('.range, .widget-indicator')
+                        target: el.find('.widget-indicator')
                     },
                     style: {
                         classes: 'view-subtest-range-group-item-tooltip'
@@ -329,6 +329,13 @@ define([
                             }
                         }
                     }
+                });
+                
+                // WORKAROUND: We should be able to list multiple show targets in el.tooltip({show: {target: ...}}),
+                // however, clicking on the inner elements of .widget-indicator does not close the tooltip.
+                // As a result, we manually added the click event that will trigger the tooltip show/hide
+                el.find('.range').bind('click', function(e) {
+                    el.tooltip('api').show(e);
                 });
                 
                 // hide tooltip automatically when window resized, so that it doesn't interfere with other tooltips
