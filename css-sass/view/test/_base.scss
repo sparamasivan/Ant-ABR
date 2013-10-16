@@ -130,6 +130,10 @@
             top: 0;
             left: $iconWidth + 30px;
             white-space: nowrap;
+
+            // font-weight changes in some browsers while scrolling
+            // @see http://stackoverflow.com/questions/12877292/font-weight-of-text-changes-in-a-fixed-div-when-it-scrolls-over-flash-or-jquery
+            -webkit-font-smoothing: antialiased;
         }
     }
 

@@ -3439,6 +3439,7 @@ span.placeholder {
   top: 0;
   left: 77px;
   white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
 }
 .test-header .status {
   position: absolute;
