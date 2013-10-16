@@ -2853,11 +2853,11 @@ span.placeholder {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-image: url('../images/navigation/icons-sd21e9a2557.png');
+  background-image: url('../images/navigation/icons-s295f6686fb.png');
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item .icon {
-    background-image: url('../images/navigation/icons-2x-s9e8e29e203.png');
+    background-image: url('../images/navigation/icons-2x-s7e92fe4f07.png');
     background-size: 100%;
   }
 }
@@ -2892,7 +2892,7 @@ span.placeholder {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-chemistry .icon {
-    background-position: 0 -350px;
+    background-position: 0 -300px;
   }
 }
 .view-navigation .nav-item.test-cbc .icon {
@@ -2900,7 +2900,7 @@ span.placeholder {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-cbc .icon {
-    background-position: 0 -250px;
+    background-position: 0 -200px;
   }
 }
 .view-navigation .nav-item.test-heartworm .icon {
@@ -2908,7 +2908,7 @@ span.placeholder {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-heartworm .icon {
-    background-position: 0 -200px;
+    background-position: 0 -250px;
   }
 }
 .view-navigation .nav-item.test-thyroxine .icon {
@@ -2916,7 +2916,7 @@ span.placeholder {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-thyroxine .icon {
-    background-position: 0 -100px;
+    background-position: 0 -150px;
   }
 }
 .view-navigation .nav-item.test-urine .icon {
@@ -2924,7 +2924,7 @@ span.placeholder {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-urine .icon {
-    background-position: 0 -300px;
+    background-position: 0 -350px;
   }
 }
 .view-navigation .nav-item.test-felv-fiv .icon {
@@ -2932,7 +2932,7 @@ span.placeholder {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-felv-fiv .icon {
-    background-position: 0 -150px;
+    background-position: 0 -100px;
   }
 }
 .view-navigation .nav-item.test-ova .icon {
