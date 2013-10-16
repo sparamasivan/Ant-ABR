@@ -7,6 +7,7 @@ define([
     'view/MainMenu',
     'view/Navigation',
     'view/Report',
+    'view/Survey',
     'module',
     'model/MediaQuery',
     'event/Dispatcher',
@@ -20,6 +21,7 @@ define([
     ViewMainMenu,
     ViewNavigation,
     ViewReport,
+    ViewSurvey,
     Module,
     ModelMediaQuery,
     EventDispatcher
@@ -71,6 +73,8 @@ define([
             promises.push(this._renderNavigation());
 
             promises.push(this._renderReport());
+
+            promises.push(this._renderSurvey());
             
             return $.when.apply($, promises);
         },
@@ -95,6 +99,12 @@ define([
             });
 
             return this._reportView.render(this.$el.find('.page-content'));
+        },
+
+        _renderSurvey: function() {
+            var view = new ViewSurvey();
+
+            return view.render();
         }
     });
 });

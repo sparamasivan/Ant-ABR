@@ -17,7 +17,9 @@ var require = {
         'iscroll': 'lib/iscroll',
         'async': 'lib/require/async',
         'propertyParser': 'lib/require/propertyParser',
-        'goog': 'lib/require/goog'
+        'goog': 'lib/require/goog',
+        'foundation': 'lib/foundation/foundation',
+        'foundation-reveal': 'lib/foundation/foundation.reveal'
     },
 
     config: {
@@ -76,6 +78,14 @@ var require = {
         },
         'iscroll': {
             exports: 'iScroll'
+        },
+        'foundation': {
+            deps: ['jquery'],
+            exports: 'Foundation'
+        },
+        'foundation-reveal': {
+            deps: ['foundation'],
+            exports: 'Foundation.libs.reveal'
         }
     }
 };

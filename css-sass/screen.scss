@@ -27,6 +27,12 @@ $max-page-width: 1000px;
 // lib
 @import "lib/qtip/jquery.qtip-2.0.1";
 
+// lib: foundation
+$include-html-global-classes: false;
+@import "lib/foundation/variables";
+@import "lib/foundation/components/global";
+@import "lib/foundation/components/reveal";
+
 // base styles
 @import "base";
 
