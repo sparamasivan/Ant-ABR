@@ -16,7 +16,7 @@
     }
 
     .nav-items {
-        margin: 5px 5px 0 0;
+        margin: (round((55px - $iconHeight) / 2) + 2px) round((60px - $iconWidth) / 2) 0 0;
         padding: 0;
         list-style-type: none;
         
@@ -27,7 +27,7 @@
     .nav-options {
         .nav-item {
             @include opacity(0);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
     }
 
@@ -69,7 +69,7 @@
             position: absolute;
             z-index: -1;
             top: 0;
-            left: 0;
+            right: 0;
 
             background-image: url($image);
 

@@ -174,13 +174,18 @@ define([
             elTests.each(function(i) {
                 // hide tests
                 var topOffset = 0,
-                    duration = $(this).position().top * 2;
+                    duration = $(this).position().top * 1.2;
 
                 $(this)
                     .transit({
                         top: topOffset,
-                        opacity: 0,
+                        opacity: 0.5,
                         duration: duration
+                    }, function() {
+                        $(this)
+                            .css({
+                                opacity: 0
+                            });
                     });
             });
 

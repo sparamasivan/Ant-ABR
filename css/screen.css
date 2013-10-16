@@ -2830,20 +2830,20 @@ span.placeholder {
   top: 0;
 }
 .view-navigation .nav-items {
-  margin: 5px 5px 0 0;
+  margin: 9px 9px 0 0;
   padding: 0;
   list-style-type: none;
   position: relative;
-  width: 50px;
+  width: 42px;
 }
 .view-navigation .nav-options .nav-item {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .view-navigation .nav-item {
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -2853,11 +2853,11 @@ span.placeholder {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-image: url('../images/navigation/icons-s295f6686fb.png');
+  background-image: url('../images/navigation/icons-s7a2936dfd0.png');
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item .icon {
-    background-image: url('../images/navigation/icons-2x-s7e92fe4f07.png');
+    background-image: url('../images/navigation/icons-2x-scec38a3aa9.png');
     background-size: 100%;
   }
 }
@@ -2865,12 +2865,12 @@ span.placeholder {
   display: none;
 }
 .view-navigation .nav-item .shadow {
-  width: 64px;
-  height: 64px;
+  width: 52px;
+  height: 52px;
   position: absolute;
   z-index: -1;
   top: 0;
-  left: 0;
+  right: 0;
   background-image: url("../images/navigation/shadow.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
@@ -2880,67 +2880,67 @@ span.placeholder {
   }
 }
 .view-navigation .nav-item.nav-toggle .icon {
-  background-position: 0 -400px;
+  background-position: 0 -336px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.nav-toggle .icon {
-    background-position: 0 -400px;
+    background-position: 0 -336px;
   }
 }
 .view-navigation .nav-item.test-chemistry .icon {
-  background-position: 0 -300px;
+  background-position: 0 -252px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-chemistry .icon {
-    background-position: 0 -300px;
+    background-position: 0 -252px;
   }
 }
 .view-navigation .nav-item.test-cbc .icon {
-  background-position: 0 -250px;
+  background-position: 0 -210px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-cbc .icon {
-    background-position: 0 -200px;
+    background-position: 0 -210px;
   }
 }
 .view-navigation .nav-item.test-heartworm .icon {
-  background-position: 0 -200px;
+  background-position: 0 -168px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-heartworm .icon {
-    background-position: 0 -250px;
+    background-position: 0 -168px;
   }
 }
 .view-navigation .nav-item.test-thyroxine .icon {
-  background-position: 0 -150px;
+  background-position: 0 -126px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-thyroxine .icon {
-    background-position: 0 -150px;
+    background-position: 0 -84px;
   }
 }
 .view-navigation .nav-item.test-urine .icon {
-  background-position: 0 -350px;
+  background-position: 0 -294px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-urine .icon {
-    background-position: 0 -350px;
+    background-position: 0 -294px;
   }
 }
 .view-navigation .nav-item.test-felv-fiv .icon {
-  background-position: 0 -100px;
+  background-position: 0 -84px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-felv-fiv .icon {
-    background-position: 0 -100px;
+    background-position: 0 -126px;
   }
 }
 .view-navigation .nav-item.test-ova .icon {
-  background-position: 0 -50px;
+  background-position: 0 -42px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .nav-item.test-ova .icon {
-    background-position: 0 -50px;
+    background-position: 0 -42px;
   }
 }
 .view-navigation .nav-item.test-accuplex .icon {
