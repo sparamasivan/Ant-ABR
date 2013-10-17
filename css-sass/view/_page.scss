@@ -5,6 +5,14 @@
 
 .page-section-top {
     background-color: #0099be;
+    
+    /* desktop */
+    @media (min-width:($mq-tablet)) {
+        // center logo
+        .logo-container {
+            margin: 0 5%;
+        }
+    }
 
     .logo {
         width: 100%;

@@ -2425,7 +2425,13 @@ span.placeholder {
 
 .page-section-top {
   background-color: #0099be;
+  /* desktop */
   /* tablet & desktop */
+}
+@media (min-width: 769px) {
+  .page-section-top .logo-container {
+    margin: 0 5%;
+  }
 }
 .page-section-top .logo {
   width: 100%;
