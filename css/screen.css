@@ -2332,6 +2332,8 @@ span.placeholder {
 }
 .view-widget-test-overview .more {
   display: none;
+}
+.view-widget-test-overview .more p {
   margin-top: 20px;
 }
 .view-widget-test-overview .widget-arrow {
