@@ -40,7 +40,7 @@ define([
 
             // trigger read more section
             this.$el.find('.widget-arrow').bind('click', function() {
-                self.$el.find('.more').toggle();
+                self.$el.find('.more').slideToggle();
                 $(this).toggleClass('down');
             });
 

@@ -37,12 +37,14 @@ define([
         },
 
         expand: function() {
+            this.$el.find('>.body').slideDown();
             this.$el.addClass('expanded');
             this.$elHeader.find('.widget-arrow').addClass('down');
             this.trigger('expanded');
         },
 
         collapse: function() {
+            this.$el.find('>.body').slideUp();
             this.$el.removeClass('expanded');
             this.$elHeader.find('.widget-arrow').removeClass('down');
             this.trigger('collapsed');

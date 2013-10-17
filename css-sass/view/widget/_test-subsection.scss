@@ -6,7 +6,7 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 
-    padding: 0 20px 0 160px;
+    padding: 0 20px 15px 160px;
 
     /* tablet */
     @media (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
@@ -24,7 +24,7 @@
         font-size: 167%;
         cursor: pointer;
 
-        padding: 15px 0 15px 0;
+        padding: 15px 0 0 0;
 
         .title {
             position: relative;
@@ -51,22 +51,11 @@
 
     >.body {
         display: none;
-        padding-bottom: 15px;
 
         >.text {
             margin-top: 0;
             margin-bottom: 0;
             color: #6c6c6c;
-        }
-    }
-
-    &.expanded {
-        >.header {
-            padding-bottom: 0;
-        }
-
-        >.body {
-            display: block;
         }
     }
 }
