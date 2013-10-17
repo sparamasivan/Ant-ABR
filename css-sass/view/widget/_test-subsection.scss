@@ -15,7 +15,8 @@
 
     /* Phone */
     @media (max-width:$mq-phone) {
-        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     >.header {

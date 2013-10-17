@@ -18,9 +18,10 @@
 
     .more {
         display: none;
+        padding-top: 20px;
 
         p {
-            margin-top: 20px;
+            margin: 0;
         }
     }
 
@@ -55,7 +56,7 @@
         }
 
         .more {
-            margin-top: 10px;
+            padding-top: 10px;
         }
     }
 }

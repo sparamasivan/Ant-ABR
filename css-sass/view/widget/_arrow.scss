@@ -15,6 +15,8 @@ $widgetArrowWidthPhone: 17px;
 
     display: inline-block;
     vertical-align: middle;
+    
+    @include transition(transform 0.25s linear);
 
     background-image: url($bgImage);
 
@@ -50,13 +52,15 @@ $widgetArrowWidthPhone: 17px;
     }
 
     &.down {
+        @include transform(rotate(90deg));
+        
+        //IE8 doesn't support transforms, so we'll change background position instead
         .inner {
-            background-position: 0 ($height * 1);
+            background-position: 0 ($height * 1)\9;
         }
-
         &:hover {
             .inner {
-                background-position: 0 ($height * 2);
+                background-position: 0 ($height * 2)\9;
             }
         }
     }
@@ -93,13 +97,13 @@ $widgetArrowWidthPhone: 17px;
             }
 
             &.down {
+                //IE8 doesn't support transforms, so we'll change background position instead
                 .inner {
-                    background-position: 0 ($heightPhone * 1);
+                    background-position: 0 ($heightPhone * 1)\9;
                 }
-
                 &:hover {
                     .inner {
-                        background-position: 0 ($heightPhone * 2);
+                        background-position: 0 ($heightPhone * 2)\9;
                     }
                 }
             }
