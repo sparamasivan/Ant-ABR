@@ -2826,8 +2826,8 @@ span.placeholder {
 }
 .view-navigation.expanded .bg {
   visibility: visible;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-  opacity: 0.5;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
 }
 .view-navigation .navigation {
   position: fixed;
@@ -3338,6 +3338,12 @@ span.placeholder {
 
 .avatar-flag:hover .avatar-hover {
   opacity: 1;
+}
+
+.reveal-modal-bg {
+  background: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
 }
 
 .view-survey {
