@@ -74,7 +74,9 @@ define([
 
             promises.push(this._renderReport());
 
-            promises.push(this._renderSurvey());
+            if (Module.config().isSurveyEnabled) {
+                promises.push(this._renderSurvey());
+            }
             
             return $.when.apply($, promises);
         },

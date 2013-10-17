@@ -9,6 +9,7 @@ var require = {
         'jquery-debouncedresize': 'lib/jquery.debouncedresize',
         'jquery-jswipe': 'lib/jquery.jswipe',
         'jquery-transit': 'lib/jquery.transit',
+        'jquery-cookie': 'lib/jquery.cookie',
         'modernizr' : 'lib/modernizr.custom',
         'underscore': 'lib/underscore',
         'backbone': 'lib/backbone-1.0.0',
@@ -30,7 +31,12 @@ var require = {
         'view/Page': {
             petPortalHomeUrl: '#',
             logoutUrl: '#',
-            privacyPolicyUrl: 'http://www.vetsecure.com/petportals/privacy_policy'
+            privacyPolicyUrl: 'http://www.vetsecure.com/petportals/privacy_policy',
+            isSurveyEnabled: true
+        },
+        'view/Survey': {
+            surveyUrl: 'https://www.google.com/',
+            timeout: 30000
         }
     },
 
@@ -60,6 +66,10 @@ var require = {
         'jquery-transit': {
             deps: ['jquery'],
             exports: 'jQuery.fn.transit'
+        },
+        'jquery-cookie': {
+            deps: ['jquery'],
+            exports: 'jQuery.fn.cookie'
         },
         'underscore': {
             exports: '_',

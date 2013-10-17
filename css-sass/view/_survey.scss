@@ -1,0 +1,82 @@
+.view-survey {
+    padding: 0;
+    position: fixed;
+    border: 0;
+    background-color: transparent;
+    text-align: center;
+    @include box-shadow(none);
+
+    margin-left: -40%;
+    width: 80%;
+
+    .outer {
+        display: inline-block;
+        background-color: white;
+        max-width: 750px;
+        text-align: center;
+        position: relative;
+        @include border-radius(3px);
+    }
+
+    .close-reveal-modal {
+        $bgImage: "../images/survey/close.png";
+        $bgImage2x: "../images/survey/close-2x.png";
+        $width: image-width($bgImage);
+        $height: image-height($bgImage);
+
+        width: $width;
+        height: $height;
+
+        top: 13px;
+        right: 13px;
+
+        background-image: url($bgImage);
+
+        @media 
+        only screen and (-webkit-min-device-pixel-ratio: 2), 
+        only screen and (min-resolution: 192dpi) {
+            background-image: url($bgImage2x);
+            background-size: 100%;
+        }
+    }
+
+    .inner {
+        display: inline-block;
+        margin: 35px 14%;
+    }
+
+    .title {
+        margin-top: 0;
+        color: #333;
+    }
+
+    .text {
+        color: #6c6c6c;
+    }
+
+    .btn-container {
+        margin: 30px 0 10px;
+    }
+
+    .btn {
+        @include secondaryFont;
+        font-size: 146.5%;
+        line-height: 30px;
+
+        display: inline-block;
+        background-color: #0099BE;
+        color: white;
+        padding: 9px 18px;
+        border-radius: 2px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .link-container {
+        margin-bottom: 0;
+    }
+
+    .link {
+        color: #0099BE;
+    }
+}
