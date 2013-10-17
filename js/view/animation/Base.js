@@ -35,9 +35,11 @@ define([
         },
 
         reset: function() {
-            var stickerEl = this._getStickerEl();
+            var stickerEl;
 
             if (!this._rendered) return false;
+
+            stickerEl = this._getStickerEl();
 
             stickerEl.removeClass('active');
 
