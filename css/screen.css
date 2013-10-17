@@ -2838,7 +2838,7 @@ span.placeholder {
 }
 .view-navigation .navigation {
   position: fixed;
-  top: 65px;
+  top: 50px;
   right: 0;
   z-index: 5;
   -webkit-transition: all 0.1s ease-in-out;
