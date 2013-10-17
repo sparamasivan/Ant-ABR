@@ -47,6 +47,13 @@ define([
 
             // refresh widget whenever screen is resized
             ModelMediaQuery.on('change:windowWidth', $.proxy(this._windowResized, this));
+
+            // close modal when outside container is clicked
+            this.$el.bind('click', function(e) {
+                if (e.target === this) {
+                    self.close();
+                }
+            });
         },
 
         /**
@@ -76,6 +83,19 @@ define([
                     if (!self._retrieveSurveyResponse() && !ModelMediaQuery.isPhoneMedia()) {
                         self._storeSurveyResponse('declined');
                     }
+
+                    // WORKAROUND: change window positioning to absolute so closing animation can run properly
+                    $(this).css({
+                        'position': 'absolute',
+                        'top': parseInt($(this).css('top')) + $(window).scrollTop()
+                    });
+                },
+                opened: function() {
+                    // WORKAROUND: once opening animation is finished, display modal window as fixed
+                    $(this).css({
+                        'position': 'fixed',
+                        'top': parseInt($(this).css('top', '').css('top'))
+                    });
                 }
             });
 
