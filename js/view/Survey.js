@@ -17,8 +17,8 @@ define([
 ) {
     /**
      * Displays a modal window after a certain amount of time passes. The user is given the option to
-     * proceed to fill out a survey or exit the modal window. Once the user accepts/declines, a cookie
-     * is set, so that future reloads of the page will not trigger the modal to display again. 
+     * proceed to fill out a survey or exit the modal window. Once finished interacting with the modal,
+     * a cookie is set so that future reloads of the page will not trigger the modal to display again.
      */
     return Backbone.View.extend({
         template: Handlebars.compile(Template),
