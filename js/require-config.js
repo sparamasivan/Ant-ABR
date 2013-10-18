@@ -36,7 +36,7 @@ var require = {
         },
         'view/Survey': {
             surveyUrl: 'https://www.google.com/',
-            timeout: 30000
+            timeout: 120000
         }
     },
 
