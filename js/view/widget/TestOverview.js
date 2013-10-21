@@ -4,8 +4,7 @@ define([
     'handlebars',
     'text!template/widget/TestOverview.html',
     'modernizr',
-    'model/MediaQuery',
-    'jquery-waitforimages'
+    'model/MediaQuery'
 ], function(
     $,
     Backbone,

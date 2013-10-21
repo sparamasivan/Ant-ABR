@@ -13,8 +13,7 @@ define([
     'view/subtest/pod/Color',
     'view/animation/Cbc',
     'goog!visualization,1,packages:[corechart,geochart]',
-    'jquery-equal-heights',
-    'jquery-waitforimages'
+    'jquery-equal-heights'
 ], function(
     $,
     Backbone,

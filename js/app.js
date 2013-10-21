@@ -5,8 +5,7 @@ define([
     'view/Page',
     'router/Section',
     'view/widget/Busy',
-    'module',
-    'jquery-waitforimages'
+    'module'
 ], function(
     $,
     Backbone,
@@ -71,16 +70,6 @@ define([
                     });
 
                     return vPage.render($("body"));
-                })
-                // wait for all images to load
-                .then(function() {
-                    var deferred = new $.Deferred();
-
-                    $("body").waitForImages(function() {
-                        deferred.resolve();
-                    });
-
-                    return deferred.promise();
                 })
                 .then($.proxy(this.configureRouting, this))
                 .then(function() {
