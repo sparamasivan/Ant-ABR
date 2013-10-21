@@ -25,12 +25,6 @@ define([
                 vPage,
                 vBusy;
 
-            if (!Backbone.history._hasPushState) {
-              $('body').on('a[href^=#]', 'click', function (e) {
-                e.preventDefault();
-              });
-            }
-
             // initialize loader
             vBusy = new ViewWidgetBusy();
             vBusy.render($('body'));
@@ -85,7 +79,7 @@ define([
             // hash change handler
             var rSection = new RouterSection();
 
-            // start listenting for hash changes
+            // start listening for hash changes
             Backbone.history.start();
 
             // process current url
