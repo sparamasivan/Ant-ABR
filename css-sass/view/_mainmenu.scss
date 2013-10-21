@@ -66,13 +66,13 @@
 }
 
 .menuTrigger {
+	@include secondaryFont;
 	float:left;
 	margin-top:14px; 
 	margin-left:10px;
 	text-decoration:none;
 	color:#fff;
 	font-size:14px;
-	font-family: 'Apercu';
 	font-weight:normal;
 	display:none;
 	padding-left:30px;
@@ -241,11 +241,11 @@
 	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 	li {
+		@include secondaryFont;
 		float:left;
 		margin-left:20px;
 		font-size:14px;
 		color:#fff;
-		font-family: 'Apercu';
 		font-weight:400;
 		a {
 			color:#fff;

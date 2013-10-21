@@ -2,13 +2,15 @@ define([
     'jquery',
     'backbone',
     'handlebars',
+    'text!template/widget/Busy.html'
 ], function(
     $,
     Backbone,
-    Handlebars
+    Handlebars,
+    Template
 ) {
     return Backbone.View.extend({
-        template: Handlebars.compile('<div class="view-widget-busy"><div class="widget"><img src="images/widget/busy/loader.gif" alt=""><span>Loading test results</span></div></div>'),
+        template: Handlebars.compile(Template),
 
         render: function(parent) {
             this.setElement($(this.template()));
@@ -18,7 +20,7 @@ define([
         },
 
         show: function() {
-            this.$el.fadeTo(100, 0.7);
+            this.$el.fadeTo(100, 1);
         },
 
         hide: function() {

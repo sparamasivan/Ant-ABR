@@ -2283,17 +2283,26 @@ span.placeholder {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.9);
   z-index: 100000;
   display: none;
   /* hidden by default */
-  opacity: 1 !important;
+}
+.view-widget-busy .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
 }
 .view-widget-busy .widget {
   height: 60px;
   width: 346px;
   margin: 0 auto;
   margin-top: 250px;
+  position: relative;
 }
 .view-widget-busy .widget img {
   width: 87px;
@@ -2301,10 +2310,10 @@ span.placeholder {
   float: left;
 }
 .view-widget-busy .widget span {
+  font-family: 'Apercu', sans-serif;
   float: left;
   font-size: 28px;
   color: #333;
-  font-family: 'Apercu';
   font-weight: 700;
   height: 28px;
   line-height: 28px;
@@ -2641,13 +2650,13 @@ span.placeholder {
 }
 
 .menuTrigger {
+  font-family: 'Apercu', sans-serif;
   float: left;
   margin-top: 14px;
   margin-left: 10px;
   text-decoration: none;
   color: #fff;
   font-size: 14px;
-  font-family: 'Apercu';
   font-weight: normal;
   display: none;
   padding-left: 30px;
@@ -2808,11 +2817,11 @@ span.placeholder {
   transition: all .2s ease-in-out;
 }
 .secondaryMenu li {
+  font-family: 'Apercu', sans-serif;
   float: left;
   margin-left: 20px;
   font-size: 14px;
   color: #fff;
-  font-family: 'Apercu';
   font-weight: 400;
 }
 .secondaryMenu li a {
@@ -3312,53 +3321,6 @@ span.placeholder {
   .view-overview .widget-circle-arrow img {
     margin-left: -32.5px;
   }
-}
-
-.avatar-hover {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 98%;
-  background: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  -webkit-backface-visibility: hidden;
-}
-.avatar-hover .hover-text {
-  width: 100%;
-  height: 100%;
-  display: table;
-}
-.avatar-hover .hover-text span {
-  height: 100%;
-  width: 100%;
-  vertical-align: middle;
-  display: table-cell;
-}
-.avatar-hover .hover-text p {
-  text-align: center;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  line-height: 120%;
-}
-.avatar-hover .hover-text p.hover-name {
-  font-size: 32px;
-  font-family: 'Apercu';
-  font-weight: 700;
-}
-.avatar-hover .hover-text p.hover-info {
-  font-size: 14px;
-  font-family: 'Apercu';
-  font-weight: 400;
-}
-
-.avatar-flag:hover .avatar-hover {
-  opacity: 1;
 }
 
 .reveal-modal-bg {
@@ -4308,7 +4270,9 @@ span.placeholder {
     display: none;
   }
   .view-subtest-range-group .range-item .range {
-    background-color: rgba(215, 219, 227, 0.5);
+    background-color: #D7DBE3;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    opacity: 0.5;
   }
   .view-subtest-range-group .swipe {
     width: 97px;
@@ -4685,7 +4649,7 @@ span.placeholder {
   top: 57%;
   width: 100%;
   height: 100%;
-  background: url("../images/animation/urine/pee@2x.png") no-repeat rgba(0, 0, 0, 0);
+  background: url("../images/animation/urine/pee@2x.png") no-repeat;
   background-size: 100%;
 }
 .background.urine .sticker .portholes {
