@@ -35,7 +35,7 @@ var require = {
             isSurveyEnabled: true
         },
         'view/Survey': {
-            surveyUrl: 'https://www.research.net/s/Healthtracks',
+            url: 'https://www.research.net/s/Healthtracks',
             timeout: 120000
         }
     },
