@@ -16,6 +16,52 @@ define([
             'next-steps': 'nextSteps'
         },
 
+        _bindRoutes: function() {
+            this.routeHandlers = [];
+            
+            Backbone.Router.prototype._bindRoutes.apply(this, arguments);
+
+            EventDispatcher.on('route', $.proxy(this._handleRoute, this));
+        },
+
+        /**
+         * Override default route functionality, since we don't want to link router
+         * to Backbone.history, but instead to our EventDispatcher "route" events.
+         */
+        route: function(route, name, callback) {
+            var router = this;
+
+            if (!_.isRegExp(route)) route = this._routeToRegExp(route);
+            if (_.isFunction(name)) {
+                callback = name;
+                name = '';
+            }
+            if (!callback) callback = this[name];
+
+            this._addRouteByRegExp(route, function(fragment) {
+                var args = router._extractParameters(route, fragment);
+                callback && callback.apply(router, args);
+                router.trigger.apply(router, ['route:' + name].concat(args));
+                router.trigger('route', name, args);
+            });
+
+            return this;
+        },
+
+        _addRouteByRegExp: function(route, callback) {
+            this.routeHandlers.unshift({route: route, callback: callback});
+        },
+
+        _handleRoute: function(fragment) {
+            var matched = _.any(this.routeHandlers, function(handler) {
+                if (handler.route.test(fragment)) {
+                    handler.callback(fragment);
+                    return true;
+                }
+            });
+            return matched;
+        },
+
         /**
          * Go to section
          */

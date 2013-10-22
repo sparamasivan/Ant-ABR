@@ -159,10 +159,7 @@ define([
                 EventDispatcher.trigger('section.collapse', this.model.id);
             } else {
                 // navigate to section
-                Backbone.history.navigate('section/' + this.model.id);
-
-                // process navigation
-                Backbone.history.loadUrl();
+                EventDispatcher.trigger('route', 'section/' + this.model.id);
             }
         },
 

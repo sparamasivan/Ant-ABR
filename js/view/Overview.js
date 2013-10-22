@@ -3,13 +3,15 @@ define([
     'backbone',
     'handlebars',
     'model/Report',
-    'text!template/Overview.html'
+    'text!template/Overview.html',
+    'event/Dispatcher'
 ], function(
     $,
     Backbone,
     Handlebars,
     ModelReport,
-    Template
+    Template,
+    EventDispatcher
 ) {
     return Backbone.View.extend({
         template: Handlebars.compile(Template),
@@ -58,19 +60,13 @@ define([
                 e.preventDefault();
                 
                 // navigate to section
-                Backbone.history.navigate('overview');
-
-                // process navigation
-                Backbone.history.loadUrl();
+                EventDispatcher.trigger('route', 'overview');
             });
 
             // go to first section when arrow clicked
             this.$el.find('.widget-circle-arrow').bind('click', function() {
                 // navigate to section
-                Backbone.history.navigate('section/' + testCollection.first().id);
-
-                // process navigation
-                Backbone.history.loadUrl();
+                EventDispatcher.trigger('route', 'section/' + testCollection.first().id);
             });
 
             this.$el.appendTo(parent);

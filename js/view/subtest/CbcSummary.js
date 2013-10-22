@@ -2,12 +2,14 @@ define([
     'jquery',
     'backbone',
     'handlebars',
-    'text!template/subtest/CbcSummary.html'
+    'text!template/subtest/CbcSummary.html',
+    'event/Dispatcher'
 ], function(
     $,
     Backbone,
     Handlebars,
-    Template
+    Template,
+    EventDispatcher
 ) {
     var mathRound = function(value, decimalPlaces) {
         var roundedValue = Math.round(value * Math.pow(10, decimalPlaces)) / Math.pow(10, decimalPlaces);
@@ -31,10 +33,7 @@ define([
                 e.preventDefault();
 
                 // navigate to section
-                Backbone.history.navigate($(this).attr('href'));
-
-                // process navigation
-                Backbone.history.loadUrl();
+                EventDispatcher.trigger($(this).attr('href'));
             });
 
             this.$el.appendTo(parent);

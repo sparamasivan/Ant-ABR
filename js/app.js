@@ -73,17 +73,11 @@ define([
         },
 
         /**
-         * Initialize hash change handler/listener.
+         * Initialize route handler/listener.
          */
         configureRouting: function() {
             // hash change handler
             var rSection = new RouterSection();
-
-            // start listening for hash changes
-            Backbone.history.start();
-
-            // process current url
-            Backbone.history.loadUrl();
         },
 
         /**

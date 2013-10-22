@@ -201,10 +201,7 @@ define([
             var sectionUrl = $(e.currentTarget).data('section');
 
             // navigate to section
-            Backbone.history.navigate(sectionUrl);
-
-            // process navigation
-            Backbone.history.loadUrl();
+            EventDispatcher.trigger('route', sectionUrl);
 
             if (ModelMediaQuery.isPhoneMedia()) {
                 // collapse menu

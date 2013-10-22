@@ -54,10 +54,7 @@ define([
                 EventDispatcher.trigger('sections.collapse');
 
                 // navigate to section
-                Backbone.history.navigate('next-steps');
-
-                // process navigation
-                Backbone.history.loadUrl();
+                EventDispatcher.trigger('route', 'next-steps');
             });
 
             this.$el.appendTo(parent);
