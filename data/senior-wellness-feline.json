@@ -35,7 +35,7 @@
                 "id": "cbc",
                 "type": "cbc_32",
                 "testEndpoint": "data/test/cbc.json"
-            }
+            },
             {
                 "id": "t4",
                 "type": "t4",
