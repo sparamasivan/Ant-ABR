@@ -12,7 +12,7 @@
             "firstName": "Jane"
         },
         "patient": {
-            "name": "Adult Wellness Canine",
+            "name": "Fido",
             "sex": "Male",
             "species": "Canine",
             "photo": "data/images/fido.jpg"
