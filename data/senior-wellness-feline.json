@@ -12,14 +12,13 @@
             "firstName": "Jane"
         },
         "patient": {
-            "name": "Fido",
-            "sex": "Male",
-            "species": "Canine",
-            "photo": "data/images/fido.jpg"
+            "name": "Senior Wellness Feline",
+            "sex": "Female",
+            "species": "Feline"
         }
     },
     "report": {
-        "id": "combined",
+        "id": "senior-wellness-feline",
         "date": "01/01/13",
         "followup": null,
         "approval": {
@@ -36,17 +35,7 @@
                 "id": "cbc",
                 "type": "cbc_32",
                 "testEndpoint": "data/test/cbc.json"
-            },
-            {
-                "id": "accuplex",
-                "type": "accuplex",
-                "testEndpoint": "data/test/accuplex.json"
-            },
-            {
-                "id": "heartworm",
-                "type": "heartworm1",
-                "testEndpoint": "data/test/heartworm.json"
-            },
+            }
             {
                 "id": "t4",
                 "type": "t4",
@@ -56,11 +45,6 @@
                 "id": "urine",
                 "type": "urine1",
                 "testEndpoint": "data/test/ua.json"
-            },
-            {
-                "id": "ova",
-                "type": "ova",
-                "testEndpoint": "data/test/ova.json"
             },
             {
                 "id": "felv",
