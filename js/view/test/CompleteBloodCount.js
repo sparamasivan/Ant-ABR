@@ -97,8 +97,8 @@ define([
                         bad: Handlebars.compile('{{{patient.name}}}’s red blood cell count is outside the expected range.')({patient: patient})
                     },
                     description: {
-                        good: Handlebars.compile('We look at both the total number of red blood cells and their ratio to other cells to analyze {{{patient.name}}}’s well-being.')({patient: patient}),
-                        bad: Handlebars.compile('However, an unexpected cell count does not necessarily mean the {{{patient.name}}}’s red blood cells are out of balance. We look not only at the number of red blood cells, but also their ratio to the other types of cells.')({patient: patient})
+                        good: Handlebars.compile('We look at both the total number of red blood cells and their appearance to analyze {{{patient.name}}}’s well-being.')({patient: patient}),
+                        bad: Handlebars.compile('However, an unexpected cell count does not necessarily mean the {{{patient.name}}}’s red blood cells are out of balance. We look not only at the number of red blood cells, but also their appearance.')({patient: patient})
                     }
                 });
 
@@ -228,8 +228,8 @@ define([
                         bad: Handlebars.compile('{{{patient.name}}}’s white blood cell count is outside the expected range.')({patient: patient})
                     },
                     description: {
-                        good: Handlebars.compile('We look at both the total number of white blood cells and their ratio to other cells to analyze {{{patient.name}}}’s well-being.')({patient: patient}),
-                        bad: Handlebars.compile('However, an unexpected cell count does not necessarily mean {{{patient.name}}}’s white blood cells are out of balance. We look not only at the number of white blood cells, but also their ratio to the other types of cells.')({patient: patient})
+                        good: Handlebars.compile('We look at both the total number of white blood cells and their types to analyze {{{patient.name}}}’s well-being.')({patient: patient}),
+                        bad: Handlebars.compile('However, an unexpected cell count does not necessarily mean {{{patient.name}}}’s white blood cells are out of balance. We look not only at the number of white blood cells, but also their types.')({patient: patient})
                     }
                 });
 
@@ -278,8 +278,8 @@ define([
                         bad: Handlebars.compile('{{{patient.name}}}’s platelet count is outside the expected range.')({patient: patient})
                     },
                     description: {
-                        good: Handlebars.compile('We look at both the total number of platelets and their ratio to other cells to analyze {{{patient.name}}}’s well-being.')({patient: patient}),
-                        bad: Handlebars.compile('However, an unexpected count does not necessarily mean {{{patient.name}}}’s platelets are out of balance. We look not only at the number of platelets, but also their ratio to the other types of cells. ')({patient: patient})
+                        good: Handlebars.compile('We look at both the total number of platelets and check if they’ve clumped in order to analyze {{{patient.name}}}’s well-being.')({patient: patient}),
+                        bad: Handlebars.compile('However, an unexpected count does not necessarily mean {{{patient.name}}}’s platelets are out of balance. We look not only at the number of platelets, but also check if they’ve clumped.')({patient: patient})
                     }
                 });
 
