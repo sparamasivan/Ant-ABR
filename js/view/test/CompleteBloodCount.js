@@ -319,7 +319,10 @@ define([
                     {color: '#00b8d6'},
                     {color: '#e8eae5'}
                 ],
-                enableInteractivity: false
+                enableInteractivity: false,
+                tooltip: {
+                    trigger: 'none'
+                }
             });
 
             parent.find('.number').text(mathRound(percentage, 1));
