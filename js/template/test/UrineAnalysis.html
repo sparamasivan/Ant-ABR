@@ -35,14 +35,14 @@
                             <div class="description">
                                 <p>
                                     <span class="message">
-                                        {{#if ph.isBad}}
+                                        {{#if color.isBad}}
                                             {{patient.name}}’s urine was not an expected color.
                                         {{else}}
                                             {{patient.name}}’s urine was an expected color.
                                         {{/if}}
                                     </span>
 
-                                    {{#if ph.isBad}}
+                                    {{#if color.isBad}}
                                         Many factors can affect the color of urine, from medication to diet.
                                     {{else}}
                                         Many factors can affect the color of urine, from medication to diet.
@@ -88,14 +88,14 @@
                             <div class="description">
                                 <p>
                                     <span class="message">
-                                        {{#if ph.isBad}}
+                                        {{#if appearance.isBad}}
                                             {{patient.name}}’s urine’s appearance was not expected.
                                         {{else}}
                                             {{patient.name}}’s urine’s appearance was expected.
                                         {{/if}}
                                     </span>
 
-                                    {{#if ph.isBad}}
+                                    {{#if appearance.isBad}}
                                         Urine is typically a clear liquid. An unexpected appearance would be caused by microscopic particles, such as cells or crystals.
                                     {{else}}
                                         Urine is typically a clear liquid. It can appear cloudy if it contains unexpected cells or crystals.
