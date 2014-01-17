@@ -10,7 +10,7 @@
     line-height: 146%;
 
     /* Phone */
-    @media (max-width:($mq-phone)) {
+    @media only screen and (max-width:($mq-phone)) {
         font-size: 116%;
     }
 }
@@ -19,7 +19,7 @@
     line-height: 150%;
 
     /* Phone */
-    @media (max-width:($mq-phone)) {
+    @media only screen and (max-width:($mq-phone)) {
         font-size: 116%;
     }
 }
@@ -63,7 +63,7 @@ h1 {
     line-height: 115%;
     font-size: 212%;
 
-    @media (max-width:($mq-phone)) {
+    @media only screen and (max-width:($mq-phone)) {
         font-size: 167%;
     }
 }
@@ -82,7 +82,7 @@ h4 {
 }
 
 /* Phone & Tablet */
-@media (max-width:($mq-tablet - 1px)) {
+@media only screen and (max-width:($mq-tablet - 1px)) {
     p {
         margin-top: 5px;
         margin-bottom: 5px;
@@ -106,7 +106,7 @@ h4 {
 }
 
 /* Tablet */
-@media (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
+@media only screen and (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
 
     /* Media specific unit sizes */
     .yui3-g-r > .yui3-u-1-small-tablet {
@@ -224,7 +224,7 @@ h4 {
 
 
 /* Phones */
-@media (max-width:$mq-phone) {
+@media only screen and (max-width:$mq-phone) {
 
     /* Media specific unit sizes */
     .yui3-g-r > .yui3-u-1-phone {

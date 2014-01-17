@@ -21,7 +21,7 @@
         padding: 60px 20px 60px 75px;
 
         /* phone */
-        @media (max-width:$mq-phone) {
+        @media only screen and (max-width:$mq-phone) {
             padding: 0;
         }
     }
@@ -39,18 +39,18 @@
 
         &.desktop-only {
             /* tablet */
-            @media (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
+            @media only screen and (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
                 padding-left: 30px;
             }
         }
 
         /* tablet */
-        @media (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
+        @media only screen and (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
             padding-left: 120px;
         }
 
         /* Phone */
-        @media (max-width:$mq-phone) {
+        @media only screen and (max-width:$mq-phone) {
             padding: 0;
         }
     }
@@ -74,14 +74,14 @@
             width: image-width("images/test/cbc/diagram/rbc-2x.png") / 2;
 
             /* tablet */
-            @media (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
+            @media only screen and (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
                 $width: 65px;
                 left: - $width - 25px;
                 width: $width;
             }
 
             /* Phone */
-            @media (max-width:$mq-phone) {
+            @media only screen and (max-width:$mq-phone) {
                 display: none;
             }
         }
@@ -155,7 +155,7 @@
         }
     }
 
-    @media (max-width:($mq-phone)) {
+    @media only screen and (max-width:($mq-phone)) {
         $headerHeight: 55px;
         $iconHeight: 42px;
         $iconWidth: 42px;

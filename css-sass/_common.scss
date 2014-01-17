@@ -6,12 +6,12 @@ $testHeaderHeight: 85px;
     padding: 0 $pageSectionPaddingRight 0 $pageSectionPaddingLeft;
 
     /* Tablet */
-    @media (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
+    @media only screen and (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
         padding: 0 40px;
     }
 
     /* Phone */
-    @media (max-width:($mq-phone)) {
+    @media only screen and (max-width:($mq-phone)) {
         padding: 0;
     }
 }

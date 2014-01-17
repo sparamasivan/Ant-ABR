@@ -76,7 +76,7 @@
     }
 
 
-    @media (max-width:($mq-tablet - 1px)) {
+    @media only screen and (max-width:($mq-tablet - 1px)) {
         .label {
             .value {
                 font-size: 210%;

@@ -129,21 +129,21 @@
     }
 
     /* tablet */
-    @media (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
+    @media only screen and (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
         .label {
             font-size:130%;
         }
     }
 
     /* phone */
-    @media (max-width:($mq-phone)) {
+    @media only screen and (max-width:($mq-phone)) {
         .label {
             font-size: 100%;
         }
     }
 
     /* phone */
-    @media (max-width:($mq-phone - 120px)) {
+    @media only screen and (max-width:($mq-phone - 120px)) {
         .value {
             &.good {
                 .text {

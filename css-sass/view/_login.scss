@@ -48,7 +48,7 @@
     }
 
     /* desktop & tablet */
-    @media (min-width:($mq-phone + 1px)) {
+    @media only screen and (min-width:($mq-phone + 1px)) {
         .page-section-top {
             .yui3-u-c {
                 margin-top: 10px;
@@ -67,7 +67,7 @@
     }
 
     /* tablet */
-    @media (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
+    @media only screen and (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
         .title {
             font-size: 250%;
         }

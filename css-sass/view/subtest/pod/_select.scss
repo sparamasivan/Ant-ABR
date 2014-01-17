@@ -3,7 +3,7 @@
 	margin-left: 10px;
     
     /* phone */
-    @media (max-width:($mq-phone)) {
+    @media only screen and (max-width:($mq-phone)) {
         margin-left: 5px;
     }
 }

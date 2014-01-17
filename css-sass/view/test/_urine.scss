@@ -13,7 +13,7 @@
         font-size: 167%;
 
         /* phone */
-        @media (max-width:$mq-phone) {
+        @media only screen and (max-width:$mq-phone) {
             font-size: 146.5%;
         }
     }
@@ -45,7 +45,7 @@
             line-height: 100%;
 
             /* phone */
-            @media (max-width:$mq-phone) {
+            @media only screen and (max-width:$mq-phone) {
                 font-size: 138.5%;
             }
         }
@@ -75,7 +75,7 @@
             margin-top: 26%;
     
             /* phone */
-            @media (max-width:$mq-phone) {
+            @media only screen and (max-width:$mq-phone) {
                 margin-top: 30px;
             }
         }
@@ -92,7 +92,7 @@
             padding-left: 10px;
 
             /* phone */
-            @media (max-width:$mq-phone) {
+            @media only screen and (max-width:$mq-phone) {
                 font-size: 138.5%;
             }
         }
@@ -116,7 +116,7 @@
                     left: -7%;
 
                     /* phone */
-                    @media (max-width:$mq-phone) {
+                    @media only screen and (max-width:$mq-phone) {
                         left: -3%;
                     }
                 }
@@ -206,7 +206,7 @@
             }
 
             /* phone */
-            @media (max-width:$mq-phone) {
+            @media only screen and (max-width:$mq-phone) {
                 padding: 7px 10px 7px (10px + $widgetIndicatorWidth);
                 max-width: 150px;
 
@@ -222,7 +222,7 @@
             margin: 15px 0 0 20px;
 
             /* phone */
-            @media (max-width:$mq-phone) {
+            @media only screen and (max-width:$mq-phone) {
                 margin-left: 10px;
             }
         }
@@ -236,7 +236,7 @@
                 bottom: 43%;
 
                 /* phone */
-                @media (max-width:$mq-phone) {
+                @media only screen and (max-width:$mq-phone) {
                     font-size: 230%;
                 }
             }

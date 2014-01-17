@@ -16,7 +16,7 @@
 		position: relative;
 		margin: 20px 0 30px 0;
 
-		@media (max-width: $maxWidthNoAvatar) {
+		@media only screen and (max-width: $maxWidthNoAvatar) {
 			margin-bottom: 15px;
 		}
 
@@ -28,12 +28,12 @@
 			height: 100%;
 			overflow: hidden;
 
-			@media (max-width:($mq-tablet - 1px)) {
+			@media only screen and (max-width:($mq-tablet - 1px)) {
 				left: 0;
 				width: 31%
 			}
 
-			@media (max-width: $maxWidthNoAvatar) {
+			@media only screen and (max-width: $maxWidthNoAvatar) {
 				display: none;
 			}
 		}
@@ -48,7 +48,7 @@
 			z-index: 1;
 			display: block;
 
-			@media (max-width: $maxWidthNoAvatar) {
+			@media only screen and (max-width: $maxWidthNoAvatar) {
 				display: none;
 			}
 		}
@@ -61,11 +61,11 @@
 			width: 56%;
 			height: 100%;
 
-			@media (max-width:($mq-tablet - 1px)) {
+			@media only screen and (max-width:($mq-tablet - 1px)) {
 				width: 60%;
 			}
 
-			@media (max-width: $maxWidthNoAvatar) {
+			@media only screen and (max-width: $maxWidthNoAvatar) {
 				width: 100%;
 				position: relative;
 				left: 0;
@@ -78,13 +78,13 @@
 				left: 0;
 				margin: 0;
 
-				@media (max-width: $maxWidthNoAvatar) {
+				@media only screen and (max-width: $maxWidthNoAvatar) {
 					position: relative;
 					top: 0;
 					margin-bottom: 10px;
 				}
 
-				@media (max-width:($mq-phone)) {
+				@media only screen and (max-width:($mq-phone)) {
 					padding-left: 10px;
 				}
 			}
@@ -114,11 +114,11 @@
 					}
 				}
 
-				@media (max-width:($mq-tablet - 1px)) {
+				@media only screen and (max-width:($mq-tablet - 1px)) {
 					margin-top: 7.2%;
 				}
 
-				@media (max-width: $maxWidthNoAvatar) {
+				@media only screen and (max-width: $maxWidthNoAvatar) {
 					margin-top: 0;
 					background-color: white;
 					height: 80px;
@@ -132,7 +132,7 @@
 					}
 				}
 
-				@media (max-width:($mq-phone)) {
+				@media only screen and (max-width:($mq-phone)) {
 					margin-left: 0;
 					padding-left: 0;
 					background-position: 10px center;
@@ -165,7 +165,7 @@
 					font-size: 182%;
 					line-height: 104%;
 
-					@media (max-width: $maxWidthNoAvatar) {
+					@media only screen and (max-width: $maxWidthNoAvatar) {
 						font-size: 146.5%;
 						line-height: 100%;
 
@@ -194,7 +194,7 @@
 				color: white;
 				padding-top: 8px;
 
-				@media (max-width:($mq-phone)) {
+				@media only screen and (max-width:($mq-phone)) {
 					padding-left: 10px;
 				}
 			}
@@ -269,7 +269,7 @@
 		bottom: -44px;
 		margin-left: -1 * $widgetCircleArrowWidth / 2;
 
-		@media (max-width:($mq-phone)) {
+		@media only screen and (max-width:($mq-phone)) {
 			margin-left: -1 * $widgetCircleArrowWidthPhone / 2;
 		}
 	}
@@ -303,7 +303,7 @@
 			margin-bottom: 0;
 
 
-			@media (max-width:($mq-phone)) {
+			@media only screen and (max-width:($mq-phone)) {
 				padding-top: 85px;
 			}
 		}
@@ -319,7 +319,7 @@
 	}
 
 	/* desktop & tablet */
-	@media (min-width:($mq-phone + 1px)) {
+	@media only screen and (min-width:($mq-phone + 1px)) {
 		.page-section-comment {
 			padding-top:20px;
 			padding-bottom: 10px;
@@ -332,7 +332,7 @@
 	}
 
 	/* phone */
-	@media (max-width:($mq-phone)) {
+	@media only screen and (max-width:($mq-phone)) {
 		.page-section-ran {
 			.testCounter {
 				margin: 15px 0;

@@ -9,12 +9,12 @@
     padding: 0 20px 15px 160px;
 
     /* tablet */
-    @media (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
+    @media only screen and (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
         padding-left: 140px;
     }
 
     /* Phone */
-    @media (max-width:$mq-phone) {
+    @media only screen and (max-width:$mq-phone) {
         padding-left: 0;
         padding-right: 0;
     }
@@ -39,7 +39,7 @@
 
 
         /* Phone */
-        @media (max-width:$mq-phone) {
+        @media only screen and (max-width:$mq-phone) {
             font-size: 146.5%;
 
             .widget-arrow {

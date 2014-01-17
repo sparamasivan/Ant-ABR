@@ -7,7 +7,7 @@
     background-color: #0099be;
     
     /* desktop */
-    @media (min-width:($mq-tablet)) {
+    @media only screen and (min-width:($mq-tablet)) {
         // center logo
         .logo-container {
             margin: 0 5%;
@@ -20,7 +20,7 @@
     }
 
     /* tablet & desktop */
-    @media (min-width:($mq-phone + 1)) {
+    @media only screen and (min-width:($mq-phone + 1)) {
         padding-top: 15px;
     }
 
@@ -38,7 +38,7 @@
             padding-left: 15px;
 
             /* phone */
-            @media (max-width:($mq-phone)) {
+            @media only screen and (max-width:($mq-phone)) {
                 padding-right: 50px;
             }
         }
@@ -59,7 +59,7 @@
     }
 
     /* phone */
-    @media (max-width:($mq-phone)) {
+    @media only screen and (max-width:($mq-phone)) {
         padding: 0;
 
         .widget-circle-arrow {
@@ -136,7 +136,7 @@
     }
 
     /* phone */
-    @media (max-width:($mq-phone)) {
+    @media only screen and (max-width:($mq-phone)) {
         padding: 1px 0;
 
         .section-copyright {

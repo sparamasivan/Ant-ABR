@@ -220,7 +220,7 @@
     }
 
     /* phone */
-    @media (max-width:$mq-phone) {
+    @media only screen and (max-width:$mq-phone) {
         .scroller-container {
             margin: 0;
             position: relative;
@@ -364,7 +364,7 @@
         }
 
         /* phone */
-        @media (max-width:$mq-phone) {
+        @media only screen and (max-width:$mq-phone) {
             padding: 10px;
 
             .info {

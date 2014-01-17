@@ -43,13 +43,13 @@
 	}
 }
 
-@media (max-width:($mq-tablet)) {
+@media only screen and (max-width:($mq-tablet)) {
 	.widget {
 		margin-top:180px!important;
 	}
 }
 
-@media (max-width:($mq-phone)) {
+@media only screen and (max-width:($mq-phone)) {
 	.widget {
 		width:306px!important;
 		margin-top:125px!important;

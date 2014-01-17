@@ -3,7 +3,7 @@
 	margin: 0 30% 0 0;
 
 	/* phone */
-	@media (max-width:($mq-phone)) {
+	@media only screen and (max-width:($mq-phone)) {
 		margin-right: 20%;
 	}
 

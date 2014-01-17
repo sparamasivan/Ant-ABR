@@ -30,14 +30,14 @@
     }
 
     /* Tablet + Phone */
-    @media (max-width:($mq-tablet - 1px)) {
+    @media only screen and (max-width:($mq-tablet - 1px)) {
         .description {
             margin-top: 0;
         }
     }
 
     /* phone */
-    @media (max-width:$mq-phone) {
+    @media only screen and (max-width:$mq-phone) {
         >.inner {
             padding: 10px 0 25px 0;
         }
