@@ -62,26 +62,30 @@ define([
     });
 
     Handlebars.registerHelper('list', function(list, options) {
-        var i, str = '';
+        var i,
+            str = '',
+            wrapFn = function(text) {
+                return '<span class="item">' + Handlebars.Utils.escapeExpression(text) + '</span>';
+            };
 
         switch(list.length) {
             case 0:
                 break;
 
             case 1:
-                str = Handlebars.Utils.escapeExpression(list[0]);
+                str = wrapFn(list[0]);
                 break;
 
             case 2:
-                str = Handlebars.Utils.escapeExpression(list[0]) + ' and ' + Handlebars.Utils.escapeExpression(list[1]);
+                str = wrapFn(list[0]) + ' and ' + wrapFn(list[1]);
                 break;
 
             default:
                 for(i=0; i < list.length - 1; i++) {
-                    str += Handlebars.Utils.escapeExpression(list[i]) + ', ';
+                    str += wrapFn(list[i]) + ', ';
                 }
 
-                str += 'and ' + Handlebars.Utils.escapeExpression(list[i]);
+                str += 'and ' + wrapFn(list[i]);
                 break;
         }
         

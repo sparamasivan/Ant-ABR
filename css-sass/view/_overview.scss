@@ -227,6 +227,11 @@
 		.testCounter {
 			text-align: center;
 			margin: 20px 0;
+			font-weight: normal;
+
+			.item {
+				font-weight: bold;
+			}
 		}
 	}
 

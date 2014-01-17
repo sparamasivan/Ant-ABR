@@ -7,6 +7,12 @@
     }
 }
 
+.page-mainmenu {
+    @media print {
+        display: none;
+    }
+}
+
 .page-section-top {
     background-color: #0099be;
     

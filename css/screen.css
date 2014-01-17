@@ -811,6 +811,12 @@ tt {
     display: none !important;
   }
 }
+/* screen */
+@media only screen {
+  .yui3-visible-print {
+    display: none !important;
+  }
+}
 /* YUI CSS Detection Stamp */
 #yui3-css-stamp.cssgrids-responsive {
   display: none;
@@ -2591,6 +2597,12 @@ span.placeholder {
   }
 }
 
+@media print {
+  .page-mainmenu {
+    display: none;
+  }
+}
+
 .page-section-top {
   background-color: #0099be;
   /* desktop */
@@ -3382,6 +3394,10 @@ span.placeholder {
 .view-overview .page-section-ran .testCounter {
   text-align: center;
   margin: 20px 0;
+  font-weight: normal;
+}
+.view-overview .page-section-ran .testCounter .item {
+  font-weight: bold;
 }
 .view-overview .page-section-comment {
   background-color: white;
