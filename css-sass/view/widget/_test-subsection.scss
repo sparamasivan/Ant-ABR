@@ -69,6 +69,10 @@
             margin-top: 0;
             margin-bottom: 0;
             color: #6c6c6c;
+
+                @media print {
+                    display: none;
+                }
         }
     }
 }

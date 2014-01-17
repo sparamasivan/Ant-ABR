@@ -1992,6 +1992,11 @@ h4 .small {
     padding: 0;
   }
 }
+@media print {
+  .page-section {
+    padding: 0;
+  }
+}
 
 .section-break {
   height: 28px;
@@ -2585,6 +2590,11 @@ span.placeholder {
   margin-top: 0;
   margin-bottom: 0;
   color: #6c6c6c;
+}
+@media print {
+  .view-widget-test-subsection > .body > .text {
+    display: none;
+  }
 }
 
 .page-section-narrow {
@@ -3657,6 +3667,11 @@ span.placeholder {
 .view-test-base .test-section-description p {
   color: #6c6c6c;
 }
+@media print {
+  .view-test-base .test-section-description p {
+    display: none;
+  }
+}
 .view-test-base .test-section-description .icon {
   display: block;
   position: absolute;
@@ -4297,6 +4312,11 @@ span.placeholder {
   width: 65px;
   vertical-align: middle;
 }
+@media print {
+  .view-subtest-range-group .pager {
+    display: none;
+  }
+}
 .view-subtest-range-group .pager .button {
   margin: 45px 0 21px 0;
   width: 45px;
@@ -4363,11 +4383,23 @@ span.placeholder {
   height: 100%;
   position: relative;
 }
+@media print {
+  .view-subtest-range-group .ranges {
+    width: 100% !important;
+    display: table;
+  }
+}
 .view-subtest-range-group .range-item {
   height: 100%;
   float: left;
   position: relative;
   width: 80px;
+}
+@media print {
+  .view-subtest-range-group .range-item {
+    display: table-cell;
+    float: none;
+  }
 }
 .view-subtest-range-group .range-item .label {
   width: 100%;

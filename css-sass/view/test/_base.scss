@@ -74,6 +74,10 @@
 
         p {
             color: #6c6c6c;
+
+            @media print {
+                display: none;
+            }
         }
 
         .icon {

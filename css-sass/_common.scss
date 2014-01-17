@@ -14,6 +14,10 @@ $testHeaderHeight: 85px;
     @media only screen and (max-width:($mq-phone)) {
         padding: 0;
     }
+
+    @media print {
+        padding: 0;
+    }
 }
 
 .section-break {
