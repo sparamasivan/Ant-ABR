@@ -43,9 +43,9 @@
 
 	<!-- tests ran summary -->
 	<div class="yui3-g-r page-section page-section-ran">
-		<div class="yui3-u-1-8 yui3-u-1-12-small-tablet yui3-hidden-phone"></div>
+		<div class="yui3-u-1-8 yui3-u-1-12-small-tablet yui3-hidden-phone yui3-hidden-print"></div>
 
-		<div class="yui3-u-3-4 yui3-u-5-6-small-tablet">
+		<div class="yui3-u-3-4 yui3-u-5-6-small-tablet yui3-u-1-print">
 			<div class="yui3-u-c">
 				<h1 class="testCounter">
 					We ran {{list testTitles}} to provide a bigger picture of {{patient.name}}’s health.
@@ -56,13 +56,13 @@
 
 	<!-- comment -->
 	<div class="yui3-g-r page-section page-section-comment">
-		<div class="yui3-u-5-24 yui3-hidden-phone">
+		<div class="yui3-u-5-24 yui3-hidden-phone yui3-hidden-print">
 			<div class="yui3-u-c">
 				<img src="images/overview/recap/comments.png" alt="Dr Comments" class="section-bullet" />
 			</div>
 		</div>
 
-		<div class="yui3-u-2-3">
+		<div class="yui3-u-2-3 yui3-u-17-24-print">
 			<div class="yui3-u-c">
 				<h2>Dr. {{doctor.lastName}}'s Comments</h2>
 
@@ -84,13 +84,13 @@
 	<!-- next steps -->
 	<div class="page-section-wrapper page-section-next-steps">
 		<div class="yui3-g-r page-section">
-			<div class="yui3-u-5-24 yui3-hidden-phone">
+			<div class="yui3-u-5-24 yui3-hidden-phone yui3-hidden-print">
 				<div class="yui3-u-c">
 					<img src="images/overview/recap/next-steps.png" alt="next steps" class="section-bullet" />
 				</div>
 			</div>
 
-			<div class="yui3-u-1-2">
+			<div class="yui3-u-1-2 yui3-u-17-24-print">
 				<div class="yui3-u-c">
 					<h2>Next Steps</h2>
 
@@ -127,7 +127,7 @@
 	</div>
 
 	<!-- explore tests -->
-	<div class="yui3-g-r page-section page-section-explore-tests">
+	<div class="yui3-g-r page-section page-section-explore-tests yui3-hidden-print">
 		<div class="yui3-u-1">
 			<div class="yui3-u-c">
 				<h1>Learn more about the tests with {{patient.name}}’s results below.</h1>

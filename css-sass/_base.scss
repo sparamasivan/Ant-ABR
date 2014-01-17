@@ -340,6 +340,123 @@ h4 {
     }
 }
 
+/* Print */
+@media only print {
+
+    /* Media specific unit sizes */
+    .yui3-g-r > .yui3-u-1-print {
+        width: 100%;
+    }
+
+    .yui3-g-r > .yui3-u-1-2-print {
+        width: 50%;
+    }
+
+    .yui3-g-r > .yui3-u-1-3-print {
+        width: 33.33333%;
+    }
+
+    .yui3-g-r > .yui3-u-2-3-print {
+        width: 66.66666%;
+    }
+
+    .yui3-g-r > .yui3-u-1-4-print {
+        width: 25%;
+    }
+
+    .yui3-g-r > .yui3-u-3-4-print {
+        width: 75%;
+    }
+
+    .yui3-g-r > .yui3-u-1-5-print {
+        width: 20%;
+    }
+
+    .yui3-g-r > .yui3-u-2-5-print {
+        width: 40%;
+    }
+
+    .yui3-g-r > .yui3-u-3-5-print {
+        width: 60%;
+    }
+
+    .yui3-g-r > .yui3-u-4-5-print {
+        width: 80%;
+    }
+
+    .yui3-g-r > .yui3-u-1-6-print {
+        width: 16.656%;
+    }
+
+    .yui3-g-r > .yui3-u-5-6-print {
+        width: 83.33%;
+    }
+
+    .yui3-g-r > .yui3-u-1-8-print {
+        width: 12.5%;
+    }
+
+    .yui3-g-r > .yui3-u-3-8-print {
+        width: 37.5%;
+    }
+
+    .yui3-g-r > .yui3-u-5-8-print {
+        width: 62.5%;
+    }
+
+    .yui3-g-r > .yui3-u-7-8-print {
+        width: 87.5%;
+    }
+
+    .yui3-g-r > .yui3-u-1-12-print {
+        width: 8.3333%;
+    }
+
+    .yui3-g-r > .yui3-u-5-12-print {
+        width: 41.6666%;
+    }
+
+    .yui3-g-r > .yui3-u-7-12-print {
+        width: 58.3333%;
+    }
+
+    .yui3-g-r > .yui3-u-11-12-print {
+        width: 91.6666%;
+    }
+
+    .yui3-g-r > .yui3-u-1-24-print {
+        width: 4.1666%;
+    }
+
+    .yui3-g-r > .yui3-u-5-24-print {
+        width: 20.8333%;
+    }
+
+    .yui3-g-r > .yui3-u-7-24-print {
+        width: 29.1666%;
+    }
+
+    .yui3-g-r > .yui3-u-11-24-print {
+        width: 45.8333%;
+    }
+
+    .yui3-g-r > .yui3-u-13-24-print {
+        width: 54.1666%;
+    }
+
+    .yui3-g-r > .yui3-u-17-24-print {
+        width: 70.8333%;
+    }
+
+    .yui3-g-r > .yui3-u-19-24-print {
+        width: 79.1666%;
+    }
+
+    .yui3-g-r > .yui3-u-23-24-print {
+        width: 95.8333%;
+    }
+}
+
 .clearfix:before, .clearfix:after {
 	content:"\0020";
 	display:block;

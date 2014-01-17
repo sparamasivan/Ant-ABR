@@ -8,6 +8,10 @@
 
     padding: 0 20px 15px 160px;
 
+    @media print {
+        padding: 0;
+    }
+
     /* tablet */
     @media only screen and (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
         padding-left: 140px;
@@ -35,6 +39,10 @@
             position: absolute;
             top: 3px + 10px;
             left: - $widgetArrowWidth - 10px;
+
+            @media print {
+                display: none;
+            }
         }
 
 

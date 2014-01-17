@@ -272,6 +272,10 @@
 		@media only screen and (max-width:($mq-phone)) {
 			margin-left: -1 * $widgetCircleArrowWidthPhone / 2;
 		}
+
+		@media print {
+			display: none;
+		}
 	}
 
 	.contact {

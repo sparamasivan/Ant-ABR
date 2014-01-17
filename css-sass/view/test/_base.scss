@@ -37,6 +37,10 @@
     .test-section-inner-with-icon {
         padding: 20px 20px 20px 140px;
 
+        @media print {
+            padding: 0;
+        }
+
         &.first {
             padding-bottom: 0;
         }
