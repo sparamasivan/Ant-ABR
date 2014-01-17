@@ -1,6 +1,10 @@
 .page-section-narrow {
     max-width: $max-page-width;
     margin: 0 auto;
+
+    @media print {
+        max-width: none;
+    }
 }
 
 .page-section-top {
@@ -49,6 +53,10 @@
     background-image: url('../images/overview/recap/pattern.png');
     padding: 10px 0 20px;
 
+    @media print {
+        display: none;
+    }
+
     .widget-circle-arrow {
         margin: 10px auto 20px;
     }
@@ -78,6 +86,10 @@
     background-color: #0099BE;
     color: #FFF;
     padding: 30px 0;
+
+    @media print {
+        display: none;
+    }
 
     .contact-us {
         color:#ffe507;

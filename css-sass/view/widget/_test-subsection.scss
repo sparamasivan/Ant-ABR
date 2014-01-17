@@ -53,6 +53,10 @@
     >.body {
         display: none;
 
+        @media print {
+            display: block !important;
+        }
+
         >.text {
             margin-top: 0;
             margin-bottom: 0;

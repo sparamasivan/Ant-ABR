@@ -228,6 +228,12 @@
         display: none !important;
     }
 }
+/* print */
+@media only print {
+    .yui3-hidden-print {
+        display: none !important;
+    }
+}
 
 /* YUI CSS Detection Stamp */
 #yui3-css-stamp.cssgrids-responsive { display: none; }

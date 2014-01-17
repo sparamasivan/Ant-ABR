@@ -805,6 +805,12 @@ tt {
     display: none !important;
   }
 }
+/* print */
+@media only print {
+  .yui3-hidden-print {
+    display: none !important;
+  }
+}
 /* YUI CSS Detection Stamp */
 #yui3-css-stamp.cssgrids-responsive {
   display: none;
@@ -1878,6 +1884,11 @@ h4 .small {
     background-size: 18px;
   }
 }
+@media print {
+  .section-break {
+    display: none;
+  }
+}
 
 .caption {
   font-family: 'Apercu', sans-serif;
@@ -2434,6 +2445,11 @@ span.placeholder {
 .view-widget-test-subsection > .body {
   display: none;
 }
+@media print {
+  .view-widget-test-subsection > .body {
+    display: block !important;
+  }
+}
 .view-widget-test-subsection > .body > .text {
   margin-top: 0;
   margin-bottom: 0;
@@ -2443,6 +2459,11 @@ span.placeholder {
 .page-section-narrow {
   max-width: 1000px;
   margin: 0 auto;
+}
+@media print {
+  .page-section-narrow {
+    max-width: none;
+  }
 }
 
 .page-section-top {
@@ -2488,6 +2509,11 @@ span.placeholder {
   padding: 10px 0 20px;
   /* phone */
 }
+@media print {
+  .page-section-conclusion {
+    display: none;
+  }
+}
 .page-section-conclusion .widget-circle-arrow {
   margin: 10px auto 20px;
 }
@@ -2514,6 +2540,11 @@ span.placeholder {
   color: #FFF;
   padding: 30px 0;
   /* phone */
+}
+@media print {
+  .page-footer {
+    display: none;
+  }
 }
 .page-footer .contact-us {
   color: #ffe507;
@@ -2584,6 +2615,11 @@ span.placeholder {
   height: 85px;
   z-index: 2;
   overflow: hidden;
+}
+@media print {
+  .view-report .test-headers {
+    display: none;
+  }
 }
 
 .view-mainmenu .page-section {
@@ -2839,6 +2875,11 @@ span.placeholder {
   width: 100%;
 }
 
+@media print {
+  .view-navigation {
+    display: none;
+  }
+}
 .view-navigation .bg {
   position: fixed;
   height: 100%;
@@ -3401,9 +3442,19 @@ span.placeholder {
 .view-test-base > .body.collapsed {
   display: none;
 }
+@media print {
+  .view-test-base > .body.collapsed {
+    display: block;
+  }
+}
 .view-test-base > .body > .overview {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+@media print {
+  .view-test-base > .body > .overview {
+    display: none;
+  }
 }
 .view-test-base .test-section {
   background-color: white;
@@ -3500,6 +3551,11 @@ span.placeholder {
   height: 47px;
   margin-left: 10px;
   display: inline-block;
+}
+@media print {
+  .test-header .title .icon {
+    display: none;
+  }
 }
 .test-header .title .text {
   font-family: 'Apercu', sans-serif;

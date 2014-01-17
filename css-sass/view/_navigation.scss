@@ -1,4 +1,8 @@
 .view-navigation {
+    @media print {
+        display: none;
+    }
+    
     .bg {
         position: fixed;
         height: 100%;

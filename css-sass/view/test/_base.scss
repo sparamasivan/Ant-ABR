@@ -3,11 +3,19 @@
     >.body {
         &.collapsed {
             display: none;
+
+            @media print {
+                display: block;
+            }
         }
 
         >.overview {
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
+
+            @media print {
+                display: none;
+            }
         }
     }
 
@@ -118,6 +126,10 @@
             height: $iconHeight;
             margin-left: 10px;
             display: inline-block;
+
+            @media print {
+                display: none;
+            }
         }
 
         .text {

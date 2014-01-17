@@ -28,6 +28,10 @@ $testHeaderHeight: 85px;
         background-image: url("../images/common/diamonds-2x.png");
         background-size: image-width("../images/common/diamonds-2x.png") / 2;
     }
+
+    @media print {
+        display: none;
+    }
 }
 
 .caption {
