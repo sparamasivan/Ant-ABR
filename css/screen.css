@@ -4178,6 +4178,7 @@ span.placeholder {
 
 .view-subtest-range {
   font-family: 'Apercu', sans-serif;
+  page-break-inside: avoid;
 }
 .view-subtest-range .wrapper {
   position: relative;
@@ -4209,42 +4210,44 @@ span.placeholder {
   margin: 9px auto 0;
 }
 .view-subtest-range .actual {
-  height: 28px;
   padding-top: 87px;
 }
 .view-subtest-range .actual .range {
-  height: 100%;
-  background-color: #e8eae5;
+  border-top: 28px solid #e8eae5;
   border-radius: 3px;
   position: relative;
 }
 .view-subtest-range .actual .bar {
   position: absolute;
-  top: 0;
+  top: -28px;
   left: 0;
 }
 .view-subtest-range .actual .value {
-  height: 100%;
+  border-top: 28px solid #00b8d6;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
-  background-color: #00b8d6;
 }
 .view-subtest-range .actual .expected-value {
-  height: 100%;
+  height: 28px;
   background-image: url("../images/subtest/range/actual-expected-bg.png");
+}
+@media print {
+  .view-subtest-range .actual .expected-value {
+    display: none;
+  }
 }
 .view-subtest-range .expected {
   padding-top: 10px;
 }
 .view-subtest-range .expected .range {
-  padding: 2px 0;
-  height: 4px;
-  background-color: #e8eae5;
+  border-top: 8px solid #e8eae5;
   border-radius: 3px;
+  position: relative;
 }
 .view-subtest-range .expected .value {
-  height: 100%;
-  background-color: #6b6b6b;
+  position: absolute;
+  top: -6px;
+  border-top: 4px solid #6b6b6b;
 }
 .view-subtest-range .expected .label {
   color: #444;

@@ -1,5 +1,6 @@
 .view-subtest-range {
     @include secondaryFont;
+    page-break-inside: avoid;
 
     .wrapper {
         position: relative;
@@ -40,12 +41,13 @@
     }
 
     .actual {
-        height: 28px;
+        $rangeHeight: 28px;
         padding-top: 87px;
 
         .range {
-            height: 100%;
-            background-color: $rangeBgColor;
+            // using borders here instead of background-color, in order for the color
+            // to show up when printing
+            border-top: $rangeHeight solid $rangeBgColor;
             border-radius: 3px;
 
             position: relative;
@@ -53,36 +55,43 @@
 
         .bar {
             position: absolute;
-            top: 0;
+            top: - $rangeHeight;
             left: 0;
         }
 
         .value {
-            height: 100%;
+            border-top: $rangeHeight solid #00b8d6;
             border-top-left-radius: 3px;
             border-bottom-left-radius: 3px;
-            background-color: #00b8d6;
         }
 
         .expected-value {
-            height: 100%;
+            height: $rangeHeight;
             background-image: url("../images/subtest/range/actual-expected-bg.png");
+
+            @media print {
+                display: none;
+            }
         }
     }
 
     .expected {
+        $rangeHeight: 8px;
         padding-top: 10px;
 
         .range {
-            padding: 2px 0;
-            height: 4px;
-            background-color: $rangeBgColor;
+            // using borders here instead of background-color, in order for the color
+            // to show up when printing
+            border-top: $rangeHeight solid $rangeBgColor;
             border-radius: 3px;
+            position: relative;
         }
 
         .value {
-            height: 100%;
-            background-color: #6b6b6b;
+            $valueHeight: 4px;
+            position: absolute;
+            top: - $rangeHeight + ($rangeHeight - $valueHeight) / 2;
+            border-top: $valueHeight solid #6b6b6b;
         }
 
         .label {
