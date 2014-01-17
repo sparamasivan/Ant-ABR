@@ -21,8 +21,6 @@ $widgetIndicatorBigHeight: $widgetIndicatorBigWidth;
     cursor: pointer;
     position: relative;
 
-    background-image: url("../images/widget/indicator/good.png");
-
     .dot {
         position: absolute;
         display: block;
@@ -38,6 +36,10 @@ $widgetIndicatorBigHeight: $widgetIndicatorBigWidth;
 
         @include transition(all 0.1s ease-out);
 
+        @media print {
+            display: none;
+        }
+
         // IE8 and below doesn't support rounded border, so don't even try to show the dot
         display: none\9;
     }
@@ -52,21 +54,8 @@ $widgetIndicatorBigHeight: $widgetIndicatorBigWidth;
     }
 
     &.bad {
-        background-image: url("../images/widget/indicator/bad.png");
-
         .dot {
             background-color: #fff868;
-        }
-    }
-
-    @media 
-    only screen and (-webkit-min-device-pixel-ratio: 2), 
-    only screen and (min-resolution: 192dpi) {
-        background-image: url("../images/widget/indicator/good-2x.png");
-        background-size: 100%;
-
-        &.bad {
-            background-image: url("../images/widget/indicator/bad-2x.png");
         }
     }
 
@@ -74,21 +63,6 @@ $widgetIndicatorBigHeight: $widgetIndicatorBigWidth;
     &.big {
         width: $widthBig;
         height: $heightBig;
-        background-image: url("../images/widget/indicator/good-big.png");
-
-        &.bad {
-            background-image: url("../images/widget/indicator/bad-big.png");
-        }
-
-        @media 
-        only screen and (-webkit-min-device-pixel-ratio: 2), 
-        only screen and (min-resolution: 192dpi) {
-            background-image: url("../images/widget/indicator/good-big-2x.png");
-
-            &.bad {
-                background-image: url("../images/widget/indicator/bad-big-2x.png");
-            }
-        }
 
         .dot {
             width: $dotBigDiameter;

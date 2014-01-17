@@ -2346,7 +2346,6 @@ span.placeholder {
   display: inline-block;
   cursor: pointer;
   position: relative;
-  background-image: url("../images/widget/indicator/good.png");
 }
 .widget-indicator .dot {
   position: absolute;
@@ -2364,42 +2363,23 @@ span.placeholder {
   transition: all 0.1s ease-out;
   display: none\9;
 }
+@media print {
+  .widget-indicator .dot {
+    display: none;
+  }
+}
 .widget-indicator:hover .dot {
   width: 14px;
   height: 14px;
   margin: -7px 0 0 -7px;
   border-radius: 7px;
 }
-.widget-indicator.bad {
-  background-image: url("../images/widget/indicator/bad.png");
-}
 .widget-indicator.bad .dot {
   background-color: #fff868;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .widget-indicator {
-    background-image: url("../images/widget/indicator/good-2x.png");
-    background-size: 100%;
-  }
-  .widget-indicator.bad {
-    background-image: url("../images/widget/indicator/bad-2x.png");
-  }
 }
 .widget-indicator.big {
   width: 40px;
   height: 40px;
-  background-image: url("../images/widget/indicator/good-big.png");
-}
-.widget-indicator.big.bad {
-  background-image: url("../images/widget/indicator/bad-big.png");
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .widget-indicator.big {
-    background-image: url("../images/widget/indicator/good-big-2x.png");
-  }
-  .widget-indicator.big.bad {
-    background-image: url("../images/widget/indicator/bad-big-2x.png");
-  }
 }
 .widget-indicator.big .dot {
   width: 10px;
