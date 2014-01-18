@@ -2,6 +2,10 @@
 	@include secondaryFont;
 	max-width: 235px;
     margin: 0 auto;
+
+    @media print {
+        margin: 0;
+    }
 	
 	>.inner {
 		background-color: #fcfcfb;

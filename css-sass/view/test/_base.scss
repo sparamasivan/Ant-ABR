@@ -23,6 +23,10 @@
         @include primaryContent;
         margin-top: 10px;
         border-radius: 5px;
+
+        @media print {
+            margin-top: 0;
+        }
     }
 
     .test-section-inner {
@@ -30,6 +34,10 @@
 
         /* phone */
         @media only screen and (max-width:$mq-phone) {
+            padding: 0;
+        }
+
+        @media print {
             padding: 0;
         }
     }
@@ -106,6 +114,7 @@
 
 .test-header {
     $headerHeight: $testHeaderHeight;
+    $phoneHeaderHeight: 55px;
     $iconHeight: 47px;
     $iconWidth: 47px;
 
@@ -134,10 +143,6 @@
             height: $iconHeight;
             margin-left: 10px;
             display: inline-block;
-
-            @media print {
-                display: none;
-            }
         }
 
         .text {
@@ -175,18 +180,17 @@
         }
     }
 
-    @media only screen and (max-width:($mq-phone)) {
-        $headerHeight: 55px;
+    @media only screen and (max-width:($mq-phone)), print {
         $iconHeight: 42px;
         $iconWidth: 42px;
 
-        height: $headerHeight;
+        height: $phoneHeaderHeight;
         text-align: left;
         padding-right: 0;
         padding-left: 10px;
 
         .title {
-            margin-top: ($headerHeight - $iconHeight) / 2;
+            margin-top: ($phoneHeaderHeight - $iconHeight) / 2;
 
             .icon {
                 width: $iconWidth;
@@ -204,11 +208,43 @@
             width: $iconWidth;
             height: $iconHeight;
 
-            top: ($headerHeight - $iconHeight) / 2;
+            top: ($phoneHeaderHeight - $iconHeight) / 2;
             right: 60px;
 
             .text {
                 display: none;
+                left: auto;
+            }
+        }
+    }
+
+    @media only print {
+        padding-left: 0;
+        padding-right: 0;
+
+        height: auto;
+        border-top-width: $phoneHeaderHeight;
+        border-top-style: solid;
+        overflow: visible;
+
+        >.yui3-g {
+            position: absolute;
+            width: 100%;
+            top: - $phoneHeaderHeight;
+        }
+
+        .title {
+            display: block;
+            text-align: center;
+
+            .icon {
+                display: none;
+            }
+
+            .text {
+                position: static;
+                left: auto;
+                font-size: 197%;
             }
         }
     }
@@ -217,6 +253,10 @@
 @mixin view-test-base-extend ($type, $headingBgColor, $overviewBgColor, $diagramFilename : "diagram-2x.png") {
     .test-header.#{$type} {
         background-color: $headingBgColor;
+
+        @media print {
+            border-top-color: $headingBgColor;
+        }
     }
 
     .view-test-#{$type} {

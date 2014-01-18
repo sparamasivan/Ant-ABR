@@ -3505,6 +3505,11 @@ span.placeholder {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
 }
+@media print {
+  .reveal-modal-bg {
+    display: none !important;
+  }
+}
 
 .view-survey {
   padding: 0;
@@ -3516,6 +3521,11 @@ span.placeholder {
   box-shadow: none;
   margin-left: -40%;
   width: 80%;
+}
+@media print {
+  .view-survey {
+    display: none !important;
+  }
 }
 .view-survey .outer {
   display: inline-block;
@@ -3597,11 +3607,21 @@ span.placeholder {
   margin-top: 10px;
   border-radius: 5px;
 }
+@media print {
+  .view-test-base .test-section {
+    margin-top: 0;
+  }
+}
 .view-test-base .test-section-inner {
   padding: 60px 20px 60px 75px;
   /* phone */
 }
 @media only screen and (max-width: 630px) {
+  .view-test-base .test-section-inner {
+    padding: 0;
+  }
+}
+@media print {
   .view-test-base .test-section-inner {
     padding: 0;
   }
@@ -3698,11 +3718,6 @@ span.placeholder {
   margin-left: 10px;
   display: inline-block;
 }
-@media print {
-  .test-header .title .icon {
-    display: none;
-  }
-}
 .test-header .title .text {
   font-family: 'Apercu', sans-serif;
   font-size: 197%;
@@ -3726,7 +3741,7 @@ span.placeholder {
   width: 100%;
   height: 100%;
 }
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 630px), print {
   .test-header {
     height: 55px;
     text-align: left;
@@ -3753,11 +3768,44 @@ span.placeholder {
   }
   .test-header .status .text {
     display: none;
+    left: auto;
+  }
+}
+@media only print {
+  .test-header {
+    padding-left: 0;
+    padding-right: 0;
+    height: auto;
+    border-top-width: 55px;
+    border-top-style: solid;
+    overflow: visible;
+  }
+  .test-header > .yui3-g {
+    position: absolute;
+    width: 100%;
+    top: -55px;
+  }
+  .test-header .title {
+    display: block;
+    text-align: center;
+  }
+  .test-header .title .icon {
+    display: none;
+  }
+  .test-header .title .text {
+    position: static;
+    left: auto;
+    font-size: 197%;
   }
 }
 
 .test-header.accuplex {
   background-color: #bb1274;
+}
+@media print {
+  .test-header.accuplex {
+    border-top-color: #bb1274;
+  }
 }
 
 .view-test-accuplex > .body > .overview {
@@ -3769,6 +3817,11 @@ span.placeholder {
 
 .test-header.cbc {
   background-color: #00a977;
+}
+@media print {
+  .test-header.cbc {
+    border-top-color: #00a977;
+  }
 }
 
 .view-test-cbc > .body > .overview {
@@ -3853,6 +3906,11 @@ span.placeholder {
 .test-header.chemistry {
   background-color: #074d9f;
 }
+@media print {
+  .test-header.chemistry {
+    border-top-color: #074d9f;
+  }
+}
 
 .view-test-chemistry > .body > .overview {
   background-color: #2759b9;
@@ -3876,6 +3934,11 @@ span.placeholder {
 .test-header.felv-fiv {
   background-color: #028894;
 }
+@media print {
+  .test-header.felv-fiv {
+    border-top-color: #028894;
+  }
+}
 
 .view-test-felv-fiv > .body > .overview {
   background-color: #0e95a3;
@@ -3886,6 +3949,11 @@ span.placeholder {
 
 .test-header.heartworm {
   background-color: #d61e2a;
+}
+@media print {
+  .test-header.heartworm {
+    border-top-color: #d61e2a;
+  }
 }
 
 .view-test-heartworm > .body > .overview {
@@ -3898,6 +3966,11 @@ span.placeholder {
 .test-header.ova {
   background-color: #246dd7;
 }
+@media print {
+  .test-header.ova {
+    border-top-color: #246dd7;
+  }
+}
 
 .view-test-ova > .body > .overview {
   background-color: #2d90f7;
@@ -3908,6 +3981,11 @@ span.placeholder {
 
 .test-header.thyroxine {
   background-color: #f3791f;
+}
+@media print {
+  .test-header.thyroxine {
+    border-top-color: #f3791f;
+  }
 }
 
 .view-test-thyroxine > .body > .overview {
@@ -3929,6 +4007,11 @@ span.placeholder {
 
 .test-header.urine {
   background-color: #613b97;
+}
+@media print {
+  .test-header.urine {
+    border-top-color: #613b97;
+  }
 }
 
 .view-test-urine > .body > .overview {
@@ -4763,6 +4846,11 @@ span.placeholder {
   max-width: 235px;
   margin: 0 auto;
   /* phone */
+}
+@media print {
+  .view-subtest-pod-base {
+    margin: 0;
+  }
 }
 .view-subtest-pod-base > .inner {
   background-color: #fcfcfb;
