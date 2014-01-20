@@ -109,6 +109,10 @@
         margin: $rangeTop 0 $rangeBottom 0;
         position: absolute;
         top: 0;
+
+        @media print {
+            @include transform(none !important);
+        }
     }
 
     .ranges {
@@ -119,6 +123,7 @@
         @media print {
             width: 100% !important;
             display: table;
+            margin: 0 !important;
         }
     }
 

@@ -23,4 +23,8 @@
        dimensions may be incorrect */
     width: 100% !important;
     height: 100% !important;
+
+    @media print {
+        display: none !important;
+    }
 }

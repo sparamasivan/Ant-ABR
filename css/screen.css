@@ -2115,6 +2115,11 @@ span.placeholder {
   width: 100% !important;
   height: 100% !important;
 }
+@media print {
+  #qtip-overlay {
+    display: none !important;
+  }
+}
 
 .view-login {
   /* desktop & tablet */
@@ -4554,6 +4559,15 @@ span.placeholder {
   position: absolute;
   top: 0;
 }
+@media print {
+  .view-subtest-range-group .ranges-container {
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    transform: none !important;
+  }
+}
 .view-subtest-range-group .ranges {
   width: 100%;
   height: 100%;
@@ -4563,6 +4577,7 @@ span.placeholder {
   .view-subtest-range-group .ranges {
     width: 100% !important;
     display: table;
+    margin: 0 !important;
   }
 }
 .view-subtest-range-group .range-item {
