@@ -2672,7 +2672,8 @@ span.placeholder {
 }
 @media print {
   .page-section-conclusion {
-    display: none;
+    border-top: 1px solid #b9babd;
+    background-image: none;
   }
 }
 .page-section-conclusion .widget-circle-arrow {
@@ -2681,6 +2682,14 @@ span.placeholder {
 .page-section-conclusion h1 {
   text-align: center;
   margin: 0;
+}
+.page-section-conclusion .end-of-report {
+  margin-top: 10px;
+  font-family: 'Apercu', sans-serif;
+  font-weight: bold;
+  font-size: 116%;
+  text-align: center;
+  color: #00c3eb;
 }
 @media only screen and (max-width: 630px) {
   .page-section-conclusion {

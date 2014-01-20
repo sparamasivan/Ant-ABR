@@ -64,7 +64,8 @@
     padding: 10px 0 20px;
 
     @media print {
-        display: none;
+        border-top: 1px solid #b9babd;
+        background-image: none;
     }
 
     .widget-circle-arrow {
@@ -74,6 +75,16 @@
     h1 {
         text-align: center;
         margin: 0;
+    }
+
+    .end-of-report {
+        margin-top: 10px;
+
+        @include secondaryFont;
+        font-weight: bold;
+        font-size: 116%;
+        text-align: center;
+        color: #00c3eb;
     }
 
     /* phone */
