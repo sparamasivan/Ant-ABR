@@ -4677,6 +4677,7 @@ span.placeholder {
   }
 }
 .view-subtest-range-group .average-range-legend {
+  display: table-cell;
   width: 130px;
 }
 .view-subtest-range-group .average-range-legend .inner {
