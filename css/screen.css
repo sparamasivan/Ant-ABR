@@ -3671,6 +3671,11 @@ span.placeholder {
   color: #0099BE;
 }
 
+@media print {
+  .view-test-base .header-container {
+    margin: 20px 0;
+  }
+}
 .view-test-base > .body.collapsed {
   display: none;
 }
@@ -5177,6 +5182,11 @@ span.placeholder {
   border: 1px solid #a3a3a3;
   border-radius: 4px;
   padding: 15px 15px;
+}
+@media print {
+  .view-subtest-pod-base > .inner {
+    height: auto !important;
+  }
 }
 .view-subtest-pod-base > .inner > .header {
   font-size: 138.5%;

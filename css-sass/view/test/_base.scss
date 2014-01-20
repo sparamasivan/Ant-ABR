@@ -1,5 +1,11 @@
 .view-test-base {
 
+    .header-container {
+        @media print {
+            margin: 20px 0;
+        }
+    }
+
     >.body {
         &.collapsed {
             display: none;
