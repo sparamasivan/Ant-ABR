@@ -85,7 +85,7 @@ $widgetIndicatorBigHeight: $widgetIndicatorBigWidth;
 
     @media print {
         &.print-small,
-        &.big {
+        &.print-small.big {
             width: $widthPrintSmall;
             height: $heightPrintSmall;
         }

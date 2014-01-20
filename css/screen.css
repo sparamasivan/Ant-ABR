@@ -2410,7 +2410,7 @@ span.placeholder {
   border-radius: 9px;
 }
 @media print {
-  .widget-indicator.print-small, .widget-indicator.big {
+  .widget-indicator.print-small, .widget-indicator.print-small.big {
     width: 20px;
     height: 20px;
   }
