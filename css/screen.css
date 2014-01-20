@@ -4428,17 +4428,21 @@ span.placeholder {
   padding-top: 87px;
 }
 .view-subtest-range .actual .range {
-  border-top: 28px solid #e8eae5;
+  border: 14px solid #e8eae5;
+  border-left: 0;
+  border-right: 0;
   border-radius: 3px;
   position: relative;
 }
 .view-subtest-range .actual .bar {
   position: absolute;
-  top: -28px;
+  top: -14px;
   left: 0;
 }
 .view-subtest-range .actual .value {
-  border-top: 28px solid #00b8d6;
+  border: 14px solid #00b8d6;
+  border-left: 0;
+  border-right: 0;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
@@ -4455,14 +4459,18 @@ span.placeholder {
   padding-top: 10px;
 }
 .view-subtest-range .expected .range {
-  border-top: 8px solid #e8eae5;
+  border: 4px solid #e8eae5;
+  border-left: 0;
+  border-right: 0;
   border-radius: 3px;
   position: relative;
 }
 .view-subtest-range .expected .value {
   position: absolute;
-  top: -6px;
-  border-top: 4px solid #6b6b6b;
+  top: -2px;
+  border: 2px solid #6b6b6b;
+  border-left: 0;
+  border-right: 0;
 }
 .view-subtest-range .expected .label {
   color: #444;

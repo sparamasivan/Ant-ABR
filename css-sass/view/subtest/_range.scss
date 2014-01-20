@@ -47,7 +47,9 @@
         .range {
             // using borders here instead of background-color, in order for the color
             // to show up when printing
-            border-top: $rangeHeight solid $rangeBgColor;
+            border: ($rangeHeight / 2) solid $rangeBgColor;
+            border-left: 0;
+            border-right: 0;
             border-radius: 3px;
 
             position: relative;
@@ -55,12 +57,14 @@
 
         .bar {
             position: absolute;
-            top: - $rangeHeight;
+            top: - $rangeHeight / 2;
             left: 0;
         }
 
         .value {
-            border-top: $rangeHeight solid #00b8d6;
+            border: ($rangeHeight / 2) solid #00b8d6;
+            border-left: 0;
+            border-right: 0;
             border-top-left-radius: 3px;
             border-bottom-left-radius: 3px;
         }
@@ -82,7 +86,9 @@
         .range {
             // using borders here instead of background-color, in order for the color
             // to show up when printing
-            border-top: $rangeHeight solid $rangeBgColor;
+            border: ($rangeHeight / 2) solid $rangeBgColor;
+            border-left: 0;
+            border-right: 0;
             border-radius: 3px;
             position: relative;
         }
@@ -90,8 +96,10 @@
         .value {
             $valueHeight: 4px;
             position: absolute;
-            top: - $rangeHeight + ($rangeHeight - $valueHeight) / 2;
-            border-top: $valueHeight solid #6b6b6b;
+            top: - $rangeHeight / 2 / 2;
+            border: ($valueHeight / 2) solid #6b6b6b;
+            border-left: 0;
+            border-right: 0;
         }
 
         .label {
