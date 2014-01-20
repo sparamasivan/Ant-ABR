@@ -4,6 +4,7 @@
             "lastName": "Solberg"
         },
         "clinic": {
+            "name": "Pets Unlimited",
             "email": "clinic@clinicname.com",
             "phone": "305-555-1312"
         },

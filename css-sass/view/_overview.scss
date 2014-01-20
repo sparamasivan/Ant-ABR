@@ -1,8 +1,43 @@
 .view-overview {
 	$maxWidthNoAvatar: 640px - 1px;
+	$iconGood: "../images/overview/good.png";
+
 	@include translateZ(0);
 	.result-summary {
 		background-color: #0099be;
+
+		.print {
+			display: none;
+		}
+
+		@media print {
+			background-color: transparent;
+
+			.screen {
+				display: none;
+			}
+
+			.print {
+				display: block;
+				.text {
+					@include secondaryFont;
+					font-weight: bold;
+					font-size: 150%;
+				}
+				.status {
+					position: relative;
+					color: #00beeb;
+
+					.icon {
+						position: absolute;
+						top: - image-width($iconGood) / 8;
+						left: - image-width($iconGood) * 1.1;
+
+						width: image-width($iconGood) * .75;
+					}
+				}
+			}
+		}
 	}
 
 	.avatar-flag-container {
@@ -100,10 +135,10 @@
 				    position: absolute;
 				    top: 50%;
 				    left: 0;
-				    width: image-width("../images/overview/good.png");
-				    height: image-height("../images/overview/good.png");
-					background-image: url("../images/overview/good.png");
-				    margin-top: -1 * (image-height("../images/overview/good.png") / 2);
+				    width: image-width($iconGood);
+				    height: image-height($iconGood);
+					background-image: url($iconGood);
+				    margin-top: -1 * (image-height($iconGood) / 2);
 				    cursor: pointer;
 
 					@media
@@ -224,6 +259,10 @@
 		@include primaryContent;
 		margin-top: 2px;
 
+		@media print {
+			border-top: 1px dotted #C7C7C7;
+		}
+
 		.testCounter {
 			text-align: center;
 			margin: 20px 0;
@@ -248,6 +287,10 @@
 		
 		p {
 			margin-top: 0;
+
+			@media print {
+				margin-bottom: 0;
+			}
 		}
 	}
 
@@ -256,6 +299,12 @@
 		position: relative;
 		margin-top: 2px;
 		border-radius: 5px;
+
+		@media print {
+			background-image: none;
+			border-top: 1px solid #C7C7C7;
+			border-radius: 0;
+		}
 
 		h2 {
 			margin-top: 5px;
@@ -290,6 +339,11 @@
 		background-repeat: no-repeat;
 		background-position: left 3px;
 		margin: 0;
+
+		@media print {
+			@include primaryFont;
+			font-weight: normal;
+		}
 
 		&.call {
 			background-image: url("../images/overview/icon-phone.png");

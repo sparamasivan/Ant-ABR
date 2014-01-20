@@ -1554,6 +1554,11 @@ body {
   background-color: #e8eae5;
   font-family: 'adelle_light', serif;
 }
+@media print {
+  body {
+    background-color: transparent;
+  }
+}
 
 p {
   font-size: 123.1%;
@@ -1568,6 +1573,12 @@ p {
 
 a, a:visited {
   color: #00beeb;
+}
+@media print {
+  a, a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2613,6 +2624,11 @@ span.placeholder {
     padding-top: 15px;
   }
 }
+@media print {
+  .page-section-top {
+    display: none;
+  }
+}
 .page-section-top .links {
   font-size: 100%;
   text-align: right;
@@ -3176,6 +3192,35 @@ span.placeholder {
 .view-overview .result-summary {
   background-color: #0099be;
 }
+.view-overview .result-summary .print {
+  display: none;
+}
+@media print {
+  .view-overview .result-summary {
+    background-color: transparent;
+  }
+  .view-overview .result-summary .screen {
+    display: none;
+  }
+  .view-overview .result-summary .print {
+    display: block;
+  }
+  .view-overview .result-summary .print .text {
+    font-family: 'Apercu', sans-serif;
+    font-weight: bold;
+    font-size: 150%;
+  }
+  .view-overview .result-summary .print .status {
+    position: relative;
+    color: #00beeb;
+  }
+  .view-overview .result-summary .print .status .icon {
+    position: absolute;
+    top: -8.125px;
+    left: -71.5px;
+    width: 48.75px;
+  }
+}
 .view-overview .avatar-flag-container {
   margin-top: 0;
   margin-bottom: 0;
@@ -3382,6 +3427,11 @@ span.placeholder {
   background-color: white;
   margin-top: 2px;
 }
+@media print {
+  .view-overview .page-section-ran {
+    border-top: 1px dotted #C7C7C7;
+  }
+}
 .view-overview .page-section-ran .testCounter {
   text-align: center;
   margin: 20px 0;
@@ -3403,11 +3453,23 @@ span.placeholder {
 .view-overview .page-section-comment p {
   margin-top: 0;
 }
+@media print {
+  .view-overview .page-section-comment p {
+    margin-bottom: 0;
+  }
+}
 .view-overview .page-section-next-steps {
   background: url("../images/overview/recap/pattern.png") repeat transparent;
   position: relative;
   margin-top: 2px;
   border-radius: 5px;
+}
+@media print {
+  .view-overview .page-section-next-steps {
+    background-image: none;
+    border-top: 1px solid #C7C7C7;
+    border-radius: 0;
+  }
 }
 .view-overview .page-section-next-steps h2 {
   margin-top: 5px;
@@ -3445,6 +3507,12 @@ span.placeholder {
 @media only screen and (max-width: 630px) {
   .view-overview .contact {
     font-size: 116%;
+  }
+}
+@media print {
+  .view-overview .contact {
+    font-family: 'adelle_light', serif;
+    font-weight: normal;
   }
 }
 .view-overview .contact.call {
