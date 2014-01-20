@@ -30,6 +30,11 @@
             display: table;
             width: 100%;
 
+            @media print {
+                height: auto !important;
+                font-size: 116%;
+            }
+
             .title {
                 display: table-cell;
                 vertical-align: middle;
@@ -44,7 +49,7 @@
     }
 
     /* phone */
-    @media only screen and (max-width:($mq-phone)) {
+    @media only screen and (max-width:($mq-phone)), print {
         max-width: 200px;
         
         >.inner {

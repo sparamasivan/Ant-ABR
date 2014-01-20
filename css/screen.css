@@ -5215,6 +5215,12 @@ span.placeholder {
   display: table;
   width: 100%;
 }
+@media print {
+  .view-subtest-pod-base > .inner > .header {
+    height: auto !important;
+    font-size: 116%;
+  }
+}
 .view-subtest-pod-base > .inner > .header .title {
   display: table-cell;
   vertical-align: middle;
@@ -5222,7 +5228,7 @@ span.placeholder {
 .view-subtest-pod-base.title-no-text-transform .title {
   text-transform: none;
 }
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 630px), print {
   .view-subtest-pod-base {
     max-width: 200px;
   }
