@@ -3873,18 +3873,19 @@ span.placeholder {
     padding-left: 0;
     padding-right: 0;
     height: auto;
-    border-top-width: 55px;
+    border-top-width: 30px;
     border-top-style: solid;
     overflow: visible;
   }
   .test-header > .yui3-g {
     position: absolute;
     width: 100%;
-    top: -55px;
+    top: -30px;
   }
   .test-header .title {
     display: block;
     text-align: center;
+    margin: 0;
   }
   .test-header .title .icon {
     display: none;
@@ -3892,7 +3893,14 @@ span.placeholder {
   .test-header .title .text {
     position: static;
     left: auto;
-    font-size: 197%;
+    font-size: 150%;
+    line-height: 30px;
+  }
+  .test-header .status {
+    top: 5px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
   }
 }
 

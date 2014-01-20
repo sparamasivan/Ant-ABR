@@ -233,23 +233,25 @@
     }
 
     @media only print {
+        $height: 30px;
         padding-left: 0;
         padding-right: 0;
 
         height: auto;
-        border-top-width: $phoneHeaderHeight;
+        border-top-width: $height;
         border-top-style: solid;
         overflow: visible;
 
         >.yui3-g {
             position: absolute;
             width: 100%;
-            top: - $phoneHeaderHeight;
+            top: - $height;
         }
 
         .title {
             display: block;
             text-align: center;
+            margin: 0;
 
             .icon {
                 display: none;
@@ -258,8 +260,18 @@
             .text {
                 position: static;
                 left: auto;
-                font-size: 197%;
+                font-size: 150%;
+                line-height: $height;
             }
+        }
+
+        .status {
+            $statusLength: 20px;
+            top: ($height - $statusLength) / 2;
+            right: 20px;
+
+            width: $statusLength;
+            height: $statusLength;
         }
     }
 }
