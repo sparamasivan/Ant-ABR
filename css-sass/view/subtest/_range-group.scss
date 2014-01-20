@@ -12,6 +12,10 @@
     .scroller {
         width: 100%;
         display: table;
+
+        @media print {
+            margin-top: 20px;
+        }
     }
 
     .pager, .content {
@@ -102,6 +106,10 @@
         height: 100%;
         position: relative;
         overflow: hidden;
+
+        @media print {
+            overflow: visible !important;
+        }
     }
 
     .ranges-container {
@@ -155,6 +163,7 @@
                 @include transform(rotate(270deg));
                 filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
                 text-align: left;
+                line-height: 0.9;
             }
 
             .outer {

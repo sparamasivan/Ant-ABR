@@ -4366,6 +4366,13 @@ span.placeholder {
   font-weight: bold;
   margin-bottom: 20px;
 }
+@media print {
+  .view-test-urine-analysis .property.appearance .expected-label {
+    margin: 0 0 0 3px;
+    width: auto;
+    text-align: left;
+  }
+}
 .view-test-urine-analysis .property.appearance .description {
   display: none;
 }
@@ -4588,6 +4595,11 @@ span.placeholder {
   width: 100%;
   display: table;
 }
+@media print {
+  .view-subtest-range-group .scroller {
+    margin-top: 20px;
+  }
+}
 .view-subtest-range-group .pager, .view-subtest-range-group .content {
   display: table-cell;
 }
@@ -4655,6 +4667,11 @@ span.placeholder {
   position: relative;
   overflow: hidden;
 }
+@media print {
+  .view-subtest-range-group .content-inner {
+    overflow: visible !important;
+  }
+}
 .view-subtest-range-group .ranges-container {
   height: 270px;
   margin: 45px 0 21px 0;
@@ -4715,6 +4732,7 @@ span.placeholder {
     transform: rotate(270deg);
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
     text-align: left;
+    line-height: 0.9;
   }
 }
 .view-subtest-range-group .range-item .label .outer {
