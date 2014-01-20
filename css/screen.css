@@ -4973,6 +4973,11 @@ span.placeholder {
   border-bottom: 1px solid #6b6b6b;
   padding-bottom: 5px;
 }
+@media print {
+  .view-subtest-types-of-cell2 .title {
+    border: 0;
+  }
+}
 .view-subtest-types-of-cell2 .diagram {
   margin-top: 10px;
   position: relative;
@@ -5017,6 +5022,11 @@ span.placeholder {
   position: absolute;
   top: 0;
   left: 0;
+}
+@media print {
+  .view-subtest-types-of-cell2 .icon {
+    display: none;
+  }
 }
 .view-subtest-types-of-cell2 .percentage {
   font-family: 'Apercu', sans-serif;
@@ -5111,6 +5121,12 @@ span.placeholder {
   text-align: center;
   font-weight: bold;
   font-size: 210%;
+  /* phone */
+}
+@media only screen and (max-width: 630px), only print {
+  .view-subtest-pod-color .label {
+    font-size: 138.5%;
+  }
 }
 .view-subtest-pod-color .description {
   display: none;

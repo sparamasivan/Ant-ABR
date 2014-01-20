@@ -7,6 +7,10 @@
 		font-weight: bold;
 		border-bottom: 1px solid #6b6b6b;
 		padding-bottom: 5px;
+
+		@media print {
+			border: 0;
+		}
 	}
 
 	.diagram {
@@ -68,6 +72,10 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+
+		@media print {
+			display: none;
+		}
 	}
 
 	.percentage {
