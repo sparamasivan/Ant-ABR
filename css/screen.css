@@ -4575,6 +4575,11 @@ span.placeholder {
 .view-subtest-range.single-line-label .actual {
   padding-top: 68px;
 }
+@media print {
+  .view-subtest-range.single-line-label .actual {
+    padding-top: 44px;
+  }
+}
 
 .view-subtest-range-group {
   /* phone */

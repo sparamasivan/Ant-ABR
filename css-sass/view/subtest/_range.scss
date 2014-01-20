@@ -156,6 +156,10 @@
 
         .actual {
             padding-top: 68px;
+
+            @media print {
+                padding-top: 44px;
+            }
         }
     }
 }
