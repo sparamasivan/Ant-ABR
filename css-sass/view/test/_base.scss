@@ -118,6 +118,8 @@
     $iconHeight: 47px;
     $iconWidth: 47px;
 
+    page-break-inside: avoid;
+
     height: $headerHeight;
     background-repeat: repeat-x;
     color: white;
@@ -250,7 +252,7 @@
     }
 }
 
-@mixin view-test-base-extend ($type, $headingBgColor, $overviewBgColor, $diagramFilename : "diagram-2x.png") {
+@mixin view-test-base-extend ($type, $headingBgColor, $overviewBgColor, $diagramFilename : "diagram-2x.png", $page-break-inside: avoid) {
     .test-header.#{$type} {
         background-color: $headingBgColor;
 
@@ -260,6 +262,9 @@
     }
 
     .view-test-#{$type} {
+
+        page-break-inside: $page-break-inside;
+
         >.body {
             >.overview {
                 background-color: $overviewBgColor;

@@ -8,6 +8,8 @@
 
     padding: 0 20px 15px 160px;
 
+    page-break-inside: avoid;
+
     @media print {
         padding: 0;
     }
