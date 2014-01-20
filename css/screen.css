@@ -2102,6 +2102,11 @@ span.placeholder {
   margin: 15px;
   overflow: visible;
 }
+@media print {
+  .tooltip {
+    display: none !important;
+  }
+}
 
 #qtip-overlay {
   /* Force overlay background to stretch the full width and height of the window
@@ -2403,6 +2408,12 @@ span.placeholder {
   height: 18px;
   margin: -9px 0 0 -9px;
   border-radius: 9px;
+}
+@media print {
+  .widget-indicator.print-small, .widget-indicator.big {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .view-widget-busy {
@@ -4009,6 +4020,11 @@ span.placeholder {
     padding: 10px 0;
   }
 }
+@media print {
+  .view-test-chemistry .subtest-container {
+    padding: 10px 0;
+  }
+}
 
 .test-header.felv-fiv {
   background-color: #028894;
@@ -4573,6 +4589,17 @@ span.placeholder {
   text-transform: uppercase;
   text-align: center;
 }
+@media print {
+  .view-subtest-range-group .range-item .label {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    text-align: left;
+  }
+}
 .view-subtest-range-group .range-item .label .outer {
   display: table;
   height: 100%;
@@ -4589,9 +4616,21 @@ span.placeholder {
   margin: 0 auto;
   cursor: pointer;
 }
+@media print {
+  .view-subtest-range-group .range-item .range {
+    width: 0;
+    background-color: transparent;
+    border-left: 9px solid #cdcccc;
+  }
+}
 .view-subtest-range-group .range-item .limit {
   width: 100%;
   position: absolute;
+}
+@media print {
+  .view-subtest-range-group .range-item .limit {
+    visibility: hidden;
+  }
 }
 .view-subtest-range-group .range-item .limit .dash {
   width: 13px;
@@ -4614,6 +4653,14 @@ span.placeholder {
   display: block;
   margin: 0 auto;
 }
+.view-subtest-range-group .range-item .value-number {
+  font-family: 'Apercu', sans-serif;
+  text-align: center;
+  margin-top: 5px;
+}
+.view-subtest-range-group .range-item .value-number.bad {
+  font-weight: bold;
+}
 .view-subtest-range-group .average-range {
   background-image: url("../images/subtest/range-group/range-bg.png");
   position: absolute;
@@ -4621,9 +4668,42 @@ span.placeholder {
   right: 0;
   border: 1px solid #e4e4e4;
 }
+@media print {
+  .view-subtest-range-group .average-range {
+    background-image: none;
+    border: 0;
+    border-top: 189px solid #f0f0f0;
+    height: 0 !important;
+  }
+}
+.view-subtest-range-group .average-range-legend {
+  width: 130px;
+}
+.view-subtest-range-group .average-range-legend .inner {
+  position: absolute;
+  left: -84.5px;
+  top: 129.5px;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  width: 189px;
+  font-family: 'Apercu', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #808080;
+  font-size: 85%;
+}
 .view-subtest-range-group .legend {
   margin-bottom: 0;
   text-align: center;
+}
+@media print {
+  .view-subtest-range-group .legend {
+    display: none;
+  }
 }
 .view-subtest-range-group .legend .symbol {
   width: 50px;

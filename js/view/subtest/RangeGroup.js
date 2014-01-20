@@ -18,6 +18,7 @@ define([
     iScroll,
     WidgetIndicator
 ) {
+    // NOTE: When changing this constant, change the corresponding constant in the CSS file.
     var EXPECTED_RANGE_PERCENTAGE = 70;
 
     return Backbone.View.extend({
@@ -274,6 +275,7 @@ define([
 
             $.each(mRanges, function(i, mRange) {
                 var value = mRange.getPercentageValue(EXPECTED_RANGE_PERCENTAGE),
+                    isBad = !mRange.isNormal(),
                     el = $(self.templateRangeItem({
                         patient: self.options.patient,
                         title: mRange.getLabel(),
@@ -281,15 +283,17 @@ define([
                         minValue: mRange.getMinValue(),
                         maxValue: mRange.getMaxValue(),
                         unitOfMeasure: mRange.getUnitOfMeasure(),
-                        description: mRange.getDescription()
+                        description: mRange.getDescription(),
+                        isBad: isBad
                     })).appendTo(parent),
                     elDetails = el.find('.view-subtest-range-group-item-details'),
                     wIndicator;
 
                 // render indicator
                 wIndicator = new WidgetIndicator({
-                    isBad: !mRange.isNormal(),
-                    isBig: true
+                    isBad: isBad,
+                    isBig: true,
+                    isPrintSmall: true
                 });
                 wIndicator.render(el.find('.indicator'));
 

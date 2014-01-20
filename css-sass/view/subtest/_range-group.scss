@@ -7,6 +7,8 @@
     $rangeItemWidth: 80px;
     $rangeBarWidth: 9px;
 
+    $EXPECTED_RANGE_PERCENTAGE: 0.7;
+
     .scroller {
         width: 100%;
         display: table;
@@ -144,6 +146,12 @@
             text-transform: uppercase;
             text-align: center;
 
+            @media print {
+                @include transform(rotate(270deg));
+                filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+                text-align: left;
+            }
+
             .outer {
                 display: table;
                 height: 100%;
@@ -162,12 +170,22 @@
             background-color: #ebedf1;
             margin: 0 auto;
             cursor: pointer;
+
+            @media print {
+                width: 0;
+                background-color: transparent;
+                border-left: $rangeBarWidth solid #cdcccc;
+            }
         }
 
         .limit {
             $height: 2px;
             width:100%;
             position: absolute;
+
+            @media print {
+                visibility: hidden;
+            }
 
             .dash {
                 width: 13px;
@@ -195,6 +213,16 @@
                 margin: 0 auto;
             }
         }
+
+        .value-number {
+            @include secondaryFont;
+            text-align: center;
+            margin-top: 5px;
+
+            &.bad {
+                font-weight: bold;
+            }
+        }
     }
 
     .average-range {
@@ -203,11 +231,45 @@
         left: 0;
         right: 0;
         border: 1px solid #e4e4e4;
+
+        @media print {
+            background-image: none;
+            border: 0;
+            border-top: ($rangeHeight * $EXPECTED_RANGE_PERCENTAGE) solid #f0f0f0;
+            height: 0 !important;
+        }
+    }
+
+    .average-range-legend {
+        width: 130px;
+
+        .inner {
+            position: absolute;
+
+            left: - ($rangeHeight * $EXPECTED_RANGE_PERCENTAGE) / 2 + 10px;
+            top: $rangeTop + ($rangeHeight * $EXPECTED_RANGE_PERCENTAGE) / 2 - 10px;
+
+            @include transform(rotate(270deg));
+            filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+            width: $rangeHeight * $EXPECTED_RANGE_PERCENTAGE;
+
+            @include secondaryFont;
+            text-align: center;
+            text-transform: uppercase;
+            color: #808080;
+
+            font-size: 85%;
+        }
     }
 
     .legend {
         margin-bottom: 0;
         text-align: center;
+
+        @media print {
+            display: none;
+        }
 
         .symbol {
             width: 50px;

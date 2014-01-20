@@ -15,7 +15,8 @@ define([
         render: function(parent) {
             this.setElement($(this.template({
                 isBad: this.options.isBad,
-                isBig: this.options.isBig
+                isBig: this.options.isBig,
+                isPrintSmall: this.options.isPrintSmall
             })));
 
             // append to parent

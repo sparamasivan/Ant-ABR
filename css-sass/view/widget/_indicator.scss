@@ -8,6 +8,8 @@ $widgetIndicatorBigHeight: $widgetIndicatorBigWidth;
     $height: $widgetIndicatorHeight;
     $widthBig: $widgetIndicatorBigWidth;
     $heightBig: $widgetIndicatorBigHeight;
+    $widthPrintSmall: 20px;
+    $heightPrintSmall: 20px;
 
     $dotDiameter: 8px;
     $dotExpandedDiameter: 14px;
@@ -78,6 +80,14 @@ $widgetIndicatorBigHeight: $widgetIndicatorBigWidth;
                 margin: (-$dotBigExpandedDiameter / 2) 0 0 (-$dotBigExpandedDiameter / 2);
                 border-radius: ($dotBigExpandedDiameter / 2);
             }
+        }
+    }
+
+    @media print {
+        &.print-small,
+        &.big {
+            width: $widthPrintSmall;
+            height: $heightPrintSmall;
         }
     }
 }

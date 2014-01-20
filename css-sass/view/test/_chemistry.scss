@@ -11,4 +11,10 @@
             padding: 10px 0;
         }
     }
+
+    @media print {
+        .subtest-container {
+            padding: 10px 0;
+        }
+    }
 }

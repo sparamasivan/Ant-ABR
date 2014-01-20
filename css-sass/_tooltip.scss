@@ -11,6 +11,10 @@
         margin: 15px;
         overflow: visible;
     }
+
+    @media print {
+        display: none !important;
+    }
 }
 
 #qtip-overlay {
