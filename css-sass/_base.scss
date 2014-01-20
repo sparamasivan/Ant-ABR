@@ -72,7 +72,8 @@ h1 {
     line-height: 115%;
     font-size: 212%;
 
-    @media only screen and (max-width:($mq-phone)) {
+    @media only screen and (max-width:($mq-phone)),
+        only print {
         font-size: 167%;
     }
 }

@@ -12,6 +12,7 @@
 
     @media print {
         padding: 0;
+        background-color: transparent;
     }
 
     /* tablet */
@@ -49,7 +50,7 @@
 
 
         /* Phone */
-        @media only screen and (max-width:$mq-phone) {
+        @media only screen and (max-width:$mq-phone), print {
             font-size: 146.5%;
 
             .widget-arrow {

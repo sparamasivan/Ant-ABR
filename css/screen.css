@@ -1591,7 +1591,7 @@ h1 {
   line-height: 115%;
   font-size: 212%;
 }
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 630px), only print {
   h1 {
     font-size: 167%;
   }
@@ -2542,6 +2542,7 @@ span.placeholder {
 @media print {
   .view-widget-test-subsection {
     padding: 0;
+    background-color: transparent;
   }
 }
 @media only screen and (min-width: 631px) and (max-width: 768px) {
@@ -2576,7 +2577,7 @@ span.placeholder {
     display: none;
   }
 }
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 630px), print {
   .view-widget-test-subsection > .header {
     font-size: 146.5%;
   }
@@ -3695,6 +3696,11 @@ span.placeholder {
 @media print {
   .view-test-base .test-section {
     margin-top: 0;
+    border-top: 1px solid #b9babd;
+    border-radius: 0;
+  }
+  .view-test-base .test-section:first-child {
+    border-top: none;
   }
 }
 .view-test-base .test-section-inner {
@@ -4136,6 +4142,11 @@ span.placeholder {
   max-width: 466px;
 }
 
+@media print {
+  .view-test-urine-analysis .test-section-description h1 {
+    margin: 0;
+  }
+}
 .view-test-urine-analysis .test-section-description p {
   margin-bottom: 0;
 }
@@ -4148,6 +4159,12 @@ span.placeholder {
 @media only screen and (max-width: 630px) {
   .view-test-urine-analysis h2 {
     font-size: 146.5%;
+  }
+}
+@media only print {
+  .view-test-urine-analysis h2 {
+    font-size: 146.5%;
+    border-bottom: 0;
   }
 }
 .view-test-urine-analysis .diagram-palette {
@@ -4171,7 +4188,7 @@ span.placeholder {
   line-height: 100%;
   /* phone */
 }
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 630px), print {
   .view-test-urine-analysis .diagram-palette .label {
     font-size: 138.5%;
   }
@@ -4194,7 +4211,7 @@ span.placeholder {
   margin-top: 26%;
   /* phone */
 }
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 630px), print {
   .view-test-urine-analysis .property.appearance .text {
     margin-top: 30px;
   }
@@ -4211,7 +4228,7 @@ span.placeholder {
   padding-left: 10px;
   /* phone */
 }
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 630px), print {
   .view-test-urine-analysis .property.appearance .label {
     font-size: 138.5%;
   }
@@ -4234,7 +4251,7 @@ span.placeholder {
   left: -7%;
   /* phone */
 }
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 630px), print {
   .view-test-urine-analysis .property.appearance .actual .value.clear {
     left: -3%;
   }
@@ -4267,15 +4284,15 @@ span.placeholder {
   padding-top: 4px;
 }
 .view-test-urine-analysis .property.appearance .expected .range {
-  padding: 2px 2px;
-  height: 4px;
-  background-color: #e8eae5;
+  position: relative;
   border-radius: 3px;
+  border: 4px solid #e8eae5;
 }
 .view-test-urine-analysis .property.appearance .expected .value {
-  height: 100%;
-  background-color: #6b6b6b;
+  position: absolute;
+  top: -2px;
   width: 43%;
+  border-top: 4px solid #6b6b6b;
 }
 .view-test-urine-analysis .property.appearance .expected-label {
   color: #444;
@@ -4323,7 +4340,7 @@ span.placeholder {
 .view-test-urine-analysis .test-subsection.particle .pod .description {
   display: none;
 }
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 630px), print {
   .view-test-urine-analysis .test-subsection.particle .pod {
     padding: 7px 10px 7px 42px;
     max-width: 150px;
@@ -4336,7 +4353,7 @@ span.placeholder {
   margin: 15px 0 0 20px;
   /* phone */
 }
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 630px), print {
   .view-test-urine-analysis .property.concentration > .select {
     margin-left: 10px;
   }
@@ -4347,7 +4364,7 @@ span.placeholder {
   bottom: 43%;
   /* phone */
 }
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 630px), print {
   .view-test-urine-analysis .property.ph .diagram-palette .label {
     font-size: 230%;
   }
@@ -4916,7 +4933,7 @@ span.placeholder {
 .view-subtest-select .description {
   display: none;
 }
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 630px), only print {
   .view-subtest-select .options {
     padding-top: 0;
     padding-bottom: 0;

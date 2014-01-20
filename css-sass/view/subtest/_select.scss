@@ -65,7 +65,8 @@
 	}
 
     /* phone */
-    @media only screen and (max-width:($mq-phone)) {
+    @media only screen and (max-width:($mq-phone)),
+        only print {
         .options {
             padding-top: 0;
             padding-bottom: 0;

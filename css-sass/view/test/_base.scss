@@ -26,6 +26,12 @@
 
         @media print {
             margin-top: 0;
+            border-top: 1px solid #b9babd;
+            border-radius: 0;
+
+            &:first-child {
+                border-top: none;
+            }
         }
     }
 
