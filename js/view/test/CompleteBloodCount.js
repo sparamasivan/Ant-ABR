@@ -298,7 +298,7 @@ define([
                     ['Other', 100 - slicePercentage]
                 ]),
 
-                chart = new google.visualization.PieChart(parent.find('.diagram')[0]);
+                chart = new google.visualization.PieChart(parent.find('.diagram >.inner')[0]);
 
             chart.draw(data, {
                 pieHole: 0.3,

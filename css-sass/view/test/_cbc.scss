@@ -1,7 +1,14 @@
 @include view-test-base-extend(cbc, #00A977, #38B781, "diagram-feline-2x.png", $page-break-inside: auto);
 
 .view-test-cbc {
+    .subsection >.part {
+        page-break-inside: avoid;
+    }
+
     .chart {
+        $diagramDiameter: 220px;
+        $diagramDiameterPrint: 165px;
+
         position: relative;
         border-right: 1px solid #6b6b6b;
         padding-right: 10px;
@@ -11,10 +18,43 @@
             padding-left: 5%;
         }
 
-        $diagramDiameter: 220px;
+        @media print {
+            border-right: 0;
+            overflow: hidden;
+        }
+
         .diagram {
+            $scale: $diagramDiameterPrint / $diagramDiameter;
+
             width: $diagramDiameter;
             height: $diagramDiameter;
+
+            @media print {
+                width: $diagramDiameter * $scale;
+                height: $diagramDiameter * $scale;
+                overflow: hidden;
+                float: left;
+            }
+
+            .inner {
+                width: $diagramDiameter;
+                height: $diagramDiameter;
+
+                @media print {
+                    $divisor: 1 / $scale * 2;
+
+                    top: - ($diagramDiameter * (1 - $scale) / 2);
+                    left: - ($diagramDiameter * (1 - $scale) / 2);
+
+                    @include scale($scale);
+
+                    // IE8 - must be on one line, unfortunately
+                    // @see http://www.useragentman.com/IETransformsTranslator/
+                    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=" + $scale + ", M12=0, M21=0, M22=" + $scale + ", SizingMethod='auto expand')"\9;
+                    margin-left: ($diagramDiameter / $divisor)\9;
+                    margin-top: ($diagramDiameter / $divisor)\9;
+                }
+            }
         }
 
         .value {
@@ -28,6 +68,16 @@
             width: 150px;
             text-align: center;
 
+            @media print {
+                position: static;
+                top: 0;
+                left: 0;
+                float: left;
+                width: auto;
+                margin-top: $diagramDiameterPrint / 2 - 25px;
+                margin-left: 20px;
+            }
+
             .percentage {
                 letter-spacing: -1px;
             }
@@ -36,11 +86,20 @@
                 font-size: 450%;
                 line-height: 100%;
                 letter-spacing: -3px;
+
+                @media print {
+                    font-size: 250%;
+                }
             }
 
             .symbol {
                 vertical-align: top;
                 font-size: 225%;
+
+                @media print {
+                    vertical-align: baseline;
+                    font-size: 250%;
+                }
             }
 
             .text {
@@ -52,6 +111,10 @@
 
     .range-container {
         margin: 20px 0 0 10%;
+
+        @media print {
+            margin: 0;
+        }
 
         .view-subtest-range {
             max-width: 235px;

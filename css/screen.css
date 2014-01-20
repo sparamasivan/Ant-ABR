@@ -3932,6 +3932,9 @@ span.placeholder {
 .view-test-cbc {
   /* phone */
 }
+.view-test-cbc .subsection > .part {
+  page-break-inside: avoid;
+}
 .view-test-cbc .chart {
   position: relative;
   border-right: 1px solid #6b6b6b;
@@ -3943,9 +3946,41 @@ span.placeholder {
     padding-left: 5%;
   }
 }
+@media print {
+  .view-test-cbc .chart {
+    border-right: 0;
+    overflow: hidden;
+  }
+}
 .view-test-cbc .chart .diagram {
   width: 220px;
   height: 220px;
+}
+@media print {
+  .view-test-cbc .chart .diagram {
+    width: 165px;
+    height: 165px;
+    overflow: hidden;
+    float: left;
+  }
+}
+.view-test-cbc .chart .diagram .inner {
+  width: 220px;
+  height: 220px;
+}
+@media print {
+  .view-test-cbc .chart .diagram .inner {
+    top: -27.5px;
+    left: -27.5px;
+    -webkit-transform: scale(0.75, 0.75);
+    -moz-transform: scale(0.75, 0.75);
+    -ms-transform: scale(0.75, 0.75);
+    -o-transform: scale(0.75, 0.75);
+    transform: scale(0.75, 0.75);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.75, M12=0, M21=0, M22=0.75, SizingMethod='auto expand')" \9;
+    margin-left: 82.5px \9;
+    margin-top: 82.5px \9;
+  }
 }
 .view-test-cbc .chart .value {
   font-family: 'Apercu', sans-serif;
@@ -3956,6 +3991,17 @@ span.placeholder {
   width: 150px;
   text-align: center;
 }
+@media print {
+  .view-test-cbc .chart .value {
+    position: static;
+    top: 0;
+    left: 0;
+    float: left;
+    width: auto;
+    margin-top: 57.5px;
+    margin-left: 20px;
+  }
+}
 .view-test-cbc .chart .value .percentage {
   letter-spacing: -1px;
 }
@@ -3964,9 +4010,20 @@ span.placeholder {
   line-height: 100%;
   letter-spacing: -3px;
 }
+@media print {
+  .view-test-cbc .chart .value .number {
+    font-size: 250%;
+  }
+}
 .view-test-cbc .chart .value .symbol {
   vertical-align: top;
   font-size: 225%;
+}
+@media print {
+  .view-test-cbc .chart .value .symbol {
+    vertical-align: baseline;
+    font-size: 250%;
+  }
 }
 .view-test-cbc .chart .value .text {
   text-transform: uppercase;
@@ -3974,6 +4031,11 @@ span.placeholder {
 }
 .view-test-cbc .range-container {
   margin: 20px 0 0 10%;
+}
+@media print {
+  .view-test-cbc .range-container {
+    margin: 0;
+  }
 }
 .view-test-cbc .range-container .view-subtest-range {
   max-width: 235px;
@@ -4415,6 +4477,11 @@ span.placeholder {
   line-height: 90%;
   letter-spacing: -3px;
 }
+@media print {
+  .view-subtest-range .marker .value {
+    font-size: 250%;
+  }
+}
 .view-subtest-range .marker .unit {
   font-size: 123.1%;
   font-weight: bold;
@@ -4426,6 +4493,11 @@ span.placeholder {
 }
 .view-subtest-range .actual {
   padding-top: 87px;
+}
+@media print {
+  .view-subtest-range .actual {
+    padding-top: 63px;
+  }
 }
 .view-subtest-range .actual .range {
   border: 14px solid #e8eae5;

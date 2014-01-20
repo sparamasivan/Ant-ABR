@@ -26,6 +26,10 @@
             font-weight: bold;
             line-height: 90%;
             letter-spacing: -3px;
+
+            @media print {
+                font-size: 250%;
+            }
         }
 
         .unit {
@@ -43,6 +47,10 @@
     .actual {
         $rangeHeight: 28px;
         padding-top: 87px;
+
+        @media print {
+            padding-top: 63px;
+        }
 
         .range {
             // using borders here instead of background-color, in order for the color
