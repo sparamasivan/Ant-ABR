@@ -69,6 +69,11 @@ define([
                 EventDispatcher.trigger('route', 'section/' + testCollection.first().id);
             });
 
+            this.$el.find('.info .print').bind('click', function(e) {
+                e.preventDefault();
+                window.print();
+            });
+
             this.$el.appendTo(parent);
         },
 
