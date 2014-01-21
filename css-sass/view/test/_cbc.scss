@@ -48,11 +48,13 @@
 
                     @include scale($scale);
 
-                    // IE8 - must be on one line, unfortunately
-                    // @see http://www.useragentman.com/IETransformsTranslator/
-                    filter: unquote("progid:DXImageTransform.Microsoft.Matrix(M11=" + ($scale - 0.15) + ", M12=0, M21=0, M22=" + ($scale - 0.15) + ", SizingMethod='auto expand')");
-                    margin-left: ($diagramDiameter / $divisor / 1.5)\9;
-                    margin-top: ($diagramDiameter / $divisor / 1.5)\9;
+                    &.no-csstransforms {
+                        // IE8 - must be on one line, unfortunately
+                        // @see http://www.useragentman.com/IETransformsTranslator/
+                        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=" + ($scale - 0.15) + ", M12=0, M21=0, M22=" + ($scale - 0.15) + ", SizingMethod='auto expand')";
+                        margin-left: ($diagramDiameter / $divisor / 1.5);
+                        margin-top: ($diagramDiameter / $divisor / 1.5);
+                    }
                 }
             }
         }

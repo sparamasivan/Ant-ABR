@@ -12,6 +12,7 @@ define([
     'view/subtest/pod/Select',
     'view/subtest/pod/Color',
     'view/animation/Cbc',
+    'modernizr',
     'goog!visualization,1,packages:[corechart,geochart]',
     'jquery-equal-heights'
 ], function(
@@ -27,7 +28,8 @@ define([
     ViewWidgetTestSubsection,
     ViewSubtestSelect,
     ViewSubtestColor,
-    ViewAnimation
+    ViewAnimation,
+    Modernizr
 ) {
     var mathRound = function(value, decimalPlaces) {
         var roundedValue = Math.round(value * Math.pow(10, decimalPlaces)) / Math.pow(10, decimalPlaces);
@@ -298,7 +300,13 @@ define([
                     ['Other', 100 - slicePercentage]
                 ]),
 
-                chart = new google.visualization.PieChart(parent.find('.diagram >.inner')[0]);
+                target = parent.find('.diagram >.inner'),
+
+                chart = new google.visualization.PieChart(target[0]);
+
+            if (Modernizr.csstransforms !== true) {
+                target.addClass('no-csstransforms');
+            }
 
             chart.draw(data, {
                 pieHole: 0.3,
