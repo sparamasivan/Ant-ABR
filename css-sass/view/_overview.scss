@@ -274,14 +274,14 @@
 		.testCounter {
 			text-align: center;
 			margin: 20px 0;
-			font-weight: normal;
 
 			@media print {
 				margin: 0;
-			}
+				font-weight: normal;
 
-			.item {
-				font-weight: bold;
+				.item {
+					font-weight: bold;
+				}
 			}
 		}
 	}

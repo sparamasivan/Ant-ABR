@@ -3499,15 +3499,15 @@ span.placeholder {
 .view-overview .page-section-ran .testCounter {
   text-align: center;
   margin: 20px 0;
-  font-weight: normal;
 }
 @media print {
   .view-overview .page-section-ran .testCounter {
     margin: 0;
+    font-weight: normal;
   }
-}
-.view-overview .page-section-ran .testCounter .item {
-  font-weight: bold;
+  .view-overview .page-section-ran .testCounter .item {
+    font-weight: bold;
+  }
 }
 .view-overview .page-section-comment {
   background-color: white;
