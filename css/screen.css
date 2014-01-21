@@ -3280,7 +3280,7 @@ span.placeholder {
   }
   .view-overview .result-summary .print .status .icon {
     position: absolute;
-    top: -2.03125px;
+    top: 1px;
     left: -32.5px;
     width: 16.25px;
   }
