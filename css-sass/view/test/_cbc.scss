@@ -7,7 +7,7 @@
 
     .chart {
         $diagramDiameter: 220px;
-        $diagramDiameterPrint: 165px;
+        $diagramDiameterPrint: 130px;
 
         position: relative;
         border-right: 1px solid #6b6b6b;
@@ -88,7 +88,7 @@
                 letter-spacing: -3px;
 
                 @media print {
-                    font-size: 250%;
+                    font-size: 180%;
                 }
             }
 
@@ -98,7 +98,7 @@
 
                 @media print {
                     vertical-align: baseline;
-                    font-size: 250%;
+                    font-size: 180%;
                 }
             }
 

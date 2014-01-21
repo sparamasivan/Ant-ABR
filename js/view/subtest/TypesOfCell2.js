@@ -114,7 +114,8 @@ define([
             // render indicators
             this.$el.find('.indicator').each(function() {
                 var vIndicator = new WidgetIndicator({
-                    isBad: $(this).hasClass('bad')
+                    isBad: $(this).hasClass('bad'),
+                    isPrintSmall: true
                 });
 
                 vIndicator.render($(this));

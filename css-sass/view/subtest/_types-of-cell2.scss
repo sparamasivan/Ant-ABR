@@ -1,4 +1,10 @@
 .view-subtest-types-of-cell2 {
+	.type {
+		@media print {
+			overflow: hidden;
+		}
+	}
+
 	.title {
 		@include secondaryFont;
 
@@ -10,6 +16,8 @@
 
 		@media print {
 			border: 0;
+			font-size: 100%;
+			padding-bottom: 0;
 		}
 	}
 
@@ -18,53 +26,53 @@
 		position: relative;
 		height: 190px;
 
+		@media print {
+			margin-top: 0;
+			height: auto;
+			float: left;
+		}
+
 		.circle {
 			display: block;
 			margin: 0 auto;
 		}
 
-		&.big {
-			.circle {
-				width: image-width("../images/subtest/types-of-cell2/canine-circle-big-2x.png") / 2;
-				padding-top: 21px;
-			}
+		@mixin diagram-size ($size, $image, $paddingTop, $numberFontSize, $symbolFontSize) {
+			&.#{$size} {
+				.circle {
+					width: image-width($image) / 2;
+					padding-top: $paddingTop;
+				}
 
-			.number {
-				font-size: 450%;
-			}
+				.number {
+					font-size: $numberFontSize;
+				}
 
-			.symbol {
-				font-size: 225%;
+				.symbol {
+					font-size: $symbolFontSize;
+				}
+
+				@media print {
+					$factor: 2.2;
+					.circle {
+						width: (image-width($image) / 2) / $factor;
+						padding-top: $paddingTop / $factor;
+					}
+
+					.number {
+						font-size: $numberFontSize / $factor;
+					}
+
+					.symbol {
+						font-size: $symbolFontSize / $factor;
+					}
+				}
 			}
 		}
-		&.medium {
-			.circle {
-				width: image-width("../images/subtest/types-of-cell2/canine-circle-medium-2x.png") / 2;
-				padding-top: 32px;
-			}
 
-			.number {
-				font-size: 375%;
-			}
-
-			.symbol {
-				font-size: 200%;
-			}
-		}
-		&.small {
-			.circle {
-				width: image-width("../images/subtest/types-of-cell2/canine-circle-small-2x.png") / 2;
-				padding-top: 46px;
-			}
-
-			.number {
-				font-size: 300%;
-			}
-
-			.symbol {
-				font-size: 175%;
-			}
-		}
+		@include diagram-size("big", "../images/subtest/types-of-cell2/canine-circle-big-2x.png", 21px, 450%, 225%);
+		@include diagram-size("medium", "../images/subtest/types-of-cell2/canine-circle-medium-2x.png", 32px, 375%, 200%);
+		@include diagram-size("small", "../images/subtest/types-of-cell2/canine-circle-small-2x.png", 46px, 300%, 175%);
 	}
 
 	.icon {
@@ -88,6 +96,10 @@
 		top: 72px;
 
 		text-align: center;
+
+		@media print {
+			top: 34px;
+		}
 	}
 
 	.number {
@@ -99,8 +111,16 @@
 	}
 
 	.range {
+		@media print {
+			margin-top: 31px;
+		}
+
 		.widget-indicator {
 			vertical-align: middle;
+
+			@media print {
+				padding-left: 5px;
+			}
 		}
 
 		.text {
@@ -112,6 +132,11 @@
 
 			display: inline-block;
 			padding-left: 10px;
+
+			@media print {
+				padding-left: 0;
+				font-size: 60%;
+			}
 		}
 	}
 

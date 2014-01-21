@@ -4043,8 +4043,8 @@ span.placeholder {
 }
 @media print {
   .view-test-cbc .chart .diagram {
-    width: 165px;
-    height: 165px;
+    width: 130px;
+    height: 130px;
     overflow: hidden;
     float: left;
   }
@@ -4055,16 +4055,16 @@ span.placeholder {
 }
 @media print {
   .view-test-cbc .chart .diagram .inner {
-    top: -27.5px;
-    left: -27.5px;
-    -webkit-transform: scale(0.75, 0.75);
-    -moz-transform: scale(0.75, 0.75);
-    -ms-transform: scale(0.75, 0.75);
-    -o-transform: scale(0.75, 0.75);
-    transform: scale(0.75, 0.75);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.75, M12=0, M21=0, M22=0.75, SizingMethod='auto expand')" \9;
-    margin-left: 82.5px \9;
-    margin-top: 82.5px \9;
+    top: -45px;
+    left: -45px;
+    -webkit-transform: scale(0.59091, 0.59091);
+    -moz-transform: scale(0.59091, 0.59091);
+    -ms-transform: scale(0.59091, 0.59091);
+    -o-transform: scale(0.59091, 0.59091);
+    transform: scale(0.59091, 0.59091);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.59091, M12=0, M21=0, M22=0.59091, SizingMethod='auto expand')" \9;
+    margin-left: 65px \9;
+    margin-top: 65px \9;
   }
 }
 .view-test-cbc .chart .value {
@@ -4083,7 +4083,7 @@ span.placeholder {
     left: 0;
     float: left;
     width: auto;
-    margin-top: 57.5px;
+    margin-top: 40px;
     margin-left: 20px;
   }
 }
@@ -4097,7 +4097,7 @@ span.placeholder {
 }
 @media print {
   .view-test-cbc .chart .value .number {
-    font-size: 250%;
+    font-size: 180%;
   }
 }
 .view-test-cbc .chart .value .symbol {
@@ -4107,7 +4107,7 @@ span.placeholder {
 @media print {
   .view-test-cbc .chart .value .symbol {
     vertical-align: baseline;
-    font-size: 250%;
+    font-size: 180%;
   }
 }
 .view-test-cbc .chart .value .text {
@@ -5192,6 +5192,11 @@ span.placeholder {
   }
 }
 
+@media print {
+  .view-subtest-types-of-cell2 .type {
+    overflow: hidden;
+  }
+}
 .view-subtest-types-of-cell2 .title {
   font-family: 'Apercu', sans-serif;
   text-transform: uppercase;
@@ -5203,12 +5208,21 @@ span.placeholder {
 @media print {
   .view-subtest-types-of-cell2 .title {
     border: 0;
+    font-size: 100%;
+    padding-bottom: 0;
   }
 }
 .view-subtest-types-of-cell2 .diagram {
   margin-top: 10px;
   position: relative;
   height: 190px;
+}
+@media print {
+  .view-subtest-types-of-cell2 .diagram {
+    margin-top: 0;
+    height: auto;
+    float: left;
+  }
 }
 .view-subtest-types-of-cell2 .diagram .circle {
   display: block;
@@ -5224,6 +5238,18 @@ span.placeholder {
 .view-subtest-types-of-cell2 .diagram.big .symbol {
   font-size: 225%;
 }
+@media print {
+  .view-subtest-types-of-cell2 .diagram.big .circle {
+    width: 71.36364px;
+    padding-top: 9.54545px;
+  }
+  .view-subtest-types-of-cell2 .diagram.big .number {
+    font-size: 204.54545%;
+  }
+  .view-subtest-types-of-cell2 .diagram.big .symbol {
+    font-size: 102.27273%;
+  }
+}
 .view-subtest-types-of-cell2 .diagram.medium .circle {
   width: 127px;
   padding-top: 32px;
@@ -5234,6 +5260,18 @@ span.placeholder {
 .view-subtest-types-of-cell2 .diagram.medium .symbol {
   font-size: 200%;
 }
+@media print {
+  .view-subtest-types-of-cell2 .diagram.medium .circle {
+    width: 57.72727px;
+    padding-top: 14.54545px;
+  }
+  .view-subtest-types-of-cell2 .diagram.medium .number {
+    font-size: 170.45455%;
+  }
+  .view-subtest-types-of-cell2 .diagram.medium .symbol {
+    font-size: 90.90909%;
+  }
+}
 .view-subtest-types-of-cell2 .diagram.small .circle {
   width: 90px;
   padding-top: 46px;
@@ -5243,6 +5281,18 @@ span.placeholder {
 }
 .view-subtest-types-of-cell2 .diagram.small .symbol {
   font-size: 175%;
+}
+@media print {
+  .view-subtest-types-of-cell2 .diagram.small .circle {
+    width: 40.90909px;
+    padding-top: 20.90909px;
+  }
+  .view-subtest-types-of-cell2 .diagram.small .number {
+    font-size: 136.36364%;
+  }
+  .view-subtest-types-of-cell2 .diagram.small .symbol {
+    font-size: 79.54545%;
+  }
 }
 .view-subtest-types-of-cell2 .icon {
   width: 52px;
@@ -5264,14 +5314,29 @@ span.placeholder {
   top: 72px;
   text-align: center;
 }
+@media print {
+  .view-subtest-types-of-cell2 .percentage {
+    top: 34px;
+  }
+}
 .view-subtest-types-of-cell2 .number {
   line-height: 100%;
 }
 .view-subtest-types-of-cell2 .symbol {
   vertical-align: top;
 }
+@media print {
+  .view-subtest-types-of-cell2 .range {
+    margin-top: 31px;
+  }
+}
 .view-subtest-types-of-cell2 .range .widget-indicator {
   vertical-align: middle;
+}
+@media print {
+  .view-subtest-types-of-cell2 .range .widget-indicator {
+    padding-left: 5px;
+  }
 }
 .view-subtest-types-of-cell2 .range .text {
   font-family: 'Apercu', sans-serif;
@@ -5280,6 +5345,12 @@ span.placeholder {
   font-size: 85%;
   display: inline-block;
   padding-left: 10px;
+}
+@media print {
+  .view-subtest-types-of-cell2 .range .text {
+    padding-left: 0;
+    font-size: 60%;
+  }
 }
 .view-subtest-types-of-cell2 .description {
   display: none;
