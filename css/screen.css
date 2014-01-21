@@ -4610,13 +4610,18 @@ span.placeholder {
 }
 @media print {
   .view-subtest-range .marker .value {
-    font-size: 250%;
+    font-size: 180%;
   }
 }
 .view-subtest-range .marker .unit {
   font-size: 123.1%;
   font-weight: bold;
   display: block;
+}
+@media print {
+  .view-subtest-range .marker .unit {
+    font-size: 100%;
+  }
 }
 .view-subtest-range .marker .widget-indicator {
   display: block;
@@ -4627,7 +4632,7 @@ span.placeholder {
 }
 @media print {
   .view-subtest-range .actual {
-    padding-top: 63px;
+    padding-top: 53px;
   }
 }
 .view-subtest-range .actual .range {
@@ -4708,7 +4713,7 @@ span.placeholder {
 }
 @media print {
   .view-subtest-range.single-line-label .actual {
-    padding-top: 44px;
+    padding-top: 37px;
   }
 }
 
