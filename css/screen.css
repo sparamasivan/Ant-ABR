@@ -4062,9 +4062,9 @@ span.placeholder {
     -ms-transform: scale(0.59091, 0.59091);
     -o-transform: scale(0.59091, 0.59091);
     transform: scale(0.59091, 0.59091);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.59091, M12=0, M21=0, M22=0.59091, SizingMethod='auto expand')" \9;
-    margin-left: 65px \9;
-    margin-top: 65px \9;
+    filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.44091, M12=0, M21=0, M22=0.44091, SizingMethod='auto expand');
+    margin-left: 43.33333px \9;
+    margin-top: 43.33333px \9;
   }
 }
 .view-test-cbc .chart .value {
