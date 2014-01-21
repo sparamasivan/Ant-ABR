@@ -51,11 +51,17 @@
 				.symbol {
 					font-size: $symbolFontSize;
 				}
+			}
 
-				@media print {
-					$factor: 2.2;
+			@media print {
+				$factor: 2.2;
+				$width: (image-width($image) / 2) / $factor;
+
+				&.#{$size} {
+					width: $width;
+					
 					.circle {
-						width: (image-width($image) / 2) / $factor;
+						width: $width;
 						padding-top: $paddingTop / $factor;
 					}
 

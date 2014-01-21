@@ -5244,6 +5244,9 @@ span.placeholder {
   font-size: 225%;
 }
 @media print {
+  .view-subtest-types-of-cell2 .diagram.big {
+    width: 71.36364px;
+  }
   .view-subtest-types-of-cell2 .diagram.big .circle {
     width: 71.36364px;
     padding-top: 9.54545px;
@@ -5266,6 +5269,9 @@ span.placeholder {
   font-size: 200%;
 }
 @media print {
+  .view-subtest-types-of-cell2 .diagram.medium {
+    width: 57.72727px;
+  }
   .view-subtest-types-of-cell2 .diagram.medium .circle {
     width: 57.72727px;
     padding-top: 14.54545px;
@@ -5288,6 +5294,9 @@ span.placeholder {
   font-size: 175%;
 }
 @media print {
+  .view-subtest-types-of-cell2 .diagram.small {
+    width: 40.90909px;
+  }
   .view-subtest-types-of-cell2 .diagram.small .circle {
     width: 40.90909px;
     padding-top: 20.90909px;
