@@ -19,21 +19,29 @@
 
 			.print {
 				display: block;
+
+				.report-info {
+					float: right;
+				}
+
 				.text {
 					@include secondaryFont;
 					font-weight: bold;
-					font-size: 150%;
 				}
+
 				.status {
 					position: relative;
 					color: #00beeb;
+					margin-top: 0;
 
 					.icon {
-						position: absolute;
-						top: - image-width($iconGood) / 8;
-						left: - image-width($iconGood) * 1.1;
+						$width: image-width($iconGood) * .25;
 
-						width: image-width($iconGood) * .75;
+						position: absolute;
+						top: - $width / 8;
+						left: - $width * 2;
+
+						width: $width;
 					}
 				}
 			}
@@ -268,6 +276,10 @@
 			margin: 20px 0;
 			font-weight: normal;
 
+			@media print {
+				margin: 0;
+			}
+
 			.item {
 				font-weight: bold;
 			}
@@ -279,19 +291,6 @@
 		border-top: 1px dotted #C7C7C7;
 		border-bottom-left-radius: 5px;
 		border-bottom-right-radius: 5px;
-
-		h2 {
-			margin-top: 5px;
-			margin-bottom: 5px;
-		}
-		
-		p {
-			margin-top: 0;
-
-			@media print {
-				margin-bottom: 0;
-			}
-		}
 	}
 
 	.page-section-next-steps {
@@ -305,7 +304,10 @@
 			border-top: 1px solid #C7C7C7;
 			border-radius: 0;
 		}
+	}
 
+	.page-section-comment,
+	.page-section-next-steps {
 		h2 {
 			margin-top: 5px;
 			margin-bottom: 5px;
@@ -313,6 +315,10 @@
 		
 		p {
 			margin-top: 0;
+
+			@media print {
+				margin-bottom: 0;
+			}
 		}
 	}
 

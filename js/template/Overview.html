@@ -51,20 +51,22 @@
 
 			<div class="yui3-u-5-12">
 				<div class="yui3-u-c">
-					<p class="text">
-						{{clinic.name}}<br />
-						Report Date: {{formatDate date "F j, Y"}}
-					</p>
+					<div class="report-info">
+						<p class="text">
+							{{clinic.name}}<br />
+							Report Date: {{formatDate date "F j, Y"}}
+						</p>
 
-					<p class="text status">
-						<img class="icon" src="images/overview/{{#if requiresFollowUp}}bad{{else}}good{{/if}}-2x.png" alt="" />
+						<p class="text status">
+							<img class="icon" src="images/overview/{{#if requiresFollowUp}}bad{{else}}good{{/if}}-2x.png" alt="" />
 
-						{{#if requiresFollowUp}}
-							Overall, {{patient.name}}’s test results look good but we’d like you to follow up.
-						{{else}}
-							{{patient.name}}’s test results look good!
-						{{/if}}
-					</p>
+							{{#if requiresFollowUp}}
+								Overall, {{patient.name}}’s test results look good but we’d like you to follow up.
+							{{else}}
+								{{patient.name}}’s test results look good!
+							{{/if}}
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>

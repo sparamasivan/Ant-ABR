@@ -1570,6 +1570,11 @@ p {
     font-size: 116%;
   }
 }
+@media print {
+  p {
+    font-size: 100%;
+  }
+}
 
 a, a:visited {
   color: #00beeb;
@@ -1610,7 +1615,7 @@ h4 .small {
 }
 
 /* Phone & Tablet */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px), print {
   p {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -2039,6 +2044,11 @@ h4 .small {
     font-size: 116%;
   }
 }
+@media print {
+  .caption {
+    font-size: 100%;
+  }
+}
 
 .message-tooltip .message {
   font-weight: bold;
@@ -2058,6 +2068,11 @@ input {
 @media only screen and (max-width: 630px) {
   input {
     font-size: 116%;
+  }
+}
+@media print {
+  input {
+    font-size: 100%;
   }
 }
 
@@ -2087,6 +2102,11 @@ span.placeholder {
 @media only screen and (max-width: 630px) {
   span.placeholder {
     font-size: 116%;
+  }
+}
+@media print {
+  span.placeholder {
+    font-size: 100%;
   }
 }
 
@@ -2154,6 +2174,11 @@ span.placeholder {
     font-size: 116%;
   }
 }
+@media print {
+  .view-login .error {
+    font-size: 100%;
+  }
+}
 .view-login .forgot-password {
   font-family: 'Apercu', sans-serif;
   font-size: 108%;
@@ -2163,6 +2188,11 @@ span.placeholder {
 @media only screen and (max-width: 630px) {
   .view-login .forgot-password {
     font-size: 116%;
+  }
+}
+@media print {
+  .view-login .forgot-password {
+    font-size: 100%;
   }
 }
 .view-login .address {
@@ -2177,6 +2207,11 @@ span.placeholder {
 @media only screen and (max-width: 630px) {
   .view-login .address .line {
     font-size: 116%;
+  }
+}
+@media print {
+  .view-login .address .line {
+    font-size: 100%;
   }
 }
 .view-login .address .line.name {
@@ -3231,20 +3266,23 @@ span.placeholder {
   .view-overview .result-summary .print {
     display: block;
   }
+  .view-overview .result-summary .print .report-info {
+    float: right;
+  }
   .view-overview .result-summary .print .text {
     font-family: 'Apercu', sans-serif;
     font-weight: bold;
-    font-size: 150%;
   }
   .view-overview .result-summary .print .status {
     position: relative;
     color: #00beeb;
+    margin-top: 0;
   }
   .view-overview .result-summary .print .status .icon {
     position: absolute;
-    top: -8.125px;
-    left: -71.5px;
-    width: 48.75px;
+    top: -2.03125px;
+    left: -32.5px;
+    width: 16.25px;
   }
 }
 .view-overview .avatar-flag-container {
@@ -3463,6 +3501,11 @@ span.placeholder {
   margin: 20px 0;
   font-weight: normal;
 }
+@media print {
+  .view-overview .page-section-ran .testCounter {
+    margin: 0;
+  }
+}
 .view-overview .page-section-ran .testCounter .item {
   font-weight: bold;
 }
@@ -3471,18 +3514,6 @@ span.placeholder {
   border-top: 1px dotted #C7C7C7;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-}
-.view-overview .page-section-comment h2 {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-.view-overview .page-section-comment p {
-  margin-top: 0;
-}
-@media print {
-  .view-overview .page-section-comment p {
-    margin-bottom: 0;
-  }
 }
 .view-overview .page-section-next-steps {
   background: url("../images/overview/recap/pattern.png") repeat transparent;
@@ -3497,12 +3528,20 @@ span.placeholder {
     border-radius: 0;
   }
 }
+.view-overview .page-section-comment h2,
 .view-overview .page-section-next-steps h2 {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+.view-overview .page-section-comment p,
 .view-overview .page-section-next-steps p {
   margin-top: 0;
+}
+@media print {
+  .view-overview .page-section-comment p,
+  .view-overview .page-section-next-steps p {
+    margin-bottom: 0;
+  }
 }
 .view-overview .widget-circle-arrow {
   position: absolute;
@@ -3533,6 +3572,11 @@ span.placeholder {
 @media only screen and (max-width: 630px) {
   .view-overview .contact {
     font-size: 116%;
+  }
+}
+@media print {
+  .view-overview .contact {
+    font-size: 100%;
   }
 }
 @media print {
