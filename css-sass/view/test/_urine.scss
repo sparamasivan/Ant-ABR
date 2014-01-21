@@ -1,6 +1,10 @@
 @include view-test-base-extend(urine, #613B97, #6B499E, $page-break-inside: auto);
 
 .view-test-urine-analysis {
+    .test-section >.first-part {
+        page-break-inside: avoid;
+    }
+
     .test-section-description {
         h1 {
             @media print {
@@ -24,8 +28,10 @@
         }
 
         @media only print {
-            font-size: 146.5%;
+            font-size: 116%;
             border-bottom: 0;
+            margin: 0;
+            padding: 0;
         }
     }
 
@@ -36,6 +42,11 @@
 
         margin: 10px auto;
         max-width: 350px;
+
+        @media print {
+            max-width: 150px;
+            margin-top: 0;
+        }
 
         .palette {
             display: block;
@@ -56,8 +67,13 @@
             line-height: 100%;
 
             /* phone */
-            @media only screen and (max-width:$mq-phone), print {
+            @media only screen and (max-width:$mq-phone) {
                 font-size: 138.5%;
+            }
+
+            @media print {
+                font-size: 100%;
+                bottom: 38%;
             }
         }
 
@@ -86,8 +102,12 @@
             margin-top: 26%;
     
             /* phone */
-            @media only screen and (max-width:$mq-phone), print {
+            @media only screen and (max-width:$mq-phone) {
                 margin-top: 30px;
+            }
+
+            @media print {
+                margin-top: 10px;
             }
         }
 
@@ -254,8 +274,12 @@
                 bottom: 43%;
 
                 /* phone */
-                @media only screen and (max-width:$mq-phone), print {
+                @media only screen and (max-width:$mq-phone) {
                     font-size: 230%;
+                }
+
+                @media print {
+                    font-size: 150%;
                 }
             }
         }
@@ -277,11 +301,21 @@
             &.acidic {
                 bottom: 3%;
                 left: 23%;
+
+                @media print {
+                    bottom: 0;
+                    left: 20%;
+                }
             }
 
             &.alkaline {
                 bottom: 3%;
                 right: 23%;
+
+                @media print {
+                    bottom: 0;
+                    right: 20%;
+                }
             }
         }
     }

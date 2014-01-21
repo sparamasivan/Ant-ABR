@@ -1596,9 +1596,14 @@ h1 {
   line-height: 115%;
   font-size: 212%;
 }
-@media only screen and (max-width: 630px), only print {
+@media only screen and (max-width: 630px) {
   h1 {
     font-size: 167%;
+  }
+}
+@media print {
+  h1 {
+    font-size: 131%;
   }
 }
 
@@ -1637,6 +1642,15 @@ h4 .small {
   padding: 10px;
 }
 
+@media print {
+  .yui3-u-c-horizontal-print {
+    padding: 0 10px;
+  }
+
+  .yui3-u-c-horizontal-bottom-print {
+    padding: 0 10px 10px;
+  }
+}
 /* Tablet */
 @media only screen and (min-width: 631px) and (max-width: 768px) {
   /* Media specific unit sizes */
@@ -2612,7 +2626,7 @@ span.placeholder {
     display: none;
   }
 }
-@media only screen and (max-width: 630px), print {
+@media only screen and (max-width: 630px) {
   .view-widget-test-subsection > .header {
     font-size: 146.5%;
   }
@@ -2620,6 +2634,11 @@ span.placeholder {
     position: relative;
     top: -3px;
     left: auto;
+  }
+}
+@media print {
+  .view-widget-test-subsection > .header {
+    font-size: 131%;
   }
 }
 .view-widget-test-subsection > .body {
@@ -3726,7 +3745,7 @@ span.placeholder {
 
 @media print {
   .view-test-base .header-container {
-    margin: 20px 0;
+    margin: 10px 0;
   }
 }
 .view-test-base > .body.collapsed {
@@ -4270,6 +4289,9 @@ span.placeholder {
   max-width: 466px;
 }
 
+.view-test-urine-analysis .test-section > .first-part {
+  page-break-inside: avoid;
+}
 @media print {
   .view-test-urine-analysis .test-section-description h1 {
     margin: 0;
@@ -4291,8 +4313,10 @@ span.placeholder {
 }
 @media only print {
   .view-test-urine-analysis h2 {
-    font-size: 146.5%;
+    font-size: 116%;
     border-bottom: 0;
+    margin: 0;
+    padding: 0;
   }
 }
 .view-test-urine-analysis .diagram-palette {
@@ -4300,6 +4324,12 @@ span.placeholder {
   position: relative;
   margin: 10px auto;
   max-width: 350px;
+}
+@media print {
+  .view-test-urine-analysis .diagram-palette {
+    max-width: 150px;
+    margin-top: 0;
+  }
 }
 .view-test-urine-analysis .diagram-palette .palette {
   display: block;
@@ -4316,9 +4346,15 @@ span.placeholder {
   line-height: 100%;
   /* phone */
 }
-@media only screen and (max-width: 630px), print {
+@media only screen and (max-width: 630px) {
   .view-test-urine-analysis .diagram-palette .label {
     font-size: 138.5%;
+  }
+}
+@media print {
+  .view-test-urine-analysis .diagram-palette .label {
+    font-size: 100%;
+    bottom: 38%;
   }
 }
 .view-test-urine-analysis .diagram-palette .widget-indicator {
@@ -4339,9 +4375,14 @@ span.placeholder {
   margin-top: 26%;
   /* phone */
 }
-@media only screen and (max-width: 630px), print {
+@media only screen and (max-width: 630px) {
   .view-test-urine-analysis .property.appearance .text {
     margin-top: 30px;
+  }
+}
+@media print {
+  .view-test-urine-analysis .property.appearance .text {
+    margin-top: 10px;
   }
 }
 .view-test-urine-analysis .property.appearance .widget-indicator {
@@ -4499,9 +4540,14 @@ span.placeholder {
   bottom: 43%;
   /* phone */
 }
-@media only screen and (max-width: 630px), print {
+@media only screen and (max-width: 630px) {
   .view-test-urine-analysis .property.ph .diagram-palette .label {
     font-size: 230%;
+  }
+}
+@media print {
+  .view-test-urine-analysis .property.ph .diagram-palette .label {
+    font-size: 150%;
   }
 }
 .view-test-urine-analysis .property.ph .legend {
@@ -4521,9 +4567,21 @@ span.placeholder {
   bottom: 3%;
   left: 23%;
 }
+@media print {
+  .view-test-urine-analysis .property.ph .legend.acidic {
+    bottom: 0;
+    left: 20%;
+  }
+}
 .view-test-urine-analysis .property.ph .legend.alkaline {
   bottom: 3%;
   right: 23%;
+}
+@media print {
+  .view-test-urine-analysis .property.ph .legend.alkaline {
+    bottom: 0;
+    right: 20%;
+  }
 }
 
 .view-subtest-range {

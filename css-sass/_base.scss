@@ -80,9 +80,12 @@ h1 {
     line-height: 115%;
     font-size: 212%;
 
-    @media only screen and (max-width:($mq-phone)),
-        only print {
+    @media only screen and (max-width:($mq-phone)) {
         font-size: 167%;
+    }
+
+    @media print {
+        font-size: 131%;
     }
 }
 
@@ -121,6 +124,15 @@ h4 {
 /* content wrapper inside a grid unit */
 .yui3-u-c {
     padding: 10px;
+}
+
+@media print {
+    .yui3-u-c-horizontal-print {
+        padding: 0 10px;
+    }
+    .yui3-u-c-horizontal-bottom-print {
+        padding: 0 10px 10px;
+    }
 }
 
 /* Tablet */

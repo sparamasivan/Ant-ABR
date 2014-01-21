@@ -2,107 +2,109 @@
 
     <!-- Visual Analysis -->
     <div class="test-section visual">
-        <div class="test-section-inner-with-icon first">
-            <div class="yui3-g-r">
-                <!-- description -->
-                <div class="yui3-u-19-24 yui3-u-23-24-small-tablet">
-                    <div class="yui3-u-c">
-                        <div class="test-section-description">
-                            <img class="icon" src="images/test/urine/icon/visual-2x.png" alt="" />
+        <div class="first-part">
+            <div class="test-section-inner-with-icon first">
+                <div class="yui3-g-r">
+                    <!-- description -->
+                    <div class="yui3-u-19-24 yui3-u-23-24-small-tablet">
+                        <div class="yui3-u-c">
+                            <div class="test-section-description">
+                                <img class="icon" src="images/test/urine/icon/visual-2x.png" alt="" />
 
-                            <h1><span>Visual Analysis</span></h1>
-                            <p>By using just the naked eye or microscope, we can learn many things about the health of {{patient.name}}’s kidneys and bladder.</p>
+                                <h1><span>Visual Analysis</span></h1>
+                                <p>By using just the naked eye or microscope, we can learn many things about the health of {{patient.name}}’s kidneys and bladder.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="test-section-inner-with-icon desktop-only last">
-            <div class="yui3-g-r">
-                <div class="yui3-u-11-24 yui3-u-1-3-print">
-                    <div class="yui3-u-c property color">
-                        <h2>Color</h2>
+            <div class="test-section-inner-with-icon desktop-only last">
+                <div class="yui3-g-r">
+                    <div class="yui3-u-11-24 yui3-u-1-3-print">
+                        <div class="yui3-u-c yui3-u-c-horizontal-bottom-print property color">
+                            <h2>Color</h2>
 
-                        <div class="diagram-palette">
-                            <img class="palette" src="images/test/urine/color/{{color.type}}-2x.png" />
+                            <div class="diagram-palette">
+                                <img class="palette" src="images/test/urine/color/{{color.type}}-2x.png" />
 
-                            <div class="label">
-                                <div>{{color.label}}</div>
-                                <div class="indicator {{#if color.isBad}}bad{{/if}}"></div>
-                            </div>
+                                <div class="label">
+                                    <div>{{color.label}}</div>
+                                    <div class="indicator {{#if color.isBad}}bad{{/if}}"></div>
+                                </div>
 
-                            <div class="description">
-                                <p>
-                                    <span class="message">
+                                <div class="description">
+                                    <p>
+                                        <span class="message">
+                                            {{#if color.isBad}}
+                                                {{patient.name}}’s urine was not an expected color.
+                                            {{else}}
+                                                {{patient.name}}’s urine was an expected color.
+                                            {{/if}}
+                                        </span>
+
                                         {{#if color.isBad}}
-                                            {{patient.name}}’s urine was not an expected color.
+                                            Many factors can affect the color of urine, from medication to diet.
                                         {{else}}
-                                            {{patient.name}}’s urine was an expected color.
+                                            Many factors can affect the color of urine, from medication to diet.
                                         {{/if}}
-                                    </span>
-
-                                    {{#if color.isBad}}
-                                        Many factors can affect the color of urine, from medication to diet.
-                                    {{else}}
-                                        Many factors can affect the color of urine, from medication to diet.
-                                    {{/if}}
-                                </p>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="yui3-u-1-24 yui3-hidden-phone"></div>
+                    <div class="yui3-u-1-24 yui3-hidden-phone"></div>
 
-                <div class="yui3-u-11-24 yui3-u-1-3-print">
-                    <div class="yui3-u-c property appearance">
-                        <h2>Appearance</h2>
+                    <div class="yui3-u-11-24 yui3-u-1-3-print">
+                        <div class="yui3-u-c yui3-u-c-horizontal-bottom-print property appearance">
+                            <h2>Appearance</h2>
 
-                        <div class="container">
+                            <div class="container">
 
-                            <div class="text">
-                                <span class="indicator {{#if appearance.isBad}}bad{{/if}}"></span><span class="label">{{appearance.label}}</span>
-                            </div>
-
-                            <div class="actual">
-                                <div class="range">
-                                    <img src="images/test/urine/appearance/bg-swatch.png" alt="" />
+                                <div class="text">
+                                    <span class="indicator {{#if appearance.isBad}}bad{{/if}}"></span><span class="label">{{appearance.label}}</span>
                                 </div>
 
-                                <div class="value {{appearance.type}}">
-                                    <img class="pattern" src="images/test/urine/appearance/{{appearance.type}}.png" alt="" />
-                                </div>
-                            </div>
+                                <div class="actual">
+                                    <div class="range">
+                                        <img src="images/test/urine/appearance/bg-swatch.png" alt="" />
+                                    </div>
 
-                            <div class="expected">
-                                <div class="range">
-                                    <div class="value"></div>
+                                    <div class="value {{appearance.type}}">
+                                        <img class="pattern" src="images/test/urine/appearance/{{appearance.type}}.png" alt="" />
+                                    </div>
                                 </div>
 
-                                <div class="expected-label">
-                                    Expected Range
+                                <div class="expected">
+                                    <div class="range">
+                                        <div class="value"></div>
+                                    </div>
+
+                                    <div class="expected-label">
+                                        Expected Range
+                                    </div>
                                 </div>
-                            </div>
-                            
-                            <div class="description">
-                                <p>
-                                    <span class="message">
+                                
+                                <div class="description">
+                                    <p>
+                                        <span class="message">
+                                            {{#if appearance.isBad}}
+                                                {{patient.name}}’s urine’s appearance was not expected.
+                                            {{else}}
+                                                {{patient.name}}’s urine’s appearance was expected.
+                                            {{/if}}
+                                        </span>
+
                                         {{#if appearance.isBad}}
-                                            {{patient.name}}’s urine’s appearance was not expected.
+                                            Urine is typically a clear liquid. An unexpected appearance would be caused by microscopic particles, such as cells or crystals.
                                         {{else}}
-                                            {{patient.name}}’s urine’s appearance was expected.
+                                            Urine is typically a clear liquid. It can appear cloudy if it contains unexpected cells or crystals.
                                         {{/if}}
-                                    </span>
+                                    </p>
+                                </div>
 
-                                    {{#if appearance.isBad}}
-                                        Urine is typically a clear liquid. An unexpected appearance would be caused by microscopic particles, such as cells or crystals.
-                                    {{else}}
-                                        Urine is typically a clear liquid. It can appear cloudy if it contains unexpected cells or crystals.
-                                    {{/if}}
-                                </p>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -115,66 +117,68 @@
 
     <!-- Chemical Analysis -->
     <div class="test-section visual">
-        <div class="test-section-inner-with-icon first">
-            <div class="yui3-g-r">
-                <!-- description -->
-                <div class="yui3-u-19-24 yui3-u-23-24-small-tablet">
-                    <div class="yui3-u-c">
-                        <div class="test-section-description">
-                            <img class="icon" src="images/test/urine/icon/chemical-2x.png" alt="" />
+        <div class="first-part">
+            <div class="test-section-inner-with-icon first">
+                <div class="yui3-g-r">
+                    <!-- description -->
+                    <div class="yui3-u-19-24 yui3-u-23-24-small-tablet">
+                        <div class="yui3-u-c">
+                            <div class="test-section-description">
+                                <img class="icon" src="images/test/urine/icon/chemical-2x.png" alt="" />
 
-                            <h1><span>Chemical Analysis</span></h1>
-                            <p>By analyzing the chemistry of {{patient.name}}’s urine, we are able to understand organ function on a deeper level.</p>
+                                <h1><span>Chemical Analysis</span></h1>
+                                <p>By analyzing the chemistry of {{patient.name}}’s urine, we are able to understand organ function on a deeper level.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="test-section-inner-with-icon desktop-only last">
-            <div class="yui3-g-r">
-                <div class="yui3-u-11-24 yui3-u-1-3-print">
-                    <div class="yui3-u-c property concentration">
-                        <h2>Concentration</h2>
+            <div class="test-section-inner-with-icon desktop-only last">
+                <div class="yui3-g-r">
+                    <div class="yui3-u-11-24 yui3-u-1-3-print">
+                        <div class="yui3-u-c yui3-u-c-horizontal-bottom-print property concentration">
+                            <h2>Concentration</h2>
 
-                        <div class="select"></div>
+                            <div class="select"></div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="yui3-u-1-24 yui3-hidden-phone"></div>
+                    <div class="yui3-u-1-24 yui3-hidden-phone"></div>
 
-                <div class="yui3-u-11-24 yui3-u-1-3-print">
-                    <div class="yui3-u-c property ph">
-                        <h2>pH Levels</h2>
+                    <div class="yui3-u-11-24 yui3-u-1-3-print">
+                        <div class="yui3-u-c yui3-u-c-horizontal-bottom-print property ph">
+                            <h2>pH Levels</h2>
 
-                        <div class="diagram-palette">
-                            <img class="image" src="images/test/urine/ph/{{ph.valueRounded}}-2x.png" />
+                            <div class="diagram-palette">
+                                <img class="image" src="images/test/urine/ph/{{ph.valueRounded}}-2x.png" />
 
-                            <div class="label">
-                                <div>{{ph.value}}</div>
-                                <div class="indicator {{#if ph.isBad}}bad{{/if}}"></div>
-                            </div>
+                                <div class="label">
+                                    <div>{{ph.value}}</div>
+                                    <div class="indicator {{#if ph.isBad}}bad{{/if}}"></div>
+                                </div>
 
-                            <div class="legend neutral">Neutral</div>
-                            <div class="legend acidic">Acidic</div>
-                            <div class="legend alkaline">Alkaline</div>
+                                <div class="legend neutral">Neutral</div>
+                                <div class="legend acidic">Acidic</div>
+                                <div class="legend alkaline">Alkaline</div>
 
-                            <div class="description">
-                                <p>
-                                    <span class="message">
+                                <div class="description">
+                                    <p>
+                                        <span class="message">
+                                            {{#if ph.isBad}}
+                                                The pH level of {{patient.name}}’s urine is outside the expected range.
+                                            {{else}}
+                                                The pH level of {{patient.name}}’s urine was expected.
+                                            {{/if}}
+                                        </span>
+
                                         {{#if ph.isBad}}
-                                            The pH level of {{patient.name}}’s urine is outside the expected range.
+                                            Blood should always be at a specific pH level, which is neutral (5.5-7.0). The kidneys are responsible for maintaining {{patient.name}}’s pH level.
                                         {{else}}
-                                            The pH level of {{patient.name}}’s urine was expected.
+                                            Blood should always be at a specific pH level, which is neutral (5.5-7.0). The kidneys are responsible for maintaining {{patient.name}}’s pH level.
                                         {{/if}}
-                                    </span>
-
-                                    {{#if ph.isBad}}
-                                        Blood should always be at a specific pH level, which is neutral (5.5-7.0). The kidneys are responsible for maintaining {{patient.name}}’s pH level.
-                                    {{else}}
-                                        Blood should always be at a specific pH level, which is neutral (5.5-7.0). The kidneys are responsible for maintaining {{patient.name}}’s pH level.
-                                    {{/if}}
-                                </p>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
