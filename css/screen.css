@@ -4043,8 +4043,8 @@ span.placeholder {
 }
 @media print {
   .view-test-cbc .chart .diagram {
-    width: 130px;
-    height: 130px;
+    width: 120.0px;
+    height: 120.0px;
     overflow: hidden;
     float: left;
   }
@@ -4055,18 +4055,18 @@ span.placeholder {
 }
 @media print {
   .view-test-cbc .chart .diagram .inner {
-    top: -45px;
-    left: -45px;
-    -webkit-transform: scale(0.59091, 0.59091);
-    -moz-transform: scale(0.59091, 0.59091);
-    -ms-transform: scale(0.59091, 0.59091);
-    -o-transform: scale(0.59091, 0.59091);
-    transform: scale(0.59091, 0.59091);
+    top: -50.0px;
+    left: -50.0px;
+    -webkit-transform: scale(0.54545, 0.54545);
+    -moz-transform: scale(0.54545, 0.54545);
+    -ms-transform: scale(0.54545, 0.54545);
+    -o-transform: scale(0.54545, 0.54545);
+    transform: scale(0.54545, 0.54545);
   }
   .view-test-cbc .chart .diagram .inner.no-csstransforms {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.44091, M12=0, M21=0, M22=0.44091, SizingMethod='auto expand')";
-    margin-left: 43.33333px;
-    margin-top: 43.33333px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.39545, M12=0, M21=0, M22=0.39545, SizingMethod='auto expand')";
+    margin-left: 40.0px;
+    margin-top: 40.0px;
   }
 }
 .view-test-cbc .chart .value {
@@ -4085,7 +4085,7 @@ span.placeholder {
     left: 0;
     float: left;
     width: auto;
-    margin-top: 40px;
+    margin-top: 35px;
     margin-left: 20px;
   }
 }
