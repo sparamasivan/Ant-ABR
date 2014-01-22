@@ -4117,6 +4117,11 @@ span.placeholder {
   text-transform: uppercase;
   font-size: 85%;
 }
+@media print {
+  .view-test-cbc .chart .value .text {
+    font-size: 60%;
+  }
+}
 .view-test-cbc .range-container {
   margin: 20px 0 0 10%;
 }
@@ -4689,6 +4694,11 @@ span.placeholder {
   text-align: center;
   font-size: 77%;
   font-weight: bold;
+}
+@media print {
+  .view-subtest-range .expected .label {
+    font-size: 60%;
+  }
 }
 .view-subtest-range .expected .label .limits {
   text-transform: uppercase;
