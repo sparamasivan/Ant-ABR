@@ -3523,6 +3523,7 @@ span.placeholder {
   .view-overview .page-section-ran .testCounter {
     margin: 0;
     font-weight: normal;
+    font-size: 174%;
   }
   .view-overview .page-section-ran .testCounter .item {
     font-weight: bold;
