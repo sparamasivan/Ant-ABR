@@ -4923,9 +4923,12 @@ span.placeholder {
   font-family: 'Apercu', sans-serif;
   text-align: center;
   margin-top: 5px;
+  font-size: 85%;
+  color: #6c6d6d;
 }
 .view-subtest-range-group .range-item .value-number.bad {
   font-weight: bold;
+  color: black;
 }
 .view-subtest-range-group .average-range {
   background-image: url("../images/subtest/range-group/range-bg.png");

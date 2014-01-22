@@ -232,9 +232,12 @@
             @include secondaryFont;
             text-align: center;
             margin-top: 5px;
+            font-size: 85%;
+            color: #6c6d6d;
 
             &.bad {
                 font-weight: bold;
+                color: black;
             }
         }
     }
