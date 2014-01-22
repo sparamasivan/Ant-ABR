@@ -3,8 +3,8 @@
 VCA Healthtracks allows pet owners to view their pet's lab results through an easy-to-use, single-page, web-based report.
 
 ## Files
-  * [index.html](index.html) - Frontend endpoint used for displaying test results. Uses optimized (compressed) JS and CSS files, along with configuration settings geared towards live deployment.
-  * [index-dev.html](index-dev.html) - Same as [index.html](index.html), but uses uncompressed JavaScript and other configuration settings which should help the programmer with developing and debugging code.
+  * [report.html](report.html) - Frontend endpoint used for displaying test results. Uses optimized (compressed) JS and CSS files, along with configuration settings geared towards live deployment.
+  * [report-dev.html](report-dev.html) - Same as [report.html](report.html), but uses uncompressed JavaScript and other configuration settings which should help the programmer with developing and debugging code.
   * [login.html](login.html), [password-create.html](password-create.html), [password-forgot.html](password-forgot.html) - Static login/authentication pages that need to be integrated with the backend.
   * [data-map.html](data-map.html) - A dynamically generated table (from sample JSON data) that lists all the test codes and properties by test type (Urine, CBC, etc.). All these test codes and properties must be present for each test JSON data in order for the frontend to render the report successfully.
 
@@ -12,8 +12,8 @@ VCA Healthtracks allows pet owners to view their pet's lab results through an ea
 
 ### Local
 Use sample JSON data stored in the local [data](data/) folder.
-  * [Combined - Cat & Dog tests](index.html?report=data/combined.json)
-  * [Follow up (low values)](index.html?report=data/low.json)
+  * [Combined - Cat & Dog tests](report.html?report=data/combined.json)
+  * [Follow up (low values)](report.html?report=data/low.json)
 
 ### Staging
 Frontend code hosted on blacknight.criticalmass.com server loading sample JSON data from [VCA Reports web service](https://blacknight.criticalmass.com/VCAReports-web/).
