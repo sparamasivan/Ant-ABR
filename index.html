@@ -17,7 +17,7 @@
         <script type="text/javascript">
             $(document).ready(function($) {
                 var testGroups = [{
-                        title: 'Healthtracks Report',
+                        title: '',
                         tests: [{
                                 type: 'Combined - Cat & Dog tests',
                                 url: 'report.html?report=data/combined.json'
@@ -41,9 +41,11 @@
                     ],
                     testGroupTemplate = Handlebars.compile(
                         '<tbody class="testGroup">' +
-                            '<tr>' +
-                                '<th colspan="4">{{title}}</th>' +
-                            '</tr>' +
+                            '{{#if title}}' +
+                                '<tr>' +
+                                    '<th colspan="4">{{title}}</th>' +
+                                '</tr>' +
+                            '{{/if}}' +
                         '</tbody>'
                     ),
                     testTemplate = Handlebars.compile(
@@ -129,7 +131,7 @@
     </head>
     <body>
         <div class="page">
-            <h1>Benefits Pages</h1>
+            <h1>Healthtracks Report</h1>
 
             <div class="actions">
                 <button class="clear-cookies">Clear Cookies</button>
