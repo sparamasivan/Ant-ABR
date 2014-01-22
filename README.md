@@ -10,19 +10,7 @@ VCA Healthtracks allows pet owners to view their pet's lab results through an ea
 
 ## Sample Tests
 
-### Local
-Use sample JSON data stored in the local [data](data/) folder.
-  * [Combined - Cat & Dog tests](report.html?report=data/combined.json)
-  * [Follow up (low values)](report.html?report=data/low.json)
-
-### Staging
-Frontend code hosted on blacknight.criticalmass.com server loading sample JSON data from [VCA Reports web service](https://blacknight.criticalmass.com/VCAReports-web/).
-  * [119923730](https://blacknight.criticalmass.com/vca/index.html?report=/VCAReports-web/vca/services/results/report/119923730)
-  * [108605880](https://blacknight.criticalmass.com/vca/index.html?report=/VCAReports-web/vca/services/results/report/108605880)
-  * [117865128](https://blacknight.criticalmass.com/vca/index.html?report=/VCAReports-web/vca/services/results/report/117865128)
-  * [119425143](https://blacknight.criticalmass.com/vca/index.html?report=/VCAReports-web/vca/services/results/report/119425143)
-  * [106615611](https://blacknight.criticalmass.com/vca/index.html?report=/VCAReports-web/vca/services/results/report/106615611)
-  * [117805397](https://blacknight.criticalmass.com/vca/index.html?report=/VCAReports-web/vca/services/results/report/117805397)
+A version of this code should be up and running on [allboatsrise.com/dev/vca/ht-report-print](http://allboatsrise.com/dev/vca/ht-report-print/).
 
 ## Supported Browsers
   * Desktop

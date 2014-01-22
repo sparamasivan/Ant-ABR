@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- character set -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+        <!-- initial scaling on device and zooming limitations -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- styles -->
+        <link rel="stylesheet" type="text/css" href="/css/test.css" />
+
+        <!-- scripts -->
+        <script type="text/javascript" src="/js/lib/jquery-1.8.3.js"></script>
+        <script type="text/javascript" src="/js/lib/jquery.cookie.js"></script>
+        <script type="text/javascript" src="/js/lib/handlebars-1.0.0-rc.3.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function($) {
+                var testGroups = [{
+                        title: 'Healthtracks Report',
+                        tests: [{
+                                type: 'Combined - Cat & Dog tests',
+                                url: 'report.html?report=data/combined.json'
+                            },{
+                                type: 'Follow up (low values)',
+                                url: 'report.html?report=data/low.json'
+                            },{
+                                type: 'OVA test - All parasites',
+                                url: 'report.html?report=data/ova-only.json'
+                            },{
+                                type: 'Adult Wellness Canine',
+                                url: 'report.html?report=data/adult-wellness-canine.json'
+                            },{
+                                type: 'Senior Wellness Canine',
+                                url: 'report.html?report=data/senior-wellness-canine.json'
+                            },{
+                                type: 'Senior Wellness Feline',
+                                url: 'report.html?report=data/senior-wellness-feline.json'
+                            }]
+                        }
+                    ],
+                    testGroupTemplate = Handlebars.compile(
+                        '<tbody class="testGroup">' +
+                            '<tr>' +
+                                '<th colspan="4">{{title}}</th>' +
+                            '</tr>' +
+                        '</tbody>'
+                    ),
+                    testTemplate = Handlebars.compile(
+                        '<tr class="test">' +
+                            '<td>{{test.type}}</td>' +
+                            '<td>{{test.expected}}</td>' +
+                            '<td>' +
+                                '{{#if cookies}}' +
+                                    '<ul class="cookies">' +
+                                        '{{#each cookies}}' +
+                                            '<li>{{name}}: {{value}}</li>' +
+                                        '{{/each}}' +
+                                    '</ul>' +
+                                '{{/if}}' +
+                            '</td>' +
+                            '<td><a href="{{test.url}}" target="_blank" title="{{test.url}}">Launch</a></td>' +
+                        '</tr>'
+                    ),
+                    clearCookies = function() {
+                        var cookies = $.cookie();
+                        $.each(cookies, function(name, value) {
+                            $.removeCookie(name, { path: '/' });
+                        });
+                    };
+
+                $.each(testGroups, function(i, testGroup) {
+                    var elTestGroup = $(testGroupTemplate({
+                            title: testGroup.title
+                        }));
+
+                    $('.tests').append(elTestGroup);
+
+                    $.each(testGroup.tests, function(i, test) {
+                        var el = $(testTemplate({
+                            test: test,
+                            cookies: $.map(test.cookies || [], function(value, name) {
+                                return {name: name, value: value};
+                            })
+                        }));
+
+                        el.find('a').on('click', function(e) {
+                            clearCookies();
+
+                            if (test.cookies) {
+                                $.each(test.cookies, function(name, value) {
+                                    $.cookie(name, value, {path: '/'});
+                                });
+                            }
+                        });
+
+                        elTestGroup.append(el);
+                    });
+                })
+
+                $('.clear-cookies').on('click', clearCookies);
+
+                $('.toggle-debug').on('click', function() {
+                    var isDebug = $(this).hasClass('debug');
+
+                    $('.test a').each(function() {
+                        var elLink = $(this),
+                            url = elLink.attr('href');
+
+                        if (isDebug) {
+                            url = url.replace(new RegExp('report-dev[.]html'), 'report.html');
+                        } else {
+                            url = url.replace(new RegExp('report[.]html'), 'report-dev.html');
+                        }
+
+                        elLink
+                            .attr('href', url)
+                            .attr('title', url);
+                    });
+
+                    $(this).toggleClass('debug');
+                    $(this).text(
+                        'Debug Urls: ' +
+                        (isDebug ? 'OFF' : 'ON')
+                    );
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="page">
+            <h1>Benefits Pages</h1>
+
+            <div class="actions">
+                <button class="clear-cookies">Clear Cookies</button>
+                <button class="toggle-debug">Debug Urls: OFF</button>
+            </div>
+
+            <table class="tests">
+                <thead>
+                    <tr>
+                        <th>Type of test</th>
+                        <th>Expected Result</th>
+                        <th>Cookies</th>
+                        <th>URL</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </body>
+</html>
