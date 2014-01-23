@@ -5403,11 +5403,6 @@ span.placeholder {
   border-radius: 4px;
   padding: 15px 15px;
 }
-@media print {
-  .view-subtest-pod-base > .inner {
-    height: auto !important;
-  }
-}
 .view-subtest-pod-base > .inner > .header {
   font-size: 138.5%;
   font-weight: bold;
@@ -5420,7 +5415,6 @@ span.placeholder {
 }
 @media print {
   .view-subtest-pod-base > .inner > .header {
-    height: auto !important;
     font-size: 116%;
   }
 }
