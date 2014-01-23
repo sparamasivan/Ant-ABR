@@ -14,7 +14,8 @@ define([
     'view/animation/Cbc',
     'modernizr',
     'goog!visualization,1,packages:[corechart,geochart]',
-    'jquery-equal-heights'
+    'jquery-equal-heights',
+    'jquery-waitforimages'
 ], function(
     $,
     Backbone,
@@ -81,11 +82,11 @@ define([
                 patient: this.model.getReport().getDataPatient()
             }));
 
-            this._renderRbcSection(this.$elContent.find('.subsection-rbc'));
-
-            this._renderWbcSection(this.$elContent.find('.subsection-wbc'));
-
-            this._renderPlateletSection(this.$elContent.find('.subsection-platelet'));
+            return $.when(
+                this._renderRbcSection(this.$elContent.find('.subsection-rbc')),
+                this._renderWbcSection(this.$elContent.find('.subsection-wbc')),
+                this._renderPlateletSection(this.$elContent.find('.subsection-platelet'))
+            );
         },
 
         _renderRbcSection: function(parent) {
@@ -103,12 +104,12 @@ define([
                         bad: Handlebars.compile('However, an unexpected cell count does not necessarily mean the {{{patient.name}}}’s red blood cells are out of balance. We look not only at the number of red blood cells, but also their appearance.')({patient: patient})
                     }
                 });
-
-            view.render(parent.find('.range-container'));
-
-            this._renderPieChart(parent.find('.chart'), this.model.getRbcPercentage(), 0);
-
-            this._renderRbcAppearanceSubsection(parent.find('.test-subsection.appearance'));
+            
+            return $.when(
+                view.render(parent.find('.range-container')),
+                this._renderPieChart(parent.find('.chart'), this.model.getRbcPercentage(), 0),
+                this._renderRbcAppearanceSubsection(parent.find('.test-subsection.appearance'))
+            );
         },
 
         _renderRbcAppearanceSubsection: function(parent) {
@@ -143,7 +144,9 @@ define([
 
                 subtestData,
 
-                elPods;
+                elPods,
+
+                deferred = new $.Deferred();
 
             // render subsection
             view.render(parent);
@@ -205,16 +208,29 @@ define([
 
             // equalize pod heights
             elPods = contentEl.find('.view-subtest-pod-base >.inner');
-            elPods.equalHeights({
-                callback: function(tallestHeight) {
-                    return !ModelMediaQuery.isPhoneMedia();
-                }
+            view.expand(); // expand subsection, to force images to load
+            elPods.waitForImages({
+                finished: function() {
+                    elPods.equalHeights({
+                        callback: function(tallestHeight) {
+                            return !ModelMediaQuery.isPhoneMedia();
+                        }
+                    });
+
+                    view.collapse();
+
+                    deferred.resolve();
+                },
+
+                waitForAll: true
             });
 
             // updated heights when subsection expanded
             view.on('expanded', function() {
                 elPods.equalHeights('refresh');
             });
+
+            return deferred.promise();
         },
 
         _renderWbcSection: function(parent) {
