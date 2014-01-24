@@ -5143,6 +5143,11 @@ span.placeholder {
   box-shadow: inset 0 0 7px #e5e5e5;
   border: 1px solid #e5e5e5;
 }
+@media print {
+  .view-subtest-select .indicator-background {
+    box-shadow: none;
+  }
+}
 .view-subtest-select .option {
   font-family: 'Apercu', sans-serif;
   font-size: 116%;

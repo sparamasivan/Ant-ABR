@@ -14,6 +14,10 @@
         border-radius: 21px;
         box-shadow: inset 0 0 7px #e5e5e5;
         border: 1px solid #e5e5e5;
+
+        @media print {
+            box-shadow: none; // disabled, since it causes weird black box background to appear in chrome when printing
+        }
     }
 
 	.option {
