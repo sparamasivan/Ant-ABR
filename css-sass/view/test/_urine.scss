@@ -268,6 +268,10 @@
 
     .property.ph {
         .diagram-palette {
+            @media print {
+                margin-top: 5px;
+            }
+            
             .label {
                 font-size: 360%;
                 letter-spacing: -3px;
@@ -296,6 +300,10 @@
                 width: 50px;
                 margin-left: -25px;
                 text-align: center;
+
+                @media print {
+                    margin-top: -5px;
+                }
             }
 
             &.acidic {

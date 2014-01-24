@@ -4542,6 +4542,11 @@ span.placeholder {
     margin-left: 10px;
   }
 }
+@media print {
+  .view-test-urine-analysis .property.ph .diagram-palette {
+    margin-top: 5px;
+  }
+}
 .view-test-urine-analysis .property.ph .diagram-palette .label {
   font-size: 360%;
   letter-spacing: -3px;
@@ -4570,6 +4575,11 @@ span.placeholder {
   width: 50px;
   margin-left: -25px;
   text-align: center;
+}
+@media print {
+  .view-test-urine-analysis .property.ph .legend.neutral {
+    margin-top: -5px;
+  }
 }
 .view-test-urine-analysis .property.ph .legend.acidic {
   bottom: 3%;
