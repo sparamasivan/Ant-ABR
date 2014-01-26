@@ -5197,7 +5197,7 @@ span.placeholder {
 .view-subtest-select .description {
   display: none;
 }
-@media only screen and (max-width: 630px), only print {
+@media only screen and (max-width: 630px), print {
   .view-subtest-select .options {
     padding-top: 0;
     padding-bottom: 0;
@@ -5226,6 +5226,15 @@ span.placeholder {
   }
   .view-subtest-select .option.selected .name {
     background-position: 37px center;
+  }
+}
+@media print {
+  .view-subtest-select .indicator-background {
+    width: 34px;
+    border-radius: 17px;
+    top: -4px;
+    bottom: -4px;
+    left: -2px;
   }
 }
 

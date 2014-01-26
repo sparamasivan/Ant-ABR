@@ -69,8 +69,7 @@
 	}
 
     /* phone */
-    @media only screen and (max-width:($mq-phone)),
-        only print {
+    @media only screen and (max-width:($mq-phone)), print {
         .options {
             padding-top: 0;
             padding-bottom: 0;
@@ -111,6 +110,16 @@
                     background-position: ($widgetIndicatorWidth + 5px) center;
                 }
             }
+        }
+    }
+
+    @media print {
+        .indicator-background {
+            width: $widgetIndicatorWidth + 2;
+            border-radius: ($widgetIndicatorWidth + 2) / 2;
+            top: -4px;
+            bottom: -4px;
+            left: -2px;
         }
     }
 }
