@@ -46,6 +46,12 @@ $widgetIndicatorBigHeight: $widgetIndicatorBigWidth;
         display: none\9;
     }
 
+    .bg {
+        &.bad {
+            display: none;
+        }
+    }
+
     &:hover {
         .dot {
             width: $dotExpandedDiameter;
@@ -58,6 +64,16 @@ $widgetIndicatorBigHeight: $widgetIndicatorBigWidth;
     &.bad {
         .dot {
             background-color: #fff868;
+        }
+
+        .bg {
+            &.bad {
+                display: inline;
+            }
+
+            &.good {
+                display: none;
+            }
         }
     }
 

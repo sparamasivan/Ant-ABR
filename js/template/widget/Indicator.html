@@ -1,4 +1,5 @@
 <span class="widget-indicator {{#if isBad}}bad{{/if}} {{#if isBig}}big{{/if}} {{#if isPrintSmall}}print-small{{/if}}">
-    <img src="images/widget/indicator/{{#if isBad}}bad{{else}}good{{/if}}{{#if isBig}}-big{{/if}}-2x.png" alt="">
+    <img class="bg bad" src="images/widget/indicator/bad{{#if isBig}}-big{{/if}}-2x.png" alt="">
+    <img class="bg good" src="images/widget/indicator/good{{#if isBig}}-big{{/if}}-2x.png" alt="">
     <span class="dot"></span>
 </span>

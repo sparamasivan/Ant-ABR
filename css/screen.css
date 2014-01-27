@@ -2438,6 +2438,9 @@ span.placeholder {
     display: none;
   }
 }
+.widget-indicator .bg.bad {
+  display: none;
+}
 .widget-indicator:hover .dot {
   width: 14px;
   height: 14px;
@@ -2446,6 +2449,12 @@ span.placeholder {
 }
 .widget-indicator.bad .dot {
   background-color: #fff868;
+}
+.widget-indicator.bad .bg.bad {
+  display: inline;
+}
+.widget-indicator.bad .bg.good {
+  display: none;
 }
 .widget-indicator.big {
   width: 40px;
