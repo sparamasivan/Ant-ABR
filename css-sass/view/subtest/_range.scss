@@ -19,6 +19,11 @@
 
         .text {
             position: relative;
+            height: 71px;
+
+            @media print {
+                height: 37px;
+            }
         }
 
         .value {
@@ -44,7 +49,7 @@
 
         .widget-indicator {
             display: block;
-            margin: 9px auto 0;
+            margin: 10px auto 0;
         }
     }
 
@@ -157,6 +162,14 @@
 
     &.single-line-label {
         .marker {
+            .text {
+                height: 52px;
+
+                @media print {
+                    height: 21px;
+                }
+            }
+
             .unit {
                 display: inline;
             }

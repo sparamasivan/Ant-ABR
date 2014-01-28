@@ -2438,6 +2438,9 @@ span.placeholder {
     display: none;
   }
 }
+.widget-indicator .bg {
+  display: block;
+}
 .widget-indicator .bg.bad {
   display: none;
 }
@@ -2451,7 +2454,7 @@ span.placeholder {
   background-color: #fff868;
 }
 .widget-indicator.bad .bg.bad {
-  display: inline;
+  display: block;
 }
 .widget-indicator.bad .bg.good {
   display: none;
@@ -4629,6 +4632,12 @@ span.placeholder {
 }
 .view-subtest-range .marker .text {
   position: relative;
+  height: 71px;
+}
+@media print {
+  .view-subtest-range .marker .text {
+    height: 37px;
+  }
 }
 .view-subtest-range .marker .value {
   font-size: 450%;
@@ -4653,7 +4662,7 @@ span.placeholder {
 }
 .view-subtest-range .marker .widget-indicator {
   display: block;
-  margin: 9px auto 0;
+  margin: 10px auto 0;
 }
 .view-subtest-range .actual {
   padding-top: 87px;
@@ -4737,6 +4746,14 @@ span.placeholder {
 }
 .view-subtest-range .description {
   display: none;
+}
+.view-subtest-range.single-line-label .marker .text {
+  height: 52px;
+}
+@media print {
+  .view-subtest-range.single-line-label .marker .text {
+    height: 21px;
+  }
 }
 .view-subtest-range.single-line-label .marker .unit {
   display: inline;

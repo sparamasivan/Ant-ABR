@@ -47,6 +47,8 @@ $widgetIndicatorBigHeight: $widgetIndicatorBigWidth;
     }
 
     .bg {
+        display: block;
+        
         &.bad {
             display: none;
         }
@@ -68,7 +70,7 @@ $widgetIndicatorBigHeight: $widgetIndicatorBigWidth;
 
         .bg {
             &.bad {
-                display: inline;
+                display: block;
             }
 
             &.good {
