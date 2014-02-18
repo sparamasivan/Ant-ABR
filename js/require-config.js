@@ -20,7 +20,8 @@ var require = {
         'propertyParser': 'lib/require/propertyParser',
         'goog': 'lib/require/goog',
         'foundation': 'lib/foundation/foundation',
-        'foundation-reveal': 'lib/foundation/foundation.reveal'
+        'foundation-reveal': 'lib/foundation/foundation.reveal',
+        'chart': 'lib/Chart'
     },
 
     config: {
@@ -96,6 +97,9 @@ var require = {
         'foundation-reveal': {
             deps: ['foundation'],
             exports: 'Foundation.libs.reveal'
+        },
+        'chart': {
+            exports: 'Chart'
         }
     }
 };

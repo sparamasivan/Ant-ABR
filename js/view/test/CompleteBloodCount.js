@@ -13,7 +13,7 @@ define([
     'view/subtest/pod/Color',
     'view/animation/Cbc',
     'modernizr',
-    'goog!visualization,1,packages:[corechart,geochart]',
+    'chart',
     'jquery-equal-heights',
     'jquery-waitforimages'
 ], function(
@@ -30,7 +30,8 @@ define([
     ViewSubtestSelect,
     ViewSubtestColor,
     ViewAnimation,
-    Modernizr
+    Modernizr,
+    Chart
 ) {
     var mathRound = function(value, decimalPlaces) {
         var roundedValue = Math.round(value * Math.pow(10, decimalPlaces)) / Math.pow(10, decimalPlaces);
@@ -310,44 +311,45 @@ define([
                 // ensure percentage is visible
             var slicePercentage = (percentage < 1) ? 1 : percentage,
 
-                data = new google.visualization.arrayToDataTable([
-                    ['Label', 'Value'],
-                    ['RBC', slicePercentage],
-                    ['Other', 100 - slicePercentage]
-                ]),
-
                 target = parent.find('.diagram >.inner'),
 
-                chart = new google.visualization.PieChart(target[0]);
+                elCanvas = $('<canvas></canvas>').appendTo(target),
+
+                remainingPercentage = 100 - startPercentage - slicePercentage,
+
+                data = [{
+                        value : startPercentage,
+                        color : "#e8eae5"
+                    },{
+                        value: slicePercentage,
+                        color: "#00b8d6"
+                    }];
+
+            if (remainingPercentage > 0.01) {
+                data.push({
+                    value : remainingPercentage,
+                    color : "#e8eae5"
+                });
+            }
+
+            elCanvas.attr('width', target.width());
+            elCanvas.attr('height', target.width());
+
+            if (window.G_vmlCanvasManager && window.G_vmlCanvasManager.initElement) {
+                // <= add IE8 specific canvas support
+                window.G_vmlCanvasManager.initElement(elCanvas[0]);
+            }
+
+            new Chart(elCanvas[0].getContext("2d")).Doughnut(data, {
+                    segmentStrokeWidth: 0.1,
+                    animation: false,
+                    percentageInnerCutout: 30
+                });
+
 
             if (Modernizr.csstransforms !== true) {
                 target.addClass('no-csstransforms');
             }
-
-            chart.draw(data, {
-                pieHole: 0.3,
-                backgroundColor: {
-                    fill: 'none'
-                },
-                chartArea: {
-                    width: '100%',
-                    height: '100%'
-                },
-                legend: {
-                    position: 'none'
-                },
-                pieSliceBorderColor: 'none',
-                pieSliceText: 'none',
-                pieStartAngle: 360 * startPercentage / 100,
-                slices: [
-                    {color: '#00b8d6'},
-                    {color: '#e8eae5'}
-                ],
-                enableInteractivity: false,
-                tooltip: {
-                    trigger: 'none'
-                }
-            });
 
             parent.find('.number').text(mathRound(percentage, 1));
         }
