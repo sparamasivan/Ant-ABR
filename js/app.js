@@ -2,6 +2,7 @@ define([
     'jquery',
     'backbone',
     'model/Report',
+    'model/vetstreet/ReportDetail',
     'view/Page',
     'router/Section',
     'view/widget/Busy',
@@ -10,6 +11,7 @@ define([
     $,
     Backbone,
     ModelReport,
+    ModelVetstreetReportDetail,
     ViewPage,
     RouterSection,
     ViewWidgetBusy,
@@ -22,6 +24,7 @@ define([
          */
         init: function() {
             var mReport,
+                mVetstreetReportDetail,
                 vPage,
                 vBusy;
 
@@ -41,6 +44,9 @@ define([
             mReport.authToken = this.getURLParam("auth_token");
             mReport.urlRoot = unescape(this.getURLParam("context"));
 
+            // create report detail model
+            mVetstreetReportDetail = new ModelVetstreetReportDetail({id: 1});
+
             // show window width/height debug console
             if (Module.config().windowWidthHeightToolbarEnabled) {
                 require(['view/widget/WindowWidthHeight'], function(ViewWidgetWindowWidthHeight) {
@@ -53,12 +59,15 @@ define([
             this._disablePageScaling();
 
             // initialize report view once report model is loaded
-            return mReport.fetch()
+            return $.when(
+                    mReport.fetch(),
+                    mVetstreetReportDetail.fetch()
+                )
                 .fail(function(deffered, status, error) {
                     throw new Error('Failed to fetch report: ' + status + ' : ' + error.toString());
                 })
                 // render report
-                .then(function(data) {
+                .then(function() {
                     vPage = new ViewPage({
                         model: mReport
                     });
