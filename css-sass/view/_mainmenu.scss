@@ -79,12 +79,12 @@
 	height:15px;
 	line-height:18px;
 	
-	background: url(../images/navigation/icon-main-menu.png) no-repeat 0 0;
+	background: url(../images/healthtracks/navigation/icon-main-menu.png) no-repeat 0 0;
 	@media 
 	only screen and (-webkit-min-device-pixel-ratio: 2),
 	only screen and (min-resolution: 192dpi) {
-		background: url(../images/navigation/icon-main-menu-2x.png) no-repeat 0 0;
-		background-size: (image-width("../images/navigation/icon-main-menu-2x.png") / 2) (image-height("../images/navigation/icon-main-menu-2x.png") / 2);
+		background: url(../images/healthtracks/navigation/icon-main-menu-2x.png) no-repeat 0 0;
+		background-size: (image-width("../images/healthtracks/navigation/icon-main-menu-2x.png") / 2) (image-height("../images/healthtracks/navigation/icon-main-menu-2x.png") / 2);
 	}
 
 	&:visited {

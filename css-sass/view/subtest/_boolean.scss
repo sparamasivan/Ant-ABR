@@ -8,7 +8,7 @@
         border: 1px solid #e4e4e4;
         border-radius: 3px 3px;
 
-        background-image: url("../images/subtest/boolean/bg.png");
+        background-image: url("../images/healthtracks/subtest/boolean/bg.png");
         background-repeat: repeat-x;
         
         cursor: pointer;
@@ -46,17 +46,17 @@
 
         .left {
             width: 25px;
-            background-image: url("../images/subtest/boolean/result-bg-left.png");
+            background-image: url("../images/healthtracks/subtest/boolean/result-bg-left.png");
         }
 
         .middle {
-            background-image: url("../images/subtest/boolean/result-bg-middle.png");
+            background-image: url("../images/healthtracks/subtest/boolean/result-bg-middle.png");
             background-repeat: repeat-x;
         }
 
         .right {
             width: 25px;
-            background-image: url("../images/subtest/boolean/result-bg-right.png");
+            background-image: url("../images/healthtracks/subtest/boolean/result-bg-right.png");
         }
     }
 
@@ -85,19 +85,19 @@
             @media 
             only screen and (-webkit-min-device-pixel-ratio: 2), 
             only screen and (min-resolution: 192dpi) {
-                background-size: (image-width("../images/common/result/good-2x.png") / 2) (image-height("../images/common/result/good-2x.png") / 2);
+                background-size: (image-width("../images/healthtracks/common/result/good-2x.png") / 2) (image-height("../images/healthtracks/common/result/good-2x.png") / 2);
             }
         }
 
         &.good {
             .icon {
-                background-image: url("../images/common/result/good.png");
+                background-image: url("../images/healthtracks/common/result/good.png");
                 left: 8px;
 
                 @media 
                 only screen and (-webkit-min-device-pixel-ratio: 2), 
                 only screen and (min-resolution: 192dpi) {
-                    background-image: url("../images/common/result/good-2x.png");
+                    background-image: url("../images/healthtracks/common/result/good-2x.png");
                 }
             }
 
@@ -108,13 +108,13 @@
 
         &.bad {
             .icon {
-                background-image: url("../images/common/result/bad.png");
+                background-image: url("../images/healthtracks/common/result/bad.png");
                 right: 7px;
 
                 @media 
                 only screen and (-webkit-min-device-pixel-ratio: 2), 
                 only screen and (min-resolution: 192dpi) {
-                    background-image: url("../images/common/result/bad-2x.png");
+                    background-image: url("../images/healthtracks/common/result/bad-2x.png");
                 }
             }
 

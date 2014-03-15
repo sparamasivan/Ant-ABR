@@ -1,8 +1,8 @@
-$widgetCircleArrowBgImage: "../images/widget/circle-arrow/circle-arrow.png";
-$widgetCircleArrowBgImage2x: "../images/widget/circle-arrow/circle-arrow-2x.png";
+$widgetCircleArrowBgImage: "../images/healthtracks/widget/circle-arrow/circle-arrow.png";
+$widgetCircleArrowBgImage2x: "../images/healthtracks/widget/circle-arrow/circle-arrow-2x.png";
 $widgetCircleArrowWidth: image-width($widgetCircleArrowBgImage);
-$widgetCircleArrowBgImagePhone: "../images/widget/circle-arrow/circle-arrow-small.png";
-$widgetCircleArrowBgImagePhone2x: "../images/widget/circle-arrow/circle-arrow-small-2x.png";
+$widgetCircleArrowBgImagePhone: "../images/healthtracks/widget/circle-arrow/circle-arrow-small.png";
+$widgetCircleArrowBgImagePhone2x: "../images/healthtracks/widget/circle-arrow/circle-arrow-small-2x.png";
 $widgetCircleArrowWidthPhone: image-width($widgetCircleArrowBgImagePhone);
 .widget-circle-arrow {
     $width: $widgetCircleArrowWidth;

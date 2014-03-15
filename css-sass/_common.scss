@@ -22,15 +22,15 @@ $testHeaderHeight: 85px;
 
 .section-break {
     height: 28px;
-    background-image: url("../images/common/diamonds.png");
+    background-image: url("../images/healthtracks/common/diamonds.png");
     background-repeat: no-repeat;
     background-position: center 10px;
 
     @media 
     only screen and (-webkit-min-device-pixel-ratio: 2), 
     only screen and (min-resolution: 192dpi) {
-        background-image: url("../images/common/diamonds-2x.png");
-        background-size: image-width("../images/common/diamonds-2x.png") / 2;
+        background-image: url("../images/healthtracks/common/diamonds-2x.png");
+        background-size: image-width("../images/healthtracks/common/diamonds-2x.png") / 2;
     }
 
     @media print {

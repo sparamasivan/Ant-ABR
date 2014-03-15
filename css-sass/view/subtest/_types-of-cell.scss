@@ -1,8 +1,8 @@
 .view-subtest-types-of-cell {
-    $option-sprite: sprite-map("subtest/types-of-cell/option/*.png");
-    $option-2x-sprite: sprite-map("subtest/types-of-cell/option-2x/*.png");
-    $cell-sprite: sprite-map("subtest/types-of-cell/cell/*.png");
-    $cell-2x-sprite: sprite-map("subtest/types-of-cell/cell-2x/*.png");
+    $option-sprite: sprite-map("healthtracks/subtest/types-of-cell/option/*.png");
+    $option-2x-sprite: sprite-map("healthtracks/subtest/types-of-cell/option-2x/*.png");
+    $cell-sprite: sprite-map("healthtracks/subtest/types-of-cell/cell/*.png");
+    $cell-2x-sprite: sprite-map("healthtracks/subtest/types-of-cell/cell-2x/*.png");
 
     @mixin skin-option ($species, $type) {
         &.#{$type} {

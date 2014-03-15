@@ -2030,13 +2030,13 @@ h4 .small {
 
 .section-break {
   height: 28px;
-  background-image: url("../images/common/diamonds.png");
+  background-image: url("../images/healthtracks/common/diamonds.png");
   background-repeat: no-repeat;
   background-position: center 10px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .section-break {
-    background-image: url("../images/common/diamonds-2x.png");
+    background-image: url("../images/healthtracks/common/diamonds-2x.png");
     background-size: 18px;
   }
 }
@@ -2265,12 +2265,12 @@ span.placeholder {
   -moz-transition: -moz-transform 0.25s linear;
   -o-transition: -o-transform 0.25s linear;
   transition: transform 0.25s linear;
-  background-image: url("../images/widget/arrow/arrow.png");
+  background-image: url("../images/healthtracks/widget/arrow/arrow.png");
   /* Phone */
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .widget-arrow {
-    background-image: url("../images/widget/arrow/arrow-2x.png");
+    background-image: url("../images/healthtracks/widget/arrow/arrow-2x.png");
     background-size: 300%;
   }
 }
@@ -2278,7 +2278,7 @@ span.placeholder {
   display: block;
   width: 100%;
   height: 100%;
-  background-image: url("../images/widget/arrow/arrow.png");
+  background-image: url("../images/healthtracks/widget/arrow/arrow.png");
   background-position: 22px 0;
   border-radius: 11px;
   -webkit-transition: background-position 0.25s linear;
@@ -2288,7 +2288,7 @@ span.placeholder {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .widget-arrow .inner {
-    background-image: url("../images/widget/arrow/arrow-2x.png");
+    background-image: url("../images/healthtracks/widget/arrow/arrow-2x.png");
     background-size: 300%;
   }
 }
@@ -2312,10 +2312,10 @@ span.placeholder {
   .widget-arrow.shrink {
     width: 17px;
     height: 17px;
-    background-image: url("../images/widget/arrow/arrow-small.png");
+    background-image: url("../images/healthtracks/widget/arrow/arrow-small.png");
   }
   .widget-arrow.shrink .inner {
-    background-image: url("../images/widget/arrow/arrow-small.png");
+    background-image: url("../images/healthtracks/widget/arrow/arrow-small.png");
     background-position: 17px 0;
     border-radius: 8.5px;
   }
@@ -2331,12 +2331,12 @@ span.placeholder {
 }
 @media only screen and (max-width: 630px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 630px) and (min-resolution: 192dpi) {
   .widget-arrow.shrink {
-    background-image: url("../images/widget/arrow/arrow-small-2x.png");
+    background-image: url("../images/healthtracks/widget/arrow/arrow-small-2x.png");
   }
 }
 @media only screen and (max-width: 630px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 630px) and (min-resolution: 192dpi) {
   .widget-arrow.shrink .inner {
-    background-image: url("../images/widget/arrow/arrow-small-2x.png");
+    background-image: url("../images/healthtracks/widget/arrow/arrow-small-2x.png");
   }
 }
 
@@ -2344,11 +2344,11 @@ span.placeholder {
   width: 85px;
   height: 85px;
   cursor: pointer;
-  background-image: url("../images/widget/circle-arrow/circle-arrow.png");
+  background-image: url("../images/healthtracks/widget/circle-arrow/circle-arrow.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .widget-circle-arrow {
-    background-image: url("../images/widget/circle-arrow/circle-arrow-2x.png");
+    background-image: url("../images/healthtracks/widget/circle-arrow/circle-arrow-2x.png");
     background-size: 100%;
   }
 }
@@ -2356,7 +2356,7 @@ span.placeholder {
   height: 100%;
   width: 100%;
   border-radius: 42.5px;
-  background-image: url("../images/widget/circle-arrow/circle-arrow.png");
+  background-image: url("../images/healthtracks/widget/circle-arrow/circle-arrow.png");
   background-position: 0 85px;
   -webkit-transition: background-position 0.5s;
   -moz-transition: background-position 0.5s;
@@ -2365,7 +2365,7 @@ span.placeholder {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .widget-circle-arrow .inner {
-    background-image: url("../images/widget/circle-arrow/circle-arrow-2x.png");
+    background-image: url("../images/healthtracks/widget/circle-arrow/circle-arrow-2x.png");
     background-size: 100%;
   }
 }
@@ -2382,11 +2382,11 @@ span.placeholder {
   .widget-circle-arrow {
     width: 65px;
     height: 65px;
-    background-image: url("../images/widget/circle-arrow/circle-arrow-small.png");
+    background-image: url("../images/healthtracks/widget/circle-arrow/circle-arrow-small.png");
   }
   .widget-circle-arrow .inner {
     border-radius: 32.5px;
-    background-image: url("../images/widget/circle-arrow/circle-arrow-small.png");
+    background-image: url("../images/healthtracks/widget/circle-arrow/circle-arrow-small.png");
     background-position: 0 65px;
   }
   .widget-circle-arrow:hover .inner {
@@ -2401,12 +2401,12 @@ span.placeholder {
 }
 @media only screen and (max-width: 630px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 630px) and (min-resolution: 192dpi) {
   .widget-circle-arrow {
-    background-image: url("../images/widget/circle-arrow/circle-arrow-small-2x.png");
+    background-image: url("../images/healthtracks/widget/circle-arrow/circle-arrow-small-2x.png");
   }
 }
 @media only screen and (max-width: 630px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 630px) and (min-resolution: 192dpi) {
   .widget-circle-arrow .inner {
-    background-image: url("../images/widget/circle-arrow/circle-arrow-small-2x.png");
+    background-image: url("../images/healthtracks/widget/circle-arrow/circle-arrow-small-2x.png");
   }
 }
 
@@ -2591,7 +2591,7 @@ span.placeholder {
 
 .view-widget-test-subsection {
   background-color: #f7f8f6;
-  background-image: url("../images/widget/test-subsection/border-dotted.png");
+  background-image: url("../images/healthtracks/widget/test-subsection/border-dotted.png");
   background-repeat: repeat-x;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -2732,7 +2732,7 @@ span.placeholder {
 }
 
 .page-section-conclusion {
-  background-image: url("../images/overview/recap/pattern.png");
+  background-image: url("../images/healthtracks/overview/recap/pattern.png");
   padding: 10px 0 20px;
   /* phone */
 }
@@ -2804,10 +2804,10 @@ span.placeholder {
   background-repeat: no-repeat;
 }
 .page-footer .email {
-  background-image: url("../images/footer/email.png");
+  background-image: url("../images/healthtracks/footer/email.png");
 }
 .page-footer .phone {
-  background-image: url("../images/footer/phone.png");
+  background-image: url("../images/healthtracks/footer/phone.png");
 }
 .page-footer .fine-print {
   font-size: 108%;
@@ -2934,11 +2934,11 @@ span.placeholder {
   padding-left: 30px;
   height: 15px;
   line-height: 18px;
-  background: url(../images/navigation/icon-main-menu.png) no-repeat 0 0;
+  background: url(../images/healthtracks/navigation/icon-main-menu.png) no-repeat 0 0;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .menuTrigger {
-    background: url(../images/navigation/icon-main-menu-2x.png) no-repeat 0 0;
+    background: url(../images/healthtracks/navigation/icon-main-menu-2x.png) no-repeat 0 0;
     background-size: 24px 15px;
   }
 }
@@ -3173,11 +3173,11 @@ span.placeholder {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-image: url('../images/navigation/icons-s7a2936dfd0.png');
+  background-image: url('../images/healthtracks/navigation/icons-s57ef649fde.png');
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .navigation .nav-item .icon {
-    background-image: url('../images/navigation/icons-2x-scec38a3aa9.png');
+    background-image: url('../images/healthtracks/navigation/icons-2x-s5dea554b79.png');
     background-size: 100%;
   }
 }
@@ -3191,11 +3191,11 @@ span.placeholder {
   z-index: -1;
   top: 0;
   right: 0;
-  background-image: url("../images/navigation/shadow.png");
+  background-image: url("../images/healthtracks/navigation/shadow.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-navigation .navigation .nav-item .shadow {
-    background-image: url("../images/navigation/shadow.png");
+    background-image: url("../images/healthtracks/navigation/shadow.png");
     background-size: 100%;
   }
 }
@@ -3415,13 +3415,13 @@ span.placeholder {
   left: 0;
   width: 65px;
   height: 55px;
-  background-image: url("../images/overview/good.png");
+  background-image: url("../images/healthtracks/overview/good.png");
   margin-top: -27.5px;
   cursor: pointer;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-overview .avatar-flag .content .text-container .icon {
-    background-image: url("../images/overview/good-2x.png");
+    background-image: url("../images/healthtracks/overview/good-2x.png");
     background-size: 65px 55px;
   }
 }
@@ -3456,11 +3456,11 @@ span.placeholder {
   }
 }
 .view-overview .avatar-flag .content .text-container.bad .icon {
-  background-image: url("../images/overview/bad.png");
+  background-image: url("../images/healthtracks/overview/bad.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-overview .avatar-flag .content .text-container.bad .icon {
-    background-image: url("../images/overview/bad-2x.png");
+    background-image: url("../images/healthtracks/overview/bad-2x.png");
   }
 }
 .view-overview .avatar-flag .content .text-container .text {
@@ -3479,14 +3479,14 @@ span.placeholder {
     padding-right: 35px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-image: url("../images/overview/flag-tail.png");
+    background-image: url("../images/healthtracks/overview/flag-tail.png");
     background-repeat: no-repeat;
     background-position: right center;
   }
 }
 @media only screen and (max-width: 639px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 639px) and (min-resolution: 192dpi) {
   .view-overview .avatar-flag .content .text-container .text {
-    background-image: url("../images/overview/flag-tail-2x.png");
+    background-image: url("../images/healthtracks/overview/flag-tail-2x.png");
     background-size: 28px 156px;
   }
 }
@@ -3510,7 +3510,7 @@ span.placeholder {
   color: white;
   display: inline-block;
   text-decoration: underline;
-  background-image: url("../images/overview/icon-print.png");
+  background-image: url("../images/healthtracks/overview/icon-print.png");
   padding-left: 25px;
   background-repeat: no-repeat;
 }
@@ -3548,7 +3548,7 @@ span.placeholder {
   border-bottom-right-radius: 5px;
 }
 .view-overview .page-section-next-steps {
-  background: url("../images/overview/recap/pattern.png") repeat transparent;
+  background: url("../images/healthtracks/overview/recap/pattern.png") repeat transparent;
   position: relative;
   margin-top: 2px;
   border-radius: 5px;
@@ -3618,10 +3618,10 @@ span.placeholder {
   }
 }
 .view-overview .contact.call {
-  background-image: url("../images/overview/icon-phone.png");
+  background-image: url("../images/healthtracks/overview/icon-phone.png");
 }
 .view-overview .contact.email {
-  background-image: url("../images/overview/icon-email.png");
+  background-image: url("../images/healthtracks/overview/icon-email.png");
 }
 .view-overview .page-section-explore-tests {
   background-color: white;
@@ -3715,11 +3715,11 @@ span.placeholder {
   height: 21px;
   top: 13px;
   right: 13px;
-  background-image: url("../images/survey/close.png");
+  background-image: url("../images/healthtracks/survey/close.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-survey .close-reveal-modal {
-    background-image: url("../images/survey/close-2x.png");
+    background-image: url("../images/healthtracks/survey/close-2x.png");
     background-size: 100%;
   }
 }
@@ -4514,7 +4514,7 @@ span.placeholder {
 }
 .view-test-urine-analysis .test-subsection.particle .pod > .inner {
   position: relative;
-  background-image: url("../images/subtest/select/bullet.png");
+  background-image: url("../images/healthtracks/subtest/select/bullet.png");
   background-repeat: no-repeat;
   background-position: 10px 10px;
   padding-left: 20px;
@@ -4693,7 +4693,7 @@ span.placeholder {
 }
 .view-subtest-range .actual .expected-value {
   height: 28px;
-  background-image: url("../images/subtest/range/actual-expected-bg.png");
+  background-image: url("../images/healthtracks/subtest/range/actual-expected-bg.png");
 }
 @media print {
   .view-subtest-range .actual .expected-value {
@@ -4796,12 +4796,12 @@ span.placeholder {
   width: 45px;
   height: 45px;
   cursor: pointer;
-  background-image: url("../images/subtest/range-group/button-left-right.png");
+  background-image: url("../images/healthtracks/subtest/range-group/button-left-right.png");
   background-repeat: no-repeat;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-subtest-range-group .pager .button {
-    background-image: url("../images/subtest/range-group/button-left-right-2x.png");
+    background-image: url("../images/healthtracks/subtest/range-group/button-left-right-2x.png");
     background-size: 500%;
   }
 }
@@ -4809,7 +4809,7 @@ span.placeholder {
   width: 100%;
   height: 100%;
   background-position: 180px 0;
-  background-image: url("../images/subtest/range-group/button-left-right.png");
+  background-image: url("../images/healthtracks/subtest/range-group/button-left-right.png");
   border-radius: 22.5px;
   -webkit-transition: background-position 0.5s;
   -moz-transition: background-position 0.5s;
@@ -4818,7 +4818,7 @@ span.placeholder {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   .view-subtest-range-group .pager .button .inner {
-    background-image: url("../images/subtest/range-group/button-left-right-2x.png");
+    background-image: url("../images/healthtracks/subtest/range-group/button-left-right-2x.png");
     background-size: 500%;
   }
 }
@@ -4979,7 +4979,7 @@ span.placeholder {
   color: black;
 }
 .view-subtest-range-group .average-range {
-  background-image: url("../images/subtest/range-group/range-bg.png");
+  background-image: url("../images/healthtracks/subtest/range-group/range-bg.png");
   position: absolute;
   left: 0;
   right: 0;
@@ -5029,7 +5029,7 @@ span.placeholder {
   border: 1px solid #e4e4e4;
   border-radius: 2px 2px;
   display: inline-block;
-  background-image: url("../images/subtest/range-group/range-bg.png");
+  background-image: url("../images/healthtracks/subtest/range-group/range-bg.png");
   vertical-align: middle;
   margin-right: 10px;
 }
@@ -5059,7 +5059,7 @@ span.placeholder {
     margin-top: 21px;
   }
   .view-subtest-range-group .range-item {
-    background-image: url("../images/subtest/range-group/range-item-border.png");
+    background-image: url("../images/healthtracks/subtest/range-group/range-item-border.png");
     background-repeat: no-repeat;
     background-position: right top;
   }
@@ -5075,7 +5075,7 @@ span.placeholder {
     width: 97px;
     margin-left: -48.5px;
     height: 81px;
-    background-image: url("../images/subtest/range-group/swipe-overlay.png");
+    background-image: url("../images/healthtracks/subtest/range-group/swipe-overlay.png");
     position: absolute;
     top: 61px;
     left: 50%;
@@ -5084,7 +5084,7 @@ span.placeholder {
     width: 80px;
     margin-left: -40px;
     height: 100px;
-    background-image: url("../images/subtest/range-group/range-item-bg.png");
+    background-image: url("../images/healthtracks/subtest/range-group/range-item-bg.png");
     position: absolute;
     top: 21px;
     left: 50%;
@@ -5213,7 +5213,7 @@ span.placeholder {
   color: #333;
 }
 .view-subtest-select .option.selected .name {
-  background-image: url(../images/subtest/select/bullet.png);
+  background-image: url(../images/healthtracks/subtest/select/bullet.png);
   background-repeat: no-repeat;
   background-position: 52px center;
 }
@@ -5566,7 +5566,7 @@ span.placeholder {
   top: 57%;
   width: 100%;
   height: 100%;
-  background: url("../images/animation/urine/pee@2x.png") no-repeat;
+  background: url("../images/healthtracks/animation/urine/pee@2x.png") no-repeat;
   background-size: 100%;
 }
 .background.urine .sticker .portholes {
@@ -5846,7 +5846,7 @@ span.placeholder {
   width: 92%;
   height: 92%;
   background-color: #FFF;
-  background-image: url("../images/animation/chemistry/paw@2x.png");
+  background-image: url("../images/healthtracks/animation/chemistry/paw@2x.png");
   background-repeat: no-repeat;
   background-position: 138% 29%;
   background-size: 180%;

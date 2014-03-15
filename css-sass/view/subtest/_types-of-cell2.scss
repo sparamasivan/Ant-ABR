@@ -76,13 +76,13 @@
 			}
 		}
 
-		@include diagram-size("big", "../images/subtest/types-of-cell2/canine-circle-big-2x.png", 21px, 450%, 225%);
-		@include diagram-size("medium", "../images/subtest/types-of-cell2/canine-circle-medium-2x.png", 32px, 375%, 200%);
-		@include diagram-size("small", "../images/subtest/types-of-cell2/canine-circle-small-2x.png", 46px, 300%, 175%);
+		@include diagram-size("big", "../images/healthtracks/subtest/types-of-cell2/canine-circle-big-2x.png", 21px, 450%, 225%);
+		@include diagram-size("medium", "../images/healthtracks/subtest/types-of-cell2/canine-circle-medium-2x.png", 32px, 375%, 200%);
+		@include diagram-size("small", "../images/healthtracks/subtest/types-of-cell2/canine-circle-small-2x.png", 46px, 300%, 175%);
 	}
 
 	.icon {
-		width: image-width("../images/subtest/types-of-cell2/canine-defender-2x.png") / 2;
+		width: image-width("../images/healthtracks/subtest/types-of-cell2/canine-defender-2x.png") / 2;
 		position: absolute;
 		top: 0;
 		left: 0;

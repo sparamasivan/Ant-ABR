@@ -33,8 +33,8 @@
         .button {
             $width: 45px;
             $height: 45px;
-            $bgImage: "../images/subtest/range-group/button-left-right.png";
-            $bgImage2x: "../images/subtest/range-group/button-left-right-2x.png";
+            $bgImage: "../images/healthtracks/subtest/range-group/button-left-right.png";
+            $bgImage2x: "../images/healthtracks/subtest/range-group/button-left-right-2x.png";
 
             margin: $rangeTop 0 $rangeBottom 0;
             width: $width;
@@ -243,7 +243,7 @@
     }
 
     .average-range {
-        background-image: url("../images/subtest/range-group/range-bg.png");
+        background-image: url("../images/healthtracks/subtest/range-group/range-bg.png");
         position: absolute;
         left: 0;
         right: 0;
@@ -295,7 +295,7 @@
             border: 1px solid #e4e4e4;
             border-radius: 2px 2px;
             display: inline-block;
-            background-image: url("../images/subtest/range-group/range-bg.png");
+            background-image: url("../images/healthtracks/subtest/range-group/range-bg.png");
             vertical-align: middle;
             margin-right: 10px;
         }
@@ -334,7 +334,7 @@
         }
 
         .range-item {
-            background-image: url("../images/subtest/range-group/range-item-border.png");
+            background-image: url("../images/healthtracks/subtest/range-group/range-item-border.png");
             background-repeat: no-repeat;
             background-position: right top;
 
@@ -358,7 +358,7 @@
             width: $width;
             margin-left: - $width / 2;
             height: $height;
-            background-image: url("../images/subtest/range-group/swipe-overlay.png");
+            background-image: url("../images/healthtracks/subtest/range-group/swipe-overlay.png");
             position: absolute;
             top: $rangeHeightPhone - $height + $rangeTopPhone + $rangeBottom;
             left: 50%;
@@ -371,7 +371,7 @@
             width: $width;
             margin-left: - $width / 2;
             height: $height;
-            background-image: url("../images/subtest/range-group/range-item-bg.png");
+            background-image: url("../images/healthtracks/subtest/range-group/range-item-bg.png");
             position: absolute;
             top: $rangeTopPhone;
             left: 50%;

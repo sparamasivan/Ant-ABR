@@ -105,9 +105,9 @@
 
             position: absolute;
             top: -10px;
-            left: - image-width("../images/test/cbc/diagram/rbc-2x.png") / 2 - 20px;
+            left: - image-width("../images/healthtracks/test/cbc/diagram/rbc-2x.png") / 2 - 20px;
 
-            width: image-width("../images/test/cbc/diagram/rbc-2x.png") / 2;
+            width: image-width("../images/healthtracks/test/cbc/diagram/rbc-2x.png") / 2;
 
             /* tablet */
             @media only screen and (min-width:($mq-phone + 1px)) and (max-width:($mq-tablet - 1px)) {
@@ -177,8 +177,8 @@
     }
 
     .status {
-        $width: round(image-width('../images/test/base/follow-up-good-2x.png') / 2);
-        $height: round(image-height('../images/test/base/follow-up-good-2x.png') / 2);
+        $width: round(image-width('../images/healthtracks/test/base/follow-up-good-2x.png') / 2);
+        $height: round(image-height('../images/healthtracks/test/base/follow-up-good-2x.png') / 2);
         position: absolute;
 
         top: ($headerHeight - $height) / 2;
@@ -294,7 +294,7 @@
                 background-color: $overviewBgColor;
 
                 .diagram-container >.inner {
-                    max-width: image-width("../images/test/#{$type}/#{$diagramFilename}") / 2;
+                    max-width: image-width("../images/healthtracks/test/#{$type}/#{$diagramFilename}") / 2;
                 }
             }
         }

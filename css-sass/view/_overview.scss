@@ -1,6 +1,6 @@
 .view-overview {
 	$maxWidthNoAvatar: 640px - 1px;
-	$iconGood: "../images/overview/good.png";
+	$iconGood: "../images/healthtracks/overview/good.png";
 
 	@include translateZ(0);
 	.result-summary {
@@ -152,8 +152,8 @@
 					@media
 					only screen and (-webkit-min-device-pixel-ratio: 2),
 					only screen and (min-resolution: 192dpi) {
-						background-image: url("../images/overview/good-2x.png");
-						background-size: (image-width("../images/overview/good-2x.png") / 2) (image-height("../images/overview/good-2x.png") / 2);
+						background-image: url("../images/healthtracks/overview/good-2x.png");
+						background-size: (image-width("../images/healthtracks/overview/good-2x.png") / 2) (image-height("../images/healthtracks/overview/good-2x.png") / 2);
 					}
 				}
 
@@ -189,12 +189,12 @@
 
 				&.bad {
 					.icon {
-						background-image: url("../images/overview/bad.png");
+						background-image: url("../images/healthtracks/overview/bad.png");
 
 						@media
 						only screen and (-webkit-min-device-pixel-ratio: 2),
 						only screen and (min-resolution: 192dpi) {
-							background-image: url("../images/overview/bad-2x.png");
+							background-image: url("../images/healthtracks/overview/bad-2x.png");
 						}
 					}
 				}
@@ -216,15 +216,15 @@
 						padding-top: 10px;
 						padding-bottom: 10px;
 
-						background-image: url("../images/overview/flag-tail.png");
+						background-image: url("../images/healthtracks/overview/flag-tail.png");
 						background-repeat: no-repeat;
 						background-position: right center;
 
 						@media
 						only screen and (-webkit-min-device-pixel-ratio: 2),
 						only screen and (min-resolution: 192dpi) {
-							background-image: url("../images/overview/flag-tail-2x.png");
-							background-size: (image-width("../images/overview/flag-tail-2x.png") / 2) (image-height("../images/overview/flag-tail-2x.png") / 2);
+							background-image: url("../images/healthtracks/overview/flag-tail-2x.png");
+							background-size: (image-width("../images/healthtracks/overview/flag-tail-2x.png") / 2) (image-height("../images/healthtracks/overview/flag-tail-2x.png") / 2);
 						}
 					}
 				}
@@ -251,7 +251,7 @@
 				color:white;
 				display: inline-block;
 				text-decoration:underline;
-				background-image: url("../images/overview/icon-print.png");
+				background-image: url("../images/healthtracks/overview/icon-print.png");
 				padding-left: 25px;
 				background-repeat: no-repeat;
 			}
@@ -295,7 +295,7 @@
 	}
 
 	.page-section-next-steps {
-		background: url('../images/overview/recap/pattern.png') repeat transparent;
+		background: url('../images/healthtracks/overview/recap/pattern.png') repeat transparent;
 		position: relative;
 		margin-top: 2px;
 		border-radius: 5px;
@@ -353,11 +353,11 @@
 		}
 
 		&.call {
-			background-image: url("../images/overview/icon-phone.png");
+			background-image: url("../images/healthtracks/overview/icon-phone.png");
 		}
 
 		&.email {
-			background-image: url("../images/overview/icon-email.png");
+			background-image: url("../images/healthtracks/overview/icon-email.png");
 		}
 	}
 

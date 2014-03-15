@@ -87,10 +87,10 @@ define([
 
             switch(species) {
                 case 'canine':
-                    return 'images/overview/avatar/canine.png';
+                    return 'images/healthtracks/overview/avatar/canine.png';
 
                 case 'feline':
-                    return 'images/overview/avatar/feline.png';
+                    return 'images/healthtracks/overview/avatar/feline.png';
 
                 default:
                     throw new Error('No default avatar specified for species: ' + species);

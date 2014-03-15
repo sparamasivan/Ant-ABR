@@ -26,7 +26,7 @@
 
     .logo {
         width: 100%;
-        max-width: image-width("../images/page/logo.png") / 2;
+        max-width: image-width("../images/healthtracks/page/logo.png") / 2;
     }
 
     /* tablet & desktop */
@@ -60,7 +60,7 @@
 }
 
 .page-section-conclusion {
-    background-image: url('../images/overview/recap/pattern.png');
+    background-image: url('../images/healthtracks/overview/recap/pattern.png');
     padding: 10px 0 20px;
 
     @media print {
@@ -139,11 +139,11 @@
     }
 
     .email {
-        background-image: url("../images/footer/email.png");
+        background-image: url("../images/healthtracks/footer/email.png");
     }
 
     .phone {
-        background-image: url("../images/footer/phone.png");
+        background-image: url("../images/healthtracks/footer/phone.png");
     }
 
     .fine-print {

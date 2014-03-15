@@ -24,10 +24,10 @@
     }
 
     .navigation {
-        $iconWidth: image-width("../images/navigation/icons/menu.png");
-        $iconHeight: image-height("../images/navigation/icons/menu.png");
-        $navigation-sprite: sprite-map("navigation/icons/*.png");
-        $navigation-2x-sprite: sprite-map("navigation/icons-2x/*.png");
+        $iconWidth: image-width("../images/healthtracks/navigation/icons/menu.png");
+        $iconHeight: image-height("../images/healthtracks/navigation/icons/menu.png");
+        $navigation-sprite: sprite-map("healthtracks/navigation/icons/*.png");
+        $navigation-2x-sprite: sprite-map("healthtracks/navigation/icons-2x/*.png");
 
         position: fixed;
         top: 50px;
@@ -85,8 +85,8 @@
             }
 
             .shadow {
-                $image: "../images/navigation/shadow.png";
-                $image2x: "../images/navigation/shadow.png";
+                $image: "../images/healthtracks/navigation/shadow.png";
+                $image2x: "../images/healthtracks/navigation/shadow.png";
 
                 width: image-width($image);
                 height: image-height($image);
