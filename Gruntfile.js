@@ -26,35 +26,45 @@ module.exports = function(grunt) {
     },
 
     requirejs: {
+      options: {
+        mainConfigFile: 'js/healthtracks-require-config.js',
+        baseUrl: './js',
+        name: 'main',
+        include: [
+          'view/test/Accuplex',
+          'view/test/CompleteBloodCount',
+          'view/test/FelvFiv',
+          'view/test/HeartwormAntigen',
+          'view/test/OvaParasite',
+          'view/test/SuperChemistry',
+          'view/test/Thyroxine',
+          'view/test/UrineAnalysis',
+          'model/test/Accuplex',
+          'model/test/CompleteBloodCount',
+          'model/test/FelvFiv',
+          'model/test/HeartwormAntigen',
+          'model/test/OvaParasite',
+          'model/test/SuperChemistry',
+          'model/test/Thyroxine',
+          'model/test/UrineAnalysis',
+          'view/widget/WindowWidthHeight'
+        ],
+        optimizeAllPluginResources: true,
+        preserveLicenseComments: false
+      },
+
+      dev: {
+        options: {
+          optimize: 'none',
+          out: 'js/healthtracks-report.js'
+        }
+      },
+
       dist: {
         options: {
-          mainConfigFile: 'js/require-config.js',
-          baseUrl: './js',
-          name: 'main',
-          include: [
-            'view/test/Accuplex',
-            'view/test/CompleteBloodCount',
-            'view/test/FelvFiv',
-            'view/test/HeartwormAntigen',
-            'view/test/OvaParasite',
-            'view/test/SuperChemistry',
-            'view/test/Thyroxine',
-            'view/test/UrineAnalysis',
-            'model/test/Accuplex',
-            'model/test/CompleteBloodCount',
-            'model/test/FelvFiv',
-            'model/test/HeartwormAntigen',
-            'model/test/OvaParasite',
-            'model/test/SuperChemistry',
-            'model/test/Thyroxine',
-            'model/test/UrineAnalysis',
-            'view/widget/WindowWidthHeight'
-          ],
-          out: 'dist/js/healthtracks-report.js',
-          optimize: 'uglify',
-          //optimize: 'none',
-          optimizeAllPluginResources: true,
-          preserveLicenseComments: false
+          optimize: 'uglify2',
+          generateSourceMaps: true,
+          out: 'dist/js/healthtracks-report.js'
         }
       }
     },
@@ -63,20 +73,20 @@ module.exports = function(grunt) {
       options: {
         atBegin: true
       },
+
       css: {
         files: 'css-sass/**',
         tasks: 'compass:dev',
         interrupt: true,
         debounceDelay: 0
       },
-/*
+
       js: {
         files: 'js/**',
-        tasks: 'requirejs',
+        tasks: 'requirejs:dev',
         interrupt: true,
         debounceDelay: 0
       }
-*/
     },
 
     clean: {
@@ -96,7 +106,7 @@ module.exports = function(grunt) {
               'fonts/**',
               'images/**',
               'js/lib/require.min.js',
-              'js/require-config.js',
+              'js/healthtracks-require-config.js',
               'js/lib/respond.min.js',
               'js/lib/excanvas/excanvas.compiled.js',
               'report.html'
@@ -126,6 +136,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-concurrent');
 
   // Default task(s).
+  grunt.registerTask('default', [
+    'compass:dev',
+    'requirejs:dev'
+  ]);
+
   grunt.registerTask('dist', [
     'clean:dist',
     'concurrent:dist'
