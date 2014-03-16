@@ -20,7 +20,8 @@
                         title: 'Vetstreet',
                         tests: [{
                                 type: 'Combined - Cat & Dog tests',
-                                url: 'report.html?report=data/combined.json'
+                                url: '/abcanimalhospital/hospital_reports?report=/data/combined.json',
+                                cookies: {l: 5555}
                             }]
                         },{
                         title: 'Antech',
@@ -117,8 +118,10 @@
 
                         if (isDebug) {
                             url = url.replace(new RegExp('report-dev[.]html'), 'report.html');
+                            url = url.replace(new RegExp('/abcanimalhospital-dev/hospital_reports'), '/abcanimalhospital/hospital_reports');
                         } else {
                             url = url.replace(new RegExp('report[.]html'), 'report-dev.html');
+                            url = url.replace(new RegExp('/abcanimalhospital/hospital_reports'), '/abcanimalhospital-dev/hospital_reports');
                         }
 
                         elLink

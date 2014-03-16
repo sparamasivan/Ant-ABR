@@ -1,10 +1,12 @@
 define([
     'jquery',
     'backbone',
+    'Environment',
     'jquery-cookie'
 ], function(
     $,
-    Backbone
+    Backbone,
+    Environment
 ) {
     var PET_PORTAL_LINK_TYPE_LOG_OUT = 'log_out',
         PET_PORTAL_LINKS = [{
@@ -90,7 +92,7 @@ define([
                     type: 'POST',
                     contentType: 'application/x-www-form-urlencoded',
                     data: {
-                        hospital_domain: '',
+                        hospital_domain: Environment.getPathParameters().domain,
                         l: $.cookie('l'),
                         report_id: this.get('id')
                     }

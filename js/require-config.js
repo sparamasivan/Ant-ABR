@@ -1,5 +1,5 @@
 var require = {
-    baseUrl: 'js/',
+    baseUrl: '/js/',
 
     paths: {
         'text': 'lib/require-text',
@@ -21,7 +21,8 @@ var require = {
         'goog': 'lib/require/goog',
         'foundation': 'lib/foundation/foundation',
         'foundation-reveal': 'lib/foundation/foundation.reveal',
-        'chart': 'lib/Chart'
+        'chart': 'lib/Chart',
+        'parseUri': 'lib/parseuri'
     },
 
     config: {
@@ -38,6 +39,13 @@ var require = {
         'view/Survey': {
             url: 'https://www.research.net/s/Healthtracks',
             timeout: 120000
+        },
+        'Environment': {
+            pathPatterns: [{
+                // /<hospital_domain>/hospital_reports
+                pattern: '^/([^/]+?)/hospital_reports',
+                params: ['domain']
+            }]
         }
     },
 
@@ -100,6 +108,9 @@ var require = {
         },
         'chart': {
             exports: 'Chart'
+        },
+        'parseUri': {
+            exports: 'window.parseUri'
         }
     }
 };
