@@ -44,9 +44,6 @@ define([
             mReport.authToken = this.getURLParam("auth_token");
             mReport.urlRoot = unescape(this.getURLParam("context"));
 
-            // create report detail model
-            mVetstreetReportDetail = new ModelVetstreetReportDetail({id: 1});
-
             // show window width/height debug console
             if (Module.config().windowWidthHeightToolbarEnabled) {
                 require(['view/widget/WindowWidthHeight'], function(ViewWidgetWindowWidthHeight) {
@@ -60,11 +57,21 @@ define([
 
             // initialize report view once report model is loaded
             return $.when(
-                    mReport.fetch(),
-                    mVetstreetReportDetail.fetch()
+                    mReport.fetch()
                 )
                 .fail(function(deffered, status, error) {
                     throw new Error('Failed to fetch report: ' + status + ' : ' + error.toString());
+                })
+                .then(function() {
+                    // create report detail model
+                    mVetstreetReportDetail = new ModelVetstreetReportDetail({
+                        id: mReport.getReportId()
+                    });
+
+                    return mVetstreetReportDetail.fetch();
+                })
+                .fail(function(deffered, status, error) {
+                    throw new Error('Failed to fetch report detail: ' + status + ' : ' + error.toString());
                 })
                 // render report
                 .then(function() {

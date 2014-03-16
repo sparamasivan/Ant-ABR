@@ -54,7 +54,7 @@ define([
                     modelTestModulePath;
 
                 if (!backendType) {
-                    throw new Error('Type of test (id: ' + dataTest.id + ') not defined in report (id: ' + self.getDataReport().id + ').');
+                    throw new Error('Type of test (id: ' + dataTest.id + ') not defined in report (id: ' + self.getReportId() + ').');
                 }
 
                 frontendType = Config.getFrontendTestTypeByBackendType(backendType);
@@ -191,6 +191,10 @@ define([
             return Config.parseDate(this.getDataReport().date);
         },
 
+        getReportId: function() {
+            return this.getDataReport().id;
+        },
+
         getPatientSpecies: function() {
             var species = this.getDataPatient().species.toLowerCase();
 
@@ -209,7 +213,7 @@ define([
         },
 
         getPrintUrl: function() {
-            return _.result(this, 'urlRoot') + '/AntechWS/getResultPDF?i=1' + this.getDataReport().id + '763';
+            return _.result(this, 'urlRoot') + '/AntechWS/getResultPDF?i=1' + this.getReportId() + '763';
         }
     });
 });

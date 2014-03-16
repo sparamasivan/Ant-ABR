@@ -1,5 +1,5 @@
 <?php
-$reportId = intval($_POST['report_id']);
+$reportId = preg_replace('/[^a-zA-Z0-9\._-]/', '', $_POST['report_id']);
 $pathToReport = '_data/healthtracks_report_details/' . $reportId . '.php';
 $httpStatus = 200;
 
