@@ -5,6 +5,7 @@ define([
     'model/Report',
     'text!template/Page.html',
     'view/MainMenu',
+    'view/InternalNote',
     'view/Navigation',
     'view/Report',
     'view/Survey',
@@ -19,6 +20,7 @@ define([
     ModelReport,
     Template,
     ViewMainMenu,
+    ViewInternalNote,
     ViewNavigation,
     ViewReport,
     ViewSurvey,
@@ -67,11 +69,15 @@ define([
 
             promises.push(this._renderMainMenu());
 
+            if (this.model.reportDetail.isInPreviewMode()) {
+                promises.push(this._renderInternalNote());
+            }
+
             promises.push(this._renderNavigation());
 
             promises.push(this._renderReport());
 
-            if (Module.config().isSurveyEnabled) {
+            if (Module.config().isSurveyEnabled && !this.model.reportDetail.isInPreviewMode()) {
                 promises.push(this._renderSurvey());
             }
             
@@ -84,6 +90,14 @@ define([
             });
 
             return view.render(this.$el.find('.page-mainmenu'));
+        },
+
+        _renderInternalNote: function() {
+            var view = new ViewInternalNote({
+                model: this.model.reportDetail
+            });
+
+            return view.render(this.$el.find('.page-internal-note'));
         },
 
         _renderNavigation: function() {

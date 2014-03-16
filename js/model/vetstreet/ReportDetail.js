@@ -37,6 +37,14 @@ define([
     return Backbone.Model.extend({
         url: '/api/v2/healthtracks_report_details',
 
+        isInPreviewMode: function() {
+            return this.get('preview_mode');
+        },
+
+        getInternalNotes: function() {
+            return this.get('internal_notes').internal_note_list;
+        },
+
         getUserDetails: function() {
             return this.get('user_details');
         },

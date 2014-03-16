@@ -8,14 +8,14 @@ return array(
             'status' => 'success',
             'internal_note_list' => array(
                 array(
-                    'note' => '',
-                    'created_by' => '',
-                    'created_date' => '',
+                    'note' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
+                    'created_by' => 'Firstname Lastname',
+                    'created_date' => '12/15/2013 02:37:48 AM',
                 ),
                 array(
-                    'note' => '',
-                    'created_by' => '',
-                    'created_date' => '',
+                    'note' => '2Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
+                    'created_by' => '2Firstname Lastname',
+                    'created_date' => '12/15/2014 02:37:48 AM',
                 ),
             ),
             'end_user_message' => 'message',

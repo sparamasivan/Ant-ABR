@@ -3,16 +3,12 @@ define([
     'backbone',
     'handlebars',
     'text!template/MainMenu.html',
-    'model/MediaQuery',
-    'event/Dispatcher',
     'jquery-jswipe'
 ], function(
     $,
     Backbone,
     Handlebars,
-    Template,
-    ModelMediaQuery,
-    EventDispatcher
+    Template
 ) {
     return Backbone.View.extend({
         template: Handlebars.compile(Template),

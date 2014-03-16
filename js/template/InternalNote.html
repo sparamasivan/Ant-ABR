@@ -1,0 +1,14 @@
+<div class="view-internal-note">
+    {{#if notes}}
+    <h1>Internal Notes</h1>
+    <ul>
+        {{#each notes}}
+        <li>
+            <p>{{note}}</p>
+            <div class="creator">{{created_by}}</div>
+            <div class="date">{{created_date}}</div>
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</div>
