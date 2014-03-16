@@ -10,7 +10,7 @@ VCA Healthtracks allows pet owners to view their pet's lab results through an ea
 
 ## Sample Tests
 
-A version of this code should be up and running on [allboatsrise.com/dev/vca/ht-report-print](http://allboatsrise.com/dev/vca/ht-report-print/).
+A version of this code should be up and running on [allboatsrise.com/dev/vca/ht-report](http://allboatsrise.com/dev/vca/ht-report/).
 
 ## Supported Browsers
   * Desktop
@@ -57,13 +57,17 @@ A number of 3rd party libraries is used for building and compiling the code.
   * NodeJS
 
 ## Development Environment
-
 [Grunt](http://gruntjs.com/) tasks are used to build the CSS and JavaScript modules.
 
-Whenever changes are made to SASS files in css-sass folder, *grunt compass* command needs to be run in order to generate a browser compatible CSS file.
+### Installation
+  1. Install [NodeJS](http://nodejs.org/)
+  2. Go to project root and run *npm install* on the command-line. All the dependencies are managed in [package.json](package.json) file.
 
-Changes made to JS files can be tested and debugged by viewing index-dev.html file. However, when deploying the changes to production, the JS files should be compiled using *grunt requirejs* command, and viewed in index.html file.
+Ensure the project root is located at the document root of the server. The site will only function correctly if accessed at the root of the domain (e.g. http://somedomain.com/), and not some subdirectory (e.g. http://somedomain.com/subdir/).
 
-To simplify the process of manually building SASS and JS files, the *grunt watch* command can be run in the background which will immediately run the SASS or JS build process if any corresponding files are modified.
+### Grunt Usage
 
-In order to install Grunt and other required modules, make sure to have [NodeJS](http://nodejs.org/) installed on your system and run *npm install* in the project root directory. All the dependencies are managed in package.json file.
+  * *grunt compass:dev* - Run the command whenever changes are made to SASS files in css-sass folder in order to generate a browser compatible CSS file.
+  * *grunt requirejs:dev* - Run the command when you want to launch URLs in index.html with the "Debug Urls: OFF" setting. This will use a compiled version of the javascript files
+  * *grunt watch* - Simplifies the process of manually calling the above commands. This command continually runs in the background and will run the SASS or JS build process if any corresponding files are modified.
+  * *grunt dist* - Extracts and builds all files necessary for deployment and puts them inside the "dist" folder.
