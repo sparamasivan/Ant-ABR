@@ -61,3 +61,4 @@ project/static
 # Caboose
 .bundle
 *.sass-cache
+/dist

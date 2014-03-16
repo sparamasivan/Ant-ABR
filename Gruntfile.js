@@ -5,21 +5,28 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     compass: {
-      dev: {
+      options: {
+        httpPath: '/',
+        cssDir: 'css',
+        sassDir: 'css-sass',
+        imagesDir: 'images',
+        httpGeneratedImagesPath: '../images/',
+        noLineComments: true
+      },
+
+      dev: {},
+
+      dist: {
         options: {
-          httpPath: '/',
-          cssDir: 'css',
-          sassDir: 'css-sass',
-          imagesDir: 'images',
-          httpGeneratedImagesPath: '../images/',
-          noLineComments: true,
-          //outputStyle: 'compressed',
+          cssDir: 'dist/css',
+          outputStyle: 'compressed',
+          specify: 'css-sass/screen.scss'
         }
       }
     },
 
     requirejs: {
-      dev: {
+      dist: {
         options: {
           mainConfigFile: 'js/require-config.js',
           baseUrl: './js',
@@ -43,7 +50,7 @@ module.exports = function(grunt) {
             'model/test/UrineAnalysis',
             'view/widget/WindowWidthHeight'
           ],
-          out: 'dist/main.js',
+          out: 'dist/js/healthtracks-report.js',
           optimize: 'uglify',
           //optimize: 'none',
           optimizeAllPluginResources: true,
@@ -58,17 +65,55 @@ module.exports = function(grunt) {
       },
       css: {
         files: 'css-sass/**',
-        tasks: 'compass',
+        tasks: 'compass:dev',
         interrupt: true,
         debounceDelay: 0
       },
-
+/*
       js: {
         files: 'js/**',
         tasks: 'requirejs',
         interrupt: true,
         debounceDelay: 0
       }
+*/
+    },
+
+    clean: {
+      dist: {
+        src: [
+          'dist'
+        ]
+      }
+    },
+
+    copy: {
+      dist: {
+        files: [
+          {
+            expand: true,
+            src: [
+              'fonts/**',
+              'images/**',
+              'js/lib/require.min.js',
+              'js/require-config.js',
+              'js/lib/respond.min.js',
+              'js/lib/excanvas/excanvas.compiled.js',
+              'report.html'
+            ],
+            dest: 'dist/',
+            filter: 'isFile'
+          }
+        ]
+      }
+    },
+
+    concurrent: {
+      dist: [
+        'compass:dist',
+        'requirejs:dist',
+        'copy:dist'
+      ]
     }
   });
 
@@ -76,8 +121,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-concurrent');
 
   // Default task(s).
-  grunt.registerTask('default', ['compass', 'requirejs']);
+  grunt.registerTask('dist', [
+    'clean:dist',
+    'concurrent:dist'
+  ]);
 
 };
