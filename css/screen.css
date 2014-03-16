@@ -3106,6 +3106,35 @@ span.placeholder {
   width: 100%;
 }
 
+@media only screen {
+  .view-internal-note {
+    display: none;
+  }
+}
+.view-internal-note h2 {
+  border-bottom: 1px solid #C7C7C7;
+  padding-bottom: 10px;
+}
+.view-internal-note h2.report {
+  margin-top: 40px;
+}
+.view-internal-note .notes {
+  padding: 0;
+}
+.view-internal-note td, .view-internal-note th {
+  padding: 15px 0;
+}
+.view-internal-note .info {
+  padding-right: 15px;
+}
+.view-internal-note .creator {
+  font-weight: bold;
+}
+.view-internal-note .creator,
+.view-internal-note .date {
+  white-space: nowrap;
+}
+
 @media print {
   .view-navigation {
     display: none;

@@ -1,3 +1,35 @@
 .view-internal-note {
+    @media only screen {
+        display: none;
+    }
 
+    h2 {
+        border-bottom: 1px solid #C7C7C7;
+        padding-bottom: 10px;
+
+        &.report {
+            margin-top: 40px;
+        }
+    }
+
+    .notes {
+        padding: 0;
+    }
+
+    td, th {
+        padding: 15px 0;
+    }
+
+    .info {
+        padding-right: 15px;
+    }
+
+    .creator {
+        font-weight: bold;
+    }
+
+    .creator,
+    .date {
+        white-space: nowrap;
+    }
 }

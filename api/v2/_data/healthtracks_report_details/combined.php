@@ -13,8 +13,8 @@ return array(
                     'created_date' => '12/15/2013 02:37:48 AM',
                 ),
                 array(
-                    'note' => '2Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
-                    'created_by' => '2Firstname Lastname',
+                    'note' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.2',
+                    'created_by' => 'Firstname2 Lastname2',
                     'created_date' => '12/15/2014 02:37:48 AM',
                 ),
             ),
