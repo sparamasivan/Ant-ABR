@@ -20,7 +20,7 @@ module.exports = function(grunt) {
         options: {
           cssDir: 'dist/css',
           outputStyle: 'compressed',
-          specify: 'css-sass/screen.scss'
+          specify: 'css-sass/healthtracks.scss'
         }
       }
     },
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
       dev: {
         options: {
           optimize: 'none',
-          out: 'js/healthtracks-report.js'
+          out: 'js/healthtracks-report.min.js'
         }
       },
 
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
         options: {
           optimize: 'uglify2',
           generateSourceMaps: true,
-          out: 'dist/js/healthtracks-report.js'
+          out: 'dist/js/healthtracks-report.min.js'
         }
       }
     },

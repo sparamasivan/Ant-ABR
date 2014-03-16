@@ -62,4 +62,5 @@ project/static
 .bundle
 *.sass-cache
 /dist
-/js/healthtracks-report.js
+/css
+/js/healthtracks-report.min.js
