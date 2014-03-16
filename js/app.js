@@ -69,7 +69,10 @@ define([
                 // render report
                 .then(function() {
                     vPage = new ViewPage({
-                        model: mReport
+                        model: {
+                            report: mReport,
+                            reportDetail: mVetstreetReportDetail
+                        }
                     });
 
                     return vPage.render($("body"));

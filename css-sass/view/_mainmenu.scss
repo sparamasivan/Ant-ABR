@@ -4,21 +4,15 @@
 	}
 }
 
-.mainNav {
-	height:105px;
-}
-
 .mainMenu {
+	@include box-sizing(border-box);
 	float:left;
 	list-style:none;
 	padding:0;
 	margin:0;
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	box-sizing:border-box;
 	width:100%;
 	margin-top:15px;
-	margin-bottom:20px;
+	margin-bottom:8px;
 	text-align:center;
 	li {
 		display:inline-block;
@@ -29,12 +23,14 @@
 			}
 			border-left:1px solid #afcae0;
 		}
-		&.last {
+		&.type-shop {
 			a {
 				color:#e7bc99;
 			}
 		}
 		a {
+			@include transition(all 0.1s ease-out);
+			@include box-sizing(border-box);
 			float:left;
 			height:45px;
 			line-height:45px;
@@ -45,14 +41,6 @@
 			text-transform:uppercase;
 			font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, Arial, sans-serif;
 			font-weight:normal!important;
-			-webkit-transition:all 0.1s ease-out;
-			-moz-transition:all 0.1s ease-out;
-			-ms-transition:all 0.1s ease-out;
-			-o-transition:all 0.1s ease-out;
-			transition:all 0.1s ease-out;
-			-webkit-box-sizing:border-box;
-			-moz-box-sizing:border-box;
-			box-sizing:border-box;
 			border:1px solid #afcae0;
 			border-left:0;
 			&.hover {
@@ -116,10 +104,7 @@
 		border-right:1px solid #afcae0; 
 		&.active { 
 			left:0;
-			-webkit-transition: all .2s ease-in-out;
-			-moz-transition: all .2s ease-in-out;
-			-o-transition: all .2s ease-in-out;
-			transition: all .2s ease-in-out;
+			@include transition(all .2s ease-in-out);
 			z-index: 10;
 		}
 	}
@@ -157,10 +142,7 @@
 	}
 	
 	.page {
-		-webkit-transition: all .2s ease-in-out;
-		-moz-transition: all .2s ease-in-out;
-		-o-transition: all .2s ease-in-out;
-		transition: all .2s ease-in-out;
+		@include transition(all .2s ease-in-out);
 		position:relative;
 		&.active {
 			left:150px;
@@ -168,10 +150,7 @@
 	}
 	
 	.mainNav {
-		-webkit-transition: all .2s ease-in-out;
-		-moz-transition: all .2s ease-in-out;
-		-o-transition: all .2s ease-in-out;
-		transition: all .2s ease-in-out;
+		@include transition(all .2s ease-in-out);
 		position:relative;
 	}
 	
@@ -236,10 +215,7 @@
 	margin:0;
 	margin-top:16px;
 	margin-right:10px;
-	-webkit-transition: all .2s ease-in-out;
-	-moz-transition: all .2s ease-in-out;
-	-o-transition: all .2s ease-in-out;
-	transition: all .2s ease-in-out;
+	@include transition(all .2s ease-in-out);
 	li {
 		@include secondaryFont;
 		float:left;

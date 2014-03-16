@@ -2862,21 +2862,17 @@ span.placeholder {
   background-color: #0099be;
 }
 
-.mainNav {
-  height: 105px;
-}
-
 .mainMenu {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   float: left;
   list-style: none;
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   width: 100%;
   margin-top: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   text-align: center;
 }
 .mainMenu li {
@@ -2889,10 +2885,17 @@ span.placeholder {
 .mainMenu li:first-child:hover {
   border-left: 1px solid #d6f1f5;
 }
-.mainMenu li.last a {
+.mainMenu li.type-shop a {
   color: #e7bc99;
 }
 .mainMenu li a {
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   float: left;
   height: 45px;
   line-height: 45px;
@@ -2903,14 +2906,6 @@ span.placeholder {
   text-transform: uppercase;
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, Arial, sans-serif;
   font-weight: normal !important;
-  -webkit-transition: all 0.1s ease-out;
-  -moz-transition: all 0.1s ease-out;
-  -ms-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   border: 1px solid #afcae0;
   border-left: 0;
 }
@@ -2971,10 +2966,10 @@ span.placeholder {
   }
   .mainMenuWrapper.active {
     left: 0;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     z-index: 10;
   }
 
@@ -3011,10 +3006,10 @@ span.placeholder {
   }
 
   .page {
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     position: relative;
   }
   .page.active {
@@ -3022,10 +3017,10 @@ span.placeholder {
   }
 
   .mainNav {
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     position: relative;
   }
 
@@ -3083,10 +3078,10 @@ span.placeholder {
   margin: 0;
   margin-top: 16px;
   margin-right: 10px;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .secondaryMenu li {
   font-family: 'Apercu', sans-serif;

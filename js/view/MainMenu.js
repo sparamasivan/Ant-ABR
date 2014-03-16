@@ -19,11 +19,15 @@ define([
 
         render: function(parent) {
 
-        	this.setElement($(this.template()));
+        	this.setElement($(this.template({
+                userDetails: this.model.getUserDetails(),
+                menuLinks: this.model.getMenuLinks(),
+                logoutLink: this.model.getLogoutLink()
+            })));
 
         	this.$el.appendTo(parent);
 
-			$(".menuTrigger").click(function(event){
+			this.$el.find(".menuTrigger").click(function(event){
 				if ($('.page, .mainMenuWrapper, .menuTrigger, .secondaryMenu, .swipeMe, .view-report .test-headers, .mainNav').hasClass('active'))
 					$('.page, .mainMenuWrapper, .menuTrigger, .secondaryMenu, .swipeMe, .view-report .test-headers, .mainNav').removeClass("active");
 				else
@@ -32,11 +36,9 @@ define([
 				event.stopPropagation();
 			});
 
-			$(".mainMenu li a").hover(function(){
+			this.$el.find(".mainMenu li a").hover(function(){
 				$(this).closest('.mainMenu li').find(this).toggleClass('hover');
 			});
-
-			$('.mainMenu li:last-child').addClass('last');
 
 			$(window).scroll(function ()
 			{

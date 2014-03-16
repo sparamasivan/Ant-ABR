@@ -30,7 +30,7 @@ define([
         template: Handlebars.compile(Template),
 
         constructor: function(config) {
-            if (!config || !(config.model instanceof ModelReport)) {
+            if (!config || !config.model || !(config.model.report instanceof ModelReport)) {
                 throw new Error('model not an instanceof ModelReport');
             }
 
@@ -42,11 +42,11 @@ define([
 
             // render template
             this.setElement($(this.template({
-                clinic: this.model.getDataClinic(),
+                clinic: this.model.report.getDataClinic(),
                 petPortalHomeUrl: Module.config().petPortalHomeUrl,
                 logoutUrl: Module.config().logoutUrl,
                 privacyPolicyUrl: Module.config().privacyPolicyUrl,
-                patient: this.model.getDataPatient()
+                patient: this.model.report.getDataPatient()
             })));
 
             this.$el.find('.page-section-conclusion .widget-circle-arrow').bind('click', function() {
@@ -79,14 +79,16 @@ define([
         },
 
         _renderMainMenu: function() {
-            var view = new ViewMainMenu();
+            var view = new ViewMainMenu({
+                model: this.model.reportDetail
+            });
 
             return view.render(this.$el.find('.page-mainmenu'));
         },
 
         _renderNavigation: function() {
             var view = new ViewNavigation({
-                model: this.model
+                model: this.model.report
             });
 
             return view.render(this.$el.find('.page-nav'));
@@ -94,7 +96,7 @@ define([
 
         _renderReport: function() {
             this._reportView = new ViewReport({
-                model: this.model
+                model: this.model.report
             });
 
             return this._reportView.render(this.$el.find('.page-content'));

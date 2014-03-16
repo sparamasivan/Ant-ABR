@@ -4,42 +4,28 @@
 		<div class="mainNav clearfix">
 			<ul class="secondaryMenu">
 				<li>
-					Welcome, Jane Silverman
+					Welcome, {{userDetails.first_name}} {{userDetails.last_name}}
 				</li>
 				<li>
-					<a href="#">Log Out</a>
+					<a href="{{logoutLink.url}}">{{logoutLink.text}}</a>
 				</li>
 			</ul>
 
+			{{#if menuLinks}}
 			<div class="page-section">
 				<div class="mainMenuWrapper">
 					<ul class="mainMenu">
-						<li>
-							<a href="#">Home</a>
+						{{#each menuLinks}}
+						<li class="type-{{type}}">
+							<a href="{{url}}">{{text}}</a>
 						</li>
-						<li>
-							<a href="#">Pet Records</a>
-						</li>
-						<li>
-							<a href="#">Tools</a>
-						</li>
-						<li>
-							<a href="#">Care</a>
-						</li>
-						<li>
-							<a href="#">Photos</a>
-						</li>
-						<li>
-							<a href="#">Community</a>
-						</li>
-						<li>
-							<a href="#">Shop</a>
-						</li>
+						{{/each}}
 					</ul>
 				</div>
 			
 				<a href="javascript:;" class="menuTrigger">Main Menu</a>
 			</div>
+			{{/if}}
 		</div>
 	</div>
 </div>
