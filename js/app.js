@@ -23,10 +23,14 @@ define([
          * Initializes application model, views, and routing.
          */
         init: function() {
-            var mReport,
+            var self = this,
+                mReport,
                 mVetstreetReportDetail,
                 vPage,
                 vBusy;
+
+            // initialize global error handling
+            this._initErrorHandling();
 
             // initialize loader
             vBusy = new ViewWidgetBusy();
@@ -60,7 +64,7 @@ define([
                     mReport.fetch()
                 )
                 .fail(function(deffered, status, error) {
-                    throw new Error('Failed to fetch report: ' + status + ' : ' + error.toString());
+                    self._showError('Failed to fetch report detail: ' + status + ' - ' + error.toString());
                 })
                 .then(function() {
                     // create report detail model
@@ -70,8 +74,8 @@ define([
 
                     return mVetstreetReportDetail.fetch();
                 })
-                .fail(function(deffered, status, error) {
-                    throw new Error('Failed to fetch report detail: ' + status + ' : ' + error.toString());
+                .fail(function(data) {
+                    self._showError('Failed to fetch report detail: ' + data.error_msg);
                 })
                 // render report
                 .then(function() {
@@ -89,6 +93,27 @@ define([
                     // finished loading all data, time to hide the loader
                     vBusy.hide();
                 });
+        },
+
+        _initErrorHandling: function() {
+            var gOldOnError = window.onerror;
+
+            // Override previous handler.
+            window.onerror = function (errorMsg, url, lineNumber) {
+                if (gOldOnError) {
+                    // Call previous handler.
+                    return gOldOnError(errorMsg, url, lineNumber);
+                } else {
+                    alert(errorMsg);
+                }
+
+                // Just let default handler run.
+                return false;
+            }
+        },
+
+        _showError: function(message) {
+            alert(message);
         },
 
         /**

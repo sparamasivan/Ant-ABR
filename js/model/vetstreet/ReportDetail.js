@@ -87,6 +87,8 @@ define([
         },
 
         sync: function(method, model, options) {
+            var deferred = new $.Deferred();
+
             if (method == 'read') {
                 options = $.extend({
                     type: 'POST',
@@ -99,7 +101,21 @@ define([
                 }, options);
             }
 
-            return Backbone.Model.prototype.sync.call(this, method, model, options);
+            Backbone.Model.prototype.sync.call(this, method, model, options)
+                .then(function(data, textStatus, jqXHR) {
+                    if(!data || data.status != 'success') {
+                        deferred.reject(data);
+                    } else {
+                        deferred.resolve(data);
+                    }
+                }, function(jqXHR, textStatus, errorThrown) {
+                    deferred.reject((jqXHR.responseJSON && jqXHR.responseJSON)
+                        ? jqXHR.responseJSON
+                        : null
+                    );
+                });
+
+            return deferred.promise();
         },
 
         parse: function(resp, options) {
