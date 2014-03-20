@@ -2,3 +2,4 @@ RewriteEngine On
 
 #/<hospital_domain>/hospital_reports?report=/report/<report_id>.json
 RewriteRule ^[^/]+?(-dev)?/hospital_reports$ report$1.html [L]
+#/<hospital_domain>/hospital_reports?report=/report/<report_id>.json
